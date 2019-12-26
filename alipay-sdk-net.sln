@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlipaySDKNet", "AlipaySDKNet\AlipaySDKNet.csproj", "{0059EC0F-FFE8-440C-87BA-2C60544FC90F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestNetFramework", "UnitTestNetFramework\UnitTestNetFramework.csproj", "{136FA3B6-3114-47D0-ADA9-D8CA49566E0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestNetCore", "UnitTestNetCore\UnitTestNetCore.csproj", "{D8015A99-AD06-4136-9246-5D416247B32C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlipaySDKNet.Standard", "AlipaySDKNet.Standard\AlipaySDKNet.Standard.csproj", "{FD14DBCB-6945-4D2B-B8C1-C2BB4056247D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0059EC0F-FFE8-440C-87BA-2C60544FC90F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0059EC0F-FFE8-440C-87BA-2C60544FC90F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0059EC0F-FFE8-440C-87BA-2C60544FC90F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0059EC0F-FFE8-440C-87BA-2C60544FC90F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136FA3B6-3114-47D0-ADA9-D8CA49566E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136FA3B6-3114-47D0-ADA9-D8CA49566E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136FA3B6-3114-47D0-ADA9-D8CA49566E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136FA3B6-3114-47D0-ADA9-D8CA49566E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8015A99-AD06-4136-9246-5D416247B32C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8015A99-AD06-4136-9246-5D416247B32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8015A99-AD06-4136-9246-5D416247B32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8015A99-AD06-4136-9246-5D416247B32C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD14DBCB-6945-4D2B-B8C1-C2BB4056247D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD14DBCB-6945-4D2B-B8C1-C2BB4056247D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD14DBCB-6945-4D2B-B8C1-C2BB4056247D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD14DBCB-6945-4D2B-B8C1-C2BB4056247D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
