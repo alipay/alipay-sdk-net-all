@@ -1,7 +1,7 @@
 language: csharp
 solution: alipay-sdk-net.sln
 mono: none
-dotnet: 2.0
+dotnet: 2.1.502
 
 script:
   - dotnet restore
