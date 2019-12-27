@@ -1,9 +1,14 @@
 language: csharp
 solution: alipay-sdk-net.sln
+mono: none
+dotnet: 2.0
 
 script:
+  - dotnet restore
+  - cd AlipaySDKNet.Standard && dotnet build && cd ..
+  - cd UnitTestNetCore && dotnet build && cd ..
   - dotnet test /p:AltCover=true
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-
+  
