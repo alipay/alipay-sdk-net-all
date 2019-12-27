@@ -39,7 +39,7 @@ Alipay SDK for .NET让您不用复杂编程即可访支付宝开放平台开放�
 以下这段代码示例向您展示了使用Alipay SDK for .NET调用一个API的3个主要步骤：
 1. 创建DefaultAlipayClient实例并初始化。
 2. 创建API请求对象并设置Model参数。
-3. 发起请求并处理响应或异常。
+3. 发起请求并处理响应或异常。 
 
 ```csharp
 using System;
