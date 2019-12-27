@@ -11,5 +11,5 @@ script:
 
 after_success:
   - cd UnitTestNetCore
-  - bash <(curl -s https://codecov.io/bash) -c -F unittests
+  - bash <(curl -s https://codecov.io/bash) -c -F unittests -t ${codecov_token}
   
