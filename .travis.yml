@@ -1,2 +1,9 @@
 language: csharp
 solution: alipay-sdk-net.sln
+
+script:
+  - dotnet test /p:AltCover=true
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
