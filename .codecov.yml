@@ -1,3 +1,19 @@
+codecov:
+  notify:
+    after_n_builds: 2
+
+coverage:
+  status:
+    project:
+      default: off
+      unittest:
+        flags: unittest
+        target: 85%
+flags:
+  unittest:
+    paths:
+      - AlipaySDKNet.Standard/
+
 ignore:
   - "UnitTestCore"
   - "AlipaySDKNet.Standard/Request"
