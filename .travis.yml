@@ -7,8 +7,9 @@ script:
   - dotnet restore
   - cd AlipaySDKNet.Standard && dotnet build && cd ..
   - cd UnitTestNetCore && dotnet build && cd ..
-  - dotnet test /p:AltCover=true
+  - dotnet test UnitTestNetCore /p:AltCover=true
 
 after_success:
+  - cd UnitTestNetCore
   - bash <(curl -s https://codecov.io/bash) -c -F unittests
   
