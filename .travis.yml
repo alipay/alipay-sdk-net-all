@@ -3,6 +3,10 @@ sudo: true
 mono: none
 dotnet: 2.1.502
 
+install:
+  - dotnet tool install --global altcover.visualizer
+  - cd UnitTestNetCore/ && dotnet add package AltCover && cd ../
+  
 script:
   - dotnet restore
   - cd AlipaySDKNet.Standard && dotnet build && cd ..
