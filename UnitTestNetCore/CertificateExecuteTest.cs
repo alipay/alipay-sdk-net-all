@@ -22,7 +22,7 @@ namespace Test
             Assert.AreEqual(response.Code, "10000");
         }
 
-        [Test(Description = "DEV联调测试用例，后续替换对接线上或沙箱环境测试")]
+        //TODO:待相关依赖上线后替换为线上环境测试
         public void should_return_correct_response_when_use_sm2()
         {
             IAopClient client = new DefaultAopClient(TestAccount.DevSM2Cert.Gateway, TestAccount.DevSM2Cert.AppId,
@@ -72,7 +72,7 @@ namespace Test
             Assert.AreEqual(response.Code, "10000");
         }
 
-        [Test(Description = "DEV联调测试用例，后续替换对接线上或沙箱环境测试")]
+        //TODO:待相关依赖上线后替换为线上环境测试
         public void should_auto_download_alipay_public_cert_when_use_sm2()
         {
             IAopClient client = new DefaultAopClient(TestAccount.DevSM2Cert.Gateway, TestAccount.DevSM2Cert.AppId,

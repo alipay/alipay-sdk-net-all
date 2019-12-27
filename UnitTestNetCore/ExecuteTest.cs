@@ -7,7 +7,7 @@
             //then
             Assert.AreEqual(response.Code, "10000");        }
 
-        [Test(Description = "DEV联调测试用例，后续替换对接线上或沙箱环境测试")]
+        //TODO:待相关依赖上线后替换为线上环境测试
         public void should_return_success_when_use_sm2()
         {
             //given
@@ -40,7 +40,7 @@
             Assert.AreEqual(response.SubMsg.Contains("无效的应用授权令牌"), true);
         }
 
-        [Test()]
+        //TODO:待相关依赖上线后替换为线上环境测试
         public void should_be_able_to_send_target_app_id()
         {
             IAopClient client = new DefaultAopClient(TestAccount.DevSpi.Gateway, TestAccount.DevSpi.AppId,
@@ -49,7 +49,6 @@
             AlipaySecurityLcTestQueryRequest request = new AlipaySecurityLcTestQueryRequest();
             request.BizContent = "{\"shop_id\":\"1001\",\"user_id\":\"2088X\",\"status\":\"0\"}";
             AlipaySecurityLcTestQueryResponse response = client.Execute(request, null, null, "2018120560475357");
-            //TODO:有稳定的SPI线上接口后，替换个调用线上接口，线下接口机器不稳定，随时可能被回收。
             Assert.AreEqual(response.Code, "20000");
         }
 
