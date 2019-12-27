@@ -4,6 +4,7 @@ obj
 .vs
 TestResults
 packages
+coverage.xml
 
 sdkSource/alipay-sdk-net-sources.zip
 sdkSource/alipay-sdk-net-sources
