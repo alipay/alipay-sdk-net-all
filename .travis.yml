@@ -4,15 +4,13 @@ mono: none
 dotnet: 2.1.502
 
 install:
-  - dotnet tool install --global altcover.visualizer
   - cd UnitTestNetCore/ && dotnet add package AltCover && cd ../
+  - dotnet restore
   
 script:
-  - dotnet restore
   - cd AlipaySDKNet.Standard && dotnet build && cd ..
   - cd UnitTestNetCore && dotnet build && cd ..
-  - dotnet test UnitTestNetCore /p:AltCover=true
+  - dotnet test /p:AltCover=true
 
 after_success:
-  - cd UnitTestNetCore
-  - bash <(curl -s https://codecov.io/bash) -c -F unittests
+  - bash <(curl -s https://codecov.io/bash)
