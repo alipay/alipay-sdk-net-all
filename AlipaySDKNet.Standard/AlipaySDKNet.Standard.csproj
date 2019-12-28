@@ -8,6 +8,8 @@
     <NeutralLanguage>zh</NeutralLanguage>
     <Description>支付宝开放平台官方SDK，基于.Net Standard 2.0开发，支持.Net Framework 4.6.1、.Net Core 2.0及其以上版本。</Description>
     <PackageId>AlipaySDKNet.Standard</PackageId>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/alipay/alipay-sdk-net-all</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

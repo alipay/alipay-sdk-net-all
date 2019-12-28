@@ -1,5 +1,4 @@
 language: csharp
-sudo: true
 mono: none
 dotnet: 2.1.502
 

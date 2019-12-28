@@ -41,7 +41,7 @@
       <HintPath>..\packages\System.Text.Encoding.CodePages.4.7.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle">
-      <HintPath>..\packages\BouncyCastle.NetFramework.1.8.5.1\lib\net20\BouncyCastle.dll</HintPath>
+      <HintPath>..\packages\BouncyCastle.NetFramework.1.8.5.2\lib\net20\BouncyCastle.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
   </ItemGroup>
