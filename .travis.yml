@@ -1,0 +1,15 @@
+language: csharp
+mono: none
+dotnet: 2.1.502
+
+install:
+  - cd UnitTestNetCore/ && dotnet add package AltCover && cd ../
+  - dotnet restore
+  
+script:
+  - cd AlipaySDKNet.Standard && dotnet build && cd ..
+  - cd UnitTestNetCore && dotnet build && cd ..
+  - dotnet test /p:AltCover=true
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

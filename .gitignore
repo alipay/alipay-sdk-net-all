@@ -1,0 +1,12 @@
+.DS_Store
+bin
+obj
+.vs
+TestResults
+packages
+coverage.xml
+
+sdkSource/alipay-sdk-net-sources.zip
+sdkSource/alipay-sdk-net-sources
+publish/alipay-sdk-NET-*.zip
+publish/alipay-sdk-net-all

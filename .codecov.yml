@@ -1,0 +1,5 @@
+ignore:
+  - "UnitTestCore"
+  - "AlipaySDKNet.Standard/Request"
+  - "AlipaySDKNet.Standard/Response"
+  - "AlipaySDKNet.Standard/Domain"
