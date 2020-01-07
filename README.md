@@ -2,7 +2,7 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falipay%2Falipay-sdk-net-all.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Falipay%2Falipay-sdk-net-all?ref=badge_shield)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/068a5b3d1b984234bedba4cc8647ff8c)](https://www.codacy.com/manual/antopen/alipay-sdk-net-all?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=alipay/alipay-sdk-net-all&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://www.travis-ci.org/alipay/alipay-sdk-net-all.svg?branch=dev)](https://www.travis-ci.org/alipay/alipay-sdk-net-all)
-[![codecov](https://codecov.io/gh/alipay/alipay-sdk-net-all/branch/master/graph/badge.svg)](https://codecov.io/gh/alipay/alipay-sdk-net-all)
+[![codecov](https://codecov.io/gh/alipay/alipay-sdk-net-all/branch/dev/graph/badge.svg)](https://codecov.io/gh/alipay/alipay-sdk-net-all)
 
 欢迎使用 Alipay SDK for .NET 。
 

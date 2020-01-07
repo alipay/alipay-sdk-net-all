@@ -9,7 +9,7 @@
     <AssemblyName>AlipaySDKNet</AssemblyName>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>AlipaySDKNet</PackageId>
-    <PackageVersion>4.2.11</PackageVersion>
+    <PackageVersion>4.2.12</PackageVersion>
     <Authors>antopen</Authors>
     <NeutralLanguage>zh</NeutralLanguage>
     <Description>支付宝开放平台官方SDK，支持.Net Framework 3.5(SP1)及其以上版本。</Description>
