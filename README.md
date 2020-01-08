@@ -121,7 +121,7 @@ namespace SDK.Demo
 ## 变更日志
 每个版本的详细更改记录在[变更日志](./CHANGELOG)中。
 
-注：版本号最末一位修订号的增加（比如从4.1.62.ALL升级为4.1.74.ALL），意味着SDK的功能没有发生任何变化，仅仅是集成了更多的API的Request、Response、Domain类，此类变更默认不记录在变更日志中。
+注：版本号最末一位修订号的增加（比如从`4.1.62`升级为`4.1.74`），意味着SDK的功能没有发生任何变化，仅仅是集成了更多的API的Request、Response、Domain类，此类变更默认不记录在变更日志中。
 
 ## 相关
 * [支付宝开放平台](https://open.alipay.com/platform/home.htm)
