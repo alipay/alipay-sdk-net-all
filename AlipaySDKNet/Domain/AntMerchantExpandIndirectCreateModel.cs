@@ -100,7 +100,7 @@ namespace Aop.Api.Domain
         public List<string> PayCodeInfo { get; set; }
 
         /// <summary>
-        /// 申请服务，不传默认申请当面付服务。  允许同时申请多个服务，各服务的准入验证相互独立，服务申请实时生效；当前可用服务请关注出参service_codes字段。</br>  目前支持三种类型</br>  PC：网站支付</br>  APP：无线支付</br>  F2F：当面付</br>  </br>  PC和APP对应线上，F2F对应线下。
+        /// 申请服务，不传默认申请当面付服务。 允许同时申请多个服务，各服务的准入验证相互独立，服务申请实时生效；当前可用服务请关注出参service_codes字段。</br> 目前支持三种类型</br> PC：网站支付</br> APP：无线支付</br> F2F：当面付</br> PRE_F2F：线下预授权</br> PRE_APP：线上预授权</br> </br> PC和APP对应线上，F2F对应线下。
         /// </summary>
         [XmlArray("service_codes")]
         [XmlArrayItem("string")]

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AssetTypeCode { get; set; }
 
         /// <summary>
-        /// 月月付业务类型，目前只有一个有效值：MONTH_PAY
+        /// 月月付业务类型，目前只有一个有效值：MONTH
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }

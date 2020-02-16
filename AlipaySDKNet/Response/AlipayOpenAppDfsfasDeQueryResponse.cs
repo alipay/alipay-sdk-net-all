@@ -8,5 +8,10 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayOpenAppDfsfasDeQueryResponse : AopResponse
     {
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("result")]
+        public string Result { get; set; }
     }
 }

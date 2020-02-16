@@ -11,61 +11,61 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniInnerversionUploadModel : AopObject
     {
         /// <summary>
-        /// 业务来源
+        /// 业务来源，新接入方需要向支付宝申请专用来源，否则不予接入。https://yuque.antfin-inc.com/tinyapp-all/qddncu/bidushixiang
         /// </summary>
         [XmlElement("app_origin")]
         public string AppOrigin { get; set; }
 
         /// <summary>
-        /// IDE开发打包类型
+        /// IDE开发打包类型，写死tinyApp
         /// </summary>
         [XmlElement("build_app_type")]
         public string BuildAppType { get; set; }
 
         /// <summary>
-        /// 扩展信息
+        /// 扩展信息，比如adaptorName、tinycliVersion、tinycliName、import-module、allowPrecompile、extJson、allowInstallDependency、aggregationMainAppId
         /// </summary>
         [XmlElement("build_extra_info")]
         public string BuildExtraInfo { get; set; }
 
         /// <summary>
-        /// js api 权限文件
+        /// jsapi 权限文件,钉钉外请勿传
         /// </summary>
         [XmlElement("build_js_permission")]
         public string BuildJsPermission { get; set; }
 
         /// <summary>
-        /// 主入口
+        /// 小程序页面主入口。/index.html#page/component/index，该值需要和extendInfo中的page参数保持一致
         /// </summary>
         [XmlElement("build_main_url")]
         public string BuildMainUrl { get; set; }
 
         /// <summary>
-        /// 最大Android客户端版本号
+        /// 最大Android客户端版本号，禁止使用，如果需要使用请联系小程序平台评估，否则端上会出现问题
         /// </summary>
         [XmlElement("build_max_android_client_version")]
         public string BuildMaxAndroidClientVersion { get; set; }
 
         /// <summary>
-        /// 最大iOS客户单版本号
+        /// 最大iOS客户单版本号，禁止使用，如果需要使用请联系小程序平台评估，否则端上会出现问题
         /// </summary>
         [XmlElement("build_max_ios_client_version")]
         public string BuildMaxIosClientVersion { get; set; }
 
         /// <summary>
-        /// 最小Android客户端版本号
+        /// 最小Android客户端版本号，禁止使用，如果需要使用请联系小程序平台评估，否则端上会出现问题
         /// </summary>
         [XmlElement("build_min_android_client_version")]
         public string BuildMinAndroidClientVersion { get; set; }
 
         /// <summary>
-        /// 最小iOS客户单版本号
+        /// 最小iOS客户单版本号，禁止使用，如果需要使用请联系小程序平台评估，否则端上会出现问题
         /// </summary>
         [XmlElement("build_min_ios_client_version")]
         public string BuildMinIosClientVersion { get; set; }
 
         /// <summary>
-        /// 源码包MD5
+        /// 源码包文件流的MD5字符串
         /// </summary>
         [XmlElement("build_package_md_5")]
         public string BuildPackageMd5 { get; set; }
@@ -77,7 +77,7 @@ namespace Aop.Api.Domain
         public string BuildPackageName { get; set; }
 
         /// <summary>
-        /// 小程序源码包
+        /// base64编码后的小程序源码包文件流
         /// </summary>
         [XmlElement("build_package_stream")]
         public string BuildPackageStream { get; set; }
@@ -95,7 +95,7 @@ namespace Aop.Api.Domain
         public string BuildSourcePkgSize { get; set; }
 
         /// <summary>
-        /// 源码包地址
+        /// 源码包地址，源码包大小不能超过20M且地址必须永久有效，若超20M，将限制业务来源调用。将源码文件夹整个用zip格式压缩成后缀amr文件传至文件服务器
         /// </summary>
         [XmlElement("build_source_pkg_url")]
         public string BuildSourcePkgUrl { get; set; }
@@ -119,7 +119,7 @@ namespace Aop.Api.Domain
         public string BundleId { get; set; }
 
         /// <summary>
-        /// 多端类型
+        /// 多端类型，除了钉钉外其他业务方禁止使用
         /// </summary>
         [XmlElement("client_type")]
         public string ClientType { get; set; }

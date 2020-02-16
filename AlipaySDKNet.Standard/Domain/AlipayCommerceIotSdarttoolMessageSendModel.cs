@@ -58,10 +58,16 @@ namespace Aop.Api.Domain
         public long MsgPriority { get; set; }
 
         /// <summary>
-        /// 消息类型 云打印: cloud_print
+        /// 消息类型
         /// </summary>
         [XmlElement("msg_type")]
         public string MsgType { get; set; }
+
+        /// <summary>
+        /// 服务ID，当小程序消费消息时必传(传入的是小程序ID)
+        /// </summary>
+        [XmlElement("service_id")]
+        public string ServiceId { get; set; }
 
         /// <summary>
         /// 设备sn号

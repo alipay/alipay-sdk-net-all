@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEcoMycarParkingAgreementQueryModel : AopObject
     {
         /// <summary>
-        /// 支付宝用户ID
+        /// 支付宝用户ID；只有传入该参数才能准确的匹配车和用户的关系，否则有可能无法正确获取到用户的代扣状态。
         /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }

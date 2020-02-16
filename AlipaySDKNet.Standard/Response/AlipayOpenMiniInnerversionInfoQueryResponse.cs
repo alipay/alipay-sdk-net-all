@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -81,6 +83,13 @@ namespace Aop.Api.Response
         public string PackageUrl { get; set; }
 
         /// <summary>
+        /// 引用插件信息
+        /// </summary>
+        [XmlArray("plugin_refs")]
+        [XmlArrayItem("mini_app_plugin_info")]
+        public List<MiniAppPluginInfo> PluginRefs { get; set; }
+
+        /// <summary>
         /// 审核失败原因
         /// </summary>
         [XmlElement("reject_reason")]
@@ -109,6 +118,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("shelf_time")]
         public string ShelfTime { get; set; }
+
+        /// <summary>
+        /// 源码包地址
+        /// </summary>
+        [XmlElement("source_url")]
+        public string SourceUrl { get; set; }
 
         /// <summary>
         /// 版本状态

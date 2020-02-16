@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public InvoiceCompanyInfo InvoiceCompany { get; set; }
 
         /// <summary>
-        /// 发票订购信息。当业务前台是 由服务市场订购后发起入驻时，必填
+        /// 发票订购信息。当业务前台是由服务市场订购后发起入驻时，且register_type是new后者renew时，必填；register_type是init或者online时，为空；
         /// </summary>
         [XmlArray("invoice_order")]
         [XmlArrayItem("invoice_order_info")]
@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string PlatformUserId { get; set; }
 
         /// <summary>
-        /// 入驻类型，可选值： 新订购：new，续订：renew，已有税控初始化：init
+        /// 入驻类型，可选值： 新订购：new，续订：renew，已有税控初始化：init，线下商户上线：online
         /// </summary>
         [XmlElement("register_type")]
         public string RegisterType { get; set; }

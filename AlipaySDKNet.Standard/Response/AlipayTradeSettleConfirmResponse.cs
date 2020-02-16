@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string OutRequestNo { get; set; }
 
         /// <summary>
+        /// 本次确认结算的实际结算金额，单位为元。
+        /// </summary>
+        [XmlElement("settle_amount")]
+        public string SettleAmount { get; set; }
+
+        /// <summary>
         /// 支付宝交易号
         /// </summary>
         [XmlElement("trade_no")]

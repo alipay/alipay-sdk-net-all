@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniInnerversionInfoQueryModel : AopObject
     {
         /// <summary>
-        /// 业务来源
+        /// 业务来源，新接入方需要向支付宝申请专用来源，否则不予接入。https://yuque.antfin-inc.com/tinyapp-all/qddncu/bidushixiang
         /// </summary>
         [XmlElement("app_origin")]
         public string AppOrigin { get; set; }

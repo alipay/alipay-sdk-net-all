@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -13,5 +14,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 从码值解析出来的用户身份信息
+        /// </summary>
+        [XmlElement("user_identity_info")]
+        public UserIdentityInfo UserIdentityInfo { get; set; }
     }
 }

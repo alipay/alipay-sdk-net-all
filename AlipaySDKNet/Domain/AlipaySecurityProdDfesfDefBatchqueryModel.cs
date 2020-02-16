@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipaySecurityProdDfesfDefBatchqueryModel : AopObject
     {
         /// <summary>
+        /// 11
+        /// </summary>
+        [XmlElement("dd")]
+        public GavintestNewLeveaOne Dd { get; set; }
+
+        /// <summary>
         /// 纬度
         /// </summary>
         [XmlElement("latitude")]

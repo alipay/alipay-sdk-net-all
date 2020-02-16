@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("desdde")]
         public string Desdde { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("desf")]
+        public string Desf { get; set; }
     }
 }

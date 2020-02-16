@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("collect_attachement")]
         public bool CollectAttachement { get; set; }
+
+        /// <summary>
+        /// 收集证件类型列表
+        /// </summary>
+        [XmlArray("collect_cert_types")]
+        [XmlArrayItem("string")]
+        public List<string> CollectCertTypes { get; set; }
 
         /// <summary>
         /// 公司编号-SF

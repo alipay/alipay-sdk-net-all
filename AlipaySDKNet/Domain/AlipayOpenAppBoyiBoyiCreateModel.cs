@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public GavinTestnew Desd { get; set; }
 
         /// <summary>
+        /// 21
+        /// </summary>
+        [XmlElement("desdmm")]
+        public string Desdmm { get; set; }
+
+        /// <summary>
         /// 11
         /// </summary>
         [XmlElement("header")]

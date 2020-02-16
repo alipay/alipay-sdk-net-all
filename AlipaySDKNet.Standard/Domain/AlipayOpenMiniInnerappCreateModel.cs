@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string AppName { get; set; }
 
         /// <summary>
-        /// 来源的业务方
+        /// 来源的业务方,接入文档中申请的业务来源
         /// </summary>
         [XmlElement("app_origin")]
         public string AppOrigin { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string IsvAppId { get; set; }
 
         /// <summary>
-        /// 需要创建的小程序appId，面向手淘场景，其他场景勿用
+        /// 小程序ID，仅特殊场景使用，普通业务方无需关注该参数
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }
