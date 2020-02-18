@@ -3,12 +3,12 @@ mono: none
 dotnet: 2.1.502
 
 install:
-  - cd UnitTestNetCore/ && dotnet add package AltCover && cd ../
+  - cd AlipaySDKNet.Test/ && dotnet add package AltCover && cd ../
   - dotnet restore
   
 script:
-  - cd AlipaySDKNet.Standard && dotnet build && cd ..
-  - cd UnitTestNetCore && dotnet build && cd ..
+  - cd AlipaySDKNet && dotnet build && cd ..
+  - cd AlipaySDKNet.Test && dotnet build && cd ..
   - dotnet test /p:AltCover=true
 
 after_success:
