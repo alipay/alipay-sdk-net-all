@@ -1,0 +1,66 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// ApInvoiceLineOrderRequest Data Structure.
+    /// </summary>
+    [Serializable]
+    public class ApInvoiceLineOrderRequest : AopObject
+    {
+        /// <summary>
+        /// 含税金额
+        /// </summary>
+        [XmlElement("amt")]
+        public MultiCurrencyMoneyOpenApi Amt { get; set; }
+
+        /// <summary>
+        /// 计量单位
+        /// </summary>
+        [XmlElement("measurement_unit")]
+        public string MeasurementUnit { get; set; }
+
+        /// <summary>
+        /// 货物或劳务名称
+        /// </summary>
+        [XmlElement("product_name")]
+        public string ProductName { get; set; }
+
+        /// <summary>
+        /// 规格型号
+        /// </summary>
+        [XmlElement("product_specification")]
+        public string ProductSpecification { get; set; }
+
+        /// <summary>
+        /// 数量
+        /// </summary>
+        [XmlElement("quantity")]
+        public long Quantity { get; set; }
+
+        /// <summary>
+        /// (invoiceType=01 || invoiceType=02 必填）税额
+        /// </summary>
+        [XmlElement("tax_amt")]
+        public MultiCurrencyMoneyOpenApi TaxAmt { get; set; }
+
+        /// <summary>
+        /// (invoiceType=01 || invoiceType=02 必填）不含税金额
+        /// </summary>
+        [XmlElement("tax_exclusive_amt")]
+        public MultiCurrencyMoneyOpenApi TaxExclusiveAmt { get; set; }
+
+        /// <summary>
+        /// (invoiceType=01 || invoiceType=02 必填，且大于0)税率
+        /// </summary>
+        [XmlElement("tax_rate")]
+        public long TaxRate { get; set; }
+
+        /// <summary>
+        /// 单价(元)
+        /// </summary>
+        [XmlElement("unit_amt")]
+        public long UnitAmt { get; set; }
+    }
+}
