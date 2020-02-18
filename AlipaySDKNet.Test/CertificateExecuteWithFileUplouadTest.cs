@@ -30,7 +30,7 @@ namespace Test
 
         private String GetTestImagePath()
         {
-            return TestAccount.GetSolutionBasePath() + "/UnitTestNetCore/Fixture/海底捞.jpg";
+            return TestAccount.GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/海底捞.jpg";
         }
     }
 }

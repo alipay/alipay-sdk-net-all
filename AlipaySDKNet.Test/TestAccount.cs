@@ -18,8 +18,8 @@ namespace Test
             public const String AppId = "2016092700607517";
             public const String AppPublicKey = @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtQ6pOPm4pt87Ha7AGtMCUM8gv/I0L740taQsL5RA724qSLhkTzf4jeVjW9kiIGJnqUKvPMZEpCTAbuLfMTMAlYbwxqjCRcXIwHx0C1NxSdh2oK5vI0HS1+Qk1JUZxyZKMUNMmQ9sbD7NUyTk0lXmKgGbUGHle0cAF3jiHygT2lBcWagO83kT79B84jWU8u8EZju6gyj5nnC38cKw5F9eSxVyZU/s3xFhjwOJp3GHfDPxt213hv4QOD4M+2DoTuJRxKYsdYdjxpCsprBb2LXQeXxmVvJqyKDJ8UwFRLxv1li3UiVr3pqEC3nQzD3YAUMbl8PY33f3ZdQSiJ2qmyvEZwIDAQAB";
             public static readonly String AppPrivateKey = GetPrivateKey("Sandbox");
-            public static readonly String AppPrivateKeyFile = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/aop-sandbox-RSA-private.pem";
-            public static readonly String AppPublicKeyFile = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/aop-sandbox-RSA-public.pem";
+            public static readonly String AppPrivateKeyFile = GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/aop-sandbox-RSA-private.pem";
+            public static readonly String AppPublicKeyFile = GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/aop-sandbox-RSA-public.pem";
             public const String Pid = "2088102177492087";
             public const String AesKey = "hNtPqVWeuUeEpw9ksTZ92A==";
         }
@@ -31,9 +31,9 @@ namespace Test
             public static readonly String AppPrivateKey = GetPrivateKey("ProdCert");
             public static CertParams CertParams = new CertParams
             {
-                AlipayPublicCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/alipayCertPublicKey_RSA2.crt",
-                AppCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/appCertPublicKey_2019090366875133.crt",
-                RootCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/alipayRootCert.crt"
+                AlipayPublicCertPath = GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/alipayCertPublicKey_RSA2.crt",
+                AppCertPath = GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/appCertPublicKey_2019090366875133.crt",
+                RootCertPath = GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/alipayRootCert.crt"
             };
         }
 
@@ -62,15 +62,15 @@ namespace Test
             public static CertParams CertParams = new CertParams
             {
 
-                AlipayPublicCertPath = TestAccount.GetSolutionBasePath() + "/UnitTestNetCore/Fixture/SM2/alipayCertPublicKey_SM2.crt",
-                AppCertPath = TestAccount.GetSolutionBasePath() + "/UnitTestNetCore/Fixture/SM2/appCertPublicKey_2021000146613340.crt",
-                RootCertPath = TestAccount.GetSolutionBasePath() + "/UnitTestNetCore/Fixture/SM2/alipayRootCert.crt"
+                AlipayPublicCertPath = TestAccount.GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/SM2/alipayCertPublicKey_SM2.crt",
+                AppCertPath = TestAccount.GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/SM2/appCertPublicKey_2021000146613340.crt",
+                RootCertPath = TestAccount.GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/SM2/alipayRootCert.crt"
             };
         }
 
         public static string GetSolutionBasePath()
         {
-            string current = Directory.GetCurrentDirectory();
+            string current = AppDomain.CurrentDomain.BaseDirectory;
             do
             {
                 current = Directory.GetParent(current).ToString();
@@ -90,7 +90,7 @@ namespace Test
         private static string GetPrivateKey(String key)
         {
             IDictionary<string, string> json = JsonConvert.DeserializeObject<IDictionary<string, string>>(
-                File.ReadAllText(GetSolutionBasePath() + "/UnitTestNetCore/Fixture/privateKey.json"));
+                File.ReadAllText(GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/privateKey.json"));
             return json[key];
         }
     }

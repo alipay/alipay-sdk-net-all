@@ -1,4 +1,4 @@
-[![NuGet](https://badge.fury.io/nu/AlipaySDKNet.Standard.svg)](https://badge.fury.io/nu/AlipaySDKNet.Standard)
+[![NuGet](https://badge.fury.io/nu/AlipaySDKNet.svg)](https://badge.fury.io/nu/AlipaySDKNet)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falipay%2Falipay-sdk-net-all.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Falipay%2Falipay-sdk-net-all?ref=badge_shield)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/068a5b3d1b984234bedba4cc8647ff8c)](https://www.codacy.com/manual/antopen/alipay-sdk-net-all?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=alipay/alipay-sdk-net-all&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://www.travis-ci.org/alipay/alipay-sdk-net-all.svg?branch=dev)](https://www.travis-ci.org/alipay/alipay-sdk-net-all)
@@ -29,11 +29,11 @@ Alipay SDK for .NET让您不用复杂编程即可访支付宝开放平台开放�
 ## 安装依赖
 推荐通过 NuGet 程序包管理器来安装依赖：
 
-* 在 `解决方案资源管理器面板` 中右击您的项目选择 `管理 NuGet 程序包` 菜单，在打开的 `NuGet 管理面板` 中点击 `浏览` 选项卡输入 `AlipaySDKNet`，在下方列表中选择 `Authors` 为 `antopen` 由官方发布的NuGet包（根据您使用的框架选择`AlipaySDKNet`或`AlipaySDKNet.Standard`），点击 **安装** 即可。
+* 在 `解决方案资源管理器面板` 中右击您的项目选择 `管理 NuGet 程序包` 菜单，在打开的 `NuGet 管理面板` 中点击 `浏览` 选项卡输入 `AlipaySDKNet`，在下方列表中选择 `Authors` 为 `antopen` 由官方发布的NuGet包，点击 **安装** 即可。
 
-* 或者通过 .NET CLI 工具来安装（以安装AlipaySDKNet.Standard为例）
+* 或者通过 .NET CLI 工具来安装
 
-    dotnet add package AlipaySDKNet.Standard
+    dotnet add package AlipaySDKNet
 
 ## 快速使用
 以下这段代码示例向您展示了使用Alipay SDK for .NET调用一个API的3个主要步骤：

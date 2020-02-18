@@ -1,27 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFrameworks>net35;netcoreapp2.1</TargetFrameworks>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="nunit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Util\Asymmetric\" />
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.0" />
   </ItemGroup>
+
   <ItemGroup>
     <None Remove="Fixture\sm2\alipayCertPublicKey_SM2.crt" />
     <None Remove="Fixture\sm2\appCertPublicKey_2021000146613340.crt" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Remove="RSACheckTest.cs" />
+    <ProjectReference Include="..\AlipaySDKNet\AlipaySDKNet.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AlipaySDKNet.Standard\AlipaySDKNet.csproj" />
-  </ItemGroup>
+
 </Project>

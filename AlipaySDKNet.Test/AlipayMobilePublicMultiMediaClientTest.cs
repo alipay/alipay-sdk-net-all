@@ -1,9 +1,8 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using Aop.Api;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Aop.Api;
+using NUnit.Framework;
 
 namespace Test
 {
@@ -32,7 +31,9 @@ BJJ8dq1F4aMRNbw/bTZqJuj4mmZUMrpK0JKeRjjFgzJF";
 
             //通过各个重载构造函数初始化客户端
             List<IAopClient> clients = new List<IAopClient>();
+#if NETCOREAPP
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+#endif
             clients.Add(new AlipayMobilePublicMultiMediaClient(serverUrl, appId, privateKeyPem, false, "json", "GBK"));
             clients.Add(new AlipayMobilePublicMultiMediaClient(serverUrl, appId, privateKeyPem, false, "json", "GBK", "1.0", "RSA"));
 
@@ -64,7 +65,9 @@ BJJ8dq1F4aMRNbw/bTZqJuj4mmZUMrpK0JKeRjjFgzJF";
 
             //通过各个重载构造函数初始化客户端
             List<IAopClient> clients = new List<IAopClient>();
+#if NETCOREAPP
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+#endif
             clients.Add(new AlipayMobilePublicMultiMediaClient(serverUrl, appId, privateKeyPem, true, "json", "GBK"));
             clients.Add(new AlipayMobilePublicMultiMediaClient(serverUrl, appId, privateKeyPem, true, "json", "GBK", "1.0", "RSA"));
             clients.Add(new AlipayMobilePublicMultiMediaClient(serverUrl, appId, privateKeyPem, "json", "GBK"));
@@ -103,14 +106,14 @@ BJJ8dq1F4aMRNbw/bTZqJuj4mmZUMrpK0JKeRjjFgzJF";
             return req;
         }
 
-        private String GetPrivateKeyFilePath()
+        private string GetPrivateKeyFilePath()
         {
-            return TestAccount.GetSolutionBasePath() + "/UnitTestNetCore/Fixture/aop-openfile-RSA-private.pem";
+            return TestAccount.GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/aop-openfile-RSA-private.pem";
         }
 
-        private String GetTestImagePath()
+        private string GetTestImagePath()
         {
-            return TestAccount.GetSolutionBasePath() + "/UnitTestNetCore/Fixture/test-image.png";
+            return TestAccount.GetSolutionBasePath() + "/AlipaySDKNet.Test/Fixture/test-image.png";
         }
     }
 }
