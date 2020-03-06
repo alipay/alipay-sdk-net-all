@@ -68,10 +68,22 @@ namespace Aop.Api.Domain
         public List<OrderLogisticsInformation> LogisticsInfoList { get; set; }
 
         /// <summary>
+        /// 商户订单业务类型
+        /// </summary>
+        [XmlElement("merchant_biz_type")]
+        public string MerchantBizType { get; set; }
+
+        /// <summary>
         /// 商户订单链接地址
         /// </summary>
         [XmlElement("merchant_order_link_page")]
         public string MerchantOrderLinkPage { get; set; }
+
+        /// <summary>
+        /// 外部订单号 out_biz_no唯一对应一笔订单
+        /// </summary>
+        [XmlElement("merchant_order_no")]
+        public string MerchantOrderNo { get; set; }
 
         /// <summary>
         /// 商户的uid，即所需查询订单的partnerId
@@ -98,6 +110,12 @@ namespace Aop.Api.Domain
         public string OrderStatus { get; set; }
 
         /// <summary>
+        /// 订单类型，SERVICE_ORDER：服务订单 -TRADE_ORDER：交易订单
+        /// </summary>
+        [XmlElement("order_type")]
+        public string OrderType { get; set; }
+
+        /// <summary>
         /// 商户前置额外费用
         /// </summary>
         [XmlElement("pre_cost")]
@@ -114,6 +132,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("real_pay_amount")]
         public string RealPayAmount { get; set; }
+
+        /// <summary>
+        /// 门店信息
+        /// </summary>
+        [XmlElement("shop_info")]
+        public OrderShopInfoResult ShopInfo { get; set; }
+
+        /// <summary>
+        /// 凭证信息
+        /// </summary>
+        [XmlElement("ticket_info")]
+        public TicketInfoResult TicketInfo { get; set; }
 
         /// <summary>
         /// 小程序appid

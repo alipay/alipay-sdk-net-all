@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public bool IsAdvance { get; set; }
 
         /// <summary>
-        /// ISV停车场ID，由ISV定义的停车场标识，系统唯一，parking_id和out_parking_id不能同时为空
+        /// ISV停车场ID，由ISV定义的停车场标识，系统唯一，必填
         /// </summary>
         [XmlElement("out_parking_id")]
         public string OutParkingId { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 支付宝停车平台ID，由支付宝定义的该停车场标识，系统唯一, parking_id和out_parking_id不能同时为空
+        /// 支付宝停车平台ID，由支付宝定义的该停车场标识，系统唯一, 必填
         /// </summary>
         [XmlElement("parking_id")]
         public string ParkingId { get; set; }

@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string PaymentMode { get; set; }
 
         /// <summary>
-        /// RECEIVE_IN_ONE_TIME:表达一次性提前收款服务
+        /// RECEIVE_IN_ONE_TIME:表达一次性提前收款服务 RECEIVE_BY_PERIOD:按照周期收款
         /// </summary>
         [XmlElement("receive_mode")]
         public string ReceiveMode { get; set; }

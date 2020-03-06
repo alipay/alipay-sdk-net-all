@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string EncryptedTaData { get; set; }
 
         /// <summary>
+        /// ext_info+不唯一+补充说明协议中不明确的信息+无枚举值
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// return_code(错误码)+不唯一+用于响应OEM厂商服务端的请求+是枚举值，000000含义为成功+生成方式由具体执行情况确定+其它枚举值进一步约定
         /// </summary>
         [XmlElement("return_code")]
@@ -31,5 +37,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("return_desc")]
         public string ReturnDesc { get; set; }
+
+        /// <summary>
+        /// ta_hash+不唯一+ta源文件进行SHA-256哈希计算再进行BASE64编码得到的哈希值字符串信息。
+        /// </summary>
+        [XmlElement("ta_hash")]
+        public string TaHash { get; set; }
+
+        /// <summary>
+        /// ext_info+不唯一+JSON形式的map，包含关于ta摘要算法等信息+枚举值：BASE64_OVER_SHA256；BASE64_OVER_SHA512;BASE64_OVER_SM3+支付宝服务端返回TA哈希时放在入参里+缺省值为BASE64_OVER_SHA256
+        /// </summary>
+        [XmlElement("ta_info")]
+        public string TaInfo { get; set; }
     }
 }

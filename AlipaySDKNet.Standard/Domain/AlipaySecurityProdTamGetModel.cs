@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Condition { get; set; }
 
         /// <summary>
+        /// ext_info+不唯一+JSON形式的map，包含关于ta摘要算法等信息+枚举值：BASE64_OVER_SHA256；BASE64_OVER_SHA512;BASE64_OVER_SM3+OEM厂商获取TA时放在入参里+缺省值为BASE64_OVER_SHA256
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// sp_aik_pub(OEM厂商服务端分配给服务商的公钥)+唯一+由OEM厂商服务端生成，OEM厂商服务端在请求ta文件时会带上这个公钥，用于支付宝加密对称密钥返回给OEM厂商服务端+示例值由于输入长度限制并非真实的公钥长度
         /// </summary>
         [XmlElement("sp_aik_pub")]

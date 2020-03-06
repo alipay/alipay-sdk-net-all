@@ -23,11 +23,18 @@ namespace Aop.Api.Domain
         public FinanceMemberInfo CoreBusinessInfo { get; set; }
 
         /// <summary>
-        /// 向核心企业授信的配置id
+        /// 向核心企业授信的配置id(已弃用)，请参考credit_idxs
         /// </summary>
         [XmlArray("credit_ids")]
         [XmlArrayItem("string")]
         public List<string> CreditIds { get; set; }
+
+        /// <summary>
+        /// 授信列表
+        /// </summary>
+        [XmlArray("credit_idxs")]
+        [XmlArrayItem("finance_credit_item")]
+        public List<FinanceCreditItem> CreditIdxs { get; set; }
 
         /// <summary>
         /// 币种

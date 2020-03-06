@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ExtendParams { get; set; }
 
         /// <summary>
+        /// 机构类型：医保(YB),人社(RS) 默认为RS
+        /// </summary>
+        [XmlElement("ins_type")]
+        public string InsType { get; set; }
+
+        /// <summary>
         /// 跳回的地址
         /// </summary>
         [XmlElement("return_url")]
@@ -44,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }
+
+        /// <summary>
+        /// 版本号
+        /// </summary>
+        [XmlElement("version_no")]
+        public string VersionNo { get; set; }
     }
 }

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ExtendFields { get; set; }
 
         /// <summary>
+        /// base64化的字符串
+        /// </summary>
+        [XmlElement("file_base")]
+        public string FileBase { get; set; }
+
+        /// <summary>
         /// PDF类型文件填写PDF，  JPG类型文件填写JPG(JPG文件请先询问对接人当前是否支持)
         /// </summary>
         [XmlElement("file_download_type")]
@@ -38,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 压缩方式
+        /// </summary>
+        [XmlElement("zip")]
+        public string Zip { get; set; }
     }
 }

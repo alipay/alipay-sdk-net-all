@@ -40,6 +40,12 @@ namespace Aop.Api.Response
         public string CertifyTime { get; set; }
 
         /// <summary>
+        /// havana id
+        /// </summary>
+        [XmlElement("havana_id")]
+        public string HavanaId { get; set; }
+
+        /// <summary>
         /// T表示认证，F表示未认证
         /// </summary>
         [XmlElement("is_certified")]

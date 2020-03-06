@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string SendAmount { get; set; }
 
         /// <summary>
-        /// 汇款人国家
+        /// 汇款人国家，与sender_nationality不能同时为空
         /// </summary>
         [XmlElement("send_country")]
         public string SendCountry { get; set; }
@@ -86,5 +86,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sender_name")]
         public string SenderName { get; set; }
+
+        /// <summary>
+        /// 汇款人国籍，与send_country不能同时为空
+        /// </summary>
+        [XmlElement("sender_nationality")]
+        public string SenderNationality { get; set; }
     }
 }

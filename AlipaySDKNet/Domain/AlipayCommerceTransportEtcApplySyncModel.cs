@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string DeviceNo { get; set; }
 
         /// <summary>
-        /// 设备状态 0：未发货 1：已发货 2：运输中 3：已签收 4：已二发 5：已激活 6：退货中 7：已退货 8：换货中 9：设备已注销
+        /// 设备状态 0：未发货 1：已发货 2：运输中 3：已签收 4：已二发 5：已激活 6：退货中 7：已退货 8：换货中 9：设备已注销 10：设备注销失败 11：已发卡 12：已发签
         /// </summary>
         [XmlElement("device_status")]
         public string DeviceStatus { get; set; }

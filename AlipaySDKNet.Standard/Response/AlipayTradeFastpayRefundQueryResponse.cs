@@ -71,7 +71,7 @@ namespace Aop.Api.Response
         public string RefundChargeAmount { get; set; }
 
         /// <summary>
-        /// 本次退款使用的资金渠道；  默认不返回该信息，需与支付宝约定后配置返回；
+        /// 本次退款使用的资金渠道； 默认不返回该信息，需与支付宝约定后配置，或者入参的query_options中指定时才返回该字段信息。
         /// </summary>
         [XmlArray("refund_detail_item_list")]
         [XmlArrayItem("trade_fund_bill")]

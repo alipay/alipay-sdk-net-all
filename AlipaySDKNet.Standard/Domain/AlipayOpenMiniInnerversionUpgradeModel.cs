@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BundleId { get; set; }
 
         /// <summary>
-        /// 需要升级的实例小程序appId，仅用于一方链路，其他无用
+        /// 小程序ID，特殊场景专用，普通业务方无需关注该参数。
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }

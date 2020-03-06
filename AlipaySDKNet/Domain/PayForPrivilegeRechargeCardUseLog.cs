@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
-        /// 订单ID
+        /// 该字段已废弃，请勿使用
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }

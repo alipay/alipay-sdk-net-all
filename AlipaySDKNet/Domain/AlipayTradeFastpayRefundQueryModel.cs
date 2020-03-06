@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -26,6 +27,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
+
+        /// <summary>
+        /// 查询选项，商户通过上送该参数来定制同步需要额外返回的信息字段，数组格式。如：["refund_detail_item_list"]
+        /// </summary>
+        [XmlArray("query_options")]
+        [XmlArrayItem("string")]
+        public List<string> QueryOptions { get; set; }
 
         /// <summary>
         /// 支付宝交易号，和商户订单号不能同时为空

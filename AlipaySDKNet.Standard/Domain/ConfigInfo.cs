@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string JumpUrl { get; set; }
 
         /// <summary>
+        /// 商户小程序签署地址（signModel字段值为1时 必填）
+        /// </summary>
+        [XmlElement("merchant_mini_sign_url")]
+        public string MerchantMiniSignUrl { get; set; }
+
+        /// <summary>
         /// 回调地址，签署的过程和签署完成都会回调。
         /// </summary>
         [XmlElement("notice_developer_url")]
@@ -64,5 +70,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("serial_no")]
         public string SerialNo { get; set; }
+
+        /// <summary>
+        /// 签署方式  0-e签宝小程序签署 1-商户小程序签署  默认0
+        /// </summary>
+        [XmlElement("sign_model")]
+        public long SignModel { get; set; }
     }
 }

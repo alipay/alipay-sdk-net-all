@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("goods_status")]
         public string GoodsStatus { get; set; }
+
+        /// <summary>
+        /// 地址是否修改成功标志；取消/退货  不填 地址修改  必填
+        /// </summary>
+        [XmlElement("success")]
+        public bool Success { get; set; }
     }
 }

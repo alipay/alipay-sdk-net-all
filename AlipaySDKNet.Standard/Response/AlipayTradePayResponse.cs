@@ -89,13 +89,13 @@ namespace Aop.Api.Response
         public string DiscountAmount { get; set; }
 
         /// <summary>
-        /// 本次交易支付所使用的单品券优惠的商品优惠信息
+        /// 本次交易支付所使用的单品券优惠的商品优惠信息。 只有在query_options中指定时才返回该字段信息。
         /// </summary>
         [XmlElement("discount_goods_detail")]
         public string DiscountGoodsDetail { get; set; }
 
         /// <summary>
-        /// 交易支付使用的资金渠道
+        /// 交易支付使用的资金渠道。 只有在签约中指定需要返回资金明细，或者入参的query_options中指定时才返回该字段信息。
         /// </summary>
         [XmlArray("fund_bill_list")]
         [XmlArrayItem("trade_fund_bill")]
@@ -210,7 +210,7 @@ namespace Aop.Api.Response
         public string TransPayRate { get; set; }
 
         /// <summary>
-        /// 本交易支付时使用的所有优惠券信息
+        /// 本交易支付时使用的所有优惠券信息。 只有在query_options中指定时才返回该字段信息。
         /// </summary>
         [XmlArray("voucher_detail_list")]
         [XmlArrayItem("voucher_detail")]

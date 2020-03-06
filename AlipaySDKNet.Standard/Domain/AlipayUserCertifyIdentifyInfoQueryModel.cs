@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayUserCertifyIdentifyInfoQueryModel : AopObject
     {
         /// <summary>
+        /// havana_id
+        /// </summary>
+        [XmlElement("havana_id")]
+        public string HavanaId { get; set; }
+
+        /// <summary>
         /// 登录ID
         /// </summary>
         [XmlElement("logon_id")]

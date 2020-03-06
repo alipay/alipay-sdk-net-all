@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string BizCode { get; set; }
 
         /// <summary>
+        /// havana_id
+        /// </summary>
+        [XmlElement("havana_id")]
+        public string HavanaId { get; set; }
+
+        /// <summary>
+        /// 登录ID
+        /// </summary>
+        [XmlElement("logon_id")]
+        public string LogonId { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

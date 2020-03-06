@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipayUserCertifyOpenQueryResponse : AopResponse
     {
         /// <summary>
+        /// 认证错误原因，扩展字段，默认不返回
+        /// </summary>
+        [XmlElement("fail_reason")]
+        public string FailReason { get; set; }
+
+        /// <summary>
         /// 认证的主体信息，一般的认证场景返回为空
         /// </summary>
         [XmlElement("identity_info")]

@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 当前绑卡状态： BINDED(已绑定) NOT_BIND(未绑定) OTHER_BIND(不同账号绑卡)
+        /// </summary>
+        [XmlElement("bind_status")]
+        public string BindStatus { get; set; }
+
+        /// <summary>
         /// 买家支付宝账号，将用＊号屏蔽部分内容
         /// </summary>
         [XmlElement("buyer_logon_id")]
@@ -47,7 +53,7 @@ namespace Aop.Api.Response
         public string City { get; set; }
 
         /// <summary>
-        /// 一个支付宝账号绑定了多张医保卡，除本人意外的卡信息
+        /// 一个支付宝账号绑定了多张医保卡，除本人以外的卡信息
         /// </summary>
         [XmlArray("extend_cards")]
         [XmlArrayItem("extend_medical_card")]
@@ -82,6 +88,18 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("medical_card_type")]
         public string MedicalCardType { get; set; }
+
+        /// <summary>
+        /// bind_satus= OTHER_BIND情况下输出,买家支付宝账号，将用*号屏蔽部分内容
+        /// </summary>
+        [XmlElement("other_user_logon_id")]
+        public string OtherUserLogonId { get; set; }
+
+        /// <summary>
+        /// bind_satus= OTHER_BIND情况下输出, "off"代表其他账户已注销 "on"代表其他账户未注销
+        /// </summary>
+        [XmlElement("other_user_status")]
+        public string OtherUserStatus { get; set; }
 
         /// <summary>
         /// 医保卡持卡人证件号码(脱敏)

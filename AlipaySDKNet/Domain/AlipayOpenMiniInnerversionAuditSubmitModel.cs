@@ -77,7 +77,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 需要提交审核的小程序appId，面向一方场景，其他场景误用
+        /// 小程序ID，特殊场景专用，普通业务方无需关注该参数。
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }

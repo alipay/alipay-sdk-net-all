@@ -17,10 +17,28 @@ namespace Aop.Api.Domain
         public string ActionType { get; set; }
 
         /// <summary>
+        /// 创意最新审核工单号
+        /// </summary>
+        [XmlElement("audit_order_id")]
+        public string AuditOrderId { get; set; }
+
+        /// <summary>
         /// 创意分组标识，多个创意可按业务逻辑标识为一个分组
         /// </summary>
         [XmlElement("batch_tag")]
         public string BatchTag { get; set; }
+
+        /// <summary>
+        /// 创意点击量
+        /// </summary>
+        [XmlElement("click")]
+        public long Click { get; set; }
+
+        /// <summary>
+        /// 创意消费数据，单元：分
+        /// </summary>
+        [XmlElement("cost")]
+        public long Cost { get; set; }
 
         /// <summary>
         /// 广告投放平台生成的创意ID
@@ -59,6 +77,12 @@ namespace Aop.Api.Domain
         [XmlArray("img_list")]
         [XmlArrayItem("material_detail")]
         public List<MaterialDetail> ImgList { get; set; }
+
+        /// <summary>
+        /// 创意展现量
+        /// </summary>
+        [XmlElement("impression")]
+        public long Impression { get; set; }
 
         /// <summary>
         /// 门店LBS信息，目前仅口碑使用，格式为：经度:纬度:半径(单位:KM,无半径限制直接设置为0)

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string BundleId { get; set; }
 
         /// <summary>
-        /// 小程序appId，仅支持普通小程序、门店小程序
+        /// 小程序ID，特殊场景专用，普通业务方无需关注该参数。
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }

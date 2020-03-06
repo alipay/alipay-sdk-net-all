@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BizStateCode { get; set; }
 
         /// <summary>
-        /// 此类目为分配给商户在一个信用服务下的不同类目分类，（如约定产品下的电影类目）
+        /// 此类目为分配给商户在内容下的不同分类，（如电影，直播）
         /// </summary>
         [XmlElement("category_code")]
         public string CategoryCode { get; set; }

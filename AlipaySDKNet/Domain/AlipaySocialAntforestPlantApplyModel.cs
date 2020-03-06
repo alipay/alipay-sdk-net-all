@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ApplyType { get; set; }
 
         /// <summary>
-        /// 接口扩展参数，商户可透传一些信息进来，后续扩展或者透传等作用
+        /// 接口扩展参数，商户可透传一些信息进来，后续扩展或者透传等作用，json字符串目前需要传以下参数{"accountName":"钉钉",//账号名称，必填 "type":"class",// 合种类型:class/corp，必填 "corp":"111", // 公司名称 "cooperation":"222" , // 合种名称，type为class时为班级名称 }
         /// </summary>
         [XmlElement("ext_info")]
         public string ExtInfo { get; set; }
@@ -32,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 兑换树种时当前合种的参与人数
+        /// </summary>
+        [XmlElement("participant")]
+        public long Participant { get; set; }
 
         /// <summary>
         /// 项目id，需要配合其他查询接口，查询到相关的项目之后使用。不限于树种，还包括保护地等

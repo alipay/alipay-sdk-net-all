@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BuildExtraInfo { get; set; }
 
         /// <summary>
+        /// 构建方式TEMPLATE_CONFIG_PKG：模板配置化；TEMPLATE_EXTEND：模板继承
+        /// </summary>
+        [XmlElement("build_type")]
+        public string BuildType { get; set; }
+
+        /// <summary>
         /// 淘宝：com.taobao.app
         /// </summary>
         [XmlElement("bundle_id")]

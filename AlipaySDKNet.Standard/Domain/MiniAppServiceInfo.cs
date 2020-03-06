@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class MiniAppServiceInfo : AopObject
     {
         /// <summary>
+        /// 是否是内部标，true/false
+        /// </summary>
+        [XmlElement("is_inner")]
+        public bool IsInner { get; set; }
+
+        /// <summary>
         /// 是否订购，true/false
         /// </summary>
         [XmlElement("is_order")]

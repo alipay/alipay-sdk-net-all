@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string DataFromType { get; set; }
 
         /// <summary>
-        /// 外部业务标识
+        /// 外部业务标识.如pipelineId
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
@@ -34,5 +34,17 @@ namespace Aop.Api.Domain
         [XmlArray("service_list")]
         [XmlArrayItem("detect_service_entity")]
         public List<DetectServiceEntity> ServiceList { get; set; }
+
+        /// <summary>
+        /// 小程序appId
+        /// </summary>
+        [XmlElement("tinyapp_id")]
+        public string TinyappId { get; set; }
+
+        /// <summary>
+        /// 小程序pid
+        /// </summary>
+        [XmlElement("tinyapp_partner_id")]
+        public string TinyappPartnerId { get; set; }
     }
 }

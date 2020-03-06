@@ -27,10 +27,22 @@ namespace Aop.Api.Response
         public string BuildStatus { get; set; }
 
         /// <summary>
+        /// 构建日志地址
+        /// </summary>
+        [XmlElement("log_url")]
+        public string LogUrl { get; set; }
+
+        /// <summary>
         /// 是否需要轮询
         /// </summary>
         [XmlElement("need_rotation")]
         public string NeedRotation { get; set; }
+
+        /// <summary>
+        /// 构建的结果地址
+        /// </summary>
+        [XmlElement("result_url")]
+        public string ResultUrl { get; set; }
 
         /// <summary>
         /// 创建版本结果

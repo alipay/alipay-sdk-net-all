@@ -70,5 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }
+
+        /// <summary>
+        /// 分包信息
+        /// </summary>
+        [XmlArray("sub_packages")]
+        [XmlArrayItem("sub_package")]
+        public List<SubPackage> SubPackages { get; set; }
     }
 }

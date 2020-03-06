@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string Ext { get; set; }
 
         /// <summary>
-        /// 需要构建的小程序appId
+        /// 小程序ID，特殊场景专用，普通业务方无需关注该参数。
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }
