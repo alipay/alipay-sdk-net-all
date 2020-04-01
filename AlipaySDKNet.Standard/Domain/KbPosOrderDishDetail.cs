@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -130,6 +131,12 @@ namespace Aop.Api.Domain
         public string OutDetailNo { get; set; }
 
         /// <summary>
+        /// 当前菜为单品菜时,为对应的sku外部ID 当前菜为加料时,为对应的加料的外部ID
+        /// </summary>
+        [XmlElement("outer_id")]
+        public string OuterId { get; set; }
+
+        /// <summary>
         /// 做法信息，格式按照：做法1,做法2，对于有一般销售属性的菜会拼接一般销售属性信息，格式为：做法1,做法2,销售属性1,销售属性2
         /// </summary>
         [XmlElement("practice_info")]
@@ -166,6 +173,13 @@ namespace Aop.Api.Domain
         public string SalesProperties { get; set; }
 
         /// <summary>
+        /// 销售属性的扩展
+        /// </summary>
+        [XmlArray("sales_properties_ext")]
+        [XmlArrayItem("name_outer_id_pair")]
+        public List<NameOuterIdPair> SalesPropertiesExt { get; set; }
+
+        /// <summary>
         /// 售价（单价），以元为单位，精度到分
         /// </summary>
         [XmlElement("sell_price")]
@@ -188,6 +202,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("spec_name")]
         public string SpecName { get; set; }
+
+        /// <summary>
+        /// 规格名称扩展信息
+        /// </summary>
+        [XmlArray("spec_name_ext")]
+        [XmlArrayItem("name_outer_id_pair")]
+        public List<NameOuterIdPair> SpecNameExt { get; set; }
 
         /// <summary>
         /// 菜明细类型，SINGLE(单品)/SIDE(加料)/COMBO(套餐)/COMBO(套餐内单品)

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public long PageNo { get; set; }
 
         /// <summary>
-        /// 分页数量
+        /// 分页数量, 最大50
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

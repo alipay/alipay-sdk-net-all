@@ -79,6 +79,12 @@ namespace Aop.Api.Domain
         public List<ContactInfo> ContactInfos { get; set; }
 
         /// <summary>
+        /// 默认结算规则。在收单时不做特别指定规则时，将使用本对象设置的结算规则进行结算。其详细描述及收单接口传参示例参考功能包文档
+        /// </summary>
+        [XmlElement("default_settle_rule")]
+        public DefaultSettleRule DefaultSettleRule { get; set; }
+
+        /// <summary>
         /// 商户编号，由机构定义，需要保证在机构下唯一
         /// </summary>
         [XmlElement("external_id")]

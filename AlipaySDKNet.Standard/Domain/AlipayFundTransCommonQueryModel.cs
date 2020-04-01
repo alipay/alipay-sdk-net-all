@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string PayFundOrderId { get; set; }
 
         /// <summary>
-        /// 销售产品码，商家和支付宝签约的产品码，如果传递了out_biz_no则该字段为必传。可传值如下：  STD_RED_PACKET：现金红包  TRANS_ACCOUNT_NO_PWD：单笔无密转账
+        /// 销售产品码，商家和支付宝签约的产品码，如果传递了out_biz_no则该字段为必传。可传值如下： STD_RED_PACKET：现金红包 TRANS_ACCOUNT_NO_PWD：单笔无密转账到支付宝账户 TRANS_BANKCARD_NO_PWD：单笔无密转账到银行卡
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }

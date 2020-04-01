@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
+        /// 加料的描述字段
+        /// </summary>
+        [XmlElement("material_desc")]
+        public string MaterialDesc { get; set; }
+
+        /// <summary>
         /// 加料id，加料的唯一标识。  新增时该项不用传，修改删除时必传。
         /// </summary>
         [XmlElement("material_id")]
@@ -64,10 +70,22 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
+        /// 外部isv的加料id
+        /// </summary>
+        [XmlElement("out_material_id")]
+        public string OutMaterialId { get; set; }
+
+        /// <summary>
         /// 公共字段，根据materialType的类型，这里填入商户id或者口碑门店id。
         /// </summary>
         [XmlElement("public_id")]
         public string PublicId { get; set; }
+
+        /// <summary>
+        /// 加料的单位id
+        /// </summary>
+        [XmlElement("unit_id")]
+        public string UnitId { get; set; }
 
         /// <summary>
         /// 修改人，在新增和修改，删除时必传

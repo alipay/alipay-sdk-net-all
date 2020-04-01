@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 用户的支付宝登录账号，支持邮箱或手机号码格式。本参数与alipay_user_id 不可同时为空，若都填写，则以alipay_user_id 为准。
+        /// 用户的支付宝登录账号，支持邮箱或手机号码格式。本参数与alipay_user_id若都填写，则以alipay_user_id 为准。
         /// </summary>
         [XmlElement("alipay_logon_id")]
         public string AlipayLogonId { get; set; }
 
         /// <summary>
-        /// 用户的支付宝账号对应 的支付宝唯一用户号，以 2088 开头的 16 位纯数字 组成;  本参数与 alipay_logon_id 不 可同时为空，若都填写，则 以本参数为准，优先级高于 alipay_logon_id。
+        /// 用户的支付宝账号对应 的支付宝唯一用户号，以 2088 开头的 16 位纯数字 组成。 本参数与alipay_logon_id若都填写，则以本参数为准，优先级高于 alipay_logon_id。
         /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string PersonalProductCode { get; set; }
 
         /// <summary>
-        /// 签约协议场景，商户和支付宝签约时确定，商户可咨询技术支持。  当传入商户签约号 external_sign_no 时，场景不能为空或默认值 DEFAULT|DEFAULT。  该值需要与系统/页面签约接口调用时传入的值保持一 致。
+        /// 签约协议场景，商户和支付宝签约时确定，商户可咨询技术支持。 当传入商户签约号 external_agreement_no 时，场景不能为空或默认值 DEFAULT|DEFAULT。 该值需要与系统/页面签约接口调用时传入的值保持一 致。
         /// </summary>
         [XmlElement("sign_scene")]
         public string SignScene { get; set; }

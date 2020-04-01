@@ -122,5 +122,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_id")]
         public string ServiceId { get; set; }
+
+        /// <summary>
+        /// 模板id
+        /// </summary>
+        [XmlElement("template_no")]
+        public string TemplateNo { get; set; }
     }
 }

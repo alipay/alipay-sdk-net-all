@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("compress")]
         public bool Compress { get; set; }
+
+        /// <summary>
+        /// 批量json的键值对
+        /// </summary>
+        [XmlArray("json")]
+        [XmlArrayItem("string")]
+        public List<string> Json { get; set; }
 
         /// <summary>
         /// bizType_gridId

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,26 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_entry_status")]
         public string OrderEntryStatus { get; set; }
+
+        /// <summary>
+        /// 点餐一般营业营业时间配置
+        /// </summary>
+        [XmlArray("order_normal_business_time")]
+        [XmlArrayItem("normal_business_time_rule")]
+        public List<NormalBusinessTimeRule> OrderNormalBusinessTime { get; set; }
+
+        /// <summary>
+        /// 点餐特殊营业时间规则配置
+        /// </summary>
+        [XmlArray("order_special_business_time")]
+        [XmlArrayItem("special_business_time_rule")]
+        public List<SpecialBusinessTimeRule> OrderSpecialBusinessTime { get; set; }
+
+        /// <summary>
+        /// OPEN表示打开点餐服务 CLOSED表示关闭点餐服务
+        /// </summary>
+        [XmlElement("order_status")]
+        public string OrderStatus { get; set; }
 
         /// <summary>
         /// 口碑门店ID

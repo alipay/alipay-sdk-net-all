@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string MerchantShopId { get; set; }
 
         /// <summary>
+        /// 店铺详情链接地址
+        /// </summary>
+        [XmlElement("merchant_shop_link_page")]
+        public string MerchantShopLinkPage { get; set; }
+
+        /// <summary>
         /// 店铺名称
         /// </summary>
         [XmlElement("name")]

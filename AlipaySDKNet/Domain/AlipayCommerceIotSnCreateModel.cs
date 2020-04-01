@@ -34,6 +34,18 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
+        /// pcba板厂商
+        /// </summary>
+        [XmlElement("pcba")]
+        public string Pcba { get; set; }
+
+        /// <summary>
+        /// 产品系列
+        /// </summary>
+        [XmlElement("product_series")]
+        public string ProductSeries { get; set; }
+
+        /// <summary>
         /// 厂商id
         /// </summary>
         [XmlElement("supplier_id")]

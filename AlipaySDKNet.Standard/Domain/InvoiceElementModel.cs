@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -122,5 +123,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pdf_url")]
         public string PdfUrl { get; set; }
+
+        /// <summary>
+        /// 该发票对应的交易
+        /// </summary>
+        [XmlArray("trade_list")]
+        [XmlArrayItem("einv_trade")]
+        public List<EinvTrade> TradeList { get; set; }
+
+        /// <summary>
+        /// 交易匹配结果 match-匹配到 noMatched-未匹配到 notMatch-未做匹配
+        /// </summary>
+        [XmlElement("trade_match_result")]
+        public string TradeMatchResult { get; set; }
     }
 }

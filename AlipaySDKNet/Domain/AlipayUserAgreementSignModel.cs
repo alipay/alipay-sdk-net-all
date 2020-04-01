@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string PromoParams { get; set; }
 
         /// <summary>
+        /// 卡id(由固定前缀+32位数字构成)
+        /// </summary>
+        [XmlElement("provisioning_bundle_id")]
+        public string ProvisioningBundleId { get; set; }
+
+        /// <summary>
         /// 协议签约场景，商户和支付宝签约时确定，商户可咨询技术支持。  当传入商户签约号external_sign_no时，场景不能为默认值DEFAULT|DEFAULT。
         /// </summary>
         [XmlElement("sign_scene")]

@@ -129,7 +129,7 @@
         private static AlipayTradeCreateRequest getTradeCreateRequest()
         {
             AlipayTradeCreateRequest request = new AlipayTradeCreateRequest();
-            AlipayTradeCreateModel model = new AlipayTradeCreateModel();            model.OutTradeNo = "20150320010101001";            model.TotalAmount = "88.88";            model.Subject = "Iphone6 16G";            model.BuyerId = "2088102177846880";            request.SetBizModel(model);
+            AlipayTradeCreateModel model = new AlipayTradeCreateModel();            model.OutTradeNo = "20200320010101006";            model.TotalAmount = "88.88";            model.Subject = "Iphone6 16G";            model.BuyerId = "2088102177846880";            request.SetBizModel(model);
             return request;
         }
     }}
