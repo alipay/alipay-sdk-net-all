@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipayUserApplepayProvisioningbundleQueryResponse : AopResponse
     {
         /// <summary>
+        /// 卡状态
+        /// </summary>
+        [XmlElement("pass_state")]
+        public string PassState { get; set; }
+
+        /// <summary>
         /// 卡模型
         /// </summary>
         [XmlElement("provisioning_bundle")]

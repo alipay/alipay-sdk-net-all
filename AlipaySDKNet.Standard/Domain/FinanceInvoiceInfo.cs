@@ -10,10 +10,16 @@ namespace Aop.Api.Domain
     public class FinanceInvoiceInfo : AopObject
     {
         /// <summary>
-        /// 发票金额，以元为单位的，精确到小数点后2位
+        /// 发票金额（不含税），以元为单位的，精确到小数点后2位
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
+
+        /// <summary>
+        /// 发票金额（含税）
+        /// </summary>
+        [XmlElement("amount_with_tax")]
+        public string AmountWithTax { get; set; }
 
         /// <summary>
         /// UTC标准格式
@@ -26,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("check_code")]
         public string CheckCode { get; set; }
+
+        /// <summary>
+        /// 发票对应合同编号
+        /// </summary>
+        [XmlElement("contract_no")]
+        public string ContractNo { get; set; }
 
         /// <summary>
         /// 发票影印件信息
@@ -44,5 +56,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_number")]
         public string InvoiceNumber { get; set; }
+
+        /// <summary>
+        /// 发票类型:专票SPECIAL,普票REGULAR,电票DIGITAL
+        /// </summary>
+        [XmlElement("invoice_type")]
+        public string InvoiceType { get; set; }
     }
 }

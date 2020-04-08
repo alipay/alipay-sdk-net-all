@@ -184,6 +184,12 @@ namespace Aop.Api.Response
         public string Mid { get; set; }
 
         /// <summary>
+        /// 税损扣除后月账单可关联发票金额
+        /// </summary>
+        [XmlElement("new_can_invoice_amt")]
+        public MultiCurrencyMoneyOpenApi NewCanInvoiceAmt { get; set; }
+
+        /// <summary>
         /// 已付金额
         /// </summary>
         [XmlElement("paid_amt")]
