@@ -26,7 +26,7 @@ namespace Test
 
             SignItem signItem = JsonParser.GetSignItem(request, responseBody);
 
-            Assert.AreEqual(signItem.SignSourceDate, "{\"code\":\"10000\",\"msg\":\"Success\",\"out_trade_no\":\"20150320010101001\","
+            Assert.AreEqual(signItem.SignSourceData, "{\"code\":\"10000\",\"msg\":\"Success\",\"out_trade_no\":\"20150320010101001\","
                     + "\"trade_no\":\"2019062322001446881000041395\"}");
             Assert.AreEqual(signItem.Sign, "TS355N0QjK1r9GyD4YOsG5esszSUhESgwu1q5"
                             + "+e1sWwqtPYe30CQ3v0QTEDdxYN9vm2No8V1KzuTSadrA4SZSkEkRchrcdVHCU8rCXOHWzS5wof8jg5S75y481kj3HqlpTaz"
@@ -74,7 +74,7 @@ namespace Test
 
             SignItem signItem = JsonParser.GetSignItem(request, responseBody);
 
-            Assert.AreEqual(signItem.SignSourceDate, "{\"code\":\"10000\",\"msg\":\"Success\",\"out_trade_no\":\"20150320010101001\","
+            Assert.AreEqual(signItem.SignSourceData, "{\"code\":\"10000\",\"msg\":\"Success\",\"out_trade_no\":\"20150320010101001\","
                     + "\"trade_no\":\"2019062322001446881000041395\",\"alipay_trade_create_response\":\"test\"}");
             Assert.AreEqual(signItem.Sign, "TS355N0QjK1r9GyD4YOsG5esszSUhESgwu1q5"
                             + "+e1sWwqtPYe30CQ3v0QTEDdxYN9vm2No8V1KzuTSadrA4SZSkEkRchrcdVHCU8rCXOHWzS5wof8jg5S75y481kj3HqlpTaz"

@@ -72,7 +72,7 @@ namespace Aop.Api.Parser
             signItem.Sign = sign;
 
             string signSourceData = GetSignSourceData(request, reponseBody);
-            signItem.SignSourceDate = signSourceData;
+            signItem.SignSourceData = signSourceData;
 
             return signItem;
         }
@@ -89,7 +89,7 @@ namespace Aop.Api.Parser
             certItem.Sign = sign;
 
             string signSourceData = GetSignSourceData(request, reponseBody);
-            certItem.SignSourceDate = signSourceData;
+            certItem.SignSourceData = signSourceData;
 
             string certSN = GetCertSN(reponseBody);
             certItem.CertSN = certSN;
