@@ -20,5 +20,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("period_summary_info")]
         public string PeriodSummaryInfo { get; set; }
+
+        /// <summary>
+        /// 用户主动意愿退出：USER_CANCEL_QUIT; 商户结算退出：SETTLE_APPLY_QUIT; 默认值为SETTLE_APPLY_QUIT；这个字段会影响用户在芝麻信用合约的状态
+        /// </summary>
+        [XmlElement("quit_type")]
+        public string QuitType { get; set; }
+
+        /// <summary>
+        /// 代扣期数，周期扣场景PERIOD_SETTLE下需要传递
+        /// </summary>
+        [XmlElement("withhold_index")]
+        public string WithholdIndex { get; set; }
     }
 }

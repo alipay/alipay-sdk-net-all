@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("biz_no")]
         public string BizNo { get; set; }
+
+        /// <summary>
+        /// aa
+        /// </summary>
+        [XmlElement("number")]
+        public string Number { get; set; }
     }
 }

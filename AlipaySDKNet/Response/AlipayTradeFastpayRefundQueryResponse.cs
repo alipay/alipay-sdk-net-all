@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayTradeFastpayRefundQueryResponse : AopResponse
     {
         /// <summary>
+        /// 银行卡冲退信息
+        /// </summary>
+        [XmlElement("deposit_back_info")]
+        public DepositBackInfo DepositBackInfo { get; set; }
+
+        /// <summary>
         /// 退款失败错误码。只在使用异步退款接口情况下才会返回该字段
         /// </summary>
         [XmlElement("error_code")]

@@ -65,6 +65,19 @@ namespace Aop.Api.Domain
         public string CommunityCode { get; set; }
 
         /// <summary>
+        /// 房源详情页跳转地址；  如不填可以走约定页面（约定页面地址在入住时提交）；  如无约定地址则走默认页面，默认页面无签约流程
+        /// </summary>
+        [XmlElement("detail_address")]
+        public string DetailAddress { get; set; }
+
+        /// <summary>
+        /// 房源所支持的平台服务
+        /// </summary>
+        [XmlArray("feature")]
+        [XmlArrayItem("string")]
+        public List<string> Feature { get; set; }
+
+        /// <summary>
         /// 费用说明
         /// </summary>
         [XmlElement("fee_remark")]
@@ -248,5 +261,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("total_floor_count")]
         public long TotalFloorCount { get; set; }
+
+        /// <summary>
+        /// 房源视频地址  两种方式: 多少时间，多少代大小
+        /// </summary>
+        [XmlElement("video")]
+        public string Video { get; set; }
     }
 }

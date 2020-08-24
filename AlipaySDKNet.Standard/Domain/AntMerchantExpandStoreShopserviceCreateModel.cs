@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string AccessKeyId { get; set; }
 
         /// <summary>
+        /// true/false, 是否有效；默认为true
+        /// </summary>
+        [XmlElement("is_valid")]
+        public bool IsValid { get; set; }
+
+        /// <summary>
         /// 场景服务名称
         /// </summary>
         [XmlElement("name")]

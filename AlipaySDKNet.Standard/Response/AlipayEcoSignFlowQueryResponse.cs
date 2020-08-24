@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -61,5 +63,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("sign_validity")]
         public long SignValidity { get; set; }
+
+        /// <summary>
+        /// 签署人列表及签署状态
+        /// </summary>
+        [XmlArray("signers")]
+        [XmlArrayItem("flow_signer")]
+        public List<FlowSigner> Signers { get; set; }
     }
 }

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayUserApplepayPbstatusQueryModel : AopObject
     {
         /// <summary>
+        /// 当前的状态
+        /// </summary>
+        [XmlElement("current_state")]
+        public string CurrentState { get; set; }
+
+        /// <summary>
         /// 设备接受语言
         /// </summary>
         [XmlElement("device_accept_language")]

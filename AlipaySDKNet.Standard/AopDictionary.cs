@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
+using Aop.Api.Parser;
+using Newtonsoft.Json;
 
 namespace Aop.Api
 {
@@ -53,6 +56,24 @@ namespace Aop.Api
             else if (value is Nullable<bool>)
             {
                 strValue = (value as Nullable<bool>).Value.ToString().ToLower();
+            }
+            else if (value is ICollection)
+            {
+                AopModelParser parser = new AopModelParser();
+                object jo = parser.serializeArrayValue(value as ICollection);
+
+                JsonSerializerSettings jsetting = new JsonSerializerSettings();
+                jsetting.NullValueHandling = NullValueHandling.Ignore;
+                strValue = JsonConvert.SerializeObject(jo, Formatting.None, jsetting);
+            }
+            else if (value is AopObject)
+            {
+                AopModelParser parser = new AopModelParser();
+                object jo = parser.serializeAopObject(value as AopObject);
+
+                JsonSerializerSettings jsetting = new JsonSerializerSettings();
+                jsetting.NullValueHandling = NullValueHandling.Ignore;
+                strValue = JsonConvert.SerializeObject(jo, Formatting.None, jsetting);
             }
             else
             {

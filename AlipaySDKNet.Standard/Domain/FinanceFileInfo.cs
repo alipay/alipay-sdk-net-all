@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class FinanceFileInfo : AopObject
     {
         /// <summary>
+        /// 文件内容hash
+        /// </summary>
+        [XmlElement("file_hash")]
+        public string FileHash { get; set; }
+
+        /// <summary>
         /// 上传文件生成的唯一id
         /// </summary>
         [XmlElement("file_id")]

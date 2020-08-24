@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string CertNo { get; set; }
 
         /// <summary>
+        /// 证件本人相片。base64。
+        /// </summary>
+        [XmlElement("cert_picture")]
+        public string CertPicture { get; set; }
+
+        /// <summary>
         /// 性别(男，女)。用机构的AES加密后值。
         /// </summary>
         [XmlElement("gender")]

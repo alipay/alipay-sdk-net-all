@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizCode { get; set; }
 
         /// <summary>
-        /// 扩展参数
+        /// 扩展参数：当bizCode是SCHOOL_PAYMENT，cert_type,cert_no必传，当sub_biz_code是SCHOOL_PAYMENT_FACEPAY，agreement_no必传;
         /// </summary>
         [XmlElement("ext_info")]
         public string ExtInfo { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string SchoolStdcode { get; set; }
 
         /// <summary>
-        /// 子业务码，SCHOOL_PAYMENT_ENTRANCE：核身，SCHOOL_PAYMENT_FACEPAY：刷脸支付
+        /// 子业务码，SCHOOL_PAYMENT_ENTRANCE：核身，SCHOOL_PAYMENT_FACEPAY：刷脸支付， SCHOOL_PAYMENT_FACEPAY_BANK：刷脸支付（指定银行卡）
         /// </summary>
         [XmlElement("sub_biz_code")]
         public string SubBizCode { get; set; }

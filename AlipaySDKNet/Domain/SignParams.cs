@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public AccessParams AccessParams { get; set; }
 
         /// <summary>
-        /// 是否允许花芝GO降级成原代扣（即销售方案指定的代扣产品），在花芝GO场景下才会使用该值。取值：true-允许降级，false-不允许降级。默认为false。
+        /// 是否允许花芝GO降级成原代扣（即销售方案指定的代扣产品），在花芝GO场景下才会使用该值。取值：true-允许降级，false-不允许降级。默认为true。
         /// </summary>
         [XmlElement("allow_huazhi_degrade")]
         public bool AllowHuazhiDegrade { get; set; }

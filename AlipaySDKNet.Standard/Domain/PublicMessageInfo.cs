@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class PublicMessageInfo : AopObject
     {
+        /// <summary>
+        /// 内容信息
+        /// </summary>
+        [XmlArray("articles")]
+        [XmlArrayItem("image_text_item")]
+        public List<ImageTextItem> Articles { get; set; }
+
         /// <summary>
         /// 消息id
         /// </summary>

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayPcreditHuabeiAuthSettleApplyModel : AopObject
     {
         /// <summary>
+        /// MERCHANT_SETTLE 结算（需要主动退出在发起结算）; QUIT_SETTLE 退出协议（解约协议）; PERIOD_SETTLE 分阶段结算（不解约协议）; 默认为 MERCHANT_SETTLE
+        /// </summary>
+        [XmlElement("action_type")]
+        public string ActionType { get; set; }
+
+        /// <summary>
         /// 支付宝系统中用以唯一标识用户签约记录的编号。
         /// </summary>
         [XmlElement("agreement_no")]

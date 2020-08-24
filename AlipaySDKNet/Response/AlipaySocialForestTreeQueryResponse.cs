@@ -22,5 +22,12 @@ namespace Aop.Api.Response
         [XmlArray("tree_datas")]
         [XmlArrayItem("tree_data")]
         public List<TreeData> TreeDatas { get; set; }
+
+        /// <summary>
+        /// 种树详细信息
+        /// </summary>
+        [XmlArray("tree_detail_data")]
+        [XmlArrayItem("tree_detail_data")]
+        public List<TreeDetailData> TreeDetailData { get; set; }
     }
 }

@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string EntityName { get; set; }
 
         /// <summary>
+        /// 扩展信息字段，格式:json。请将需要传递的key和value字段放入map中,然后转成json传入
+        /// </summary>
+        [XmlElement("ext_properties")]
+        public string ExtProperties { get; set; }
+
+        /// <summary>
         /// 地址位置纬度，取值范围：纬度-90~90，中国地区经度范围：纬度3.86~53.55
         /// </summary>
         [XmlElement("latitude")]

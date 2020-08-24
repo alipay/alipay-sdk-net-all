@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string Email { get; set; }
 
         /// <summary>
+        /// 邮箱登录名。如果未设置，则返回空字符串
+        /// </summary>
+        [XmlElement("email_logon_id")]
+        public string EmailLogonId { get; set; }
+
+        /// <summary>
         /// 阿里集团统一ID
         /// </summary>
         [XmlElement("havana_id")]
@@ -33,10 +39,22 @@ namespace Aop.Api.Response
         public string InstType { get; set; }
 
         /// <summary>
+        /// 是否开启余额支付。T是，F否
+        /// </summary>
+        [XmlElement("is_enable_payment")]
+        public string IsEnablePayment { get; set; }
+
+        /// <summary>
         /// 账户是否禁止提现，T是，F否
         /// </summary>
         [XmlElement("is_forbidden_withdraw")]
         public string IsForbiddenWithdraw { get; set; }
+
+        /// <summary>
+        /// 手机登录名。如果未设置，则返回空字符串
+        /// </summary>
+        [XmlElement("mobile_logon_id")]
+        public string MobileLogonId { get; set; }
 
         /// <summary>
         /// 蚂蚁统一会员ID

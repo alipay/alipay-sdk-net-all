@@ -11,17 +11,21 @@ namespace Test
     {
         public const string NotSetKeyAppId = "2019092567661029";
 
+        public static class Mock
+        {
+            public static readonly String AppPrivateKey = GetPrivateKey("Mock");
+            public const String AppPublicKey = @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgyfCUS7eDw4+ce4wGTvfXcJd1QXg79r+eeRWTFJako9Hu2pjY3f8k36vBW3n9usMPnQNaCoXvskqIogYfD1q3fvRhkdwa+i7lVZ2o3hb41a4BRr9tleIGj9Wshi1MbKarkcCvHFA2cWUGW+KXxffeIJ7qB28w3QjWLj2+WHoQ8K1Ll0jachKA8DCRYVs7Pfy4Yh8woUbI3LpMD6L81Mvcle319/9F72UKI+uXq6tVzwUZlh3UacRszD20XtWU6CiPWnqXV94k1euwCD52DTnS0FI4QdlOjKi1BlBlAdRKYxRj2Y55u7ADaDwPyyAs2kAoDOu4tIJInaZXzyxYzFmewIDAQAB";
+            public static readonly String AppPrivateKeyFile = TestAccount.GetSolutionBasePath() + "/UnitTestNetCore/Fixture/mock-RSA-private.pem";
+            public static readonly String AppPublicKeyFile = TestAccount.GetSolutionBasePath() + "/UnitTestNetCore/Fixture/mock-RSA-public.pem";
+        }
+
         public static class Sandbox
         {
             public const String Gateway = "https://openapi.alipaydev.com/gateway.do";
-            public const String AlipayPublicKey = @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnAUxtW3XiajFkyIpf0psiSorGpVGTWAEkbOGcJXtgoVUr42wBsbGI91X0z9tlMubrjb/rsi4b9A1plS4L6SkbB6/jplDbCE5WY5LPb9MsbBNYgHxL4RCL5NLvSM0W19iOq5jkj4tJtjn7+EOUSLHsSLqtu7HIlvN/prxOYNj8RdXhUKRyzqNXnLZYdbWoiyzKfF2Epdp4It/cSjHsODu1+WqSHU1xqpTyh4tHASDFpNK0pOaPjGJl7HR0O/BLQjwIRdxk3OmrSPb5cTn7q2z+hK4O3Dh8qK606KDMReveZN0uOvS2CuH62nxZKoEJmujR7vEY0lHk/xgv0TqKXpt4QIDAQAB";
-            public const String AppId = "2016092700607517";
-            public const String AppPublicKey = @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtQ6pOPm4pt87Ha7AGtMCUM8gv/I0L740taQsL5RA724qSLhkTzf4jeVjW9kiIGJnqUKvPMZEpCTAbuLfMTMAlYbwxqjCRcXIwHx0C1NxSdh2oK5vI0HS1+Qk1JUZxyZKMUNMmQ9sbD7NUyTk0lXmKgGbUGHle0cAF3jiHygT2lBcWagO83kT79B84jWU8u8EZju6gyj5nnC38cKw5F9eSxVyZU/s3xFhjwOJp3GHfDPxt213hv4QOD4M+2DoTuJRxKYsdYdjxpCsprBb2LXQeXxmVvJqyKDJ8UwFRLxv1li3UiVr3pqEC3nQzD3YAUMbl8PY33f3ZdQSiJ2qmyvEZwIDAQAB";
+            public const String AlipayPublicKey = @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAohmWF9HXjI3VRxrKbuZq4YK6lIFAIzUZ4xvY4iw2zwYiblPkB0FWbqxouyyB9nmAyK+hN/5tyXatpskcy6rO6zJl3kfdog0lRA7g06+YpdHVHhu/bXfaz+BfCA3YHwjkBQffMa8Amwy6JZF6aDiXDdYP/YWKmFk1t4K6F1853EDf2vYsT6AsVYRk2xkw+fx3/qIWaidHETjNBnOOPRG68hLf0H0DCeEOsLp3mFox2LARRQol5IfV45nNq2a2zb6ubwZbgXypZM3vfLQekUaxAaC1Vuu4gYWxPRCzHE1e6aQpEuacVVYCnjNURvDmDpT7oMzh+HtN0DKCe6yOHRDZ3QIDAQAB";
+            public const String AppId = "2016102200737202";
             public static readonly String AppPrivateKey = GetPrivateKey("Sandbox");
-            public static readonly String AppPrivateKeyFile = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/aop-sandbox-RSA-private.pem";
-            public static readonly String AppPublicKeyFile = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/aop-sandbox-RSA-public.pem";
-            public const String Pid = "2088102177492087";
-            public const String AesKey = "hNtPqVWeuUeEpw9ksTZ92A==";
+            public const String AesKey = "RrAdgyCsnkoE1a9A8cW72w==";
         }
 
         public static class ProdCert

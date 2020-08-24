@@ -58,5 +58,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reject_reason")]
         public string RejectReason { get; set; }
+
+        /// <summary>
+        /// 流水号
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
     }
 }

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string LineId { get; set; }
 
         /// <summary>
+        /// 车辆编号id
+        /// </summary>
+        [XmlElement("vehicle_id")]
+        public string VehicleId { get; set; }
+
+        /// <summary>
         /// 虚拟员工编号
         /// </summary>
         [XmlElement("vir_employ_id")]

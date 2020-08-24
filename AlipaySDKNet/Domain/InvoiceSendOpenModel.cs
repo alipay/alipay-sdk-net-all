@@ -174,6 +174,13 @@ namespace Aop.Api.Domain
         public string TaxAmount { get; set; }
 
         /// <summary>
+        /// 交易内容
+        /// </summary>
+        [XmlArray("trade_list")]
+        [XmlArrayItem("einv_trade")]
+        public List<EinvTrade> TradeList { get; set; }
+
+        /// <summary>
         /// 支付宝用户userId，当发送红字发票时，即invoice_type＝RED时，可选填；或者apply_id不为空的时候，可选填；其他情况必填。
         /// </summary>
         [XmlElement("user_id")]

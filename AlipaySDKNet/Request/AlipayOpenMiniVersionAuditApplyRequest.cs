@@ -107,6 +107,11 @@ namespace Aop.Api.Request
         public string Memo { get; set; }
 
         /// <summary>
+        /// 新小程序前台类目，格式为 第一个一级类目_第一个二级类目;第二个一级类目_第二个二级类目_第二个三级类目，详细类目可以通过 https://docs.open.alipay.com/api_49/alipay.open.mini.category.query接口查询mini_category_list，如果不填默认采用当前小程序应用类目。使用默认应用类目后不需要再次上传营业执照号、营业执照名、营业执照截图、营业执照有效期。使用后不再读取app_category_ids值，老前台类目将废弃
+        /// </summary>
+        public string MiniCategoryIds { get; set; }
+
+        /// <summary>
         /// 门头照图片，部分小程序类目需要提交，参照https://opendocs.alipay.com/mini/operation/material中是否需要营业执照信息，如果不填默认采用当前小程序门头照图片;门头照支持扩展名为jpg, png;门头照最大4MB，宽度2160，高度3840
         /// </summary>
         public FileItem OutDoorPic { get; set; }
@@ -267,6 +272,7 @@ namespace Aop.Api.Request
             parameters.Add("license_no", this.LicenseNo);
             parameters.Add("license_valid_date", this.LicenseValidDate);
             parameters.Add("memo", this.Memo);
+            parameters.Add("mini_category_ids", this.MiniCategoryIds);
             parameters.Add("region_type", this.RegionType);
             parameters.Add("service_email", this.ServiceEmail);
             parameters.Add("service_phone", this.ServicePhone);

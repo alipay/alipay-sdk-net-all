@@ -18,6 +18,12 @@ namespace Aop.Api.Response
         public List<CreditPayBillAssetVO> BillAssets { get; set; }
 
         /// <summary>
+        /// 引导模型
+        /// </summary>
+        [XmlElement("guide_info")]
+        public CreditPayGuideVO GuideInfo { get; set; }
+
+        /// <summary>
         /// 分期资产视图，如果未咨询分期资产，可能为空
         /// </summary>
         [XmlArray("installment_assets")]

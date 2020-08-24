@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class MybankCreditLoantradeBillListQueryModel : AopObject
     {
         /// <summary>
+        /// 账单编号列表，最多支持20条记录查询
+        /// </summary>
+        [XmlElement("bill_no_list")]
+        public string BillNoList { get; set; }
+
+        /// <summary>
         /// 账单状态，OVD逾期，CLE结清，NOR正常
         /// </summary>
         [XmlElement("bill_status_list")]

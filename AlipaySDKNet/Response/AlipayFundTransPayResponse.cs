@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 支付宝支付资金流水号
+        /// </summary>
+        [XmlElement("pay_fund_order_id")]
+        public string PayFundOrderId { get; set; }
+
+        /// <summary>
         /// SUCCESS：支付成功；  FAIL：支付失败；  UNKNOWN：未知；建议通过查询确认最新状态
         /// </summary>
         [XmlElement("status")]

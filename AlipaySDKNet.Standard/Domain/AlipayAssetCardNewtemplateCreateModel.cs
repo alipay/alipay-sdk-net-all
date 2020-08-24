@@ -100,5 +100,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("settle_user_id")]
         public string SettleUserId { get; set; }
+
+        /// <summary>
+        /// 商户资金签约主体
+        /// </summary>
+        [XmlElement("sign_principal")]
+        public string SignPrincipal { get; set; }
     }
 }

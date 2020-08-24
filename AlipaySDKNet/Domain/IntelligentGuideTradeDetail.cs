@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string Mobile { get; set; }
 
         /// <summary>
-        /// 原价金额，粒度精确到分（0.01元）。例：100代表1元。10代表0.1元。校验数字，大于0。
+        /// 原价金额。单位：元。精确到小数点后两位。例：11.11。校验数字，大于0。
         /// </summary>
         [XmlElement("original_price")]
         public string OriginalPrice { get; set; }
@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// 实际消费金额，粒度精确到分(0.01元)，同original_price。
+        /// 实际消费金额。单位：元。精确到小数点后两位。例：11.11。校验数字，大于0。实际消费金额需要小于等于原价
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }

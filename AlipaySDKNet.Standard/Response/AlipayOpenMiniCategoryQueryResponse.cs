@@ -16,5 +16,12 @@ namespace Aop.Api.Response
         [XmlArray("category_list")]
         [XmlArrayItem("mini_app_category")]
         public List<MiniAppCategory> CategoryList { get; set; }
+
+        /// <summary>
+        /// 小程序新类目列表
+        /// </summary>
+        [XmlArray("mini_category_list")]
+        [XmlArrayItem("mini_app_category")]
+        public List<MiniAppCategory> MiniCategoryList { get; set; }
     }
 }

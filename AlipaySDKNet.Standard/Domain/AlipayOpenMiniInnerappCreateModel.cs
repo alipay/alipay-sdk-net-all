@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string AppCategoryIds { get; set; }
 
         /// <summary>
-        /// 小程序描述
+        /// 小程序描述，20-200个字符
         /// </summary>
         [XmlElement("app_desc")]
         public string AppDesc { get; set; }
 
         /// <summary>
-        /// 小程序英文名称
+        /// 小程序英文名称，插件不填
         /// </summary>
         [XmlElement("app_english_name")]
         public string AppEnglishName { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string AppOrigin { get; set; }
 
         /// <summary>
-        /// 小程序简介，在搜索透出
+        /// 小程序简介，在搜索透出,插件不需要填
         /// </summary>
         [XmlElement("app_slogan")]
         public string AppSlogan { get; set; }
@@ -76,6 +76,12 @@ namespace Aop.Api.Domain
         public string MiniAppId { get; set; }
 
         /// <summary>
+        /// 新小程序前台类目，格式为 第一个一级类目_第一个二级类目;第二个一级类目_第二个二级类目_第二个三级类目，详细类目可以通过 https://docs.open.alipay.com/api_49/alipay.open.mini.category.query接口查询mini_category_list。使用后不再读取app_category_ids值，老前台类目将废弃
+        /// </summary>
+        [XmlElement("mini_category_ids")]
+        public string MiniCategoryIds { get; set; }
+
+        /// <summary>
         /// 创建的小程序所属的PID
         /// </summary>
         [XmlElement("pid")]
@@ -88,7 +94,7 @@ namespace Aop.Api.Domain
         public string ServiceEmail { get; set; }
 
         /// <summary>
-        /// 客服电话
+        /// 客服电话，插件不需要
         /// </summary>
         [XmlElement("service_phone")]
         public string ServicePhone { get; set; }

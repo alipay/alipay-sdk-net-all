@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string OutRequestNo { get; set; }
 
         /// <summary>
+        /// 签约产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
         /// 卖家的支付宝id
         /// </summary>
         [XmlElement("seller_id")]

@@ -139,6 +139,12 @@ namespace Aop.Api.Domain
         public List<string> QueryOptions { get; set; }
 
         /// <summary>
+        /// 收单机构(例如银行）的标识，填写该机构在支付宝的pid。只在机构间联场景下传递该值。
+        /// </summary>
+        [XmlElement("request_org_pid")]
+        public string RequestOrgPid { get; set; }
+
+        /// <summary>
         /// 描述分账信息，json格式，其它说明详见分账说明
         /// </summary>
         [XmlElement("royalty_info")]
