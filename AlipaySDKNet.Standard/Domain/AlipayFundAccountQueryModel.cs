@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AccountSceneCode { get; set; }
 
         /// <summary>
-        /// 查询的账号类型，如查询托管账户值为TRUSTEESHIP_ACCOUNT，查询余额账户值为ACCTRANS_ACCOUNT。查询余额账户时必填。
+        /// 查询的账号类型，查询余额账户值为ACCTRANS_ACCOUNT。必填。
         /// </summary>
         [XmlElement("account_type")]
         public string AccountType { get; set; }

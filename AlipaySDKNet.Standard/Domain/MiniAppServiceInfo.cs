@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class MiniAppServiceInfo : AopObject
     {
         /// <summary>
+        /// 插件发布状态码，暂存100，风控审核200，运营审核300，等待上架400，已预发上架500，已上架501，已下架600，已驳回700
+        /// </summary>
+        [XmlElement("biz_status")]
+        public string BizStatus { get; set; }
+
+        /// <summary>
         /// 是否是内部标，true/false
         /// </summary>
         [XmlElement("is_inner")]

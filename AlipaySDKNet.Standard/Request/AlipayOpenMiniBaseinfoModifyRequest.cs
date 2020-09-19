@@ -41,6 +41,11 @@ namespace Aop.Api.Request
         public string AppSlogan { get; set; }
 
         /// <summary>
+        /// 新小程序前台类目，格式为 第一个一级类目_第一个二级类目;第二个一级类目_第二个二级类目_第二个三级类目，详细类目可以通过 https://docs.open.alipay.com/api_49/alipay.open.mini.category.query接口查询mini_category_list。使用后不再读取app_category_ids值，老前台类目将废弃
+        /// </summary>
+        public string MiniCategoryIds { get; set; }
+
+        /// <summary>
         /// 小程序客服邮箱
         /// </summary>
         public string ServiceEmail { get; set; }
@@ -130,6 +135,7 @@ namespace Aop.Api.Request
             parameters.Add("app_english_name", this.AppEnglishName);
             parameters.Add("app_name", this.AppName);
             parameters.Add("app_slogan", this.AppSlogan);
+            parameters.Add("mini_category_ids", this.MiniCategoryIds);
             parameters.Add("service_email", this.ServiceEmail);
             parameters.Add("service_phone", this.ServicePhone);
             return parameters;

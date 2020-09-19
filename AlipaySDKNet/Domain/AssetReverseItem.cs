@@ -76,6 +76,18 @@ namespace Aop.Api.Domain
         public string OriginalApplyOrderItemId { get; set; }
 
         /// <summary>
+        /// 原配送单id
+        /// </summary>
+        [XmlElement("original_deliver_order_id")]
+        public string OriginalDeliverOrderId { get; set; }
+
+        /// <summary>
+        /// 原配送明细id
+        /// </summary>
+        [XmlElement("original_deliver_order_item_id")]
+        public string OriginalDeliverOrderItemId { get; set; }
+
+        /// <summary>
         /// 原配送单物料号
         /// </summary>
         [XmlElement("original_delivery_assign_item_id")]
@@ -98,6 +110,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ou_name")]
         public string OuName { get; set; }
+
+        /// <summary>
+        /// 逆向申请单ID
+        /// </summary>
+        [XmlElement("reverse_apply_order_id")]
+        public string ReverseApplyOrderId { get; set; }
+
+        /// <summary>
+        /// 逆向申请单明细ID
+        /// </summary>
+        [XmlElement("reverse_apply_order_item_id")]
+        public string ReverseApplyOrderItemId { get; set; }
 
         /// <summary>
         /// 逆向类型

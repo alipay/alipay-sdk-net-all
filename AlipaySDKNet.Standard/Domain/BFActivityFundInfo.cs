@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string Ratio { get; set; }
 
         /// <summary>
+        /// 商家可见费率
+        /// </summary>
+        [XmlElement("seller_rate")]
+        public string SellerRate { get; set; }
+
+        /// <summary>
         /// rate:折扣,fixed:定额扣减
         /// </summary>
         [XmlElement("subsidy_mode")]

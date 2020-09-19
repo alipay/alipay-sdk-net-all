@@ -43,7 +43,7 @@ namespace Aop.Api.Domain
         /// 套餐最低价
         /// </summary>
         [XmlElement("min_price")]
-        public string MinPrice { get; set; }
+        public long MinPrice { get; set; }
 
         /// <summary>
         /// 服务推荐原因

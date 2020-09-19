@@ -125,6 +125,12 @@ namespace Aop.Api.Domain
         public string PdfUrl { get; set; }
 
         /// <summary>
+        /// 表示发票来源，由发票回传方带入。例如：bz_gd，bz_ele，bz_tmall等
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
+
+        /// <summary>
         /// 该发票对应的交易
         /// </summary>
         [XmlArray("trade_list")]

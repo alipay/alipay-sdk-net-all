@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AppVersion { get; set; }
 
         /// <summary>
+        /// 审核包信息
+        /// </summary>
+        [XmlElement("audit_package")]
+        public MiniAppPackageInfo AuditPackage { get; set; }
+
+        /// <summary>
         /// 小程序构建日志地址
         /// </summary>
         [XmlElement("build_task_log")]

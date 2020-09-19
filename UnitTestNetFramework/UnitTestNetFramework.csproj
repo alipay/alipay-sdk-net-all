@@ -71,11 +71,11 @@
     <None Include="..\UnitTestNetCore\Parser\.DS_Store">
       <Link>Parser\.DS_Store</Link>
     </None>
-    <None Include="..\UnitTestNetCore\Fixture\aop-sandbox-RSA-private.pem">
-      <Link>Fixture\aop-sandbox-RSA-private.pem</Link>
+    <None Include="..\UnitTestNetCore\Fixture\mock-RSA-private.pem">
+      <Link>Fixture\mock-RSA-private.pem</Link>
     </None>
-    <None Include="..\UnitTestNetCore\Fixture\aop-sandbox-RSA-public.pem">
-      <Link>Fixture\aop-sandbox-RSA-public.pem</Link>
+    <None Include="..\UnitTestNetCore\Fixture\mock-RSA-public.pem">
+      <Link>Fixture\mock-RSA-public.pem</Link>
     </None>
     <None Include="..\UnitTestNetCore\Fixture\SM2\alipayRootCert.crt">
       <Link>Fixture\SM2\alipayRootCert.crt</Link>
@@ -240,6 +240,15 @@
     </Compile>
     <Compile Include="..\UnitTestNetCore\Util\Asymmetric\RSA2EncryptorTest.cs">
       <Link>Util\Asymmetric\RSA2EncryptorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\UnitTestNetCore\Request\AlipayOpenMiniVersionAuditApplyRequest.cs">
+      <Link>Request\AlipayOpenMiniVersionAuditApplyRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\UnitTestNetCore\Response\AlipayOpenMiniVersionAuditApplyResponse.cs">
+      <Link>Response\AlipayOpenMiniVersionAuditApplyResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\UnitTestNetCore\Domain\RegionInfo.cs">
+      <Link>Domain\RegionInfo.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;using Aop.Api;using Aop.Api.Request;using Aop.Api.Response;using Aop.Api.Domain;namespace Test{    [TestFixture()]    public class ExecuteTest    {
+﻿using NUnit.Framework;using Aop.Api;using Aop.Api.Request;using Aop.Api.Response;using Aop.Api.Domain;using System.Collections.Generic;namespace Test{    [TestFixture()]    public class ExecuteTest    {
         [Test()]        public void should_return_success_response()        {
             //given
             IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey, "utf-8", false);            AlipayTradeCreateRequest request = getTradeCreateRequest();
@@ -129,7 +129,32 @@
         private static AlipayTradeCreateRequest getTradeCreateRequest()
         {
             AlipayTradeCreateRequest request = new AlipayTradeCreateRequest();
-            AlipayTradeCreateModel model = new AlipayTradeCreateModel();            model.OutTradeNo = "20200320010101006";            model.TotalAmount = "88.88";            model.Subject = "Iphone6 16G";            model.BuyerId = "2088102177846880";            request.SetBizModel(model);
+            AlipayTradeCreateModel model = new AlipayTradeCreateModel();            model.OutTradeNo = "20200320010101006";            model.TotalAmount = "88.88";            model.Subject = "Iphone6 16G";            model.BuyerId = "2088102177846880";            ExtendParams extendParams = new ExtendParams();            extendParams.HbFqNum = "3";            extendParams.HbFqSellerPercent = "100";            model.ExtendParams = extendParams;            request.SetBizModel(model);
             return request;
+        }
+
+        [Test]
+        public void should_support_complex_object_in_not_biz_content_mode()
+        {
+            //given
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey, "utf-8", false);            AlipayOpenMiniVersionAuditApplyRequest request = new AlipayOpenMiniVersionAuditApplyRequest();
+            RegionInfo regionInfo = new RegionInfo
+            {
+                AreaCode = "12345678",
+                AreaName = "测试"
+            };
+            List<RegionInfo> regionList = new List<RegionInfo>
+            {
+                regionInfo
+            };
+            request.ServiceRegionInfo = regionList;
+
+
+            //when
+            AlipayOpenMiniVersionAuditApplyResponse response = client.Execute(request);
+
+            //then
+            Assert.AreEqual(response.Code, "40006");
+
         }
     }}

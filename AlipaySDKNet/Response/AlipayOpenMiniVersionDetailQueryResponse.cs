@@ -96,6 +96,13 @@ namespace Aop.Api.Response
         public List<MiniAppCategoryInfo> MiniAppCategoryInfoList { get; set; }
 
         /// <summary>
+        /// 新小程序类目列表
+        /// </summary>
+        [XmlArray("mini_category_info_list")]
+        [XmlArrayItem("mini_app_category_info")]
+        public List<MiniAppCategoryInfo> MiniCategoryInfoList { get; set; }
+
+        /// <summary>
         /// 小程序功能包列表
         /// </summary>
         [XmlArray("package_info_list")]

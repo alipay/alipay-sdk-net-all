@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandStoreShopserviceModifyModel : AopObject
     {
         /// <summary>
+        /// true/false, 是否有效，默认为true
+        /// </summary>
+        [XmlElement("is_valid")]
+        public bool IsValid { get; set; }
+
+        /// <summary>
         /// 测试的场景服务名称
         /// </summary>
         [XmlElement("name")]

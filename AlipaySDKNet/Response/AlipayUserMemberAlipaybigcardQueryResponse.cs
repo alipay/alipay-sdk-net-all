@@ -22,6 +22,36 @@ namespace Aop.Api.Response
         public BigCardData AlipayBigCardRealTimeData { get; set; }
 
         /// <summary>
+        /// 可存入缓存的卡片展示信息
+        /// </summary>
+        [XmlElement("backup_display_info")]
+        public string BackupDisplayInfo { get; set; }
+
+        /// <summary>
+        /// 工具类或卡片类，single_tool或single_content
+        /// </summary>
+        [XmlElement("backup_template_code")]
+        public string BackupTemplateCode { get; set; }
+
+        /// <summary>
+        /// 植入在手淘的埋点信息
+        /// </summary>
+        [XmlElement("backup_track_info")]
+        public string BackupTrackInfo { get; set; }
+
+        /// <summary>
+        /// 按照淘宝约定的格式返回的卡片展示结果，json格式
+        /// </summary>
+        [XmlElement("display_info")]
+        public string DisplayInfo { get; set; }
+
+        /// <summary>
+        /// 扩展字段备用
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 结果码
         /// </summary>
         [XmlElement("result_code")]
@@ -44,5 +74,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("success")]
         public bool Success { get; set; }
+
+        /// <summary>
+        /// 工具类或卡片类，single_tool或single_content
+        /// </summary>
+        [XmlElement("template_code")]
+        public string TemplateCode { get; set; }
+
+        /// <summary>
+        /// 植入在手淘的埋点信息
+        /// </summary>
+        [XmlElement("track_info")]
+        public string TrackInfo { get; set; }
     }
 }

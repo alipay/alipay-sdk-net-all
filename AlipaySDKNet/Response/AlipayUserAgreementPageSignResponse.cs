@@ -75,6 +75,12 @@ namespace Aop.Api.Response
         public string SignTime { get; set; }
 
         /// <summary>
+        /// 用户选择的首扣渠道列表。其中list元素是一个map，包含tail - 银行卡尾号、bank_card_type - 银行卡类型。
+        /// </summary>
+        [XmlElement("specified_sort_assets")]
+        public string SpecifiedSortAssets { get; set; }
+
+        /// <summary>
         /// 协议的当前状态。  1. TEMP：暂存，协议未生效过；  2. NORMAL：正常；  3. STOP：暂停。    （只有签约成功才会返回）
         /// </summary>
         [XmlElement("status")]

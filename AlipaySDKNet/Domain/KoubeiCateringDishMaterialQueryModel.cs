@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class KoubeiCateringDishMaterialQueryModel : AopObject
     {
         /// <summary>
-        /// 加料的id，若不为空，则为单条查询，page_size和page_no失效；如果为空，则为批量查询，page_size和page_no必传，否则为默认值
+        /// 口碑内部加料id，若不为空，则为单条查询，page_size和page_no失效；如果为空，则为批量查询，page_size和page_no必传，否则为默认值
         /// </summary>
         [XmlElement("material_id")]
         public string MaterialId { get; set; }
@@ -20,6 +20,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_id")]
         public string MerchantId { get; set; }
+
+        /// <summary>
+        /// isv的外部加料id，和口碑内部加料id二选一，都不为空时以内部加料id为优先；若不为空，则为单条查询，page_size和page_no失效；如果都为空，则为批量查询，page_size和page_no必传，否则为默认值
+        /// </summary>
+        [XmlElement("out_material_id")]
+        public string OutMaterialId { get; set; }
 
         /// <summary>
         /// 查询页码，表示第几页；兼顾老版本，批量查询不传时默认为1

@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string ClaimReportNo { get; set; }
 
         /// <summary>
+        /// 报案类型
+        /// </summary>
+        [XmlElement("claim_report_type")]
+        public string ClaimReportType { get; set; }
+
+        /// <summary>
         /// 赔案信息
         /// </summary>
         [XmlArray("claims")]
@@ -72,6 +78,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reporter")]
         public InsPerson Reporter { get; set; }
+
+        /// <summary>
+        /// 报案来源
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
 
         /// <summary>
         /// 案件状态

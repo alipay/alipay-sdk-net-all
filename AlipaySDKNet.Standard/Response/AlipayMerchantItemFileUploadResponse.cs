@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayMerchantItemFileUploadResponse : AopResponse
     {
         /// <summary>
-        /// 文件在商品中心的素材标识
+        /// 文件在商品中心的素材标识（素材ID长期有效）
         /// </summary>
         [XmlElement("material_id")]
         public string MaterialId { get; set; }

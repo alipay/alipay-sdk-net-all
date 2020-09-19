@@ -225,11 +225,11 @@ namespace Test
                 { "测试Key1", "测试Value1" },
                 { "测试Key2", "测试Value2" }
             };
-            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.Sandbox.AppPrivateKey, "UTF-8", "RSA2", false));
+            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.Mock.AppPrivateKey, "UTF-8", "RSA2", false));
             parameters.Add("sign_type", "RSA2");
 
             //when
-            bool result = AlipaySignature.VerifyV1(parameters, TestAccount.Sandbox.AppPublicKey, "UTF-8", "RSA2", false);
+            bool result = AlipaySignature.VerifyV1(parameters, TestAccount.Mock.AppPublicKey, "UTF-8", "RSA2", false);
 
             //then
             Assert.AreEqual(result, true);
@@ -245,11 +245,11 @@ namespace Test
                 { "测试Key2", "测试Value2" },
                 { "sign_type", "RSA2" }
             };
-            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.Sandbox.AppPrivateKey, "UTF-8", "RSA2", false));
+            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.Mock.AppPrivateKey, "UTF-8", "RSA2", false));
 
 
             //when
-            bool result = AlipaySignature.VerifyV2(parameters, TestAccount.Sandbox.AppPublicKey, "UTF-8", "RSA2", false);
+            bool result = AlipaySignature.VerifyV2(parameters, TestAccount.Mock.AppPublicKey, "UTF-8", "RSA2", false);
 
             //then
             Assert.AreEqual(result, true);
@@ -302,11 +302,11 @@ namespace Test
                 { "测试Key1", "测试Value1" },
                 { "测试Key2", "测试Value2" }
             };
-            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.Sandbox.AppPrivateKeyFile, "UTF-8", "RSA2", true));
+            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.Mock.AppPrivateKeyFile, "UTF-8", "RSA2", true));
             parameters.Add("sign_type", "RSA2");
 
             //when
-            bool result = AlipaySignature.VerifyV1(parameters, TestAccount.Sandbox.AppPublicKeyFile, "UTF-8", "RSA2", true);
+            bool result = AlipaySignature.VerifyV1(parameters, TestAccount.Mock.AppPublicKeyFile, "UTF-8", "RSA2", true);
 
             //then
             Assert.AreEqual(result, true);

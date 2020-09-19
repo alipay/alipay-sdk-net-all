@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CarNumber { get; set; }
 
         /// <summary>
-        /// 车辆入场的时间，格式"YYYY-MM-DD HH:mm:ss"，24小时制
+        /// 车辆入场的时间，格式"YYYY-MM-DD HH:mm:ss"，24小时制，请保证服务器时间准确，入场时间不应晚于当前网络时间
         /// </summary>
         [XmlElement("in_time")]
         public string InTime { get; set; }

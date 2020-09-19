@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 分账方类型。userId：表示是支付宝账号对应的支付宝唯一用户号；loginName：表示是支付宝登录号。
+        /// 分账方类型。userId：表示是支付宝账号对应的支付宝唯一用户号；loginName：表示是支付宝登录号，在分账关系查询接口中不返回此值。
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

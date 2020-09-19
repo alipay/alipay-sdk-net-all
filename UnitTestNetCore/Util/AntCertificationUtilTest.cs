@@ -207,12 +207,6 @@ AiBVtpMVM5HwOZ5CiF1o66GoUTcYNt3e2tS9Sp63PP7LLg==
         }
 
         [Test()]
-        public void should_return_true_when_use_rsa_root_ca_chain_check_rsa_client_cert_chain()
-        {
-            Assert.AreEqual(AntCertificationUtil.IsTrusted(RsaClientCertchain, RsaRootCaChain), true);
-        }
-
-        [Test()]
         public void should_return_false_when_cert_date_invalid()
         {
             Assert.AreEqual(AntCertificationUtil.IsTrusted(BadDateRsaClientCert, RsaRootCa), false);

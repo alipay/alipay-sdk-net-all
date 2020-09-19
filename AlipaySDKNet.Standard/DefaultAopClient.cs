@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Aop.Api.Parser;
 using Aop.Api.Util;
 using System.Text;
 using System.Web;
 using Org.BouncyCastle.X509;
+using Newtonsoft.Json;
 
 namespace Aop.Api
 {
@@ -25,11 +26,11 @@ namespace Aop.Api
         public string return_url;
 
         public string notify_url;
-
+        
         /// <summary>
         /// 当前SDK版本号，SDK打包发布时会自动修改该值
         /// </summary>
-        public const string SDK_VERSION = "alipay-sdk-net-4.2.109.ALL";
+        public const string SDK_VERSION = "alipay-sdk-net-4.3.0.ALL";
 
         private CertEnvironment certEnvironment;
 
@@ -843,7 +844,10 @@ namespace Aop.Api
         {
             // 使用AopModelParser序列化对象
             AopModelParser parser = new AopModelParser();
-            return parser.serializeAopObject(obj);
+            IDictionary<object, object> jo = parser.serializeAopObject(obj);
+            JsonSerializerSettings jsetting = new JsonSerializerSettings();
+            jsetting.NullValueHandling = NullValueHandling.Ignore;
+            return JsonConvert.SerializeObject(jo, Formatting.None, jsetting);
         }
     }
 }

@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("code_content")]
         public string CodeContent { get; set; }
+
+        /// <summary>
+        /// 区分验码的业务主体，医护天使: MEDICAL_ANGEL; 默认为健康码: HEALTH_CODE
+        /// </summary>
+        [XmlElement("industry_type")]
+        public string IndustryType { get; set; }
     }
 }

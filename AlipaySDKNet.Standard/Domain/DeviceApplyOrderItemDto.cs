@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public long ApplyAmount { get; set; }
 
         /// <summary>
+        /// 订单计费模式 BILL（计费），NON_BILL（非计费）
+        /// </summary>
+        [XmlElement("billed")]
+        public string Billed { get; set; }
+
+        /// <summary>
         /// itemId
         /// </summary>
         [XmlElement("item_id")]
@@ -33,6 +39,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("model_number")]
         public string ModelNumber { get; set; }
+
+        /// <summary>
+        /// 销售单价 保留两位小数
+        /// </summary>
+        [XmlElement("selling_price")]
+        public string SellingPrice { get; set; }
 
         /// <summary>
         /// sn列表

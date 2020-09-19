@@ -86,6 +86,12 @@ namespace Aop.Api.Domain
         public string Text { get; set; }
 
         /// <summary>
+        /// 文本类型
+        /// </summary>
+        [XmlElement("text_type")]
+        public string TextType { get; set; }
+
+        /// <summary>
         /// 进行识别的视频地址列表
         /// </summary>
         [XmlArray("video_urls")]

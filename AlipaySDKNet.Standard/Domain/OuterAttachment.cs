@@ -16,10 +16,16 @@ namespace Aop.Api.Domain
         public string AttachmentType { get; set; }
 
         /// <summary>
-        /// oss key
+        /// 资质文件oss存储key值；file_key和file_url，至少有1个不能为空
         /// </summary>
         [XmlElement("file_key")]
         public string FileKey { get; set; }
+
+        /// <summary>
+        /// 资质文件url；file_key和file_url，至少有1个不能为空
+        /// </summary>
+        [XmlElement("file_url")]
+        public string FileUrl { get; set; }
 
         /// <summary>
         /// 有效结束日期；格式：YYYY-MM-DD

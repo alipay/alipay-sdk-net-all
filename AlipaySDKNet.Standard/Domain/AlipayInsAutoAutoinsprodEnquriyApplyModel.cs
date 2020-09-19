@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public InsPerson Insured { get; set; }
 
         /// <summary>
+        /// 名单id，新电焊模式必传
+        /// </summary>
+        [XmlElement("leads_id")]
+        public string LeadsId { get; set; }
+
+        /// <summary>
         /// 外部询价申请业务单号（幂等字段）
         /// </summary>
         [XmlElement("out_biz_no")]

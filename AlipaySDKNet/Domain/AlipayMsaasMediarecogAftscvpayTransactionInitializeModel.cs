@@ -46,5 +46,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("transaction_id")]
         public string TransactionId { get; set; }
+
+        /// <summary>
+        /// 用户uid
+        /// </summary>
+        [XmlElement("uid")]
+        public string Uid { get; set; }
     }
 }

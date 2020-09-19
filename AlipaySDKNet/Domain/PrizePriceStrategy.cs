@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string MinPrice { get; set; }
 
         /// <summary>
-        /// 定价策略值，根据不同的奖品类型填写不同的值，具体用法联系营销技术获取
+        /// 废弃-不再使用
         /// </summary>
         [XmlElement("stragety_value")]
         public string StragetyValue { get; set; }
@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("strategy_type")]
         public string StrategyType { get; set; }
+
+        /// <summary>
+        /// 定价策略值，根据不同的奖品类型填写不同的值，具体用法联系营销技术获取
+        /// </summary>
+        [XmlElement("strategy_value")]
+        public string StrategyValue { get; set; }
     }
 }

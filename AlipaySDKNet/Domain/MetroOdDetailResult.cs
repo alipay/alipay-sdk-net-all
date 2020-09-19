@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -18,8 +19,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 结果
         /// </summary>
-        [XmlElement("data")]
-        public MetroOdItem Data { get; set; }
+        [XmlArray("data")]
+        [XmlArrayItem("metro_od_item")]
+        public List<MetroOdItem> Data { get; set; }
 
         /// <summary>
         /// 消息描述

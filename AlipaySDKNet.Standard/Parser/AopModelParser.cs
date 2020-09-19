@@ -18,7 +18,7 @@ namespace Aop.Api.Parser
         /// </summary>
         /// <param name="res"></param>
         /// <returns></returns>
-        public string serializeAopObject(AopObject res)
+        public IDictionary<object, object> serializeAopObject(AopObject res)
         {
             PropertyInfo[] pis = res.GetType().GetProperties();
             IDictionary<object, object> jo = new Dictionary<object, object>();
@@ -41,10 +41,7 @@ namespace Aop.Api.Parser
                 }
             }
 
-            JsonSerializerSettings jsetting = new JsonSerializerSettings();
-            jsetting.NullValueHandling = NullValueHandling.Ignore;
-            return JsonConvert.SerializeObject(jo, Formatting.None, jsetting);
-
+            return jo;
         }
 
         /// <summary>
@@ -126,7 +123,7 @@ namespace Aop.Api.Parser
         /// </summary>
         /// <param name="collection"></param>
         /// <returns></returns>
-        private Object serializeArrayValue(ICollection collection)
+        public Object serializeArrayValue(ICollection collection)
         {
             if (collection == null)
             {

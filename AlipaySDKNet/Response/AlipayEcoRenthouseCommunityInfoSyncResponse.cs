@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string CommReqId { get; set; }
 
         /// <summary>
+        /// 小区审核拒绝原因
+        /// </summary>
+        [XmlElement("remark")]
+        public string Remark { get; set; }
+
+        /// <summary>
         /// 小区同步状态
         /// </summary>
         [XmlElement("status")]

@@ -20,5 +20,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("response_header")]
         public OpenApiResponseHeader ResponseHeader { get; set; }
+
+        /// <summary>
+        /// 状态
+        /// </summary>
+        [XmlElement("state")]
+        public string State { get; set; }
     }
 }

@@ -124,6 +124,12 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
+        /// 是否走产包一体, IS_PRODUCE_ASSEBLE, 如果是Y，则是
+        /// </summary>
+        [XmlElement("operate_info")]
+        public string OperateInfo { get; set; }
+
+        /// <summary>
         /// 公司主体代码
         /// </summary>
         [XmlElement("ou_code")]

@@ -58,6 +58,18 @@ namespace Aop.Api.Domain
         public string ExternalLogonId { get; set; }
 
         /// <summary>
+        /// 业务透传参数
+        /// </summary>
+        [XmlElement("pass_params")]
+        public string PassParams { get; set; }
+
+        /// <summary>
+        /// 周期管控规则参数period_rule_params，在签约周期扣款产品（如CYCLE_PAY_AUTH_P）时必传，在签约其他产品时无需传入。 周期扣款产品，会按照这里传入的参数提示用户，并对发起扣款的时间、金额、次数等做相应限制。
+        /// </summary>
+        [XmlElement("period_rule_params")]
+        public PeriodRuleParams PeriodRuleParams { get; set; }
+
+        /// <summary>
         /// 个人签约产品码，商户和支付宝签约时确定，商户可咨询技术支持。
         /// </summary>
         [XmlElement("personal_product_code")]

@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public bool NeedOutDoorPic { get; set; }
 
         /// <summary>
-        /// 是否需要营业执照
+        /// 是否需要特许营业执照
         /// </summary>
         [XmlElement("need_special_license")]
         public bool NeedSpecialLicense { get; set; }
