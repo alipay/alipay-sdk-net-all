@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class InvoiceOutputInfo : AopObject
     {
         /// <summary>
+        /// 发票防伪码，验证码
+        /// </summary>
+        [XmlElement("check_code")]
+        public string CheckCode { get; set; }
+
+        /// <summary>
         /// 票面上复核人信息。
         /// </summary>
         [XmlElement("checker")]

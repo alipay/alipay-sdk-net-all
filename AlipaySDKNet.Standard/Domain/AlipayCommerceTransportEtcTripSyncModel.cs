@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string TotalAmount { get; set; }
 
         /// <summary>
-        /// 交易状态； S：扣款成功； R:  退款成功；
+        /// 交易状态； S：扣款成功； R: 退款成功；
         /// </summary>
         [XmlElement("trade_status")]
         public string TradeStatus { get; set; }

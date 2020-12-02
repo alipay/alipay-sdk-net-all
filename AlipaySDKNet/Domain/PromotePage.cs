@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("page_status")]
         public string PageStatus { get; set; }
+
+        /// <summary>
+        /// 推广页类型: TRADE-交易类;COLLECT_INFO-留资类
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
     }
 }

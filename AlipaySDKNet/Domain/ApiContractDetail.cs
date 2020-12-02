@@ -66,6 +66,12 @@ namespace Aop.Api.Domain
         public ApiContractItem Items { get; set; }
 
         /// <summary>
+        /// 历史加入人次
+        /// </summary>
+        [XmlElement("join_history_people")]
+        public long JoinHistoryPeople { get; set; }
+
+        /// <summary>
         /// 发约单号
         /// </summary>
         [XmlElement("offer_no")]

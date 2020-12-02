@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppMembersQueryModel : AopObject
     {
         /// <summary>
-        /// 成员的角色类型，DEVELOPER-开发者，EXPERIENCER-体验者
+        /// 查询的成员角色类型，枚举支持： DEVELOPER：开发者。 EXPERIENCER：体验者
         /// </summary>
         [XmlElement("role")]
         public string Role { get; set; }

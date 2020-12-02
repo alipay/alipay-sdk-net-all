@@ -66,6 +66,12 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
+        /// 物料商品ID
+        /// </summary>
+        [XmlElement("item_mall_id")]
+        public string ItemMallId { get; set; }
+
+        /// <summary>
         /// 备注
         /// </summary>
         [XmlElement("memo")]

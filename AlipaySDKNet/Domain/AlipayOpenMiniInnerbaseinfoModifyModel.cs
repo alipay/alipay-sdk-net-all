@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniInnerbaseinfoModifyModel : AopObject
     {
         /// <summary>
+        /// 应用别名，简称
+        /// </summary>
+        [XmlElement("app_alias_name")]
+        public string AppAliasName { get; set; }
+
+        /// <summary>
         /// 类目列表
         /// </summary>
         [XmlElement("app_category_ids")]

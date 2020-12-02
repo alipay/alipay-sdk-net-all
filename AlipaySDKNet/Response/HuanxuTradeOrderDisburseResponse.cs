@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -9,7 +10,7 @@ namespace Aop.Api.Response
     public class HuanxuTradeOrderDisburseResponse : AopResponse
     {
         /// <summary>
-        /// 聚合支付的支付渠道，支付宝分配。
+        /// 聚合支付的支付渠道，焕旭分配。
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
@@ -21,7 +22,7 @@ namespace Aop.Api.Response
         public string DisburseAmount { get; set; }
 
         /// <summary>
-        /// 打款id，支付宝针对每一笔打款请求生成的唯一打款凭证
+        /// 打款id，焕旭针对每一笔打款请求生成的唯一打款凭证
         /// </summary>
         [XmlElement("disburse_id")]
         public string DisburseId { get; set; }
@@ -37,5 +38,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("disburse_status")]
         public string DisburseStatus { get; set; }
+
+        /// <summary>
+        /// 用于透传扩展信息，pay_url为支付链接。
+        /// </summary>
+        [XmlElement("ext_context")]
+        public ExtContext ExtContext { get; set; }
     }
 }

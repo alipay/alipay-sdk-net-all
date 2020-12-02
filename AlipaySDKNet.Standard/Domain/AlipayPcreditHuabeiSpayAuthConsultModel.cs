@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
-        /// 业务场景： hbff.stanard.other 淘外标准版 hbff.stanard.telecom 淘外运营商合约购
+        /// 业务场景： hbff.stanard.other 淘外标准版（默认） hbff.stanard.telecom 淘外运营商合约购
         /// </summary>
         [XmlElement("business_code")]
         public string BusinessCode { get; set; }
@@ -82,13 +82,13 @@ namespace Aop.Api.Domain
         public string TotalPaymentAmount { get; set; }
 
         /// <summary>
-        /// 用户身份信息，蚂蚁统一会员ID user_id、蚂蚁会员登陆ID login_id（邮箱、手机号）二选一
+        /// 用户身份信息，蚂蚁统一会员ID user_id、蚂蚁会员登陆ID login_id（邮箱、手机号），此字段中user_id、login_id和user_id字段三选一必传
         /// </summary>
         [XmlElement("user")]
         public UserDInfo User { get; set; }
 
         /// <summary>
-        /// 买家的蚂蚁统一会员ID，建议使用新的 user字段，当前字段仍然保持兼容支持；
+        /// 买家的蚂蚁统一会员ID，建议使用新的 user字段，当前字段仍然保持兼容支持；此字段和user字段中user_id、login_id三选一必传
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

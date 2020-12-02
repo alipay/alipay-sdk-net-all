@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class HuanxuTradeOrderPayModel : AopObject
     {
         /// <summary>
-        /// 聚合支付的支付渠道，支付宝分配。
+        /// 聚合支付的支付渠道，焕旭分配。
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
@@ -52,7 +52,13 @@ namespace Aop.Api.Domain
         public string PayAmount { get; set; }
 
         /// <summary>
-        /// 支付模式，支付宝分配，目前只支持GUARANTEE_PAY(担保支付模式)
+        /// CASH现金模式（默认值，传入这个值，则表示仅仅支持银行卡现金）BILL票据模式（传入这个值，则表示仅仅支持银行票据）CASH_BILL现金/票据都支持模式
+        /// </summary>
+        [XmlElement("pay_entity_mode")]
+        public string PayEntityMode { get; set; }
+
+        /// <summary>
+        /// 支付模式，焕旭分配，目前只支持GUARANTEE_PAY(担保支付模式)
         /// </summary>
         [XmlElement("pay_mode")]
         public string PayMode { get; set; }
@@ -64,7 +70,7 @@ namespace Aop.Api.Domain
         public string PayRequestNo { get; set; }
 
         /// <summary>
-        /// 支付终端，指支付来源的设备端，支付宝分配，目前支持PC/APP
+        /// 支付终端，指支付来源的设备端，焕旭分配，目前支持PC/APP
         /// </summary>
         [XmlElement("pay_terminal")]
         public string PayTerminal { get; set; }

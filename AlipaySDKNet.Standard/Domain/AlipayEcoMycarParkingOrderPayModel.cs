@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CarNumber { get; set; }
 
         /// <summary>
-        /// 车牌颜色
+        /// 车牌颜色，可选蓝-BLUE、绿-GREEN、黄-YELLOW、白-WHITE、黑-BLACK、黄绿色-LIMEGREEN
         /// </summary>
         [XmlElement("car_number_color")]
         public string CarNumberColor { get; set; }
@@ -68,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("seller_logon_id")]
         public string SellerLogonId { get; set; }
+
+        /// <summary>
+        /// 支付宝业务流水号，用于记录车辆从驶入到驶出的全流程
+        /// </summary>
+        [XmlElement("serial_no")]
+        public string SerialNo { get; set; }
 
         /// <summary>
         /// 订单标题，描述订单用途

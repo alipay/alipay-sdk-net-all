@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class HospitalDTO : AopObject
     {
         /// <summary>
+        /// 医院ID
+        /// </summary>
+        [XmlElement("hospital_id")]
+        public string HospitalId { get; set; }
+
+        /// <summary>
         /// 医院标准名称
         /// </summary>
         [XmlElement("hospital_name")]

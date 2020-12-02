@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("principal_id")]
         public string PrincipalId { get; set; }
+
+        /// <summary>
+        /// 推广页类型
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
     }
 }

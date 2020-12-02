@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AnttechBlockchainTwcUserinfoMatchModel : AopObject
     {
         /// <summary>
+        /// 支付宝的UID
+        /// </summary>
+        [XmlElement("alipay_user_id")]
+        public string AlipayUserId { get; set; }
+
+        /// <summary>
         /// 移动号码hash后的字符串
         /// </summary>
         [XmlElement("call_no_hash")]

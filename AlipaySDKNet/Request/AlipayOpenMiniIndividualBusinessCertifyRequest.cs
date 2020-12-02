@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayOpenMiniIndividualBusinessCertifyRequest : IAopRequest<AlipayOpenMiniIndividualBusinessCertifyResponse>
     {
         /// <summary>
-        /// 营业执照
+        /// 营业执照注册号即营业执照的编号。
         /// </summary>
         public string LicenseNo { get; set; }
 

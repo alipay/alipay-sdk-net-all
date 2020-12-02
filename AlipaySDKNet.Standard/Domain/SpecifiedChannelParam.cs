@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class SpecifiedChannelParam : AopObject
     {
         /// <summary>
+        /// 指定渠道签约号
+        /// </summary>
+        [XmlElement("asset_id")]
+        public string AssetId { get; set; }
+
+        /// <summary>
+        /// 资产编码
+        /// </summary>
+        [XmlElement("asset_type_code")]
+        public string AssetTypeCode { get; set; }
+
+        /// <summary>
         /// 银行卡类型，只有在资产类型为BANKCARD时才有效。如果为空，则标识不限制卡类型。卡类型在有值时，仅支持 两类传参：DD-贷记卡（储蓄卡），CC-信用卡。
         /// </summary>
         [XmlElement("bank_card_type")]

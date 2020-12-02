@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ReceiptSku : AopObject
     {
         /// <summary>
+        /// 商品条形码
+        /// </summary>
+        [XmlElement("barcode")]
+        public string Barcode { get; set; }
+
+        /// <summary>
         /// 商品数量
         /// </summary>
         [XmlElement("count")]

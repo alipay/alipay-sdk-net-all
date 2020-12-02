@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayBossFncInvmodeCreateModel : AopObject
     {
         /// <summary>
+        /// 合同id
+        /// </summary>
+        [XmlElement("ar_no")]
+        public string ArNo { get; set; }
+
+        /// <summary>
         /// 所属ou
         /// </summary>
         [XmlElement("inst_id")]

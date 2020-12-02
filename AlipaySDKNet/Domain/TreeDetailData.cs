@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ApplyTime { get; set; }
 
         /// <summary>
+        /// 兑换树种获得的证书id
+        /// </summary>
+        [XmlElement("certificate_id")]
+        public string CertificateId { get; set; }
+
+        /// <summary>
         /// 是否合种。true：是合种，false：不是合种
         /// </summary>
         [XmlElement("cooperation")]

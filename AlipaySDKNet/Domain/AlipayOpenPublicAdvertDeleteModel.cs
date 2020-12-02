@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenPublicAdvertDeleteModel : AopObject
     {
         /// <summary>
+        /// 待删除的广告位分组标识
+        /// </summary>
+        [XmlElement("advert_group")]
+        public string AdvertGroup { get; set; }
+
+        /// <summary>
         /// 待删除的广告位id
         /// </summary>
         [XmlElement("advert_id")]

@@ -36,7 +36,7 @@ namespace Aop.Api.Response
         public string GmtActive { get; set; }
 
         /// <summary>
-        /// 券创建时间(券发券时间)
+        /// 券创建时间(即发券时间)
         /// </summary>
         [XmlElement("gmt_create")]
         public string GmtCreate { get; set; }

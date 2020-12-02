@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class MiniAppBaseInfoQueryResponse : AopObject
     {
         /// <summary>
+        /// 应用别名，简称
+        /// </summary>
+        [XmlElement("app_alias_name")]
+        public string AppAliasName { get; set; }
+
+        /// <summary>
         /// 小程序应用描述
         /// </summary>
         [XmlElement("app_desc")]

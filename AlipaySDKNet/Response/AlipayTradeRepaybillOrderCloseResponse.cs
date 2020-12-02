@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string BillNo { get; set; }
 
         /// <summary>
+        /// 这笔还款资金单在关闭时已经扣款的金额，单位为元；精确到小数点后两位，取值范围[0.01,100000000]
+        /// </summary>
+        [XmlElement("paid_amount")]
+        public string PaidAmount { get; set; }
+
+        /// <summary>
         /// 还款的资金单号，后续用该单号去调用支付宝收银台sdk进行支付
         /// </summary>
         [XmlElement("repay_fund_order_no")]

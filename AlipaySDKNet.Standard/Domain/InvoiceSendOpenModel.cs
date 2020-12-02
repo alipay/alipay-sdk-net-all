@@ -174,7 +174,7 @@ namespace Aop.Api.Domain
         public string TaxAmount { get; set; }
 
         /// <summary>
-        /// 交易内容
+        /// 交易内容，非必填但是不可以传空值，如果无需回传trade_list则不需要传该对象
         /// </summary>
         [XmlArray("trade_list")]
         [XmlArrayItem("einv_trade")]

@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string BillNo { get; set; }
 
         /// <summary>
+        /// 收银单id，用于客户端唤起收银台SDK
+        /// </summary>
+        [XmlElement("cashier_order_id")]
+        public string CashierOrderId { get; set; }
+
+        /// <summary>
         /// 还款的资金单号，后续用该单号去调用支付宝收银台sdk进行支付
         /// </summary>
         [XmlElement("repay_fund_order_no")]

@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string CousumerIdHash { get; set; }
 
         /// <summary>
+        /// 不匹配的原因描述
+        /// </summary>
+        [XmlElement("desc")]
+        public string Desc { get; set; }
+
+        /// <summary>
         /// 匹配是否成功
         /// </summary>
         [XmlElement("match_success")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AddPrice { get; set; }
 
         /// <summary>
+        /// 可选组子菜最大可选数量，不传默认为1，传值必须为大于0的数字
+        /// </summary>
+        [XmlElement("detail_count")]
+        public string DetailCount { get; set; }
+
+        /// <summary>
         /// 外部菜品id
         /// </summary>
         [XmlElement("out_dish_id")]

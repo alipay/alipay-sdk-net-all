@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenServicemarketOrderQueryModel : AopObject
     {
         /// <summary>
-        /// 商户订单ID号
+        /// 订购服务订单ID，通过支付宝发送的 https://opendocs.alipay.com/apis/api_3/alipay.open.servicemarket.order.notify(服务市场商户确认订购通知) 通知获取。
         /// </summary>
         [XmlElement("commodity_order_id")]
         public string CommodityOrderId { get; set; }
 
         /// <summary>
-        /// 从第几页开始查询
+        /// 查询开始页码，1 为第一页。
         /// </summary>
         [XmlElement("start_page")]
         public string StartPage { get; set; }

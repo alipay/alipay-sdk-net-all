@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
+        /// 机构对商户的识别id
+        /// </summary>
+        [XmlElement("out_distinguish_id")]
+        public string OutDistinguishId { get; set; }
+
+        /// <summary>
         /// 外部统一编码，外部机构与网商合作的方案产品码，用于标识所属的合作业务，pd_code为空时该字段必传。
         /// </summary>
         [XmlElement("out_uni_code")]

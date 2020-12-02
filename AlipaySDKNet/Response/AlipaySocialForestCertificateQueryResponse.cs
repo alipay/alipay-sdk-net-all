@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipaySocialForestCertificateQueryResponse : AopResponse
     {
         /// <summary>
+        /// 对应树种的证书数量，JSON
+        /// </summary>
+        [XmlElement("cert_count_by_tree")]
+        public string CertCountByTree { get; set; }
+
+        /// <summary>
         /// 当前用户是否是森林用户
         /// </summary>
         [XmlElement("forest_user")]

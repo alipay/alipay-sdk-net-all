@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string BehaviorContent { get; set; }
 
         /// <summary>
+        /// 约定编号
+        /// </summary>
+        [XmlElement("contract_no")]
+        public string ContractNo { get; set; }
+
+        /// <summary>
         /// 业务发生时间
         /// </summary>
         [XmlElement("gmt_service")]

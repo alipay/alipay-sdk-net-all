@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipayFundAccountbookQueryResponse : AopResponse
     {
         /// <summary>
+        /// 记账账簿id
+        /// </summary>
+        [XmlElement("account_book_id")]
+        public string AccountBookId { get; set; }
+
+        /// <summary>
         /// 可用余额
         /// </summary>
         [XmlElement("available_amount")]

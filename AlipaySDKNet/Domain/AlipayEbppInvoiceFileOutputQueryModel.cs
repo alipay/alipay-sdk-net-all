@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Scene { get; set; }
 
         /// <summary>
+        /// 是否跳过发票报销状态同步；当为true时，跳过报销状态同步校验。默认为false，需要先做报销状态同步
+        /// </summary>
+        [XmlElement("skip_expense_progress_sync")]
+        public bool SkipExpenseProgressSync { get; set; }
+
+        /// <summary>
         /// 支付宝用户id
         /// </summary>
         [XmlElement("user_id")]

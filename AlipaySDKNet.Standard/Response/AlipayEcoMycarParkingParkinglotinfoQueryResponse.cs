@@ -63,6 +63,12 @@ namespace Aop.Api.Response
         public string ParkingFeeDescription { get; set; }
 
         /// <summary>
+        /// 停车场价格明细图片
+        /// </summary>
+        [XmlElement("parking_fee_description_img")]
+        public string ParkingFeeDescriptionImg { get; set; }
+
+        /// <summary>
         /// 支付宝返回停车场id，系统唯一
         /// </summary>
         [XmlElement("parking_id")]

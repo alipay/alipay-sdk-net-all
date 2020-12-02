@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -110,6 +111,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sign_validity_period")]
         public string SignValidityPeriod { get; set; }
+
+        /// <summary>
+        /// 商户希望该协议在代扣支付时指定使用的资产列表，如指定只能使用余额支付
+        /// </summary>
+        [XmlArray("specified_channel")]
+        [XmlArrayItem("specified_channel_param")]
+        public List<SpecifiedChannelParam> SpecifiedChannel { get; set; }
 
         /// <summary>
         /// 此参数用于传递子商户信息，目前商户代扣、海外代扣、淘旅行信用住产品支持传入该参数(销售方案中是否允许自定义子商户信息选是)；  目前支持四个key值：  sub_merchant_id (子商户id)  sub_merchant_name (子商户名称)  sub_merchant_service_name (子商户服务名称)  sub_merchant_service_description (子商户服务描述)

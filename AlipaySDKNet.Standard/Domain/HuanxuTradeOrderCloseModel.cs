@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class HuanxuTradeOrderCloseModel : AopObject
     {
         /// <summary>
-        /// 支付id，支付宝针对每一笔支付请求生成的唯一支付凭证
+        /// 支付id，焕旭针对每一笔支付请求生成的唯一支付凭证
         /// </summary>
         [XmlElement("payment_id")]
         public string PaymentId { get; set; }

@@ -110,6 +110,12 @@ namespace Aop.Api.Domain
         public long PrincipalId { get; set; }
 
         /// <summary>
+        /// 创意审核拒绝的扩展信息
+        /// </summary>
+        [XmlElement("refuse_extend_info")]
+        public CreativeRefuseExtendInfo RefuseExtendInfo { get; set; }
+
+        /// <summary>
         /// 创意审核拒绝原因
         /// </summary>
         [XmlElement("refuse_reason")]

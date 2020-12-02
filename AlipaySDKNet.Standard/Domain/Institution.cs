@@ -10,15 +10,27 @@ namespace Aop.Api.Domain
     public class Institution : AopObject
     {
         /// <summary>
-        /// 人行联行号
+        /// 机构编码（如：人行联行号）
         /// </summary>
         [XmlElement("code")]
         public string Code { get; set; }
 
         /// <summary>
-        /// 银行全称
+        /// 机构全称
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 父级机构编码
+        /// </summary>
+        [XmlElement("root_code")]
+        public string RootCode { get; set; }
+
+        /// <summary>
+        /// 父级机构全称
+        /// </summary>
+        [XmlElement("root_name")]
+        public string RootName { get; set; }
     }
 }

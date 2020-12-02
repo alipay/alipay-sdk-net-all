@@ -89,6 +89,12 @@ namespace Aop.Api.Domain
         public string BuildQcloudInfo { get; set; }
 
         /// <summary>
+        /// 已经构建加签过的包地址
+        /// </summary>
+        [XmlElement("build_signed_pkg_url")]
+        public string BuildSignedPkgUrl { get; set; }
+
+        /// <summary>
         /// 源码包大小
         /// </summary>
         [XmlElement("build_source_pkg_size")]

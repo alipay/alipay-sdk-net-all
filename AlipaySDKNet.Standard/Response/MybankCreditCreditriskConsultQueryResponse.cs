@@ -31,5 +31,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("creditlmt_amt")]
         public string CreditlmtAmt { get; set; }
+
+        /// <summary>
+        /// 贷款年化利率
+        /// </summary>
+        [XmlElement("loan_int_rate")]
+        public string LoanIntRate { get; set; }
     }
 }

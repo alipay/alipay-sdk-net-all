@@ -18,6 +18,13 @@ namespace Aop.Api.Response
         public List<CreditPayBillAssetVO> BillAssets { get; set; }
 
         /// <summary>
+        /// 担保资产视图，如果未咨询担保资产，可能为空
+        /// </summary>
+        [XmlArray("guarantee_assets")]
+        [XmlArrayItem("credit_pay_guarantee_asset_v_o")]
+        public List<CreditPayGuaranteeAssetVO> GuaranteeAssets { get; set; }
+
+        /// <summary>
         /// 引导模型
         /// </summary>
         [XmlElement("guide_info")]

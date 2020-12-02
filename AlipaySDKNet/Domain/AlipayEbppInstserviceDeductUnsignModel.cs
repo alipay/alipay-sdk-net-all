@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
+        /// 代扣产品码（由技术同学分配）
+        /// </summary>
+        [XmlElement("ededuct_product_code")]
+        public string EdeductProductCode { get; set; }
+
+        /// <summary>
         /// 扩展字段
         /// </summary>
         [XmlElement("extend_field")]

@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("file_name")]
         public string FileName { get; set; }
+
+        /// <summary>
+        /// 用于标识某个文件
+        /// </summary>
+        [XmlElement("file_uniq_id")]
+        public string FileUniqId { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class HuanxuTradeOrderPayResponse : AopResponse
     {
         /// <summary>
-        /// 聚合支付的支付渠道，支付宝分配。
+        /// 聚合支付的支付渠道，焕旭分配。
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Response
         public string PayStatus { get; set; }
 
         /// <summary>
-        /// 支付id，支付宝针对每一笔支付请求生成的唯一支付凭证，后续打款和退款时候需带入此id
+        /// 支付id，焕旭针对每一笔支付请求生成的唯一支付凭证，后续打款和退款时候需带入此id
         /// </summary>
         [XmlElement("payment_id")]
         public string PaymentId { get; set; }

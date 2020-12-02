@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniItemPageQueryModel : AopObject
     {
         /// <summary>
-        /// 商家侧商品id列表
+        /// 商家侧商品ID列表，即导入商品信息时商家自定义商品ID。
         /// </summary>
         [XmlArray("item_id_list")]
         [XmlArrayItem("string")]
@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string Operation { get; set; }
 
         /// <summary>
-        /// 当前页码，默认1
+        /// 查询起始页码，默认为第一页 1。
         /// </summary>
         [XmlElement("page_num")]
         public long PageNum { get; set; }

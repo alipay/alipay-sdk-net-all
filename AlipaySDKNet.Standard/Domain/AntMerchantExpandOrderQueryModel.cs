@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandOrderQueryModel : AopObject
     {
         /// <summary>
-        /// 通过ant.merchant.expand.indirect.zmsub.create等接口进件时返回的order_id
+        /// 申请单 id。通过https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.shop.create等接口进件时返回的order_id。
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }

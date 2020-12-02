@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string AgreeId { get; set; }
 
         /// <summary>
-        /// 申请类型, 小型轿车：car; 货车：truck; 客车：bus
+        /// 申请类型, 货车：truck; 客车：bus
         /// </summary>
         [XmlElement("apply_type")]
         public string ApplyType { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string CardNo { get; set; }
 
         /// <summary>
-        /// 用户ETC OBU号，同步激活状态时必传
+        /// 用户ETC OBU号
         /// </summary>
         [XmlElement("device_no")]
         public string DeviceNo { get; set; }
@@ -100,7 +100,7 @@ namespace Aop.Api.Domain
         public string GrossMass { get; set; }
 
         /// <summary>
-        /// 订单状态； 1、INFO_SUBMIT：信息已提交； 2、CENSOR_PASS：审核通过； 3、CENSOR_BLOCK：审核驳回； 4、DELIVERYED：已发货； 5、RECEIVED：已收货； 6、ACTIVATED ：已激活； 7、UNMOUNTED：已注销；
+        /// 订单状态； 1、INFO_SUBMIT：信息已提交； 2、CENSOR_PASS：审核通过； 3、CENSOR_BLOCK：审核驳回； 4、DELIVERYED：已发货； 5、RECEIVED：已收货； 6、ACTIVATED：已激活； 7、UNMOUNTED：已注销； 8、ADD_BLACK：拉黑； 9、REMOVE_BLACK：解黑；
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }

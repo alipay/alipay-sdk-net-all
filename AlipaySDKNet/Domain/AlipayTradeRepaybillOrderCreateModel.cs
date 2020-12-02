@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
+        /// json格式字符串，公用回传参数。如果请求时传递了该参数，则异步通知商户时会回传该参数。
+        /// </summary>
+        [XmlElement("passback_params")]
+        public string PassbackParams { get; set; }
+
+        /// <summary>
         /// 还款的付款方用户id
         /// </summary>
         [XmlElement("payer_user_id")]

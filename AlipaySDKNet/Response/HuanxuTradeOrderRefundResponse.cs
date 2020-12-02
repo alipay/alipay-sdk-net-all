@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -9,10 +10,16 @@ namespace Aop.Api.Response
     public class HuanxuTradeOrderRefundResponse : AopResponse
     {
         /// <summary>
-        /// 聚合支付的支付渠道，支付宝分配。
+        /// 聚合支付的支付渠道，焕旭分配。
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
+
+        /// <summary>
+        /// 用于透传扩展信息，pay_url为支付链接。
+        /// </summary>
+        [XmlElement("ext_context")]
+        public ExtContext ExtContext { get; set; }
 
         /// <summary>
         /// 退款金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]
@@ -21,7 +28,7 @@ namespace Aop.Api.Response
         public string RefundAmount { get; set; }
 
         /// <summary>
-        /// 退款指令id，支付宝针对每一笔退款请求生成的唯一退款凭证号
+        /// 退款指令id，焕旭针对每一笔退款请求生成的唯一退款凭证号
         /// </summary>
         [XmlElement("refund_id")]
         public string RefundId { get; set; }

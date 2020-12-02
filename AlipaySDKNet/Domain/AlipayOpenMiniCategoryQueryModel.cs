@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniCategoryQueryModel : AopObject
     {
         /// <summary>
-        /// 是否需要过滤不可用类目
+        /// 是否过滤小程序不可用类目
         /// </summary>
         [XmlElement("is_filter")]
         public bool IsFilter { get; set; }

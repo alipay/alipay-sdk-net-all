@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<KbdishGroupDetailSimplifyInfo> GroupDetailList { get; set; }
 
         /// <summary>
-        /// 套餐组规则，fix：是否固定套餐，true：是；false：不是。max_count：最大可选数量；min_count：最小可选数量。
+        /// 套餐组规则，fix：是否固定套餐，true：是；false：不是。max_count：最大可选数量；min_count：最小可选数量。sort：套餐组排序值数字从小到大排
         /// </summary>
         [XmlElement("group_rule")]
         public string GroupRule { get; set; }

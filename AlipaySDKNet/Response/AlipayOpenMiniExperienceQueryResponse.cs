@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string ExpQrCodeUrl { get; set; }
 
         /// <summary>
-        /// 体验版打包状态，expVersionPackged-体验版打包成功，expVersionPackaging-体验版打包中，notExpVersion-非体验版
+        /// 体验版打包状态。状态枚举如下： expVersionPackged：体验版打包成功； expVersionPackaging：体验版打包中； notExpVersion：非体验版。
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

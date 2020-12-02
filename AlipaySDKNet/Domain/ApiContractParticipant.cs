@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class ApiContractParticipant : AopObject
     {
         /// <summary>
+        /// 业务主体id，比如淘宝id
+        /// </summary>
+        [XmlElement("biz_principal_id")]
+        public string BizPrincipalId { get; set; }
+
+        /// <summary>
+        /// 业务主体类型
+        /// </summary>
+        [XmlElement("biz_principal_type")]
+        public string BizPrincipalType { get; set; }
+
+        /// <summary>
         /// offer、acceptor
         /// </summary>
         [XmlElement("participant_type")]

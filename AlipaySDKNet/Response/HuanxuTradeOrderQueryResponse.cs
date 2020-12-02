@@ -15,13 +15,13 @@ namespace Aop.Api.Response
         public string Amount { get; set; }
 
         /// <summary>
-        /// 聚合支付的支付渠道，支付宝分配。
+        /// 聚合支付的支付渠道，焕旭分配。
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
 
         /// <summary>
-        /// 支付、打款、退款时候支付宝返回的唯一凭证id，调用方查询时候建议优先传入该值，内部处理时优先以该值为准。instruction_id和out_request_no不能同时为空。
+        /// 支付、打款、退款时候焕旭返回的唯一凭证id，调用方查询时候建议优先传入该值，内部处理时优先以该值为准。instruction_id和out_request_no不能同时为空。
         /// </summary>
         [XmlElement("instruction_id")]
         public string InstructionId { get; set; }

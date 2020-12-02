@@ -16,5 +16,11 @@ namespace Aop.Api.Response
         [XmlArray("advert_list")]
         [XmlArrayItem("advert")]
         public List<Advert> AdvertList { get; set; }
+
+        /// <summary>
+        /// 广告组数量
+        /// </summary>
+        [XmlElement("count")]
+        public long Count { get; set; }
     }
 }

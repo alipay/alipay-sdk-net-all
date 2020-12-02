@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ebank_form")]
         public string EbankForm { get; set; }
+
+        /// <summary>
+        /// 机构返回描述
+        /// </summary>
+        [XmlElement("return_message")]
+        public string ReturnMessage { get; set; }
     }
 }

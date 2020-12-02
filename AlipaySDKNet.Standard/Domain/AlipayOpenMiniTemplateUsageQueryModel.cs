@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniTemplateUsageQueryModel : AopObject
     {
         /// <summary>
-        /// 小程序投放的端参数，例如投放到支付宝钱包是支付宝端。该参数可选，默认支付宝端 com.alipay.alipaywallet:支付宝端
+        /// 小程序投放的端参数，例如投放到支付宝钱包是支付宝端。默认支付宝端。支持： com.alipay.alipaywallet:支付宝端； com.alipay.iot.xpaas：支付宝IoT端。
         /// </summary>
         [XmlElement("bundle_id")]
         public string BundleId { get; set; }
 
         /// <summary>
-        /// 查询的页数，默认第一页
+        /// 查询的页数，起始为 1（第一页） 。默认第一页。
         /// </summary>
         [XmlElement("page_num")]
         public long PageNum { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 模板id
+        /// 小程序模板APPID
         /// </summary>
         [XmlElement("template_id")]
         public string TemplateId { get; set; }

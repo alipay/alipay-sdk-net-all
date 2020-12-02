@@ -105,6 +105,12 @@ namespace Aop.Api.Response
         public string OwnerEntity { get; set; }
 
         /// <summary>
+        /// 小程序主体头像信息
+        /// </summary>
+        [XmlElement("owner_portrait")]
+        public string OwnerPortrait { get; set; }
+
+        /// <summary>
         /// 小程序客服邮箱
         /// </summary>
         [XmlElement("service_email")]

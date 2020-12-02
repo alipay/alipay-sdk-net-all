@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string NotifyType { get; set; }
 
         /// <summary>
+        /// 原始第三方支付结构的交易号，比如支付宝、微信交易号
+        /// </summary>
+        [XmlElement("origin_trade_no")]
+        public string OriginTradeNo { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]
