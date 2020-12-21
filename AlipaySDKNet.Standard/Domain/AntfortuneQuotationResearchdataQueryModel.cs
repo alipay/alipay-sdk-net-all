@@ -59,5 +59,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("table")]
         public string Table { get; set; }
+
+        /// <summary>
+        /// 目标系统，BK_FINDATA代表数金金融数据库，null代表行情自己
+        /// </summary>
+        [XmlElement("target_system")]
+        public string TargetSystem { get; set; }
     }
 }

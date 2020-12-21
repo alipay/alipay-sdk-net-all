@@ -1,4 +1,5 @@
 using System;
+using Aop.Api.Domain;
 using System.Collections.Generic;
 using Aop.Api.Response;
 
@@ -9,6 +10,11 @@ namespace Aop.Api.Request
     /// </summary>
     public class AlipayOpenMiniVersionListQueryRequest : IAopRequest<AlipayOpenMiniVersionListQueryResponse>
     {
+        /// <summary>
+        /// 小程序版本列表查询
+        /// </summary>
+        public string BizContent { get; set; }
+
         #region IAopRequest Members
 		private bool  needEncrypt=false;
         private string apiVersion = "1.0";
@@ -84,6 +90,7 @@ namespace Aop.Api.Request
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
+            parameters.Add("biz_content", this.BizContent);
             return parameters;
         }
 

@@ -18,6 +18,13 @@ namespace Aop.Api.Domain
         public List<string> AreaCodes { get; set; }
 
         /// <summary>
+        /// 类目属性列表
+        /// </summary>
+        [XmlArray("category_attributes")]
+        [XmlArrayItem("app_attribute")]
+        public List<AppAttribute> CategoryAttributes { get; set; }
+
+        /// <summary>
         /// 类目
         /// </summary>
         [XmlArray("category_ids")]
@@ -31,7 +38,7 @@ namespace Aop.Api.Domain
         public string Icon { get; set; }
 
         /// <summary>
-        /// 关键字列表
+        /// 关键字列表；关键词数量最多5个，每个关键词长度在5个字符以内
         /// </summary>
         [XmlArray("key_words")]
         [XmlArrayItem("string")]
@@ -44,7 +51,7 @@ namespace Aop.Api.Domain
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// 服务名称
+        /// 服务名称；长度范围在2到10个字符以内
         /// </summary>
         [XmlElement("service_name")]
         public string ServiceName { get; set; }
@@ -69,7 +76,7 @@ namespace Aop.Api.Domain
         public List<ServiceUrl> ServiceUrls { get; set; }
 
         /// <summary>
-        /// 短描述
+        /// 短描述；长度范围在5到16个字符以内
         /// </summary>
         [XmlElement("short_desc")]
         public string ShortDesc { get; set; }

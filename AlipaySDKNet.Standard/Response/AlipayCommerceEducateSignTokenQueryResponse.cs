@@ -27,6 +27,18 @@ namespace Aop.Api.Response
         public string CertType { get; set; }
 
         /// <summary>
+        /// 家长支付宝账户的脱敏信息
+        /// </summary>
+        [XmlElement("parent_logon_id")]
+        public string ParentLogonId { get; set; }
+
+        /// <summary>
+        /// 家长id，如是本人开通，当前id与用户id相同
+        /// </summary>
+        [XmlElement("parent_user_id")]
+        public string ParentUserId { get; set; }
+
+        /// <summary>
         /// 学校内标
         /// </summary>
         [XmlElement("school_code")]

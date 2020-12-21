@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,10 +11,23 @@ namespace Aop.Api.Domain
     public class DefiCustUserDTO : AopObject
     {
         /// <summary>
+        /// 管理员名称
+        /// </summary>
+        [XmlElement("admin_name")]
+        public string AdminName { get; set; }
+
+        /// <summary>
         /// 会员信息
         /// </summary>
         [XmlElement("member_info")]
         public DefiCustMemberDTO MemberInfo { get; set; }
+
+        /// <summary>
+        /// 角色
+        /// </summary>
+        [XmlArray("role_types")]
+        [XmlArrayItem("string")]
+        public List<string> RoleTypes { get; set; }
 
         /// <summary>
         /// ACTIVE("ACTIVE", "激活状态"), FROZEN("FROZEN", "冻结状态"), DISABLED("DISABLED", "禁用状态"),;

@@ -43,19 +43,19 @@ namespace Aop.Api.Domain
         public string CertImage { get; set; }
 
         /// <summary>
-        /// 营业执照名称，填写值为营业执照或统一社会信用代码证上的名称。店铺类目为特殊类目时必填。
+        /// 营业执照名称，填写值为营业执照或统一社会信用代码证上的名称。
         /// </summary>
         [XmlElement("cert_name")]
         public string CertName { get; set; }
 
         /// <summary>
-        /// 证件号码。请填写店铺营业执照号。店铺类目为特殊类目时必填。
+        /// 证件号码。请填写店铺营业执照号。
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类型，取值范围：201：营业执照；2011:多证合一(统一社会信用代码)。店铺类目为特殊类目时必填。
+        /// 证件类型，取值范围：201：营业执照；2011:多证合一(统一社会信用代码)。
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
@@ -87,25 +87,25 @@ namespace Aop.Api.Domain
         public List<ShopExtInfo> ExtInfos { get; set; }
 
         /// <summary>
-        /// 商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid
+        /// 商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid。特别说明：IoT设备三绑定场景统一填写商户pid
         /// </summary>
         [XmlElement("ip_role_id")]
         public string IpRoleId { get; set; }
 
         /// <summary>
-        /// 法人身份证号。店铺类目为特殊类目时必填。
+        /// 法人身份证号。
         /// </summary>
         [XmlElement("legal_cert_no")]
         public string LegalCertNo { get; set; }
 
         /// <summary>
-        /// 法人名称。店铺类目为特殊类目时必填。
+        /// 法人名称。
         /// </summary>
         [XmlElement("legal_name")]
         public string LegalName { get; set; }
 
         /// <summary>
-        /// 营业执照授权函。其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。店铺类目为特殊类目时必填。
+        /// 营业执照授权函。其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。
         /// </summary>
         [XmlElement("license_auth_letter_image")]
         public string LicenseAuthLetterImage { get; set; }
@@ -117,14 +117,14 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 门头照 id，即通过 https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload 接口上传图片后得到的 image_id。店铺类目为特殊类目时必填。
+        /// 门头照 id，即通过 https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload 接口上传图片后得到的 image_id。
         /// </summary>
         [XmlArray("out_door_images")]
         [XmlArrayItem("string")]
         public List<string> OutDoorImages { get; set; }
 
         /// <summary>
-        /// 行业特殊资质。店铺类目为特殊类目时必填。
+        /// 行业特殊资质。
         /// </summary>
         [XmlArray("qualifications")]
         [XmlArrayItem("industry_qualification_info")]

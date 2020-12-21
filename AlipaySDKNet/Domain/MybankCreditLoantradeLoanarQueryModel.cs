@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("loanarno")]
         public string Loanarno { get; set; }
+
+        /// <summary>
+        /// 用于场景角色的查询，默认不填 扫码付业务填 1
+        /// </summary>
+        [XmlElement("roletype")]
+        public string Roletype { get; set; }
     }
 }

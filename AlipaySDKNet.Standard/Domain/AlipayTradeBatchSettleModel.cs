@@ -34,5 +34,11 @@ namespace Aop.Api.Domain
         [XmlArray("settle_clauses")]
         [XmlArrayItem("settle_clause")]
         public List<SettleClause> SettleClauses { get; set; }
+
+        /// <summary>
+        /// 结算方式，目前仅支持提前放款结算quickSettlement，提前放款结算需要商户开通快收服务，不填则为普通结算方式
+        /// </summary>
+        [XmlElement("settle_type")]
+        public string SettleType { get; set; }
     }
 }

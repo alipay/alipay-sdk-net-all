@@ -24,6 +24,13 @@ namespace Aop.Api.Response
         public string AuditStatus { get; set; }
 
         /// <summary>
+        /// 类目属性列表
+        /// </summary>
+        [XmlArray("category_attributes")]
+        [XmlArrayItem("app_attribute")]
+        public List<AppAttribute> CategoryAttributes { get; set; }
+
+        /// <summary>
         /// 类目
         /// </summary>
         [XmlArray("category_ids")]

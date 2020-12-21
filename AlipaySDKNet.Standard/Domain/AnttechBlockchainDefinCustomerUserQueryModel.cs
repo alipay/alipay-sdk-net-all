@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string RoleType { get; set; }
 
         /// <summary>
+        /// 操作员邮箱
+        /// </summary>
+        [XmlElement("user_email")]
+        public string UserEmail { get; set; }
+
+        /// <summary>
         /// user id
         /// </summary>
         [XmlElement("user_id")]

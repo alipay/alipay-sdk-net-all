@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string BuyerSceneId { get; set; }
 
         /// <summary>
+        /// 是否签约
+        /// </summary>
+        [XmlElement("signed")]
+        public bool Signed { get; set; }
+
+        /// <summary>
         /// 授信额度
         /// </summary>
         [XmlElement("total_amt")]

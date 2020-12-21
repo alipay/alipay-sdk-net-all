@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public long GoodsCount { get; set; }
 
         /// <summary>
-        /// 商品缩略图url
+        /// 商品缩略图url，支持格式：bmp、jpg、jpeg、png、gif
         /// </summary>
         [XmlElement("goods_img")]
         public string GoodsImg { get; set; }

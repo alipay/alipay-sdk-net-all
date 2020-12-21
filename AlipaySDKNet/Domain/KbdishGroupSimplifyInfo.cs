@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class KbdishGroupSimplifyInfo : AopObject
     {
         /// <summary>
+        /// 套餐组上的活动信息，属isv外部活动信息
+        /// </summary>
+        [XmlElement("activity_info")]
+        public string ActivityInfo { get; set; }
+
+        /// <summary>
         /// 套餐组明细
         /// </summary>
         [XmlArray("group_detail_list")]
