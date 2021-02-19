@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 商户端删卡业务流水号（商户确保流水号唯一性）
+        /// 商户端删卡业务流水号，商户自定义且需确保流水号唯一性。
         /// </summary>
         [XmlElement("out_serial_no")]
         public string OutSerialNo { get; set; }

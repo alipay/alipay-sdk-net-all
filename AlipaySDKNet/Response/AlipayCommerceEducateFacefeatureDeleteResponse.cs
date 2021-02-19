@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceEducateFacefeatureDeleteResponse : AopResponse
     {
         /// <summary>
-        /// 出库失败的faceId集合
+        /// 出库失败的faceId集合。
         /// </summary>
         [XmlArray("face_ids")]
         [XmlArrayItem("string")]

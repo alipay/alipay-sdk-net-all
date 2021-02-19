@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMerchantOrderSyncModel : AopObject
     {
         /// <summary>
-        /// 订单金额，单位为元
+        /// 订单金额，单位为元。SERVICE_ORDER且不涉及金额可不传入该字段，其他场景必传
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -35,7 +35,14 @@ namespace Aop.Api.Domain
         public string DiscountAmount { get; set; }
 
         /// <summary>
-        /// 扩展信息，请参见产品文档
+        /// 订单优惠信息
+        /// </summary>
+        [XmlArray("discount_info_list")]
+        [XmlArrayItem("discount_info_data")]
+        public List<DiscountInfoData> DiscountInfoList { get; set; }
+
+        /// <summary>
+        /// 扩展信息，请参见 <a href="https://opendocs.alipay.com/mini/introduce/ordercenter">小程序订单中心</a>；<a href="https://opendocs.alipay.com/mini/00nnt3">扫码点餐</a>产品文档。
         /// </summary>
         [XmlArray("ext_info")]
         [XmlArrayItem("order_ext_info")]
@@ -47,6 +54,13 @@ namespace Aop.Api.Domain
         [XmlArray("item_order_list")]
         [XmlArrayItem("item_order_info")]
         public List<ItemOrderInfo> ItemOrderList { get; set; }
+
+        /// <summary>
+        /// 行程信息
+        /// </summary>
+        [XmlArray("journey_order_list")]
+        [XmlArrayItem("order_journey_info")]
+        public List<OrderJourneyInfo> JourneyOrderList { get; set; }
 
         /// <summary>
         /// 物流信息  列表最多支持物流信息个数，请参考产品文档  注：若该值不为空，且物流信息同步至我的快递，则在查询订单时可返回具体物流信息
@@ -66,6 +80,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_create_time")]
         public string OrderCreateTime { get; set; }
+
+        /// <summary>
+        /// 订单修改时间，一般不需要传入。用于订单状态或数据变化较快的顺序控制，order_modified_time较晚的同步会被最终存储，order_modified_time相同的两次同步可能会被幂等处理，SERVICE_ORDER按照行业标准化接入场景必须传入该字段控制乱序
+        /// </summary>
+        [XmlElement("order_modified_time")]
+        public string OrderModifiedTime { get; set; }
 
         /// <summary>
         /// 订单支付时间 当pay_channel为非ALIPAY时，且订单状态已流转到“支付”或支付后时，需要将支付时间传入
@@ -92,7 +112,7 @@ namespace Aop.Api.Domain
         public string PartnerId { get; set; }
 
         /// <summary>
-        /// 支付金额 需要实际支付的金额
+        /// 支付金额，需要实际支付的金额。SERVICE_ORDER且不涉及金额可不传入该字段，其他场景必传
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }
@@ -122,10 +142,16 @@ namespace Aop.Api.Domain
         public string SendMsg { get; set; }
 
         /// <summary>
-        /// 门店信息
+        /// 门店信息，扫码点餐获取返佣时必填。
         /// </summary>
         [XmlElement("shop_info")]
         public OrderShopInfo ShopInfo { get; set; }
+
+        /// <summary>
+        /// 同步内容 -JOURNEY_ONLY 仅行程信息 -ALL 全部(默认)
+        /// </summary>
+        [XmlElement("sync_content")]
+        public string SyncContent { get; set; }
 
         /// <summary>
         /// 凭证信息

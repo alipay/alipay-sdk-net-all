@@ -53,14 +53,14 @@ namespace Aop.Api.Domain
         public ExtendParams ExtendParams { get; set; }
 
         /// <summary>
-        /// 订单包含的商品列表信息，json格式，其它说明详见商品明细说明
+        /// 订单包含的商品列表信息，json格式。
         /// </summary>
         [XmlArray("goods_detail")]
         [XmlArrayItem("goods_detail")]
         public List<GoodsDetail> GoodsDetail { get; set; }
 
         /// <summary>
-        /// 商品主类型 :0-虚拟类商品,1-实物类商品  注：虚拟类商品不支持使用花呗渠道
+        /// 商品主类型 ，枚举支持： 0：虚拟类商品； 1：实物类商品。 注：虚拟类商品不支持使用花呗渠道
         /// </summary>
         [XmlElement("goods_type")]
         public string GoodsType { get; set; }
@@ -84,7 +84,7 @@ namespace Aop.Api.Domain
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
-        /// 商户订单号,64个字符以内、可包含字母、数字、下划线；需保证在商户端不重复
+        /// 商户订单号。64 个字符以内的大小，仅支持字母、数字、下划线。需保证该参数在商户端不重复。
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
@@ -126,13 +126,13 @@ namespace Aop.Api.Domain
         public string RequestFromUrl { get; set; }
 
         /// <summary>
-        /// 描述分账信息，json格式，详见分账参数说明
+        /// 描述分账信息，json格式。
         /// </summary>
         [XmlElement("royalty_info")]
         public RoyaltyInfo RoyaltyInfo { get; set; }
 
         /// <summary>
-        /// 描述结算信息，json格式，详见结算参数说明
+        /// 描述结算信息，json格式。
         /// </summary>
         [XmlElement("settle_info")]
         public SettleInfo SettleInfo { get; set; }
@@ -168,7 +168,7 @@ namespace Aop.Api.Domain
         public string TimeoutExpress { get; set; }
 
         /// <summary>
-        /// 订单总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]。
+        /// 订单总金额，单位为人民币（元），取值范围为 0.01~100000000.00，精确到小数点后两位。
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

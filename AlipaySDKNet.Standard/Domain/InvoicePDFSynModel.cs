@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string FileBase { get; set; }
 
         /// <summary>
-        /// PDF类型文件填写PDF，  JPG类型文件填写JPG(JPG文件请先询问对接人当前是否支持)
+        /// PDF类型文件填写PDF， OFD类型文件填写ofd， JPG类型文件填写JPG(JPG文件请先询问对接人当前是否支持)
         /// </summary>
         [XmlElement("file_download_type")]
         public string FileDownloadType { get; set; }

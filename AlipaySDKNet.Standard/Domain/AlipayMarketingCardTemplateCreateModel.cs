@@ -43,7 +43,7 @@ namespace Aop.Api.Domain
         public string CardSpecTag { get; set; }
 
         /// <summary>
-        /// 卡类型为固定枚举类型，可选类型如下：  OUT_MEMBER_CARD：外部权益卡
+        /// 卡类型。可选类型如下： OUT_MEMBER_CARD：外部权益卡
         /// </summary>
         [XmlElement("card_type")]
         public string CardType { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public List<PubChannelDTO> PubChannels { get; set; }
 
         /// <summary>
-        /// 请求ID，由开发者生成并保证唯一性
+        /// 请求ID，商家自定义且并保证唯一性。
         /// </summary>
         [XmlElement("request_id")]
         public string RequestId { get; set; }

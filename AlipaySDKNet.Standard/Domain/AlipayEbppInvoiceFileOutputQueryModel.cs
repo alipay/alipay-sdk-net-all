@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string InvoiceNo { get; set; }
 
         /// <summary>
-        /// 发票pdf文件下载应用场景  固定值－INVOICE_EXPENSE
+        /// 发票pdf文件下载应用场景。固定为 INVOICE_EXPENSE  表示发票报销。
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public bool SkipExpenseProgressSync { get; set; }
 
         /// <summary>
-        /// 支付宝用户id
+        /// 发票归属用户 id，用户在支付宝的唯一标识，以 2088 开头的 16 位纯数字组成。
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

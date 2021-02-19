@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class MybankFinanceYulibaoAccountQueryModel : AopObject
     {
         /// <summary>
-        /// 基金代码，必填。目前默认填001529，代表余利宝
+        /// 基金代码。余利宝场景固定为 001529。
         /// </summary>
         [XmlElement("fund_code")]
         public string FundCode { get; set; }

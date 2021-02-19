@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -24,8 +25,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 门店列表数据。
         /// </summary>
-        [XmlElement("records")]
-        public MerchantShopDTO Records { get; set; }
+        [XmlArray("records")]
+        [XmlArrayItem("merchant_shop_d_t_o")]
+        public List<MerchantShopDTO> Records { get; set; }
 
         /// <summary>
         /// 总数量

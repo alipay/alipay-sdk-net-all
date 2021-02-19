@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCardTemplateQueryModel : AopObject
     {
         /// <summary>
-        /// 支付宝卡模板ID（模板创建接口返回的支付宝端模板ID）
+        /// 会员卡模板id。调用alipay.marketing.card.template.create（会员卡模板创建接口）创建模板后同步返回。
         /// </summary>
         [XmlElement("template_id")]
         public string TemplateId { get; set; }

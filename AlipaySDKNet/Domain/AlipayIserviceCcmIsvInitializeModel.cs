@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayIserviceCcmIsvInitializeModel : AopObject
     {
         /// <summary>
-        /// 用于接入ccm iframe接口安全认证的isv公钥，采用base64编码，秘钥对生成算法:RSA2048
+        /// 用于接入CCM iframe接口安全认证的 ISV 公钥，采用 base64 编码，秘钥对生成算法为 RSA2048。
         /// </summary>
         [XmlElement("isv_pub_key")]
         public string IsvPubKey { get; set; }

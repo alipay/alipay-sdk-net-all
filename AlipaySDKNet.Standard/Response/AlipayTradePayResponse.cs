@@ -156,6 +156,12 @@ namespace Aop.Api.Response
         public string ReceiptAmount { get; set; }
 
         /// <summary>
+        /// 收款资金类型，当交易收款资金为数字人民币时返回值为“DC”，否则不返回该字段。
+        /// </summary>
+        [XmlElement("receipt_currency_type")]
+        public string ReceiptCurrencyType { get; set; }
+
+        /// <summary>
         /// 结算币种订单金额
         /// </summary>
         [XmlElement("settle_amount")]

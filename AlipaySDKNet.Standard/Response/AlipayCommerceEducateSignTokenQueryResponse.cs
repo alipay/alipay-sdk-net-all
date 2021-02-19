@@ -45,7 +45,7 @@ namespace Aop.Api.Response
         public string SchoolCode { get; set; }
 
         /// <summary>
-        /// 学校外标
+        /// 学校外标（即学校的统一信用编码）
         /// </summary>
         [XmlElement("school_stdcode")]
         public string SchoolStdcode { get; set; }

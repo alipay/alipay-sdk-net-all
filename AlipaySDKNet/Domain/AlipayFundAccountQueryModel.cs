@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string AccountType { get; set; }
 
         /// <summary>
-        /// 蚂蚁统一会员ID
+        /// 支付宝会员 id。
         /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }

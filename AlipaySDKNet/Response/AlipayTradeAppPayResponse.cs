@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
-        /// 商户网站唯一订单号
+        /// 商户订单号，由商家自定义。
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }

@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ParentPhone { get; set; }
 
         /// <summary>
-        /// 学校外标
+        /// 学校外标（即学校的统一信用编码）
         /// </summary>
         [XmlElement("school_std_code")]
         public string SchoolStdCode { get; set; }

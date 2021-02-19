@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ProductOrderQueryItem : AopObject
     {
         /// <summary>
+        /// 是否需要查活动信息
+        /// </summary>
+        [XmlElement("need_activity")]
+        public bool NeedActivity { get; set; }
+
+        /// <summary>
         /// 订购渠道
         /// </summary>
         [XmlElement("ordered_channel")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BuildPackageUrl { get; set; }
 
         /// <summary>
+        /// 构建结果地址
+        /// </summary>
+        [XmlElement("new_build_package_url")]
+        public string NewBuildPackageUrl { get; set; }
+
+        /// <summary>
         /// 分包路径
         /// </summary>
         [XmlElement("path")]

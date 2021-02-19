@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string ImgUrl { get; set; }
 
         /// <summary>
+        /// 跳转类型，网页:HTTP、小程序:APP
+        /// </summary>
+        [XmlElement("link_type")]
+        public string LinkType { get; set; }
+
+        /// <summary>
         /// 营销位跳转地址，点击营销位头图跳到的链接url。
         /// </summary>
         [XmlElement("link_url")]

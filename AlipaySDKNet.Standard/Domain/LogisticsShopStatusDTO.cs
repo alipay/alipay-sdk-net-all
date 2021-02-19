@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string LogisticsName { get; set; }
 
         /// <summary>
-        /// 门店状态，AUDITING:审核中，CREATE_FAILED:创建失败，AUDIT_REJECT:审核驳回，IN_FORCE:已生效，NOT_SUPPORT:不支持配送
+        /// 门店状态，AUDITING:审核中，AUDIT_REJECT:审核驳回，VALID:已生效，UPDATING:更新中
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

@@ -10,25 +10,25 @@ namespace Aop.Api.Domain
     public class PromoInfo : AopObject
     {
         /// <summary>
-        /// 最高优惠金额
+        /// 最高优惠金额，仅针对折扣券
         /// </summary>
         [XmlElement("ceiling_amount")]
         public string CeilingAmount { get; set; }
 
         /// <summary>
-        /// 代金券，券金额
+        /// 券金额，仅针对代金券
         /// </summary>
         [XmlElement("reduction_amount")]
         public string ReductionAmount { get; set; }
 
         /// <summary>
-        /// 优惠额度，如3折券，reduction_ratio=0.7
+        /// 优惠额度，如3折券，返回0.7，仅针对折扣券
         /// </summary>
         [XmlElement("reduction_ratio")]
         public string ReductionRatio { get; set; }
 
         /// <summary>
-        /// 特价券减至金额
+        /// 减至金额，仅针对减至券
         /// </summary>
         [XmlElement("specified_amount")]
         public string SpecifiedAmount { get; set; }

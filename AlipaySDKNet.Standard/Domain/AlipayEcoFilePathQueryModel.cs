@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ContentType { get; set; }
 
         /// <summary>
-        /// 文件名称（必须带上文件扩展名，不然会导致后续发起流程校验过不去 示例：合同.pdf ）
+        /// 文件名称。 注意：必须带上文件扩展名，不然会导致后续发起流程校验不通过。示例：合同.pdf。
         /// </summary>
         [XmlElement("file_name")]
         public string FileName { get; set; }

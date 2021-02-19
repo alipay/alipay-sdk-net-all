@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
+
+        /// <summary>
+        /// 扩展信息
+        /// </summary>
+        [XmlArray("ext_info")]
+        [XmlArrayItem("order_ext_info")]
+        public List<OrderExtInfo> ExtInfo { get; set; }
 
         /// <summary>
         /// 手机号

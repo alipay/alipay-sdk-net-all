@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public string BundleId { get; set; }
 
         /// <summary>
+        /// 多个端集合
+        /// </summary>
+        [XmlArray("bundle_ids")]
+        [XmlArrayItem("string")]
+        public List<string> BundleIds { get; set; }
+
+        /// <summary>
         /// 排序字段
         /// </summary>
         [XmlElement("first_sort_col")]

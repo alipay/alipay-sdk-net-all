@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ActiveDatetime { get; set; }
 
         /// <summary>
+        /// 活动ID
+        /// </summary>
+        [XmlElement("activity_id")]
+        public string ActivityId { get; set; }
+
+        /// <summary>
         /// 合约订购业务场景
         /// </summary>
         [XmlElement("biz_from")]

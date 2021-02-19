@@ -102,6 +102,12 @@ namespace Aop.Api.Response
         public List<TradeFundBill> FundBillList { get; set; }
 
         /// <summary>
+        /// 若用户使用花呗分期支付，且商家开通返回此通知参数，则会返回花呗分期信息。json格式其它说明详见花呗分期信息说明。 注意：商家需与支付宝约定后才返回本参数。 
+        /// </summary>
+        [XmlElement("hb_fq_pay_info")]
+        public HbFqPayInfo HbFqPayInfo { get; set; }
+
+        /// <summary>
         /// 行业特殊信息（例如在医保卡支付业务中，向用户返回医疗信息）。
         /// </summary>
         [XmlElement("industry_sepc_detail")]
@@ -154,6 +160,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("receipt_amount")]
         public string ReceiptAmount { get; set; }
+
+        /// <summary>
+        /// 收款资金类型，当交易收款资金为数字人民币时返回值为“DC”，否则不返回该字段。
+        /// </summary>
+        [XmlElement("receipt_currency_type")]
+        public string ReceiptCurrencyType { get; set; }
 
         /// <summary>
         /// 本次交易打款给卖家的时间

@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ProductSeries { get; set; }
 
         /// <summary>
+        /// 规则id
+        /// </summary>
+        [XmlElement("rule_id")]
+        public long RuleId { get; set; }
+
+        /// <summary>
         /// 厂商id
         /// </summary>
         [XmlElement("supplier_id")]

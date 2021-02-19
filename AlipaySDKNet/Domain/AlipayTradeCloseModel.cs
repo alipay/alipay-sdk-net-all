@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayTradeCloseModel : AopObject
     {
         /// <summary>
-        /// 卖家端自定义的的操作员 ID
+        /// 商家操作员编号 id，由商家自定义。
         /// </summary>
         [XmlElement("operator_id")]
         public string OperatorId { get; set; }

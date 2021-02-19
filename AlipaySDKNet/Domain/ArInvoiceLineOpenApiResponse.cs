@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public MultiCurrencyMoneyOpenApi Amt { get; set; }
 
         /// <summary>
+        /// 免税标识
+        /// </summary>
+        [XmlElement("duty_free_flag")]
+        public string DutyFreeFlag { get; set; }
+
+        /// <summary>
+        /// 含税单价
+        /// </summary>
+        [XmlElement("incl_tax_unit_amt")]
+        public long InclTaxUnitAmt { get; set; }
+
+        /// <summary>
         /// 关联的发票ID
         /// </summary>
         [XmlElement("invoice_id")]

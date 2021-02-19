@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BundleId { get; set; }
 
         /// <summary>
+        /// 多个规则逗号分隔
+        /// </summary>
+        [XmlElement("gray_rule")]
+        public string GrayRule { get; set; }
+
+        /// <summary>
         /// 租户code，alipay or taobao
         /// </summary>
         [XmlElement("inst_code")]

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandShopModifyModel : AopObject
     {
         /// <summary>
-        /// 门店结算卡信息。本业务当前只允许传入一张结算卡
+        /// 门店结算卡信息。本业务当前只允许传入一张结算卡。 说明：本参数仅直付通业务使用，其余业务无需关注。
         /// </summary>
         [XmlArray("biz_cards")]
         [XmlArrayItem("settle_card_info")]
@@ -43,7 +43,7 @@ namespace Aop.Api.Domain
         public string CertImage { get; set; }
 
         /// <summary>
-        /// 营业执照名称，填写值为营业执照或统一社会信用代码证上的名称。若无需更新本信息项，可以不填写
+        /// 营业执照名称，填写值为营业执照或统一社会信用代码证上的名称。若无需更新本信息项，可以不填写 注意：若传入 cert_no 则本参数必填。
         /// </summary>
         [XmlElement("cert_name")]
         public string CertName { get; set; }
@@ -55,7 +55,7 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类型，取值范围：201：营业执照；2011:多证合一(统一社会信用代码)。若无需更新本信息项，可以不填写
+        /// 证件类型，取值范围：201：营业执照；2011:多证合一(统一社会信用代码)。若无需更新本信息项，可以不填写。 注意：若传入 cert_no 则本参数必填。
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
@@ -142,7 +142,7 @@ namespace Aop.Api.Domain
         public string SettleAlipayLogonId { get; set; }
 
         /// <summary>
-        /// 店铺类目，取值参见文件https://mif-pub.alipayobjects.com/ShopCategory.xlsx 中的三级门店类目。若无需更新本信息项，可以不填写
+        /// 新版门店类目标准二级类目code。类目标准及与原shop_category映射关系参见表格 https://ur.alipay.com/2qv1f9。若无需更新本信息项，可以不填写
         /// </summary>
         [XmlElement("shop_category")]
         public string ShopCategory { get; set; }

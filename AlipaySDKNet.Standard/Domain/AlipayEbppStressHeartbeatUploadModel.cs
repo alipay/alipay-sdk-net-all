@@ -46,5 +46,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("task_id")]
         public string TaskId { get; set; }
+
+        /// <summary>
+        /// 请求页面的总时间，单位是 ms
+        /// </summary>
+        [XmlElement("total_time")]
+        public string TotalTime { get; set; }
     }
 }

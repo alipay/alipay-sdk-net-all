@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string BuyerTelephone { get; set; }
 
         /// <summary>
+        /// 是否可以关联账单
+        /// </summary>
+        [XmlElement("can_link")]
+        public bool CanLink { get; set; }
+
+        /// <summary>
         /// 创建人
         /// </summary>
         [XmlElement("creator")]
@@ -168,6 +174,12 @@ namespace Aop.Api.Domain
         public string LastModer { get; set; }
 
         /// <summary>
+        /// 已关联账单金额
+        /// </summary>
+        [XmlElement("linked_amt")]
+        public MultiCurrencyMoneyOpenApi LinkedAmt { get; set; }
+
+        /// <summary>
         /// 发票开出后的邮寄状态，具体状态说明  01：待邮寄，02：已邮寄，03：退回中，04：已退回
         /// </summary>
         [XmlElement("mail_status")]
@@ -178,6 +190,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("memo")]
         public string Memo { get; set; }
+
+        /// <summary>
+        /// 是否是无账单发票 Y：是  N：不是
+        /// </summary>
+        [XmlElement("no_bill_invoice_flag")]
+        public string NoBillInvoiceFlag { get; set; }
 
         /// <summary>
         /// 是否为点在发票  true：是， false：不是

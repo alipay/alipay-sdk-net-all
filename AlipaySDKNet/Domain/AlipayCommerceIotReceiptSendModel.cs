@@ -28,9 +28,15 @@ namespace Aop.Api.Domain
         public string Biztid { get; set; }
 
         /// <summary>
-        /// 商户pid
+        /// 直联商户填写pid，  pid和smid必填其一
         /// </summary>
         [XmlElement("pid")]
         public string Pid { get; set; }
+
+        /// <summary>
+        /// 间联商户填写smid，pid和smid必填其一
+        /// </summary>
+        [XmlElement("smid")]
+        public string Smid { get; set; }
     }
 }

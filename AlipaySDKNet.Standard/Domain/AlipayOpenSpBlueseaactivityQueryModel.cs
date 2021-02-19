@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenSpBlueseaactivityQueryModel : AopObject
     {
         /// <summary>
-        /// 申请单Id
+        /// 申请单 id。通过 <a href="https://opendocs.alipay.com/apis/01ebig">alipay.open.sp.blueseaactivity.create</a>接口获取
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }

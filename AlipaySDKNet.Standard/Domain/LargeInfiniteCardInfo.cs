@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class LargeInfiniteCardInfo : AopObject
     {
         /// <summary>
+        /// 账户余额,单位:元,精确到小数点后两位
+        /// </summary>
+        [XmlElement("account_balance")]
+        public string AccountBalance { get; set; }
+
+        /// <summary>
         /// 无限付产品转账的转入卡账户名称，支付宝分配。
         /// </summary>
         [XmlElement("bank_account_name")]

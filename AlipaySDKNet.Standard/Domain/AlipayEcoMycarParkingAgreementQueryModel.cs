@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CarNumber { get; set; }
 
         /// <summary>
+        /// 车场录入接口返回的parking_id字段
+        /// </summary>
+        [XmlElement("parking_id")]
+        public string ParkingId { get; set; }
+
+        /// <summary>
         /// 接口版本号，不填则默认为v2.0，建议使用最新版v2.1
         /// </summary>
         [XmlElement("ver")]

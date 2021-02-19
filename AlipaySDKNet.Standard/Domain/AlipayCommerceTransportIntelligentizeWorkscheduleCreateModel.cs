@@ -66,6 +66,12 @@ namespace Aop.Api.Domain
         public string TimetableDirection { get; set; }
 
         /// <summary>
+        /// 单个车次结束后的驻站时长（单位：分钟），不传则由算法自行决策驻站时长
+        /// </summary>
+        [XmlElement("trip_break_time")]
+        public long TripBreakTime { get; set; }
+
+        /// <summary>
         /// 上行首站的临时停车容量，大于等于0整数
         /// </summary>
         [XmlElement("up_first_station_capacity")]

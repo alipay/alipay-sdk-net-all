@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -19,5 +20,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("grade")]
         public string Grade { get; set; }
+
+        /// <summary>
+        /// 会员的联名信息，简单枚举值
+        /// </summary>
+        [XmlArray("joint_info")]
+        [XmlArrayItem("string")]
+        public List<string> JointInfo { get; set; }
     }
 }

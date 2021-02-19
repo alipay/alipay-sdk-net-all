@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string PsCode { get; set; }
 
         /// <summary>
+        /// 签约活动
+        /// </summary>
+        [XmlElement("sign_activity_dto")]
+        public SignActivityDTO SignActivityDto { get; set; }
+
+        /// <summary>
         /// 合约状态
         /// </summary>
         [XmlElement("status")]

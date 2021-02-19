@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class ZhimaCreditPeZmgoTemplateCreateModel : AopObject
     {
         /// <summary>
+        /// 使用权益跳转链接
+        /// </summary>
+        [XmlElement("benefit_url")]
+        public string BenefitUrl { get; set; }
+
+        /// <summary>
         /// 业务号，控制幂等
         /// </summary>
         [XmlElement("biz_no")]

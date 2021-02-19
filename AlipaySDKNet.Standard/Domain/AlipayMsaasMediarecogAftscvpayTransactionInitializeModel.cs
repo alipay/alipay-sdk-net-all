@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string TransactionId { get; set; }
 
         /// <summary>
+        /// 货柜类型，1:友宝货柜, 2:产品化货柜
+        /// </summary>
+        [XmlElement("type")]
+        public long Type { get; set; }
+
+        /// <summary>
         /// 用户uid
         /// </summary>
         [XmlElement("uid")]

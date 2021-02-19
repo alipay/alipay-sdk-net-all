@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string CardAliasNo { get; set; }
 
         /// <summary>
-        /// 城市的国家编码（国家统计局出版的行政区划代码 http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/）
+        /// 城市的国家编码。参见 <a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/">国家统计局出版的行政区划代码</a>。
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string CorporateBranchPid { get; set; }
 
         /// <summary>
-        /// 区县的国家编码（国家统计局出版的行政区划代码 http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/）
+        /// 区县的国家编码。参见 <a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/">国家统计局出版的行政区划代码</a>。
         /// </summary>
         [XmlElement("district_code")]
         public string DistrictCode { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string IsvName { get; set; }
 
         /// <summary>
-        /// 注意：本参数从1.3版本开始已经废弃，不再需要传递。    由支付宝提供的给已经签约的isv的编码，业务上一般直接采用isv的支付宝PID。
+        /// 注意：本参数于2017-08-03开始已经废弃，不再需要传递。 由支付宝提供的给已经签约的isv的编码，业务上一般直接采用isv的支付宝PID。
         /// </summary>
         [XmlElement("isv_no")]
         public string IsvNo { get; set; }
@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public string IsvPid { get; set; }
 
         /// <summary>
-        /// 省份的国家编码（国家统计局出版的行政区划代码 http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/）
+        /// 省份的国家编码，参见 <a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/">国家统计局出版的行政区划代码</a>。
         /// </summary>
         [XmlElement("province_code")]
         public string ProvinceCode { get; set; }
@@ -148,7 +148,7 @@ namespace Aop.Api.Domain
         public string SchoolStdcode { get; set; }
 
         /// <summary>
-        /// 学校的类型：  1：代表托儿所； 2：代表幼儿园；3：代表小学；4：代表初中；5：代表高中。  如果学校兼有多种属性，可以连写，比如：  45：代表兼有初中部高中部；34：代表兼有小学部初中部
+        /// 学校的类型。枚举值如下： *1：代表托儿所。 *2：代表幼儿园。 *3：代表小学。 *4：代表初中。 *5：代表高中。 注意：如果学校兼有多种属性，可以连写，比如：45：代表兼有初中部高中部；34：代表兼有小学部初中部。
         /// </summary>
         [XmlElement("school_type")]
         public string SchoolType { get; set; }

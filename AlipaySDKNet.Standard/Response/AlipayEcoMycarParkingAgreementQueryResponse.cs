@@ -22,6 +22,18 @@ namespace Aop.Api.Response
         public string AgreementStatus { get; set; }
 
         /// <summary>
+        /// 当前车辆在支付宝侧的信息，是否可以使用无感支付，可选返回项为： NORMAL：正常缴费用户 NON-SENSE-PAY：可无感支付用户
+        /// </summary>
+        [XmlElement("car_status")]
+        public string CarStatus { get; set; }
+
+        /// <summary>
+        /// 当前时间戳(查询签约状态和是否支持无感支付仅代表当前时间点查询结果，不作为最后代扣结果，应在发起代扣前再次查询)
+        /// </summary>
+        [XmlElement("current_time")]
+        public string CurrentTime { get; set; }
+
+        /// <summary>
         /// 有效时间，格式"yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [XmlElement("expire_time")]

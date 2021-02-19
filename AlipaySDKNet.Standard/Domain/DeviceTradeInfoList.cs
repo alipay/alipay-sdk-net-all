@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public long DeviceFaceTradeDau { get; set; }
 
         /// <summary>
+        /// 当日刷脸付用户数-同比差值
+        /// </summary>
+        [XmlElement("device_face_trade_dau_d_value")]
+        public long DeviceFaceTradeDauDValue { get; set; }
+
+        /// <summary>
         /// 设备名称
         /// </summary>
         [XmlElement("device_name")]
@@ -52,10 +58,46 @@ namespace Aop.Api.Domain
         public long FaceTradeCnt { get; set; }
 
         /// <summary>
+        /// 当日刷脸付笔数占比
+        /// </summary>
+        [XmlElement("face_trd_cnt_rate")]
+        public string FaceTrdCntRate { get; set; }
+
+        /// <summary>
+        /// 当日刷脸付用户数占比
+        /// </summary>
+        [XmlElement("face_trd_user_cnt_rate")]
+        public string FaceTrdUserCntRate { get; set; }
+
+        /// <summary>
+        /// 当日刷脸付用户数占比-同比差值
+        /// </summary>
+        [XmlElement("face_trd_user_cnt_rate_d_value")]
+        public string FaceTrdUserCntRateDValue { get; set; }
+
+        /// <summary>
         /// 激活时间
         /// </summary>
         [XmlElement("gmt_active")]
         public string GmtActive { get; set; }
+
+        /// <summary>
+        /// 当日支付宝客单价(元)
+        /// </summary>
+        [XmlElement("iot_trd_up")]
+        public string IotTrdUp { get; set; }
+
+        /// <summary>
+        /// 当日支付宝交易用户数
+        /// </summary>
+        [XmlElement("iot_trd_user_cnt")]
+        public long IotTrdUserCnt { get; set; }
+
+        /// <summary>
+        /// 当日支付宝交易用户数-同比差值
+        /// </summary>
+        [XmlElement("iot_trd_user_cnt_d_value")]
+        public long IotTrdUserCntDValue { get; set; }
 
         /// <summary>
         /// 统计时间

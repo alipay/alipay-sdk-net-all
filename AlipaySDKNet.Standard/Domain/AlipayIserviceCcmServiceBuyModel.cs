@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayIserviceCcmServiceBuyModel : AopObject
     {
         /// <summary>
-        /// 服务代码
+        /// 服务代码。通过<a href="https://opendocs.alipay.com/apis/01dmgh">alipay.iservice.ccm.service.initialize</a>(isv服务初始化接口) 获取。
         /// </summary>
         [XmlElement("service_code")]
         public string ServiceCode { get; set; }

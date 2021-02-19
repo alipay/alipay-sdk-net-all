@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenSearchServiceorderModifyModel : AopObject
     {
         /// <summary>
-        /// 创建搜索运营申请单的入参
+        /// 创建搜索运营申请单的入参。base_items、brand_items、service_items 分别为基础信息、品牌直达、服务直达的模块数据信息，需根据提报类型选择进行相应的设置，不能同时填写。
         /// </summary>
         [XmlElement("biz_data")]
         public SearchOrderCreateRequest BizData { get; set; }

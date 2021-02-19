@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AntMerchantExpandItemOpenBatchqueryResponse : AopResponse
     {
         /// <summary>
-        /// 商品列表
+        /// 商品列表。
         /// </summary>
         [XmlArray("item_list")]
         [XmlArrayItem("cm_item_info")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ScenicFaceInfo : AopObject
     {
         /// <summary>
-        /// 用户场景下唯一标示码
+        /// 用户场景下唯一标示码。（注：请确保传入face_id的自然人维度全局唯一）
         /// </summary>
         [XmlElement("face_id")]
         public string FaceId { get; set; }

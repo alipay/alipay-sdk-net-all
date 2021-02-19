@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenPublicShortlinkCreateModel : AopObject
     {
         /// <summary>
-        /// 对于场景ID的描述，商户自己定义
+        /// 对于场景ID的描述，由商户自定义。
         /// </summary>
         [XmlElement("remark")]
         public string Remark { get; set; }
 
         /// <summary>
-        /// 短链接对应的场景ID，该ID由商户自己定义
+        /// 短链接对应的场景ID。由商户自定义，仅支持数字、字母及下划线。
         /// </summary>
         [XmlElement("scene_id")]
         public string SceneId { get; set; }

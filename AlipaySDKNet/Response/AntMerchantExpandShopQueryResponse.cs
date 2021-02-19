@@ -110,6 +110,12 @@ namespace Aop.Api.Response
         public string Memo { get; set; }
 
         /// <summary>
+        /// 新版门店类目标准二级类目code。类目标准及与原shop_category映射关系参见文档https://ur.alipay.com/3oJ26c0veETkLXgTbtQnYY
+        /// </summary>
+        [XmlElement("new_shop_category")]
+        public string NewShopCategory { get; set; }
+
+        /// <summary>
         /// 门头照，返回值为一个有访问时限的链接
         /// </summary>
         [XmlArray("out_door_images")]

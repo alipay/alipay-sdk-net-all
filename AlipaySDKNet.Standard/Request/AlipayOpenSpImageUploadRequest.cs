@@ -11,7 +11,7 @@ namespace Aop.Api.Request
     public class AlipayOpenSpImageUploadRequest : IAopUploadRequest<AlipayOpenSpImageUploadResponse>
     {
         /// <summary>
-        /// 图片二进制字节流，最小50K，最大为5M，支持png/bmp/gif/jpg/jpeg格式
+        /// 图片二进制字节流，最小50K，最大为5M，支持png/bmp/gif/jpg/jpeg格式。不限制图片长宽。可根据示例代码使用支付宝提供的工具类传入图片本地路径进行转换。
         /// </summary>
         public FileItem ImageContent { get; set; }
 

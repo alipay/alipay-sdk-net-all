@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandItemOpenBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 商品ID列表
+        /// 商品ID列表，单次查询上限为 20。
         /// </summary>
         [XmlArray("item_id_list")]
         [XmlArrayItem("string")]

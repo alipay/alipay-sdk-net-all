@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenPublicLifeLabelCreateModel : AopObject
     {
         /// <summary>
-        /// 标签值类型，目前只支持string（字符串类型），不传默认为"string"
+        /// 标签值类型，不填默认为 string 类型。 注意：目前只支持 string（字符串类型）。
         /// </summary>
         [XmlElement("data_type")]
         public string DataType { get; set; }
 
         /// <summary>
-        /// 自定义标签名
+        /// 自定义标签名。 注意：每个生活号最多创建 100 个自定义标签。
         /// </summary>
         [XmlElement("label_name")]
         public string LabelName { get; set; }

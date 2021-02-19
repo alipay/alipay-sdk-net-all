@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenPublicMatchuserLabelCreateModel : AopObject
     {
         /// <summary>
-        /// 标签id，调用创建标签接口会返回label_id
+        /// 标签 id，只支持生活号自定义标签。通过 <a href="https://opendocs.alipay.com/apis/api_6/alipay.open.public.life.label.create">alipay.open.public.life.label.create</a>(创建标签接口)创建自定义标签后获取。
         /// </summary>
         [XmlElement("label_id")]
         public string LabelId { get; set; }
 
         /// <summary>
-        /// 标签值，由开发者自主指定，标签值类型要满足创建标签接口中data_type参数的限定。
+        /// 标签值，由开发者自主指定，标签值类型要满足 <a href="https://opendocs.alipay.com/apis/api_6/alipay.open.public.life.label.create">alipay.open.public.life.label.create</a>(创建标签接口)中data_type参数的限定。
         /// </summary>
         [XmlElement("label_value")]
         public string LabelValue { get; set; }

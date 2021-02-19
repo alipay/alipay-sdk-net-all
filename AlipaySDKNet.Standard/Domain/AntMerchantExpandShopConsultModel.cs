@@ -142,7 +142,7 @@ namespace Aop.Api.Domain
         public string SettleAlipayLogonId { get; set; }
 
         /// <summary>
-        /// 店铺类目，取值参见文件xxxxxxx
+        /// 新版门店类目标准二级类目code。类目标准及与原shop_category映射关系参见文档https://ur.alipay.com/3oJ26c0veETkLXgTbtQnYY
         /// </summary>
         [XmlElement("shop_category")]
         public string ShopCategory { get; set; }

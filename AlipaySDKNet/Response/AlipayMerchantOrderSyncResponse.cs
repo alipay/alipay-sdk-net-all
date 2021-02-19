@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string OrderStatus { get; set; }
 
         /// <summary>
-        /// 同步订单记录id
+        /// 同步订单记录id （同步小程序订单成功必返回record_id）
         /// </summary>
         [XmlElement("record_id")]
         public string RecordId { get; set; }

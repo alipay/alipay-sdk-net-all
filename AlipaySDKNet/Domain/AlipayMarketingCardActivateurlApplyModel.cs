@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCardActivateurlApplyModel : AopObject
     {
         /// <summary>
-        /// 会员卡开卡表单提交后回调地址。  1.该地址不可带参数，如需回传参数，可设置out_string入参。
+        /// 会员卡开卡表单提交后回调地址。 说明： 1.该地址不可带参数，如需回传参数，可设置out_string入参。 2.小程序应用无需传入。
         /// </summary>
         [XmlElement("callback")]
         public string Callback { get; set; }

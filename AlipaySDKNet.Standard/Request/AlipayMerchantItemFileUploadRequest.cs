@@ -11,12 +11,12 @@ namespace Aop.Api.Request
     public class AlipayMerchantItemFileUploadRequest : IAopUploadRequest<AlipayMerchantItemFileUploadResponse>
     {
         /// <summary>
-        /// 文件二进制字节流，最大为4M
+        /// 文件二进制字节流，最大为4M。 小程序订单中心场景中，商品图片宽度必须大于 750 px，宽高比建议 4:3 - 1:1 之间，且该场景下仅支持 png、jpg 格式，不支持其他格式图片。
         /// </summary>
         public FileItem FileContent { get; set; }
 
         /// <summary>
-        /// 业务场景描述，比如订单信息同步场景对应SYNC_ORDER
+        /// 业务场景描述。 小程序订单中心场景固定为 SYNC_ORDER。
         /// </summary>
         public string Scene { get; set; }
 

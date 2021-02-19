@@ -119,6 +119,18 @@ namespace Aop.Api.Domain
         public string BuildVersion { get; set; }
 
         /// <summary>
+        /// 已经构建过的包大小，单位是字节，主要是给自行构建的场景使用
+        /// </summary>
+        [XmlElement("builded_package_size")]
+        public string BuildedPackageSize { get; set; }
+
+        /// <summary>
+        /// 已经构建的包地址，目前主要自行构建的场景使用
+        /// </summary>
+        [XmlElement("builded_package_url")]
+        public string BuildedPackageUrl { get; set; }
+
+        /// <summary>
         /// 一个端的标识，用于区分不同的客户端，每接入一个客户端，都需要向小程序应用中心申请bundleId入驻
         /// </summary>
         [XmlElement("bundle_id")]

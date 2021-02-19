@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniShopRelationBindModel : AopObject
     {
         /// <summary>
-        /// 门店信息，entity_id为平台侧门店id，property_list属性列表详见产品文档
+        /// 门店信息，entity_id为平台侧门店id，property_list属性列表详见 <a href="https://opendocs.alipay.com/mini/00nvud">绑定门店</a>。
         /// </summary>
         [XmlArray("entity_info")]
         [XmlArrayItem("mini_entity_bind_info")]

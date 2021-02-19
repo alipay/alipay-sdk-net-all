@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string OutRequestNo { get; set; }
 
         /// <summary>
-        /// 描述结算信息，json格式，详见结算参数说明
+        /// 描述结算信息，json格式。
         /// </summary>
         [XmlElement("settle_info")]
         public SettleInfo SettleInfo { get; set; }

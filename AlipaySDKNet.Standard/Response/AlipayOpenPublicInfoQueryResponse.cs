@@ -66,7 +66,7 @@ namespace Aop.Api.Response
         public string LogoUrl { get; set; }
 
         /// <summary>
-        /// 商家经营类目，详情可参考  <a href="https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.INIZWb&articleId=105364&docType=1">商家经营类目</a>
+        /// 商家经营类目，详情参见 <a href="https://opendocs.alipay.com/open/01n22g">商家经营类目</a>
         /// </summary>
         [XmlElement("mcc_code_desc")]
         public string MccCodeDesc { get; set; }

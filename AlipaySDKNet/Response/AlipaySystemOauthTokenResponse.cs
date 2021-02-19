@@ -45,7 +45,7 @@ namespace Aop.Api.Response
         public string RefreshToken { get; set; }
 
         /// <summary>
-        /// 支付宝用户的唯一userId
+        /// 支付宝用户的唯一标识。以2088开头的16位数字。
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

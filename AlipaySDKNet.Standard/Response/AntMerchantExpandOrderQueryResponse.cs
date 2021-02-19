@@ -35,7 +35,7 @@ namespace Aop.Api.Response
         public string MerchantName { get; set; }
 
         /// <summary>
-        /// 申请单状态。支持： 99:已完结； -1:失败； 031:已提交审核。
+        /// 申请单状态。枚举支持： 99：已完结； -1：失败； 031：已提交审核。
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

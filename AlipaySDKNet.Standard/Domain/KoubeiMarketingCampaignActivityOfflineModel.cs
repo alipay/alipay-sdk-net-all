@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class KoubeiMarketingCampaignActivityOfflineModel : AopObject
     {
         /// <summary>
-        /// 活动Id
+        /// 活动id。通过 <a href="https://opendocs.alipay.com/apis/api_5/koubei.marketing.campaign.activity.create">koubei.marketing.campaign.activity.create</a>(活动创建接口)获取。
         /// </summary>
         [XmlElement("camp_id")]
         public string CampId { get; set; }
@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public string OperatorId { get; set; }
 
         /// <summary>
-        /// 操作人类型,有以下值可填：MER（外部商户），MER_OPERATOR（外部商户操作员），PROVIDER（外部服务商），PROVIDER_STAFF（外部服务商员工），默认不需要填这个字段，默认为MER
+        /// 操作人类型，不填默认为 MER（外部商户）。支持枚举值如下： * MER：外部商户。 * MER_OPERATOR：外部商户操作员。 * PROVIDER：外部服务商。 * PROVIDER_STAFF：外部服务商员工。
         /// </summary>
         [XmlElement("operator_type")]
         public string OperatorType { get; set; }
 
         /// <summary>
-        /// 外部批次ID,每次需传入不同的值
+        /// 外部批次ID。需保证同一账户下唯一，控制幂等。
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

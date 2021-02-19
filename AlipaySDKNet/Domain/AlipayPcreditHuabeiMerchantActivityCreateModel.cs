@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
+        /// 出资的资金类型，默认值=MONEY，商户积分=MERCHANT_POINT
+        /// </summary>
+        [XmlElement("fund_type")]
+        public string FundType { get; set; }
+
+        /// <summary>
         /// 花呗分期数集合
         /// </summary>
         [XmlArray("install_num_list")]

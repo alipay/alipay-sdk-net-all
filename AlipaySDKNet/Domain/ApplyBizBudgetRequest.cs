@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BizBudgetApplyCode { get; set; }
 
         /// <summary>
+        /// 业务申请的时间，默认不填写为当前时间，填写后可以按照业务申请时间来进行预算申请有效期校验
+        /// </summary>
+        [XmlElement("biz_date")]
+        public string BizDate { get; set; }
+
+        /// <summary>
         /// 业务名称
         /// </summary>
         [XmlElement("biz_name")]

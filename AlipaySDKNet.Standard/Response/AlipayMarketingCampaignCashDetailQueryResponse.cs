@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayMarketingCampaignCashDetailQueryResponse : AopResponse
     {
         /// <summary>
-        /// 活动状态，CREATED: 已创建未打款  PAID:已打款  READY:活动已开始  PAUSE:活动已暂停  CLOSED:活动已结束  SETTLE:活动已清算
+        /// 活动状态，CREATED: 已创建未打款 PAID:已打款 READY:活动已开始 PAUSE:活动已暂停 CLOSED:活动已结束 SETTLED:活动已清算
         /// </summary>
         [XmlElement("camp_status")]
         public string CampStatus { get; set; }

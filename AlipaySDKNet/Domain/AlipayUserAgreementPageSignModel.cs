@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public PeriodRuleParams PeriodRuleParams { get; set; }
 
         /// <summary>
-        /// 个人签约产品码，商户和支付宝签约时确定，商户可咨询技术支持。
+        /// 个人签约产品码，商户和支付宝签约时确定，商户可咨询技术支持。 周期扣款个人签约产品码固定为 CYCLE_PAY_AUTH_P
         /// </summary>
         [XmlElement("personal_product_code")]
         public string PersonalProductCode { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public ProdParams ProdParams { get; set; }
 
         /// <summary>
-        /// 销售产品码，商户签约的支付宝合同所对应的产品码。
+        /// 销售产品码，商户签约的支付宝合同所对应的产品码。 周期扣款场景固定为 CYCLE_PAY_AUTH。
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
@@ -94,7 +94,7 @@ namespace Aop.Api.Domain
         public string PromoParams { get; set; }
 
         /// <summary>
-        /// 协议签约场景，商户和支付宝签约时确定，商户可咨询技术支持。  当传入商户签约号external_agreement_no时，场景不能为默认值DEFAULT|DEFAULT。
+        /// 协议签约场景，商户和支付宝签约时确定，商户可咨询技术支持。 当传入商户签约号external_agreement_no时，场景不能为默认值DEFAULT|DEFAULT。 代扣产品常见场景值参见：  https://opendocs.alipay.com/open/20190319114403226822/signscene。 
         /// </summary>
         [XmlElement("sign_scene")]
         public string SignScene { get; set; }

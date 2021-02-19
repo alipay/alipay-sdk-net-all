@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_start")]
         public string ServiceStart { get; set; }
+
+        /// <summary>
+        /// 服务类型，不传默认为物业缴费THIRD_PARTY_COMMUNITY_JIAOFEI
+        /// </summary>
+        [XmlElement("service_type")]
+        public string ServiceType { get; set; }
     }
 }

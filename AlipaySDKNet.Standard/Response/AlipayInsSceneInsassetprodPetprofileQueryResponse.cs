@@ -11,6 +11,18 @@ namespace Aop.Api.Response
     public class AlipayInsSceneInsassetprodPetprofileQueryResponse : AopResponse
     {
         /// <summary>
+        /// 算法识别的宠物种类code编码
+        /// </summary>
+        [XmlElement("algorithm_pet_species_code")]
+        public string AlgorithmPetSpeciesCode { get; set; }
+
+        /// <summary>
+        /// 宠物毛色
+        /// </summary>
+        [XmlElement("coat_color")]
+        public string CoatColor { get; set; }
+
+        /// <summary>
         /// 宠物资料是否齐全 0 不齐全 1 齐全
         /// </summary>
         [XmlElement("doc_complete")]
