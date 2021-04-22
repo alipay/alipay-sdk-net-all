@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
-        /// 信用服务创建模式，为必传字段，可取值：direct(直连模式)；indirect(间连模式)。
+        /// 信用服务创建模式，枚举如下： * direct：直连模式。 * indirect：间连模式。
         /// </summary>
         [XmlElement("create_type")]
         public string CreateType { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public RiskConfig RiskConfig { get; set; }
 
         /// <summary>
-        /// 二级商户ID。如果创建模式为间连模式，此为必传字段；如果为直连模式，不可将此字段赋值作为入参传入。
+        /// 二级商户ID。 注意： * create_type = indirect（间连模式创建）时本参数必填。 * create_type = direct（直连模式创建）时，请勿传入。
         /// </summary>
         [XmlElement("smid")]
         public string Smid { get; set; }

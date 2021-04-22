@@ -16,7 +16,7 @@ namespace Aop.Api.Response
         public IoTBPaaSDeviceApplyBindInfo BindInfo { get; set; }
 
         /// <summary>
-        /// 绑定状态：1、已绑定；2、未绑定；3、绑定中；4、绑定失败；5、无效token；
+        /// 绑定状态，枚举如下： * 1：已绑定； * 2：未绑定； * 3：绑定中； * 4：绑定失败； * 5：无效token。
         /// </summary>
         [XmlElement("bind_status")]
         public long BindStatus { get; set; }

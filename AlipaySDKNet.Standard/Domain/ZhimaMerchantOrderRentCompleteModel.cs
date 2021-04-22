@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ExtendInfo { get; set; }
 
         /// <summary>
-        /// 信用借还订单号
+        /// 信用借还订单号，通过<a href="https://opendocs.alipay.com/apis/api_8/zhima.merchant.order.rent.create">zhima.merchant.order.rent.create</a>(信用借还订单创建(页面))接口创建信用借还订单后获取。
         /// </summary>
         [XmlElement("order_no")]
         public string OrderNo { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string PayAmountType { get; set; }
 
         /// <summary>
-        /// 信用借还的产品码:w1010100000000002858
+        /// 信用借还的产品码，固定为：w1010100000000002858。
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string RestoreShopName { get; set; }
 
         /// <summary>
-        /// 物品实际归还时间，borrow_time<restore_time<当前时间+24小时，即该时间不能早于借还订单创建时的borrow_time，且最晚不能晚于当前时间后24小时。
+        /// 物品实际归还时间，borrow_time<restore_time<当前时间+24小时，即该时间不能早于借还订单创建时的borrow_time，且最晚不能晚于当前时间后24小时。 时间格式为 yyyy-mm-dd hh:MM:ss。
         /// </summary>
         [XmlElement("restore_time")]
         public string RestoreTime { get; set; }

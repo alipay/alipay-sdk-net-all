@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayOpenPublicAdvertBatchqueryResponse : AopResponse
     {
         /// <summary>
-        /// 广告位list ,目前只有一个广告位
+        /// 广告位列表 。目前只有一个广告位。
         /// </summary>
         [XmlArray("advert_list")]
         [XmlArrayItem("advert")]

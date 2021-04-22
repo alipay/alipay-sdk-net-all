@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BizToken { get; set; }
 
         /// <summary>
-        /// 操作的广告层级类型，如计划(plan)，单元(group)，创意 （creative）
+        /// 操作的广告层级类型，如计划(plan)，单元(group)，创意 （creative），分组标识（batchTag），店铺标识（store）
         /// </summary>
         [XmlElement("op_type")]
         public string OpType { get; set; }

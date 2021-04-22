@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public Amount DeliveryFee { get; set; }
 
         /// <summary>
+        /// 店铺扩展参数
+        /// </summary>
+        [XmlElement("extend_params")]
+        public ShopExtendParams ExtendParams { get; set; }
+
+        /// <summary>
         /// 外链地址,可以是许可范围内的支付宝小程序地址，H5链接等。
         /// </summary>
         [XmlElement("external_link_url")]

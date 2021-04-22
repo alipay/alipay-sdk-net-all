@@ -16,7 +16,13 @@ namespace Aop.Api.Response
         public TuitionISVAgentInfoDTO AgentInfo { get; set; }
 
         /// <summary>
-        /// payment_info
+        /// 付款金额
+        /// </summary>
+        [XmlElement("payment_amount")]
+        public TuitionISVAmountInfoDTO PaymentAmount { get; set; }
+
+        /// <summary>
+        /// payment_info（已废弃）
         /// </summary>
         [XmlElement("payment_info")]
         public TuitionISVResponsePaymentInfoDTO PaymentInfo { get; set; }
@@ -28,19 +34,31 @@ namespace Aop.Api.Response
         public string PreOrderId { get; set; }
 
         /// <summary>
+        /// 退款金额
+        /// </summary>
+        [XmlElement("refund_amount")]
+        public TuitionISVAmountInfoDTO RefundAmount { get; set; }
+
+        /// <summary>
         /// 留学汇款对isv返回结果
         /// </summary>
         [XmlElement("result")]
         public TuitionISVResult Result { get; set; }
 
         /// <summary>
-        /// 单据状态
+        /// 订单状态
+        /// </summary>
+        [XmlElement("status")]
+        public TuitionISVOrderStatusDTO Status { get; set; }
+
+        /// <summary>
+        /// 单据状态（已废弃）
         /// </summary>
         [XmlElement("status_code")]
         public string StatusCode { get; set; }
 
         /// <summary>
-        /// TuitionISVStudentInfoDTO
+        /// TuitionISVStudentInfoDTO（已废弃）
         /// </summary>
         [XmlElement("student_info")]
         public TuitionISVStudentInfoDTO StudentInfo { get; set; }

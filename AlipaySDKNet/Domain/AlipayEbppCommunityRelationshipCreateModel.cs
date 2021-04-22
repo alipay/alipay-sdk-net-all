@@ -10,6 +10,24 @@ namespace Aop.Api.Domain
     public class AlipayEbppCommunityRelationshipCreateModel : AopObject
     {
         /// <summary>
+        /// 每个小区默认的收款帐号为授权物业的支付宝账号，默认不用传该参数。  但为满足部分物业公司财务要求，允许开发者为每个小区服务传入一个指定的物业收款帐号，开发者需要在直付通中设置银行卡相关信息
+        /// </summary>
+        [XmlElement("account")]
+        public string Account { get; set; }
+
+        /// <summary>
+        /// 每个小区默认的收款账号为授权物业的支付宝账号，默认不用传该参数。用户完成缴费后实时入账至该支付宝账号，后续由物业财务系统根据缴费异步通知和支付宝对账文件进行资金清分。    但为了满足部分物业公司的财务清结算需求，允许在授权物业账号下已设置支付宝收款子账号限制集的前提下，由开发者为指定小区服务传入一个物业公司的支付宝收款子帐号，目前只支持银行卡的分账模式：    BANK_CARD_ID - 银行卡号     注意：若传递的收款子账号事先未在支付宝配置，开发者在上线前的支付验证环节会提示不支持收款到该账户，请联系物业公司完成配置事宜。
+        /// </summary>
+        [XmlElement("account_type")]
+        public string AccountType { get; set; }
+
+        /// <summary>
+        /// 外部户号查询跳转链接,占位符使用#xxx#模式，xxx为占位符枚举，目前支持的枚举值为:communityShortName
+        /// </summary>
+        [XmlElement("billkey_url")]
+        public string BillkeyUrl { get; set; }
+
+        /// <summary>
         /// 小区短名, 创建小区时创建
         /// </summary>
         [XmlElement("community_short_name")]
@@ -26,6 +44,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("daily_start")]
         public string DailyStart { get; set; }
+
+        /// <summary>
+        /// 绑定关系额外字段
+        /// </summary>
+        [XmlElement("extend_field")]
+        public CommunityRelationshipExtendField ExtendField { get; set; }
+
+        /// <summary>
+        /// 外部账单页面跳转链接，占位符使用#xxx#模式，xxx为占位符枚举，目前支持的枚举值为:communityShortName
+        /// </summary>
+        [XmlElement("out_bill_url")]
+        public string OutBillUrl { get; set; }
 
         /// <summary>
         /// 物业公司的短名,在创建物业公司时生成
@@ -46,9 +76,15 @@ namespace Aop.Api.Domain
         public string ServiceStart { get; set; }
 
         /// <summary>
-        /// 服务类型，不传默认为物业缴费THIRD_PARTY_COMMUNITY_JIAOFEI
+        /// 服务类型，不传默认为物业缴费     THIRD_PARTY_COMMUNITY_JIAOFEI(物业缴费),     CENTRAL_SCAN_CODE_PASS(扫码通行联动门禁),     OPEN_SESAME(扫码通行无门禁),     H5_SCAN_CODE_PASS(扫码通行内部H5模式)
         /// </summary>
         [XmlElement("service_type")]
         public string ServiceType { get; set; }
+
+        /// <summary>
+        /// accountType不为空时，需要传入结算的二级商户id
+        /// </summary>
+        [XmlElement("smid")]
+        public string Smid { get; set; }
     }
 }

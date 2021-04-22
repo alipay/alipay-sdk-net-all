@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_request_no")]
         public string OutRequestNo { get; set; }
+
+        /// <summary>
+        /// 芝麻GO配置模板Id
+        /// </summary>
+        [XmlElement("template_id")]
+        public string TemplateId { get; set; }
     }
 }

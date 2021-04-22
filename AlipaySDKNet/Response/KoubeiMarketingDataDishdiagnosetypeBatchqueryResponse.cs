@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class KoubeiMarketingDataDishdiagnosetypeBatchqueryResponse : AopResponse
     {
         /// <summary>
-        /// 菜品类型list
+        /// 菜品类型列表。
         /// </summary>
         [XmlArray("item_diagnose_type_list")]
         [XmlArrayItem("item_diagnose_type")]

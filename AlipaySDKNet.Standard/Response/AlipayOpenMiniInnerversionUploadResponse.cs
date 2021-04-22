@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string NeedRotation { get; set; }
 
         /// <summary>
+        /// appx构建返回值
+        /// </summary>
+        [XmlElement("new_build_package_url")]
+        public string NewBuildPackageUrl { get; set; }
+
+        /// <summary>
         /// 包管理包ID
         /// </summary>
         [XmlElement("package_id")]

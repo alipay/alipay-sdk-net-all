@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class BizBudgetDTO : AopObject
     {
         /// <summary>
+        /// 方案剩余可用金额
+        /// </summary>
+        [XmlElement("available_amount")]
+        public string AvailableAmount { get; set; }
+
+        /// <summary>
         /// 预算业务申请信息
         /// </summary>
         [XmlArray("biz_apply_info")]
@@ -28,5 +34,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("biz_budget_name")]
         public string BizBudgetName { get; set; }
+
+        /// <summary>
+        /// 金额币种
+        /// </summary>
+        [XmlElement("currency")]
+        public string Currency { get; set; }
     }
 }

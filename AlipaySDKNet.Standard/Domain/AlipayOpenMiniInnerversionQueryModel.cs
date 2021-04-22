@@ -55,6 +55,13 @@ namespace Aop.Api.Domain
         public string MiniAppId { get; set; }
 
         /// <summary>
+        /// 小程序ID列表
+        /// </summary>
+        [XmlArray("mini_app_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> MiniAppIdList { get; set; }
+
+        /// <summary>
         /// 页数-从0开始
         /// </summary>
         [XmlElement("page_num")]

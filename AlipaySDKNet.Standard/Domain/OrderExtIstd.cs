@@ -98,5 +98,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("poi_seq")]
         public string PoiSeq { get; set; }
+
+        /// <summary>
+        /// 即时配送公司的服务代码
+        /// </summary>
+        [XmlElement("service_code")]
+        public string ServiceCode { get; set; }
     }
 }

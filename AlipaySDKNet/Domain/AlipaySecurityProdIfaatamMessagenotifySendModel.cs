@@ -28,10 +28,22 @@ namespace Aop.Api.Domain
         public string BusinessId { get; set; }
 
         /// <summary>
+        /// 控车序列号
+        /// </summary>
+        [XmlElement("car_info_seq_no")]
+        public string CarInfoSeqNo { get; set; }
+
+        /// <summary>
         /// 商户ID
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }
+
+        /// <summary>
+        /// 控车时间
+        /// </summary>
+        [XmlElement("tbox_time")]
+        public string TboxTime { get; set; }
 
         /// <summary>
         /// 汽车终端发起的消息通知内容,包含车辆的模块,当前的状态,和状态描述信息

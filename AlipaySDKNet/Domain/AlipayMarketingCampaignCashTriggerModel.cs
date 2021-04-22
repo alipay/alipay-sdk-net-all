@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCampaignCashTriggerModel : AopObject
     {
         /// <summary>
-        /// 现金活动号
+        /// 现金活动号，通过<a href="https://opendocs.alipay.com/apis/api_5/alipay.marketing.campaign.cash.create">alipay.marketing.campaign.cash.create</a>(创建现金活动)接口创建现金活动获取。
         /// </summary>
         [XmlElement("crowd_no")]
         public string CrowdNo { get; set; }
 
         /// <summary>
-        /// 用户登录账号名：邮箱或手机号。user_id与login_id至少有一个非空，都非空时，以user_id为准。
+        /// 用户登录账号名，一般为邮箱或手机号。 注意：user_id与login_id二选一必填，同时传入时以user_id为准。
         /// </summary>
         [XmlElement("login_id")]
         public string LoginId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 用户唯一标识userId。user_id与login_id至少有一个非空；都非空时，以user_id为准。
+        /// 用户支付宝唯一标识，2088开头。 注意：user_id与login_id二选一必填，同时传入时以user_id为准。
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

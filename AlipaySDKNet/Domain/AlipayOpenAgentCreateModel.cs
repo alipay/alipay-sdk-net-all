@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public ContactModel ContactInfo { get; set; }
 
         /// <summary>
-        /// 订单授权凭证，填写都则对应事务提交进入预授权模式
+        /// 订单授权凭证。若传入本参数，则对应事务提交后进入预授权模式。
         /// </summary>
         [XmlElement("order_ticket")]
         public string OrderTicket { get; set; }

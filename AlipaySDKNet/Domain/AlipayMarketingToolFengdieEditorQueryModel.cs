@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingToolFengdieEditorQueryModel : AopObject
     {
         /// <summary>
-        /// 凤蝶H5应用唯一id，通过alipay.marketing.tool.fengdie.activity.create接口时自动生成
+        /// H5应用的唯一id，通过<a href="https://opendocs.alipay.com/apis/api_5/alipay.marketing.tool.fengdie.activity.create">alipay.marketing.tool.fengdie.activity.create</a>接口获得。
         /// </summary>
         [XmlElement("activity_id")]
         public long ActivityId { get; set; }

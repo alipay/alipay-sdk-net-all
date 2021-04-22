@@ -49,7 +49,7 @@ namespace Aop.Api.Domain
         public string LibraryId { get; set; }
 
         /// <summary>
-        /// 场景ID。1（内部知识库）；2（机器人）;3（帮助中心）；4（无线帮助中心）
+        /// 场景ID。KNOWLEDGE（内部知识库）；ROBOT（机器人）;HELP（帮助中心）；WHELP（无线帮助中心）
         /// </summary>
         [XmlArray("scene_codes")]
         [XmlArrayItem("string")]

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string NotifyUri { get; set; }
 
         /// <summary>
-        /// 外部业务单号。用作幂等控制。同一个pid下相同的外部业务单号作唯一键。
+        /// 外部业务单号，用作幂等控制，由商家自定义，需保证同一pid下唯一。
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public long VoucherQuantity { get; set; }
 
         /// <summary>
-        /// 券类型，目前仅支持兑换券，即：EXCHANGE_VOUCHER
+        /// 券类型，目前仅支持 EXCHANGE_VOUCHER（兑换券）。
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

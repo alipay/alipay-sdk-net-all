@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string DisablePayChannels { get; set; }
 
         /// <summary>
-        /// 可用渠道，用户只能在指定渠道范围内支付  当有多个渠道时用“,”分隔  注，与disable_pay_channels互斥
+        /// 可用渠道，优先推荐用户使用的支付渠道。 注：当有多个渠道时用“,”分隔注，与disable_pay_channels互斥。
         /// </summary>
         [XmlElement("enable_pay_channels")]
         public string EnablePayChannels { get; set; }

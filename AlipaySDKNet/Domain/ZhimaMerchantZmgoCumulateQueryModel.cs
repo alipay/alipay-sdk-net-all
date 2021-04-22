@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AgreementId { get; set; }
 
         /// <summary>
-        /// 是否需要回传明细
+        /// 是否需要回传明细。枚举支持： * true：需要回传明细。 * false：不需要回传明细。
         /// </summary>
         [XmlElement("need_detail")]
         public bool NeedDetail { get; set; }
@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 数据回传的商户主体PID。
+        /// 数据回传的商户 ID，即和用户发生业务来往的 PID 主体。商户账号在支付宝的唯一标识，以 2088 开头的 16 位纯数字组成。
         /// </summary>
         [XmlElement("provider_pid")]
         public string ProviderPid { get; set; }
 
         /// <summary>
-        /// 蚂蚁统一会员ID
+        /// 用户 id，用户在支付宝的唯一标识，以 2088 开头的 16 位纯数字组成。
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

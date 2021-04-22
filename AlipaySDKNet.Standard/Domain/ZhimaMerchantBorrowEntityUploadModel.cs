@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CanBorrowCnt { get; set; }
 
         /// <summary>
-        /// 类目Code，传入芝麻借还规定的类目Code，其他值会认为非法参数，参数值如下：  雨伞：umbrella   充电宝：power_bank
+        /// 类目Code，传入芝麻借还规定的类目Code，其他值会认为非法参数，枚举如下： *雨伞：umbrella *充电宝：power_bank 注意：联调测试情况下，类目Code必须传如 test。
         /// </summary>
         [XmlElement("category_code")]
         public string CategoryCode { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string OfficeHoursDesc { get; set; }
 
         /// <summary>
-        /// 信用借还的签约产品码,传入固定值:w1010100000000002858
+        /// 信用借还的签约产品码，固定为：w1010100000000002858。
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }

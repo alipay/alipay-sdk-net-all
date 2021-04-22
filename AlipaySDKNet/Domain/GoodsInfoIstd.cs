@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string FirstClass { get; set; }
 
         /// <summary>
-        /// 商品高度，单位为cm，精确到小数点后面两位
+        /// 商品高度，单位为cm
         /// </summary>
         [XmlElement("height")]
         public long Height { get; set; }
 
         /// <summary>
-        /// 商品长度，单位为cm，精确到小数点后面两位
+        /// 商品长度，单位为cm
         /// </summary>
         [XmlElement("length")]
         public long Length { get; set; }
@@ -55,10 +55,10 @@ namespace Aop.Api.Domain
         /// 货物重量，单位为kg，精确到小数点后两位
         /// </summary>
         [XmlElement("weight")]
-        public long Weight { get; set; }
+        public string Weight { get; set; }
 
         /// <summary>
-        /// 商品宽度，单位为cm，精确到小数点后面两位
+        /// 商品宽度，单位为cm
         /// </summary>
         [XmlElement("width")]
         public long Width { get; set; }

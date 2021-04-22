@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CommunityShortName { get; set; }
 
         /// <summary>
-        /// ISV外部房间号, 可空, 创建后已支付宝内部房间号为准
+        /// ISV外部房间号
         /// </summary>
         [XmlElement("out_room_id")]
         public string OutRoomId { get; set; }

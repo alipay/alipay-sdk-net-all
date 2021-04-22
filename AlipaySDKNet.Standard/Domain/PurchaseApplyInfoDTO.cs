@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string BudgetStrategy { get; set; }
 
         /// <summary>
+        /// 币种
+        /// </summary>
+        [XmlElement("currency")]
+        public string Currency { get; set; }
+
+        /// <summary>
         /// 预算周期结束时间
         /// </summary>
         [XmlElement("end_cycle")]
@@ -74,6 +80,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pool_code")]
         public string PoolCode { get; set; }
+
+        /// <summary>
+        /// 剩余可用金额
+        /// </summary>
+        [XmlElement("remain_amount")]
+        public string RemainAmount { get; set; }
 
         /// <summary>
         /// 状态：CONFIG，CONFIG_DONE，CHECK，ACTIVE，HISTORY，CLOSE，DISCARD，INACTIVE

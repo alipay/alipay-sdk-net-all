@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("card_type")]
         public string CardType { get; set; }
+
+        /// <summary>
+        /// 商户传入的交易税费。需要落地风控使用
+        /// </summary>
+        [XmlElement("good_taxes")]
+        public string GoodTaxes { get; set; }
     }
 }

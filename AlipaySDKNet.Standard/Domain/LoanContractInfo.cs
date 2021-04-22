@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class LoanContractInfo : AopObject
     {
         /// <summary>
+        /// 合同编码
+        /// </summary>
+        [XmlElement("contract_code")]
+        public string ContractCode { get; set; }
+
+        /// <summary>
+        /// 合同结束时间
+        /// </summary>
+        [XmlElement("contract_end_date")]
+        public string ContractEndDate { get; set; }
+
+        /// <summary>
         /// 房抵贷抵押合同
         /// </summary>
         [XmlElement("contract_name")]
@@ -26,5 +38,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("contract_oss_url")]
         public string ContractOssUrl { get; set; }
+
+        /// <summary>
+        /// 合同签约时间
+        /// </summary>
+        [XmlElement("contract_sign_date")]
+        public string ContractSignDate { get; set; }
+
+        /// <summary>
+        /// 合同版本
+        /// </summary>
+        [XmlElement("contract_version")]
+        public string ContractVersion { get; set; }
     }
 }

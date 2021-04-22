@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string CloseTime { get; set; }
 
         /// <summary>
+        /// IDENTITY_CARD("IDENTITY_CARD_ONLY", "凭身份证入园"), QR_CODE("QR_CODE_ONLY", "凭二维码入园"), IDENTITY_CARD_AND_QR_CODE("IDENTITY_CARD_AND_QR_CODE", "凭二维码或身份证入园");
+        /// </summary>
+        [XmlElement("enter_way")]
+        public string EnterWay { get; set; }
+
+        /// <summary>
         /// 扩展信息
         /// </summary>
         [XmlArray("ext_info")]
@@ -97,7 +103,7 @@ namespace Aop.Api.Domain
         public string TicketNo { get; set; }
 
         /// <summary>
-        /// 门票规格 成人票、儿童票
+        /// 门票规格 成人票、全价票
         /// </summary>
         [XmlElement("ticket_specs")]
         public string TicketSpecs { get; set; }
@@ -107,6 +113,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ticket_type")]
         public string TicketType { get; set; }
+
+        /// <summary>
+        /// 票凭证code
+        /// </summary>
+        [XmlElement("ticket_use_code")]
+        public string TicketUseCode { get; set; }
+
+        /// <summary>
+        /// 购票二维码图片
+        /// </summary>
+        [XmlElement("ticket_use_pic")]
+        public string TicketUsePic { get; set; }
 
         /// <summary>
         /// 使用结束日期

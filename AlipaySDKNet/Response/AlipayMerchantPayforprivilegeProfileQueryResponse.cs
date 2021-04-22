@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayMerchantPayforprivilegeProfileQueryResponse : AopResponse
     {
         /// <summary>
-        /// 充享惠卡模板设置
+        /// 卡包充值卡面详情模板设置
         /// </summary>
         [XmlElement("card_template_config")]
         public PayForPrivilegeCardTemplateConfig CardTemplateConfig { get; set; }

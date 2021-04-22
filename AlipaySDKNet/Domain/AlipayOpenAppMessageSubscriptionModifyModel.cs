@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AuthToken { get; set; }
 
         /// <summary>
-        /// 授权类型。支持： app_auth：三方应用授权。 user_auth：用户授权 。
+        /// 授权类型。枚举如下： * app_auth：表示第三方应用授权。 * user_auth：表示用户授权。
         /// </summary>
         [XmlElement("auth_type")]
         public string AuthType { get; set; }

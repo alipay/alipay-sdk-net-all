@@ -18,13 +18,13 @@ namespace Aop.Api.Response
         /// 骑手位置纬度
         /// </summary>
         [XmlElement("rider_lat")]
-        public long RiderLat { get; set; }
+        public string RiderLat { get; set; }
 
         /// <summary>
         /// 骑手位置经度
         /// </summary>
         [XmlElement("rider_lng")]
-        public long RiderLng { get; set; }
+        public string RiderLng { get; set; }
 
         /// <summary>
         /// 骑手电话

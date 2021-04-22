@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayMerchantPayforprivilegeUserrelationCreateResponse : AopResponse
     {
         /// <summary>
-        /// 充享惠业务用户与商户关系
+        /// 充值业务用户与商户关系
         /// </summary>
         [XmlElement("member_info")]
         public PayForPrivilegeUserRelation MemberInfo { get; set; }

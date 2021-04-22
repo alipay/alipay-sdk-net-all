@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class VoucherDetailVO : AopObject
     {
         /// <summary>
+        /// 券对应的活动id
+        /// </summary>
+        [XmlElement("activity_id")]
+        public string ActivityId { get; set; }
+
+        /// <summary>
         /// 优惠金额
         /// </summary>
         [XmlElement("amount")]

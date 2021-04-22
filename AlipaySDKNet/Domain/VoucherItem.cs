@@ -73,6 +73,12 @@ namespace Aop.Api.Domain
         public List<VoucherTimeRule> UnavailableTimeRule { get; set; }
 
         /// <summary>
+        /// 券描述
+        /// </summary>
+        [XmlElement("voucher_desc")]
+        public string VoucherDesc { get; set; }
+
+        /// <summary>
         /// 券id
         /// </summary>
         [XmlElement("voucher_id")]
@@ -85,7 +91,7 @@ namespace Aop.Api.Domain
         public string VoucherName { get; set; }
 
         /// <summary>
-        /// 券状态： 可用(ENABLED)，已核销(即完全使用，USED)，已过期(EXPIRED)，删除(DELETE)，不可用(DISABLED，逐步废弃)
+        /// 券状态： 可用(ENABLED)，已核销(即完全使用，USED)，已过期(EXPIRED)，不可用(DISABLED)，删除(DELETE，已废弃)，
         /// </summary>
         [XmlElement("voucher_status")]
         public string VoucherStatus { get; set; }

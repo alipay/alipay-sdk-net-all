@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMerchantOrderExternalPaychannelSyncModel : AopObject
     {
         /// <summary>
-        /// isv测的业务订单号，等同于支付接口spi.alipay.merchant.order.commonisv.pay 中的isv_order_no。
+        /// isv侧的业务订单号，等同于支付接口spi.alipay.merchant.order.commonisv.pay 中的isv_order_no
         /// </summary>
         [XmlElement("biz_no")]
         public string BizNo { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string OriginTradeNo { get; set; }
 
         /// <summary>
-        /// 外部业务号
+        /// 外部业务号，等同于支付接口spi.alipay.merchant.order.commonisv.pay中的merchant_order_no
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

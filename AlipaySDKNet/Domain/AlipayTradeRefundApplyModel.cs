@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -38,6 +39,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }
+
+        /// <summary>
+        /// 退款资金明细  注：目前只有SETTLE_OFFLINE_GROUP产品的退款支持该字段
+        /// </summary>
+        [XmlArray("refund_fund_details")]
+        [XmlArrayItem("open_api_refund_fund_detail_pojo")]
+        public List<OpenApiRefundFundDetailPojo> RefundFundDetails { get; set; }
 
         /// <summary>
         /// 退款的原因说明

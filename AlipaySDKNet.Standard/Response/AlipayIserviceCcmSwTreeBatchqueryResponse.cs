@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -12,7 +13,8 @@ namespace Aop.Api.Response
         /// <summary>
         /// 类目集合
         /// </summary>
-        [XmlElement("trees")]
-        public TreeInfo Trees { get; set; }
+        [XmlArray("trees")]
+        [XmlArrayItem("tree_info")]
+        public List<TreeInfo> Trees { get; set; }
     }
 }

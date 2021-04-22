@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CardNo { get; set; }
 
         /// <summary>
-        /// 卡片状态（FREEZE：冻结，CANCEL：销卡）
+        /// 卡片状态。枚举值如下： *  FREEZE：冻结。 *  CANCEL：销卡。
         /// </summary>
         [XmlElement("card_status")]
         public string CardStatus { get; set; }

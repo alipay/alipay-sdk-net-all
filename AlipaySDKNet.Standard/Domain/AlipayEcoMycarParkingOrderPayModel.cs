@@ -88,6 +88,12 @@ namespace Aop.Api.Domain
         public string ParkingId { get; set; }
 
         /// <summary>
+        /// 代扣场景，PLATE_PAY：OCR识别车牌代扣。ETC_PAY：ETC识别车牌代扣。
+        /// </summary>
+        [XmlElement("pay_scene")]
+        public string PayScene { get; set; }
+
+        /// <summary>
         /// 版本号,最新版本为：3.0
         /// </summary>
         [XmlElement("pay_version")]

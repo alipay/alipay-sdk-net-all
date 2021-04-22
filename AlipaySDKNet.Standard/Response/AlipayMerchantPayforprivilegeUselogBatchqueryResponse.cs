@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayMerchantPayforprivilegeUselogBatchqueryResponse : AopResponse
     {
         /// <summary>
-        /// 充享惠使用记录
+        /// 余额使用记录
         /// </summary>
         [XmlArray("use_log_list")]
         [XmlArrayItem("pay_for_privilege_recharge_card_use_log")]

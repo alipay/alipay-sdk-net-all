@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class ZhimaCreditEpSceneFulfillmentlistSyncModel : AopObject
     {
         /// <summary>
-        /// 信用订单号，即调用zhima.credit.ep.scene.agreement.use返回的信用订单号。
+        /// 信用订单号，为<a href="https://opendocs.alipay.com/apis/api_8/zhima.credit.ep.scene.agreement.use">zhima.credit.ep.scene.agreement.use</a>接口加入信用服务后获取的credit_order_no（信用订单号）。
         /// </summary>
         [XmlElement("credit_order_no")]
         public string CreditOrderNo { get; set; }

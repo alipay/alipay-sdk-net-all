@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
-        /// 外部订单号，即请求方订单的唯一标识。  当biz_type传入POST_ORDER_PAY时，该字段为必选
+        /// 外部订单号，即请求方订单的唯一标识，由商家自定义。 注意：当biz_type=POST_ORDER_PAY时，该字段必选。
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 口碑侧的门店id。  当biz_type传入POST_ORDER_PAY时，该字段为必选
+        /// 口碑侧的门店id。 注意：当biz_type=POST_ORDER_PAY时，该字段必选。
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }

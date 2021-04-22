@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayUserAccountOrderConsultModel : AopObject
     {
         /// <summary>
+        /// 与场景码相关的扩展参数
+        /// </summary>
+        [XmlElement("ext_info")]
+        public ConsultParams ExtInfo { get; set; }
+
+        /// <summary>
         /// 集团havana ID
         /// </summary>
         [XmlElement("hid")]

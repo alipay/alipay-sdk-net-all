@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class KoubeiTradeOrderAggregateConsultModel : AopObject
     {
         /// <summary>
-        /// 订单包含的商品列表信息，json格式，其它说明详见商品明细说明
+        /// 订单包含的商品列表信息，json格式。
         /// </summary>
         [XmlElement("goods_info")]
         public KbGoodsInfo GoodsInfo { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string Subject { get; set; }
 
         /// <summary>
-        /// 支付超时时间；默认3m; 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天。 该参数数值不接受小数点， 如 1.5h，可转换为 90m
+        /// 支付超时时间，默认3m（即3分钟）。表示该笔订单允许的最晚付款时间，逾期将关闭交易。 取值范围：1m～15d。m-分钟，h-小时，d-天。 注意：该参数数值不接受小数点， 如 1.5h，可转换为 90m。
         /// </summary>
         [XmlElement("timeout_express")]
         public string TimeoutExpress { get; set; }

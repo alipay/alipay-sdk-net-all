@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public TuitionISVAgentInfoDTO AgentInfo { get; set; }
 
         /// <summary>
+        /// 是否完成自审
+        /// </summary>
+        [XmlElement("finish_self_audit")]
+        public bool FinishSelfAudit { get; set; }
+
+        /// <summary>
+        /// 付款人信息
+        /// </summary>
+        [XmlElement("payer_info")]
+        public TuitionISVPayerInfoDTO PayerInfo { get; set; }
+
+        /// <summary>
         /// 付款信息
         /// </summary>
         [XmlElement("payment_info")]

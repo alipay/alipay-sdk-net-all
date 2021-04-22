@@ -42,19 +42,19 @@ namespace Aop.Api.Domain
         public string ShopCode { get; set; }
 
         /// <summary>
-        /// 产生该笔交易时，用户出具的凭证类型  ALIPAY：支付宝电子卡  ENTITY：实体卡  OTHER：其他
+        /// 产生该笔交易时，用户出具的凭证类型。枚举支持： *ALIPAY：支付宝电子卡； *ENTITY：实体卡； *OTHER：其他。
         /// </summary>
         [XmlElement("swipe_cert_type")]
         public string SwipeCertType { get; set; }
 
         /// <summary>
-        /// 支付宝业务卡号，开卡接口中返回获取
+        /// 支付宝业务卡号，即通过<a href="">alipay.marketing.card.open</a>(会员卡开卡)接口开卡后获取的 card_info.biz_card_no 值。
         /// </summary>
         [XmlElement("target_card_no")]
         public string TargetCardNo { get; set; }
 
         /// <summary>
-        /// 卡号类型  BIZ_CARD：支付宝业务卡号
+        /// 卡号ID类型。支持： *BIZ_CARD：支付宝业务卡号（商户会员卡场景使用）。
         /// </summary>
         [XmlElement("target_card_no_type")]
         public string TargetCardNoType { get; set; }
@@ -66,7 +66,7 @@ namespace Aop.Api.Domain
         public string TradeAmount { get; set; }
 
         /// <summary>
-        /// 交易名称  为空时根据交易类型提供默认名称
+        /// 交易名称。为空时支付宝将根据交易类型提供默认名称。
         /// </summary>
         [XmlElement("trade_name")]
         public string TradeName { get; set; }
@@ -78,13 +78,13 @@ namespace Aop.Api.Domain
         public string TradeNo { get; set; }
 
         /// <summary>
-        /// 线下交易时间（是用户付款的交易时间）  当交易时间晚于上次消费记录同步时间，则会发生卡信息变更
+        /// 线下交易时间，为用户付款的交易时间。 说明：当交易时间晚于上次消费记录同步时间时，将变更会员卡信息。
         /// </summary>
         [XmlElement("trade_time")]
         public string TradeTime { get; set; }
 
         /// <summary>
-        /// 交易类型  开卡：OPEN  消费：TRADE  充值：DEPOSIT  退卡：RETURN
+        /// 交易类型。枚举支持： *开卡：OPEN； *消费：TRADE； *充值：DEPOSIT； *退卡：RETURN。
         /// </summary>
         [XmlElement("trade_type")]
         public string TradeType { get; set; }

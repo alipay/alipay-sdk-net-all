@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public string PreOrderId { get; set; }
 
         /// <summary>
+        /// 预订单链接地址（小程序的链接地址）
+        /// </summary>
+        [XmlElement("pre_order_link")]
+        public string PreOrderLink { get; set; }
+
+        /// <summary>
         /// 结果
         /// </summary>
         [XmlElement("result")]

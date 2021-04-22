@@ -18,6 +18,12 @@ namespace Aop.Api.Response
         public List<AccDetailModel> AccDetailList { get; set; }
 
         /// <summary>
+        /// 批次推进时的审批状态，只有当批次需要审批时才提供。WAIT_APPROVAL: 未审批   APPROVED: 已审批REJECTED: 已拒绝
+        /// </summary>
+        [XmlElement("approval_status")]
+        public string ApprovalStatus { get; set; }
+
+        /// <summary>
         /// 商户请求的批次流水号，同请求中的"batch_no"。（注：只有境外代发使用，其他场景返回out_batch_no）
         /// </summary>
         [XmlElement("batch_no")]

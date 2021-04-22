@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
-        /// 清单明细
+        /// 发放的物品清单明细
         /// </summary>
         [XmlArray("item_list")]
         [XmlArrayItem("energy_good_request")]

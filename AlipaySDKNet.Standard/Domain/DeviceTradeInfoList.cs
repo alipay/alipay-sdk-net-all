@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public long FaceTradeCnt { get; set; }
 
         /// <summary>
+        /// 扫脸金额
+        /// </summary>
+        [XmlElement("face_trd_amt")]
+        public string FaceTrdAmt { get; set; }
+
+        /// <summary>
         /// 当日刷脸付笔数占比
         /// </summary>
         [XmlElement("face_trd_cnt_rate")]

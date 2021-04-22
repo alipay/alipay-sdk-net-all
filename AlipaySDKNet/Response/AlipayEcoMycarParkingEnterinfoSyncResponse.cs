@@ -9,7 +9,13 @@ namespace Aop.Api.Response
     public class AlipayEcoMycarParkingEnterinfoSyncResponse : AopResponse
     {
         /// <summary>
-        /// 当前车辆是否签约无感代扣
+        /// 用户签约的代扣场景字符集，多个英文逗号分割，当车场为ORC识别车牌的场景，返回值包含PLATE_PAY时，表示代扣协议可用。 当车场为ETC设备识别车牌，返回值包含ETC_PAY时表示协议可用。当用户未签约任何代扣场景时返回NO_AGREEMENT_SCENE
+        /// </summary>
+        [XmlElement("agreement_scene")]
+        public string AgreementScene { get; set; }
+
+        /// <summary>
+        /// 该字段已废弃,请使用agreement_scene字段
         /// </summary>
         [XmlElement("agreement_status")]
         public string AgreementStatus { get; set; }

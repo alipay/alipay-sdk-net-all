@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayMerchantPayforprivilegePromotionplanCreateResponse : AopResponse
     {
         /// <summary>
-        /// 充享惠方案，当前接口创建的充享惠方案
+        /// 充值方案，当前接口创建的充值方案
         /// </summary>
         [XmlElement("promotion_plan")]
         public PayForPrivilegePromotionPlanInfo PromotionPlan { get; set; }
