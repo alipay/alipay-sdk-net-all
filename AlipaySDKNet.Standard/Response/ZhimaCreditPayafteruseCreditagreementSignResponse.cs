@@ -9,13 +9,13 @@ namespace Aop.Api.Response
     public class ZhimaCreditPayafteruseCreditagreementSignResponse : AopResponse
     {
         /// <summary>
-        /// 芝麻协议号
+        /// 芝麻后付开通协议号
         /// </summary>
         [XmlElement("credit_agreement_id")]
         public string CreditAgreementId { get; set; }
 
         /// <summary>
-        /// 外部请求号
+        /// 商户外部协议号
         /// </summary>
         [XmlElement("out_agreement_no")]
         public string OutAgreementNo { get; set; }

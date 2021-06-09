@@ -28,13 +28,19 @@ namespace Aop.Api.Domain
         public string BundleId { get; set; }
 
         /// <summary>
+        /// 租户信息
+        /// </summary>
+        [XmlElement("inst_code")]
+        public string InstCode { get; set; }
+
+        /// <summary>
         /// 小程序ID
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }
 
         /// <summary>
-        /// 操作者ID
+        /// 操作者ID，支付宝租户必填
         /// </summary>
         [XmlElement("pid")]
         public string Pid { get; set; }

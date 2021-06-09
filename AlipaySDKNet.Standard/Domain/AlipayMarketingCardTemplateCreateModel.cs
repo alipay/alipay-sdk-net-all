@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string BizNoSuffixLen { get; set; }
 
         /// <summary>
-        /// 卡行动点配置；  行动点，即用户可点击跳转的区块，类似按钮控件的交互；  单张卡最多定制4个行动点。如果各项的配置内容完全一样，展示时会进行去重。
+        /// 卡行动点配置； 行动点，即用户可点击跳转的区块，类似按钮控件的交互； 单张卡最多定制3个行动点。如果各项的配置内容完全一样，展示时会进行去重。
         /// </summary>
         [XmlArray("card_action_list")]
         [XmlArrayItem("template_action_info_d_t_o")]

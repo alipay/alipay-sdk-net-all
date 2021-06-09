@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("app_version")]
         public string AppVersion { get; set; }
+
+        /// <summary>
+        /// 待邀测应用列表，灰度插件时使用，如无邀测必要请不要传入
+        /// </summary>
+        [XmlArray("beta_app_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> BetaAppIdList { get; set; }
 
         /// <summary>
         /// 端信息

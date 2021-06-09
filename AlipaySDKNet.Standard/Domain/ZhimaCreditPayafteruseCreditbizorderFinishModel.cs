@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ZhimaCreditPayafteruseCreditbizorderFinishModel : AopObject
     {
         /// <summary>
-        /// 芝麻先用后付记账单号
+        /// 芝麻后付订单号
         /// </summary>
         [XmlElement("credit_biz_order_id")]
         public string CreditBizOrderId { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string IsFulfilled { get; set; }
 
         /// <summary>
-        /// 外部请求号
+        /// 商户外部请求号
         /// </summary>
         [XmlElement("out_request_no")]
         public string OutRequestNo { get; set; }

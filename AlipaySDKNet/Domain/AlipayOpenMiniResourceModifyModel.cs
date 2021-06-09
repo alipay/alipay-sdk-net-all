@@ -23,10 +23,22 @@ namespace Aop.Api.Domain
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// 展示列数，可选值为：1、2
+        /// </summary>
+        [XmlElement("row_num")]
+        public long RowNum { get; set; }
+
+        /// <summary>
         /// 需要修改的规则列表，不传不则不修改
         /// </summary>
         [XmlArray("rule_list")]
         [XmlArrayItem("mini_resource_rule")]
         public List<MiniResourceRule> RuleList { get; set; }
+
+        /// <summary>
+        /// 商品展示个数，可选值为：0-200的正整数
+        /// </summary>
+        [XmlElement("show_num")]
+        public long ShowNum { get; set; }
     }
 }

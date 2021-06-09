@@ -1,4 +1,5 @@
 using System;
+using Aop.Api.Domain;
 using System.Collections.Generic;
 using Aop.Api.Response;
 using Aop.Api.Util;
@@ -19,6 +20,11 @@ namespace Aop.Api.Request
         /// 营业执照授权函图片，个体工商户如果使用总公司或其他公司的营业执照认证需上传该授权函图片，最小5KB，最大5M（暂不限制图片宽高），图片格式必须为：png、bmp、gif、jpg、jpeg
         /// </summary>
         public FileItem BusinessLicenseAuthPic { get; set; }
+
+        /// <summary>
+        /// 营业执照法人手机号码
+        /// </summary>
+        public string BusinessLicenseMobile { get; set; }
 
         /// <summary>
         /// 营业执照号码
@@ -49,6 +55,16 @@ namespace Aop.Api.Request
         /// 服务费率（%），0.38~0.6 之间（小数点后两位，可取0.38%及0.6%）。 当签约且授权标识 sign_and_auth=true 时，该费率信息必填。
         /// </summary>
         public string Rate { get; set; }
+
+        /// <summary>
+        /// 店铺地址
+        /// </summary>
+        public SignAddressInfo ShopAddress { get; set; }
+
+        /// <summary>
+        /// 店铺名称
+        /// </summary>
+        public string ShopName { get; set; }
 
         /// <summary>
         /// 店铺内景图片，最小5KB，最大5M（暂不限制图片宽高），图片格式必须为：png、bmp、gif、jpg、jpeg
@@ -146,11 +162,14 @@ namespace Aop.Api.Request
         {
             AopDictionary parameters = new AopDictionary();
             parameters.Add("batch_no", this.BatchNo);
+            parameters.Add("business_license_mobile", this.BusinessLicenseMobile);
             parameters.Add("business_license_no", this.BusinessLicenseNo);
             parameters.Add("date_limitation", this.DateLimitation);
             parameters.Add("long_term", this.LongTerm);
             parameters.Add("mcc_code", this.MccCode);
             parameters.Add("rate", this.Rate);
+            parameters.Add("shop_address", this.ShopAddress);
+            parameters.Add("shop_name", this.ShopName);
             parameters.Add("sign_and_auth", this.SignAndAuth);
             return parameters;
         }

@@ -11,6 +11,11 @@ namespace Aop.Api.Request
     public class AlipayOpenAgentMobilepaySignRequest : IAopUploadRequest<AlipayOpenAgentMobilepaySignResponse>
     {
         /// <summary>
+        /// APP授权函图片，最小5KB，图片格式必须为：png、bmp、gif、jpg、jpeg
+        /// </summary>
+        public FileItem AppAuthPic { get; set; }
+
+        /// <summary>
         /// APP demo，格式为.apk；或者应用说明文档, 格式为.doc .docx .pdf格式
         /// </summary>
         public FileItem AppDemo { get; set; }
@@ -54,6 +59,11 @@ namespace Aop.Api.Request
         /// 营业执照授权函图片，个体工商户如果使用总公司或其他公司的营业执照认证需上传该授权函图片，最小5KB，图片格式必须为：png、bmp、gif、jpg、jpeg
         /// </summary>
         public FileItem BusinessLicenseAuthPic { get; set; }
+
+        /// <summary>
+        /// 营业执照法人手机号码
+        /// </summary>
+        public string BusinessLicenseMobile { get; set; }
 
         /// <summary>
         /// 营业执照号码。
@@ -187,6 +197,7 @@ namespace Aop.Api.Request
             parameters.Add("app_test_account_password", this.AppTestAccountPassword);
             parameters.Add("app_type", this.AppType);
             parameters.Add("batch_no", this.BatchNo);
+            parameters.Add("business_license_mobile", this.BusinessLicenseMobile);
             parameters.Add("business_license_no", this.BusinessLicenseNo);
             parameters.Add("date_limitation", this.DateLimitation);
             parameters.Add("download_link", this.DownloadLink);
@@ -212,6 +223,7 @@ namespace Aop.Api.Request
         public IDictionary<string, FileItem> GetFileParameters()
         {
             IDictionary<string, FileItem> parameters = new Dictionary<string, FileItem>();
+            parameters.Add("app_auth_pic", this.AppAuthPic);
             parameters.Add("app_demo", this.AppDemo);
             parameters.Add("business_license_auth_pic", this.BusinessLicenseAuthPic);
             parameters.Add("business_license_pic", this.BusinessLicensePic);

@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string BuildExtraInfo { get; set; }
 
         /// <summary>
+        /// 用于覆盖开发者配置字段，实现止血和灰度逻辑
+        /// </summary>
+        [XmlElement("build_extra_mini_project_config")]
+        public string BuildExtraMiniProjectConfig { get; set; }
+
+        /// <summary>
         /// jsapi 权限文件,钉钉外请勿传
         /// </summary>
         [XmlElement("build_js_permission")]

@@ -1,4 +1,5 @@
 using System;
+using Aop.Api.Domain;
 using System.Collections.Generic;
 using Aop.Api.Response;
 using Aop.Api.Util;
@@ -16,6 +17,11 @@ namespace Aop.Api.Request
         public string BatchNo { get; set; }
 
         /// <summary>
+        /// 营业执照法人手机号码
+        /// </summary>
+        public string BusinessLicenseMobile { get; set; }
+
+        /// <summary>
         /// 营业执照号码。若填写，请与以下营业执照图片、期限、一起提供。
         /// </summary>
         public string BusinessLicenseNo { get; set; }
@@ -31,6 +37,11 @@ namespace Aop.Api.Request
         public string DateLimitation { get; set; }
 
         /// <summary>
+        /// 送货地址
+        /// </summary>
+        public SignAddressInfo DeliveryAddress { get; set; }
+
+        /// <summary>
         /// 营业期限是否长期有效
         /// </summary>
         public Nullable<bool> LongTerm { get; set; }
@@ -44,6 +55,21 @@ namespace Aop.Api.Request
         /// 服务费率（%），0.38~3之间，精确到0.01
         /// </summary>
         public string Rate { get; set; }
+
+        /// <summary>
+        /// 店铺地址
+        /// </summary>
+        public SignAddressInfo ShopAddress { get; set; }
+
+        /// <summary>
+        /// 店铺名称
+        /// </summary>
+        public string ShopName { get; set; }
+
+        /// <summary>
+        /// 店铺内景照片，最小5KB，图片格式必须为：png、bmp、gif、jpg、jpeg
+        /// </summary>
+        public FileItem ShopScenePic { get; set; }
 
         /// <summary>
         /// 店铺门头照图片，需要包括招牌信息。最小5KB，图片格式必须为：png、bmp、gif、jpg、jpeg
@@ -131,11 +157,15 @@ namespace Aop.Api.Request
         {
             AopDictionary parameters = new AopDictionary();
             parameters.Add("batch_no", this.BatchNo);
+            parameters.Add("business_license_mobile", this.BusinessLicenseMobile);
             parameters.Add("business_license_no", this.BusinessLicenseNo);
             parameters.Add("date_limitation", this.DateLimitation);
+            parameters.Add("delivery_address", this.DeliveryAddress);
             parameters.Add("long_term", this.LongTerm);
             parameters.Add("mcc_code", this.MccCode);
             parameters.Add("rate", this.Rate);
+            parameters.Add("shop_address", this.ShopAddress);
+            parameters.Add("shop_name", this.ShopName);
             return parameters;
         }
 		
@@ -157,6 +187,7 @@ namespace Aop.Api.Request
         {
             IDictionary<string, FileItem> parameters = new Dictionary<string, FileItem>();
             parameters.Add("business_license_pic", this.BusinessLicensePic);
+            parameters.Add("shop_scene_pic", this.ShopScenePic);
             parameters.Add("shop_sign_board_pic", this.ShopSignBoardPic);
             parameters.Add("special_license_pic", this.SpecialLicensePic);
             return parameters;

@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string GoodsPrice { get; set; }
 
         /// <summary>
-        /// 商品规格份、件、斤、kg，默认为份
+        /// 商品规格份、件、斤、kg，默认为份 KG：千克 SHARE：份 CATTY：斤 PKG：件
         /// </summary>
         [XmlElement("goods_specs")]
         public string GoodsSpecs { get; set; }

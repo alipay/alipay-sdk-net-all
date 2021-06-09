@@ -47,5 +47,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("run_model_type")]
         public string RunModelType { get; set; }
+
+        /// <summary>
+        /// 是否展示邀测信息
+        /// </summary>
+        [XmlElement("show_beta_info")]
+        public bool ShowBetaInfo { get; set; }
     }
 }

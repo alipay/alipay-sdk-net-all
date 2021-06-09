@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BizTime { get; set; }
 
         /// <summary>
-        /// 自定义模板参数，支持动态模板配置
+        /// 废弃字段，勿用
         /// </summary>
         [XmlElement("custom_temp_conf")]
         public string CustomTempConf { get; set; }
@@ -32,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("expire_aisle_data")]
         public string ExpireAisleData { get; set; }
+
+        /// <summary>
+        /// 动态配置参数
+        /// </summary>
+        [XmlElement("ext_template_conf")]
+        public ExtTemplateConf ExtTemplateConf { get; set; }
 
         /// <summary>
         /// 冻结金额，单位：元

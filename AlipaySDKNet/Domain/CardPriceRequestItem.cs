@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public long HighPriceCent { get; set; }
 
         /// <summary>
+        /// 当前请求的周期卡价格(用于不需要定价的情况),单位为分
+        /// </summary>
+        [XmlElement("last_promo_price")]
+        public long LastPromoPrice { get; set; }
+
+        /// <summary>
         /// 优惠卡价格区间下限，单位为分
         /// </summary>
         [XmlElement("lower_price_cent")]

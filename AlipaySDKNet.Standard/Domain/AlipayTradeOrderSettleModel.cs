@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayTradeOrderSettleModel : AopObject
     {
         /// <summary>
+        /// 分账结算业务扩展参数
+        /// </summary>
+        [XmlElement("extend_params")]
+        public SettleExtendParams ExtendParams { get; set; }
+
+        /// <summary>
         /// 操作员 ID，商家自定义操作员编号。
         /// </summary>
         [XmlElement("operator_id")]

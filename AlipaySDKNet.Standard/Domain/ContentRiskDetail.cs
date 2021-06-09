@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Notice { get; set; }
 
         /// <summary>
+        /// https://xx.xxx.com/g/hsxone.mms.materialscenter/v/provider/getMaterialsInfo?file_guid=a87b7dc1fbc04d2c97753612fdd4dd08
+        /// </summary>
+        [XmlElement("origin_file")]
+        public string OriginFile { get; set; }
+
+        /// <summary>
         /// 当前规则命中的风险详情信息，譬如风险在图片的坐标、位置信息,坐标对应文字。
         /// </summary>
         [XmlElement("risk_infos")]

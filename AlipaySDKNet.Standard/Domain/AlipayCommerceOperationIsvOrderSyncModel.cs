@@ -120,7 +120,7 @@ namespace Aop.Api.Domain
         public QueueInfo QueueInfo { get; set; }
 
         /// <summary>
-        /// 商户订单同步记录id（同一订单，非第一次同步 必填）
+        /// 订单同步接口返回record_id（同一订单，非第一次同步 必填）
         /// </summary>
         [XmlElement("record_id")]
         public string RecordId { get; set; }

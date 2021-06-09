@@ -80,8 +80,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 联系电话，多个逗号隔开，不传用主场馆的
         /// </summary>
-        [XmlElement("phone")]
-        public string Phone { get; set; }
+        [XmlArray("phone")]
+        [XmlArrayItem("string")]
+        public List<string> Phone { get; set; }
 
         /// <summary>
         /// 场馆图片链接列表 最多5张
@@ -130,8 +131,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 标签列表
         /// </summary>
-        [XmlElement("tag_list")]
-        public string TagList { get; set; }
+        [XmlArray("tag_list")]
+        [XmlArrayItem("string")]
+        public List<string> TagList { get; set; }
 
         /// <summary>
         /// 培训信息

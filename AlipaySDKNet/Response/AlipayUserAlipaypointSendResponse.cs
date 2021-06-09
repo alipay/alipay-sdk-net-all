@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayUserAlipaypointSendResponse : AopResponse
     {
         /// <summary>
-        /// 发放记录号
+        /// 发放记录号。
         /// </summary>
         [XmlElement("record_id")]
         public string RecordId { get; set; }

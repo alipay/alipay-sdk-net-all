@@ -76,6 +76,12 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
+        /// 签名信息
+        /// </summary>
+        [XmlElement("sign_data")]
+        public SignData SignData { get; set; }
+
+        /// <summary>
         /// 订单总金额，单位为元，精确到小数点后两位，STD_RED_PACKET产品取值范围[0.01,100000000]； TRANS_ACCOUNT_NO_PWD产品取值范围[0.1,100000000]
         /// </summary>
         [XmlElement("trans_amount")]

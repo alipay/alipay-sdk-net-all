@@ -29,7 +29,7 @@ namespace Aop.Api.Response
         public string ActivityStatus { get; set; }
 
         /// <summary>
-        /// CREDIT:信用卡 DEBIT:借记卡
+        /// CREDIT:信用卡 DEBIT:借记卡 DEBIT_CREDIT:借记卡或信用卡
         /// </summary>
         [XmlElement("bank_card_type")]
         public string BankCardType { get; set; }

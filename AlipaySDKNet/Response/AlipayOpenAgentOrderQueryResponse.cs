@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -37,5 +39,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("reject_reason")]
         public string RejectReason { get; set; }
+
+        /// <summary>
+        /// 受限信息
+        /// </summary>
+        [XmlArray("restrict_infos")]
+        [XmlArrayItem("sign_restrict_info")]
+        public List<SignRestrictInfo> RestrictInfos { get; set; }
     }
 }

@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string FinanceInstName { get; set; }
 
         /// <summary>
+        /// 响应请求场景描述
+        /// </summary>
+        [XmlElement("info")]
+        public string Info { get; set; }
+
+        /// <summary>
         /// 是否可重试
         /// </summary>
         [XmlElement("retry")]

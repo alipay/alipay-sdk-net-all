@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public CateringStoreDeliveryInfo DeliveryInfo { get; set; }
 
         /// <summary>
-        /// 人均消费
+        /// 人均消费。单位为元，精确到小数点后两位。
         /// </summary>
         [XmlElement("per_consumption")]
         public string PerConsumption { get; set; }

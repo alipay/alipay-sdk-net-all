@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayDataBillEreceiptQueryResponse : AopResponse
     {
         /// <summary>
-        /// 下载链接。status为SUCCESS时返回。用户可以使用此http链接下载文件内容。有效时间20s。<br/> 生成的文件是zip格式。需要解压后获取电子回单pdf内容
+        /// 下载链接，status 为 SUCCESS 时返回。用户可以使用此http链接下载文件内容。有效时间为 20s。  生成文件为PDF格式，下载即可获取电子回单 PDF 内容。
         /// </summary>
         [XmlElement("download_url")]
         public string DownloadUrl { get; set; }
@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// 处理状态<br/> <ul> <li>INIT - 初始化</li> <li>PROCESS - 处理中</li> <li>SUCCESS - 成功</li> <li>FAIL - 失败</li> </ul>
+        /// 处理状态。枚举值如下： INIT：初始化。 PROCESS：处理中。 SUCCESS：成功。 FAIL：失败。
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

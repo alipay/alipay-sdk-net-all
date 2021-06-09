@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class StoreAddressInfo : AopObject
     {
         /// <summary>
-        /// 门店地址（格式：省/市/区/详细地址门牌号）
+        /// 门店地址（格式：市/区/详细地址门牌号）
         /// </summary>
         [XmlElement("address")]
         public string Address { get; set; }

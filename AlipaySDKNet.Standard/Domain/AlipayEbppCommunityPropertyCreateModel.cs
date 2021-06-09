@@ -58,5 +58,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scale")]
         public string Scale { get; set; }
+
+        /// <summary>
+        /// 物业公司简称
+        /// </summary>
+        [XmlElement("short_company_name")]
+        public string ShortCompanyName { get; set; }
     }
 }

@@ -73,14 +73,16 @@ namespace Aop.Api.Response
         /// <summary>
         /// 联系电话
         /// </summary>
-        [XmlElement("phone")]
-        public string Phone { get; set; }
+        [XmlArray("phone")]
+        [XmlArrayItem("string")]
+        public List<string> Phone { get; set; }
 
         /// <summary>
         /// 场馆图片链接列表 最多5张
         /// </summary>
-        [XmlElement("picture_list")]
-        public string PictureList { get; set; }
+        [XmlArray("picture_list")]
+        [XmlArrayItem("string")]
+        public List<string> PictureList { get; set; }
 
         /// <summary>
         /// poi
@@ -97,8 +99,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 场馆售卖产品类型集合，逗号隔开 calendar：价格日历 ticket：票券 course: 课程
         /// </summary>
-        [XmlElement("product_type_list")]
-        public string ProductTypeList { get; set; }
+        [XmlArray("product_type_list")]
+        [XmlArrayItem("string")]
+        public List<string> ProductTypeList { get; set; }
 
         /// <summary>
         /// 省份code

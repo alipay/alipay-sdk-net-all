@@ -59,7 +59,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 营业时间 开始时间 - 结束时间；
+        /// 营业时间 开始时间 - 结束时间； (注：全英文符号）
         /// </summary>
         [XmlElement("opening_hours")]
         public string OpeningHours { get; set; }
@@ -122,6 +122,12 @@ namespace Aop.Api.Domain
         [XmlArray("tag_list")]
         [XmlArrayItem("string")]
         public List<string> TagList { get; set; }
+
+        /// <summary>
+        /// 是否为“测试场馆”。如果上传的场馆为想要进行测试的非正式场馆，则填写“Y”。如上传正式场馆，则不传或填写为N
+        /// </summary>
+        [XmlElement("test_venue")]
+        public string TestVenue { get; set; }
 
         /// <summary>
         /// 交通信息
