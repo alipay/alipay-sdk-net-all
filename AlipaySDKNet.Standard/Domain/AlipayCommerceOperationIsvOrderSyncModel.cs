@@ -53,6 +53,24 @@ namespace Aop.Api.Domain
         public CateringGoodsInfo GoodsInfo { get; set; }
 
         /// <summary>
+        /// 商品队列，前面排队的商品数量，如喜茶点单，前方还有66杯。
+        /// </summary>
+        [XmlElement("goods_queue_num")]
+        public long GoodsQueueNum { get; set; }
+
+        /// <summary>
+        /// 开发票跳转链接
+        /// </summary>
+        [XmlElement("invoice_url")]
+        public string InvoiceUrl { get; set; }
+
+        /// <summary>
+        /// 环保标签，支持多标签，英文逗号隔开，目前支持标签：N_DISPOSABLE_CUP-自带杯；N_PACKAGED-不打包；N_STRAW-不用吸管；
+        /// </summary>
+        [XmlElement("low_carbon_behavior")]
+        public string LowCarbonBehavior { get; set; }
+
+        /// <summary>
         /// 商户订单号
         /// </summary>
         [XmlElement("merchant_order_no")]
@@ -90,6 +108,12 @@ namespace Aop.Api.Domain
         public string OrderModifyTime { get; set; }
 
         /// <summary>
+        /// 订单队列，前面排队的订单数量
+        /// </summary>
+        [XmlElement("order_queue_num")]
+        public long OrderQueueNum { get; set; }
+
+        /// <summary>
         /// 订单类型，枚举支持 ALIPAY_APPLETS：支付宝小程序产生的订单 ALIPAY_POS：收银POS产生的支付宝订单
         /// </summary>
         [XmlElement("order_source")]
@@ -120,10 +144,22 @@ namespace Aop.Api.Domain
         public QueueInfo QueueInfo { get; set; }
 
         /// <summary>
+        /// 返佣pid
+        /// </summary>
+        [XmlElement("rebate_pid")]
+        public string RebatePid { get; set; }
+
+        /// <summary>
         /// 订单同步接口返回record_id（同一订单，非第一次同步 必填）
         /// </summary>
         [XmlElement("record_id")]
         public string RecordId { get; set; }
+
+        /// <summary>
+        /// 再来一单跳转链接，用户点击可进入商家小程序直接将上次购物的商品加入购物车
+        /// </summary>
+        [XmlElement("reorder_url")]
+        public string ReorderUrl { get; set; }
 
         /// <summary>
         /// 服务标识
@@ -138,7 +174,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 支付宝交易号（一个订单可能存在多笔支付单，英文逗号隔开）示例：2021031746828992022,2021031746828992034
+        /// 支付宝交易号
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

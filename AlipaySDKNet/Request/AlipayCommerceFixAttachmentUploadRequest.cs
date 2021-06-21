@@ -34,6 +34,7 @@ namespace Aop.Api.Request
 		private string notifyUrl;
         private string returnUrl;
 		private AopObject bizModel;
+        private Dictionary<string, string> udfParams; //add user-defined text parameters
 
     	 public void SetNeedEncrypt(bool needEncrypt){
              this.needEncrypt=needEncrypt;
@@ -97,11 +98,24 @@ namespace Aop.Api.Request
             return "alipay.commerce.fix.attachment.upload";
         }
 
+        public void PutOtherTextParam(string key, string value) 
+        {
+            if(this.udfParams == null) 
+            {
+                this.udfParams = new Dictionary<string, string>();
+            }
+            this.udfParams.Add(key, value);
+        }
+
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
             parameters.Add("file_name", this.FileName);
             parameters.Add("file_type", this.FileType);
+            if(udfParams != null) 
+            {
+                parameters.AddAll(this.udfParams);
+            }
             return parameters;
         }
 		

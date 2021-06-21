@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;using Aop.Api;using Aop.Api.Request;using Aop.Api.Response;using Aop.Api.Domain;using System.Collections.Generic;namespace Test{    [TestFixture()]    public class ExecuteTest    {
         [Test()]        public void should_return_success_response()        {
             //given
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey, "utf-8", false);            AlipayTradeCreateRequest request = getTradeCreateRequest();
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());            AlipayTradeCreateRequest request = getTradeCreateRequest();
             //when
             AlipayTradeCreateResponse response = client.Execute(request);
             //then
@@ -35,7 +35,7 @@
         [Test()]
         public void should_be_able_to_send_token()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey, "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             AlipayTradeCreateResponse response = client.Execute(getTradeCreateRequest(), "123", "456");
             Assert.AreEqual(response.SubMsg.Contains("无效的应用授权令牌"), true);
         }
@@ -54,15 +54,13 @@
 
         [Test()]        public void should_return_success_when_request_and_response_encrypted()        {
             //given
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey, "utf-8", TestAccount.Sandbox.AesKey);            AlipayTradeCreateRequest request = getTradeCreateRequest();            request.SetNeedEncrypt(true);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());            AlipayTradeCreateRequest request = getTradeCreateRequest();            request.SetNeedEncrypt(true);
             //when
             AlipayTradeCreateResponse response = client.Execute(request);
             //then
             Assert.AreEqual(response.Code, "10000");        }        [Test()]        public void should_get_correct_response_body()        {
             //given
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-               TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-               "utf-8", false);            AlipayTradeQueryRequest request = new AlipayTradeQueryRequest();            request.BizContent = "{" +            "\"out_trade_no\":\"20150320010101001\"," +            "\"trade_no\":\"2014112611001004680 073956707\"," +            "\"org_pid\":\"2088101117952222\"," +            "      \"query_options\":[" +            "        \"TRADE_SETTE_INFO\"" +            "      ]" +            "  }";
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());            AlipayTradeQueryRequest request = new AlipayTradeQueryRequest();            request.BizContent = "{" +            "\"out_trade_no\":\"20150320010101001\"," +            "\"trade_no\":\"2014112611001004680 073956707\"," +            "\"org_pid\":\"2088101117952222\"," +            "      \"query_options\":[" +            "        \"TRADE_SETTE_INFO\"" +            "      ]" +            "  }";
             //when
             AlipayTradeQueryResponse response = client.Execute(request);
             //then
@@ -74,9 +72,9 @@
         public void should_be_able_to_parse_xml_format_response()
         {
             //given
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-               TestAccount.Sandbox.AppPrivateKey, "xml", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-               "utf-8", false);
+            AlipayConfig config = TestAccount.Sandbox.GetConfig();
+            config.Format = "xml";
+            IAopClient client = new DefaultAopClient(config);
             AlipayTradeCreateRequest request = getTradeCreateRequest();
             //when
             AlipayTradeCreateResponse response = client.Execute(request);
@@ -89,9 +87,9 @@
         public void should_be_able_to_parse_xml_format_response_when_encrypted()
         {
             //given
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "xml", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", TestAccount.Sandbox.AesKey);
+            AlipayConfig config = TestAccount.Sandbox.GetConfig();
+            config.Format = "xml";
+            IAopClient client = new DefaultAopClient(config);
             AlipayTradeCreateRequest request = getTradeCreateRequest();
             request.SetNeedEncrypt(true);
             //when
@@ -106,8 +104,10 @@
         {
             //given
             //访问线上一个没有设置公私钥对的APP
-            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.Gateway, TestAccount.NotSetKeyAppId,
-                    TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey, "utf-8", false);
+            AlipayConfig config = TestAccount.Sandbox.GetConfig();
+            config.ServerUrl = TestAccount.ProdCert.GetConfig().ServerUrl;
+            config.AppId = TestAccount.NotSetKeyAppId;
+            IAopClient client = new DefaultAopClient(config);
             //when
             AlipayTradeCreateResponse response = client.Execute(getTradeCreateRequest());
             //then
@@ -119,7 +119,7 @@
         public void should_get_exception_when_call_cert_execute()
         {
             //given
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey, "utf-8", false);            AlipayTradeCreateRequest request = getTradeCreateRequest();
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());            AlipayTradeCreateRequest request = getTradeCreateRequest();
 
             //then
             AopException ex = Assert.Throws<AopException>(() => client.CertificateExecute(request));
@@ -129,7 +129,7 @@
         private static AlipayTradeCreateRequest getTradeCreateRequest()
         {
             AlipayTradeCreateRequest request = new AlipayTradeCreateRequest();
-            AlipayTradeCreateModel model = new AlipayTradeCreateModel();            model.OutTradeNo = "20200320010101006";            model.TotalAmount = "88.88";            model.Subject = "Iphone6 16G";            model.BuyerId = "2088102177846880";            ExtendParams extendParams = new ExtendParams();            extendParams.HbFqNum = "3";            extendParams.HbFqSellerPercent = "100";            model.ExtendParams = extendParams;            request.SetBizModel(model);
+            AlipayTradeCreateModel model = new AlipayTradeCreateModel();            model.OutTradeNo = System.Guid.NewGuid().ToString();            model.TotalAmount = "88.88";            model.Subject = "Iphone6 16G";            model.BuyerId = "2088102177846880";            ExtendParams extendParams = new ExtendParams();            extendParams.HbFqNum = "3";            extendParams.HbFqSellerPercent = "100";            model.ExtendParams = extendParams;            request.SetBizModel(model);
             return request;
         }
 
@@ -137,7 +137,7 @@
         public void should_support_complex_object_in_not_biz_content_mode()
         {
             //given
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey, "utf-8", false);            AlipayOpenMiniVersionAuditApplyRequest request = new AlipayOpenMiniVersionAuditApplyRequest();
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());            AlipayOpenMiniVersionAuditApplyRequest request = new AlipayOpenMiniVersionAuditApplyRequest();
             RegionInfo regionInfo = new RegionInfo
             {
                 AreaCode = "12345678",

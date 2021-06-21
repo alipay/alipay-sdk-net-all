@@ -21,24 +21,32 @@ namespace Test
 
         public static class Sandbox
         {
-            public const String Gateway = "https://openapi.alipaydev.com/gateway.do";
-            public const String AlipayPublicKey = @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAohmWF9HXjI3VRxrKbuZq4YK6lIFAIzUZ4xvY4iw2zwYiblPkB0FWbqxouyyB9nmAyK+hN/5tyXatpskcy6rO6zJl3kfdog0lRA7g06+YpdHVHhu/bXfaz+BfCA3YHwjkBQffMa8Amwy6JZF6aDiXDdYP/YWKmFk1t4K6F1853EDf2vYsT6AsVYRk2xkw+fx3/qIWaidHETjNBnOOPRG68hLf0H0DCeEOsLp3mFox2LARRQol5IfV45nNq2a2zb6ubwZbgXypZM3vfLQekUaxAaC1Vuu4gYWxPRCzHE1e6aQpEuacVVYCnjNURvDmDpT7oMzh+HtN0DKCe6yOHRDZ3QIDAQAB";
-            public const String AppId = "2016102200737202";
-            public static readonly String AppPrivateKey = GetPrivateKey("Sandbox");
-            public const String AesKey = "RrAdgyCsnkoE1a9A8cW72w==";
+            public static AlipayConfig GetConfig()
+            {
+                AlipayConfig config = new AlipayConfig();
+                config.ServerUrl = "https://openapi.alipaydev.com/gateway.do";
+                config.AppId = "2016102200737202";
+                config.PrivateKey = GetPrivateKey("Sandbox");
+                config.AlipayPublicKey = @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAohmWF9HXjI3VRxrKbuZq4YK6lIFAIzUZ4xvY4iw2zwYiblPkB0FWbqxouyyB9nmAyK+hN/5tyXatpskcy6rO6zJl3kfdog0lRA7g06+YpdHVHhu/bXfaz+BfCA3YHwjkBQffMa8Amwy6JZF6aDiXDdYP/YWKmFk1t4K6F1853EDf2vYsT6AsVYRk2xkw+fx3/qIWaidHETjNBnOOPRG68hLf0H0DCeEOsLp3mFox2LARRQol5IfV45nNq2a2zb6ubwZbgXypZM3vfLQekUaxAaC1Vuu4gYWxPRCzHE1e6aQpEuacVVYCnjNURvDmDpT7oMzh+HtN0DKCe6yOHRDZ3QIDAQAB";
+                config.EncryptKey = "RrAdgyCsnkoE1a9A8cW72w==";
+                return config;
+            }
         }
 
         public static class ProdCert
         {
-            public const String Gateway = "https://openapi.alipay.com/gateway.do";
-            public const String AppId = "2019090366875133";
-            public static readonly String AppPrivateKey = GetPrivateKey("ProdCert");
-            public static CertParams CertParams = new CertParams
+            public static AlipayConfig GetConfig()
             {
-                AlipayPublicCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/alipayCertPublicKey_RSA2.crt",
-                AppCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/appCertPublicKey_2019090366875133.crt",
-                RootCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/alipayRootCert.crt"
-            };
+                AlipayConfig config = new AlipayConfig();
+                config.ServerUrl = "https://openapi.alipay.com/gateway.do";
+                config.AppId = "2019090366875133";
+                config.PrivateKey = GetPrivateKey("ProdCert");
+                config.AppCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/appCertPublicKey_2019090366875133.crt";
+                config.AlipayPublicCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/alipayCertPublicKey_RSA2.crt";
+                config.RootCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/alipayRootCert.crt";
+
+                return config;
+            }
         }
 
         public static class DevSpi

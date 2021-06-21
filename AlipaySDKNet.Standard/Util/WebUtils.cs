@@ -3,7 +3,6 @@ using System.Web;
 using System.IO;
 using System.Net;
 using System.Text;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Aop.Api.Util
@@ -13,16 +12,27 @@ namespace Aop.Api.Util
     /// </summary>
     public sealed class WebUtils
     {
-        private int _timeout = 100000;
+        /// <summary>
+        /// 发起请求到服务端首次返回数据的超时时长，单位毫秒
+        /// 注：上传文件类请求由于请求完全发送到服务端的时间较长，服务端必须等待接收完整请求后才可做出响应，
+        /// 此种情况下，可适当延长此超时时间
+        /// </summary>
+        public int Timeout { get; set; } = 100000;
 
         /// <summary>
-        /// 请求与响应的超时时间
+        /// 服务端首次返回数据后，等待后续数据的超时时长，单位毫秒
         /// </summary>
-        public int Timeout
-        {
-            get { return this._timeout; }
-            set { this._timeout = value; }
-        }
+        public int ReadWriteTimeout { get; set; } = 15000;
+
+        /// <summary>
+        /// HTTP代理服务器参数
+        /// </summary>
+        public IWebProxy Proxy { get; set; }
+
+        /// <summary>
+        /// 自定义HTTP请求Header
+        /// </summary>
+        public Dictionary<string, string> CustomHeaders { get; set; }
 
         /// <summary>
         /// 执行HTTP POST请求。
@@ -142,7 +152,22 @@ namespace Aop.Api.Util
             req.Method = method;
             req.KeepAlive = true;
             req.UserAgent = "Aop4Net";
-            req.Timeout = this._timeout;
+            req.Timeout = this.Timeout;
+            req.ReadWriteTimeout = this.ReadWriteTimeout;
+
+            if (Proxy != null)
+            {
+                req.Proxy = Proxy;
+            }
+
+            if (CustomHeaders != null)
+            {
+                foreach (var header in CustomHeaders)
+                {
+                    req.Headers.Add(header.Key, header.Value);
+                }
+            }
+
             return req;
         }
 

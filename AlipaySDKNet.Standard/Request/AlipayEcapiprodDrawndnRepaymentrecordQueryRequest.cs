@@ -45,14 +45,15 @@ namespace Aop.Api.Request
         public string Start { get; set; }
 
         #region IAopRequest Members
-		private bool  needEncrypt=false;
+        private bool  needEncrypt=false;
         private string apiVersion = "1.0";
-		private string terminalType;
-		private string terminalInfo;
+	    private string terminalType;
+	    private string terminalInfo;
         private string prodCode;
-		private string notifyUrl;
+	    private string notifyUrl;
         private string returnUrl;
-		private AopObject bizModel;
+	    private AopObject bizModel;
+        private Dictionary<string, string> udfParams; //add user-defined text parameters
 
 		public void SetNeedEncrypt(bool needEncrypt){
              this.needEncrypt=needEncrypt;
@@ -116,6 +117,15 @@ namespace Aop.Api.Request
             return this.apiVersion;
         }
 
+        public void PutOtherTextParam(string key, string value) 
+        {
+            if(this.udfParams == null) 
+            {
+                this.udfParams = new Dictionary<string, string>();
+            }
+            this.udfParams.Add(key, value);
+        }
+
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
@@ -126,6 +136,10 @@ namespace Aop.Api.Request
             parameters.Add("isv_code", this.IsvCode);
             parameters.Add("org_code", this.OrgCode);
             parameters.Add("start", this.Start);
+            if(udfParams != null) 
+            {
+                parameters.AddAll(this.udfParams);
+            }
             return parameters;
         }
 

@@ -69,6 +69,7 @@ namespace Aop.Api.Request
 		private string notifyUrl;
         private string returnUrl;
 		private AopObject bizModel;
+        private Dictionary<string, string> udfParams; //add user-defined text parameters
 
     	 public void SetNeedEncrypt(bool needEncrypt){
              this.needEncrypt=needEncrypt;
@@ -132,6 +133,15 @@ namespace Aop.Api.Request
             return "ant.merchant.expand.attachment.upload.sync";
         }
 
+        public void PutOtherTextParam(string key, string value) 
+        {
+            if(this.udfParams == null) 
+            {
+                this.udfParams = new Dictionary<string, string>();
+            }
+            this.udfParams.Add(key, value);
+        }
+
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
@@ -144,6 +154,10 @@ namespace Aop.Api.Request
             parameters.Add("part_no", this.PartNo);
             parameters.Add("sub_biz_type", this.SubBizType);
             parameters.Add("sub_out_biz_no", this.SubOutBizNo);
+            if(udfParams != null) 
+            {
+                parameters.AddAll(this.udfParams);
+            }
             return parameters;
         }
 		

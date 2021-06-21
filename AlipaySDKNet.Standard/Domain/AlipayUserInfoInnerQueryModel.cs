@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 支付宝号，由字母和数字组成的字符串
+        /// </summary>
+        [XmlElement("zid")]
+        public string Zid { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using Aop.Api.Parser;
 using Aop.Api.Util;
 using System.Text;
 using System.Web;
+using System.Net;
 using Org.BouncyCastle.X509;
 using Newtonsoft.Json;
 
@@ -30,7 +31,7 @@ namespace Aop.Api
         /// <summary>
         /// 当前SDK版本号，SDK打包发布时会自动修改该值
         /// </summary>
-        public const string SDK_VERSION = "alipay-sdk-net-4.4.63.ALL";
+        public const string SDK_VERSION = "alipay-sdk-net-4.5.1.ALL";
 
         private CertEnvironment certEnvironment;
 
@@ -57,6 +58,45 @@ namespace Aop.Api
             set { appId = value; }
         }
 
+
+        public DefaultAopClient(AlipayConfig config)
+        {
+            this.serverUrl = config.ServerUrl;
+            this.appId = config.AppId;
+            this.format = config.Format;
+            this.charset = config.Charset;
+            this.signType = config.SignType;
+            this.keyFromFile = false;
+            this.privateKeyPem = config.PrivateKey;
+            this.alipayPublicKey = config.AlipayPublicKey;
+
+            //设置了支付宝公钥证书相关参数才初始化证书模式的运行环境
+            if (!string.IsNullOrEmpty(config.AlipayPublicCertPath)
+                || !string.IsNullOrEmpty(config.AlipayPublicCertContent))
+            {
+                CertParams certParams = new CertParams();
+                certParams.AppCertPath = config.AppCertPath;
+                certParams.AlipayPublicCertPath = config.AlipayPublicCertPath;
+                certParams.RootCertPath = config.RootCertPath;
+                certParams.AppCertContent = config.AppCertContent;
+                certParams.AlipayPublicCertContent = config.AlipayPublicCertContent;
+                certParams.RootCertContent = config.RootCertContent;
+                this.certEnvironment = new CertEnvironment(certParams, this.signType);
+            }
+
+
+            this.encyptType = config.EncryptType;
+            this.encyptKey = config.EncryptKey;
+
+            this.webUtils = new WebUtils();
+            this.webUtils.Timeout = config.ConnectTimeout;
+            this.webUtils.ReadWriteTimeout = config.ReadTimeout;
+            this.webUtils.CustomHeaders = config.CustomHeaders;
+            if (!string.IsNullOrEmpty(config.ProxyHost))
+            {
+                this.webUtils.Proxy = new WebProxy(config.ProxyHost, config.ProxyPort);
+            }
+        }
 
 
         public DefaultAopClient(string serverUrl, string appId, string privateKeyPem)

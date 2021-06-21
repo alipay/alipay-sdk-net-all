@@ -194,35 +194,12 @@ gRzPVQGDdQUAA0cAMEQCICXvkFdEsB/civLi0vE8QRDA3dljv64T6aKAbsOonl8c
 AiBVtpMVM5HwOZ5CiF1o66GoUTcYNt3e2tS9Sp63PP7LLg==
 -----END CERTIFICATE-----";
 
-        [Test()]
-        public void should_return_true_when_use_ras_root_ca_check_rsa_root_ca()
-        {
-            Assert.AreEqual(AntCertificationUtil.IsTrusted(RsaRootCa, RsaRootCa), true);
-        }
-
-        [Test()]
-        public void should_return_true_when_use_rsa_root_ca_check_rsa_client_cert()
-        {
-            Assert.AreEqual(AntCertificationUtil.IsTrusted(RsaClientCert, RsaRootCa), true);
-        }
-
-        [Test()]
-        public void should_return_false_when_cert_date_invalid()
-        {
-            Assert.AreEqual(AntCertificationUtil.IsTrusted(BadDateRsaClientCert, RsaRootCa), false);
-        }
-
-        [Test()]
-        public void should_return_false_when_cert_sign_invalid()
-        {
-            Assert.AreEqual(AntCertificationUtil.IsTrusted(BadSignRsaClientCert, RsaRootCa), false);
-        }
 
 
         [Test()]
         public void should_get_correct_rsa_app_cert_sn()
         {
-            X509Certificate cert = AntCertificationUtil.ParseCert(File.ReadAllText(TestAccount.ProdCert.CertParams.AppCertPath));
+            X509Certificate cert = AntCertificationUtil.ParseCert(File.ReadAllText(TestAccount.ProdCert.GetConfig().AppCertPath));
             string sn = AntCertificationUtil.GetCertSN(cert);
 
             Assert.AreEqual(sn, "f8e04719723c16b0ff796dcd0d8d7641");
@@ -240,7 +217,7 @@ AiBVtpMVM5HwOZ5CiF1o66GoUTcYNt3e2tS9Sp63PP7LLg==
         [Test()]
         public void should_get_correct_root_rsa_cert_sn()
         {
-            string rootCertContent = File.ReadAllText(TestAccount.ProdCert.CertParams.RootCertPath);
+            string rootCertContent = File.ReadAllText(TestAccount.ProdCert.GetConfig().RootCertPath);
             string sn = AntCertificationUtil.GetRootCertSN(rootCertContent, "RSA");
 
             Assert.AreEqual(sn, "687b59193f3f462dd5336e5abf83c5d8_02941eef3187dddf3d3b83462e1dfcf6");
@@ -249,8 +226,8 @@ AiBVtpMVM5HwOZ5CiF1o66GoUTcYNt3e2tS9Sp63PP7LLg==
         [Test()]
         public void should_return_true_if_cert_trusted()
         {
-            string rootCertContent = File.ReadAllText(TestAccount.ProdCert.CertParams.RootCertPath);
-            string certContent = File.ReadAllText(TestAccount.ProdCert.CertParams.AlipayPublicCertPath);
+            string rootCertContent = File.ReadAllText(TestAccount.ProdCert.GetConfig().RootCertPath);
+            string certContent = File.ReadAllText(TestAccount.ProdCert.GetConfig().AlipayPublicCertPath);
             bool result = AntCertificationUtil.IsTrusted(certContent, rootCertContent);
 
             Assert.AreEqual(result, true);
@@ -259,8 +236,8 @@ AiBVtpMVM5HwOZ5CiF1o66GoUTcYNt3e2tS9Sp63PP7LLg==
         [Test()]
         public void should_return_false_if_cert_not_trusted()
         {
-            string rootCertContent = File.ReadAllText(TestAccount.ProdCert.CertParams.RootCertPath);
-            string certContent = File.ReadAllText(TestAccount.ProdCert.CertParams.AppCertPath);
+            string rootCertContent = File.ReadAllText(TestAccount.ProdCert.GetConfig().RootCertPath);
+            string certContent = File.ReadAllText(TestAccount.ProdCert.GetConfig().AppCertPath);
             bool result = AntCertificationUtil.IsTrusted(certContent, rootCertContent);
 
             Assert.AreEqual(result, false);
@@ -269,7 +246,7 @@ AiBVtpMVM5HwOZ5CiF1o66GoUTcYNt3e2tS9Sp63PP7LLg==
         [Test()]
         public void should_return_correct_pem_public_key_from_rsa_cert()
         {
-            string certContent = File.ReadAllText(TestAccount.ProdCert.CertParams.AlipayPublicCertPath);
+            string certContent = File.ReadAllText(TestAccount.ProdCert.GetConfig().AlipayPublicCertPath);
             X509Certificate cert = AntCertificationUtil.ParseCert(certContent);
             string pemPublicKey = AntCertificationUtil.ExtractPemPublicKeyFromCert(cert);
 

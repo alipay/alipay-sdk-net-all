@@ -67,5 +67,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("user_status")]
         public string UserStatus { get; set; }
+
+        /// <summary>
+        /// 支付宝号，由字母和数字组成
+        /// </summary>
+        [XmlElement("zid")]
+        public string Zid { get; set; }
     }
 }

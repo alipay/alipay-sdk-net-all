@@ -14,8 +14,7 @@ namespace Test
         [Test()]
         public void should_return_order_string_contains_app_cert_sn_and_root_cert_sn()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.Gateway, TestAccount.ProdCert.AppId,
-                TestAccount.ProdCert.AppPrivateKey, "json", "1.0", "RSA2", "utf-8", false, TestAccount.ProdCert.CertParams);
+            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.GetConfig());
 
             AlipayTradeAppPayRequest request = new AlipayTradeAppPayRequest();
             AlipayTradeAppPayModel model = new AlipayTradeAppPayModel();

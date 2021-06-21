@@ -120,6 +120,7 @@ namespace Aop.Api.Request
 		private string notifyUrl;
         private string returnUrl;
 		private AopObject bizModel;
+        private Dictionary<string, string> udfParams; //add user-defined text parameters
 
     	 public void SetNeedEncrypt(bool needEncrypt){
              this.needEncrypt=needEncrypt;
@@ -183,6 +184,15 @@ namespace Aop.Api.Request
             return "alipay.open.agent.zhimabrief.sign";
         }
 
+        public void PutOtherTextParam(string key, string value) 
+        {
+            if(this.udfParams == null) 
+            {
+                this.udfParams = new Dictionary<string, string>();
+            }
+            this.udfParams.Add(key, value);
+        }
+
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
@@ -201,6 +211,10 @@ namespace Aop.Api.Request
             parameters.Add("usage_scene", this.UsageScene);
             parameters.Add("web_sites", this.WebSites);
             parameters.Add("wechat_official_account_name", this.WechatOfficialAccountName);
+            if(udfParams != null) 
+            {
+                parameters.AddAll(this.udfParams);
+            }
             return parameters;
         }
 		

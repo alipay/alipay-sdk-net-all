@@ -61,6 +61,12 @@ namespace Aop.Api.Domain
         public List<EnviromentalInfoDTO> EnvironmentalInfo { get; set; }
 
         /// <summary>
+        /// 对接电子小票/无纸化小票能量发放时，必填; 其它场景，无需该 字段; 字段含义: 是否接入支付宝电子小票; "0":不接入(商户自己 有电子小票终端)；"1":接入; 接入场景:必须传入小票全量商品信 息，用于在支付宝侧电子小票阵地展示给到C端用户; 不接入的 商户且商户自己有终端实现了电子小票, 可以对接无纸化小票能
+        /// </summary>
+        [XmlElement("is_alipay_ticket")]
+        public string IsAlipayTicket { get; set; }
+
+        /// <summary>
         /// 商户商品信息列表; 电子小票场景时，必填
         /// </summary>
         [XmlArray("item_order_list")]

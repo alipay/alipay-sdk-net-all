@@ -59,6 +59,7 @@ namespace Aop.Api.Request
 		private string notifyUrl;
         private string returnUrl;
 		private AopObject bizModel;
+        private Dictionary<string, string> udfParams; //add user-defined text parameters
 
     	 public void SetNeedEncrypt(bool needEncrypt){
              this.needEncrypt=needEncrypt;
@@ -122,6 +123,15 @@ namespace Aop.Api.Request
             return "zhima.merchant.closeloop.data.upload";
         }
 
+        public void PutOtherTextParam(string key, string value) 
+        {
+            if(this.udfParams == null) 
+            {
+                this.udfParams = new Dictionary<string, string>();
+            }
+            this.udfParams.Add(key, value);
+        }
+
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
@@ -132,6 +142,10 @@ namespace Aop.Api.Request
             parameters.Add("primary_key_columns", this.PrimaryKeyColumns);
             parameters.Add("records", this.Records);
             parameters.Add("scene_code", this.SceneCode);
+            if(udfParams != null) 
+            {
+                parameters.AddAll(this.udfParams);
+            }
             return parameters;
         }
 		

@@ -23,7 +23,7 @@ namespace Aop.Api.Response
         public string Area { get; set; }
 
         /// <summary>
-        /// 用户头像地址
+        /// 用户头像地址。
         /// </summary>
         [XmlElement("avatar")]
         public string Avatar { get; set; }
@@ -212,7 +212,7 @@ namespace Aop.Api.Response
         public string Mobile { get; set; }
 
         /// <summary>
-        /// 用户昵称
+        /// 用户昵称。
         /// </summary>
         [XmlElement("nick_name")]
         public string NickName { get; set; }
@@ -261,7 +261,7 @@ namespace Aop.Api.Response
         public string Profession { get; set; }
 
         /// <summary>
-        /// 省份名称
+        /// 省份名称。
         /// </summary>
         [XmlElement("province")]
         public string Province { get; set; }
@@ -273,7 +273,7 @@ namespace Aop.Api.Response
         public string TaobaoId { get; set; }
 
         /// <summary>
-        /// 支付宝用户的userId
+        /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

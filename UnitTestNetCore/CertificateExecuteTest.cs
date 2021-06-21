@@ -3,6 +3,9 @@ using Aop.Api;
 using Aop.Api.Request;
 using Aop.Api.Response;
 using Aop.Api.Domain;
+using System.IO;
+using System.Collections.Generic;
+using System;
 
 namespace Test
 {
@@ -12,14 +15,78 @@ namespace Test
         [Test()]
         public void should_return_correct_response()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.Gateway, TestAccount.ProdCert.AppId,
-                TestAccount.ProdCert.AppPrivateKey, "json", "1.0", "RSA2", "utf-8", false, TestAccount.ProdCert.CertParams);
+            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.GetConfig());
             AlipayOpenOperationOpenbizmockBizQueryRequest request = GetRequest();
 
             AlipayOpenOperationOpenbizmockBizQueryResponse response = client.CertificateExecute(request);
 
             Assert.AreEqual(response.IsError, false);
             Assert.AreEqual(response.Code, "10000");
+        }
+
+        [Test()]
+        public void should_support_set_cert_content()
+        {
+            AlipayConfig config = TestAccount.ProdCert.GetConfig();
+            config.AppCertContent = File.ReadAllText(config.AppCertPath);
+            config.AppCertPath = null;
+            config.AlipayPublicCertContent = File.ReadAllText(config.AlipayPublicCertPath);
+            config.AlipayPublicCertPath = null;
+            config.RootCertContent = File.ReadAllText(config.RootCertPath);
+            config.RootCertPath = null;
+
+
+            IAopClient client = new DefaultAopClient(config);
+            AlipayOpenOperationOpenbizmockBizQueryRequest request = GetRequest();
+
+            AlipayOpenOperationOpenbizmockBizQueryResponse response = client.CertificateExecute(request);
+
+            Assert.AreEqual(response.IsError, false);
+            Assert.AreEqual(response.Code, "10000");
+        }
+
+        [Test()]
+        public void should_support_set_net_args()
+        {
+            AlipayConfig config = TestAccount.ProdCert.GetConfig();
+            config.ConnectTimeout = 5000;
+            config.ReadTimeout = 150000;
+            Dictionary<string, string> headers = new Dictionary<string, string>();
+            headers.Add("testKey", "testValue");
+            config.CustomHeaders = headers;
+
+
+            IAopClient client = new DefaultAopClient(config);
+            AlipayOpenOperationOpenbizmockBizQueryRequest request = GetRequest();
+
+            AlipayOpenOperationOpenbizmockBizQueryResponse response = client.CertificateExecute(request);
+
+            Assert.AreEqual(response.IsError, false);
+            Assert.AreEqual(response.Code, "10000");
+        }
+
+        [Test()]
+        public void should_support_set_net_proxy()
+        {
+            AlipayConfig config = TestAccount.ProdCert.GetConfig();
+            config.ProxyPort = 9800;
+            config.ProxyHost = "127.0.0.1";
+            Dictionary<string, string> headers = new Dictionary<string, string>();
+            headers.Add("testKey", "testValue");
+            config.CustomHeaders = headers;
+
+
+            IAopClient client = new DefaultAopClient(config);
+            AlipayOpenOperationOpenbizmockBizQueryRequest request = GetRequest();
+
+            try
+            {
+                AlipayOpenOperationOpenbizmockBizQueryResponse response = client.CertificateExecute(request);
+            }
+            catch (Exception e)
+            {
+                Assert.AreEqual(e.Message.Contains("Connection refused"), true);
+            }
         }
 
         //TODO:待相关依赖上线后替换为线上环境测试
@@ -50,8 +117,7 @@ namespace Test
         [Test()]
         public void should_be_able_to_send_token()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.Gateway, TestAccount.ProdCert.AppId,
-                   TestAccount.ProdCert.AppPrivateKey, "json", "1.0", "RSA2", "utf-8", false, TestAccount.ProdCert.CertParams);
+            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.GetConfig());
             AlipayOpenOperationOpenbizmockBizQueryResponse response = client.CertificateExecute(GetRequest(), "123", "456");
             Assert.AreEqual(response.SubMsg.Contains("无效的应用授权令牌"), true);
         }
@@ -59,11 +125,10 @@ namespace Test
         [Test()]
         public void should_auto_download_alipay_public_cert()
         {
-            CertParams certParams = TestAccount.ProdCert.CertParams;
+            AlipayConfig config = TestAccount.ProdCert.GetConfig();
             //将支付宝公钥证书路径故意设置成商户证书路径，以便触发自动下载支付宝公钥证书链路
-            certParams.AlipayPublicCertPath = certParams.AppCertPath;
-            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.Gateway, TestAccount.ProdCert.AppId,
-                TestAccount.ProdCert.AppPrivateKey, "json", "1.0", "RSA2", "utf-8", false, certParams);
+            config.AlipayPublicCertPath = config.AppCertPath;
+            IAopClient client = new DefaultAopClient(config);
             AlipayOpenOperationOpenbizmockBizQueryRequest request = GetRequest();
 
             AlipayOpenOperationOpenbizmockBizQueryResponse response = client.CertificateExecute(request);
@@ -90,8 +155,9 @@ namespace Test
         public void should_be_able_to_parse_xml_format_response()
         {
             //given
-            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.Gateway, TestAccount.ProdCert.AppId,
-                TestAccount.ProdCert.AppPrivateKey, "xml", "1.0", "RSA2", "utf-8", false, TestAccount.ProdCert.CertParams);
+            AlipayConfig config = TestAccount.ProdCert.GetConfig();
+            config.Format = "xml";
+            IAopClient client = new DefaultAopClient(config);
             AlipayOpenOperationOpenbizmockBizQueryRequest request = GetRequest();
             //when
             AlipayOpenOperationOpenbizmockBizQueryResponse response = client.CertificateExecute(request);
@@ -104,8 +170,9 @@ namespace Test
         {
             //given
             //访问线上一个没有设置公私钥对的APP
-            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.Gateway, TestAccount.NotSetKeyAppId,
-                    TestAccount.ProdCert.AppPrivateKey, "json", "1,0", "RSA2", "utf-8", false, TestAccount.ProdCert.CertParams);
+            AlipayConfig config = TestAccount.ProdCert.GetConfig();
+            config.AppId = TestAccount.NotSetKeyAppId;
+            IAopClient client = new DefaultAopClient(config);
             //when
             AlipayOpenOperationOpenbizmockBizQueryResponse response = client.CertificateExecute(GetRequest());
             //then
@@ -117,8 +184,7 @@ namespace Test
         public void should_get_exeception_when_call_normal_execuet()
         {
             //given
-            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.Gateway, TestAccount.ProdCert.AppId,
-               TestAccount.ProdCert.AppPrivateKey, "json", "1.0", "RSA2", "utf-8", false, TestAccount.ProdCert.CertParams);
+            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.GetConfig());
             AlipayOpenOperationOpenbizmockBizQueryRequest request = GetRequest();
 
             //then

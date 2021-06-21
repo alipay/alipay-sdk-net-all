@@ -28,5 +28,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("engine_type")]
         public string EngineType { get; set; }
+
+        /// <summary>
+        /// 展位可用性结果，描述当前入参是否存在可用展位
+        /// </summary>
+        [XmlElement("usable")]
+        public bool Usable { get; set; }
     }
 }

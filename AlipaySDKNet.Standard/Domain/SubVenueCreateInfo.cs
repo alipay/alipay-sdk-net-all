@@ -66,13 +66,19 @@ namespace Aop.Api.Domain
         public string OutSubVenueId { get; set; }
 
         /// <summary>
-        /// 收款方支付宝账户
+        /// 收款方支付宝账户（payment_method)为空或account时必传
         /// </summary>
         [XmlElement("payee_account")]
         public string PayeeAccount { get; set; }
 
         /// <summary>
-        /// 收款方式（indirect=间连/direct=直连）
+        /// 收款方式 空值/account：通过支付宝账号收款 smid：通过smid收款
+        /// </summary>
+        [XmlElement("payment_method")]
+        public string PaymentMethod { get; set; }
+
+        /// <summary>
+        /// 收款类型（indirect=间连/direct=直连） 直连：收款方为商户/场馆 间连：收款方为服务商
         /// </summary>
         [XmlElement("payment_type")]
         public string PaymentType { get; set; }
@@ -117,10 +123,16 @@ namespace Aop.Api.Domain
         public string RecPrice { get; set; }
 
         /// <summary>
-        /// 子场馆pid
+        /// 子场馆pid（payment_method为smid时必传）
         /// </summary>
         [XmlElement("sub_venue_pid")]
         public string SubVenuePid { get; set; }
+
+        /// <summary>
+        /// 子场馆商户二级smid（payment_method为smid时必传）
+        /// </summary>
+        [XmlElement("sub_venue_smid")]
+        public string SubVenueSmid { get; set; }
 
         /// <summary>
         /// 标签列表

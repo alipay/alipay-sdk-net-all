@@ -12,9 +12,7 @@ namespace Test
         [Test()]
         public void should_return_correct_signed_order_form()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             AlipayTradeWapPayRequest request = new AlipayTradeWapPayRequest();
             request.BizContent = "{" +
             "    \"body\":\"对一笔交易的具体描述信息。如果是多种商品，请将商品描述字符串累加传给body。\"," +
@@ -34,9 +32,7 @@ namespace Test
         [Test()]
         public void should_return_order_form_with_app_auth_token()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             AlipayTradeWapPayRequest request = new AlipayTradeWapPayRequest();
             request.BizContent = "{" +
             "    \"body\":\"对一笔交易的具体描述信息。如果是多种商品，请将商品描述字符串累加传给body。\"," +
@@ -57,9 +53,7 @@ namespace Test
         [Test()]
         public void should_return_order_form_with_access_token()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             AlipayTradeWapPayRequest request = new AlipayTradeWapPayRequest();
             request.BizContent = "{" +
             "    \"body\":\"对一笔交易的具体描述信息。如果是多种商品，请将商品描述字符串累加传给body。\"," +
@@ -80,9 +74,7 @@ namespace Test
         [Test()]
         public void should_return_order_form_with_access_token_and_app_auth_token()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             AlipayTradeWapPayRequest request = new AlipayTradeWapPayRequest();
             request.BizContent = "{" +
             "    \"body\":\"对一笔交易的具体描述信息。如果是多种商品，请将商品描述字符串累加传给body。\"," +
@@ -103,9 +95,7 @@ namespace Test
         [Test()]
         public void should_return_query_string_with_access_token_and_app_auth_token()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             AlipayTradeWapPayRequest request = new AlipayTradeWapPayRequest();
             request.BizContent = "{" +
             "    \"body\":\"对一笔交易的具体描述信息。如果是多种商品，请将商品描述字符串累加传给body。\"," +
@@ -126,9 +116,7 @@ namespace Test
         [Test()]
         public void should_return_order_string_with_correct_order_of_parameters()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             ParameterCaseMixingRequest request = new ParameterCaseMixingRequest();
             AlipayTradeAppPayResponse response = client.pageExecute(request, null, null, "GET");
 

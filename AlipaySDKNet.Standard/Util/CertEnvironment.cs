@@ -40,15 +40,40 @@ namespace Aop.Api.Util
         public CertEnvironment(CertParams certParams, string signType)
         {
             //解析支付宝根证书序列号
-            this.RootCertContent = File.ReadAllText(certParams.RootCertPath);
+            if (!string.IsNullOrEmpty(certParams.RootCertContent))
+            {
+                this.RootCertContent = certParams.RootCertContent;
+            }
+            else
+            {
+                this.RootCertContent = File.ReadAllText(certParams.RootCertPath);
+            }
+
             this.RootCertSN = AntCertificationUtil.GetRootCertSN(RootCertContent, signType);
 
             //解析应用证书序列号
-            X509Certificate appCert = AntCertificationUtil.ParseCert(File.ReadAllText(certParams.AppCertPath));
-            this.AppCertSN = AntCertificationUtil.GetCertSN(appCert);
+            if (!string.IsNullOrEmpty(certParams.AppCertContent))
+            {
+                X509Certificate appCert = AntCertificationUtil.ParseCert(certParams.AppCertContent);
+                this.AppCertSN = AntCertificationUtil.GetCertSN(appCert);
+            }
+            else
+            {
+                X509Certificate appCert = AntCertificationUtil.ParseCert(File.ReadAllText(certParams.AppCertPath));
+                this.AppCertSN = AntCertificationUtil.GetCertSN(appCert);
+            }
+
 
             //解析支付宝公钥证书序列号
-            X509Certificate alipayPublicKeyCert = AntCertificationUtil.ParseCert(File.ReadAllText(certParams.AlipayPublicCertPath));
+            X509Certificate alipayPublicKeyCert;
+            if (!string.IsNullOrEmpty(certParams.AlipayPublicCertContent))
+            {
+                alipayPublicKeyCert = AntCertificationUtil.ParseCert(certParams.AlipayPublicCertContent);
+            }
+            else
+            {
+                alipayPublicKeyCert = AntCertificationUtil.ParseCert(File.ReadAllText(certParams.AlipayPublicCertPath));
+            }
             string alipayPublicKeyCertSN = AntCertificationUtil.GetCertSN(alipayPublicKeyCert);
             //解析支付宝公钥
             string alipayPublicKey = AntCertificationUtil.ExtractPemPublicKeyFromCert(alipayPublicKeyCert);

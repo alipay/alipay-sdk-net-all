@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string GoodsNum { get; set; }
 
         /// <summary>
-        /// 商品图片（图片上传返回id）
+        /// 商品图片（图片上传返回material_key）
         /// </summary>
         [XmlElement("goods_pic_url")]
         public string GoodsPicUrl { get; set; }

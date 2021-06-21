@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string PayerAgentId { get; set; }
 
         /// <summary>
+        /// 汇款二级目的
+        /// </summary>
+        [XmlElement("sub_transfer_purpose")]
+        public string SubTransferPurpose { get; set; }
+
+        /// <summary>
         /// 汇款的金额
         /// </summary>
         [XmlElement("transfer_from_amount")]
@@ -68,6 +74,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("transfer_from_region")]
         public string TransferFromRegion { get; set; }
+
+        /// <summary>
+        /// 汇款目的
+        /// </summary>
+        [XmlElement("transfer_purpose")]
+        public string TransferPurpose { get; set; }
 
         /// <summary>
         /// 收款的金额

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 学校支付宝pid
+        /// 学校支付宝pid，直付通填写smid
         /// </summary>
         [XmlElement("school_pid")]
         public string SchoolPid { get; set; }

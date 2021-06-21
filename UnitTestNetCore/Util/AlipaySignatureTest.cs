@@ -12,7 +12,7 @@ namespace Test
         [Test()]
         public void should_return_correct_cert_sn()
         {
-            string sn = AlipaySignature.GetCertSN(TestAccount.ProdCert.CertParams.AppCertPath);
+            string sn = AlipaySignature.GetCertSN(TestAccount.ProdCert.GetConfig().AppCertPath);
             Assert.AreEqual(sn, "f8e04719723c16b0ff796dcd0d8d7641");
         }
 
@@ -264,11 +264,11 @@ namespace Test
                 { "测试Key1", "测试Value1" },
                 { "测试Key2", "测试Value2" }
             };
-            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.ProdCert.AppPrivateKey, "UTF-8", "RSA2", false));
+            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.ProdCert.GetConfig().PrivateKey, "UTF-8", "RSA2", false));
             parameters.Add("sign_type", "RSA2");
 
             //when
-            bool result = AlipaySignature.CertVerifyV1(parameters, TestAccount.ProdCert.CertParams.AppCertPath, "UTF-8", "RSA2");
+            bool result = AlipaySignature.CertVerifyV1(parameters, TestAccount.ProdCert.GetConfig().AppCertPath, "UTF-8", "RSA2");
 
             //then
             Assert.AreEqual(result, true);
@@ -284,10 +284,10 @@ namespace Test
                 { "测试Key2", "测试Value2" },
                 { "sign_type", "RSA2" }
             };
-            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.ProdCert.AppPrivateKey, "UTF-8", "RSA2", false));
+            parameters.Add("sign", AlipaySignature.Sign(parameters, TestAccount.ProdCert.GetConfig().PrivateKey, "UTF-8", "RSA2", false));
 
             //when
-            bool result = AlipaySignature.CertVerifyV2(parameters, TestAccount.ProdCert.CertParams.AppCertPath, "UTF-8", "RSA2");
+            bool result = AlipaySignature.CertVerifyV2(parameters, TestAccount.ProdCert.GetConfig().AppCertPath, "UTF-8", "RSA2");
 
             //then
             Assert.AreEqual(result, true);
@@ -315,8 +315,8 @@ namespace Test
         [Test]
         public void should_get_xml_contains_essential_nodes_after_encrypt_and_sign()
         {
-            string result = AlipaySignature.EncryptAndSign("test", TestAccount.Sandbox.AlipayPublicKey,
-                TestAccount.Sandbox.AppPrivateKey, "UTF-8", true, true, "RSA2", false);
+            string result = AlipaySignature.EncryptAndSign("test", TestAccount.Sandbox.GetConfig().AlipayPublicKey,
+                TestAccount.Sandbox.GetConfig().PrivateKey, "UTF-8", true, true, "RSA2", false);
 
             Assert.AreEqual(result.Contains("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"), true);
             Assert.AreEqual(result.Contains("<alipay>"), true);
@@ -336,7 +336,7 @@ namespace Test
             };
 
             AopException ex = Assert.Throws<AopException>(() => AlipaySignature.CheckSignAndDecrypt(
-                paramters, TestAccount.Sandbox.AlipayPublicKey, TestAccount.Sandbox.AppPrivateKey, true, true, "RSA", false));
+                paramters, TestAccount.Sandbox.GetConfig().AlipayPublicKey, TestAccount.Sandbox.GetConfig().PrivateKey, true, true, "RSA", false));
             Assert.AreEqual(ex.Message.Contains("rsaCheck failure"), true);
         }
     }

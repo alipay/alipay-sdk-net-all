@@ -195,6 +195,7 @@ namespace Aop.Api.Request
 		private string notifyUrl;
         private string returnUrl;
 		private AopObject bizModel;
+        private Dictionary<string, string> udfParams; //add user-defined text parameters
 
     	 public void SetNeedEncrypt(bool needEncrypt){
              this.needEncrypt=needEncrypt;
@@ -258,6 +259,15 @@ namespace Aop.Api.Request
             return "alipay.open.mini.version.audit.apply";
         }
 
+        public void PutOtherTextParam(string key, string value) 
+        {
+            if(this.udfParams == null) 
+            {
+                this.udfParams = new Dictionary<string, string>();
+            }
+            this.udfParams.Add(key, value);
+        }
+
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
@@ -280,6 +290,10 @@ namespace Aop.Api.Request
             parameters.Add("test_accout", this.TestAccout);
             parameters.Add("test_password", this.TestPassword);
             parameters.Add("version_desc", this.VersionDesc);
+            if(udfParams != null) 
+            {
+                parameters.AddAll(this.udfParams);
+            }
             return parameters;
         }
 		

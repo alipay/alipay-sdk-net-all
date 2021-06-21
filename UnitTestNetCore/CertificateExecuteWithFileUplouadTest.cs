@@ -14,8 +14,7 @@ namespace Test
         [Test()]
         public void should_be_able_to_upload_file()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.Gateway, TestAccount.ProdCert.AppId,
-                TestAccount.ProdCert.AppPrivateKey, "json", "1.0", "RSA2", "utf-8", false, TestAccount.ProdCert.CertParams);
+            IAopClient client = new DefaultAopClient(TestAccount.ProdCert.GetConfig());
 
             AlipayOfflineMaterialImageUploadRequest request = new AlipayOfflineMaterialImageUploadRequest();
             request.ImageType = "jpg";

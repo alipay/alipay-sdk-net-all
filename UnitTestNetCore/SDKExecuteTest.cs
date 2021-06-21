@@ -14,9 +14,7 @@ namespace Test
         [Test()]
         public void should_return_correct_signed_order_string()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             AlipayTradeAppPayRequest request = new AlipayTradeAppPayRequest();
             AlipayTradeAppPayModel model = new AlipayTradeAppPayModel();
             model.Body = "我是测试数据";
@@ -37,9 +35,7 @@ namespace Test
         [Test()]
         public void should_return_order_string_with_app_auth_token()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             AlipayTradeAppPayRequest request = new AlipayTradeAppPayRequest();
             AlipayTradeAppPayModel model = new AlipayTradeAppPayModel();
             model.Body = "我是测试数据";
@@ -60,11 +56,34 @@ namespace Test
         }
 
         [Test()]
+        public void should_return_order_string_with_udf_parames()
+        {
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
+            AlipayTradeAppPayRequest request = new AlipayTradeAppPayRequest();
+            AlipayTradeAppPayModel model = new AlipayTradeAppPayModel();
+            model.Body = "我是测试数据";
+            model.Subject = "App支付测试DoNet";
+            model.TotalAmount = "0.01";
+            model.ProductCode = "QUICK_MSECURITY_PAY";
+            model.OutTradeNo = "20170216test01";
+            model.TimeoutExpress = "30m";
+            request.SetBizModel(model);
+            request.SetNotifyUrl("http://www.test.notify");
+            request.PutOtherTextParam("test1", "value1");
+            request.PutOtherTextParam("test2", "value2");
+            AlipayTradeAppPayResponse response = client.SdkExecute(request);
+
+            String orderString = response.Body;
+
+            //必须含有自定义参数
+            Assert.AreEqual(orderString.Contains("test1=value1"), true);
+            Assert.AreEqual(orderString.Contains("test2=value2"), true);
+        }
+
+        [Test()]
         public void should_return_order_string_with_correct_order_of_parameters()
         {
-            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.Gateway, TestAccount.Sandbox.AppId,
-                TestAccount.Sandbox.AppPrivateKey, "json", "1.0", "RSA2", TestAccount.Sandbox.AlipayPublicKey,
-                "utf-8", false);
+            IAopClient client = new DefaultAopClient(TestAccount.Sandbox.GetConfig());
             ParameterCaseMixingRequest request = new ParameterCaseMixingRequest();
             AlipayTradeAppPayResponse response = client.SdkExecute(request);
 
