@@ -22,5 +22,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("result_action")]
         public string ResultAction { get; set; }
+
+        /// <summary>
+        /// 输出命中的标签，用逗号分割
+        /// </summary>
+        [XmlElement("risk_labels")]
+        public string RiskLabels { get; set; }
     }
 }

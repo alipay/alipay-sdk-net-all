@@ -1,0 +1,54 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayMarketingActivityOrdervoucherSendModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayMarketingActivityOrdervoucherSendModel : AopObject
+    {
+        /// <summary>
+        /// 优惠券活动id
+        /// </summary>
+        [XmlElement("activity_id")]
+        public string ActivityId { get; set; }
+
+        /// <summary>
+        /// 服务商发放商家券的时间。  格式为：yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [XmlElement("biz_dt")]
+        public string BizDt { get; set; }
+
+        /// <summary>
+        /// 用户领券之后在服务商(商户)侧提供的券详情展示页面。在支付宝卡包中展示链接，用户点击可以跳转到服务商券详情页。  限制: 该字段在兑换券场景下必传。
+        /// </summary>
+        [XmlElement("merchant_order_url")]
+        public string MerchantOrderUrl { get; set; }
+
+        /// <summary>
+        /// 外部业务单号，用作幂等控制。  幂等作用： 参数不变的情况下，再次请求返回与上一次相同的结果。  外部接入方需保证业务单号唯一
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 商家券售卖交易渠道，用于安全审核。  枚举值：  ZHIFUBAO_TRADE_CHANNEL： 支付宝交易渠道 限制: 商家券售卖场景必传。
+        /// </summary>
+        [XmlElement("trade_channel")]
+        public string TradeChannel { get; set; }
+
+        /// <summary>
+        /// 该交易在支付宝系统中的交易流水号。
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
+
+        /// <summary>
+        /// 支付宝用户id
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
+    }
+}

@@ -16,10 +16,22 @@ namespace Aop.Api.Domain
         public string BrandName { get; set; }
 
         /// <summary>
+        /// 用户证件号码哈希值（非车主）
+        /// </summary>
+        [XmlElement("cert_hash")]
+        public string CertHash { get; set; }
+
+        /// <summary>
         /// 认证结果：true、false
         /// </summary>
         [XmlElement("cert_result")]
         public string CertResult { get; set; }
+
+        /// <summary>
+        /// 用户证件类型（非车主）
+        /// </summary>
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
 
         /// <summary>
         /// 认证级别： V0-未认证、V1-已认证、V2-本
@@ -28,10 +40,40 @@ namespace Aop.Api.Domain
         public string Certification { get; set; }
 
         /// <summary>
+        /// 车辆所在城市code
+        /// </summary>
+        [XmlElement("city_code")]
+        public string CityCode { get; set; }
+
+        /// <summary>
+        /// 车辆所在城市名称
+        /// </summary>
+        [XmlElement("city_name")]
+        public string CityName { get; set; }
+
+        /// <summary>
         /// 发动机号码
         /// </summary>
         [XmlElement("engine_no")]
         public string EngineNo { get; set; }
+
+        /// <summary>
+        /// 用户证件号码哈希类型
+        /// </summary>
+        [XmlElement("hash_type")]
+        public string HashType { get; set; }
+
+        /// <summary>
+        /// 里程(万公里)
+        /// </summary>
+        [XmlElement("miles")]
+        public string Miles { get; set; }
+
+        /// <summary>
+        /// 车型id
+        /// </summary>
+        [XmlElement("model_id")]
+        public string ModelId { get; set; }
 
         /// <summary>
         /// 车型名称
@@ -62,6 +104,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("series_name")]
         public string SeriesName { get; set; }
+
+        /// <summary>
+        /// 用户支付宝id
+        /// </summary>
+        [XmlElement("uid")]
+        public string Uid { get; set; }
 
         /// <summary>
         /// 使用性质：F-非营运、H-货运、K-客运、Z-租赁、J-教练、O-其他

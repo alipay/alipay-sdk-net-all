@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bundle_prefix")]
         public string BundlePrefix { get; set; }
+
+        /// <summary>
+        /// 租户code，手淘租户:taobao，钉钉租户:dingding；参数不填默认为手淘租户
+        /// </summary>
+        [XmlElement("inst_code")]
+        public string InstCode { get; set; }
     }
 }

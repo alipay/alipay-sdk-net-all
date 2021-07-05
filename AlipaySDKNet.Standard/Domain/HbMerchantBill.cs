@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
+        /// 分期期数
+        /// </summary>
+        [XmlElement("period_num")]
+        public string PeriodNum { get; set; }
+
+        /// <summary>
         /// 订单金额
         /// </summary>
         [XmlElement("trade_amount")]
