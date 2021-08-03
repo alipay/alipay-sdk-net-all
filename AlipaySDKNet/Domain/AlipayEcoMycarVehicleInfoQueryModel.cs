@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plate_no")]
         public string PlateNo { get; set; }
+
+        /// <summary>
+        /// 车辆id
+        /// </summary>
+        [XmlElement("vi_id")]
+        public string ViId { get; set; }
     }
 }

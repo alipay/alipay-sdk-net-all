@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class ZhimaCreditEpCertificationQueryResponse : AopResponse
     {
         /// <summary>
+        /// 代理函有效访问地址，有效时间2分钟，接口返回后开始计时，字段SUCCESS为true时返回，特定场景下返回值为空
+        /// </summary>
+        [XmlElement("attorney_letter")]
+        public string AttorneyLetter { get; set; }
+
+        /// <summary>
         /// 授权状态，从用户授权开始计时，时间窗口3天 取值如下： SUCCESS，代表用户已授权 FAIL，代表用户未授权或授权失效
         /// </summary>
         [XmlElement("auth_status")]
@@ -37,6 +43,18 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("ep_name")]
         public string EpName { get; set; }
+
+        /// <summary>
+        /// 法人身份证反面有效访问定制，有效时间2分钟，接口返回后开始计时，特定场景下返回
+        /// </summary>
+        [XmlElement("legal_person_id_card_back")]
+        public string LegalPersonIdCardBack { get; set; }
+
+        /// <summary>
+        /// 法人身份证正面有效访问地址，有效时间2分钟，接口返回后开始计时，特定场景下返回
+        /// </summary>
+        [XmlElement("legal_person_id_card_front")]
+        public string LegalPersonIdCardFront { get; set; }
 
         /// <summary>
         /// 个人用户姓名，字段auth_status为SUCCESS时返回

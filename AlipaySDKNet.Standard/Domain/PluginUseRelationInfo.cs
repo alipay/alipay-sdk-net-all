@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,30 @@ namespace Aop.Api.Domain
     [Serializable]
     public class PluginUseRelationInfo : AopObject
     {
+        /// <summary>
+        /// 邀测驳回原因
+        /// </summary>
+        [XmlElement("beta_memo")]
+        public string BetaMemo { get; set; }
+
+        /// <summary>
+        /// 邀测插件版本号
+        /// </summary>
+        [XmlElement("beta_plugin_version")]
+        public string BetaPluginVersion { get; set; }
+
+        /// <summary>
+        /// 邀测二维码
+        /// </summary>
+        [XmlElement("beta_qr_code_url")]
+        public string BetaQrCodeUrl { get; set; }
+
+        /// <summary>
+        /// WAITCHECK-待确认;CHECKED-确认;REJECT-拒绝
+        /// </summary>
+        [XmlElement("beta_status")]
+        public string BetaStatus { get; set; }
+
         /// <summary>
         /// 激活时间
         /// </summary>
@@ -50,6 +75,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plugin_status")]
         public string PluginStatus { get; set; }
+
+        /// <summary>
+        /// 分端版本配置信息列表
+        /// </summary>
+        [XmlArray("plugin_use_config_info_list")]
+        [XmlArrayItem("plugin_use_config_info")]
+        public List<PluginUseConfigInfo> PluginUseConfigInfoList { get; set; }
 
         /// <summary>
         /// 插件版本

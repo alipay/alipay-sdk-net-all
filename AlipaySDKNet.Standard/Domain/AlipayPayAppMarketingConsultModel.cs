@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public List<string> ConfusedMobileList { get; set; }
 
         /// <summary>
-        /// 设备号密文，使用SHA256加密；设备号类型由device_type字段指定；（手机号、设备号或morse匿名查询，三种匹配方式至少有一种参数不能为空）
+        /// 设备号密文，使用SHA256加密；设备号类型由device_type字段指定；（设备号或morse匿名查询，两种匹配方式至少有一种参数不能为空）
         /// </summary>
         [XmlElement("device_id")]
         public string DeviceId { get; set; }
@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string DeviceType { get; set; }
 
         /// <summary>
-        /// 手机号md5值密文；（手机号、设备号或morse匿名查询，三种匹配方式至少有一种参数不能为空）
+        /// 手机号md5值密文；（已废弃不支持）
         /// </summary>
         [XmlElement("encrypted_mobile")]
         public string EncryptedMobile { get; set; }
@@ -59,6 +59,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("mobile")]
         public string Mobile { get; set; }
+
+        /// <summary>
+        /// 是否需要查询反作弊等级值，默认为false不查询
+        /// </summary>
+        [XmlElement("need_query_anti_rank")]
+        public string NeedQueryAntiRank { get; set; }
+
+        /// <summary>
+        /// 是否需要查询营销偏好等级值，默认为false不查询
+        /// </summary>
+        [XmlElement("need_query_marketing_rank")]
+        public string NeedQueryMarketingRank { get; set; }
 
         /// <summary>
         /// 是否需要返回标签信息；默认为false不返回
@@ -91,13 +103,13 @@ namespace Aop.Api.Domain
         public string SellerId { get; set; }
 
         /// <summary>
-        /// 订单总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]
+        /// 订单总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]（total_amount与undiscountable_amount两个字段需至少有一个不能为空）
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }
 
         /// <summary>
-        /// 不参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]
+        /// 不参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]（total_amount与undiscountable_amount两个字段需至少有一个不能为空）
         /// </summary>
         [XmlElement("undiscountable_amount")]
         public string UndiscountableAmount { get; set; }

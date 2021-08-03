@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayOverseasTransferCertifyResponse : AopResponse
     {
         /// <summary>
+        /// 是否有默认卡
+        /// </summary>
+        [XmlElement("has_default_card")]
+        public string HasDefaultCard { get; set; }
+
+        /// <summary>
         /// 透传信息
         /// </summary>
         [XmlElement("pass_through_info")]

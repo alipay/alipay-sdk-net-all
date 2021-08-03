@@ -89,5 +89,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
+
+        /// <summary>
+        /// ALL代表全场贴息 ORDER代表订单贴息，默认按照全场贴息处理
+        /// </summary>
+        [XmlElement("subsidy_scope")]
+        public string SubsidyScope { get; set; }
     }
 }

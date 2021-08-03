@@ -38,5 +38,35 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_biz_type")]
         public string SubBizType { get; set; }
+
+        /// <summary>
+        /// 待提现的银行卡账户名称
+        /// </summary>
+        [XmlElement("withdraw_account_name")]
+        public string WithdrawAccountName { get; set; }
+
+        /// <summary>
+        /// 待提现的银行卡账号
+        /// </summary>
+        [XmlElement("withdraw_account_no")]
+        public string WithdrawAccountNo { get; set; }
+
+        /// <summary>
+        /// 待提现的银行联行号
+        /// </summary>
+        [XmlElement("withdraw_bank_branch_code")]
+        public string WithdrawBankBranchCode { get; set; }
+
+        /// <summary>
+        /// 提现的银行机构id
+        /// </summary>
+        [XmlElement("withdraw_bank_inst_id")]
+        public string WithdrawBankInstId { get; set; }
+
+        /// <summary>
+        /// 待提现的银行卡类型 DC:借记卡 CC:贷记卡
+        /// </summary>
+        [XmlElement("withdraw_card_type")]
+        public string WithdrawCardType { get; set; }
     }
 }

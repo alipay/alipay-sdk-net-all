@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string BindingAlipayLogonId { get; set; }
 
         /// <summary>
-        /// 结算银行卡，如果结算到支付宝账号，则不需要填写。本业务当前只允许传入一张结算卡
+        /// 结算银行卡，如果结算到支付宝账号，则不需要填写。本业务当前只允许传入一张结算卡。个人类型商户不允许结算到银行卡
         /// </summary>
         [XmlArray("biz_cards")]
         [XmlArrayItem("settle_card_info")]
@@ -72,7 +72,7 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
-        /// 商户联系人信息。在本业务中，ContactInfo对象中联系人姓名，联系人类型、手机号必填，其他选填
+        /// 商户联系人信息。在本业务中，ContactInfo对象中联系人姓名，手机号必填，其他选填
         /// </summary>
         [XmlArray("contact_infos")]
         [XmlArrayItem("contact_info")]
@@ -140,7 +140,7 @@ namespace Aop.Api.Domain
         public string LicenseAuthLetterImage { get; set; }
 
         /// <summary>
-        /// 商户类别码mcc，参见https://gw.alipayobjects.com/os/bmw-prod/e5dbb27b-1d8d-442e-be9e-6e52971ce7c3.xlsx 特殊行业要按照MCC说明中的资质一栏上传辅助资质，辅助资质要在qualifications中上传，会有人工审核。
+        /// 商户类别码mcc，参见https://gw.alipayobjects.com/os/bmw-prod/b28421ce-0ddf-422f-9e9c-c2c3c7f30c73.xlsx 特殊行业要按照MCC说明中的资质一栏上传辅助资质，辅助资质要在qualifications中上传，会有人工审核。
         /// </summary>
         [XmlElement("mcc")]
         public string Mcc { get; set; }

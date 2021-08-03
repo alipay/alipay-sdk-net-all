@@ -16,19 +16,19 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 1:身份证  2:军官证  3:士兵证  8:台湾居民通行证  A:护照  B:户口簿  Z:其它证件
+        /// 1:身份证 2:军官证 3:士兵证 8:台湾居民通行证 B:户口簿 X:学工号 Z:其它证件
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
 
         /// <summary>
-        /// 采集人员的支付宝会员标识
+        /// 采集人员的支付宝会员标识。（当sub_code为SCHOOL_FACE_PASS_QUERY或SCHOOL_FACE_PASS_NAVIGATE时，当前参数必选）
         /// </summary>
         [XmlElement("operator_user_id")]
         public string OperatorUserId { get; set; }
 
         /// <summary>
-        /// 家长手机号码
+        /// 家长手机号码。（当sub_code为SCHOOL_FACE_PASS_QUERY或SCHOOL_FACE_PASS_NAVIGATE时，当前参数必选）
         /// </summary>
         [XmlElement("parent_phone")]
         public string ParentPhone { get; set; }

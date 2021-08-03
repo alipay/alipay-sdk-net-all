@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CodeType { get; set; }
 
         /// <summary>
+        /// 扩展信息，或落地到核销任务单上
+        /// </summary>
+        [XmlElement("ext")]
+        public string Ext { get; set; }
+
+        /// <summary>
         /// 业务发生时间，默认为接口调用时间
         /// </summary>
         [XmlElement("gmt_biz")]

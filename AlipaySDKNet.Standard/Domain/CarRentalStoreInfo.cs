@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string StoreName { get; set; }
 
         /// <summary>
-        /// 门店联系方式
+        /// 门店电话 支持固话或者个人用户手机号
         /// </summary>
         [XmlElement("store_phone")]
         public string StorePhone { get; set; }

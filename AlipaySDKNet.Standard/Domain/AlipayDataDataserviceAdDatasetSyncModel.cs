@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string DataType { get; set; }
 
         /// <summary>
+        /// 商户id
+        /// </summary>
+        [XmlElement("principal_id")]
+        public string PrincipalId { get; set; }
+
+        /// <summary>
         /// 商户在支付宝灯火pb侧的唯一标志
         /// </summary>
         [XmlElement("principal_tag")]

@@ -10,6 +10,24 @@ namespace Aop.Api.Domain
     public class ContentRiskDetail : AopObject
     {
         /// <summary>
+        /// 规则编码
+        /// </summary>
+        [XmlElement("code")]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// 当前规则对应的扩展信息
+        /// </summary>
+        [XmlElement("ext_properties")]
+        public string ExtProperties { get; set; }
+
+        /// <summary>
+        /// 当前规则对应的转换后的原始审核素材
+        /// </summary>
+        [XmlElement("generated_file")]
+        public string GeneratedFile { get; set; }
+
+        /// <summary>
         /// 规则名称
         /// </summary>
         [XmlElement("name")]

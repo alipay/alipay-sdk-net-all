@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 转化金额，单位分
+        /// </summary>
+        [XmlElement("conversion_amount")]
+        public string ConversionAmount { get; set; }
+
+        /// <summary>
         /// 转化事件ID
         /// </summary>
         [XmlElement("conversion_id")]
@@ -41,6 +47,12 @@ namespace Aop.Api.Domain
         public string CreativeId { get; set; }
 
         /// <summary>
+        /// 数据集id
+        /// </summary>
+        [XmlElement("data_id")]
+        public string DataId { get; set; }
+
+        /// <summary>
         /// 单元ID
         /// </summary>
         [XmlElement("group_id")]
@@ -51,6 +63,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plan_id")]
         public string PlanId { get; set; }
+
+        /// <summary>
+        /// 商户在灯火pb端的id, 可代替principal_tag
+        /// </summary>
+        [XmlElement("principal_id")]
+        public string PrincipalId { get; set; }
 
         /// <summary>
         /// 商家标志
@@ -76,5 +94,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("uuid")]
         public string Uuid { get; set; }
+
+        /// <summary>
+        /// PID : 2088pid PHONE : 手机号
+        /// </summary>
+        [XmlElement("uuid_type")]
+        public string UuidType { get; set; }
     }
 }

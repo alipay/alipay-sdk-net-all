@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 成员邀请接口扩展字段
+        /// </summary>
+        [XmlElement("business_params")]
+        public InviteMemberBusinessParamsDTO BusinessParams { get; set; }
+
+        /// <summary>
         /// 成员账号： identity_type是ALIPAY_USER_ID填支付宝会员ID（2088开头）； 是ALIPAY_LOGON_ID 填支付宝登录号
         /// </summary>
         [XmlElement("identity")]

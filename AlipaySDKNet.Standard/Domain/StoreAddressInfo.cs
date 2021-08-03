@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string Address { get; set; }
 
         /// <summary>
-        /// 门店维度
+        /// 高德门店维度
         /// </summary>
         [XmlElement("latitude")]
         public string Latitude { get; set; }
 
         /// <summary>
-        /// 门店经度
+        /// 高德门店经度
         /// </summary>
         [XmlElement("longitude")]
         public string Longitude { get; set; }

@@ -35,6 +35,13 @@ namespace Aop.Api.Response
         public string OrderStatus { get; set; }
 
         /// <summary>
+        /// 申请单中每个产品的签约状态
+        /// </summary>
+        [XmlArray("product_agent_status_infos")]
+        [XmlArrayItem("product_agent_status_info")]
+        public List<ProductAgentStatusInfo> ProductAgentStatusInfos { get; set; }
+
+        /// <summary>
         /// 审核失败的拒绝原因，只有审核失败才会返回该值
         /// </summary>
         [XmlElement("reject_reason")]

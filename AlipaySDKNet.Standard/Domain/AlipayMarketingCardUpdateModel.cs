@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public McardStylInfo McardStyleInfo { get; set; }
 
         /// <summary>
+        /// 商家会员卡消息信息
+        /// </summary>
+        [XmlElement("merchant_card_msg_info")]
+        public MerchantCardMsgInfo MerchantCardMsgInfo { get; set; }
+
+        /// <summary>
         /// 注意：此字段已废弃。 卡信息变更通知消息 1、在列表中定义的消息，才会发送给用户，消息格式一定。 2、根据卡信息变更情况，一次可发送多个消息
         /// </summary>
         [XmlArray("notify_messages")]

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string CanBorrow { get; set; }
 
         /// <summary>
-        /// 充电宝机柜总共可以借还的充电宝数量（一共能放几个充电宝）.
+        /// 充电宝机柜总共可以借还的充电宝数量（一共能放几个充电宝).如无法统计可以不传
         /// </summary>
         [XmlElement("can_borrow_cnt")]
         public string CanBorrowCnt { get; set; }

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ExchangeRate { get; set; }
 
         /// <summary>
+        /// 扩展信息
+        /// </summary>
+        [XmlElement("extend_info")]
+        public string ExtendInfo { get; set; }
+
+        /// <summary>
         /// 登录ID
         /// </summary>
         [XmlElement("logon_id")]

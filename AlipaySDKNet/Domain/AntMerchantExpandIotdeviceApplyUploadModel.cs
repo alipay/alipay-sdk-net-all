@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandIotdeviceApplyUploadModel : AopObject
     {
         /// <summary>
-        /// 代申请商家支付宝账号账号
+        /// 代申请商家支付宝账号PID(2088开头)
         /// </summary>
         [XmlElement("agent_alipay_id")]
         public string AgentAlipayId { get; set; }
@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 作业支付宝账号，蚂蚁作业小二身份标识（内部工号）、服务商作业小二身份标识（支付宝账号）
+        /// 作业支付宝账号PID(2088开头)，蚂蚁作业小二身份标识（内部工号）、服务商作业小二身份标识（支付宝账号）
         /// </summary>
         [XmlElement("operated_alipay_id")]
         public string OperatedAlipayId { get; set; }
@@ -150,7 +150,7 @@ namespace Aop.Api.Domain
         public OrderShop Shop { get; set; }
 
         /// <summary>
-        /// 签约支付宝账号: 商家支付宝账号（用于与蚂蚁签约的支付宝账号）、 外部服务商支付宝账号（用于与蚂蚁签约的支付宝账号）
+        /// 签约支付宝账号PID(2088开头): 商家支付宝账号（用于与蚂蚁签约的支付宝账号）、 外部服务商支付宝账号（用于与蚂蚁签约的支付宝账号）
         /// </summary>
         [XmlElement("signed_alipay_id")]
         public string SignedAlipayId { get; set; }

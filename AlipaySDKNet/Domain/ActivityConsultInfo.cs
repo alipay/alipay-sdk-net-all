@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ActivityId { get; set; }
 
         /// <summary>
-        /// 错误码：领取超限(RECEIVE_LIMIT_EXCEEDED)，券余量不足(VOUCHER_INSUFFICIENT_EXCEPTION)，通用领取异常(RECEIVE_FAIL_ERROR)
+        /// 错误码：领取超限(RECEIVE_LIMIT_EXCEEDED)，券余量不足(VOUCHER_INSUFFICIENT_EXCEPTION)，活动未处于有效期内(ACTIVITY_NOT_IN_TIME_EXCEPTION)，通用领取异常(RECEIVE_FAIL_ERROR)
         /// </summary>
         [XmlElement("error_code")]
         public string ErrorCode { get; set; }

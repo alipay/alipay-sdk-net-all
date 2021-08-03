@@ -16,10 +16,16 @@ namespace Aop.Api.Domain
         public string ActivityName { get; set; }
 
         /// <summary>
-        /// 商家券活动归属的商户信息。  说明： 如果该复杂对象不填。则默认为该商家券活动的归属者是调用者本人。 如果填写，则认为该商家券活动的归属者是该商户。
+        /// 商家券活动归属的商户信息。  说明： 如果该复杂对象不填。则默认为该商家券活动的归属者是调用者本人。 如果填写，则认为该商家券活动的归属者是该商户。  限制:服务商身份接入时必传
         /// </summary>
         [XmlElement("belong_merchant_info")]
         public BelongMerchantInfo BelongMerchantInfo { get; set; }
+
+        /// <summary>
+        /// 商家券业务标签，影响商家券对C端用户的展示形式。  枚举值 兑换券团购场景 GROUP_BUY_EXCHANGE_VOUCHER 兑换券代金场景 FIX_EXCHANGE_VOUCHER
+        /// </summary>
+        [XmlElement("biz_tag")]
+        public string BizTag { get; set; }
 
         /// <summary>
         /// 码模式。  枚举值： MERCHANT_UPLOAD：商户上传自定义code，发券时系统随机选取上传的券code发放
@@ -28,7 +34,7 @@ namespace Aop.Api.Domain
         public string CodeMode { get; set; }
 
         /// <summary>
-        /// 用户引导相关配置
+        /// 自定义入口
         /// </summary>
         [XmlElement("customer_guide")]
         public CustomerGuide CustomerGuide { get; set; }
@@ -64,7 +70,7 @@ namespace Aop.Api.Domain
         public VoucherSendRuleDetail VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 券类型。  枚举值： FIX_VOUCHER：满减券。
+        /// 券类型。  枚举值： FIX_VOUCHER：满减券  EXCHANGE_VOUCHER: 兑换券
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

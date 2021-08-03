@@ -74,5 +74,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 体验包
+        /// </summary>
+        [XmlElement("trial_package")]
+        public MiniAppPackageInfo TrialPackage { get; set; }
     }
 }

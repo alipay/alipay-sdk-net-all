@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类型（"1","居民身份证"）
+        /// 证件类型（"1","居民身份证"，"X":"学工号"）
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }

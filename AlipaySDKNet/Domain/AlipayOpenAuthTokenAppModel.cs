@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAuthTokenAppModel : AopObject
     {
         /// <summary>
-        /// 授权码，应用授权后得到。本参数在 grant_type 为 authorization_code 时必填；为 refresh_token 时不填。
+        /// 应用授权码，传入应用授权后得到的  app_auth_code。 说明： grant_type 为 authorization_code 时，本参数必填； grant_type 为 refresh_token 时不填。
         /// </summary>
         [XmlElement("code")]
         public string Code { get; set; }

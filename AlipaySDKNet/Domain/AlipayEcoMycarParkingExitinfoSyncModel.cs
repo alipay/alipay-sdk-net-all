@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayEcoMycarParkingExitinfoSyncModel : AopObject
     {
         /// <summary>
+        /// 实际金额
+        /// </summary>
+        [XmlElement("actual_amount")]
+        public string ActualAmount { get; set; }
+
+        /// <summary>
         /// 车牌颜色，枚举支持： *BLUE：蓝。 *GREEN：绿。 *YELLOW：黄。 *WHITE：白。 *BLACK：黑。 *LIMEGREEN：黄绿色。
         /// </summary>
         [XmlElement("car_color")]
@@ -22,10 +28,28 @@ namespace Aop.Api.Domain
         public string CarNumber { get; set; }
 
         /// <summary>
+        /// 折扣金额
+        /// </summary>
+        [XmlElement("discount_amount")]
+        public string DiscountAmount { get; set; }
+
+        /// <summary>
         /// 用于识别车辆出口，多出入口车场适用
         /// </summary>
         [XmlElement("exit_id")]
         public string ExitId { get; set; }
+
+        /// <summary>
+        /// 智能助理当前的跳转链接
+        /// </summary>
+        [XmlElement("isv_url")]
+        public string IsvUrl { get; set; }
+
+        /// <summary>
+        /// 订单总金额
+        /// </summary>
+        [XmlElement("order_amount")]
+        public string OrderAmount { get; set; }
 
         /// <summary>
         /// 车辆离场时间，格式"YYYY-MM-DD HH:mm:ss"，24小时制

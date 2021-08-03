@@ -358,7 +358,7 @@ namespace Aop.Api.Parser
             int signDataStartIndex = indexOfRootNode + rootNode.Length + 2;
             int indexOfSign = body.IndexOf("\"" + AlipayConstants.SIGN + "\"", StringComparison.Ordinal);
 
-            int signDataEndIndex = indexOfSign - 1;
+            int signDataEndIndex = extractJsonBase64ValueEndPosition(body, signDataStartIndex);
 
             if (signDataEndIndex < 0)
             {
@@ -376,6 +376,20 @@ namespace Aop.Api.Parser
 
 
             return item;
+        }
+
+        private static int extractJsonBase64ValueEndPosition(String responseString, int beginPosition)
+        {
+            for (int index = beginPosition; index < responseString.Length; ++index)
+            {
+                Char[] chars = responseString.ToCharArray();
+                if (chars[index] == '"' && index != beginPosition)
+                {
+                    return index + 1;
+                }
+            }
+
+            return responseString.Length;
         }
     }
 }

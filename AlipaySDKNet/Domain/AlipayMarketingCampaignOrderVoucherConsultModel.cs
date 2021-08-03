@@ -31,7 +31,7 @@ namespace Aop.Api.Domain
         public List<string> SceneCode { get; set; }
 
         /// <summary>
-        /// 券指定的核销appid
+        /// 券指定的核销appid（如果配券时指定了核销范围为线上小程序及相应的appid则此处必传）
         /// </summary>
         [XmlElement("specified_app_id")]
         public string SpecifiedAppId { get; set; }

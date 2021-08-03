@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -12,8 +13,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 账单列表
         /// </summary>
-        [XmlElement("external_bill_list")]
-        public ExternalBillInfoResult ExternalBillList { get; set; }
+        [XmlArray("external_bill_list")]
+        [XmlArrayItem("external_bill_info_result")]
+        public List<ExternalBillInfoResult> ExternalBillList { get; set; }
 
         /// <summary>
         /// 当前页码
