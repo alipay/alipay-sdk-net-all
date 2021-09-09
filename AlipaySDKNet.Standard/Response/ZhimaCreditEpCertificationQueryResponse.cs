@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class ZhimaCreditEpCertificationQueryResponse : AopResponse
     {
         /// <summary>
-        /// 代理函有效访问地址，有效时间2分钟，接口返回后开始计时，字段SUCCESS为true时返回，特定场景下返回值为空
+        /// 代理函有效访问地址，有效时间2分钟，接口返回后开始计时，auth_status为SUCCESS时返回，特定场景下返回
         /// </summary>
         [XmlElement("attorney_letter")]
         public string AttorneyLetter { get; set; }
@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string AuthStatus { get; set; }
 
         /// <summary>
-        /// 营业执照有效访问地址，有效时间2分钟，接口返回后开始计时，字段SUCCESS为true时返回，特定场景下返回值为空
+        /// 营业执照有效访问地址，有效时间2分钟，接口返回后开始计时，字段auth_status为SUCCESS时返回，特定场景下返回
         /// </summary>
         [XmlElement("business_license")]
         public string BusinessLicense { get; set; }
@@ -45,13 +45,13 @@ namespace Aop.Api.Response
         public string EpName { get; set; }
 
         /// <summary>
-        /// 法人身份证反面有效访问定制，有效时间2分钟，接口返回后开始计时，特定场景下返回
+        /// 法人身份证反面有效访问定制，有效时间2分钟，接口返回后开始计时，auth_status为SUCCESS时返回，特定场景下返回
         /// </summary>
         [XmlElement("legal_person_id_card_back")]
         public string LegalPersonIdCardBack { get; set; }
 
         /// <summary>
-        /// 法人身份证正面有效访问地址，有效时间2分钟，接口返回后开始计时，特定场景下返回
+        /// 法人身份证正面有效访问地址，有效时间2分钟，接口返回后开始计时，auth_status为SUCCESS时返回，特定场景下返回
         /// </summary>
         [XmlElement("legal_person_id_card_front")]
         public string LegalPersonIdCardFront { get; set; }

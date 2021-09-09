@@ -20,5 +20,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("ext_card_info")]
         public ExtCardInfo ExtCardInfo { get; set; }
+
+        /// <summary>
+        /// 当前支付宝账户的实时冻结余额
+        /// </summary>
+        [XmlElement("freeze_amount")]
+        public string FreezeAmount { get; set; }
     }
 }

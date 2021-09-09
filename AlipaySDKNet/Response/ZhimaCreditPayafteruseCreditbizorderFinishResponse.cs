@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class ZhimaCreditPayafteruseCreditbizorderFinishResponse : AopResponse
     {
         /// <summary>
-        /// 芝麻后付订单号
+        /// 信用服务订单号
         /// </summary>
         [XmlElement("credit_biz_order_id")]
         public string CreditBizOrderId { get; set; }

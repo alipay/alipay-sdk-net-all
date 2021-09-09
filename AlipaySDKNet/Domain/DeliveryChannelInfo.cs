@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DeliveryChannelInfo : AopObject
     {
         /// <summary>
-        /// 展位码:boothCode表达的是具体渠道所属的展位码。例如：支付结果页PAYMENT_RESULT
+        /// 展位码:boothCode表达的是具体渠道所属的展位码。例如：支付结果页PAY_RESULT
         /// </summary>
         [XmlElement("booth_code")]
         public string BoothCode { get; set; }

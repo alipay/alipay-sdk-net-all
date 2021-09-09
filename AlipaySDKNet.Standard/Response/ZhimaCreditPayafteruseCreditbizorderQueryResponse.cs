@@ -15,13 +15,13 @@ namespace Aop.Api.Response
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// 芝麻开通协议号
+        /// 芝麻先用后付开通协议号
         /// </summary>
         [XmlElement("credit_agreement_id")]
         public string CreditAgreementId { get; set; }
 
         /// <summary>
-        /// 先享后付记账单号
+        /// 信用服务订单号
         /// </summary>
         [XmlElement("credit_biz_order_id")]
         public string CreditBizOrderId { get; set; }
@@ -39,13 +39,13 @@ namespace Aop.Api.Response
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 先享后付记账单冻结金额
+        /// 信用服务订单冻结金额
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }
 
         /// <summary>
-        /// 记账单交易号
+        /// 支付宝交易号
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

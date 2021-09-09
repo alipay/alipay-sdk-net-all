@@ -40,5 +40,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 支付宝uid
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

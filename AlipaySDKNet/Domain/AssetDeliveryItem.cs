@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string AssignOutOrderId { get; set; }
 
         /// <summary>
+        /// 业务线
+        /// </summary>
+        [XmlElement("biz_line")]
+        public string BizLine { get; set; }
+
+        /// <summary>
         /// 物料渠道标识
         /// </summary>
         [XmlElement("biz_tag")]
@@ -86,6 +92,30 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("delivery_process_supplier_name")]
         public string DeliveryProcessSupplierName { get; set; }
+
+        /// <summary>
+        /// 物流商全称
+        /// </summary>
+        [XmlElement("delivery_supplier_full_name")]
+        public string DeliverySupplierFullName { get; set; }
+
+        /// <summary>
+        /// 物流商ID
+        /// </summary>
+        [XmlElement("delivery_supplier_id")]
+        public string DeliverySupplierId { get; set; }
+
+        /// <summary>
+        /// 物流商名称
+        /// </summary>
+        [XmlElement("delivery_supplier_name")]
+        public string DeliverySupplierName { get; set; }
+
+        /// <summary>
+        /// 扩展信息
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
 
         /// <summary>
         /// 发送地址

@@ -96,6 +96,12 @@ namespace Aop.Api.Response
         public string TimeCards { get; set; }
 
         /// <summary>
+        /// 天猫商品ID
+        /// </summary>
+        [XmlElement("tm_item_id")]
+        public string TmItemId { get; set; }
+
+        /// <summary>
         /// 非次卡场景，表示同一订单下同类凭证的总份数；次卡场景，表示次卡原始总份数
         /// </summary>
         [XmlElement("total_quantity")]

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public long PageNum { get; set; }
 
         /// <summary>
-        /// 每页查询的个数
+        /// 每页查询的个数，最大值为 100。
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

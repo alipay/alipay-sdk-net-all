@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class ZhimaCreditPayafteruseCreditbizorderFinishModel : AopObject
     {
         /// <summary>
-        /// 芝麻后付订单号
+        /// 信用服务订单号
         /// </summary>
         [XmlElement("credit_biz_order_id")]
         public string CreditBizOrderId { get; set; }
 
         /// <summary>
-        /// 用户此订单是否守约
+        /// 用户此订单是否守约。传true时，芝麻侧会显示用户该笔订单是守约完结的；传false时，芝麻侧会显示用户该笔订单取消。
         /// </summary>
         [XmlElement("is_fulfilled")]
         public string IsFulfilled { get; set; }

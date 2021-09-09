@@ -228,6 +228,20 @@ namespace Aop.Api.Domain
         public MultiCurrencyMoneyOpenApi RedAmt { get; set; }
 
         /// <summary>
+        /// 发票如果有关联的蓝票则显示发票关联的蓝票信息
+        /// </summary>
+        [XmlArray("rel_blue_invoices")]
+        [XmlArrayItem("ar_rel_invoice_open_api_response")]
+        public List<ArRelInvoiceOpenApiResponse> RelBlueInvoices { get; set; }
+
+        /// <summary>
+        /// 如果发票有关联的红票则为关联的红票的信息
+        /// </summary>
+        [XmlArray("rel_red_invoices")]
+        [XmlArrayItem("ar_rel_invoice_open_api_response")]
+        public List<ArRelInvoiceOpenApiResponse> RelRedInvoices { get; set; }
+
+        /// <summary>
         /// 复核人
         /// </summary>
         [XmlElement("reviewer")]

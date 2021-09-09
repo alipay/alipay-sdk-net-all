@@ -120,6 +120,12 @@ namespace Aop.Api.Domain
         public string Province { get; set; }
 
         /// <summary>
+        /// 学校编号  SV发送模式下必传
+        /// </summary>
+        [XmlElement("school_code")]
+        public string SchoolCode { get; set; }
+
+        /// <summary>
         /// 学校编号，需保证唯一，公立学校建议用办学许可证号，私立学校用组织机构代码证。 对应直付通进件接口中external_id。
         /// </summary>
         [XmlElement("school_external_id")]
@@ -150,13 +156,13 @@ namespace Aop.Api.Domain
         public string SchoolType { get; set; }
 
         /// <summary>
-        /// 教育缴费平台的账单来源。1-ISV发送；2-钉钉同步
+        /// 教育缴费平台的账单来源。7-ISV发送；2-钉钉同步
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }
 
         /// <summary>
-        /// 学生编号。只支持字母和数字类型，一般以教育局学号为准，作为学生的唯一标识。
+        /// 学生编号。只支持字母和数字类型，一般以教育局学号为准，作为学生的唯一标识。钉钉必传，isv来源学生编号和家长手机号必传一个
         /// </summary>
         [XmlElement("student_code")]
         public string StudentCode { get; set; }
@@ -166,6 +172,30 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("student_name")]
         public string StudentName { get; set; }
+
+        /// <summary>
+        /// 子机构名称
+        /// </summary>
+        [XmlElement("sub_orgname")]
+        public string SubOrgname { get; set; }
+
+        /// <summary>
+        /// 子机构类型 枚举值如下： 0:幼儿园 1:小学 2:初中 3:高中 4:大学 5:中职中专 6:培训机构 7:高职高专 8:成人教育、函授等 10.政务机关
+        /// </summary>
+        [XmlElement("sub_orgtype")]
+        public string SubOrgtype { get; set; }
+
+        /// <summary>
+        /// 返佣标识码。根据具体场景传递对应值。智能账单场景：edu_trade_sync
+        /// </summary>
+        [XmlElement("sys_service_param")]
+        public string SysServiceParam { get; set; }
+
+        /// <summary>
+        /// 返佣字段
+        /// </summary>
+        [XmlElement("sys_service_provider_id")]
+        public string SysServiceProviderId { get; set; }
 
         /// <summary>
         /// 缴费账单名称
@@ -186,7 +216,7 @@ namespace Aop.Api.Domain
         public string TransCurrency { get; set; }
 
         /// <summary>
-        /// 为学生缴费的家长信息
+        /// 为学生缴费的家长信息 钉钉必传，isv来源学生编号和家长手机号必传一个
         /// </summary>
         [XmlElement("user")]
         public UserDetails User { get; set; }

@@ -108,6 +108,12 @@ namespace Aop.Api.Response
         public List<KbTicketUseDetail> TicketUseDetails { get; set; }
 
         /// <summary>
+        /// 天猫商品ID
+        /// </summary>
+        [XmlElement("tm_item_id")]
+        public string TmItemId { get; set; }
+
+        /// <summary>
         /// 券核销时间
         /// </summary>
         [XmlElement("use_date")]

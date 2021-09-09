@@ -35,6 +35,12 @@ namespace Aop.Api.Response
         public string RiskLevel { get; set; }
 
         /// <summary>
+        /// 用户风险预测结果，包括用户拒付风险等级、用户绑定手机号被二次放号风险等级。
+        /// </summary>
+        [XmlElement("user_risk_prediction")]
+        public UserRiskPrediction UserRiskPrediction { get; set; }
+
+        /// <summary>
         /// 用户剩余的总待还金额，无论当前用户是否允许垫资，都会返回改属性
         /// </summary>
         [XmlElement("wait_repayment_amount")]

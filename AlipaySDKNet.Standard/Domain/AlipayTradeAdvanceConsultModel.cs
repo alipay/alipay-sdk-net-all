@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string IndustryProductCode { get; set; }
 
         /// <summary>
+        /// 是否需要进行用户风险预测
+        /// </summary>
+        [XmlElement("need_user_risk_prediction")]
+        public string NeedUserRiskPrediction { get; set; }
+
+        /// <summary>
         /// 商户请求时的外部订单号，在花芝场景下非空。
         /// </summary>
         [XmlElement("out_trade_no")]
@@ -56,5 +62,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_merchant_type")]
         public string SubMerchantType { get; set; }
+
+        /// <summary>
+        /// 交易信息摘要，需要进行用户风险预测时可传，用于结合场景的更加精细的预测。具体信息结构服务接入前咨询约定。
+        /// </summary>
+        [XmlElement("trade_digest")]
+        public string TradeDigest { get; set; }
+
+        /// <summary>
+        /// 用户在外部域账号系统绑定的手机号，需要进行用户风险预测时必传，用于预测用户是否面临被二次放号的场景。使用时需要对请求加密，加密后请求在公网传输时为加密文本。详见：https://opendocs.alipay.com/open/common/104567；https://opendocs.alipay.com/isv/grefvl/getaes
+        /// </summary>
+        [XmlElement("user_out_binding_phone")]
+        public string UserOutBindingPhone { get; set; }
     }
 }

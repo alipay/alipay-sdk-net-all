@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string RefundAmount { get; set; }
 
         /// <summary>
+        /// 芝麻GO退款生成的内部唯一流水，外部商户可以拿这个参数进行对账
+        /// </summary>
+        [XmlElement("refund_opt_no")]
+        public string RefundOptNo { get; set; }
+
+        /// <summary>
         /// 此字段含义，商家接入时需咨询对接技术。
         /// </summary>
         [XmlElement("retry")]

@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class QueryGroup : AopObject
     {
         /// <summary>
+        /// 人群中包含人数
+        /// </summary>
+        [XmlElement("count")]
+        public long Count { get; set; }
+
+        /// <summary>
         /// 分组id
         /// </summary>
         [XmlElement("id")]

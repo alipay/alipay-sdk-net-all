@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// 租车固定为CAR_RENTAL
+        /// 服务类型 租车固定为CAR_RENTAL
         /// </summary>
         [XmlElement("service_type")]
         public string ServiceType { get; set; }

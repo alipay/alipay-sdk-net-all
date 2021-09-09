@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayTradeSettleReceivablesQueryResponse : AopResponse
     {
         /// <summary>
+        /// 结算在途金额，发起结算后 T+N 日到账场景下的处理中金额，人民币，单位为元
+        /// </summary>
+        [XmlElement("on_settle_amount")]
+        public string OnSettleAmount { get; set; }
+
+        /// <summary>
         /// 待结算金额，人民币，单位为元
         /// </summary>
         [XmlElement("unsettled_amount")]

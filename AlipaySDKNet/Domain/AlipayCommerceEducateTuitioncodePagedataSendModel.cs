@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
+        /// 学费码创单扩展参数
+        /// </summary>
+        [XmlElement("ext_param")]
+        public TuitionOrderExtendParam ExtParam { get; set; }
+
+        /// <summary>
         /// 商户logo
         /// </summary>
         [XmlElement("logo")]

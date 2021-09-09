@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayFundBatchCreateModel : AopObject
     {
         /// <summary>
-        /// 业务场景。不同场景值不同，具体值联系支付宝确认。
+        /// 业务场景。不同场景值不同，具体值联系支付宝确认。如：<a href="https://opendocs.alipay.com/open/022312">批量转账到支付宝账户</a> 场景固定为 MESSAGE_BATCH_PAY。
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
@@ -47,7 +47,7 @@ namespace Aop.Api.Domain
         public Participant PayerInfo { get; set; }
 
         /// <summary>
-        /// 业务产品码。不同产品值不同，具体值联系支付宝确认。
+        /// 业务产品码。不同产品值不同，具体值联系支付宝确认。如：<a href="https://opendocs.alipay.com/open/022312">批量转账到支付宝账户</a> 场景固定为 BATCH_API_TO_ACC。
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }

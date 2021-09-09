@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string OutRequestNo { get; set; }
 
         /// <summary>
+        /// 分账模式，目前有两种分账同步执行sync，分账异步执行async，不传默认同步执行
+        /// </summary>
+        [XmlElement("royalty_mode")]
+        public string RoyaltyMode { get; set; }
+
+        /// <summary>
         /// 分账明细信息。 注意：商家分账场景下分账收入方 trans_in 只支持支付宝账户，不支持使用 cardAliasNo 卡编号。
         /// </summary>
         [XmlArray("royalty_parameters")]

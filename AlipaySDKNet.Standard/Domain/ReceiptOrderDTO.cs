@@ -105,7 +105,7 @@ namespace Aop.Api.Domain
         public string OrderModifiedTime { get; set; }
 
         /// <summary>
-        /// 订单支付时间，当pay_channel为非ALIPAY时，且订单状态已流转到“支付”或支付后时，需要将支付时间传入;支付交易完成时，必填；时间格式:yyyy-MM-dd HH:mm:ss
+        /// 订单支付时间; 有支付行为时，必填; 没有支付时，为空; 时间格式:yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("order_pay_time")]
         public string OrderPayTime { get; set; }
@@ -123,13 +123,13 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 支付金额，需要实际支付的金额。如果不涉及金额可不传入该字段，其他场景必传; 使用支付宝电子小票时，必填;（is_alipay_ticket 是 "1"时，必填）
+        /// 支付金额，需要实际支付的金额。如果不涉及金额可不传入该字段，其他场景必填; 0元订单时，必填;
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }
 
         /// <summary>
-        /// 支付类型:alipay:支付宝，wchatpay:微信，cloudpay:云闪付，cashpay：现金，otherpay：其它
+        /// 支付类型:alipay:支付宝，cashpay：现金，otherpay：其它; 支付宝支付时，必填;  森林能量发放仅支持支付宝支付("alipay")和0元订单("otherpay")
         /// </summary>
         [XmlElement("pay_type")]
         public string PayType { get; set; }

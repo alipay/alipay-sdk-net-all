@@ -43,16 +43,35 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 开户账号： identity_type是ALIPAY_USER_ID填支付宝会员ID（2088开头）； 是ALIPAY_LOGON_ID 填支付宝登录号
+        /// 开户账号：<br> -当identity_type是ALIPAY_USER_ID时填支付宝会员ID（2088开头）<br> -当identity_type是ALIPAY_LOGON_ID 时填支付宝登录号<br> -当identity_type是OUT_USER_ID时填外部平台的用户uid
         /// </summary>
         [XmlElement("identity")]
         public string Identity { get; set; }
 
         /// <summary>
-        /// 账号类型，目前支持如下类型： 1、ALIPAY_USER_ID 支付宝的会员ID 2、ALIPAY_LOGON_ID：支付宝登录号，支持邮箱和手机号格式
+        /// 账号类型，目前支持如下类型： <br> -ALIPAY_USER_ID 支付宝的会员ID<br> -ALIPAY_LOGON_ID：支付宝登录号，支持邮箱和手机号格式<br> -OUT_USER_ID：外部用户uid，如钉钉侧的钉钉会员uid
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }
+
+        /// <summary>
+        /// 开户时被邀请者列表
+        /// </summary>
+        [XmlArray("invitee_list")]
+        [XmlArrayItem("invite_member_form")]
+        public List<InviteMemberForm> InviteeList { get; set; }
+
+        /// <summary>
+        /// 开户邀请倒计时（单位：秒），超时后撤销系统自动撤销开户操作。<br> 补充说明：<br> -商户传递时，最长不可超过999999秒（约11天）<br> -商户不传该字段时，支付宝默认开户72小时后发起撤销操作
+        /// </summary>
+        [XmlElement("open_timeout")]
+        public string OpenTimeout { get; set; }
+
+        /// <summary>
+        /// 商户侧单号（幂等字段）<br> -补充说明：幂等逻辑（商户appid+out_biz_no），商户集成时需注意，如换号重复发起，则认为是一笔新的请求
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
 
         /// <summary>
         /// 产品码

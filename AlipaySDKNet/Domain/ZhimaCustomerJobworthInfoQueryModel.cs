@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
+        /// 行业描述ID
+        /// </summary>
+        [XmlElement("industry_id")]
+        public string IndustryId { get; set; }
+
+        /// <summary>
+        /// 对外使用的jobid
+        /// </summary>
+        [XmlElement("job_id")]
+        public string JobId { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

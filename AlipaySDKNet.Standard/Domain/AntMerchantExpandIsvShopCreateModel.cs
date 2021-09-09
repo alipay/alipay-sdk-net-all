@@ -126,7 +126,7 @@ namespace Aop.Api.Domain
         public string QualificationProofType { get; set; }
 
         /// <summary>
-        /// 店铺类目，取值参见文件xxxxxxx
+        /// 店铺类目，取值参见文件 <a href="https://ur.alipay.com/4cmn0n">蚂蚁门店类目</a>。
         /// </summary>
         [XmlElement("shop_category")]
         public string ShopCategory { get; set; }

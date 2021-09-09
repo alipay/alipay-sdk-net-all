@@ -23,7 +23,7 @@ namespace Aop.Api.Response
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// 退款时间。
+        /// 退款时间。默认不返回该信息，需要在入参的query_options中指定"gmt_refund_pay"值时才返回该字段信息。
         /// </summary>
         [XmlElement("gmt_refund_pay")]
         public string GmtRefundPay { get; set; }
@@ -89,7 +89,7 @@ namespace Aop.Api.Response
         public string RefundChargeAmount { get; set; }
 
         /// <summary>
-        /// 本次退款使用的资金渠道； 默认不返回该信息，需与支付宝约定后配置，或者入参的query_options中指定时才返回该字段信息。
+        /// 本次退款使用的资金渠道； 默认不返回该信息，需要在入参的query_options中指定"refund_detail_item_list"值时才返回该字段信息。
         /// </summary>
         [XmlArray("refund_detail_item_list")]
         [XmlArrayItem("trade_fund_bill")]
@@ -115,13 +115,13 @@ namespace Aop.Api.Response
         public string RefundSettlementId { get; set; }
 
         /// <summary>
-        /// 只在使用异步退款接口情况下才返回该字段。REFUND_PROCESSING 退款处理中；REFUND_SUCCESS 退款处理成功；REFUND_FAIL 退款失败;
+        /// 退款状态。枚举值： REFUND_SUCCESS 退款处理成功； 未返回该字段表示退款请求未收到或者退款失败； 注：如果退款查询发起时间早于退款时间，或者间隔退款发起时间太短，可能出现退款查询时还没处理成功，后面又处理成功的情况，建议商户在退款发起后间隔10秒以上再发起退款查询请求。
         /// </summary>
         [XmlElement("refund_status")]
         public string RefundStatus { get; set; }
 
         /// <summary>
-        /// 本次商户实际退回金额；  默认不返回该信息，需与支付宝约定后配置返回；
+        /// 本次商户实际退回金额； 默认不返回该信息，需要在入参的query_options中指定"refund_detail_item_list"值时才返回该字段信息。
         /// </summary>
         [XmlElement("send_back_fee")]
         public string SendBackFee { get; set; }

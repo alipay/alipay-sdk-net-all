@@ -22,7 +22,7 @@ namespace Aop.Api.Request
         public FileItem BusinessLicenseAuthPic { get; set; }
 
         /// <summary>
-        /// 营业执照法人手机号码
+        /// 被邀请授权的营业执照法人手机号码，上传非同人营业执照时必填
         /// </summary>
         public string BusinessLicenseMobile { get; set; }
 
@@ -47,7 +47,7 @@ namespace Aop.Api.Request
         public Nullable<bool> LongTerm { get; set; }
 
         /// <summary>
-        /// 商家经营类目编码。详情可参考 <a href="https://opendocs.alipay.com/open/01n22g#%E5%95%86%E5%AE%B6%E7%BB%8F%E8%90%A5%E7%B1%BB%E7%9B%AE">商家经营类目</a> 中的“二级类目code”。
+        /// 商家经营类目编码。参见 <a href="https://opendocs.alipay.com/open/01n22g#%E5%95%86%E5%AE%B6%E7%BB%8F%E8%90%A5%E7%B1%BB%E7%9B%AE">商家经营类目2.0</a> 中的“一级类目code_二级类目code”。
         /// </summary>
         public string MccCode { get; set; }
 

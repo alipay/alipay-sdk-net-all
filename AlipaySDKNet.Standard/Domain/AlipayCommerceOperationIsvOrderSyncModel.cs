@@ -168,6 +168,12 @@ namespace Aop.Api.Domain
         public string ServiceCode { get; set; }
 
         /// <summary>
+        /// 订单对应的服务相关信息
+        /// </summary>
+        [XmlElement("service_info")]
+        public CateringServiceInfo ServiceInfo { get; set; }
+
+        /// <summary>
         /// 订单枚举。请参考产品文档场景说明。
         /// </summary>
         [XmlElement("status")]

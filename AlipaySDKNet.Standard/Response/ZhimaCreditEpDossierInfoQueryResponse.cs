@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -37,6 +39,19 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("charge_person_type")]
         public string ChargePersonType { get; set; }
+
+        /// <summary>
+        /// 企业从业人数
+        /// </summary>
+        [XmlElement("employee_account")]
+        public string EmployeeAccount { get; set; }
+
+        /// <summary>
+        /// 企业分支机构列表信息
+        /// </summary>
+        [XmlArray("ep_branch_list")]
+        [XmlArrayItem("ep_branch_info")]
+        public List<EpBranchInfo> EpBranchList { get; set; }
 
         /// <summary>
         /// 统一社会信用代码或营业执照注册号
@@ -97,5 +112,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("registered_org")]
         public string RegisteredOrg { get; set; }
+
+        /// <summary>
+        /// 公开社保缴纳员工数
+        /// </summary>
+        [XmlElement("social_security_account")]
+        public string SocialSecurityAccount { get; set; }
     }
 }

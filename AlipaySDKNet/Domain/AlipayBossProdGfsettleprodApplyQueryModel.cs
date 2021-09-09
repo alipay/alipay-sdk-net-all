@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ip_role_id")]
         public string IpRoleId { get; set; }
+
+        /// <summary>
+        /// 单据类型
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
     }
 }

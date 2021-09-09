@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string AssignItemId { get; set; }
 
         /// <summary>
+        /// 业务线
+        /// </summary>
+        [XmlElement("biz_line")]
+        public string BizLine { get; set; }
+
+        /// <summary>
         /// 业务渠道
         /// </summary>
         [XmlElement("biz_tag")]
@@ -146,6 +152,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("produce_order")]
         public string ProduceOrder { get; set; }
+
+        /// <summary>
+        /// 供应商全称
+        /// </summary>
+        [XmlElement("produce_supplier_full_name")]
+        public string ProduceSupplierFullName { get; set; }
+
+        /// <summary>
+        /// 供应商ID
+        /// </summary>
+        [XmlElement("produce_supplier_id")]
+        public string ProduceSupplierId { get; set; }
+
+        /// <summary>
+        /// 供应商名称
+        /// </summary>
+        [XmlElement("produce_supplier_name")]
+        public string ProduceSupplierName { get; set; }
 
         /// <summary>
         /// 生产模式类型，用于供应商区分业务是：直发生产还是备货生产

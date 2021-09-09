@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public PeriodRuleParams PeriodRuleParams { get; set; }
 
         /// <summary>
-        /// 个人签约产品码，商户和支付宝签约时确定，商户可咨询技术支持。 周期扣款个人签约产品码固定为 CYCLE_PAY_AUTH_P
+        /// 个人签约产品码，商户和支付宝签约时确定，商户可咨询技术支持。
         /// </summary>
         [XmlElement("personal_product_code")]
         public string PersonalProductCode { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public ProdParams ProdParams { get; set; }
 
         /// <summary>
-        /// 销售产品码，商户签约的支付宝合同所对应的产品码。 周期扣款场景固定为 CYCLE_PAY_AUTH。
+        /// 销售产品码，商户签约的支付宝合同所对应的产品码。
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
@@ -104,6 +104,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sign_validity_period")]
         public string SignValidityPeriod { get; set; }
+
+        /// <summary>
+        /// 商户签约指定可用渠道
+        /// </summary>
+        [XmlElement("specified_asset")]
+        public SpecifiedAsset SpecifiedAsset { get; set; }
 
         /// <summary>
         /// 商户指定优先扣款渠道

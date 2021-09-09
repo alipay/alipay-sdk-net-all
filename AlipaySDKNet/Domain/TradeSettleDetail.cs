@@ -34,6 +34,18 @@ namespace Aop.Api.Domain
         public string OperationType { get; set; }
 
         /// <summary>
+        /// 商户请求的转入账号
+        /// </summary>
+        [XmlElement("ori_trans_in")]
+        public string OriTransIn { get; set; }
+
+        /// <summary>
+        /// 商户请求的转出账号
+        /// </summary>
+        [XmlElement("ori_trans_out")]
+        public string OriTransOut { get; set; }
+
+        /// <summary>
         /// 转入账号
         /// </summary>
         [XmlElement("trans_in")]

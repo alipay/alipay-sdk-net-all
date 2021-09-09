@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("floor_amount")]
         public string FloorAmount { get; set; }
+
+        /// <summary>
+        /// 商品名称。
+        /// </summary>
+        [XmlElement("goods_name")]
+        public string GoodsName { get; set; }
     }
 }

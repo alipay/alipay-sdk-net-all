@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
+        /// 接口调用权限token，由支付宝侧下发。需携带相应token才可回流成功。
+        /// </summary>
+        [XmlElement("sync_token")]
+        public string SyncToken { get; set; }
+
+        /// <summary>
         /// 用户申领时证件号，当前仅支持身份证号（用于已领取卡面脱敏展示）。在PLAIN模式下需传入证件号明文；MD5模式下需传入证件号MD5摘要
         /// </summary>
         [XmlElement("user_apply_cert_no")]

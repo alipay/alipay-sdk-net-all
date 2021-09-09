@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class ZhimaCreditPayafteruseCreditagreementSignModel : AopObject
     {
         /// <summary>
-        /// 当用户进入芝麻后付开通页面后，点击左上角的回退按钮，中断开通流程，跳转回商户的页面地址。
+        /// 当用户进入芝麻先用后付开通页面后，点击左上角的回退按钮，中断开通流程，跳转回商户的页面地址。支持scheme协议。
         /// </summary>
         [XmlElement("cancel_back_link")]
         public string CancelBackLink { get; set; }
 
         /// <summary>
-        /// 芝麻外部类目。
+        /// 芝麻外部类目
         /// </summary>
         [XmlElement("category_id")]
         public string CategoryId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// 商户外部协议号。
+        /// 商户外部协议号
         /// </summary>
         [XmlElement("out_agreement_no")]
         public string OutAgreementNo { get; set; }
@@ -46,13 +46,13 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 用户成功完成芝麻后付开通流程后，跳转回商户的页面地址。
+        /// 用户成功完成芝麻先用后付开通流程后，跳转回商户的页面地址。支持scheme协议。
         /// </summary>
         [XmlElement("return_back_link")]
         public string ReturnBackLink { get; set; }
 
         /// <summary>
-        /// 芝麻服务ID。
+        /// 芝麻服务ID
         /// </summary>
         [XmlElement("zm_service_id")]
         public string ZmServiceId { get; set; }

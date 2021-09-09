@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string SchemaVersion { get; set; }
 
         /// <summary>
+        /// 服务编码, 首次提报时设置空值，支付宝侧返回ServiceCode；当传入serviceCode，则对已提报服务做编辑操作。
+        /// </summary>
+        [XmlElement("service_code")]
+        public string ServiceCode { get; set; }
+
+        /// <summary>
         /// 服务xml
         /// </summary>
         [XmlElement("service_xml")]

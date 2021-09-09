@@ -68,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("star_rate_shop")]
         public string StarRateShop { get; set; }
+
+        /// <summary>
+        /// 1代表有效，0代表无效
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
     }
 }

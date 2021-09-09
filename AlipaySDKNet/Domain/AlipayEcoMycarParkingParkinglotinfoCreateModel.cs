@@ -126,7 +126,7 @@ namespace Aop.Api.Domain
         public string OriginalIsvPid { get; set; }
 
         /// <summary>
-        /// ISV停车场ID，由ISV提供，同一个isv或商户范围内唯一
+        /// ISV停车场ID，由ISV 自定义，同一个isv或商户范围内唯一
         /// </summary>
         [XmlElement("out_parking_id")]
         public string OutParkingId { get; set; }

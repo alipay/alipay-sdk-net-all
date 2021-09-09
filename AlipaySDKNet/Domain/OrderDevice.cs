@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string DeviceSn { get; set; }
 
         /// <summary>
-        /// 实际安装照片：最多5张，英文逗号分隔(,) ，图片格式必须（bmp,jpg,png,gif）
+        /// 实际安装照片：最多5张，英文逗号分隔(,) ，图片格式必须（bmp,jpg,png,gif,image）
         /// </summary>
         [XmlElement("install_actual_photo")]
         public string InstallActualPhoto { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string InstallMode { get; set; }
 
         /// <summary>
-        /// 铺屏现场照片: 最多5张，英文逗号分隔(,) ，图片格式必须（bmp,jpg,png,gif）
+        /// 铺屏现场照片: 最多5张，英文逗号分隔(,) ，图片格式必须（bmp,jpg,png,gif,image）
         /// </summary>
         [XmlElement("install_scene_photo")]
         public string InstallScenePhoto { get; set; }

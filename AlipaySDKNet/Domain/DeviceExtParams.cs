@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// 门店名称
+        /// 极简绑定时必传，用于设备左上角展示，可以区分设备所在门店
         /// </summary>
         [XmlElement("shop_name")]
         public string ShopName { get; set; }
@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string Source { get; set; }
 
         /// <summary>
-        /// isv应用id，绑定流程不消费，订单中心消费。
+        /// 表示ISV在开放平台注册的SPI服务应用的app_id，用于标识ISV身份
         /// </summary>
         [XmlElement("spi_app_id")]
         public string SpiAppId { get; set; }
 
         /// <summary>
-        /// sv内部唯一标识商户、商户门店等字段信息
+        /// isv内部唯一标识商户、商户门店等字段信息；可作为ISV自主对接的扩展字段使用
         /// </summary>
         [XmlElement("terminal_bind_info")]
         public string TerminalBindInfo { get; set; }

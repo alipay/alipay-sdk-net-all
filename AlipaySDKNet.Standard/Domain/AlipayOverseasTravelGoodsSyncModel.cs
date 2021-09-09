@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string ExternalLinkUrl { get; set; }
 
         /// <summary>
+        /// 跨境营销线上电商商品扩展参数 。针对scenarios传了GOL_GOODS的场景，必填。
+        /// </summary>
+        [XmlElement("gol_goods_ext_param")]
+        public GolGoodsExtParam GolGoodsExtParam { get; set; }
+
+        /// <summary>
         /// 商品分类枚举,请向支付宝业务对口BD询问可用的枚举值。
         /// </summary>
         [XmlElement("goods_category")]

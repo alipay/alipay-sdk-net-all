@@ -59,6 +59,12 @@ namespace Aop.Api.Domain
         public string MaterialType { get; set; }
 
         /// <summary>
+        /// 定向规则
+        /// </summary>
+        [XmlElement("oriented_rules")]
+        public SearchProductOrientedRuleOpenApi OrientedRules { get; set; }
+
+        /// <summary>
         /// 活动id
         /// </summary>
         [XmlElement("serv_code")]

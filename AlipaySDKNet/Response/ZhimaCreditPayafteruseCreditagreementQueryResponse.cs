@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string BizTime { get; set; }
 
         /// <summary>
-        /// 芝麻开通协议号
+        /// 芝麻先用后付开通协议号
         /// </summary>
         [XmlElement("credit_agreement_id")]
         public string CreditAgreementId { get; set; }

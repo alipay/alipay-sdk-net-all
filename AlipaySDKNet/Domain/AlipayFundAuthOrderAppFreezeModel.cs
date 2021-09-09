@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string OrderTitle { get; set; }
 
         /// <summary>
-        /// 商户授权资金订单号，商家自定义需保证在商户端不重复。不能包含除中文、英文、数字以外的字符，创建后不能修改。
+        /// 商户授权资金订单号，商家自定义需保证在商户端不重复。不能包含除中文、英文、数字以外的字符，创建后不能修改。 
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }

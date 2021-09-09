@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public VoucherSendRuleDetail VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 券类型。  枚举值： FIX_VOUCHER：满减券  EXCHANGE_VOUCHER: 兑换券
+        /// 券类型。  枚举值： FIX_VOUCHER：满减券； DISCOUNT_VOUCHER：折扣券； SPECIAL_VOUCHER：特价券； EXCHANGE_VOUCHER: 兑换券；
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

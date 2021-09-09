@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class SearchBoxMarketingchangeOptStatusReq : AopObject
     {
         /// <summary>
-        /// 需修改至何种状态(支持撤销和删除)
+        /// 需修改至何种状态(支持撤销_CANCEL和删除_DELETE)
         /// </summary>
         [XmlElement("action")]
         public string Action { get; set; }

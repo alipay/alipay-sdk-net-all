@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 兑换券业务类型。  枚举值 团购券：GROUP_BUY_EXCHANGE_VOUCHER 代金券：FIX_EXCHANGE_VOUCHER
+        /// </summary>
+        [XmlElement("biz_type")]
+        public string BizType { get; set; }
+
+        /// <summary>
         /// 客服电话  限制: 客服电话和客服链接必须二选一
         /// </summary>
         [XmlElement("customer_service_mobile")]
@@ -32,6 +38,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("floor_amount")]
         public string FloorAmount { get; set; }
+
+        /// <summary>
+        /// 是否支持优惠券过期后，自动退款给用户。  不填默认否，枚举值： true：是 false：否  自动退款功能需要服务商在优惠券过期时，主动调用alipay.marketing.activity.order.refund接口进行退款。 如果配置优惠券时选择了过期自动退款，但是实际券过期后，服务商没有进行退款，那么用户投诉后，需要服务商进行解决。
+        /// </summary>
+        [XmlElement("overdue_refundable")]
+        public bool OverdueRefundable { get; set; }
+
+        /// <summary>
+        /// 收款账号。  目前的结算规则是，每核销一笔优惠券，支付宝会打款到该收款账户。
+        /// </summary>
+        [XmlElement("payee_pid")]
+        public string PayeePid { get; set; }
 
         /// <summary>
         /// 购买的优惠券是否允许退款。  不填默认否，枚举值： true：是 false：否

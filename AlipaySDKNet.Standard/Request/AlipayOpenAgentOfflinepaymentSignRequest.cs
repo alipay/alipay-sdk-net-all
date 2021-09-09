@@ -17,7 +17,7 @@ namespace Aop.Api.Request
         public string BatchNo { get; set; }
 
         /// <summary>
-        /// 营业执照法人手机号码
+        /// 被邀请授权的营业执照法人手机号码，上传非同人营业执照时必填
         /// </summary>
         public string BusinessLicenseMobile { get; set; }
 

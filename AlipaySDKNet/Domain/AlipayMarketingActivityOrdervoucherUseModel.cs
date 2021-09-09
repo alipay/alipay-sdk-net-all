@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string TradeChannel { get; set; }
 
         /// <summary>
-        /// 该交易在支付宝系统中的交易流水号。
+        /// 该交易在支付宝系统中的交易流水号。 注意：若用户使用支付宝为交易的渠道，本参数必填。
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

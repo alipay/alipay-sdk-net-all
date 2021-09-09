@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string TotalPaymentAmount { get; set; }
 
         /// <summary>
-        /// 用户身份信息，蚂蚁统一会员ID user_id、蚂蚁会员登陆ID login_id（邮箱、手机号），此字段中user_id、login_id和user_id字段三选一必传
+        /// 用户身份信息，蚂蚁统一会员ID user_id、蚂蚁会员登录ID login_id（邮箱、手机号），此字段中user_id、login_id和user_id字段三选一必传
         /// </summary>
         [XmlElement("user")]
         public UserDInfo User { get; set; }

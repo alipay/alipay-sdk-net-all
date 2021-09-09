@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,6 +33,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("voucher_description")]
         public string VoucherDescription { get; set; }
+
+        /// <summary>
+        /// 券详细图列表，会展示在用户支付宝卡包券详情页  需要通过 alipay.marketing.material.image.upload接口上传图片，指定file_key为PROMO_VOUCHER_DETAIL_IMAGE ,接口返回的resource_id即为该参数的值  上传图片尺寸600*600，支持格式：png、jpg、jpeg、bmp，大小不超过2MB  限制 1.voucher_image填入，该值才能填入； 2.最多3张；
+        /// </summary>
+        [XmlArray("voucher_detail_images")]
+        [XmlArrayItem("string")]
+        public List<string> VoucherDetailImages { get; set; }
 
         /// <summary>
         /// 券详情页封面图，会展示在用户支付宝卡包券详情页  需要通过 alipay.marketing.material.image.upload接口上传图片，指定file_key为PROMO_VOUCHER_IMAGE，接口返回的resource_id即为该参数的值   限制: 该字段在兑换券场景下必传 上传图片尺寸670*335，支持格式：png、jpg、jpeg、bmp，大小不超过2MB

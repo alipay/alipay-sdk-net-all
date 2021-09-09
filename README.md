@@ -2,7 +2,7 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falipay%2Falipay-sdk-net-all.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Falipay%2Falipay-sdk-net-all?ref=badge_shield)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/068a5b3d1b984234bedba4cc8647ff8c)](https://www.codacy.com/manual/antopen/alipay-sdk-net-all?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=alipay/alipay-sdk-net-all&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://www.travis-ci.org/alipay/alipay-sdk-net-all.svg?branch=dev)](https://www.travis-ci.org/alipay/alipay-sdk-net-all)
-[![codecov](https://codecov.io/gh/alipay/alipay-sdk-net-all/branch/master/graph/badge.svg)](https://codecov.io/gh/alipay/alipay-sdk-net-all)
+[![codecov](https://codecov.io/gh/alipay/alipay-sdk-net-all/branch/dev/graph/badge.svg)](https://codecov.io/gh/alipay/alipay-sdk-net-all)
 
 欢迎使用 Alipay SDK for .NET 。
 
@@ -116,7 +116,9 @@ namespace SDK.Demo
 [SDK文档首页](https://docs.open.alipay.com/54/103419/)
 
 ## 问题
-[提交 Issue](https://github.com/alipay/alipay-sdk-net-all/issues/new)，我们会定期查看Issue记录并尽快做出反馈。
+不管您在使用SDK的过程中遇到任何问题，欢迎前往 [支付宝开放社区](https://forum.alipay.com/mini-app/channel/1100001)  发帖与支付宝工作人员和其他开发者一起交流。
+
+注：为了提高开发者问题的响应时效，github本身的issue功能已关闭，支付宝开放社区中发帖的问题，通常会在2小时内响应。
 
 ## 变更日志
 每个版本的详细更改记录在[变更日志](./CHANGELOG)中。

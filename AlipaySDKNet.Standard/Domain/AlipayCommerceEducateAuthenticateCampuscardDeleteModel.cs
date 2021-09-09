@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateAuthenticateCampuscardDeleteModel : AopObject
     {
         /// <summary>
+        /// 卡号，证件号与卡号至少存在一个
+        /// </summary>
+        [XmlElement("card_number")]
+        public string CardNumber { get; set; }
+
+        /// <summary>
         /// 证件号
         /// </summary>
         [XmlElement("cert_no")]

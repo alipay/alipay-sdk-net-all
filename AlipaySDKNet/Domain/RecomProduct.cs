@@ -89,6 +89,12 @@ namespace Aop.Api.Domain
         public string ProdNo { get; set; }
 
         /// <summary>
+        /// 流水号
+        /// </summary>
+        [XmlElement("recom_flow_no")]
+        public string RecomFlowNo { get; set; }
+
+        /// <summary>
         /// 产品资源项列表，可以平行扩展多个资源项
         /// </summary>
         [XmlArray("resource_list")]

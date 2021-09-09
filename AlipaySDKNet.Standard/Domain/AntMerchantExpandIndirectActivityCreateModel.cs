@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandIndirectActivityCreateModel : AopObject
     {
         /// <summary>
-        /// 活动类型，间连商户报名的支付宝活动类型。 特殊行业优惠费率：INDUSTRY_SPECIAL
+        /// 活动类型，间连商户报名的支付宝活动类型。 特殊行业优惠费率：INDUSTRY_SPECIAL 服务商返佣活动：REBATE
         /// </summary>
         [XmlElement("activity_type")]
         public string ActivityType { get; set; }
@@ -20,6 +20,36 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("alias_name")]
         public string AliasName { get; set; }
+
+        /// <summary>
+        /// app的应用上架市场名称，申请app支付必选
+        /// </summary>
+        [XmlElement("app_market")]
+        public string AppMarket { get; set; }
+
+        /// <summary>
+        /// 申请app支付的app应用名称，申请app支付必选
+        /// </summary>
+        [XmlElement("app_name")]
+        public string AppName { get; set; }
+
+        /// <summary>
+        /// APP上架截图，申请APP支付优惠费率时必填
+        /// </summary>
+        [XmlElement("app_screenshot")]
+        public string AppScreenshot { get; set; }
+
+        /// <summary>
+        /// app上架状态，true已上架，false未上架
+        /// </summary>
+        [XmlElement("app_status")]
+        public string AppStatus { get; set; }
+
+        /// <summary>
+        /// 申请app支付、PC网站支付时，app、网站的ICP许可证主体与申请商户不一致时提供
+        /// </summary>
+        [XmlElement("auth_license")]
+        public string AuthLicense { get; set; }
 
         /// <summary>
         /// 一般为商户同名银行账户信息，党费等特殊业务除外
@@ -70,13 +100,19 @@ namespace Aop.Api.Domain
         public string DiplomaticNote { get; set; }
 
         /// <summary>
+        /// 申请app支付、PC网站支付时，app、PC网站的ICP许可证与商户主体一致时必填
+        /// </summary>
+        [XmlElement("icp_license")]
+        public string IcpLicense { get; set; }
+
+        /// <summary>
         /// 店内环境照，具体可参见资质要求，要求照片清晰可见，其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。
         /// </summary>
         [XmlElement("indoor_pic")]
         public string IndoorPic { get; set; }
 
         /// <summary>
-        /// 特殊费率资质表中对应的行业code
+        /// 活动报名资质表中对应的行业code
         /// </summary>
         [XmlElement("industry_code")]
         public string IndustryCode { get; set; }
@@ -130,10 +166,34 @@ namespace Aop.Api.Domain
         public string OrgCertPic { get; set; }
 
         /// <summary>
+        /// 申请PC网站支付的PC站点地址，申请PC支付必填
+        /// </summary>
+        [XmlElement("pc_site")]
+        public string PcSite { get; set; }
+
+        /// <summary>
+        /// 网站上架状态，商户申请PC支付特殊费率时必填；true已上线，false未上线
+        /// </summary>
+        [XmlElement("pc_site_status")]
+        public string PcSiteStatus { get; set; }
+
+        /// <summary>
         /// 民办非企业单位登记证书图片。 请上传照片OSSKey（参见应用场景说明）。 特殊行业，请参见<a href="https://opendocs.alipay.com/p/01y6vi">间连特殊行业上传资质</a>
         /// </summary>
         [XmlElement("private_nonenterprise_units")]
         public string PrivateNonenterpriseUnits { get; set; }
+
+        /// <summary>
+        /// 商户开通代扣的单日额度限制
+        /// </summary>
+        [XmlElement("quota_per_day")]
+        public string QuotaPerDay { get; set; }
+
+        /// <summary>
+        /// 商户开通代扣的单笔额度限制
+        /// </summary>
+        [XmlElement("quota_per_each")]
+        public string QuotaPerEach { get; set; }
 
         /// <summary>
         /// 办学资质图片。 请上传照片OSSKey（参见应用场景说明）。 特殊行业，请参见<a href="https://opendocs.alipay.com/p/01y6vi">间连特殊行业上传资质</a>
@@ -158,5 +218,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_merchant_id")]
         public string SubMerchantId { get; set; }
+
+        /// <summary>
+        /// 商家开通代扣的服务描述
+        /// </summary>
+        [XmlElement("withhold_service_desc")]
+        public string WithholdServiceDesc { get; set; }
+
+        /// <summary>
+        /// 商家开通代扣的服务名称
+        /// </summary>
+        [XmlElement("withhold_service_name")]
+        public string WithholdServiceName { get; set; }
     }
 }
