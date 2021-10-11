@@ -40,6 +40,12 @@ namespace Aop.Api.Response
         public string PolicyNo { get; set; }
 
         /// <summary>
+        /// 保单保费（单位：分）
+        /// </summary>
+        [XmlElement("premium")]
+        public long Premium { get; set; }
+
+        /// <summary>
         /// 维修类型 unOfficial:严选；official:官修
         /// </summary>
         [XmlElement("repair_type")]

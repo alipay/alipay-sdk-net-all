@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// 批次总金额，单位为元，精确到小数点后两位，取值范围[0.01,9999999999999.99]
+        /// 批次总金额，单位为元，精确到小数点后两位，取值范围[1.00,9999999999999.99]
         /// </summary>
         [XmlElement("total_trans_amount")]
         public string TotalTransAmount { get; set; }

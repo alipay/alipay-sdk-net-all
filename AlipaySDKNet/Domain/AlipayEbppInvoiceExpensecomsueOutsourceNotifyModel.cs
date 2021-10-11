@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 消费金额（单位：分）
+        /// 消费金额（单位：分）正整数，金额必须大于0， 200 表示金额为2元
         /// </summary>
         [XmlElement("amount")]
         public long Amount { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public long EmployeeIdType { get; set; }
 
         /// <summary>
-        /// 扩展参数
+        /// 定制化字段传入,当前无约定规则（例如：部分调用方传入餐补餐期-中餐（L），晚餐(D)）
         /// </summary>
         [XmlElement("extend")]
         public string Extend { get; set; }
@@ -64,9 +64,15 @@ namespace Aop.Api.Domain
         public string OutSourceId { get; set; }
 
         /// <summary>
-        /// 调用者身份（道安- DAO_AN）
+        /// 调用者身份（道安- DAO_AN，企业福利平台WELFARE_PLATFORM），接入接口分配的身份标记
         /// </summary>
         [XmlElement("platform")]
         public string Platform { get; set; }
+
+        /// <summary>
+        /// 制度id
+        /// </summary>
+        [XmlElement("standard_id")]
+        public string StandardId { get; set; }
     }
 }

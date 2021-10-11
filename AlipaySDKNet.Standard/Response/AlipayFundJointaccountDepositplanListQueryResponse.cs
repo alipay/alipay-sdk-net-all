@@ -14,7 +14,7 @@ namespace Aop.Api.Response
         /// 资金计划列表
         /// </summary>
         [XmlArray("fund_plan_list")]
-        [XmlArrayItem("simple_fund_plan_d_t_o")]
-        public List<SimpleFundPlanDTO> FundPlanList { get; set; }
+        [XmlArrayItem("fund_plan_d_t_o")]
+        public List<FundPlanDTO> FundPlanList { get; set; }
     }
 }

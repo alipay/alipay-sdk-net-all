@@ -25,5 +25,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("policy_url")]
         public string PolicyUrl { get; set; }
+
+        /// <summary>
+        /// 保单保费（单位：分）
+        /// </summary>
+        [XmlElement("premium")]
+        public long Premium { get; set; }
     }
 }

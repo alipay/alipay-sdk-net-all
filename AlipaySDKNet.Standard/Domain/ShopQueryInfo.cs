@@ -16,12 +16,6 @@ namespace Aop.Api.Domain
         public string Address { get; set; }
 
         /// <summary>
-        /// 是否包含同mid下的其他pid的店铺
-        /// </summary>
-        [XmlElement("is_include_cognate")]
-        public bool IsIncludeCognate { get; set; }
-
-        /// <summary>
         /// 纬度
         /// </summary>
         [XmlElement("latitude")]

@@ -22,10 +22,10 @@ namespace Aop.Api.Domain
         public string InsuredStatus { get; set; }
 
         /// <summary>
-        /// 持卡人与当前UID账户关系
+        /// 医保电子凭证授权码(机构卡Id)
         /// </summary>
-        [XmlElement("relation_type")]
-        public string RelationType { get; set; }
+        [XmlElement("medical_card_id")]
+        public string MedicalCardId { get; set; }
 
         /// <summary>
         /// 绑卡激活状态

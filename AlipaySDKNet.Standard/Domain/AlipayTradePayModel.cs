@@ -47,7 +47,7 @@ namespace Aop.Api.Domain
         public string AuthNo { get; set; }
 
         /// <summary>
-        /// 订单描述
+        /// 订单附加信息。 如果请求时传递了该参数，将在异步通知、对账单中原样返回，同时会在商户和用户的pc账单详情中作为交易描述展示
         /// </summary>
         [XmlElement("body")]
         public string Body { get; set; }
@@ -217,7 +217,7 @@ namespace Aop.Api.Domain
         public string TerminalParams { get; set; }
 
         /// <summary>
-        /// 订单相对超时时间。 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。  当面付场景默认值为3h； 其它场景默认值为15d;
+        /// 订单相对超时时间。从交易创建时间开始计算。  该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。  当面付场景默认值为3h；  其它场景默认值为15d;
         /// </summary>
         [XmlElement("timeout_express")]
         public string TimeoutExpress { get; set; }

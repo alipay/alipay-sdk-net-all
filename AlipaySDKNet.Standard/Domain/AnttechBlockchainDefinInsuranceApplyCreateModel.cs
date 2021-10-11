@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Parm { get; set; }
 
         /// <summary>
+        /// 产品市场编码，一般指保司端险种编码
+        /// </summary>
+        [XmlElement("pdt_mkt_code")]
+        public string PdtMktCode { get; set; }
+
+        /// <summary>
         /// 统一客户平台的会员类型
         /// </summary>
         [XmlElement("platform_access_type")]

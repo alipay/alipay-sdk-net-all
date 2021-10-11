@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string Action { get; set; }
 
         /// <summary>
-        /// 当撤销产生了退款时，返回退款时间；  默认不返回该信息，需与支付宝约定后配置返回；
+        /// 当撤销产生了退款时，返回退款时间；  只在银行间联交易场景下返回该信息；
         /// </summary>
         [XmlElement("gmt_refund_pay")]
         public string GmtRefundPay { get; set; }

@@ -77,7 +77,7 @@ namespace Aop.Api.Domain
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
-        /// 订单总金额。 自提、外卖、点餐场景下，必填。
+        /// 订单总金额。 自提、外卖、点餐（GENERAL蜻蜓点餐）场景下，必填。
         /// </summary>
         [XmlElement("order_amount")]
         public string OrderAmount { get; set; }
@@ -89,7 +89,7 @@ namespace Aop.Api.Domain
         public string OrderCreateTime { get; set; }
 
         /// <summary>
-        /// 订单详情链接
+        /// 订单详情链接，GENERAL蜻蜓点餐可选填，其他业务场景必填
         /// </summary>
         [XmlElement("order_detail_url")]
         public string OrderDetailUrl { get; set; }
@@ -114,7 +114,7 @@ namespace Aop.Api.Domain
         public long OrderQueueNum { get; set; }
 
         /// <summary>
-        /// 订单类型，枚举支持 ALIPAY_APPLETS：支付宝小程序产生的订单 ALIPAY_POS：收银POS产生的支付宝订单 MERCHANT_APP：APP交易产生的支付宝订单 OTHERS：其他渠道的支付宝交易
+        /// 订单类型，枚举支持 ALIPAY_APPLETS：支付宝小程序产生的订单 ALIPAY_POS：收银POS产生的支付宝订单 MERCHANT_APP：APP交易产生的支付宝订单 OTHERS：其他渠道的支付宝交易 KIOSKS：自助设备（蜻蜓点餐填此类型）
         /// </summary>
         [XmlElement("order_source")]
         public string OrderSource { get; set; }
@@ -144,7 +144,7 @@ namespace Aop.Api.Domain
         public QueueInfo QueueInfo { get; set; }
 
         /// <summary>
-        /// 返佣pid
+        /// 返佣pid，GENERAL蜻蜓点餐业务场景，必填
         /// </summary>
         [XmlElement("rebate_pid")]
         public string RebatePid { get; set; }
@@ -180,7 +180,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 支付宝交易号，自提、外卖场景 必填，不支持多个交易号。
+        /// 支付宝交易号，除CREATE、CLOSED节点必填，不支持多个交易号。
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string AccountId { get; set; }
 
         /// <summary>
+        /// 实际出资账号（实际出资人实名认证名称)
+        /// </summary>
+        [XmlElement("actual_account_number")]
+        public string ActualAccountNumber { get; set; }
+
+        /// <summary>
+        /// 汇总批次id
+        /// </summary>
+        [XmlElement("batch_id")]
+        public string BatchId { get; set; }
+
+        /// <summary>
         /// 支付流水号
         /// </summary>
         [XmlElement("bill_no")]
@@ -58,6 +70,18 @@ namespace Aop.Api.Domain
         public string EmployeeId { get; set; }
 
         /// <summary>
+        /// 开票模式
+        /// </summary>
+        [XmlElement("open_model")]
+        public string OpenModel { get; set; }
+
+        /// <summary>
+        /// 退款交易关联正交易单号
+        /// </summary>
+        [XmlElement("original_voucher_id")]
+        public string OriginalVoucherId { get; set; }
+
+        /// <summary>
         /// 外部流水号
         /// </summary>
         [XmlElement("out_biz_no")]
@@ -86,6 +110,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("projiect_id")]
         public string ProjiectId { get; set; }
+
+        /// <summary>
+        /// 制度id
+        /// </summary>
+        [XmlElement("standard_id")]
+        public string StandardId { get; set; }
+
+        /// <summary>
+        /// tp标志位
+        /// </summary>
+        [XmlElement("tp_sign")]
+        public string TpSign { get; set; }
 
         /// <summary>
         /// 凭证id

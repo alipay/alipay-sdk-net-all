@@ -71,6 +71,12 @@ namespace Aop.Api.Domain
         public DefaultSettleRule DefaultSettleRule { get; set; }
 
         /// <summary>
+        /// 商户编号，由机构定义，需要保证在机构下唯一
+        /// </summary>
+        [XmlElement("external_id")]
+        public string ExternalId { get; set; }
+
+        /// <summary>
         /// 内景照，签约当面付必填。其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。
         /// </summary>
         [XmlElement("in_door_images")]

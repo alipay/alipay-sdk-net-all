@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string ServiceName { get; set; }
 
         /// <summary>
+        /// 服务范围信息
+        /// </summary>
+        [XmlElement("service_scope_info")]
+        public CateringServiceScopeInfo ServiceScopeInfo { get; set; }
+
+        /// <summary>
         /// 服务状态（ServiceStatus枚举） SERVICE_CREATE：服务创建 SERVICE_UPDATE：服务更新 SERVICE_OFFLINE：服务下线
         /// </summary>
         [XmlElement("service_status")]

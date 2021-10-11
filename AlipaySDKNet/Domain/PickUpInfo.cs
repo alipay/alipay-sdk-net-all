@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string PickUpShopName { get; set; }
 
         /// <summary>
-        /// 取餐凭证类型。待自取及之后状态必填。整体状态生命周期中，必须回传1次。枚举支持：自提码-SELF_PICK_CODE ；口令-PASSWORD。
+        /// 取餐凭证类型。待自取及之后状态必填。整体状态生命周期中，必须回传1次。枚举支持：自提码-SELF_PICK_CODE ；口令-PASSWORD；取餐码-MEAL_NUM
         /// </summary>
         [XmlElement("pick_up_type")]
         public string PickUpType { get; set; }

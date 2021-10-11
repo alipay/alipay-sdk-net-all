@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BudgetFy { get; set; }
 
         /// <summary>
+        /// ps部门信息
+        /// </summary>
+        [XmlElement("department_code")]
+        public string DepartmentCode { get; set; }
+
+        /// <summary>
         /// 集团预算编码(提供精确查询)
         /// </summary>
         [XmlElement("group_budget_code")]

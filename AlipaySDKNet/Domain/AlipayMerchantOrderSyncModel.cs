@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string OrderCreateTime { get; set; }
 
         /// <summary>
-        /// 订单修改时间，一般不需要传入。用于订单状态或数据变化较快的顺序控制，order_modified_time较晚的同步会被最终存储，order_modified_time相同的两次同步可能会被幂等处理，SERVICE_ORDER按照行业标准化接入场景必须传入该字段控制乱序
+        /// 订单修改时间。用于订单状态或数据变化较快的顺序控制，SERVICE_ORDER按照行业标准化接入场景必须传入该字段控制乱序。order_modified_time较晚的同步会被最终存储，order_modified_time相同的两次同步会被幂等处理
         /// </summary>
         [XmlElement("order_modified_time")]
         public string OrderModifiedTime { get; set; }
@@ -94,7 +94,7 @@ namespace Aop.Api.Domain
         public string OrderPayTime { get; set; }
 
         /// <summary>
-        /// 订单类型，若为空，默认为交易订单，每次请求必传 -SERVICE_ORDER：服务订单 -TRADE_ORDER：交易订单
+        /// 订单类型，新接入商户统一传入SERVICE_ORDER(服务订单)
         /// </summary>
         [XmlElement("order_type")]
         public string OrderType { get; set; }
@@ -160,10 +160,17 @@ namespace Aop.Api.Domain
         public string SyncContent { get; set; }
 
         /// <summary>
-        /// 凭证信息
+        /// 凭证信息（废弃，凭证信息参考ticket_order_list）
         /// </summary>
         [XmlElement("ticket_info")]
         public TicketInfo TicketInfo { get; set; }
+
+        /// <summary>
+        /// 凭证信息
+        /// </summary>
+        [XmlArray("ticket_order_list")]
+        [XmlArrayItem("ticket_order_info")]
+        public List<TicketOrderInfo> TicketOrderList { get; set; }
 
         /// <summary>
         /// 订单所对应的支付宝交易号

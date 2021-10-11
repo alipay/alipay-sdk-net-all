@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class ZhimaCustomerJobworthInfoQueryResponse : AopResponse
     {
         /// <summary>
+        /// 受理台单号作为jsapi的一个参数。如果不使用jsapi可以忽略
+        /// </summary>
+        [XmlElement("acceptance_id")]
+        public string AcceptanceId { get; set; }
+
+        /// <summary>
         /// 用于授权校验,授权之前需要通过token校验
         /// </summary>
         [XmlElement("auth_token")]

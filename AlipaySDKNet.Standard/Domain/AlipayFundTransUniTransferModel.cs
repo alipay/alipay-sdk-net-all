@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
-        /// 签名信息
+        /// 签名信息。 说明：仅特殊场景使用，现金红包场景无需关注。
         /// </summary>
         [XmlElement("sign_data")]
         public SignData SignData { get; set; }

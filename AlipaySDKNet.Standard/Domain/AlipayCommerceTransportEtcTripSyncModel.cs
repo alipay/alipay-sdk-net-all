@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string TotalAmount { get; set; }
 
         /// <summary>
+        /// 交易单号，通过支付宝扣款的订单，这个参数必传。
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
+
+        /// <summary>
         /// 交易状态； S：扣款成功； R: 退款成功；
         /// </summary>
         [XmlElement("trade_status")]

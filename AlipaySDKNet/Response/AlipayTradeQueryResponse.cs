@@ -17,7 +17,7 @@ namespace Aop.Api.Response
         public string AlipayStoreId { get; set; }
 
         /// <summary>
-        /// 间连商户在支付宝端的商户编号；  只在间连场景下返回；
+        /// 间连商户在支付宝端的商户编号；  只在银行间联交易场景下返回该信息；
         /// </summary>
         [XmlElement("alipay_sub_merchant_id")]
         public string AlipaySubMerchantId { get; set; }
@@ -29,7 +29,7 @@ namespace Aop.Api.Response
         public string AuthTradePayMode { get; set; }
 
         /// <summary>
-        /// 订单描述;  只在间连场景下返回；
+        /// 订单描述； 只在银行间联交易场景下返回该信息；
         /// </summary>
         [XmlElement("body")]
         public string Body { get; set; }
@@ -65,7 +65,7 @@ namespace Aop.Api.Response
         public string BuyerUserType { get; set; }
 
         /// <summary>
-        /// 该笔交易针对收款方的收费金额；  默认不返回该信息，需与支付宝约定后配置返回；
+        /// 该笔交易针对收款方的收费金额；  只在银行间联交易场景下返回该信息；
         /// </summary>
         [XmlElement("charge_amount")]
         public string ChargeAmount { get; set; }
@@ -222,7 +222,7 @@ namespace Aop.Api.Response
         public string StoreName { get; set; }
 
         /// <summary>
-        /// 订单标题；  只在间连场景下返回；
+        /// 订单标题；  只在银行间联交易场景下返回该信息；
         /// </summary>
         [XmlElement("subject")]
         public string Subject { get; set; }

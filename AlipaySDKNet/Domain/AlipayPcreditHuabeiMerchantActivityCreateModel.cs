@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public List<long> InstallNumList { get; set; }
 
         /// <summary>
+        /// 代运营的isv的商户id
+        /// </summary>
+        [XmlElement("isv_id")]
+        public string IsvId { get; set; }
+
+        /// <summary>
         /// 免息金额上限不能大于300000, 不能低于免息金额下限，交易额度若高于该上限值则不做花呗分期免息补贴，单位是元
         /// </summary>
         [XmlElement("max_money_limit")]

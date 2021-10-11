@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string OutOrderNo { get; set; }
 
         /// <summary>
+        /// 商户pid
+        /// </summary>
+        [XmlElement("pid")]
+        public string Pid { get; set; }
+
+        /// <summary>
         /// PROCESS处理中，TIMEOUT超时，AGREED同意， REJECTED拒绝
         /// </summary>
         [XmlElement("status")]

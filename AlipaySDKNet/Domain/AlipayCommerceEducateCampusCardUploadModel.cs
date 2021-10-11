@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateCampusCardUploadModel : AopObject
     {
         /// <summary>
+        /// 业务来源，需要拆分子渠道的需要上送，例如： 饿了么需要拆分子渠道， 饿了么学生中心：XUESHENGZHONGXIN 饿了么付费会员：FUFEIHUIYUAN
+        /// </summary>
+        [XmlElement("biz_source_from")]
+        public string BizSourceFrom { get; set; }
+
+        /// <summary>
         /// 逐步废弃，请使用card_pictures字段！学生证照片链接(可多张)。注：需要提供图片oss URL访问地址，且url需要长期有效
         /// </summary>
         [XmlArray("campus_card_picture")]

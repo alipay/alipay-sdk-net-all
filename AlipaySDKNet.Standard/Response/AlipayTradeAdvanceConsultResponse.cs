@@ -41,7 +41,7 @@ namespace Aop.Api.Response
         public UserRiskPrediction UserRiskPrediction { get; set; }
 
         /// <summary>
-        /// 用户剩余的总待还金额，无论当前用户是否允许垫资，都会返回改属性
+        /// 用户剩余的总待还金额，无论当前用户是否允许垫资，都会返回该属性。
         /// </summary>
         [XmlElement("wait_repayment_amount")]
         public string WaitRepaymentAmount { get; set; }

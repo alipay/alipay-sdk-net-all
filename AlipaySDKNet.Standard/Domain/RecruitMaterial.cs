@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Description { get; set; }
 
         /// <summary>
+        /// 素材审核信息，展示给商家的素材审核不通过的意见。素材审核通过时该字段为空。 报名详情查询接口不用填写该字段。
+        /// </summary>
+        [XmlElement("material_audit_info")]
+        public string MaterialAuditInfo { get; set; }
+
+        /// <summary>
         /// 素材名名称
         /// </summary>
         [XmlElement("name")]

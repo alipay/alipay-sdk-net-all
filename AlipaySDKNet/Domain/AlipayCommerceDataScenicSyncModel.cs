@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class AlipayCommerceDataScenicSyncModel : AopObject
     {
+        /// <summary>
+        /// 码值信息
+        /// </summary>
+        [XmlArray("code_value")]
+        [XmlArrayItem("string")]
+        public List<string> CodeValue { get; set; }
+
         /// <summary>
         /// 服务商名称
         /// </summary>

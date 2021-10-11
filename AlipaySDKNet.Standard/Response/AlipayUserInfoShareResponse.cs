@@ -170,6 +170,30 @@ namespace Aop.Api.Response
         public string GraduationTime { get; set; }
 
         /// <summary>
+        /// 身份证地址信息
+        /// </summary>
+        [XmlElement("identity_card_address")]
+        public string IdentityCardAddress { get; set; }
+
+        /// <summary>
+        /// 身份证地区信息
+        /// </summary>
+        [XmlElement("identity_card_area")]
+        public string IdentityCardArea { get; set; }
+
+        /// <summary>
+        /// 身份证市信息
+        /// </summary>
+        [XmlElement("identity_card_city")]
+        public string IdentityCardCity { get; set; }
+
+        /// <summary>
+        /// 身份证省信息
+        /// </summary>
+        [XmlElement("identity_card_province")]
+        public string IdentityCardProvince { get; set; }
+
+        /// <summary>
         /// 余额账户是否被冻结。  T--被冻结；F--未冻结
         /// </summary>
         [XmlElement("is_balance_frozen")]
@@ -283,6 +307,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("user_name")]
         public string UserName { get; set; }
+
+        /// <summary>
+        /// 身份证民族信息
+        /// </summary>
+        [XmlElement("user_nation")]
+        public string UserNation { get; set; }
 
         /// <summary>
         /// 用户状态（Q/T/B/W）。 Q代表快速注册用户 T代表正常用户 B代表被冻结账户 W代表已注册，未激活的账户

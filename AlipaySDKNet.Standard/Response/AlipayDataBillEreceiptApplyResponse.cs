@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayDataBillEreceiptApplyResponse : AopResponse
     {
         /// <summary>
-        /// 文件申请号file_id信息。使用file_id可以查询处理状态
+        /// 文件申请号file_id信息。 使用file_id可以查询处理状态，有效期：2天
         /// </summary>
         [XmlElement("file_id")]
         public string FileId { get; set; }

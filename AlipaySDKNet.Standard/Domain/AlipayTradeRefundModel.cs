@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 查询选项，商户通过上送该参数来定制同步需要额外返回的信息字段，数组格式。支持：refund_detail_item_list：退款使用的资金渠道。
+        /// 查询选项。 商户通过上送该参数来定制同步需要额外返回的信息字段，数组格式。支持：refund_detail_item_list：退款使用的资金渠道。
         /// </summary>
         [XmlArray("query_options")]
         [XmlArrayItem("string")]
@@ -61,7 +61,14 @@ namespace Aop.Api.Domain
         public string RefundCurrency { get; set; }
 
         /// <summary>
-        /// 退款原因说明，商家自定义。
+        /// 退款包含的商品列表信息
+        /// </summary>
+        [XmlArray("refund_goods_detail")]
+        [XmlArrayItem("refund_goods_detail")]
+        public List<RefundGoodsDetail> RefundGoodsDetail { get; set; }
+
+        /// <summary>
+        /// 退款原因说明。 商家自定义，将在对账单的退款明细中作为备注返回，同时会在商户和用户的pc退款账单详情中展示
         /// </summary>
         [XmlElement("refund_reason")]
         public string RefundReason { get; set; }

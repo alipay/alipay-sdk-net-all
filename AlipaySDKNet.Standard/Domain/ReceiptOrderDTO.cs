@@ -165,13 +165,13 @@ namespace Aop.Api.Domain
         public string TerminalId { get; set; }
 
         /// <summary>
-        /// 订单所对应的支付宝交易号; 支付宝支付时，必填
+        /// 订单所对应的支付宝交易号，酒店6小件场景时,传入履约号; 支付宝支付时，必填; 特殊情况: 0元订单, 可不填; 无支付场景时，可不填;
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }
 
         /// <summary>
-        /// 交易号类型:1. TRADE-交易，为空默认为TRADE;2. TRANSFER-转账;3. ENTRUST-受托
+        /// 交易号类型:1. TRADE-交易，为空默认为TRADE;2. TRANSFER-转账;3. ENTRUST-受托;4.(酒店)履约-CONTRACT
         /// </summary>
         [XmlElement("trade_type")]
         public string TradeType { get; set; }

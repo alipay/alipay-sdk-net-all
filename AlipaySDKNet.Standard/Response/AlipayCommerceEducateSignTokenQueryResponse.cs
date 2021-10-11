@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类型（"1","居民身份证"，"X":"学工号"）
+        /// 证件类型。{1:居民身份证；A:护照；X:学工号}
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public string ParentLogonId { get; set; }
 
         /// <summary>
-        /// 家长id，如是本人开通，当前id与用户id相同
+        /// 家长uid。其为当前开通的支付宝会员id，用于支付，与刷脸uid不同（历史原因，部分学生和教职工本人开通，其刷脸uid与当前uid一致）
         /// </summary>
         [XmlElement("parent_user_id")]
         public string ParentUserId { get; set; }
@@ -63,7 +63,7 @@ namespace Aop.Api.Response
         public string SchoolStdcode { get; set; }
 
         /// <summary>
-        /// 用户id
+        /// 用户uid。用于扫脸和刷脸支付
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

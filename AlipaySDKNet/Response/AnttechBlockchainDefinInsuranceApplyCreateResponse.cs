@@ -45,6 +45,12 @@ namespace Aop.Api.Response
         public string PolicyNo { get; set; }
 
         /// <summary>
+        /// 电子保单链接
+        /// </summary>
+        [XmlElement("policy_url")]
+        public string PolicyUrl { get; set; }
+
+        /// <summary>
         /// 保费
         /// </summary>
         [XmlElement("premium")]

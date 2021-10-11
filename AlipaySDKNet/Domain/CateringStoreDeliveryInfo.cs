@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class CateringStoreDeliveryInfo : AopObject
     {
         /// <summary>
-        /// 门店配送范围（单位：公里），数值型，精确至小数点两位。外卖场景必填，其余非必填。
+        /// 门店配送范围（单位：公里），数值型，精确至小数点两位。
         /// </summary>
         [XmlElement("delivery_area")]
         public string DeliveryArea { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string DeliveryFee { get; set; }
 
         /// <summary>
-        /// 起送金额。精确到小数点后1位。外卖场景必填，其余非必填。
+        /// 起送金额。精确到小数点后1位。
         /// </summary>
         [XmlElement("delivery_threshold")]
         public string DeliveryThreshold { get; set; }

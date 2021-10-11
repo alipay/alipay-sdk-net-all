@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 指定的商户pid，如果指定， 只返回此pid的店铺信息。(此pid必须是商户自己的)
+        /// 门店所属的商户pid
         /// </summary>
         [XmlElement("pid")]
         public string Pid { get; set; }

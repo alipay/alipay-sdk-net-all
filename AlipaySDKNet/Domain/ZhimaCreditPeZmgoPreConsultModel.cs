@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Phone { get; set; }
 
         /// <summary>
+        /// 查询等级
+        /// </summary>
+        [XmlElement("query_level")]
+        public string QueryLevel { get; set; }
+
+        /// <summary>
         /// 模板id
         /// </summary>
         [XmlElement("template_id")]

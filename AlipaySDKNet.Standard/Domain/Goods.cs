@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string GoodsPicUrl { get; set; }
 
         /// <summary>
-        /// 商品单价，单位为元，精确到小数点后两位，取值范围为 [0.01,100000000]
+        /// 商品单价，单位为元，精确到小数点后两位，取值范围为 [0.01,100000000]，GENERAL蜻蜓点餐业务场景必填，其他场景选填
         /// </summary>
         [XmlElement("goods_price")]
         public string GoodsPrice { get; set; }

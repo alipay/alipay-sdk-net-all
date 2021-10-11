@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public long MinPurchaseQuantity { get; set; }
 
         /// <summary>
+        /// 国药准字
+        /// </summary>
+        [XmlElement("national_medicine_permission_no")]
+        public string NationalMedicinePermissionNo { get; set; }
+
+        /// <summary>
         /// 售价
         /// </summary>
         [XmlElement("price")]
