@@ -107,6 +107,12 @@ namespace Aop.Api.Response
         public string DiscountGoodsDetail { get; set; }
 
         /// <summary>
+        /// 因公付支付信息，只有入参的query_options中指定时才返回该字段信息
+        /// </summary>
+        [XmlElement("enterprise_pay_info")]
+        public EnterprisePayInfo EnterprisePayInfo { get; set; }
+
+        /// <summary>
         /// 交易支付使用的资金渠道。 只有在签约中指定需要返回资金明细，或者入参的query_options中指定时才返回该字段信息。
         /// </summary>
         [XmlArray("fund_bill_list")]

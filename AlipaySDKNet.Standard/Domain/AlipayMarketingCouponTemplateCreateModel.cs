@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string FloorAmount { get; set; }
 
         /// <summary>
-        /// 出资人登录账号。用于发红包的资金会从该账号划拨到发红包专用账户上。当调用创建接口成功后，会返回付款订单页面，仅当前传入资金账号可进行付款，付款完成后红包变更为激活状态，可进行发放。
+        /// 出资人支付宝登录账号。用于发红包的资金会从该账号划拨到发红包专用账户上。当调用创建接口成功后，会返回付款订单页面，仅当前传入资金账号可进行付款，付款完成后红包变更为激活状态，可进行发放。
         /// </summary>
         [XmlElement("fund_account")]
         public string FundAccount { get; set; }

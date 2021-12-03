@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string CreditBizOrderId { get; set; }
 
         /// <summary>
+        /// 芝麻信用服务订单状态.INIT: 下单状态; TRADE_CLOSED: 订单取消或者交易全额退款； TRADE_FINISHED：扣款成功状态
+        /// </summary>
+        [XmlElement("order_status")]
+        public string OrderStatus { get; set; }
+
+        /// <summary>
         /// 商户外部请求号
         /// </summary>
         [XmlElement("out_request_no")]

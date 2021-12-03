@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BizCardNo { get; set; }
 
         /// <summary>
+        /// 会员卡自定义资产值，只供特定业务使用，通常接入无需关注
+        /// </summary>
+        [XmlElement("custom_assets")]
+        public string CustomAssets { get; set; }
+
+        /// <summary>
         /// 商户外部会员卡卡号  说明：  1、会员卡开卡接口，如果卡类型为外部会员卡，请求中则必须提供该参数；  2、更新、查询、删除等接口，请求中则不需要提供该参数值；
         /// </summary>
         [XmlElement("external_card_no")]

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public HotelInfo HotelInfo { get; set; }
 
         /// <summary>
-        /// [SERVICE_CREATE：服务创建 SERVICE_UPDATE：服务更新]  说明：值为SERVICE_CREATE时， 参数servic_id为空；值为SERVICE_UPDATE时， 参数servic_id必填
+        /// [SERVICE_CREATE：服务创建， SERVICE_UPDATE：服务更新， SERVICE_ONLINE: 服务上架， SERVICE_OFFLINE：服务下架 ]  说明：值为SERVICE_CREATE时， 参数servic_id为空；值为其他时， 参数servic_id必填
         /// </summary>
         [XmlElement("operate_type")]
         public string OperateType { get; set; }

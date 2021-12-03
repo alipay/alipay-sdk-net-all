@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 商品名称; 使用支付宝电子小票时，必填;（is_alipay_ticket 是 "1"时，必填）
+        /// 商品名称
         /// </summary>
         [XmlElement("item_name")]
         public string ItemName { get; set; }
 
         /// <summary>
-        /// 商品数量（单位：自拟）;使用支付宝电子小票时，必填;（is_alipay_ticket 是 "1"时，必填）
+        /// 商品数量（单位：自拟）
         /// </summary>
         [XmlElement("quantity")]
         public long Quantity { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string SkuId { get; set; }
 
         /// <summary>
-        /// 商品单价（单位: 元）;使用支付宝电子小票时，必填;（is_alipay_ticket 是 "1"时，必填）
+        /// 商品单价（单位: 元）
         /// </summary>
         [XmlElement("unit_price")]
         public string UnitPrice { get; set; }

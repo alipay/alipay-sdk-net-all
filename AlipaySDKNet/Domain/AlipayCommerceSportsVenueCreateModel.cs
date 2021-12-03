@@ -41,6 +41,18 @@ namespace Aop.Api.Domain
         public string Desc { get; set; }
 
         /// <summary>
+        /// 场馆更多服务链接：可从文体场馆页跳转进此链接，进入服务商的该场馆页面
+        /// </summary>
+        [XmlElement("extra_service_url")]
+        public string ExtraServiceUrl { get; set; }
+
+        /// <summary>
+        /// 接入方式： 空值/不传值/center  = 中心化 (场馆走文体中心统一规范）； half_center = 半中心化 （场馆走服务商的跳转链接）
+        /// </summary>
+        [XmlElement("join_type")]
+        public string JoinType { get; set; }
+
+        /// <summary>
         /// 纬度
         /// </summary>
         [XmlElement("latitude")]
@@ -65,7 +77,7 @@ namespace Aop.Api.Domain
         public string OpeningHours { get; set; }
 
         /// <summary>
-        /// 服务商场馆ID
+        /// 主场馆在服务商的ID
         /// </summary>
         [XmlElement("out_venue_id")]
         public string OutVenueId { get; set; }
@@ -97,7 +109,7 @@ namespace Aop.Api.Domain
         public string Poster { get; set; }
 
         /// <summary>
-        /// 场馆售卖产品类型集合，逗号隔开 calendar：价格日历 ticket：票券 course: 课程
+        /// 场馆售卖产品类型集合 calendar：价格日历 ticket：票券 course: 课程。 （注：中心化场馆必填，半中心化场馆不用填）
         /// </summary>
         [XmlArray("product_type_list")]
         [XmlArrayItem("string")]

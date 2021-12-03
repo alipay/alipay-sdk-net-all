@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string MailName { get; set; }
 
         /// <summary>
-        /// 057162288888
+        /// 寄送电话
         /// </summary>
         [XmlElement("mail_telephone")]
         public string MailTelephone { get; set; }

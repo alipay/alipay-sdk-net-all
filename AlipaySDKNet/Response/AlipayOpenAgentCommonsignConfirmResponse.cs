@@ -8,5 +8,10 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayOpenAgentCommonsignConfirmResponse : AopResponse
     {
+        /// <summary>
+        /// 签约单号
+        /// </summary>
+        [XmlElement("order_no")]
+        public string OrderNo { get; set; }
     }
 }

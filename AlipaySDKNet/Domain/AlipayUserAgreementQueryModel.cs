@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ExternalAgreementNo { get; set; }
 
         /// <summary>
-        /// 协议产品码，商户和支付宝签约时确定，商户可咨询技术支持。周期扣款场景固定为：CYCLE_PAY_AUTH_P。
+        /// 协议产品码，商户和支付宝签约时确定，商户可咨询技术支持。
         /// </summary>
         [XmlElement("personal_product_code")]
         public string PersonalProductCode { get; set; }

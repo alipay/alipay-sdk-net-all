@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ExtendParams { get; set; }
 
         /// <summary>
+        /// 订单金额，该金额为当前订单扣款的累计最大额度。例如，下单时传递10.00，则扣款时最大支付金额为10元。若该参数不传，则默认使用商户签约时约定的上限额度。
+        /// </summary>
+        [XmlElement("order_amount")]
+        public string OrderAmount { get; set; }
+
+        /// <summary>
         /// 商户外部订单号，保证不重复
         /// </summary>
         [XmlElement("out_order_no")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayEcoMycarParkingOrderSyncModel : AopObject
     {
         /// <summary>
+        /// 该笔停车交易需要返佣的对象实体PID，可能是商户，可能是ISV；只做下沉，用于离线表层面对账。
+        /// </summary>
+        [XmlElement("agent_pid")]
+        public string AgentPid { get; set; }
+
+        /// <summary>
         /// 车牌
         /// </summary>
         [XmlElement("car_number")]

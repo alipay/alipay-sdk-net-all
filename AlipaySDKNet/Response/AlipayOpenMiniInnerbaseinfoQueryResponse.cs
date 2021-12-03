@@ -111,6 +111,12 @@ namespace Aop.Api.Response
         public string OwnerPortrait { get; set; }
 
         /// <summary>
+        /// AUTO/自动更新、MANUAL/手动更新
+        /// </summary>
+        [XmlElement("plugin_refresh_type")]
+        public string PluginRefreshType { get; set; }
+
+        /// <summary>
         /// 小程序客服邮箱
         /// </summary>
         [XmlElement("service_email")]

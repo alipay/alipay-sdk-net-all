@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string IdentityCheck { get; set; }
 
         /// <summary>
+        /// 国际站外部订单号
+        /// </summary>
+        [XmlElement("out_trade_no")]
+        public string OutTradeNo { get; set; }
+
+        /// <summary>
         /// 支付机构注册号
         /// </summary>
         [XmlElement("pay_code")]

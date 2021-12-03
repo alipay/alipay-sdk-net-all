@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
+        /// 支付宝交易商户退款请求号。对应商户在调用收单退款接口openApi请求传入的outRequestNo参数值
+        /// </summary>
+        [XmlElement("merchant_out_refund_no")]
+        public string MerchantOutRefundNo { get; set; }
+
+        /// <summary>
         /// 对方账户
         /// </summary>
         [XmlElement("other_account")]

@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string TransIn { get; set; }
 
         /// <summary>
+        /// 分账收款方姓名，上送则进行姓名与支付宝账号的一致性校验，校验不一致则分账失败。不上送则不进行姓名校验
+        /// </summary>
+        [XmlElement("trans_in_name")]
+        public string TransInName { get; set; }
+
+        /// <summary>
         /// 收入方账户类型。userId表示是支付宝账号对应的支付宝唯一用户号;cardAliasNo表示是卡编号;loginName表示是支付宝登录号；
         /// </summary>
         [XmlElement("trans_in_type")]

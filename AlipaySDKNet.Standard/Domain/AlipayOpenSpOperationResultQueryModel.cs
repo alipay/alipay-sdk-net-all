@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BatchNo { get; set; }
 
         /// <summary>
+        /// 场景授权列表结构结构：场景codeA:权限code1,权限code2;场景codeB:权限code1,权限code2;
+        /// </summary>
+        [XmlElement("isv_scene_permissions")]
+        public string IsvScenePermissions { get; set; }
+
+        /// <summary>
         /// 支付宝商户号。支持间连、直连商户，值为2088开头。 未传batch_no时需注意： 若查询间连商户则 merchant_no 必填；  若查询直连商户，则merchant_no和alipay_account不能同时为空，都有值优先取merchant_no。
         /// </summary>
         [XmlElement("merchant_no")]

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAgentSignstatusQueryModel : AopObject
     {
         /// <summary>
-        /// isv要查询签约状态的商户账号，是支付宝账号pid（2088开头）
+        /// isv要查询签约状态的商户账号，可以是支付宝账号pid（2088开头），也可以是商户的登录账号（邮箱或手机号）
         /// </summary>
         [XmlElement("pid")]
         public string Pid { get; set; }

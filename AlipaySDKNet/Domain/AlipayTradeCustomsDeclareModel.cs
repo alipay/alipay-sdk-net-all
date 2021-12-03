@@ -52,10 +52,22 @@ namespace Aop.Api.Domain
         public string MerchantCustomsName { get; set; }
 
         /// <summary>
-        /// 报关流水号。商户生成的用于唯一标识一次报关操作的业务编号。  建议生成规则：yyyymmdd型8位日期拼接4位序列号。每个报关请求号仅允许传入：数字、英文字母、下划线”_”、短横线”－” 。长度6-32位前后不能有空格
+        /// 国际站商户标识
+        /// </summary>
+        [XmlElement("merchant_id")]
+        public string MerchantId { get; set; }
+
+        /// <summary>
+        /// 报关流水号。商户生成的用于唯一标识一次报关操作的业务编号。 建议生成规则：yyyymmdd型8位日期拼接4位序列号。每个报关请求号仅允许传入：数字、英文字母、下划线”_”、短横线”－” 。长度6-64位前后不能有空格
         /// </summary>
         [XmlElement("out_request_no")]
         public string OutRequestNo { get; set; }
+
+        /// <summary>
+        /// 国际站外部订单号
+        /// </summary>
+        [XmlElement("out_trade_no")]
+        public string OutTradeNo { get; set; }
 
         /// <summary>
         /// 拆单报关的商户子订单号。 用于区别拆单时不同子单。拆单时必须传入，否则会报INVALID_PARAMETER错误码。

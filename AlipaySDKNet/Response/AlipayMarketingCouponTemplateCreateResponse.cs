@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string ConfirmUri { get; set; }
 
         /// <summary>
-        /// 资金订单号，模板支付时需要
+        /// 资金订单号
         /// </summary>
         [XmlElement("fund_order_no")]
         public string FundOrderNo { get; set; }

@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<EnergyExtRequest> ExtInfo { get; set; }
 
         /// <summary>
-        /// 外部业务号，用作幂等。同一场景下，一条外部业务号只可消费一次。
+        /// 外部业务号，用作幂等。 自定义传入，同一场景下，一条外部业务号只可消费一次。
         /// </summary>
         [XmlElement("outer_no")]
         public string OuterNo { get; set; }

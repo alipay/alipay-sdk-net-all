@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string EquipmentRental { get; set; }
 
         /// <summary>
-        /// 设施列表 场馆设施：1地板、2灯光、3淋浴、4餐饮、5WiFi ,6更衣室
+        /// 设施列表 场馆设施：1地板、2灯光、3淋浴、4餐饮、5WiFi 、6更衣室、7充电宝、8停车场、9休息区
         /// </summary>
         [XmlArray("facility_list")]
         [XmlArrayItem("number")]

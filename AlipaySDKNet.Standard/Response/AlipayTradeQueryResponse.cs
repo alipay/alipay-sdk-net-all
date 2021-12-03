@@ -101,6 +101,12 @@ namespace Aop.Api.Response
         public string DiscountGoodsDetail { get; set; }
 
         /// <summary>
+        /// 因公付支付信息
+        /// </summary>
+        [XmlElement("enterprise_pay_info")]
+        public EnterprisePayInfo EnterprisePayInfo { get; set; }
+
+        /// <summary>
         /// 交易额外信息，特殊场景下与支付宝约定返回。 json格式。
         /// </summary>
         [XmlElement("ext_infos")]
@@ -126,6 +132,18 @@ namespace Aop.Api.Response
         public string IndustrySepcDetail { get; set; }
 
         /// <summary>
+        /// 行业特殊信息-个账相关
+        /// </summary>
+        [XmlElement("industry_sepc_detail_acc")]
+        public string IndustrySepcDetailAcc { get; set; }
+
+        /// <summary>
+        /// 行业特殊信息-统筹相关
+        /// </summary>
+        [XmlElement("industry_sepc_detail_gov")]
+        public string IndustrySepcDetailGov { get; set; }
+
+        /// <summary>
         /// 交易中用户支付的可开具发票的金额，单位为元，两位小数。该金额代表该笔交易中可以给用户开具发票的金额
         /// </summary>
         [XmlElement("invoice_amount")]
@@ -148,6 +166,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
+
+        /// <summary>
+        /// 公用回传参数。 返回支付时传入的passback_params参数信息
+        /// </summary>
+        [XmlElement("passback_params")]
+        public string PassbackParams { get; set; }
 
         /// <summary>
         /// 支付币种订单金额

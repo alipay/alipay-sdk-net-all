@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string OccurTime { get; set; }
 
         /// <summary>
+        /// 付费外卡信息，只供特定业务使用，通常接入无需关注
+        /// </summary>
+        [XmlElement("paid_outer_card_info")]
+        public PaidOuterCardExtraInfoDTO PaidOuterCardInfo { get; set; }
+
+        /// <summary>
         /// 支付宝业务卡号，即通过<a href="">alipay.marketing.card.open</a>(会员卡开卡)接口开卡后获取的 card_info.biz_card_no 值。
         /// </summary>
         [XmlElement("target_card_no")]

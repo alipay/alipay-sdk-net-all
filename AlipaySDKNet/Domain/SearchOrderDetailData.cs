@@ -1,6 +1,5 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -189,13 +188,6 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_name")]
         public string ServiceName { get; set; }
-
-        /// <summary>
-        /// 关联的服务状态信息
-        /// </summary>
-        [XmlArray("service_status_infos")]
-        [XmlArrayItem("search_order_detail_data_info")]
-        public List<SearchOrderDetailDataInfo> ServiceStatusInfos { get; set; }
 
         /// <summary>
         /// 申请单状态  AGREE、REJECT、AUDIT

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayBossFncGfsettleprodBillinvoiceQueryModel : AopObject
     {
         /// <summary>
+        /// 申请单聚合id
+        /// </summary>
+        [XmlElement("apply_relative_id")]
+        public string ApplyRelativeId { get; set; }
+
+        /// <summary>
         /// 账单号
         /// </summary>
         [XmlElement("bill_no")]

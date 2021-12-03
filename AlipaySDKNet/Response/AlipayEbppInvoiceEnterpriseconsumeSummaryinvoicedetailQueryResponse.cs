@@ -11,13 +11,19 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceEnterpriseconsumeSummaryinvoicedetailQueryResponse : AopResponse
     {
         /// <summary>
+        /// 企业汇总场景下，即企业ID
+        /// </summary>
+        [XmlElement("account_id")]
+        public string AccountId { get; set; }
+
+        /// <summary>
         /// 申请时间
         /// </summary>
         [XmlElement("apply_date")]
         public string ApplyDate { get; set; }
 
         /// <summary>
-        /// 账单批次id
+        /// 账单批次id（建议使用summary_id）
         /// </summary>
         [XmlElement("batch_id")]
         public string BatchId { get; set; }
@@ -54,7 +60,13 @@ namespace Aop.Api.Response
         public string StatusShowContent { get; set; }
 
         /// <summary>
-        /// 企业汇总场景下，即企业ID
+        /// 账单批次id
+        /// </summary>
+        [XmlElement("summary_id")]
+        public string SummaryId { get; set; }
+
+        /// <summary>
+        /// 企业汇总场景下，即企业ID（建议使用account_id）
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

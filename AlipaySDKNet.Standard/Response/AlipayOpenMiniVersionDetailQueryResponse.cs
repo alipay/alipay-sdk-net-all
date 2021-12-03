@@ -47,6 +47,24 @@ namespace Aop.Api.Response
         public string AppVersion { get; set; }
 
         /// <summary>
+        /// 准入审核结果： PASS：通过 REJECT：驳回 （提审时 audit_rule 传 BASE_PROMOTE 时有该字段）
+        /// </summary>
+        [XmlElement("base_audit")]
+        public string BaseAudit { get; set; }
+
+        /// <summary>
+        /// 准入审核驳回原因 （提审时 audit_rule 传 BASE_PROMOTE 时有该字段）
+        /// </summary>
+        [XmlElement("base_audit_record")]
+        public MiniAppAuditReason BaseAuditRecord { get; set; }
+
+        /// <summary>
+        /// 是否可上架-true/false （提审时 audit_rule 传 BASE_PROMOTE 时有该字段）
+        /// </summary>
+        [XmlElement("can_release")]
+        public string CanRelease { get; set; }
+
+        /// <summary>
         /// 小程序版本提交审核的时间
         /// </summary>
         [XmlElement("gmt_apply_audit")]
@@ -108,6 +126,18 @@ namespace Aop.Api.Response
         [XmlArray("package_info_list")]
         [XmlArrayItem("mini_package_info")]
         public List<MiniPackageInfo> PackageInfoList { get; set; }
+
+        /// <summary>
+        /// 营销审核结果： PASS：通过 REJECT：驳回 （提审时 audit_rule 传 BASE_PROMOTE 时有该字段）
+        /// </summary>
+        [XmlElement("promote_audit")]
+        public string PromoteAudit { get; set; }
+
+        /// <summary>
+        /// 营销审核驳回原因 （提审时 audit_rule 传 BASE_PROMOTE 时有该字段）
+        /// </summary>
+        [XmlElement("promote_audit_record")]
+        public MiniAppAuditReason PromoteAuditRecord { get; set; }
 
         /// <summary>
         /// 审核驳回原因

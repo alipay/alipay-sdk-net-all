@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 额度失效时间
+        /// 额度失效时间（格式：yyyy-MM-dd HH:mm:ss）
         /// </summary>
         [XmlElement("effective_end_date")]
         public string EffectiveEndDate { get; set; }
 
         /// <summary>
-        /// 额度生效时间
+        /// 额度生效时间（格式：yyyy-MM-dd HH:mm:ss）
         /// </summary>
         [XmlElement("effective_start_date")]
         public string EffectiveStartDate { get; set; }
@@ -52,13 +52,13 @@ namespace Aop.Api.Domain
         public string QuotaValue { get; set; }
 
         /// <summary>
-        /// 额度类型ID MEAL: 工作餐
+        /// 额度类型ID 当 target_type=EXPENSE_TYPE 时 MEAL: 工作餐； 当 target_type=RULE_GROUP_AGGREGATION 时 target_id: #规则聚合id#
         /// </summary>
         [XmlElement("target_id")]
         public string TargetId { get; set; }
 
         /// <summary>
-        /// 额度类型 EXPENSE_TYPE: 费用类型额度
+        /// 额度生成维度 EXPENSE_TYPE: 费用类型维度 RULE_GROUP_AGGREGATION: 规则聚合维度
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }

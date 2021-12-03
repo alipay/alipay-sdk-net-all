@@ -29,6 +29,12 @@ namespace Aop.Api.Response
         public string MerchantPid { get; set; }
 
         /// <summary>
+        /// 签约单号
+        /// </summary>
+        [XmlElement("order_no")]
+        public string OrderNo { get; set; }
+
+        /// <summary>
         /// 支付宝商户入驻申请单状态，申请单状态包括：  MERCHANT_INFO_HOLD=暂存，提交事务出现业务校验异常时，会暂存申请单信息，可以调用业务接口修正参数，并重新提交  MERCHANT_AUDITING=审核中，申请信息正在人工审核中  MERCHANT_CONFIRM=待商户确认，申请信息审核通过，等待联系人确认签约或授权  MERCHANT_CONFIRM_SUCCESS=商户确认成功，商户同意签约或授权  MERCHANT_CONFIRM_TIME_OUT=商户超时未确认，如果商户受到确认信息15天内未确认，则需要重新提交申请信息  MERCHANT_APPLY_ORDER_CANCELED=审核失败或商户拒绝，申请信息审核被驳回，或者商户选择拒绝签约或授权
         /// </summary>
         [XmlElement("order_status")]

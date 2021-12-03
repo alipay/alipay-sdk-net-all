@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string EquipmentRental { get; set; }
 
         /// <summary>
-        /// 场馆设置：1地板、2灯光、3淋浴、4餐饮、5WiFi ,6更衣室
+        /// 场馆设置（传数字）：1地板、2灯光、3淋浴、4餐饮、5WiFi、6更衣室、7充电宝、8停车场、9休息区
         /// </summary>
         [XmlArray("facility_list")]
         [XmlArrayItem("number")]
@@ -60,13 +60,13 @@ namespace Aop.Api.Domain
         public string OpeningHours { get; set; }
 
         /// <summary>
-        /// 服务商场馆ID
+        /// 子场馆在服务商的ID
         /// </summary>
         [XmlElement("out_sub_venue_id")]
         public string OutSubVenueId { get; set; }
 
         /// <summary>
-        /// 收款方支付宝账户（payment_method)为空或account时必传
+        /// （半中心化场馆）不填 （中心化场馆）收款方支付宝账户，当payment_method为空或account时必传
         /// </summary>
         [XmlElement("payee_account")]
         public string PayeeAccount { get; set; }
@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string PaymentMethod { get; set; }
 
         /// <summary>
-        /// 收款类型（indirect=间连/direct=直连） 直连：收款方为商户/场馆 间连：收款方为服务商
+        /// （半中心化场馆）不填， （中心化场馆）收款类型 （indirect=间连/direct=直连） 直连：收款方为商户/场馆 间连：收款方为服务商
         /// </summary>
         [XmlElement("payment_type")]
         public string PaymentType { get; set; }
@@ -104,7 +104,7 @@ namespace Aop.Api.Domain
         public string Poster { get; set; }
 
         /// <summary>
-        /// 场馆售卖产品类型集合，逗号隔开 calendar：价格日历 ticket：票券 course: 课程
+        /// （半中心化场馆）不填 （中心化场馆） 场馆售卖产品类型集合 calendar：价格日历 ticket：票券 course: 课程
         /// </summary>
         [XmlArray("product_type_list")]
         [XmlArrayItem("string")]

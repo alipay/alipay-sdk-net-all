@@ -41,6 +41,18 @@ namespace Aop.Api.Domain
         public string Desc { get; set; }
 
         /// <summary>
+        /// 场馆更多服务链接：可从文体场馆页跳转进此链接，进入服务商的该场馆页面
+        /// </summary>
+        [XmlElement("extra_service_url")]
+        public string ExtraServiceUrl { get; set; }
+
+        /// <summary>
+        /// 接入方式： center = 中心化 (场馆走文体中心统一规范）； half_center = 半中心化 （场馆走服务商的跳转链接）。 半中心化场馆如修改为中心化场馆，请注意数据补全
+        /// </summary>
+        [XmlElement("join_type")]
+        public string JoinType { get; set; }
+
+        /// <summary>
         /// 变更纬度
         /// </summary>
         [XmlElement("latitude")]
@@ -65,7 +77,7 @@ namespace Aop.Api.Domain
         public string OpeningHours { get; set; }
 
         /// <summary>
-        /// 服务商场馆ID，不可变更
+        /// 主场馆在服务商的id，不可变更
         /// </summary>
         [XmlElement("out_venue_id")]
         public string OutVenueId { get; set; }
@@ -136,7 +148,7 @@ namespace Aop.Api.Domain
         public string Traffic { get; set; }
 
         /// <summary>
-        /// 支付宝场馆ID，不可变更
+        /// 支付宝主场馆ID，不可变更
         /// </summary>
         [XmlElement("venue_id")]
         public string VenueId { get; set; }

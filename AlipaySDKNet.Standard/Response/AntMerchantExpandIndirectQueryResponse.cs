@@ -106,7 +106,7 @@ namespace Aop.Api.Response
         public List<string> PayCodeInfo { get; set; }
 
         /// <summary>
-        /// 可用服务，列表返回  PC：网站支付  APP：无线支付  F2F：当面付  返回为空为不支持所有服务
+        /// 可用服务，列表返回 PC：网站支付 APP：无线支付 F2F：当面付 WITHHOLD：代扣 返回为空为不支持所有服务
         /// </summary>
         [XmlArray("service_codes")]
         [XmlArrayItem("string")]

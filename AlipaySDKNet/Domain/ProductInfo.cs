@@ -108,6 +108,12 @@ namespace Aop.Api.Domain
         public long StockCount { get; set; }
 
         /// <summary>
+        /// 核销时是否需要用户姓名，为true时需要用户姓名，为false为空值时不需要用户姓名，默认为空值不需要用户姓名。
+        /// </summary>
+        [XmlElement("user_name_required")]
+        public bool UserNameRequired { get; set; }
+
+        /// <summary>
         /// 凭证类型： 1-动态二维码 2-静态二维码 3-购买信息(订单号-姓名-手机号)
         /// </summary>
         [XmlElement("voucher_type")]

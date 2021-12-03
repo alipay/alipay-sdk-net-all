@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayUserMembertaskProcessSyncModel : AopObject
     {
         /// <summary>
+        /// 标识目标业务的动态业务参数
+        /// </summary>
+        [XmlElement("biz_param")]
+        public string BizParam { get; set; }
+
+        /// <summary>
         /// 标识目标业务的业务大类
         /// </summary>
         [XmlElement("biz_type")]

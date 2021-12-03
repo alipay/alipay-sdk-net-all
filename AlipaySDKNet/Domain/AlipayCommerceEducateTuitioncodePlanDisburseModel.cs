@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -16,10 +17,17 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
-        /// 学费码打款计划编号
+        /// 学费码打款计划编号。优先使用plan_ids，如果是打款一个任务，传递一个编号即可
         /// </summary>
         [XmlElement("plan_id")]
         public string PlanId { get; set; }
+
+        /// <summary>
+        /// 批量打款的打款任务编号列表。建议不超过3个
+        /// </summary>
+        [XmlArray("plan_ids")]
+        [XmlArrayItem("string")]
+        public List<string> PlanIds { get; set; }
 
         /// <summary>
         /// 2088401023137175

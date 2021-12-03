@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string ExpiresIn { get; set; }
 
         /// <summary>
+        /// 签约单号，如果是签约必返回
+        /// </summary>
+        [XmlElement("order_no")]
+        public string OrderNo { get; set; }
+
+        /// <summary>
         /// 刷新令牌的有效时间（从接口调用时间作为起始时间），单位到秒
         /// </summary>
         [XmlElement("re_expires_in")]

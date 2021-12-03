@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("price")]
         public long Price { get; set; }
+
+        /// <summary>
+        /// weight 表示重量 number表示数量
+        /// </summary>
+        [XmlElement("unit")]
+        public string Unit { get; set; }
     }
 }

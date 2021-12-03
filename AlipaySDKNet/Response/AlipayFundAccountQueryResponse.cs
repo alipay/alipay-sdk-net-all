@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayFundAccountQueryResponse : AopResponse
     {
         /// <summary>
-        /// 可用余额。可用于支付或提现的余额。
+        /// 账户可用余额，单位元，精确到小数点后两位。
         /// </summary>
         [XmlElement("available_amount")]
         public string AvailableAmount { get; set; }

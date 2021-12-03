@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ActualAccountNumber { get; set; }
 
         /// <summary>
-        /// 汇总批次id
+        /// 汇总批次id(废弃)
         /// </summary>
         [XmlElement("batch_id")]
         public string BatchId { get; set; }
@@ -70,13 +70,25 @@ namespace Aop.Api.Domain
         public string EmployeeId { get; set; }
 
         /// <summary>
+        /// 商户id
+        /// </summary>
+        [XmlElement("merchant_id")]
+        public string MerchantId { get; set; }
+
+        /// <summary>
+        /// 门店id
+        /// </summary>
+        [XmlElement("mshop_id")]
+        public string MshopId { get; set; }
+
+        /// <summary>
         /// 开票模式
         /// </summary>
         [XmlElement("open_model")]
         public string OpenModel { get; set; }
 
         /// <summary>
-        /// 退款交易关联正交易单号
+        /// 退款交易关联正交易单号(对应正交易的bill_no)
         /// </summary>
         [XmlElement("original_voucher_id")]
         public string OriginalVoucherId { get; set; }
@@ -118,7 +130,19 @@ namespace Aop.Api.Domain
         public string StandardId { get; set; }
 
         /// <summary>
-        /// tp标志位
+        /// 外部门店id
+        /// </summary>
+        [XmlElement("store_id")]
+        public string StoreId { get; set; }
+
+        /// <summary>
+        /// 批次id
+        /// </summary>
+        [XmlElement("summary_id")]
+        public string SummaryId { get; set; }
+
+        /// <summary>
+        /// 出资类型： PERSONAL:个人垫付 ENTERPRISE:企业垫资 TP:三方合作伙伴垫资 ACCOUNTING:记账
         /// </summary>
         [XmlElement("tp_sign")]
         public string TpSign { get; set; }

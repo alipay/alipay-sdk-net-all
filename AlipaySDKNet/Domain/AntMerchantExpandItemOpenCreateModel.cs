@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string Description { get; set; }
 
         /// <summary>
-        /// 商品扩展信息（具体KEY请参见产品文档）。 小程序订单中心场景接入参见  <a href="https://opendocs.alipay.com/mini/00u9ga">快速接入</a>。
+        /// 商品扩展信息（具体KEY请参见产品文档）。 小程序订单中心场景接入参见  <a href="https://opendocs.alipay.com/mini/024hj4">接入指南</a>。
         /// </summary>
         [XmlArray("ext_info")]
         [XmlArrayItem("item_ext_info")]

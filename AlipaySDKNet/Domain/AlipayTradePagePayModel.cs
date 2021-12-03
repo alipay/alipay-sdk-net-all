@@ -90,7 +90,7 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 公用回传参数。 如果请求时传递了该参数，支付宝会在异步通知时将该参数原样返回。 本参数必须进行UrlEncode之后才可以发送给支付宝。
+        /// 公用回传参数。 如果请求时传递了该参数，支付宝会在异步通知时将该参数原样返回。
         /// </summary>
         [XmlElement("passback_params")]
         public string PassbackParams { get; set; }
@@ -156,7 +156,7 @@ namespace Aop.Api.Domain
         public string Subject { get; set; }
 
         /// <summary>
-        /// 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm。
+        /// 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm:ss。 注：time_expire和timeout_express两者只需传入一个或者都不传，两者均传入时，优先使用time_expire。
         /// </summary>
         [XmlElement("time_expire")]
         public string TimeExpire { get; set; }

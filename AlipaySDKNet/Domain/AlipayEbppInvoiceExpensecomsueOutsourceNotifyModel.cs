@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string Platform { get; set; }
 
         /// <summary>
+        /// 退款流水ID，多次退款此ID不同，退款必须传入
+        /// </summary>
+        [XmlElement("relate_no")]
+        public string RelateNo { get; set; }
+
+        /// <summary>
         /// 制度id
         /// </summary>
         [XmlElement("standard_id")]

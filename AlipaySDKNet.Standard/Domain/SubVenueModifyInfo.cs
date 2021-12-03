@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string EquipmentRental { get; set; }
 
         /// <summary>
-        /// 场馆设置：1地板、2灯光、3淋浴、4餐饮、5WiFi ,6更衣室
+        /// 场馆设置（传数字）：1地板、2灯光、3淋浴、4餐饮、5WiFi 、6更衣室、7充电宝、8停车场、9休息区
         /// </summary>
         [XmlArray("facility_list")]
         [XmlArrayItem("number")]
@@ -66,7 +66,7 @@ namespace Aop.Api.Domain
         public string OptType { get; set; }
 
         /// <summary>
-        /// 服务商场馆ID
+        /// 子场馆在服务商的ID
         /// </summary>
         [XmlElement("out_sub_venue_id")]
         public string OutSubVenueId { get; set; }
@@ -129,7 +129,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 支付宝场馆ID，新入驻可不传，修改已入驻必传
+        /// 支付宝子场馆ID，新入驻可不传，修改已入驻必传
         /// </summary>
         [XmlElement("sub_venue_id")]
         public string SubVenueId { get; set; }

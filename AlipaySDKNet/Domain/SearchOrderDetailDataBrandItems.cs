@@ -29,6 +29,13 @@ namespace Aop.Api.Domain
         public string BrandBoxKeywords { get; set; }
 
         /// <summary>
+        /// 工单详情数据信息
+        /// </summary>
+        [XmlArray("brand_detail_list")]
+        [XmlArrayItem("search_order_brand_detail")]
+        public List<SearchOrderBrandDetail> BrandDetailList { get; set; }
+
+        /// <summary>
         /// 品牌展示模板类型
         /// </summary>
         [XmlElement("brand_template_id")]
@@ -39,13 +46,6 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
-
-        /// <summary>
-        /// 工单详情数据信息
-        /// </summary>
-        [XmlArray("data")]
-        [XmlArrayItem("search_order_brand_detail")]
-        public List<SearchOrderBrandDetail> Data { get; set; }
 
         /// <summary>
         /// 工单详情数据merchant_type

@@ -99,6 +99,12 @@ namespace Aop.Api.Domain
         public string OrderCreateTime { get; set; }
 
         /// <summary>
+        /// APPID,商户可自定义需要跳转到小程序（默认进入小程序首页）
+        /// </summary>
+        [XmlElement("order_link")]
+        public string OrderLink { get; set; }
+
+        /// <summary>
         /// 订单修改时间，一般不需要传入。用于订单状态或数据变化较快的顺序控制，order_modified_time较晚的同步会被最终存储，order_modified_time相同的两次同步可能会被幂等处理，FMCG按照行业标准化接入场景必须传入该字段控制乱序;时间格式:yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("order_modified_time")]

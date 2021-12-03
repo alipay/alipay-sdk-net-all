@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 外部商户系统会员的唯一标识
+        /// 外部商户系统会员的唯一标识，自定义传入
         /// </summary>
         [XmlElement("merchant_user_id")]
         public string MerchantUserId { get; set; }

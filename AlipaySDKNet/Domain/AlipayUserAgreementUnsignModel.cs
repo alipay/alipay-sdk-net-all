@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string OperateType { get; set; }
 
         /// <summary>
-        /// 协议产品码，商户和支付宝签约时确定，不同业务场景对应不同的签约产品码。 周期扣款场景必填，固定为：CYCLE_PAY_AUTH_P。
+        /// 协议产品码，商户和支付宝签约时确定，不同业务场景对应不同的签约产品码。
         /// </summary>
         [XmlElement("personal_product_code")]
         public string PersonalProductCode { get; set; }

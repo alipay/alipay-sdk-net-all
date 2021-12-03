@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
+        /// 额度是否冻结，冻结后额度不可用
+        /// </summary>
+        [XmlElement("freeze")]
+        public bool Freeze { get; set; }
+
+        /// <summary>
         /// 额度所属者ID owner_type为员工时为员工支付宝ID
         /// </summary>
         [XmlElement("owner_id")]

@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string PayFundOrderId { get; set; }
 
         /// <summary>
-        /// 转账单据状态。 SUCCESS：成功； FAIL：失败（具体失败原因请参见error_code以及fail_reason返回值）； DEALING：处理中； REFUND：退票；
+        /// 转账单据状态。 SUCCESS：成功； FAIL：失败（具体失败原因请参见error_code以及fail_reason返回值）； DEALING：处理中（转账到支付宝账户不涉及）； REFUND：退票（转账到支付宝账户不涉及）；
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

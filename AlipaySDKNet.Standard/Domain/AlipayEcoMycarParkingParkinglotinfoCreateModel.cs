@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayEcoMycarParkingParkinglotinfoCreateModel : AopObject
     {
         /// <summary>
-        /// 服务商ID（2088开头的16位纯数字），由服务商提供给ISV
+        /// 服务商的支付宝账号ID（2088开头的16位纯数字，<a href="https://opendocs.alipay.com/common/02ncut">获取方式</a>），由服务商提供给ISV
         /// </summary>
         [XmlElement("agent_id")]
         public string AgentId { get; set; }
@@ -96,7 +96,7 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
-        /// 收款方ID（2088开头的16位纯数字），由停车场收款的业主方提供给ISV，该字段暂用于机具和物料申领
+        /// 收款方的支付宝账号ID（2088开头的16位纯数字，<a href="https://opendocs.alipay.com/common/02ncut">获取方式</a>），由停车场收款的业主方提供给ISV，该字段暂用于机具和物料申领
         /// </summary>
         [XmlElement("mchnt_id")]
         public string MchntId { get; set; }

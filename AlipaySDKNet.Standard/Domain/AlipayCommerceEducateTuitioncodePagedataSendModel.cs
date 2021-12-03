@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CourseName { get; set; }
 
         /// <summary>
-        /// 开课月份
+        /// 开课月份。开课月份必须早于结课月份，课程最大跨度时间为12个月
         /// </summary>
         [XmlElement("course_start_month")]
         public string CourseStartMonth { get; set; }
@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string Logo { get; set; }
 
         /// <summary>
+        /// 外部业务编号。课程类信息传递课程编号，用于计算订单的打款规则
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 外部订单号
         /// </summary>
         [XmlElement("out_order_no")]
@@ -62,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }
+
+        /// <summary>
+        /// 打款周期数。如果某个业务的打款周期由交易数据指定，而非业务的固定统一，则该字段必传
+        /// </summary>
+        [XmlElement("period")]
+        public long Period { get; set; }
 
         /// <summary>
         /// 课程周期类型,固定写MONTH

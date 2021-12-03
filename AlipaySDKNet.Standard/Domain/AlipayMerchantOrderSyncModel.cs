@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMerchantOrderSyncModel : AopObject
     {
         /// <summary>
-        /// 订单金额，单位为元。SERVICE_ORDER且不涉及金额可不传入该字段，其他场景必传
+        /// 订单金额，单位为【元】。SERVICE_ORDER且不涉及金额可不传入该字段，其他场景必传
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -23,13 +23,13 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
-        /// buyer_info与buyer_user_id必选其一
+        /// buyer_info与buyer_id必选其一
         /// </summary>
         [XmlElement("buyer_info")]
         public UserInfomation BuyerInfo { get; set; }
 
         /// <summary>
-        /// 优惠金额
+        /// 优惠金额，单位为【元】
         /// </summary>
         [XmlElement("discount_amount")]
         public string DiscountAmount { get; set; }
@@ -112,7 +112,7 @@ namespace Aop.Api.Domain
         public string PartnerId { get; set; }
 
         /// <summary>
-        /// 支付金额，需要实际支付的金额。SERVICE_ORDER且不涉及金额可不传入该字段，其他场景必传
+        /// 支付金额，单位为【元】，需要实际支付的金额。SERVICE_ORDER且不涉及金额可不传入该字段，其他场景必传
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }
@@ -142,7 +142,7 @@ namespace Aop.Api.Domain
         public string SendMsg { get; set; }
 
         /// <summary>
-        /// 服务code：传入小程序后台提报的服务id，将订单与服务关联，有利于提高服务曝光机会；入参服务id的类目须与订单类型相符，若不相符将会报错；如订单类型为“外卖”，则入参的服务ID所对应的服务类目也必须得是”外卖“；service_code 通过 alipay.open.app.appcontent.function.create(小程序服务创建)接口创建服务后获取。
+        /// 服务code：传入小程序后台提报的服务id，将订单与服务关联，有利于提高服务曝光机会；入参服务id的类目须与订单类型相符，若不相符将会报错；如订单类型为“外卖”，则入参的服务ID所对应的服务类目也必须得是”外卖“；service_code 通过 alipay.open.app.service.apply，(服务提报申请)接口创建服务后获取。
         /// </summary>
         [XmlElement("service_code")]
         public string ServiceCode { get; set; }
@@ -152,6 +152,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("shop_info")]
         public OrderShopInfo ShopInfo { get; set; }
+
+        /// <summary>
+        /// 用于区分用户下单的订单来源，如 Alipay-支付宝端内（默认） DingTalk-钉钉小程序
+        /// </summary>
+        [XmlElement("source_app")]
+        public string SourceApp { get; set; }
 
         /// <summary>
         /// 同步内容 -JOURNEY_ONLY 仅行程信息 -ALL 全部(默认)

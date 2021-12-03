@@ -114,7 +114,7 @@ namespace Aop.Api.Domain
         public string SellerId { get; set; }
 
         /// <summary>
-        /// 描述结算信息，json格式，详见结算参数说明
+        /// 结算信息。 json格式，详见结算参数说明。 直付通模式下必传。
         /// </summary>
         [XmlElement("settle_info")]
         public SettleInfo SettleInfo { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayBossProdMyTestQueryModel : AopObject
     {
         /// <summary>
-        /// 区
+        /// 区.
         /// </summary>
         [XmlElement("area_code")]
         public string AreaCode { get; set; }

@@ -41,6 +41,18 @@ namespace Aop.Api.Response
         public string Desc { get; set; }
 
         /// <summary>
+        /// 场馆更多服务链接：可从文体场馆页跳转进此链接，进入服务商的该场馆页面
+        /// </summary>
+        [XmlElement("extra_service_url")]
+        public string ExtraServiceUrl { get; set; }
+
+        /// <summary>
+        /// 接入方式： center = 中心化 (场馆走文体中心统一规范）； half_center = 半中心化 （场馆走服务商的跳转链接）。
+        /// </summary>
+        [XmlElement("join_type")]
+        public string JoinType { get; set; }
+
+        /// <summary>
         /// 纬度
         /// </summary>
         [XmlElement("latitude")]

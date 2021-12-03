@@ -141,6 +141,18 @@ namespace Aop.Api.Domain
         public string ServiceLocation { get; set; }
 
         /// <summary>
+        /// 结算公式编码
+        /// </summary>
+        [XmlElement("settlement_formula_code")]
+        public string SettlementFormulaCode { get; set; }
+
+        /// <summary>
+        /// 结算公式名称
+        /// </summary>
+        [XmlElement("settlement_formula_name")]
+        public string SettlementFormulaName { get; set; }
+
+        /// <summary>
         /// sla详情地址
         /// </summary>
         [XmlElement("sla_view_info")]

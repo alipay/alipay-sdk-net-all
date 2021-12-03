@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class KoubeiMarketingCampaignMerchantActivityCreateModel : AopObject
     {
         /// <summary>
-        /// 活动是否需要自动续期
+        /// 活动是否需要自动续期(已废弃)
         /// </summary>
         [XmlElement("auto_delay_flag")]
         public bool AutoDelayFlag { get; set; }

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AlipayAccount { get; set; }
 
         /// <summary>
+        /// 场景授权列表结构结构：场景codeA:权限code1,权限code2;场景codeB:权限code1,权限code2;
+        /// </summary>
+        [XmlElement("isv_scene_permissions")]
+        public string IsvScenePermissions { get; set; }
+
+        /// <summary>
         /// 支付宝商户号。注意仅支持 2088 开头的间连商户。 若被代运营者是间连商户，则 merchant_no 必填； 若为直连商户，则 merchant_no 和 alipay_account 不能同时为空，都有值优先取 merchant_no。
         /// </summary>
         [XmlElement("merchant_no")]

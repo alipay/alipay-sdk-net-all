@@ -27,10 +27,28 @@ namespace Aop.Api.Response
         public string BusinessLicense { get; set; }
 
         /// <summary>
+        /// 代理人认证渠道，取值如下：LPIDCARD代表法人身份证认证渠道；EMAIL代表企业邮箱认证渠道
+        /// </summary>
+        [XmlElement("certify_channel")]
+        public string CertifyChannel { get; set; }
+
+        /// <summary>
+        /// 认证模式，取值如下：ATTORNEY代表代理人；LEGAL_PERSON代表法定代表人
+        /// </summary>
+        [XmlElement("certify_mode")]
+        public string CertifyMode { get; set; }
+
+        /// <summary>
         /// 认证状态，取值如下： SUCCESS，代表成功 INIT，代表初始化 CERTIFYING，代表认证中 FAIL，代表失败
         /// </summary>
         [XmlElement("certify_status")]
         public string CertifyStatus { get; set; }
+
+        /// <summary>
+        /// 企业邮箱地址
+        /// </summary>
+        [XmlElement("email_address")]
+        public string EmailAddress { get; set; }
 
         /// <summary>
         /// 统一社会信用代码或营业执照注册号，字段auth_status为SUCCESS时返回

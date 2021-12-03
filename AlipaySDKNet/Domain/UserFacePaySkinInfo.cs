@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ClientVersionLimit { get; set; }
 
         /// <summary>
-        /// 北京时间0点过期的日期(yyyy-MM-dd) 若未领取/未授权 字段为空
+        /// 北京时间皮肤过期日期(yyyy-MM-dd)，当日的23点59分59秒，若未领取/未授权 字段为空
         /// </summary>
         [XmlElement("expire_date")]
         public string ExpireDate { get; set; }

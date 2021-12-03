@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("stock_count")]
         public long StockCount { get; set; }
+
+        /// <summary>
+        /// 商品规格。日历型票券商品必填，其他类型商品不需要填写。
+        /// </summary>
+        [XmlElement("zone_name")]
+        public string ZoneName { get; set; }
     }
 }

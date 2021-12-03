@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
+
+        /// <summary>
+        /// 费率申请通过后实际生效的费率值，只有0或者0.001两种可能情况。当status字段返回TRUE时此字段有值，反之不返回费率信息
+        /// </summary>
+        [XmlElement("rate")]
+        public string Rate { get; set; }
     }
 }

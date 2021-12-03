@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string CreditAmount { get; set; }
 
         /// <summary>
+        /// 芝麻透出给商户的信息，具体内容由商户与芝麻约定后返回
+        /// </summary>
+        [XmlElement("credit_merchant_ext")]
+        public string CreditMerchantExt { get; set; }
+
+        /// <summary>
         /// 商户请求创建预授权订单时传入的扩展参数，仅返回商户自定义的扩展信息（merchantExt）
         /// </summary>
         [XmlElement("extra_param")]

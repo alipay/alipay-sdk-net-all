@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("smid")]
         public string Smid { get; set; }
+
+        /// <summary>
+        /// 间联商户smid进件的sourcePid。如果该字段非空，优先以该字段做smid的水平鉴权；如果该字段为空，则以接口调用方PID做smid的水平鉴权。
+        /// </summary>
+        [XmlElement("smid_source_pid")]
+        public string SmidSourcePid { get; set; }
     }
 }
