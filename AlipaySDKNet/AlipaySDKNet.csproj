@@ -10,7 +10,7 @@
     <RootNamespace>AlipaySDKNet</RootNamespace>
     <AssemblyName>AlipaySDKNet</AssemblyName>
     <PackageId>AlipaySDKNet</PackageId>
-    <PackageVersion>4.6.99</PackageVersion>
+    <PackageVersion>4.6.109</PackageVersion>
     <Authors>antopen</Authors>
     <NeutralLanguage>zh</NeutralLanguage>
     <Description>支付宝开放平台官方SDK，支持.Net Framework 3.5(SP1)及其以上版本。</Description>
@@ -293,6 +293,15 @@
     <Compile Include="Response\MybankFinanceYulibaoCapitalPurchaseResponse.cs" />
     <Compile Include="Response\MybankFinanceYulibaoAccountQueryResponse.cs" />
     <Compile Include="Response\MybankFinanceAccountRysenterpriseQueryResponse.cs" />
+    <Compile Include="Response\MybankEcnyTradeRefundResponse.cs" />
+    <Compile Include="Response\MybankEcnyTradeQueryResponse.cs" />
+    <Compile Include="Response\MybankEcnyTradePayResponse.cs" />
+    <Compile Include="Response\MybankEcnyTradeCancelResponse.cs" />
+    <Compile Include="Response\MybankEcnyMerchantSignQueryResponse.cs" />
+    <Compile Include="Response\MybankEcnyMerchantSignResponse.cs" />
+    <Compile Include="Response\MybankEcnyFileUploadResponse.cs" />
+    <Compile Include="Response\MybankEcnyEntwalletCreateQueryResponse.cs" />
+    <Compile Include="Response\MybankEcnyEntwalletCreateResponse.cs" />
     <Compile Include="Response\MybankCreditUserSystemOauthQueryResponse.cs" />
     <Compile Include="Response\MybankCreditUserSitememberEnterpriseMatchResponse.cs" />
     <Compile Include="Response\MybankCreditUserRoleQueryResponse.cs" />
@@ -909,7 +918,10 @@
     <Compile Include="Response\HuanxuTradeOrderDisburseResponse.cs" />
     <Compile Include="Response\HuanxuTradeOrderCloseResponse.cs" />
     <Compile Include="Response\HuanxuTradeAccountserviceCardCertifyResponse.cs" />
+    <Compile Include="Response\AnttechOceanbaseVerificationcodeVerifyResponse.cs" />
+    <Compile Include="Response\AnttechOceanbaseVerificationcodeSendResponse.cs" />
     <Compile Include="Response\AnttechOceanbasePassinfoLogininfoQueryResponse.cs" />
+    <Compile Include="Response\AnttechOceanbaseNotifySendResponse.cs" />
     <Compile Include="Response\AnttechOceanbaseMegagameTaskSyncResponse.cs" />
     <Compile Include="Response\AnttechOceanbaseMegagameTaskQueryResponse.cs" />
     <Compile Include="Response\AnttechDataServiceBlockchainTransactionQueryResponse.cs" />
@@ -1696,6 +1708,7 @@
     <Compile Include="Response\AlipayPcreditHuabeiAuthAgreementCloseResponse.cs" />
     <Compile Include="Response\AlipayPcreditHuabeiAuthAccumulationQueryResponse.cs" />
     <Compile Include="Response\AlipayPcreditCreditriskCustlabelQueryResponse.cs" />
+    <Compile Include="Response\AlipayPayPaysharingprodSharepeerpayApplyResponse.cs" />
     <Compile Include="Response\AlipayPayCodecQrcodecacheAddResponse.cs" />
     <Compile Include="Response\AlipayPayCodecHschoolDecodeUseResponse.cs" />
     <Compile Include="Response\AlipayPayCodecApplepayEstablishSetResponse.cs" />
@@ -4102,6 +4115,7 @@
     <Compile Include="Response\AlipayBossFncPidUnwriteoffQueryResponse.cs" />
     <Compile Include="Response\AlipayBossFncOutputinvoiceRcptamountQueryResponse.cs" />
     <Compile Include="Response\AlipayBossFncOutputinvoiceRcptQueryResponse.cs" />
+    <Compile Include="Response\AlipayBossFncOutputinvoiceOutbillApplyResponse.cs" />
     <Compile Include="Response\AlipayBossFncOutputinvoiceApplyApplyResponse.cs" />
     <Compile Include="Response\AlipayBossFncInvoicreceiptQueryResponse.cs" />
     <Compile Include="Response\AlipayBossFncInvoicereturnCreateResponse.cs" />
@@ -4557,6 +4571,7 @@
     <Compile Include="Domain\UserCertifyPayload.cs" />
     <Compile Include="Domain\UserCert.cs" />
     <Compile Include="Domain\UserBusiness.cs" />
+    <Compile Include="Domain\UserBaseInfo.cs" />
     <Compile Include="Domain\UserAppBizDataInfo.cs" />
     <Compile Include="Domain\UserAnalysisData.cs" />
     <Compile Include="Domain\UserAdvanceInfo.cs" />
@@ -5579,6 +5594,14 @@
     <Compile Include="Domain\MybankFinanceYulibaoCapitalPurchaseModel.cs" />
     <Compile Include="Domain\MybankFinanceYulibaoAccountQueryModel.cs" />
     <Compile Include="Domain\MybankFinanceAccountRysenterpriseQueryModel.cs" />
+    <Compile Include="Domain\MybankEcnyTradeRefundModel.cs" />
+    <Compile Include="Domain\MybankEcnyTradeQueryModel.cs" />
+    <Compile Include="Domain\MybankEcnyTradePayModel.cs" />
+    <Compile Include="Domain\MybankEcnyTradeCancelModel.cs" />
+    <Compile Include="Domain\MybankEcnyMerchantSignQueryModel.cs" />
+    <Compile Include="Domain\MybankEcnyMerchantSignModel.cs" />
+    <Compile Include="Domain\MybankEcnyEntwalletCreateQueryModel.cs" />
+    <Compile Include="Domain\MybankEcnyEntwalletCreateModel.cs" />
     <Compile Include="Domain\MybankCreditUserSystemOauthQueryModel.cs" />
     <Compile Include="Domain\MybankCreditUserSitememberEnterpriseMatchModel.cs" />
     <Compile Include="Domain\MybankCreditUserRoleQueryModel.cs" />
@@ -6669,6 +6692,7 @@
     <Compile Include="Domain\InvoiceBillResponseDTO.cs" />
     <Compile Include="Domain\InvoiceBillItem.cs" />
     <Compile Include="Domain\InvoiceApplyOpenModel.cs" />
+    <Compile Include="Domain\InvoiceApplyOpenApi.cs" />
     <Compile Include="Domain\InvoiceAmountLimitInfo.cs" />
     <Compile Include="Domain\InvoiceAmountLimitDTO.cs" />
     <Compile Include="Domain\InvoiceAllResponseDTO.cs" />
@@ -7104,6 +7128,7 @@
     <Compile Include="Domain\EcoCenRenthousepayTypeList.cs" />
     <Compile Include="Domain\EcoApplySchedule.cs" />
     <Compile Include="Domain\EcoAppInfo.cs" />
+    <Compile Include="Domain\EcnyAddressInfo.cs" />
     <Compile Include="Domain\EbppUserChargeInstInfo.cs" />
     <Compile Include="Domain\EbppOrderItemToCreate.cs" />
     <Compile Include="Domain\EbppOrderItem.cs" />
@@ -7216,7 +7241,6 @@
     <Compile Include="Domain\CustomerGuideModify.cs" />
     <Compile Include="Domain\CustomerGuide.cs" />
     <Compile Include="Domain\CustomerEntity.cs" />
-    <Compile Include="Domain\CustomerContextDTO.cs" />
     <Compile Include="Domain\CumulateDataDetail.cs" />
     <Compile Include="Domain\CrowdSummary.cs" />
     <Compile Include="Domain\CrowdRuleInfo.cs" />
@@ -7738,7 +7762,10 @@
     <Compile Include="Domain\ApBillAmtOpenApiResponse.cs" />
     <Compile Include="Domain\AoiInfoDTO.cs" />
     <Compile Include="Domain\AOIinfo.cs" />
+    <Compile Include="Domain\AnttechOceanbaseVerificationcodeVerifyModel.cs" />
+    <Compile Include="Domain\AnttechOceanbaseVerificationcodeSendModel.cs" />
     <Compile Include="Domain\AnttechOceanbasePassinfoLogininfoQueryModel.cs" />
+    <Compile Include="Domain\AnttechOceanbaseNotifySendModel.cs" />
     <Compile Include="Domain\AnttechOceanbaseMegagameTaskSyncModel.cs" />
     <Compile Include="Domain\AnttechOceanbaseMegagameTaskQueryModel.cs" />
     <Compile Include="Domain\AnttechDataServiceBlockchainTransactionQueryModel.cs" />
@@ -8505,6 +8532,7 @@
     <Compile Include="Domain\AlipayPcreditHuabeiAuthAgreementCloseModel.cs" />
     <Compile Include="Domain\AlipayPcreditHuabeiAuthAccumulationQueryModel.cs" />
     <Compile Include="Domain\AlipayPcreditCreditriskCustlabelQueryModel.cs" />
+    <Compile Include="Domain\AlipayPayPaysharingprodSharepeerpayApplyModel.cs" />
     <Compile Include="Domain\AlipayPayCodecQrcodecacheAddModel.cs" />
     <Compile Include="Domain\AlipayPayCodecHschoolDecodeUseModel.cs" />
     <Compile Include="Domain\AlipayPayCodecApplepayEstablishSetModel.cs" />
@@ -10704,6 +10732,7 @@
     <Compile Include="Domain\AlipayBossFncPidUnwriteoffQueryModel.cs" />
     <Compile Include="Domain\AlipayBossFncOutputinvoiceRcptQueryModel.cs" />
     <Compile Include="Domain\AlipayBossFncOutputinvoiceRcptamountQueryModel.cs" />
+    <Compile Include="Domain\AlipayBossFncOutputinvoiceOutbillApplyModel.cs" />
     <Compile Include="Domain\AlipayBossFncOutputinvoiceApplyApplyModel.cs" />
     <Compile Include="Domain\AlipayBossFncInvoicreceiptQueryModel.cs" />
     <Compile Include="Domain\AlipayBossFncInvoiceStatementbillApplyModel.cs" />
@@ -11163,6 +11192,15 @@
     <Compile Include="Request\MybankFinanceYulibaoCapitalPurchaseRequest.cs" />
     <Compile Include="Request\MybankFinanceYulibaoAccountQueryRequest.cs" />
     <Compile Include="Request\MybankFinanceAccountRysenterpriseQueryRequest.cs" />
+    <Compile Include="Request\MybankEcnyTradeRefundRequest.cs" />
+    <Compile Include="Request\MybankEcnyTradeQueryRequest.cs" />
+    <Compile Include="Request\MybankEcnyTradePayRequest.cs" />
+    <Compile Include="Request\MybankEcnyTradeCancelRequest.cs" />
+    <Compile Include="Request\MybankEcnyMerchantSignQueryRequest.cs" />
+    <Compile Include="Request\MybankEcnyMerchantSignRequest.cs" />
+    <Compile Include="Request\MybankEcnyFileUploadRequest.cs" />
+    <Compile Include="Request\MybankEcnyEntwalletCreateQueryRequest.cs" />
+    <Compile Include="Request\MybankEcnyEntwalletCreateRequest.cs" />
     <Compile Include="Request\MybankCreditUserSystemOauthQueryRequest.cs" />
     <Compile Include="Request\MybankCreditUserSitememberEnterpriseMatchRequest.cs" />
     <Compile Include="Request\MybankCreditUserRoleQueryRequest.cs" />
@@ -11779,7 +11817,10 @@
     <Compile Include="Request\HuanxuTradeOrderDisburseRequest.cs" />
     <Compile Include="Request\HuanxuTradeOrderCloseRequest.cs" />
     <Compile Include="Request\HuanxuTradeAccountserviceCardCertifyRequest.cs" />
+    <Compile Include="Request\AnttechOceanbaseVerificationcodeVerifyRequest.cs" />
+    <Compile Include="Request\AnttechOceanbaseVerificationcodeSendRequest.cs" />
     <Compile Include="Request\AnttechOceanbasePassinfoLogininfoQueryRequest.cs" />
+    <Compile Include="Request\AnttechOceanbaseNotifySendRequest.cs" />
     <Compile Include="Request\AnttechOceanbaseMegagameTaskSyncRequest.cs" />
     <Compile Include="Request\AnttechOceanbaseMegagameTaskQueryRequest.cs" />
     <Compile Include="Request\AnttechDataServiceBlockchainTransactionQueryRequest.cs" />
@@ -12566,6 +12607,7 @@
     <Compile Include="Request\AlipayPcreditHuabeiAuthAgreementCloseRequest.cs" />
     <Compile Include="Request\AlipayPcreditHuabeiAuthAccumulationQueryRequest.cs" />
     <Compile Include="Request\AlipayPcreditCreditriskCustlabelQueryRequest.cs" />
+    <Compile Include="Request\AlipayPayPaysharingprodSharepeerpayApplyRequest.cs" />
     <Compile Include="Request\AlipayPayCodecQrcodecacheAddRequest.cs" />
     <Compile Include="Request\AlipayPayCodecHschoolDecodeUseRequest.cs" />
     <Compile Include="Request\AlipayPayCodecApplepayEstablishSetRequest.cs" />
@@ -14972,6 +15014,7 @@
     <Compile Include="Request\AlipayBossFncPidUnwriteoffQueryRequest.cs" />
     <Compile Include="Request\AlipayBossFncOutputinvoiceRcptamountQueryRequest.cs" />
     <Compile Include="Request\AlipayBossFncOutputinvoiceRcptQueryRequest.cs" />
+    <Compile Include="Request\AlipayBossFncOutputinvoiceOutbillApplyRequest.cs" />
     <Compile Include="Request\AlipayBossFncOutputinvoiceApplyApplyRequest.cs" />
     <Compile Include="Request\AlipayBossFncInvoicreceiptQueryRequest.cs" />
     <Compile Include="Request\AlipayBossFncInvoicereturnCreateRequest.cs" />

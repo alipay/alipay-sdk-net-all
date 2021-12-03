@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Pid { get; set; }
 
         /// <summary>
+        /// 任务code，唯一标识
+        /// </summary>
+        [XmlElement("task_code")]
+        public string TaskCode { get; set; }
+
+        /// <summary>
         /// 店员id，点击提交的收银员id
         /// </summary>
         [XmlElement("user_id")]

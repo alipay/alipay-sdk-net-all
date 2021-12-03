@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string PositionId { get; set; }
 
         /// <summary>
-        /// 岗位对应的职业id，字段参考https://www.yuque.com/wx3dkp/gwckr4/bs03t3
+        /// 岗位对应的行业id，字段参考https://www.yuque.com/wx3dkp/gwckr4/bs03t3
         /// </summary>
         [XmlElement("position_job_id")]
         public string PositionJobId { get; set; }
@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string PositionJobName { get; set; }
 
         /// <summary>
-        /// 岗位对应的行业id，字段参考https://www.yuque.com/wx3dkp/gwckr4/bs03t3
+        /// 岗位对应的职业id，字段参考https://www.yuque.com/wx3dkp/gwckr4/bs03t3
         /// </summary>
         [XmlElement("position_profession_id")]
         public string PositionProfessionId { get; set; }
@@ -130,7 +130,7 @@ namespace Aop.Api.Domain
         public string SalaryType { get; set; }
 
         /// <summary>
-        /// 薪资单位，元/日(DAY)、元/次(TIME)、元/月(MONTH)、元/小时(HOUR)、元/件 (NUM)
+        /// 薪资单位，元/日(DAY)、元/次(TIME)、元/月(MONTH)、元/小时(HOUR)、元/件 (NUM)、元/周 (WEEK)、其他 (OTHER)
         /// </summary>
         [XmlElement("salary_unit")]
         public string SalaryUnit { get; set; }
@@ -148,7 +148,7 @@ namespace Aop.Api.Domain
         public string SkipUrl { get; set; }
 
         /// <summary>
-        /// 高德city code，例：北京010
+        /// 高德city code，例：北京010，线上工作9999
         /// </summary>
         [XmlElement("work_city")]
         public string WorkCity { get; set; }
