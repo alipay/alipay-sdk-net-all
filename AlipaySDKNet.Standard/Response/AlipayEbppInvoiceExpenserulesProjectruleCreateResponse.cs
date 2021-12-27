@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceExpenserulesProjectruleCreateResponse : AopResponse
     {
         /// <summary>
-        /// 项目id
+        /// 项目ID
         /// </summary>
         [XmlElement("project_id")]
         public string ProjectId { get; set; }

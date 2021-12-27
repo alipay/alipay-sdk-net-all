@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpensecomsueOutsourceNotifyModel : AopObject
     {
         /// <summary>
-        /// 企业码账号
+        /// 企业ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 消费金额（单位：分）正整数，金额必须大于0， 200 表示金额为2元
+        /// 消费金额 特殊说明：单位为分的正整数
         /// </summary>
         [XmlElement("amount")]
         public long Amount { get; set; }
@@ -34,49 +34,49 @@ namespace Aop.Api.Domain
         public string DealTime { get; set; }
 
         /// <summary>
-        /// 员工id
+        /// 员工ID 特殊说明：根据员工账号类型来决定为员工UID还是员工工号
         /// </summary>
         [XmlElement("employee_id")]
         public string EmployeeId { get; set; }
 
         /// <summary>
-        /// 0 员工支付宝账号，1 员工公司员工号
+        /// 员工账号类型 枚举值： 0（员工支付宝账号） 1（ 员工工号）
         /// </summary>
         [XmlElement("employee_id_type")]
         public long EmployeeIdType { get; set; }
 
         /// <summary>
-        /// 定制化字段传入,当前无约定规则（例如：部分调用方传入餐补餐期-中餐（L），晚餐(D)）
+        /// 拓展参数 如需使用，请联系技术支持
         /// </summary>
         [XmlElement("extend")]
         public string Extend { get; set; }
 
         /// <summary>
-        /// 0 是扣款，1 退款
+        /// 交易类型 枚举值： 0（扣款） 1（退款）
         /// </summary>
         [XmlElement("is_off_set")]
         public long IsOffSet { get; set; }
 
         /// <summary>
-        /// 外部唯一交易ID（幂等）
+        /// 外部交易支付单号
         /// </summary>
         [XmlElement("out_source_id")]
         public string OutSourceId { get; set; }
 
         /// <summary>
-        /// 调用者身份（道安- DAO_AN，企业福利平台WELFARE_PLATFORM），接入接口分配的身份标记
+        /// 外部平台编码（联系技术支持分配）
         /// </summary>
         [XmlElement("platform")]
         public string Platform { get; set; }
 
         /// <summary>
-        /// 退款流水ID，多次退款此ID不同，退款必须传入
+        /// 外部交易退款单号 特殊说明：交易类型为退款的时候传入，多次退款传入不同的退款单号
         /// </summary>
         [XmlElement("relate_no")]
         public string RelateNo { get; set; }
 
         /// <summary>
-        /// 制度id
+        /// 费控规则ID 特殊说明：该交易绑定的支付宝费控规则ID
         /// </summary>
         [XmlElement("standard_id")]
         public string StandardId { get; set; }

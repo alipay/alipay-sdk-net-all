@@ -50,17 +50,8 @@
     <None Include="..\UnitTestNetCore\Fixture\.DS_Store">
       <Link>Fixture\.DS_Store</Link>
     </None>
-    <None Include="..\UnitTestNetCore\Fixture\alipayCertPublicKey_RSA2.crt">
-      <Link>Fixture\alipayCertPublicKey_RSA2.crt</Link>
-    </None>
-    <None Include="..\UnitTestNetCore\Fixture\alipayRootCert.crt">
-      <Link>Fixture\alipayRootCert.crt</Link>
-    </None>
     <None Include="..\UnitTestNetCore\Fixture\aop-openfile-RSA-private.pem">
       <Link>Fixture\aop-openfile-RSA-private.pem</Link>
-    </None>
-    <None Include="..\UnitTestNetCore\Fixture\appCertPublicKey_2019090366875133.crt">
-      <Link>Fixture\appCertPublicKey_2019090366875133.crt</Link>
     </None>
     <None Include="..\UnitTestNetCore\Fixture\test-image.png">
       <Link>Fixture\test-image.png</Link>
@@ -85,6 +76,15 @@
     </None>
     <None Include="..\UnitTestNetCore\Fixture\SM2\alipayCertPublicKey_SM2.crt">
       <Link>Fixture\SM2\alipayCertPublicKey_SM2.crt</Link>
+    </None>
+    <None Include="..\UnitTestNetCore\Fixture\alipayCertPublicKey_RSA2.crt">
+      <Link>Fixture\alipayCertPublicKey_RSA2.crt</Link>
+    </None>
+    <None Include="..\UnitTestNetCore\Fixture\alipayRootCert.crt">
+      <Link>Fixture\alipayRootCert.crt</Link>
+    </None>
+    <None Include="..\UnitTestNetCore\Fixture\appCertPublicKey_2021003102616019.crt">
+      <Link>Fixture\appCertPublicKey_2021003102616019.crt</Link>
     </None>
   </ItemGroup>
   <ItemGroup>

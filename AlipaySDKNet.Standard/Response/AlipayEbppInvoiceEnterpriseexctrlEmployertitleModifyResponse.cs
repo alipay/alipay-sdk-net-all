@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public bool Success { get; set; }
 
         /// <summary>
-        /// 抬头Id
+        /// 抬头ID
         /// </summary>
         [XmlElement("title_id")]
         public string TitleId { get; set; }

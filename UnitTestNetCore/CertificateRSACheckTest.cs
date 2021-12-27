@@ -20,7 +20,7 @@ namespace Test
             parameters.Add("method", "koubei.marketing.data.indicator.query");
             parameters.Add("app_id", "2019090366875133");
             parameters.Add("sign_type", "RSA");
-            parameters.Add("sign", "jzUcBt9ZqDWNGg1rzAjqJFPLdvMs7icKUNb27O8xXH2bUtRiEtzwOkJl4VMZNIE0dWJNF9KauImnKf44U33ly1pxcYxg0gcM9C0i65NzvLu+1zoTNWUkIS/iHC4c0lNlAbyLJyhc35mc/6ISXfZcDDd3kkzrGHAliU5PhjbpPSRlBDZfyC4XpREQgwUnxpPRra6NM6vKIhCLkmt3u/DvnL8K2AmZkQk0mtfV7s7B3RFReJlM88mEhvhgOf+B13SDv8p0lBFFnrk2CAmFbZCCXQJdmxiC0D6wSzY4yLBqWggHQlmaMJ0fV3mCZDVEB1gMo0OfJi/0PG/eeZXN/sa2Ag==");
+            parameters.Add("sign", "dgpopfYI2Z6MIQrHFMiBbFm2XYqHbCA6LKyeDlV2zo/UvsQ4Ni5L8EBM6QWucPhSjRR4yJQcNIjC1XK9d547W/6d+5i5wy7VBXSdnH+Mf9kU/IfPyIEKCWlT8EB7o6526p19qbnKU4EpcUQ73FljfX5cPVkjePhHaNpU5h0u0OOIKWQP+VO/0YMBM2x8y5y4kiJBmOxV1Zl7l53v2VYGBH9z75AjYRWoA0M+l06crqtYYppNbbGbq3KWQA56tdVmuqfg9kpudo8CjdX+qtfDg2TZU/UaEDQLZnyAk9u3US85eF2w7g+4RpiIAKVDySksRXyk9kit6GroUe4Zb79KBQ==");
 
             bool result = AlipaySignature.RSACertCheckV2(parameters, TestAccount.ProdCert.GetConfig().AppCertPath, "utf-8", "RSA");
 
@@ -34,7 +34,7 @@ namespace Test
             parameters.Add("method", "koubei.marketing.data.indicator.query");
             parameters.Add("app_id", "2019090366875133");
             parameters.Add("sign_type", "RSA2");
-            parameters.Add("sign", "f032wwnTFj2klLz3xRM1tr/6JUiJkXIE4Rm0iBVZRQqDSRhv2nRBiykH+dRSie0MImuwuRMHwLdDHRD9MyeBp/vmmLjH08YtpUQXoEE7OUkbBM/grQDo5XoiKWj+CjF+kWagEc4L3nKahAYEIXQS086Jd7gJ0264kpKQ2GH4ric+X35+kX5qI6wnOUNeut5VqWvL1e+a8+Hy9EWqP4+YIY+nQEB3u4FOjjpT7knFdLnM6yJQZDSBYGdmoHlFGXLh0KbtHVp4QpG3jlzngiMZvyBBcuhZnssV+8tZtzJMMhEarvn7vYwvBfaIrt0c/GQrddOKsYfEvNf3DLktd7+KUA==");
+            parameters.Add("sign", "hTyUiy2Y1R+jWRjejbNGvIgri5LC7MYvotjVTSOxZgchbVC674+uJqd7p0+JXQRDH+PxN0asNR9X5aa72qTqGf39XsptAdTDCAf9+QsYN0MLOLw1KPcKfnvqDsWEyrniopu+p6rtsxFzpIk1Oc2IxS7IRfaRCliO6s7xaoiqsLcxHWc0E5dnmAW5sXrc4EdzMj8Hk9It72HNYYIE4q3/8/Xn7iTQ4JuCeHtpijH9VqXE1MB9kWf0f3dP8PY8TtFZKxhMpXyjyHrbmQ2ITnBzGqzh8Zp4bpy5PWg8w/MluQmUv8H861pFfK3FjgaCM/ISR7jrIFN/34vCu7hVLd79Ng==");
 
             bool result = AlipaySignature.RSACertCheckV2(parameters, TestAccount.ProdCert.GetConfig().AppCertPath, "utf-8", "RSA2");
 
@@ -49,7 +49,7 @@ namespace Test
             parameters.Add("app_id", "2019090366875133");
             parameters.Add("extra", "中文测试");
             parameters.Add("sign_type", "RSA2");
-            parameters.Add("sign", "dnjqgT/7DWQyGw+KfXa/0kZaFrrsipN9MSDP5lBWm9AB+OjmkZkl4qkKfpzHQo4z786lK2sjmSMviT9I89BM7E5nAh/Q371sc6Q8vjXn+n6bSjLqnzceSAqlJwUWGmFN5UZXins5OexYyeTp1bvfKk+GdWYrA6UUOw0Uo2YEZAX49Y+z0gGZl0knnDEPkGIVXY2G8v+BUU2U64I3DM5Ihd11sgEtXcI5Rop28wbTTEIVhl08gmmA1Jngs2v+yXE4mgtQdZJzaUAleew/xipfOas72xNZk+qkkIOPBGOBLzH9L22A3muX9aO0S+FD+lipfltawtt2ENr4vAtghXYwIQ==");
+            parameters.Add("sign", "InT5Qa2uTvOEytpp5suWulmN4UoCOCPthIJHo39OfzZcNUOa7Q9MyLda1HcfUg99AyWXQUyL6oi5X6NYJrQxKi04i6+lQbV/WZnuLB1k97ctmPB+akYqEbHLDscefbfXfhty26MYWZqPBkAIup4qJWz/eYEkeHL5Nj147WcrweEyoB8rQUgFGb+5fm5Mp1jLdpX7kXBfzK1WuwYQOvhn3a2cUI+Kn0a1krxzHyF+uKiIAlGDYFKBAtZKuoQ1OtIrrghECDn6aud3DP8ziAlV7mer7/tzhi4JcURxZDq4JnGa3gb79+A8QXrA1lPdN9XbU9N5SaVbXR6ODtiM9fjivA==");
 
             bool result = AlipaySignature.RSACertCheckV2(parameters, TestAccount.ProdCert.GetConfig().AppCertPath, "utf-8", "RSA2");
 

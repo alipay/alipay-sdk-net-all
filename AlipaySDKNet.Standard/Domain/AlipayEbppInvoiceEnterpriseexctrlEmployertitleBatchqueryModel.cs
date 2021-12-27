@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceEnterpriseexctrlEmployertitleBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 企业签约企业合花ID-共同账号ID
+        /// 企业ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 查询的第几页
+        /// 页码
         /// </summary>
         [XmlElement("page_num")]
         public long PageNum { get; set; }
 
         /// <summary>
-        /// 页大小
+        /// 每页行数
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

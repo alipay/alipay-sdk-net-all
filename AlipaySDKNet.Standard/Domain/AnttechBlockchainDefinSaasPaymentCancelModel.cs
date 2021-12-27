@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public ReferenceId OutPayerId { get; set; }
 
         /// <summary>
+        /// 外部请求ID
+        /// </summary>
+        [XmlElement("out_request_id")]
+        public string OutRequestId { get; set; }
+
+        /// <summary>
         /// 会员所属业务平台在智能科技的会员ID
         /// </summary>
         [XmlElement("platform_member_id")]

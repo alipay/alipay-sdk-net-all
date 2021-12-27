@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class ExpenseQuotaInfo : AopObject
     {
         /// <summary>
-        /// 额度失效时间
+        /// 余额失效时间
         /// </summary>
         [XmlElement("effective_end_date")]
         public string EffectiveEndDate { get; set; }
 
         /// <summary>
-        /// 额度生效时间
+        /// 余额生效时间
         /// </summary>
         [XmlElement("effective_start_date")]
         public string EffectiveStartDate { get; set; }
@@ -28,61 +28,61 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 额度是否冻结，冻结后额度不可用
+        /// 余额是否冻结，冻结后因公付不可用
         /// </summary>
         [XmlElement("freeze")]
         public bool Freeze { get; set; }
 
         /// <summary>
-        /// 额度所属者ID owner_type为员工时为员工支付宝ID
+        /// 余额所属者ID owner_type为员工时为员工支付宝ID
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// 额度所属者类型 EMPLOYEE 员工
+        /// 余额所属者类型 EMPLOYEE 员工
         /// </summary>
         [XmlElement("owner_type")]
         public string OwnerType { get; set; }
 
         /// <summary>
-        /// 可用额度（单位分）
+        /// 可用余额（单位分）
         /// </summary>
         [XmlElement("quota_available")]
         public string QuotaAvailable { get; set; }
 
         /// <summary>
-        /// 额度ID
+        /// 余额ID
         /// </summary>
         [XmlElement("quota_id")]
         public string QuotaId { get; set; }
 
         /// <summary>
-        /// 锁定额度（单位分）
+        /// 锁定余额（单位分）
         /// </summary>
         [XmlElement("quota_locked")]
         public string QuotaLocked { get; set; }
 
         /// <summary>
-        /// 总额度（单位分）
+        /// 总余额（单位分）
         /// </summary>
         [XmlElement("quota_total")]
         public string QuotaTotal { get; set; }
 
         /// <summary>
-        /// 已用额度（单位分）
+        /// 已用余额（单位分）
         /// </summary>
         [XmlElement("quota_used")]
         public string QuotaUsed { get; set; }
 
         /// <summary>
-        /// 额度类型ID
+        /// 余额维度ID 当 target_type=EXPENSE_TYPE 时，值为 MEAL（工作餐） 当target_type=RULE_GROUP_AGGREGATION 时，值为费控规则聚合ID
         /// </summary>
         [XmlElement("target_id")]
         public string TargetId { get; set; }
 
         /// <summary>
-        /// 额度类型 EXPENSE_TYPE: 场景盖帽额度
+        /// 余额维度 枚举值： EXPENSE_TYPE（费用类型维度）， RULE_GROUP_AGGREGATION（规则聚合维度）
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }

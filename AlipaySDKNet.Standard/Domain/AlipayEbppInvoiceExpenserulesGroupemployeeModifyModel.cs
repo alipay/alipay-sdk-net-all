@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpenserulesGroupemployeeModifyModel : AopObject
     {
         /// <summary>
-        /// 企业id-共同账号ID
+        /// 企业ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 需要添加的员工Uid列表（一次最多50个）
+        /// 需要添加的员工UID列表 特殊说明：一次最多50个
         /// </summary>
         [XmlArray("add_employee_list")]
         [XmlArrayItem("string")]
@@ -30,14 +30,14 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 费控规则ID（可以线下获取，也可以通过接口添加创建）
+        /// 费控规则ID列表
         /// </summary>
         [XmlArray("group_id_list")]
         [XmlArrayItem("string")]
         public List<string> GroupIdList { get; set; }
 
         /// <summary>
-        /// 需要移除的员工Uid列表（一次最多50个）
+        /// 需要移除的员工UID列表 特殊说明：一次最多50个
         /// </summary>
         [XmlArray("remove_employee_list")]
         [XmlArrayItem("string")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceSportsFacepayskinReceiveModel : AopObject
     {
         /// <summary>
+        /// 支付宝客户端版本号
+        /// </summary>
+        [XmlElement("client_version")]
+        public string ClientVersion { get; set; }
+
+        /// <summary>
         /// 北京时间的皮肤的过期日期,当日的23点59分59秒 会与之前申请皮肤上架里的日期比较，取两者的最小值
         /// </summary>
         [XmlElement("expire_date")]

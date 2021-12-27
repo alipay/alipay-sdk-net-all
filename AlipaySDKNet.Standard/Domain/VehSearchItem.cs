@@ -64,5 +64,11 @@ namespace Aop.Api.Domain
         [XmlArray("support_service_list")]
         [XmlArrayItem("veh_service_item")]
         public List<VehServiceItem> SupportServiceList { get; set; }
+
+        /// <summary>
+        /// 剩余停车位。 业务场景为PARKING_SERVICE时才可能有值。
+        /// </summary>
+        [XmlElement("surplus_parking_space")]
+        public string SurplusParkingSpace { get; set; }
     }
 }

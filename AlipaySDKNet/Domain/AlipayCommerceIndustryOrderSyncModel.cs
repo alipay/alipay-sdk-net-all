@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string OrderModifyTime { get; set; }
 
         /// <summary>
-        /// 订单类型，枚举支持 ALIPAY_APPLETS：支付宝小程序产生的订单 ALIPAY_POS：收银POS产生的支付宝订单
+        /// 订单类型，枚举支持 ALIPAY_APPLETS：支付宝小程序产生的订单 ALIPAY_POS：收银POS产生的支付宝订单  ALIPAY_INDUSTRY：支付宝行业小程序
         /// </summary>
         [XmlElement("order_source")]
         public string OrderSource { get; set; }

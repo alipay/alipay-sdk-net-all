@@ -10,19 +10,19 @@ namespace Aop.Api.Domain
     public class ExpenseConsumeInfo : AopObject
     {
         /// <summary>
-        /// 公司账号ID
+        /// 企业ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 实际出资账号（实际出资人实名认证名称)
+        /// 实际出资企业支付宝账号
         /// </summary>
         [XmlElement("actual_account_number")]
         public string ActualAccountNumber { get; set; }
 
         /// <summary>
-        /// 汇总批次id(废弃)
+        /// 汇总批次ID(废弃)
         /// </summary>
         [XmlElement("batch_id")]
         public string BatchId { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string CategoryName { get; set; }
 
         /// <summary>
-        /// 账单金额
+        /// 账单金额（单位：元）
         /// </summary>
         [XmlElement("consume_amount")]
         public string ConsumeAmount { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string MshopId { get; set; }
 
         /// <summary>
-        /// 开票模式
+        /// 开票模式（汇总开：ENTERPRISE_AUTO_BATCH）
         /// </summary>
         [XmlElement("open_model")]
         public string OpenModel { get; set; }
@@ -100,7 +100,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 企业代付金额
+        /// 企业支付金额（单位：元）
         /// </summary>
         [XmlElement("p_pay_amount")]
         public string PPayAmount { get; set; }
@@ -112,7 +112,7 @@ namespace Aop.Api.Domain
         public string PayeeName { get; set; }
 
         /// <summary>
-        /// 费控制度中的项目编号
+        /// 费控规则中的项目ID
         /// </summary>
         [XmlElement("project_id")]
         public string ProjectId { get; set; }
@@ -124,7 +124,19 @@ namespace Aop.Api.Domain
         public string ProjiectId { get; set; }
 
         /// <summary>
-        /// 制度id
+        /// 消费账单的退款金额
+        /// </summary>
+        [XmlElement("refund_amount")]
+        public string RefundAmount { get; set; }
+
+        /// <summary>
+        /// 消费账单的退款状态
+        /// </summary>
+        [XmlElement("refund_status")]
+        public string RefundStatus { get; set; }
+
+        /// <summary>
+        /// 费控规则ID
         /// </summary>
         [XmlElement("standard_id")]
         public string StandardId { get; set; }
@@ -148,7 +160,7 @@ namespace Aop.Api.Domain
         public string TpSign { get; set; }
 
         /// <summary>
-        /// 凭证id
+        /// 凭证ID
         /// </summary>
         [XmlElement("voucher_id")]
         public string VoucherId { get; set; }

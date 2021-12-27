@@ -13,7 +13,7 @@ namespace Test
         public void should_return_correct_cert_sn()
         {
             string sn = AlipaySignature.GetCertSN(TestAccount.ProdCert.GetConfig().AppCertPath);
-            Assert.AreEqual(sn, "f8e04719723c16b0ff796dcd0d8d7641");
+            Assert.AreEqual(sn, "47a27aac8ae3b5c589576f371da36dc2");
         }
 
         [Test()]

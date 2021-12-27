@@ -37,5 +37,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_order_id")]
         public string OutOrderId { get; set; }
+
+        /// <summary>
+        /// 外部请求ID
+        /// </summary>
+        [XmlElement("out_request_id")]
+        public string OutRequestId { get; set; }
     }
 }

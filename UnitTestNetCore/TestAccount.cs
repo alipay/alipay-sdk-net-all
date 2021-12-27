@@ -39,9 +39,9 @@ namespace Test
             {
                 AlipayConfig config = new AlipayConfig();
                 config.ServerUrl = "https://openapi.alipay.com/gateway.do";
-                config.AppId = "2019090366875133";
+                config.AppId = "2021003102616019";
                 config.PrivateKey = GetPrivateKey("ProdCert");
-                config.AppCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/appCertPublicKey_2019090366875133.crt";
+                config.AppCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/appCertPublicKey_2021003102616019.crt";
                 config.AlipayPublicCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/alipayCertPublicKey_RSA2.crt";
                 config.RootCertPath = GetSolutionBasePath() + "/UnitTestNetCore/Fixture/alipayRootCert.crt";
 

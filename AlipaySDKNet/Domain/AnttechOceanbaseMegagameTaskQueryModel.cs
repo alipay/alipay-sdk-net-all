@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("run_task_time_out_minutes")]
         public long RunTaskTimeOutMinutes { get; set; }
+
+        /// <summary>
+        /// 参赛团队Id ，支持指定团队获取任务
+        /// </summary>
+        [XmlElement("team_id")]
+        public string TeamId { get; set; }
     }
 }

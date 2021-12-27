@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -76,6 +77,12 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
+        /// 总授信额度：目前仅用与花呗分期
+        /// </summary>
+        [XmlElement("limit_amount")]
+        public string LimitAmount { get; set; }
+
+        /// <summary>
         /// 渠道logo图片的url地址
         /// </summary>
         [XmlElement("logo")]
@@ -104,5 +111,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("signed")]
         public bool Signed { get; set; }
+
+        /// <summary>
+        /// 子渠道列表：目前主要用于花呗分期的每期渠道
+        /// </summary>
+        [XmlArray("sub_channel_list")]
+        [XmlArrayItem("sub_channel_list")]
+        public List<SubChannelList> SubChannelList { get; set; }
     }
 }

@@ -96,6 +96,13 @@ namespace Aop.Api.Domain
         public string InvoiceDate { get; set; }
 
         /// <summary>
+        /// 发票行信息
+        /// </summary>
+        [XmlArray("invoice_line_orders")]
+        [XmlArrayItem("ap_invoice_line_order_request")]
+        public List<ApInvoiceLineOrderRequest> InvoiceLineOrders { get; set; }
+
+        /// <summary>
         /// 发票介质 01 电子,02 纸质
         /// </summary>
         [XmlElement("invoice_material")]

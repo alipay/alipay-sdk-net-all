@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string CertifyMode { get; set; }
 
         /// <summary>
+        /// 认证人有效证件后四位，当职业身份认证时返回
+        /// </summary>
+        [XmlElement("certify_person_card_no_postfix")]
+        public string CertifyPersonCardNoPostfix { get; set; }
+
+        /// <summary>
         /// 认证状态，取值如下： SUCCESS，代表成功 INIT，代表初始化 CERTIFYING，代表认证中 FAIL，代表失败
         /// </summary>
         [XmlElement("certify_status")]

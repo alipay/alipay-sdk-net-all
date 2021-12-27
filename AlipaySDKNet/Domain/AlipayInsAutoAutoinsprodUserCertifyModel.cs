@@ -26,5 +26,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("agent_user_id")]
         public string AgentUserId { get; set; }
+
+        /// <summary>
+        /// 授权代理人姓名
+        /// </summary>
+        [XmlElement("auth_cert_name")]
+        public string AuthCertName { get; set; }
+
+        /// <summary>
+        /// 授权证件号码
+        /// </summary>
+        [XmlElement("auth_cert_no")]
+        public string AuthCertNo { get; set; }
     }
 }

@@ -108,6 +108,12 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
+        /// 是否不包含结算2.0的可开票单据（也就是07）
+        /// </summary>
+        [XmlElement("no_include_unify_settle")]
+        public string NoIncludeUnifySettle { get; set; }
+
+        /// <summary>
         /// 起始页，分页时必须提供
         /// </summary>
         [XmlElement("page_no")]

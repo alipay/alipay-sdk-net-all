@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string Province { get; set; }
 
         /// <summary>
+        /// 支付宝域店铺id
+        /// </summary>
+        [XmlElement("shop_id")]
+        public string ShopId { get; set; }
+
+        /// <summary>
         /// 电话
         /// </summary>
         [XmlElement("telephone")]

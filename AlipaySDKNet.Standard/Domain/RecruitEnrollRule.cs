@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public RecruitEnrollRuleData RuleData { get; set; }
 
         /// <summary>
-        /// 招商报名时提交的内容类型: 券:VOUCHER; 小程序:MINI_APP; 报名商户:ENROLL_MERCHANT; 素材:MATERIAL;
+        /// 招商报名时提交的内容类型: 券:VOUCHER; 小程序:MINI_APP; 报名商户:ENROLL_MERCHANT; 素材:MATERIAL; 活动城市:CITY;
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

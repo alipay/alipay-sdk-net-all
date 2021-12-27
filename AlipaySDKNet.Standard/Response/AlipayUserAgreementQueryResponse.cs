@@ -81,6 +81,12 @@ namespace Aop.Api.Response
         public string SignTime { get; set; }
 
         /// <summary>
+        /// 单笔代扣额度
+        /// </summary>
+        [XmlElement("single_quota")]
+        public string SingleQuota { get; set; }
+
+        /// <summary>
         /// 协议当前状态  1. TEMP：暂存，协议未生效过；  2. NORMAL：正常；  3. STOP：暂停
         /// </summary>
         [XmlElement("status")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceEnterpriseconsumeEnterpriseopenruleModifyModel : AopObject
     {
         /// <summary>
-        /// 企业签约企业合花ID-共同账号ID
+        /// 企业ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 开票规则id
+        /// 开票规则ID
         /// </summary>
         [XmlElement("invoice_rule_id")]
         public string InvoiceRuleId { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string InvoiceTitleId { get; set; }
 
         /// <summary>
-        /// 销方类型：TP开票、商户开票、商户优先 枚举定义：MERCHANT（商户）、TP（TP）、MERCHANT_TP（商户优先，本期不支持）
+        /// 销方类型：TP开票、商户开票 枚举定义：MERCHANT（商户）、TP（TP）
         /// </summary>
         [XmlElement("seller_type")]
         public string SellerType { get; set; }

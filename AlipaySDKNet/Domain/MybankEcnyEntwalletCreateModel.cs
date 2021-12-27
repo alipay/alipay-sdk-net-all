@@ -17,13 +17,19 @@ namespace Aop.Api.Domain
         public UserBaseInfo ActCtlInfo { get; set; }
 
         /// <summary>
-        /// 经办人/单位用户信息
+        /// 经办人/单位用户信息(经办人手机号和邮箱必填，便于接收开户意核实和开户结果的通知)
         /// </summary>
         [XmlElement("applicant_info")]
         public UserBaseInfo ApplicantInfo { get; set; }
 
         /// <summary>
-        /// 受益人信息
+        /// 受益人经常居住地或者工作单位地址
+        /// </summary>
+        [XmlElement("beneficiary_address")]
+        public EcnyAddressInfo BeneficiaryAddress { get; set; }
+
+        /// <summary>
+        /// 受益人信息 (名称，证件类型，证件号码，证件有效期截止日期必填)
         /// </summary>
         [XmlElement("beneficiary_info")]
         public UserBaseInfo BeneficiaryInfo { get; set; }
@@ -71,7 +77,7 @@ namespace Aop.Api.Domain
         public string EntCertNo { get; set; }
 
         /// <summary>
-        /// 单位证件类型： IT01 居民身份证 IT02 军官证 IT03 护照 IT04 户口簿 IT05 士兵证 IT06 港澳往来内地通行证 IT07 台湾同胞来往内地通行证 IT08 临时身份证 IT09 外国人居留证 IT10 警官证 IT11 营业执照 IT12 组织机构代码 IT13 税务登记证 IT14 统一社会信用代码证 IT15 事业单位法人证书 IT16 社会团体法人登记证书 IT17 民办非企业单位登记证书 IT99 其他
+        /// 单位证件类型： IT11 营业执照 IT12 组织机构代码 IT13 税务登记证 IT14 统一社会信用代码证 IT15 事业单位法人证书 IT16 社会团体法人登记证书 IT17 民办非企业单位登记证书 IT99 其他
         /// </summary>
         [XmlElement("ent_cert_type")]
         public string EntCertType { get; set; }
@@ -113,7 +119,7 @@ namespace Aop.Api.Domain
         public string EntTypeDesc { get; set; }
 
         /// <summary>
-        /// 法定代表人/单位负责人用户信息
+        /// 法定代表人/单位负责人用户信息 (姓名，证件类型，证件号码，证件影印件，证件有效期截止日期必填)
         /// </summary>
         [XmlElement("legal_rep_info")]
         public UserBaseInfo LegalRepInfo { get; set; }

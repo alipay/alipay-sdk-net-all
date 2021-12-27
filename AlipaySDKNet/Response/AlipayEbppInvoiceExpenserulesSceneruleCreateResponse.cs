@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceExpenserulesSceneruleCreateResponse : AopResponse
     {
         /// <summary>
-        /// 制度id
+        /// 费控规则ID
         /// </summary>
         [XmlElement("standard_id")]
         public string StandardId { get; set; }

@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceExpensecontrolEmployeequotaCreateResponse : AopResponse
     {
         /// <summary>
-        /// 新增的额度ID
+        /// 新增的余额ID
         /// </summary>
         [XmlElement("quota_id")]
         public string QuotaId { get; set; }

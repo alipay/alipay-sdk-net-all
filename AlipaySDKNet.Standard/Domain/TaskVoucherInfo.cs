@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class TaskVoucherInfo : AopObject
     {
         /// <summary>
+        /// 当前门店优惠券核销笔数
+        /// </summary>
+        [XmlElement("shop_voucher_sales_amount")]
+        public long ShopVoucherSalesAmount { get; set; }
+
+        /// <summary>
         /// 优惠券面额
         /// </summary>
         [XmlElement("voucher_denomination")]

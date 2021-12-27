@@ -202,7 +202,7 @@ AiBVtpMVM5HwOZ5CiF1o66GoUTcYNt3e2tS9Sp63PP7LLg==
             X509Certificate cert = AntCertificationUtil.ParseCert(File.ReadAllText(TestAccount.ProdCert.GetConfig().AppCertPath));
             string sn = AntCertificationUtil.GetCertSN(cert);
 
-            Assert.AreEqual(sn, "f8e04719723c16b0ff796dcd0d8d7641");
+            Assert.AreEqual(sn, "47a27aac8ae3b5c589576f371da36dc2");
         }
 
         [Test()]
@@ -250,7 +250,7 @@ AiBVtpMVM5HwOZ5CiF1o66GoUTcYNt3e2tS9Sp63PP7LLg==
             X509Certificate cert = AntCertificationUtil.ParseCert(certContent);
             string pemPublicKey = AntCertificationUtil.ExtractPemPublicKeyFromCert(cert);
 
-            Assert.AreEqual(pemPublicKey, @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0MYezLBe27D8kJU6CVjj5Zhn6lHq2SNqNu9uS1Kq2mxmDmgIMWvDgJurBV6Kuk8pEZbSARJgI2IzGLnUHpcMUr/DYUNXixBa2O6Nmd00PsvJb5S5r6lpxDMzqquBXFDeoM3dZ4rLBlbc1JJsfRKwfvPYOlgCldWxQmQUByI83zCKnGZHXVGeEopLDCgf53ChTiTyX9glCIt9VEZ8t1pSKAuOIxtUol9rDynW5G7EhkHA3xiKTUUATScZV1//GPA+0axQlh7Y4eDjUjE9vfsY0vBzTNIEkdsuECl8kbqV6zWPck07ZD4UCBI30o7ED57jPt2+1RXdxkg3A277JDUTSwIDAQAB");
+            Assert.AreEqual(pemPublicKey, @"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm6XbUBCMaFxGXmIs5prnt8QR5B9BJmo/zkE8t4dkLVIbqd0LcCXlq1cyHlCDoqSsUNAQBSxZ9c7SWa+wfzpdNPz48rMCR6E7rmqx0t7btYJfUAwMYYRqyd+zeO+jmquj6ZPeibxFjlvIn83eP8OkGuhmN8gWif8EihDAlrANeN+lbmToAc9HNLRIaxj6mhn+cG8JizoSZU4WoxMMGVqYWoFJt/rGDlQLipQd19k5t/p09M87dB0wO/LH9rE74xpBbzqJGfvwdSVI4Lirz+ZRvDDmsewpesMOFDwEtmWUVmxZLLrJegwRZC9C3RJ2N6UwuKsc09qxCD0N+ym16kMZLQIDAQAB");
         }
 
         [Test()]

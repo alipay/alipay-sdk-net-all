@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public long RefundAmount { get; set; }
 
         /// <summary>
-        /// 该活动上已领取红包金额，分为单位 888代表已领取8.88元  请注意：该结果可能存在2个小时之内的时间延迟，特殊情况下可能延迟会更久
+        /// 该活动上已核销红包金额，分为单位 888代表已领取8.88元  请注意：该结果可能存在2个小时之内的时间延迟，特殊情况下可能延迟会更久
         /// </summary>
         [XmlElement("used_amount")]
         public long UsedAmount { get; set; }

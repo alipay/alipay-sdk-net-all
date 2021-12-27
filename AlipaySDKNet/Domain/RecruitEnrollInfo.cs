@@ -11,13 +11,20 @@ namespace Aop.Api.Domain
     public class RecruitEnrollInfo : AopObject
     {
         /// <summary>
+        /// 报名提交的活动城市码，详见<a href="https://opendocs.alipay.com/pre-open/02r07u" target="_blank">活动城市码</a>
+        /// </summary>
+        [XmlArray("cities")]
+        [XmlArrayItem("string")]
+        public List<string> Cities { get; set; }
+
+        /// <summary>
         /// 报名商户
         /// </summary>
         [XmlElement("enroll_merchant")]
         public RecruitEnrollMerchant EnrollMerchant { get; set; }
 
         /// <summary>
-        /// 报名需要提交的素材
+        /// 报名提交的素材
         /// </summary>
         [XmlArray("materials")]
         [XmlArrayItem("recruit_material")]

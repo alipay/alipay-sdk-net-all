@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class VoucherUseRuleModify : AopObject
     {
         /// <summary>
+        /// 兑换券详情
+        /// </summary>
+        [XmlElement("exchange_voucher")]
+        public ExchangeVoucherModify ExchangeVoucher { get; set; }
+
+        /// <summary>
         /// 日期区间内可以使用优惠
         /// </summary>
         [XmlElement("voucher_valid_period")]

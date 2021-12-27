@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string OrderType { get; set; }
 
         /// <summary>
+        /// 外部请求ID，可选
+        /// </summary>
+        [XmlElement("out_request_id")]
+        public string OutRequestId { get; set; }
+
+        /// <summary>
         /// 会员所属业务平台在智能科技的会员ID
         /// </summary>
         [XmlElement("platform_member_id")]

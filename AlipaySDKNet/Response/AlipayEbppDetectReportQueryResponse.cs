@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -37,6 +38,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("detect_result")]
         public string DetectResult { get; set; }
+
+        /// <summary>
+        /// 检测类型+检测项详细检出数据及部分统计数据
+        /// </summary>
+        [XmlArray("detect_result_detail_list")]
+        [XmlArrayItem("string")]
+        public List<string> DetectResultDetailList { get; set; }
 
         /// <summary>
         /// 检测状态.  * 0-未查到报告(检测未开始或检测异常)  * 1-检测中  * 2-检测结束并生成检测报告

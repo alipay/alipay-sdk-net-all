@@ -16,5 +16,11 @@ namespace Aop.Api.Response
         [XmlArray("channel_info_list")]
         [XmlArrayItem("channel_info")]
         public List<ChannelInfo> ChannelInfoList { get; set; }
+
+        /// <summary>
+        /// 前置咨询id
+        /// </summary>
+        [XmlElement("pre_consult_id")]
+        public string PreConsultId { get; set; }
     }
 }

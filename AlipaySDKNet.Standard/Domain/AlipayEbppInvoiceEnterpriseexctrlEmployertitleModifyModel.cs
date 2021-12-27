@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceEnterpriseexctrlEmployertitleModifyModel : AopObject
     {
         /// <summary>
-        /// 企业码账号
+        /// 企业ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string Telephone { get; set; }
 
         /// <summary>
-        /// 抬头与企业关系表主键
+        /// 抬头ID
         /// </summary>
         [XmlElement("title_id")]
         public string TitleId { get; set; }

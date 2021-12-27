@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 用户去查看,去设置的跳转地址
+        /// </summary>
+        [XmlElement("setting_link")]
+        public string SettingLink { get; set; }
+
+        /// <summary>
         /// 皮肤ID
         /// </summary>
         [XmlElement("skin_id")]

@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string BizSceneName { get; set; }
 
         /// <summary>
-        /// 用于区分不同的业务场景，默认情况下不用填写，目前定义biz_type=3代表实人认证小程序
+        /// 用于区分不同的业务场景，默认情况下不用填写，目前定义biz_type=3代表实人认证小程序，biz_type=4代表钉钉团餐业务匿名注册，biz_type=5代表钉钉团餐业务实名比对
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string Devicetype { get; set; }
 
         /// <summary>
-        /// 0：匿名注册  1：匿名认证   2：实名认证
+        /// 0：匿名注册  1：匿名认证   2：实名认证   3：实名转匿名注册。
         /// </summary>
         [XmlElement("face_type")]
         public long FaceType { get; set; }
@@ -104,6 +104,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("osversion")]
         public string Osversion { get; set; }
+
+        /// <summary>
+        /// true：代表后置摄像头 false：代表前置摄像头
+        /// </summary>
+        [XmlElement("use_back_camera")]
+        public bool UseBackCamera { get; set; }
 
         /// <summary>
         /// 商户的用户id

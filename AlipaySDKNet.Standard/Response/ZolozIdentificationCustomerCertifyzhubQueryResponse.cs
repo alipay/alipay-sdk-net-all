@@ -44,5 +44,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("zim_msg")]
         public string ZimMsg { get; set; }
+
+        /// <summary>
+        /// 人脸识别token，目前用法是在客户端将作为秘钥用来解密人脸图片
+        /// </summary>
+        [XmlElement("zim_token")]
+        public string ZimToken { get; set; }
     }
 }

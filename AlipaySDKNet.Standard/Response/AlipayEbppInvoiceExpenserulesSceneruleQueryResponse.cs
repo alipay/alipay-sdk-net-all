@@ -23,7 +23,7 @@ namespace Aop.Api.Response
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 费控制度
+        /// 费控规则列表
         /// </summary>
         [XmlArray("standard_rule_info_list")]
         [XmlArrayItem("standard_rule_info")]

@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceEnterpriseconsumeEnterpriseopenruleCreateResponse : AopResponse
     {
         /// <summary>
-        /// 开票规则id
+        /// 开票规则ID
         /// </summary>
         [XmlElement("invoice_rule_id")]
         public string InvoiceRuleId { get; set; }

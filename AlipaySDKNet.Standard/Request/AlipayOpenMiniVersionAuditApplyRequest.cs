@@ -47,6 +47,11 @@ namespace Aop.Api.Request
         public string AppVersion { get; set; }
 
         /// <summary>
+        /// 审核类型： NONE： 不拆分准入、营销（默认） BASE_PROMOTE：准入、营销拆分审核
+        /// </summary>
+        public string AuditRule { get; set; }
+
+        /// <summary>
         /// 小程序投放的端参数。例如投放到支付宝钱包是支付宝端。默认支付宝端。支持： com.alipay.alipaywallet:支付宝端； com.alipay.iot.xpaas：支付宝IoT端。
         /// </summary>
         public string BundleId { get; set; }
@@ -277,6 +282,7 @@ namespace Aop.Api.Request
             parameters.Add("app_name", this.AppName);
             parameters.Add("app_slogan", this.AppSlogan);
             parameters.Add("app_version", this.AppVersion);
+            parameters.Add("audit_rule", this.AuditRule);
             parameters.Add("bundle_id", this.BundleId);
             parameters.Add("license_name", this.LicenseName);
             parameters.Add("license_no", this.LicenseNo);

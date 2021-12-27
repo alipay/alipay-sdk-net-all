@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpensesceneMerchantQueryModel : AopObject
     {
         /// <summary>
-        /// 企业签约企业合花ID-共同账号ID
+        /// 企业ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public long PageNum { get; set; }
 
         /// <summary>
-        /// 每页条数（最大100）
+        /// 每页行数（最大100）
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

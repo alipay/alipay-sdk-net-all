@@ -78,6 +78,12 @@ namespace Aop.Api.Response
         public string EpType { get; set; }
 
         /// <summary>
+        /// 企业类别范围: ENTERPRISE(企业)， INDIVIDUAL（个体工商户), ORGANIZATION(组织机构)
+        /// </summary>
+        [XmlElement("ep_type_scope")]
+        public string EpTypeScope { get; set; }
+
+        /// <summary>
         /// 成立时间
         /// </summary>
         [XmlElement("established_time")]

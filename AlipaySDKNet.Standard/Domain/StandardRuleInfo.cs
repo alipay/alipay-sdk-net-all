@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string EffectiveStartDate { get; set; }
 
         /// <summary>
-        /// 规则列表
+        /// 费控条件列表
         /// </summary>
         [XmlArray("expense_ctrl_rule_info_list")]
         [XmlArrayItem("expense_ctr_rule_info")]
@@ -36,13 +36,13 @@ namespace Aop.Api.Domain
         public string StandardDesc { get; set; }
 
         /// <summary>
-        /// 制度id
+        /// 费控规则ID
         /// </summary>
         [XmlElement("standard_id")]
         public string StandardId { get; set; }
 
         /// <summary>
-        /// 制度名称
+        /// 费控规则名称
         /// </summary>
         [XmlElement("standard_name")]
         public string StandardName { get; set; }

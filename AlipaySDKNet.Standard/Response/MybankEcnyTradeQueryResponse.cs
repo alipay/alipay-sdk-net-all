@@ -9,6 +9,18 @@ namespace Aop.Api.Response
     public class MybankEcnyTradeQueryResponse : AopResponse
     {
         /// <summary>
+        /// 买家钱包ID，支付成功时必填
+        /// </summary>
+        [XmlElement("buyer_wallet_id")]
+        public string BuyerWalletId { get; set; }
+
+        /// <summary>
+        /// 买家钱包名称，支付成功时必填
+        /// </summary>
+        [XmlElement("buyer_wallet_name")]
+        public string BuyerWalletName { get; set; }
+
+        /// <summary>
         /// 调用方订单号
         /// </summary>
         [XmlElement("out_trade_no")]

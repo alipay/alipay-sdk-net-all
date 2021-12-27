@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 姓名，账号类型为ALIPAY_LOGON_ID时必填
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }

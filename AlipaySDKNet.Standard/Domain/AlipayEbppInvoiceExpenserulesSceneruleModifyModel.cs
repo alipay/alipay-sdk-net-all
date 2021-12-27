@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpenserulesSceneruleModifyModel : AopObject
     {
         /// <summary>
-        /// 企业签约企业合花ID-共同账号ID
+        /// 企业ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 新增规则ADD_RULE/删除规则DELETE_RULE/修改规则MODIFY_RULE/修改制度基本信息MODIFY_STANDARD
+        /// 修改操作 枚举值： ADD_RULE（新增费控条件），DELETE_RULE（删除费控条件），MODIFY_RULE（修改费控条件），MODIFY_STANDARD（修改费控规则基本信息）
         /// </summary>
         [XmlElement("action")]
         public string Action { get; set; }
@@ -29,38 +29,38 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 有效期截止（修改制度基本信息的ACTION必填）
+        /// 有效期截止 特殊说明：修改费控规则基本信息时必传
         /// </summary>
         [XmlElement("effective_end_date")]
         public string EffectiveEndDate { get; set; }
 
         /// <summary>
-        /// 有效期起始（修改制度基本信息的ACTION必填）
+        /// 有效期起始 特殊说明：修改费控规则基本信息时必传
         /// </summary>
         [XmlElement("effective_start_date")]
         public string EffectiveStartDate { get; set; }
 
         /// <summary>
-        /// 规则列表，新增规则/修改规则/删除规则操作是必填
+        /// 费控规则条件列表 特殊说明：新增费控条件/修改费控条件/删除费控条件操作时必填
         /// </summary>
         [XmlArray("expense_ctrl_rule_info_list")]
         [XmlArrayItem("expense_ctr_rule_info")]
         public List<ExpenseCtrRuleInfo> ExpenseCtrlRuleInfoList { get; set; }
 
         /// <summary>
-        /// 费控规则说明(修改制度基本信息的ACTION，否，不传则删除)
+        /// 费控规则说明 特殊说明： 1）敏感词校验 2）修改费控规则基本信息时必传
         /// </summary>
         [XmlElement("standard_desc")]
         public string StandardDesc { get; set; }
 
         /// <summary>
-        /// 制度id
+        /// 费控规则ID
         /// </summary>
         [XmlElement("standard_id")]
         public string StandardId { get; set; }
 
         /// <summary>
-        /// 制度名称，修改制度基本信息的ACTION必填)
+        /// 费控规则名称 特殊说明： 1）敏感词校验 2）修改费控规则基本信息时必传 3）不能重复，若需要重复联系支持人员定向放开
         /// </summary>
         [XmlElement("standard_name")]
         public string StandardName { get; set; }

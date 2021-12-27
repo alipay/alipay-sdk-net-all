@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceExpensecontrolQuotaQueryResponse : AopResponse
     {
         /// <summary>
-        /// 额度列表
+        /// 余额列表
         /// </summary>
         [XmlArray("expense_quota_info_list")]
         [XmlArrayItem("expense_quota_info")]

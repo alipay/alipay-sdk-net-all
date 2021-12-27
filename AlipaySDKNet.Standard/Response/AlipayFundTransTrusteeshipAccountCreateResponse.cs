@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipayFundTransTrusteeshipAccountCreateResponse : AopResponse
     {
         /// <summary>
+        /// 开通的托管子户账号
+        /// </summary>
+        [XmlElement("alipay_account_no")]
+        public string AlipayAccountNo { get; set; }
+
+        /// <summary>
         /// 开设的支付宝账号user_id
         /// </summary>
         [XmlElement("alipay_user_id")]

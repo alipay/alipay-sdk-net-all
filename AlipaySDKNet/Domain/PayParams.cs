@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("async_type")]
         public string AsyncType { get; set; }
+
+        /// <summary>
+        /// 重试类型，当async_type传入NORMAL_ASYNC时，可以设置该参数，选择是否要重试，retry_type 可选，不设置时，可重试。 ● NONE_AND_CLOSETRADE：不重试，支付请求只会被执行1次，执行完成后如果交易未成功，会关闭交易 ● NONE：不重试，支付请求只会被执行1次，执行完成后，不做任何处理。交易到达了timeout_express指定的时间后，关闭交易。 ● RETY: 重试，支付请求在超时关单前，会按照策略重试
+        /// </summary>
+        [XmlElement("retry_type")]
+        public string RetryType { get; set; }
     }
 }

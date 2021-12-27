@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizId { get; set; }
 
         /// <summary>
-        /// 0：匿名注册  1：匿名认证   2：实名认证
+        /// 0：匿名注册  1：匿名认证   2：实名认证   3：实名转匿名注册
         /// </summary>
         [XmlElement("face_type")]
         public long FaceType { get; set; }
