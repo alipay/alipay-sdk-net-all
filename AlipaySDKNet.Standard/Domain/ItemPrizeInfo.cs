@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_price")]
         public string ItemPrice { get; set; }
+
+        /// <summary>
+        /// 奖品兑换需要积分数
+        /// </summary>
+        [XmlElement("point_amount")]
+        public long PointAmount { get; set; }
     }
 }

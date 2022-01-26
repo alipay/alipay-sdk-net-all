@@ -77,7 +77,7 @@ namespace Aop.Api.Domain
         public string TotalTransAmount { get; set; }
 
         /// <summary>
-        /// 收款信息列表
+        /// 收款信息列表。实际集合可以添加多个收款方信息，最多可以添加1000个收款方信息，如方案接入文档有特别说明，优先以接入文档为准
         /// </summary>
         [XmlArray("trans_order_list")]
         [XmlArrayItem("trans_order_detail")]

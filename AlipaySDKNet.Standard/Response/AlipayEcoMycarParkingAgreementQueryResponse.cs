@@ -16,7 +16,7 @@ namespace Aop.Api.Response
         public string AdvanceStatus { get; set; }
 
         /// <summary>
-        /// 用户签约的代扣场景字符集，多个英文逗号分割，当车场为ORC识别车牌的场景，返回值包含PLATE_PAY时，表示代扣协议可用。 当车场为ETC设备识别车牌，返回值包含ETC_PAY时表示协议可用。当用户未签约代扣场景时返回NO_AGREEMENT_SCENE
+        /// 用户签约的代扣场景字符集，多个英文逗号分割，当车场为ORC识别车牌的场景，返回值包含PLATE_PAY时，表示代扣协议可用。 当车场为ETC设备识别车牌，返回值包含ETC_PAY时表示协议可用。当用户未签约代扣场景|不可垫资|车场不允许代扣时返回NO_AGREEMENT_SCENE，用户NSF校验不通过时，返回NSF_CHECK_FAILED
         /// </summary>
         [XmlElement("agreement_scene")]
         public string AgreementScene { get; set; }

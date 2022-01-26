@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public long EarnedPoint { get; set; }
 
         /// <summary>
+        /// 任务归属类型 PLATFORM：平台 THIRD_PARTY：三方
+        /// </summary>
+        [XmlElement("owner_type")]
+        public string OwnerType { get; set; }
+
+        /// <summary>
         /// 任务code，唯一标识
         /// </summary>
         [XmlElement("task_code")]
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("task_name")]
         public string TaskName { get; set; }
+
+        /// <summary>
+        /// 任务剩余积分数
+        /// </summary>
+        [XmlElement("task_remain_point")]
+        public long TaskRemainPoint { get; set; }
 
         /// <summary>
         /// 任务开始时间；格式"yyyy.MM.dd"

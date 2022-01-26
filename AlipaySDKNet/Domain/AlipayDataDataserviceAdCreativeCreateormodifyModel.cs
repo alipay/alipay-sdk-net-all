@@ -99,6 +99,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 外部平台导入广告库后，广告投放订单对应的外部订单ID
+        /// </summary>
+        [XmlElement("order_outer_id")]
+        public string OrderOuterId { get; set; }
+
+        /// <summary>
         /// 门店创意关联的城市ID列表，目前仅口碑使用
         /// </summary>
         [XmlArray("region_list")]

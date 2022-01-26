@@ -78,13 +78,13 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 应用id，例如小程序id
+        /// 应用id，例如小程序id、生活号id、商家pid
         /// </summary>
         [XmlElement("target_id")]
         public string TargetId { get; set; }
 
         /// <summary>
-        /// 应用类型 小程序为：APPID 生活号为：PUBLICID
+        /// 应用类型 小程序为：APPID 生活号为：PUBLICID 商家为：PID
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }

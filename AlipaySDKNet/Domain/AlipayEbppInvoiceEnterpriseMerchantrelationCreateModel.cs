@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string OperatorId { get; set; }
 
         /// <summary>
+        /// 门店信息
+        /// </summary>
+        [XmlElement("shop_info")]
+        public EcShopInfo ShopInfo { get; set; }
+
+        /// <summary>
         /// 交易流水号
         /// </summary>
         [XmlElement("trade_no")]

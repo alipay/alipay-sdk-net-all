@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string BizTag { get; set; }
 
         /// <summary>
-        /// 码模式。  枚举值： MERCHANT_UPLOAD：商户上传自定义code，发券时系统随机选取上传的券code发放  MERCHANT_API：发奖时指定券码发奖，此模式无须提前上传券码。（该模式暂时只针对exchange_voucher生效）
+        /// 码模式。  枚举值： MERCHANT_UPLOAD：商户上传自定义code，发券时系统随机选取上传的券code发放  MERCHANT_API：发奖时指定券码发奖，此模式无须提前上传券码。
         /// </summary>
         [XmlElement("code_mode")]
         public string CodeMode { get; set; }

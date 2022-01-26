@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -31,6 +32,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("certify_channel")]
         public string CertifyChannel { get; set; }
+
+        /// <summary>
+        /// 认证失败原因列表，当certify_status=FAIL时返回
+        /// </summary>
+        [XmlArray("certify_fail_reasons")]
+        [XmlArrayItem("string")]
+        public List<string> CertifyFailReasons { get; set; }
 
         /// <summary>
         /// 认证模式，取值如下：ATTORNEY代表代理人；LEGAL_PERSON代表法定代表人

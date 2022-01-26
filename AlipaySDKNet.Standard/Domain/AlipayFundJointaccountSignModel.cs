@@ -62,6 +62,12 @@ namespace Aop.Api.Domain
         public List<InviteMemberForm> InviteeList { get; set; }
 
         /// <summary>
+        /// 开户用户名称，identity_type为ALIPAY_LOGON_ID时必填
+        /// </summary>
+        [XmlElement("name")]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 开户邀请倒计时（单位：秒），超时后撤销系统自动撤销开户操作。<br> 补充说明：<br> -商户传递时，最长不可超过999999秒（约11天）<br> -商户不传该字段时，支付宝默认开户72小时后发起撤销操作
         /// </summary>
         [XmlElement("open_timeout")]
@@ -72,6 +78,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 外部实体ID，一般表述为外部操作人操作某个外部实体。比如企业码2284号
+        /// </summary>
+        [XmlElement("out_entity_id")]
+        public string OutEntityId { get; set; }
+
+        /// <summary>
+        /// ISV平台定义的共同账户开户来源
+        /// </summary>
+        [XmlElement("out_source")]
+        public string OutSource { get; set; }
 
         /// <summary>
         /// 产品码

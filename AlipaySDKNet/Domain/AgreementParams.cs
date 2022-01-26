@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("auth_confirm_no")]
         public string AuthConfirmNo { get; set; }
+
+        /// <summary>
+        /// 商户代扣扣款许可
+        /// </summary>
+        [XmlElement("deduct_permission")]
+        public string DeductPermission { get; set; }
     }
 }

@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ContactPhone { get; set; }
 
         /// <summary>
+        /// 是否支持个人账号升级为个体工商户的账号类型 true为支持
+        /// </summary>
+        [XmlElement("is_individual")]
+        public bool IsIndividual { get; set; }
+
+        /// <summary>
         /// 商家法人名称
         /// </summary>
         [XmlElement("legal_personal_name")]

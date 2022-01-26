@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class TransOrderDetail : AopObject
     {
         /// <summary>
-        /// JSON格式，传递业务扩展参数，使用前请与支付宝工程师联系！  sub_biz_scene: 子业务场景，取值：BAOXIAO\TRANSFER\...  withdraw_timeliness:到卡申请到账时效， T0：当日到账 T1：次日到账，如果未设置或者值为空默认T0
+        /// JSON格式，传递业务扩展参数，具体业务参数取值请以接入文档示例为准！ sub_biz_scene: 子业务场景，取值：BAOXIAO\TRANSFER\... withdraw_timeliness:到卡申请到账时效， T0：当日到账 T1：次日到账，如果未设置或者值为空默认T0
         /// </summary>
         [XmlElement("business_params")]
         public string BusinessParams { get; set; }

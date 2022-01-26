@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string SignValidityPeriod { get; set; }
 
         /// <summary>
+        /// 此参数用于传递子商户信息，无特殊需求时不用关注。目前商户代扣、海外代扣、淘旅行信用住产品支持传入该参数（在销售方案中“是否允许自定义子商户信息”需要选是）。
+        /// </summary>
+        [XmlElement("sub_merchant")]
+        public SignMerchantParams SubMerchant { get; set; }
+
+        /// <summary>
         /// 签约第三方主体类型。对于三方协议，表示当前用户和哪一类的第三方主体进行签约。  取值范围：  1. PARTNER（平台商户）;  2. MERCHANT（集团商户），集团下子商户可共享用户签约内容;  默认为PARTNER。
         /// </summary>
         [XmlElement("third_party_type")]

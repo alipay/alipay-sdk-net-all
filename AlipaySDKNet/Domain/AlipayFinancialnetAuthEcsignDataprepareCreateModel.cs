@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFinancialnetAuthEcsignDataprepareCreateModel : AopObject
     {
         /// <summary>
+        /// 签约回跳类型
+        /// </summary>
+        [XmlElement("back_type")]
+        public string BackType { get; set; }
+
+        /// <summary>
         /// 签约结束回跳地址
         /// </summary>
         [XmlElement("back_url")]
@@ -50,5 +56,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("solution_code")]
         public string SolutionCode { get; set; }
+
+        /// <summary>
+        /// 回跳地址
+        /// </summary>
+        [XmlElement("third_part_schema")]
+        public string ThirdPartSchema { get; set; }
     }
 }

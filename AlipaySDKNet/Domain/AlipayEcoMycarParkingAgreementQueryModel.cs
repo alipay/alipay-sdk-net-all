@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ParkingId { get; set; }
 
         /// <summary>
+        /// 车牌颜色, 蓝-BLUE、绿-GREEN、黄-YELLOW、白-WHITE、黑-BLACK、黄绿色-LIMEGREEN
+        /// </summary>
+        [XmlElement("plate_color")]
+        public string PlateColor { get; set; }
+
+        /// <summary>
         /// 接口版本号，不填则默认为v2.0，建议使用最新版v2.1
         /// </summary>
         [XmlElement("ver")]

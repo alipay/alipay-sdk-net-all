@@ -24,6 +24,13 @@ namespace Aop.Api.Domain
         public CateringMerchantInfo MerchantInfo { get; set; }
 
         /// <summary>
+        /// 服务营业时间(与门店营业时间二选一必填),示例：[{"business_time":[{"start_time":"10:00","end_time":"14:00"},{"start_time":"16:00","end_time":"20:00"}],"business_date":["周一","周二"]},{"business_time":[{"start_time":"08:00","end_time":"22:00"}],"business_date":["周三","周四","周五"]},{"business_time":[{"start_time":"08:00","end_time":"23:00"}],"business_date":["周六","周日"]}]
+        /// </summary>
+        [XmlArray("service_business_hours")]
+        [XmlArrayItem("service_business_hours")]
+        public List<ServiceBusinessHours> ServiceBusinessHours { get; set; }
+
+        /// <summary>
         /// 描述此服务的内容
         /// </summary>
         [XmlElement("service_description")]

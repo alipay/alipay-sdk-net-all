@@ -166,6 +166,12 @@ namespace Aop.Api.Domain
         public string RegisterCapital { get; set; }
 
         /// <summary>
+        /// 豁免的校验类型，多个用逗号隔开
+        /// </summary>
+        [XmlElement("remit_check")]
+        public string RemitCheck { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

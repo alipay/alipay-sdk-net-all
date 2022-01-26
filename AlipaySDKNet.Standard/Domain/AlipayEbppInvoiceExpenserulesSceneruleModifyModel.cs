@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public List<ExpenseCtrRuleInfo> ExpenseCtrlRuleInfoList { get; set; }
 
         /// <summary>
+        /// 当笔消费金额大于规则可用余额时，用于控制支付策略，该字段缺省时采取因公账户和个人账户组合支付策略， 枚举值：PERSONAL（全部个人账户支付）
+        /// </summary>
+        [XmlElement("payment_policy")]
+        public string PaymentPolicy { get; set; }
+
+        /// <summary>
         /// 费控规则说明 特殊说明： 1）敏感词校验 2）修改费控规则基本信息时必传
         /// </summary>
         [XmlElement("standard_desc")]

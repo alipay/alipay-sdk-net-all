@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
+        /// 外部请求唯一编号，重复申请打款时不能相同。直连银行模式必填
+        /// </summary>
+        [XmlElement("out_request_id")]
+        public string OutRequestId { get; set; }
+
+        /// <summary>
         /// 学费码打款计划编号。优先使用plan_ids，如果是打款一个任务，传递一个编号即可
         /// </summary>
         [XmlElement("plan_id")]

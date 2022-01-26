@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -8,6 +10,13 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayMerchantOrderSyncResponse : AopResponse
     {
+        /// <summary>
+        /// 分发结果 若未分发到场景侧，则会返回具体的未分发原因
+        /// </summary>
+        [XmlArray("distribute_result")]
+        [XmlArrayItem("order_data_distribute_info")]
+        public List<OrderDataDistributeInfo> DistributeResult { get; set; }
+
         /// <summary>
         /// 支付宝订单号
         /// </summary>

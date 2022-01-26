@@ -18,7 +18,13 @@ namespace Aop.Api.Domain
         public List<string> RealShopIds { get; set; }
 
         /// <summary>
-        /// 券可使用的门店列表。列表中的门店id是通过调用接口ant.merchant.expand.shop.create创建门店返回的支付宝门店id 接口参数是列表类型。 接口参数是列表类型。  限制： 1、创建活动时传入了该值修改才会生效。 2、store_ids中的门店id必须是支付宝门店id。 3、store_ids如果包含重复的门店id会自动进行去重操作。 4、修改门店列表，只允许增加不允许减少。 5、每次传入必须是全量的门店id即原来的门店+本次新增的门店id
+        /// 券可使用的门店列表。列表中的门店id是通过调用接口ant.merchant.expand.shop.create创建门店返回的支付宝门店id 接口参数是列表类型。 接口参数是列表类型。 限制： 1、创建活动时传入了该值修改才会生效。 2、shop_ids中的门店id必须是支付宝门店id。 3、shop_ids如果包含重复的门店id会自动进行去重操作。 4、修改门店列表，只允许增加不允许减少。 5、每次传入必须是全量的门店id即原来的门店+本次新增的门店id
+        /// </summary>
+        [XmlElement("shop_ids")]
+        public string ShopIds { get; set; }
+
+        /// <summary>
+        /// 后续废弃。  券可使用的门店列表。列表中的门店id是通过调用接口ant.merchant.expand.shop.create创建门店返回的支付宝门店id 接口参数是列表类型。 接口参数是列表类型。  限制： 1、创建活动时传入了该值修改才会生效。 2、store_ids中的门店id必须是支付宝门店id。 3、store_ids如果包含重复的门店id会自动进行去重操作。 4、修改门店列表，只允许增加不允许减少。 5、每次传入必须是全量的门店id即原来的门店+本次新增的门店id
         /// </summary>
         [XmlArray("store_ids")]
         [XmlArrayItem("string")]

@@ -23,7 +23,7 @@ namespace Aop.Api.Response
         public string ApplyDate { get; set; }
 
         /// <summary>
-        /// 账单批次id（建议使用summary_id）
+        /// 已废弃，开票批次 ID（建议使用summary_id）
         /// </summary>
         [XmlElement("batch_id")]
         public string BatchId { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Response
         public string StatusShowContent { get; set; }
 
         /// <summary>
-        /// 账单批次id
+        /// 开票批次 ID
         /// </summary>
         [XmlElement("summary_id")]
         public string SummaryId { get; set; }

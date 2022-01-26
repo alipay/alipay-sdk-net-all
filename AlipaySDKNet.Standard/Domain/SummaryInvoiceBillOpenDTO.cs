@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("buyer_user_id")]
         public string BuyerUserId { get; set; }
+
+        /// <summary>
+        /// 支付类型，可选值：支付-PAY；退款-REFUND
+        /// </summary>
+        [XmlElement("pay_type")]
+        public string PayType { get; set; }
     }
 }

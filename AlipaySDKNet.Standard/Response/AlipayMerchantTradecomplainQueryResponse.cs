@@ -85,13 +85,13 @@ namespace Aop.Api.Response
         public string Status { get; set; }
 
         /// <summary>
-        /// 应用id，例如小程序id
+        /// 应用id，例如小程序id、生活号id、商家pid
         /// </summary>
         [XmlElement("target_id")]
         public string TargetId { get; set; }
 
         /// <summary>
-        /// 应用类型 小程序传入：APPID 生活号传入：PUBLICID
+        /// 应用类型 例如小程序：APPID 生活号：PUBLICID 商家账户：PID
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }

@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string PayScene { get; set; }
 
         /// <summary>
-        /// 车牌颜色
+        /// 车牌颜色： BLUE("BLUE", "蓝色" ); GREEN("GREEN", "绿色" );
         /// </summary>
         [XmlElement("plate_color")]
         public string PlateColor { get; set; }

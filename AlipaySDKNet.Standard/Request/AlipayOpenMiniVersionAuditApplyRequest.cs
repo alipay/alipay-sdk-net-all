@@ -157,6 +157,11 @@ namespace Aop.Api.Request
         public List<RegionInfo> ServiceRegionInfo { get; set; }
 
         /// <summary>
+        /// 如果有绿通权益，是否使用绿通权益加速审核： 加速（默认）：true 不加速：false
+        /// </summary>
+        public string SpeedUp { get; set; }
+
+        /// <summary>
         /// 测试账号，是否需要填写请参见https://opendocs.alipay.com/mini/operation/standard/case/akxg6r#3.%20%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9%E6%8F%90%E4%BA%A4%E4%B8%8D%E5%AE%8C%E6%95%B4
         /// </summary>
         public string TestAccout { get; set; }
@@ -293,6 +298,7 @@ namespace Aop.Api.Request
             parameters.Add("service_email", this.ServiceEmail);
             parameters.Add("service_phone", this.ServicePhone);
             parameters.Add("service_region_info", this.ServiceRegionInfo);
+            parameters.Add("speed_up", this.SpeedUp);
             parameters.Add("test_accout", this.TestAccout);
             parameters.Add("test_password", this.TestPassword);
             parameters.Add("version_desc", this.VersionDesc);

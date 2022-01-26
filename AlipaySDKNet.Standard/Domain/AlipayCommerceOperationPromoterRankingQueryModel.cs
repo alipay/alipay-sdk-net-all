@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Pid { get; set; }
 
         /// <summary>
+        /// 任务code，唯一标识
+        /// </summary>
+        [XmlElement("task_code")]
+        public string TaskCode { get; set; }
+
+        /// <summary>
         /// total
         /// </summary>
         [XmlElement("type")]

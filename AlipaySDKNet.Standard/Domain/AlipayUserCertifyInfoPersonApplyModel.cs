@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
+        /// 证件ID，标识证件档案中心的一次采集流水ID
+        /// </summary>
+        [XmlElement("certificate_id")]
+        public string CertificateId { get; set; }
+
+        /// <summary>
         /// 用户住址的城市名称
         /// </summary>
         [XmlElement("city")]

@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public List<string> EmployeeList { get; set; }
 
         /// <summary>
-        /// 费控条件列表 特殊说明： 1）至少存在日额度（QUOTA_DAY）、月额度（QUOTA_MONTH）、有效期总额度（QUOTA_TOTAL）三者中的一个额度条件。特别：若企业给员工设置员工余额，可以联系支持人员定向放开约束； 2）如果费用类型为MEAL，费控维度商户（MEAL_MERCHANT）和商户类型（MCC）对应的费控条件必须存在其一且不能同时存在； 3）如果费用类型为METRO，费控维度地铁卡类型（CARD_TYPE）对应的费控条件必须存在； 4）如果因公场景为OVERTIME，费控维度时间段（ALARM_CLOCK_TIME）对应的费控条件必须存在； 5）不能存在重复的费控维度对应的费控条件；
+        /// 费控条件列表 特殊说明： 1）至少存在日额度（QUOTA_DAY）、月额度（QUOTA_MONTH）、有效期总额度（QUOTA_TOTAL）三者中的一个额度条件。特别：若企业给员工设置员工余额，可以联系支持人员定向放开约束； 2）如果费用类型为MEAL，费控维度商户（MEAL_MERCHANT）和商户类型（MCC）对应的费控条件必须存在其一且不能同时存在； 3）如果费用类型为METRO，费控维度地铁卡类型（CARD_TYPE）对应的费控条件必须存在； 4）如果因公场景为OVERTIME，费控维度时间段（ALARM_CLOCK_TIME）对应的费控条件必须存在； 5）不能存在重复的费控维度对应的费控条件； 6）非MEAL费用类型，商户仅支持MERCHANT，不支持MEAL_MERCHANT
         /// </summary>
         [XmlArray("expense_ctrl_rule_info_list")]
         [XmlArrayItem("expense_ctr_rule_info")]
@@ -53,6 +53,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("expense_type")]
         public string ExpenseType { get; set; }
+
+        /// <summary>
+        /// 当笔消费金额大于规则可用余额时，用于控制支付策略，该字段缺省时采取因公账户和个人账户组合支付策略， 枚举值：PERSONAL（全部个人账户支付）
+        /// </summary>
+        [XmlElement("payment_policy")]
+        public string PaymentPolicy { get; set; }
 
         /// <summary>
         /// 因公场景 枚举值：OVERTIME（加班），SUBSIDY（补贴福利），TRAVEL（差旅）

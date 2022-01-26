@@ -92,7 +92,7 @@ namespace Aop.Api.Domain
         public List<string> JobTags { get; set; }
 
         /// <summary>
-        /// 岗位类型，用于岗位筛选，以及岗位匹配等场景。  枚举值： 经营管理 业务营销 文员助力 物流配送 展会演出 客服话务 线上主播 农林牧渔 手工技能 其他
+        /// 岗位类型，用于岗位筛选、岗位匹配等场景，具体枚举值在集成阶段提供
         /// </summary>
         [XmlElement("job_type")]
         public string JobType { get; set; }

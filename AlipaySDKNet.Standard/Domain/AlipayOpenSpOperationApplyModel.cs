@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AlipayAccount { get; set; }
 
         /// <summary>
-        /// 场景授权列表结构结构：场景codeA:权限code1,权限code2;场景codeB:权限code1,权限code2;
+        /// 场景授权列表结构结构：场景codeA:权限code1,权限code2;场景codeB:权限code1,权限code2; 和access_product_code只需要传一个
         /// </summary>
         [XmlElement("isv_scene_permissions")]
         public string IsvScenePermissions { get; set; }

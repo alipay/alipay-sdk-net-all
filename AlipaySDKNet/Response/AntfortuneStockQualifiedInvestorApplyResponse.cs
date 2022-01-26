@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 用户在支付宝总资产获取时间
+        /// </summary>
+        [XmlElement("alipay_asset_time")]
+        public string AlipayAssetTime { get; set; }
+
+        /// <summary>
         /// 支付宝金融总资产金额，单位元；精度到分
         /// </summary>
         [XmlElement("alipay_total_asset")]

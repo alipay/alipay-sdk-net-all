@@ -75,6 +75,24 @@ namespace Aop.Api.Response
         public string Status { get; set; }
 
         /// <summary>
+        /// 特殊场景提供，当子单出现异常导致主单失败或者退款时，会提供此字段，用于透出子单具体的错误场景
+        /// </summary>
+        [XmlElement("sub_order_error_code")]
+        public string SubOrderErrorCode { get; set; }
+
+        /// <summary>
+        /// 特殊场景提供，当子单出现异常导致主单失败或者退款时，会提供此字段，用于透出子单具体的错误场景
+        /// </summary>
+        [XmlElement("sub_order_fail_reason")]
+        public string SubOrderFailReason { get; set; }
+
+        /// <summary>
+        /// 退款子单失败状态
+        /// </summary>
+        [XmlElement("sub_order_status")]
+        public string SubOrderStatus { get; set; }
+
+        /// <summary>
         /// 付款金额，收银台场景下付款成功后的支付金额，订单状态为SUCCESS才返回，其他状态不返回。
         /// </summary>
         [XmlElement("trans_amount")]

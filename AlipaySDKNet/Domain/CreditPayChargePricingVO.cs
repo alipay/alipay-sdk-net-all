@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ActualChargeRate { get; set; }
 
         /// <summary>
+        /// 费用CODE
+        /// </summary>
+        [XmlElement("charge_code")]
+        public string ChargeCode { get; set; }
+
+        /// <summary>
         /// 费用名目
         /// </summary>
         [XmlElement("charge_name")]

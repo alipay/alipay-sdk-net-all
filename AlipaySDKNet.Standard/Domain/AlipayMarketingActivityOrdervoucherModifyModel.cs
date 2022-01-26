@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 券发放结束时间。    格式为：yyyy-MM-dd HH:mm:ss    限制：  券发放结束时间  publish_end_time 与 券发放开始时间  publish_start_time 间隔必须小于等于180天  修改发放结束时间，只能延长，不允许缩短。 该值为空表示不修改
+        /// 券发放结束时间。该值为空表示不修改  格式为：yyyy-MM-dd HH:mm:ss  限制： 1、券发放结束时间publish_end_time 与 券发放开始时间publish_start_time 间隔必须小于等于180天 2、修改发放结束时间，只能延长，不允许缩短。 3、活动已到期或已停止修改结束时间不会生效
         /// </summary>
         [XmlElement("publish_end_time")]
         public string PublishEndTime { get; set; }

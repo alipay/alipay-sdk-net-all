@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string Material { get; set; }
 
         /// <summary>
+        /// 播放次数
+        /// </summary>
+        [XmlElement("play_frequency")]
+        public long PlayFrequency { get; set; }
+
+        /// <summary>
+        /// 播放时长，单位/s
+        /// </summary>
+        [XmlElement("play_time")]
+        public long PlayTime { get; set; }
+
+        /// <summary>
         /// 创意元素类型，IMG-图片；VIDEO-视频；TITLE-标题；DESC-描述
         /// </summary>
         [XmlElement("type")]

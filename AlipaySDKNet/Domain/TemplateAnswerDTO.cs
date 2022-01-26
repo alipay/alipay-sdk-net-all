@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string Exp { get; set; }
 
         /// <summary>
+        /// 初始值，可空
+        /// </summary>
+        [XmlElement("initial_value")]
+        public string InitialValue { get; set; }
+
+        /// <summary>
         /// 标签名称
         /// </summary>
         [XmlElement("label_name")]

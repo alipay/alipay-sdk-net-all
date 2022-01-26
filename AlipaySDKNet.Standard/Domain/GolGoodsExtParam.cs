@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string Description { get; set; }
 
         /// <summary>
+        /// 商品优惠文案
+        /// </summary>
+        [XmlElement("discount_content")]
+        public string DiscountContent { get; set; }
+
+        /// <summary>
         /// 是否包税。 Y - 包税 N - 不包税
         /// </summary>
         [XmlElement("is_tax_free")]

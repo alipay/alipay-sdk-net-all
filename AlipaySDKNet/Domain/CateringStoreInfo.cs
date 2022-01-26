@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class CateringStoreInfo : AopObject
     {
         /// <summary>
-        /// 门店营业时间
+        /// 门店营业时间；门店营业时间与服务营业时间二选一必填
         /// </summary>
         [XmlElement("business_hours")]
         public BusinessHoursInfo BusinessHours { get; set; }

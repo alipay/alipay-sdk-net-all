@@ -1,0 +1,18 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// DeliverySingleSendConfig Data Structure.
+    /// </summary>
+    [Serializable]
+    public class DeliverySingleSendConfig : AopObject
+    {
+        /// <summary>
+        /// 投放展位的投放内容。
+        /// </summary>
+        [XmlElement("delivery_content_info")]
+        public DeliveryContentInfo DeliveryContentInfo { get; set; }
+    }
+}

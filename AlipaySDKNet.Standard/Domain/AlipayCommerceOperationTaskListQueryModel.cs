@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string Pid { get; set; }
 
         /// <summary>
-        /// received: 已领取任务 recommended: 推荐任务
+        /// received: 已领取任务 recommended: 推荐任务 expired：已过期任务
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

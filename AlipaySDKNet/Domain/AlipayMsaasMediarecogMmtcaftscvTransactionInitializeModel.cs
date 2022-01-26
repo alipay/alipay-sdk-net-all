@@ -46,5 +46,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }
+
+        /// <summary>
+        /// 货柜重力商品配置列表信息
+        /// </summary>
+        [XmlArray("weight_template")]
+        [XmlArrayItem("weight_floor")]
+        public List<WeightFloor> WeightTemplate { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniVersionAuditedCancelModel : AopObject
     {
         /// <summary>
-        /// 商家小程序版本号。可将审核中、已过审、审核被驳回的小程序版本退回到开发中的状态。
+        /// 商家小程序版本号。可将已过审、审核被驳回的小程序版本退回到开发中的状态。
         /// </summary>
         [XmlElement("app_version")]
         public string AppVersion { get; set; }

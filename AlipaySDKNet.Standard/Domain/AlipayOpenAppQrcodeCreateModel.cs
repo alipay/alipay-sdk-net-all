@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppQrcodeCreateModel : AopObject
     {
         /// <summary>
+        /// 圆形二维码颜色（十六进制颜色色值），仅圆形二维码支持颜色设置，方形二维码默认为黑色。
+        /// </summary>
+        [XmlElement("color")]
+        public string Color { get; set; }
+
+        /// <summary>
         /// 对应的二维码描述
         /// </summary>
         [XmlElement("describe")]
@@ -20,6 +26,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("query_param")]
         public string QueryParam { get; set; }
+
+        /// <summary>
+        /// 合成后图片的大小 (s  -- 8cm, m -- 12cm, l -- 30cm)
+        /// </summary>
+        [XmlElement("size")]
+        public string Size { get; set; }
 
         /// <summary>
         /// page/component/component-pages/view/view为小程序中能访问到的页面路径
