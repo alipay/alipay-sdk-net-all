@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -10,10 +11,11 @@ namespace Aop.Api.Response
     public class AlipayOpenMiniQrcodeQueryResponse : AopResponse
     {
         /// <summary>
-        /// 规则路由数据
+        /// 规则路由数据列表
         /// </summary>
-        [XmlElement("qr_code_route_groups")]
-        public QrCodeRouteGroup QrCodeRouteGroups { get; set; }
+        [XmlArray("qr_code_route_groups")]
+        [XmlArrayItem("qr_code_route_group")]
+        public List<QrCodeRouteGroup> QrCodeRouteGroups { get; set; }
 
         /// <summary>
         /// 数据总数

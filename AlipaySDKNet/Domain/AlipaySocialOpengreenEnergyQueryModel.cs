@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public List<string> GreenActions { get; set; }
 
         /// <summary>
+        /// 商户接入绿色开发平台的id
+        /// </summary>
+        [XmlElement("pid")]
+        public string Pid { get; set; }
+
+        /// <summary>
         /// 请求的来源，必填
         /// </summary>
         [XmlElement("source")]
@@ -46,5 +52,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
+
+        /// <summary>
+        /// 用户id
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pick_up_type")]
         public string PickUpType { get; set; }
+
+        /// <summary>
+        /// 桌号，点餐先付-送餐到桌场景必填
+        /// </summary>
+        [XmlElement("table_num")]
+        public string TableNum { get; set; }
     }
 }

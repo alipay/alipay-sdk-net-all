@@ -9,13 +9,19 @@ namespace Aop.Api.Response
     public class MybankPaymentTradeBusinessOrderCreateResponse : AopResponse
     {
         /// <summary>
+        /// 网商收银台地址，收银支付场景下涉及
+        /// </summary>
+        [XmlElement("cashier_url")]
+        public string CashierUrl { get; set; }
+
+        /// <summary>
         /// 网商银行创建的业务单号
         /// </summary>
         [XmlElement("order_no")]
         public string OrderNo { get; set; }
 
         /// <summary>
-        /// 请求流水号
+        /// 请求流水号，对应out_trade_no
         /// </summary>
         [XmlElement("request_no")]
         public string RequestNo { get; set; }

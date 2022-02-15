@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public OrderExtendParams OrderExtendParams { get; set; }
 
         /// <summary>
-        /// 外部平台的单据号，网商订单与外部平台订单一一对应
+        /// 幂等字段，外部平台的单据号，网商订单与外部平台订单一一对应
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
@@ -72,7 +72,7 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
-        /// 请求流水号，表示外部一次请求，幂等字段
+        /// 和out_biz_no保持一致或者可以不填
         /// </summary>
         [XmlElement("request_no")]
         public string RequestNo { get; set; }

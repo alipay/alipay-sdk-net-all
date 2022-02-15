@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class BankGoodsDetail : AopObject
     {
         /// <summary>
+        /// 商品描述
+        /// </summary>
+        [XmlElement("goods_desc")]
+        public string GoodsDesc { get; set; }
+
+        /// <summary>
         /// 商品ID
         /// </summary>
         [XmlElement("goods_id")]

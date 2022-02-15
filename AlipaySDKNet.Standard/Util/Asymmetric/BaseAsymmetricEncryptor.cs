@@ -94,7 +94,7 @@ namespace Aop.Api.Util.Asymmetric
             }
             catch (Exception ex)
             {
-                String errorMessage = GetAsymmetricType() + "验签遭遇异常，请检查公钥格式是否正确。" + ex.Message +
+                String errorMessage = GetAsymmetricType() + "验签遭遇异常，请检查公钥格式或签名是否正确。" + ex.Message +
                    " content=" + content + "，charset=" + charset + "，publicKey=" + publicKey + "，sign=" + sign;
                 Console.WriteLine(errorMessage);
                 throw new AopException(errorMessage, ex);

@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string MerchantLogonId { get; set; }
 
         /// <summary>
+        /// 1表示需要，0表示不需要 不传参数默认是需要（1） 是否创建三方应用授权子任务，也就是是否需要给三方应用授权
+        /// </summary>
+        [XmlElement("need_app_auth")]
+        public string NeedAppAuth { get; set; }
+
+        /// <summary>
         /// 签约单号 可通过alipay.open.agent.confirm接口获取签约单号
         /// </summary>
         [XmlElement("sign_order_no")]

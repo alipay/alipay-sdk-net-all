@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AdminArea { get; set; }
 
         /// <summary>
+        /// 性别;f：女；m：男
+        /// </summary>
+        [XmlElement("gender")]
+        public string Gender { get; set; }
+
+        /// <summary>
         /// 意向岗位，json数组
         /// </summary>
         [XmlElement("intent_post_tag")]
@@ -49,6 +55,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("suitable_age_status")]
         public string SuitableAgeStatus { get; set; }
+
+        /// <summary>
+        /// 用户年龄
+        /// </summary>
+        [XmlElement("user_age")]
+        public long UserAge { get; set; }
 
         /// <summary>
         /// 姓名

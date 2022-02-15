@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// 服务id
+        /// 小程序appid
         /// </summary>
         [XmlElement("service_id")]
         public string ServiceId { get; set; }

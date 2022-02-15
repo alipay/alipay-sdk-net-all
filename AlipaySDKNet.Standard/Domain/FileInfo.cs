@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class FileInfo : AopObject
     {
         /// <summary>
-        /// 文件类型，唯一值，枚举。 VIDEO=视频;VOICE=语音;PICTURE=图片;TEXT=文本
+        /// 文件类型，唯一值，枚举。  VIDEO=视频; VOICE=语音; PICTURE=图片; TEXT=文本; DOC, DOCX, XLS, XLSX, PPT, PPTX=MS Office
         /// </summary>
         [XmlElement("data_type")]
         public string DataType { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string FileBizType { get; set; }
 
         /// <summary>
-        /// 文件地址url
+        /// 文件地址url,图片大小推荐在10M以内
         /// </summary>
         [XmlElement("file_url")]
         public string FileUrl { get; set; }

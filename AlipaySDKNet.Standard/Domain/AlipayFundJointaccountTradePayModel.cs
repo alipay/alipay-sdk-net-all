@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 跳端扩展参数
+        /// 跳端扩展参数： [assignJointAccountId-指定企业码id] [pdSubBizScene-场景标识] [sourcePlatformInfo-平台扩展参数（outSource必传，其他可自定义）]
         /// </summary>
         [XmlElement("ext_info")]
         public string ExtInfo { get; set; }

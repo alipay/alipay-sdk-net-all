@@ -46,5 +46,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_task_name")]
         public string ServiceTaskName { get; set; }
+
+        /// <summary>
+        /// OD_BASE基于客流的时刻表任务； CUSTOMIZED_TRIP_COUNT_TIMETABLE基于车次数的时刻表任务; 默认为基于客流的时刻表任务
+        /// </summary>
+        [XmlElement("timetable_task_type")]
+        public string TimetableTaskType { get; set; }
     }
 }
