@@ -23,10 +23,10 @@ namespace Aop.Api.Domain
         public string ActualPayTime { get; set; }
 
         /// <summary>
-        /// 机具身份id
+        /// 找零金额，如8.0 表示找零8元
         /// </summary>
-        [XmlElement("biztid")]
-        public string Biztid { get; set; }
+        [XmlElement("change_amount")]
+        public long ChangeAmount { get; set; }
 
         /// <summary>
         /// 币种（CNY-人命币）
@@ -76,6 +76,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_trade_id")]
         public string OutTradeId { get; set; }
+
+        /// <summary>
+        /// PAY_SUCCESS/PAY_FAIL 支付成功，支付失败
+        /// </summary>
+        [XmlElement("pay_status")]
+        public string PayStatus { get; set; }
 
         /// <summary>
         /// 平台（tmall）优惠金额，单位分

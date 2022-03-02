@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BillNo { get; set; }
 
         /// <summary>
+        /// 外部单业务类型，默认为空 标识billNo为汇总单，否则billNo代表付款申请单ID
+        /// </summary>
+        [XmlElement("out_bill_type")]
+        public string OutBillType { get; set; }
+
+        /// <summary>
         /// 关联金额
         /// </summary>
         [XmlElement("relate_amount")]

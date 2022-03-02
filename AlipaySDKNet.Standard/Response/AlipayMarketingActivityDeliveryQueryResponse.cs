@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string DeliveryBoothCode { get; set; }
 
         /// <summary>
+        /// 投放计划错误信息描述，如投放计划审核失败时为审核失败原因。
+        /// </summary>
+        [XmlElement("delivery_error_msg")]
+        public string DeliveryErrorMsg { get; set; }
+
+        /// <summary>
         /// 投放计划id
         /// </summary>
         [XmlElement("delivery_id")]

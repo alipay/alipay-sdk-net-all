@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniPluginuseconfigOnlineModel : AopObject
     {
         /// <summary>
-        /// 端id
+        /// 端参数，枚举列举：支付宝：com.alipay.alipaywallet，高德：com.amap.app
         /// </summary>
         [XmlElement("bundle_id")]
         public string BundleId { get; set; }

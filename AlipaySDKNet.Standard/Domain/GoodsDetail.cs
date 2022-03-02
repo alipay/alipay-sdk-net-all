@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string Price { get; set; }
 
         /// <summary>
-        /// 商品数量
+        /// 商品数量，支持小数，精确到小数点后两位
         /// </summary>
         [XmlElement("quantity")]
         public long Quantity { get; set; }

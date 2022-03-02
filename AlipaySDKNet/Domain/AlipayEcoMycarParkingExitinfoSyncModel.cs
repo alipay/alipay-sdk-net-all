@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ExitId { get; set; }
 
         /// <summary>
+        /// 是否加密，默认为false
+        /// </summary>
+        [XmlElement("is_encrypt_car_number")]
+        public bool IsEncryptCarNumber { get; set; }
+
+        /// <summary>
         /// 智能助理当前的跳转链接
         /// </summary>
         [XmlElement("isv_url")]
@@ -50,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_amount")]
         public string OrderAmount { get; set; }
+
+        /// <summary>
+        /// 外部停车流水号(用于串通进场与出场信息)
+        /// </summary>
+        [XmlElement("out_serial_no")]
+        public string OutSerialNo { get; set; }
 
         /// <summary>
         /// 车辆离场时间，格式"YYYY-MM-DD HH:mm:ss"，24小时制

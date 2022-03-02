@@ -36,6 +36,13 @@ namespace Aop.Api.Response
         public List<TradeFundBillDetail> TradeFundBillList { get; set; }
 
         /// <summary>
+        /// 交易信息集合。查询为批量查询时，使用该结果返回
+        /// </summary>
+        [XmlArray("trade_info_list")]
+        [XmlArrayItem("trade_info_d_t_o")]
+        public List<TradeInfoDTO> TradeInfoList { get; set; }
+
+        /// <summary>
         /// 交易单号
         /// </summary>
         [XmlElement("trade_no")]

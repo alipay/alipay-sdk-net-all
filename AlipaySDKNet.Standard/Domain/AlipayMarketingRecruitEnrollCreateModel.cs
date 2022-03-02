@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public RecruitEnrollInfo EnrollInfo { get; set; }
 
         /// <summary>
-        /// 外部业务号
+        /// 外部操作流水号。由商家/ISV 自定义，仅支持字母、数字、下划线且需保证每次操作唯一。
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

@@ -23,6 +23,18 @@ namespace Aop.Api.Domain
         public string BrandName { get; set; }
 
         /// <summary>
+        /// 客服电话 限制: 客服电话和客服链接必须二选一
+        /// </summary>
+        [XmlElement("customer_service_mobile")]
+        public string CustomerServiceMobile { get; set; }
+
+        /// <summary>
+        /// 客服链接 限制: 客服电话和客服链接必须二选一
+        /// </summary>
+        [XmlElement("customer_service_url")]
+        public string CustomerServiceUrl { get; set; }
+
+        /// <summary>
         /// 券补充说明，该字段为可运营字段，可描述商品特色 会展示在用户支付宝卡包券详情页  限制: 1、该字段目前只支持兑换券即voucher_type为EXCHANGE_VOUCHER
         /// </summary>
         [XmlElement("voucher_comment")]

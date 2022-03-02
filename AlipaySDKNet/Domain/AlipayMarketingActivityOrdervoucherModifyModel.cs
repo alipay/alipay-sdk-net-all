@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ActivityId { get; set; }
 
         /// <summary>
+        /// 活动名称。 不对用户进行展示，仅供商家在后台管理活动使用。
+        /// </summary>
+        [XmlElement("activity_name")]
+        public string ActivityName { get; set; }
+
+        /// <summary>
         /// 引导用户配置。该值为空表示不修改。
         /// </summary>
         [XmlElement("customer_guide")]
@@ -34,10 +40,22 @@ namespace Aop.Api.Domain
         public string PublishEndTime { get; set; }
 
         /// <summary>
+        /// 券发放开始时间。 格式为：yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [XmlElement("publish_start_time")]
+        public string PublishStartTime { get; set; }
+
+        /// <summary>
         /// 券展示信息。该值为空表示不修改。
         /// </summary>
         [XmlElement("voucher_display_info")]
         public VoucherDisplayInfoModify VoucherDisplayInfo { get; set; }
+
+        /// <summary>
+        /// 券发放规则
+        /// </summary>
+        [XmlElement("voucher_send_rule")]
+        public VoucherSendRuleDetailModify VoucherSendRule { get; set; }
 
         /// <summary>
         /// 券使用规则。该值为空表示不修改。

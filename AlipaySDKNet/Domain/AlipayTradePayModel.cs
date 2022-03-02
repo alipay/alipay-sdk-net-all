@@ -83,7 +83,7 @@ namespace Aop.Api.Domain
         public ExtUserInfo ExtUserInfo { get; set; }
 
         /// <summary>
-        /// 业务扩展参数
+        /// 业务扩展参数，二级参数字段会动态新增
         /// </summary>
         [XmlElement("extend_params")]
         public ExtendParams ExtendParams { get; set; }
@@ -144,7 +144,7 @@ namespace Aop.Api.Domain
         public PromoParam PromoParams { get; set; }
 
         /// <summary>
-        /// 返回参数选项。 商户通过传递该参数来定制同步需要额外返回的信息字段，数组格式。如：["fund_bill_list","voucher_detail_list","discount_goods_detail"]
+        /// 返回参数选项。 商户通过传递该参数来定制同步需要额外返回的信息字段，数组格式。包括但不限于：["fund_bill_list","voucher_detail_list","enterprise_pay_info","discount_goods_detail","discount_amount","mdiscount_amount"]
         /// </summary>
         [XmlArray("query_options")]
         [XmlArrayItem("string")]

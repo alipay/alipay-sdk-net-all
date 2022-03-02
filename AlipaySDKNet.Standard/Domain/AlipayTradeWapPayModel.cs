@@ -90,7 +90,7 @@ namespace Aop.Api.Domain
         public string PassbackParams { get; set; }
 
         /// <summary>
-        /// 产品码。 商家和支付宝签约的产品码。 枚举值（点击查看签约情况）： <a target="_blank" href="https://opensupport.alipay.com/support/codelab/detail/711/713">QUICK_WAP_WAY</a>：无线快捷支付产品。 默认值为QUICK_WAP_PAY。
+        /// 产品码。 商家和支付宝签约的产品码。 枚举值（点击查看签约情况）： <a target="_blank" href="https://opensupport.alipay.com/support/codelab/detail/711/713">QUICK_WAP_WAY</a>：手机网站支付产品。 默认值为 QUICK_WAP_WAY。
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }

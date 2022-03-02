@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public long Count { get; set; }
 
         /// <summary>
-        /// 商品使用结束时间
+        /// 商品使用结束时间（Date类型），结束时间非空时必须有开始时间传值，且开始时间必须早于结束时间
         /// </summary>
         [XmlElement("end_time")]
         public string EndTime { get; set; }

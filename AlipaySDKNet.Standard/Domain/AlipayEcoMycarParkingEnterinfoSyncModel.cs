@@ -46,10 +46,22 @@ namespace Aop.Api.Domain
         public string InTime { get; set; }
 
         /// <summary>
+        /// 是否加密，默认为false
+        /// </summary>
+        [XmlElement("is_encrypt_car_number")]
+        public bool IsEncryptCarNumber { get; set; }
+
+        /// <summary>
         /// 智能助理当前的跳转链接
         /// </summary>
         [XmlElement("isv_url")]
         public string IsvUrl { get; set; }
+
+        /// <summary>
+        /// 外部停车流水号(用于串通进场与出场信息)
+        /// </summary>
+        [XmlElement("out_serial_no")]
+        public string OutSerialNo { get; set; }
 
         /// <summary>
         /// 支付宝停车平台ID，由支付宝定义的该停车场标识，同一个isv或商户范围内唯一。通过 <a href="https://opendocs.alipay.com/apis/api_19/alipay.eco.mycar.parking.parkinglotinfo.create">alipay.eco.mycar.parking.parkinglotinfo.create</a>(录入停车场信息)接口获取。

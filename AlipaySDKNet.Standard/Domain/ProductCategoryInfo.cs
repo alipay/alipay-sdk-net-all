@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string Desc { get; set; }
 
         /// <summary>
-        /// 类别名称
+        /// 类别名称。日历型商品使用场地名称例如“五人场A区”，日历型票券商品使用日期例如“1月1日”。
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }

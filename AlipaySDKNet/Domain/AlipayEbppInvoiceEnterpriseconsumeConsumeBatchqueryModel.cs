@@ -23,13 +23,13 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 交易结束时间
+        /// 交易结束时间，格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("consumption_end")]
         public string ConsumptionEnd { get; set; }
 
         /// <summary>
-        /// 交易开始时间
+        /// 交易开始时间，格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("consumption_start")]
         public string ConsumptionStart { get; set; }
