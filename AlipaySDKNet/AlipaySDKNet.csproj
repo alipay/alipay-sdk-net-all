@@ -10,7 +10,7 @@
     <RootNamespace>AlipaySDKNet</RootNamespace>
     <AssemblyName>AlipaySDKNet</AssemblyName>
     <PackageId>AlipaySDKNet</PackageId>
-    <PackageVersion>4.6.239</PackageVersion>
+    <PackageVersion>4.6.240</PackageVersion>
     <Authors>antopen</Authors>
     <NeutralLanguage>zh</NeutralLanguage>
     <Description>支付宝开放平台官方SDK，支持.Net Framework 3.5(SP1)及其以上版本。</Description>
@@ -1914,6 +1914,12 @@
     <Compile Include="Response\AlipayOpenSearchBrandcatalogBatchqueryResponse.cs" />
     <Compile Include="Response\AlipayOpenSearchBrandboxQueryResponse.cs" />
     <Compile Include="Response\AlipayOpenSearchBrandBatchqueryResponse.cs" />
+    <Compile Include="Response\AlipayOpenSearchBoxQueryResponse.cs" />
+    <Compile Include="Response\AlipayOpenSearchBoxOnlineResponse.cs" />
+    <Compile Include="Response\AlipayOpenSearchBoxOfflineResponse.cs" />
+    <Compile Include="Response\AlipayOpenSearchBoxModifyResponse.cs" />
+    <Compile Include="Response\AlipayOpenSearchBoxBatchqueryResponse.cs" />
+    <Compile Include="Response\AlipayOpenSearchBoxApplyResponse.cs" />
     <Compile Include="Response\AlipayOpenSearchBaseorderModifyResponse.cs" />
     <Compile Include="Response\AlipayOpenSearchAbilityBatchqueryResponse.cs" />
     <Compile Include="Response\AlipayOpenRequestBatchSendResponse.cs" />
@@ -5303,14 +5309,17 @@
     <Compile Include="Domain\SearchBrandBoxRequest.cs" />
     <Compile Include="Domain\SearchBrandboxQueryCatalogRequest.cs" />
     <Compile Include="Domain\SearchBrandBoxInfo.cs" />
+    <Compile Include="Domain\SearchBoxServiceModule.cs" />
     <Compile Include="Domain\SearchBoxServiceInfo.cs" />
     <Compile Include="Domain\SearchBoxMarketingchangeOptStatusReq.cs" />
     <Compile Include="Domain\SearchBoxKeyWordModule.cs" />
     <Compile Include="Domain\SearchBoxImageModule.cs" />
     <Compile Include="Domain\SearchBoxExclusiveMarketingInfoRequest.cs" />
     <Compile Include="Domain\SearchBoxBasicInfoModule.cs" />
+    <Compile Include="Domain\SearchBoxBasicInfo.cs" />
     <Compile Include="Domain\SearchBoxAppInfo.cs" />
     <Compile Include="Domain\SearchBoxActivityVideoInfo.cs" />
+    <Compile Include="Domain\SearchBoxAccountModule.cs" />
     <Compile Include="Domain\SearchBaseOrderCreateApiRequest.cs" />
     <Compile Include="Domain\SearchBaseItems.cs" />
     <Compile Include="Domain\SearchApplyPageQueryRequest.cs" />
@@ -9223,6 +9232,12 @@
     <Compile Include="Domain\AlipayOpenSearchBrandcatalogBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayOpenSearchBrandboxQueryModel.cs" />
     <Compile Include="Domain\AlipayOpenSearchBrandBatchqueryModel.cs" />
+    <Compile Include="Domain\AlipayOpenSearchBoxQueryModel.cs" />
+    <Compile Include="Domain\AlipayOpenSearchBoxOnlineModel.cs" />
+    <Compile Include="Domain\AlipayOpenSearchBoxOfflineModel.cs" />
+    <Compile Include="Domain\AlipayOpenSearchBoxModifyModel.cs" />
+    <Compile Include="Domain\AlipayOpenSearchBoxBatchqueryModel.cs" />
+    <Compile Include="Domain\AlipayOpenSearchBoxApplyModel.cs" />
     <Compile Include="Domain\AlipayOpenSearchBaseorderModifyModel.cs" />
     <Compile Include="Domain\AlipayOpenSearchAbilityBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayOpenPublicXwbtestabcdBatchqueryModel.cs" />
@@ -13573,6 +13588,12 @@
     <Compile Include="Request\AlipayOpenSearchBrandcatalogBatchqueryRequest.cs" />
     <Compile Include="Request\AlipayOpenSearchBrandboxQueryRequest.cs" />
     <Compile Include="Request\AlipayOpenSearchBrandBatchqueryRequest.cs" />
+    <Compile Include="Request\AlipayOpenSearchBoxQueryRequest.cs" />
+    <Compile Include="Request\AlipayOpenSearchBoxOnlineRequest.cs" />
+    <Compile Include="Request\AlipayOpenSearchBoxOfflineRequest.cs" />
+    <Compile Include="Request\AlipayOpenSearchBoxModifyRequest.cs" />
+    <Compile Include="Request\AlipayOpenSearchBoxBatchqueryRequest.cs" />
+    <Compile Include="Request\AlipayOpenSearchBoxApplyRequest.cs" />
     <Compile Include="Request\AlipayOpenSearchBaseorderModifyRequest.cs" />
     <Compile Include="Request\AlipayOpenSearchAbilityBatchqueryRequest.cs" />
     <Compile Include="Request\AlipayOpenRequestBatchSendRequest.cs" />
