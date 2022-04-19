@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string Nick { get; set; }
 
         /// <summary>
+        /// 宠物档案petid
+        /// </summary>
+        [XmlElement("pet_id")]
+        public string PetId { get; set; }
+
+        /// <summary>
         /// 宠物照片列表
         /// </summary>
         [XmlArray("photos")]

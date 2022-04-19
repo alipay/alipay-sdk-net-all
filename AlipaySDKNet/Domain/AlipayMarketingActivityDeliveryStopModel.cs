@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingActivityDeliveryStopModel : AopObject
     {
         /// <summary>
-        /// 当前服务商停止投放的商户信息。 商户自研模式，则该对象可以不填写。 服务商自研模式，则对象中的bussinessType设置为ISV，默认使用当前操作人的信息作为商户信息； 服务商代运营模式，则对象中的bussinessType设置为ISV_FOR_MERCHANT。
+        /// 服务商代商户创建投放必选。 bussinessType设置为ISV_FOR_MERCHANT。
         /// </summary>
         [XmlElement("belong_merchant_info")]
         public DeliveryAgencyMerchantInfo BelongMerchantInfo { get; set; }

@@ -110,7 +110,7 @@ namespace Aop.Api.Domain
         public string OutJobId { get; set; }
 
         /// <summary>
-        /// 薪资结算方式： 日结 周结 月结 项目结 按件结 面议
+        /// 薪资结算方式: 小时结 日结 周结 月结 项目结 按件结 面议
         /// </summary>
         [XmlElement("pay_period")]
         public string PayPeriod { get; set; }

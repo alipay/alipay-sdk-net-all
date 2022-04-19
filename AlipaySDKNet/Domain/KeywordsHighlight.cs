@@ -18,6 +18,13 @@ namespace Aop.Api.Domain
         public List<string> SearchableText { get; set; }
 
         /// <summary>
+        /// 摘要的高亮字段
+        /// </summary>
+        [XmlArray("summary")]
+        [XmlArrayItem("string")]
+        public List<string> Summary { get; set; }
+
+        /// <summary>
         /// 将标题关键字高亮显示
         /// </summary>
         [XmlArray("title")]

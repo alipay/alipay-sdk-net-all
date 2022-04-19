@@ -18,6 +18,13 @@ namespace Aop.Api.Domain
         public List<ContentRiskDetail> ContentRiskDetails { get; set; }
 
         /// <summary>
+        /// 以文件为主维度的风险信息聚合结果
+        /// </summary>
+        [XmlArray("contents")]
+        [XmlArrayItem("content_risks")]
+        public List<ContentRisks> Contents { get; set; }
+
+        /// <summary>
         /// 审核状态：枚举值，唯一 。 ROBOT_PASS：机审通过  ROBOT_REVIEW_REJECT：机审驳回  ROBOT_FAIL：机审失败
         /// </summary>
         [XmlElement("result")]

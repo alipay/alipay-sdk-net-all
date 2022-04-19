@@ -1,4 +1,5 @@
 using System;
+using Aop.Api.Domain;
 using System.Collections.Generic;
 using Aop.Api.Response;
 using Aop.Api.Util;
@@ -10,6 +11,11 @@ namespace Aop.Api.Request
     /// </summary>
     public class AlipayMarketingMaterialImageUploadRequest : IAopUploadRequest<AlipayMarketingMaterialImageUploadResponse>
     {
+        /// <summary>
+        /// 服务商代商户创建投放必选 bussinessType设置为ISV_FOR_MERCHANT。
+        /// </summary>
+        public BelongMerchantInfo BelongMerchantInfo { get; set; }
+
         /// <summary>
         /// 图片的byte字节数组。图片大小限制为2M
         /// </summary>
@@ -105,6 +111,7 @@ namespace Aop.Api.Request
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
+            parameters.Add("belong_merchant_info", this.BelongMerchantInfo);
             parameters.Add("file_key", this.FileKey);
             if(udfParams != null) 
             {

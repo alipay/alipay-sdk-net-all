@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string Env { get; set; }
 
         /// <summary>
+        /// 项目编号
+        /// </summary>
+        [XmlElement("program_code")]
+        public string ProgramCode { get; set; }
+
+        /// <summary>
         /// sr编号
         /// </summary>
         [XmlArray("sr_nos")]

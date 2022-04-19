@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayEbppInstserviceDeductresultQueryResponse : AopResponse
     {
         /// <summary>
+        /// 单位：元
+        /// </summary>
+        [XmlElement("deduct_amount")]
+        public string DeductAmount { get; set; }
+
+        /// <summary>
         /// 支付宝流水号
         /// </summary>
         [XmlElement("order_no")]
@@ -31,6 +37,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }
+
+        /// <summary>
+        /// 时间格式：yyyyMMddHHmmss
+        /// </summary>
+        [XmlElement("pay_time")]
+        public string PayTime { get; set; }
 
         /// <summary>
         /// 0:未知状态 1:支付成功 2:支付失败

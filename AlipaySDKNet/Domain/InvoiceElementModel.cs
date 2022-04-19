@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string ExtendFields { get; set; }
 
         /// <summary>
+        /// 防伪校验码
+        /// </summary>
+        [XmlElement("fake_code")]
+        public string FakeCode { get; set; }
+
+        /// <summary>
         /// 发票是否有pdf文件
         /// </summary>
         [XmlElement("has_pdf_file")]

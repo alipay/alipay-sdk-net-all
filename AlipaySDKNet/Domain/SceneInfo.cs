@@ -70,6 +70,18 @@ namespace Aop.Api.Domain
         public string SelfVisit { get; set; }
 
         /// <summary>
+        /// 数据来源，当前分为 zmJobCenter（数据来自工作证招聘场的点击）和 ka(合作商户的数据)
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
+
+        /// <summary>
+        /// 数据的类型，当前暂时为edu(培训) 和 job(招聘)
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

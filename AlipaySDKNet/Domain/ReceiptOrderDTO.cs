@@ -61,6 +61,13 @@ namespace Aop.Api.Domain
         public List<EnviromentalInfoDTO> EnvironmentalInfo { get; set; }
 
         /// <summary>
+        /// 临期食品商品列表，有临期食品时可填写，非必填。
+        /// </summary>
+        [XmlArray("good_expiration_list")]
+        [XmlArrayItem("good_expiration_list_d_t_o")]
+        public List<GoodExpirationListDTO> GoodExpirationList { get; set; }
+
+        /// <summary>
         /// 对接电子小票/无纸化小票能量发放时，必填; 其它场景，无需该字段; 字段含义: 是否接入支付宝电子小票; "0":不接入(商户自己有电子小票终端)；"1":接入; 接入场景:必须传入小票全量商品信息，用于在支付宝侧电子小票阵地展示给到C端用户;  不接入的商户且商户自己有终端实现了电子小票, 可以对接无纸化小票能量; 为空时，默认:"0"
         /// </summary>
         [XmlElement("is_alipay_ticket")]

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public SpecialVoucher SpecialVoucher { get; set; }
 
         /// <summary>
+        /// 商家券可用范围
+        /// </summary>
+        [XmlElement("voucher_available_scope")]
+        public VoucherAvailableScope VoucherAvailableScope { get; set; }
+
+        /// <summary>
         /// 日期区间内可以使用优惠
         /// </summary>
         [XmlElement("voucher_valid_period")]

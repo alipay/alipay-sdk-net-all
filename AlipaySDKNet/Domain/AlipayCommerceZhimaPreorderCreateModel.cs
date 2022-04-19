@@ -46,16 +46,28 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 任务开始时间
+        /// </summary>
+        [XmlElement("start_time")]
+        public string StartTime { get; set; }
+
+        /// <summary>
         /// storeId
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }
 
         /// <summary>
-        /// 芝麻GO活动模版id
+        /// 外部任务模版id，如芝麻GO活动模版id
         /// </summary>
         [XmlElement("template_id")]
         public string TemplateId { get; set; }
+
+        /// <summary>
+        /// 外部模版类型
+        /// </summary>
+        [XmlElement("template_type")]
+        public string TemplateType { get; set; }
 
         /// <summary>
         /// 超时关单时间 默认1H。1m～15d。m表示分钟，h表示小时，d表示天。该参数数值不接受小数点， 如1.5h，可转换为90m 签约超时关单时间依赖这个时间

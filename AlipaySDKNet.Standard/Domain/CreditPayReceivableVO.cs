@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// 应收到期日
+        /// </summary>
+        [XmlElement("due_date")]
+        public string DueDate { get; set; }
+
+        /// <summary>
         /// 应收生效时间
         /// </summary>
         [XmlElement("effective_date")]
@@ -100,7 +106,7 @@ namespace Aop.Api.Domain
         public CreditPayMoneyVO RefundAmt { get; set; }
 
         /// <summary>
-        /// CREATE：创建 VALID：生效 CLEAR：结清 CANCEL：取消 TRANSFER：转移
+        /// WAIT_CONFIRM：待确认 RECEIVABLE：已生效且存在未收金额 DUE_RECEIVED：已全额到期自动收款 FACTORING_RECEIVED：已全额提前收款 UNVALID：失效
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

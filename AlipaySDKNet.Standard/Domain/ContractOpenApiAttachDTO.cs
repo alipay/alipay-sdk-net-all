@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("file_version")]
         public string FileVersion { get; set; }
+
+        /// <summary>
+        /// 合同PDF文件
+        /// </summary>
+        [XmlElement("pdf_file_location")]
+        public string PdfFileLocation { get; set; }
     }
 }

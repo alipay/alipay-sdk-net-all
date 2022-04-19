@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public ExchangeVoucherModify ExchangeVoucher { get; set; }
 
         /// <summary>
+        /// 券可用范围修改信息
+        /// </summary>
+        [XmlElement("voucher_available_scope")]
+        public VoucherAvailableScopeModify VoucherAvailableScope { get; set; }
+
+        /// <summary>
         /// 日期区间内可以使用优惠
         /// </summary>
         [XmlElement("voucher_valid_period")]

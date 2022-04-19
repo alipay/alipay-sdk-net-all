@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Body { get; set; }
 
         /// <summary>
-        /// 当用户进入芝麻后付下单页面后，点击左上角的回退按钮，中断开通流程，跳转回商户的页面地址。
+        /// 当用户进入芝麻后付下单页面后，点击左上角的回退按钮，中断开通流程，跳转回商户的页面地址。不传该链接时，默认返回上一级页面，由外部app唤起支付宝的情况，会返回支付宝首页。
         /// </summary>
         [XmlElement("cancel_back_link")]
         public string CancelBackLink { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string OrderAmount { get; set; }
 
         /// <summary>
-        /// 商户外部协议号。不传该值时，默认使用out_order_no作为out_agreement_no使用
+        /// 商户外部协议号。不传该值时，默认使用out_order_no作为out_agreement_no使用，不同的支付宝用户需要传递不同的外部协议号。
         /// </summary>
         [XmlElement("out_agreement_no")]
         public string OutAgreementNo { get; set; }
@@ -52,13 +52,13 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
-        /// 产品码，不传默认为CREDIT_PAY_AFTER_USE
+        /// 产品码，不填默认为 CREDIT_PAY_AFTER_USE。芝麻先用后付产品为CREDIT_PAY_AFTER_USE，其他产品请根据对应的技术支持文档传入。
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 用户成功完成芝麻后付开通流程后，跳转回商户的页面地址。
+        /// 用户成功完成芝麻后付开通流程后，跳转回商户的页面地址。不传该链接时，默认返回上一级页面，由外部app唤起支付宝的情况，会返回支付宝首页。
         /// </summary>
         [XmlElement("return_back_link")]
         public string ReturnBackLink { get; set; }

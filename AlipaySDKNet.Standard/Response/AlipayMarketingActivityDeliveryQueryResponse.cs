@@ -17,7 +17,7 @@ namespace Aop.Api.Response
         public DeliveryBaseInfo DeliveryBaseInfo { get; set; }
 
         /// <summary>
-        /// 投放的展位编码。 枚举值： PAYMENT_RESULT：本店优惠。
+        /// 投放的展位编码。
         /// </summary>
         [XmlElement("delivery_booth_code")]
         public string DeliveryBoothCode { get; set; }

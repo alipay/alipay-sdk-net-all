@@ -72,13 +72,19 @@ namespace Aop.Api.Domain
         public List<ReceiptDiscountInfo> OtherDiscountInfo { get; set; }
 
         /// <summary>
+        /// 外部业务id
+        /// </summary>
+        [XmlElement("out_biz_id")]
+        public string OutBizId { get; set; }
+
+        /// <summary>
         /// 外部订单编号,小票编号
         /// </summary>
         [XmlElement("out_trade_id")]
         public string OutTradeId { get; set; }
 
         /// <summary>
-        /// PAY_SUCCESS/PAY_FAIL 支付成功，支付失败
+        /// success/fail 支付成功，支付失败
         /// </summary>
         [XmlElement("pay_status")]
         public string PayStatus { get; set; }

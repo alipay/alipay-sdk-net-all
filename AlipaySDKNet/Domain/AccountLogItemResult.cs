@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string BizOrigNo { get; set; }
 
         /// <summary>
+        /// 账单的补全信息，用于特殊场景，普通商户不需要传值，对账时可忽略。
+        /// </summary>
+        [XmlElement("complement_info")]
+        public string ComplementInfo { get; set; }
+
+        /// <summary>
         /// 收入/支出。表示收支。amount是正数，返回“收入”。amount是负数，返回“支出”
         /// </summary>
         [XmlElement("direction")]

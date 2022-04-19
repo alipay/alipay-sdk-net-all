@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class EnterprisePayInfo : AopObject
     {
         /// <summary>
+        /// 因公付业务信息
+        /// </summary>
+        [XmlElement("biz_info")]
+        public string BizInfo { get; set; }
+
+        /// <summary>
         /// 开票金额
         /// </summary>
         [XmlElement("invoice_amount")]

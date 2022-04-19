@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public DeviceParams DeviceParams { get; set; }
 
         /// <summary>
+        /// 签约有效时间限制，单位是秒，有效范围是0-86400，商户传入此字段会用商户传入的值否则使用支付宝侧默认值，在有效时间外进行签约，会进行安全拦截；（备注：此字段适用于需要开通安全防控的商户，且依赖商户传入生成签约时的时间戳字段timestamp）
+        /// </summary>
+        [XmlElement("effect_time")]
+        public long EffectTime { get; set; }
+
+        /// <summary>
         /// 商户签约号，代扣协议中标示用户的唯一签约号（确保在商户系统中唯一）。 格式规则：支持大写小写字母和数字，最长32位。 商户系统按需自定义传入，如果同一用户在同一产品码、同一签约场景下，签订了多份代扣协议，那么需要指定并传入该值。
         /// </summary>
         [XmlElement("external_agreement_no")]
@@ -94,7 +100,7 @@ namespace Aop.Api.Domain
         public string PromoParams { get; set; }
 
         /// <summary>
-        /// 协议签约场景，商户和支付宝签约时确定，商户可咨询技术支持。 当传入商户签约号external_agreement_no时，场景不能为默认值DEFAULT|DEFAULT。 代扣产品常见场景值参见：  https://opendocs.alipay.com/open/20190319114403226822/signscene。 
+        /// 协议签约场景，商户可根据 <a href="https://opendocs.alipay.com/open/20190319114403226822/signscene">代扣产品常见场景值</a> 选择符合自身的行业场景。 说明：当传入商户签约号 external_agreement_no 时，本参数必填，不能为默认值 DEFAULT|DEFAULT。
         /// </summary>
         [XmlElement("sign_scene")]
         public string SignScene { get; set; }

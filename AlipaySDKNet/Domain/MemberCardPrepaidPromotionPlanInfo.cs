@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Benefit { get; set; }
 
         /// <summary>
+        /// 储值方案赠送优惠券信息
+        /// </summary>
+        [XmlElement("benefit_voucher_list")]
+        public MemberCardVoucherBenefitInfo BenefitVoucherList { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [XmlElement("create_time")]

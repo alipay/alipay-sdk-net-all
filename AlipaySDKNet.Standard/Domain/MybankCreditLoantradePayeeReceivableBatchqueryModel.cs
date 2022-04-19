@@ -43,7 +43,7 @@ namespace Aop.Api.Domain
         public List<string> PlatformOrderList { get; set; }
 
         /// <summary>
-        /// 查询状态列表，入参为空表示全部查询
+        /// 查询状态列表，入参为空表示全部查询 WAIT_CONFIRM：待确认 RECEIVABLE：已生效且存在未收金额 DUE_RECEIVED：已全额到期自动收款 FACTORING_RECEIVED：已全额提前收款  UNVALID：失效
         /// </summary>
         [XmlArray("status_list")]
         [XmlArrayItem("string")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceIotDeviceTradevoiceSendModel : AopObject
     {
         /// <summary>
-        /// 播报的金额
+        /// 播报的金额，必须大于0
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string Smid { get; set; }
 
         /// <summary>
-        /// 交易订单id
+        /// 交易订单id,生产环境必传。 工厂验收设备的时候可不传，通过白名单管控。
         /// </summary>
         [XmlElement("trade_id")]
         public string TradeId { get; set; }

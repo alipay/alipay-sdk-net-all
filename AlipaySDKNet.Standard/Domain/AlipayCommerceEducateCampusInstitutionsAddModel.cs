@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string InstStdCode { get; set; }
 
         /// <summary>
-        /// 办学阶段。 枚举值如下： KINDERGARTEN（幼儿园） PRIMARY_SCHOOL（小学）  MIDDLE_SCHOOL（初中）  HIGH_SCHOOL（高中） UNIVERSITY（大学）  SECONDARY_VOCATIONAL_SCHOOL（中职中专）  TRAINING_SCHOOL（培训机构）  HIGHER_VOCATIONAL_SCHOOL（高职高专）  ADULT_EDUCATION（成人教育、函授）等 注意：如果学校兼有多种属性，可以连写用英文逗号拆分，如：MIDDLE_SCHOOL,HIGH_SCHOOL 代表兼有初中部和高中部；
+        /// 办学阶段。 枚举值如下： KINDERGARTEN（幼儿园） PRIMARY_SCHOOL（小学）  MIDDLE_SCHOOL（初中）  HIGH_SCHOOL（高中） SECONDARY_VOCATIONAL_SCHOOL（中职中专）  注意：如果学校兼有多种属性，可以连写用英文逗号拆分，如：MIDDLE_SCHOOL,HIGH_SCHOOL 代表兼有初中部和高中部；
         /// </summary>
         [XmlElement("learning_stage")]
         public string LearningStage { get; set; }

@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayDataBillAccountlogQueryResponse : AopResponse
     {
         /// <summary>
-        /// 账务明细返回结果
+        /// 账务明细返回结果。 当查询为空的时候，不返回，有结果的时候才会返回。
         /// </summary>
         [XmlArray("detail_list")]
         [XmlArrayItem("account_log_item_result")]

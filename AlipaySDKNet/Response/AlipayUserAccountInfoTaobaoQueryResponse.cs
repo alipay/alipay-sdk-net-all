@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("login_id")]
         public string LoginId { get; set; }
+
+        /// <summary>
+        /// 用户类型
+        /// </summary>
+        [XmlElement("user_type")]
+        public string UserType { get; set; }
     }
 }

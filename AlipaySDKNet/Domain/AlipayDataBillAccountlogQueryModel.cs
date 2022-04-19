@@ -10,10 +10,28 @@ namespace Aop.Api.Domain
     public class AlipayDataBillAccountlogQueryModel : AopObject
     {
         /// <summary>
+        /// 协议授权码，特殊场景下使用
+        /// </summary>
+        [XmlElement("agreement_no")]
+        public string AgreementNo { get; set; }
+
+        /// <summary>
+        /// 协议产品码。特殊场景下使用
+        /// </summary>
+        [XmlElement("agreement_product_code")]
+        public string AgreementProductCode { get; set; }
+
+        /// <summary>
         /// 支付宝订单号，通过支付宝订单号精确查询相关的流水明细，商户订单号与支付宝订单号互斥
         /// </summary>
         [XmlElement("alipay_order_no")]
         public string AlipayOrderNo { get; set; }
+
+        /// <summary>
+        /// 指定用户做账单查询
+        /// </summary>
+        [XmlElement("bill_user_id")]
+        public string BillUserId { get; set; }
 
         /// <summary>
         /// 账务流水创建时间的结束范围。与起始时间间隔不超过31天。查询结果为起始时间至结束时间的左闭右开区间
@@ -44,5 +62,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
+
+        /// <summary>
+        /// 账务的类型代码，特殊场景下使用
+        /// </summary>
+        [XmlElement("trans_code")]
+        public string TransCode { get; set; }
     }
 }

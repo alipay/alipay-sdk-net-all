@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ContractorCode { get; set; }
 
         /// <summary>
-        /// 用户的签约支付宝账号，默认必输，限定只有登录号匹配的支付宝用户才能进行签约。
+        /// 注意：过时字段，建议使用identity+identity_type字段。用户的签约支付宝账号，指定只有登录号匹配的支付宝用户才能进行签约。
         /// </summary>
         [XmlElement("employee_alipay_logon_id")]
         public string EmployeeAlipayLogonId { get; set; }
@@ -58,13 +58,31 @@ namespace Aop.Api.Domain
         public string IdentificationInBelongingEmployer { get; set; }
 
         /// <summary>
+        /// 参与方的唯一标识，用于指定签约的支付宝账户，默认必输。如提供，则参与方的标识类型（identity_type)也不能为空。
+        /// </summary>
+        [XmlElement("identity")]
+        public string Identity { get; set; }
+
+        /// <summary>
+        /// 参与方的标识类型，默认必输。值为有限枚举，用于指定identity字段类型，如提供，参与方的唯一标识（identity)也不能为空，目前支持如下类型： 1.ALIPAY_ACCOUNT_NO（支付宝账号） 2.ALIPAY_USER_ID（支付宝ID）
+        /// </summary>
+        [XmlElement("identity_type")]
+        public string IdentityType { get; set; }
+
+        /// <summary>
         /// 产品码，固定值：TAX_BILL_PLATFORM
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 税优模式，有限枚，实际传递的值依赖具体业务情况。1.TEMPORARY_TAX_REGISTRATION（临时税务登记 ）2. NATURAL_PERSON_LEVIED（自然人代征）
+        /// 签约码类型，有限枚举，指定sign_code的类型，默认为SHARE_CODE，支持： 1.SHARE_CODE    （吱口令） 2.SHORT_URL   （短链接）
+        /// </summary>
+        [XmlElement("sign_code_type")]
+        public string SignCodeType { get; set; }
+
+        /// <summary>
+        /// 税优模式，有限枚举，实际传递的值依赖具体业务情况。1.TEMPORARY_TAX_REGISTRATION（临时税务登记 ）2. NATURAL_PERSON_LEVIED（自然人代征）
         /// </summary>
         [XmlElement("tax_optimization_mode")]
         public string TaxOptimizationMode { get; set; }

@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public List<OrderLogisticsInformationRequest> LogisticsInfoList { get; set; }
 
         /// <summary>
-        /// 订单授权码(与订单一一对应，不是请求维度的，服务订单首次同步必传） 利用订单同步前获取的formId作为订单授权码。订单授权码对应的小程序id与买家uid与同步订单的小程序id和买家uid一致 注：当order_type为SERVICE_ORDER时必填
+        /// 订单授权码 利用订单同步前获取的formId作为订单授权码。订单授权码对应的小程序id与买家uid与同步订单的小程序id和买家uid一致 注：自2022年1月14日起，该字段可无需填写
         /// </summary>
         [XmlElement("order_auth_code")]
         public string OrderAuthCode { get; set; }

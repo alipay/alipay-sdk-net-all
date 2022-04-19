@@ -64,10 +64,22 @@ namespace Aop.Api.Domain
         public string Scene { get; set; }
 
         /// <summary>
+        /// 场景类型
+        /// </summary>
+        [XmlElement("scene_type")]
+        public string SceneType { get; set; }
+
+        /// <summary>
         /// 开始时间
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
+
+        /// <summary>
+        /// 启动类型
+        /// </summary>
+        [XmlElement("startup_type")]
+        public string StartupType { get; set; }
 
         /// <summary>
         /// 任务指标数值

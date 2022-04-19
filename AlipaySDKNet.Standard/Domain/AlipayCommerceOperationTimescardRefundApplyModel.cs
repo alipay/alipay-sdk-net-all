@@ -1,0 +1,30 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayCommerceOperationTimescardRefundApplyModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayCommerceOperationTimescardRefundApplyModel : AopObject
+    {
+        /// <summary>
+        /// 次卡id
+        /// </summary>
+        [XmlElement("card_id")]
+        public string CardId { get; set; }
+
+        /// <summary>
+        /// 场景码
+        /// </summary>
+        [XmlElement("scene_code")]
+        public string SceneCode { get; set; }
+
+        /// <summary>
+        /// 用户id
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
+    }
+}

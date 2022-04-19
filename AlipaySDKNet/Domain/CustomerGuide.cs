@@ -49,5 +49,17 @@ namespace Aop.Api.Domain
         [XmlArray("store_ids")]
         [XmlArrayItem("string")]
         public List<string> StoreIds { get; set; }
+
+        /// <summary>
+        /// 券发放引导信息。 说明： 当voucher_type=EXCHANGE_VOUCHER时，该字段必须填写。
+        /// </summary>
+        [XmlElement("voucher_send_guide")]
+        public VoucherSendGuide VoucherSendGuide { get; set; }
+
+        /// <summary>
+        /// 券核销引导
+        /// </summary>
+        [XmlElement("voucher_use_guide")]
+        public VoucherUseGuide VoucherUseGuide { get; set; }
     }
 }

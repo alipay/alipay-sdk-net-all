@@ -49,5 +49,17 @@ namespace Aop.Api.Domain
         [XmlArray("store_ids")]
         [XmlArrayItem("string")]
         public List<string> StoreIds { get; set; }
+
+        /// <summary>
+        /// 券发放引导信息
+        /// </summary>
+        [XmlElement("voucher_send_guide")]
+        public VoucherSendGuideModify VoucherSendGuide { get; set; }
+
+        /// <summary>
+        /// 券核销引导信息
+        /// </summary>
+        [XmlElement("voucher_use_guide")]
+        public VoucherUseGuideModify VoucherUseGuide { get; set; }
     }
 }

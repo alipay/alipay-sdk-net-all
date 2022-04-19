@@ -9,10 +9,16 @@ namespace Aop.Api.Response
     public class ZhimaCustomerZmcardInfoQueryResponse : AopResponse
     {
         /// <summary>
-        /// 被查看人的信用等级
+        /// 被查看人的信用等级，范围[信用极好，信用优秀，信用良好，信用中等，信用较差]
         /// </summary>
         [XmlElement("credit_level")]
         public string CreditLevel { get; set; }
+
+        /// <summary>
+        /// 用户的芝麻分分级编码。分值范围[A,B,C,D,E]
+        /// </summary>
+        [XmlElement("level_code")]
+        public string LevelCode { get; set; }
 
         /// <summary>
         /// 芝麻证h5跳转链接，若被查看人已经授权，则会返回此url，点击后进入芝麻证h5页面

@@ -1,0 +1,35 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Response
+{
+    /// <summary>
+    /// AlipayFundFlexiblestaffingAuthorizeInitializeResponse.
+    /// </summary>
+    public class AlipayFundFlexiblestaffingAuthorizeInitializeResponse : AopResponse
+    {
+        /// <summary>
+        /// 灵工授权场景码
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
+        /// <summary>
+        /// 授权编码值，根据输入的code_type决定具体内容，比如code_type为SHORT_URL时，返回https短链
+        /// </summary>
+        [XmlElement("initialize_code")]
+        public string InitializeCode { get; set; }
+
+        /// <summary>
+        /// 授权编码类型，有限枚举：1. SHORT_URL
+        /// </summary>
+        [XmlElement("initialize_code_type")]
+        public string InitializeCodeType { get; set; }
+
+        /// <summary>
+        /// 灵工授权产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+    }
+}

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ZolozAuthenticationCustomerFaceabilityIdentifyModel : AopObject
     {
         /// <summary>
-        /// 开放活体图片进行人脸识别的能力，包括extract(提取特征)、sex(检测性别)、rect(人脸矩形框检测)
+        /// 开放活体图片进行人脸识别的能力，包括extract(提取特征)、sex(检测性别)、rect(人脸矩形框检测)、、quality(质量检测)
         /// </summary>
         [XmlElement("ability")]
         public string Ability { get; set; }

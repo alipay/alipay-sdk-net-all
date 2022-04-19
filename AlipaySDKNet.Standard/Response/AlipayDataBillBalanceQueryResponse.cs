@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string FreezeAmount { get; set; }
 
         /// <summary>
+        /// 待结算金额
+        /// </summary>
+        [XmlElement("settle_amount")]
+        public string SettleAmount { get; set; }
+
+        /// <summary>
         /// 支付宝账户余额
         /// </summary>
         [XmlElement("total_amount")]

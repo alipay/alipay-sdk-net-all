@@ -90,6 +90,30 @@ namespace Aop.Api.Response
         public string EnrollmentTime { get; set; }
 
         /// <summary>
+        /// 企业证照地址的详细地址（用户类型是公司用户才有该字段）【注意】只有is_certified为T的时候才有意义，否则不保证准确性.
+        /// </summary>
+        [XmlElement("ent_license_address")]
+        public string EntLicenseAddress { get; set; }
+
+        /// <summary>
+        /// 企业证照地址所在地区或县（用户类型是公司用户才有该字段）【注意】只有is_certified为T的时候才有意义，否则不保证准确性，目前企业营业执照地址不含县(区)，area为空。
+        /// </summary>
+        [XmlElement("ent_license_area")]
+        public string EntLicenseArea { get; set; }
+
+        /// <summary>
+        /// 企业证照地址所在市（用户类型是公司用户才有该字段）【注意】只有is_certified为T的时候才有意义，否则不保证准确性.
+        /// </summary>
+        [XmlElement("ent_license_city")]
+        public string EntLicenseCity { get; set; }
+
+        /// <summary>
+        /// 企业证照地址所在省份（用户类型是公司用户才有该字段）【注意】只有is_certified为T的时候才有意义，否则不保证准确性.
+        /// </summary>
+        [XmlElement("ent_license_province")]
+        public string EntLicenseProvince { get; set; }
+
+        /// <summary>
         /// 企业代理人证件有效期（用户类型是公司类型时才有此字段）。
         /// </summary>
         [XmlElement("firm_agent_person_cert_expiry_date")]

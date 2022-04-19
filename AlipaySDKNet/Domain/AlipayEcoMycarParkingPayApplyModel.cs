@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
+        /// 外部进场流水号，与serial_no不能同时为空
+        /// </summary>
+        [XmlElement("out_serial_no")]
+        public string OutSerialNo { get; set; }
+
+        /// <summary>
         /// 出场时间(格式"YYYY-MM-DD HH:mm:ss"，24小时制)
         /// </summary>
         [XmlElement("out_time")]
@@ -64,7 +70,7 @@ namespace Aop.Api.Domain
         public string SellerId { get; set; }
 
         /// <summary>
-        /// 进场流水号
+        /// 进场流水号，与out_serial_no不能同时为空
         /// </summary>
         [XmlElement("serial_no")]
         public string SerialNo { get; set; }

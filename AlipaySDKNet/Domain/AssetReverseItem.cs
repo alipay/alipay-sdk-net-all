@@ -40,6 +40,18 @@ namespace Aop.Api.Domain
         public string AssignItemId { get; set; }
 
         /// <summary>
+        /// 业务线
+        /// </summary>
+        [XmlElement("biz_line")]
+        public string BizLine { get; set; }
+
+        /// <summary>
+        /// 业务渠道
+        /// </summary>
+        [XmlElement("biz_tag")]
+        public string BizTag { get; set; }
+
+        /// <summary>
         /// 退货数量
         /// </summary>
         [XmlElement("count")]

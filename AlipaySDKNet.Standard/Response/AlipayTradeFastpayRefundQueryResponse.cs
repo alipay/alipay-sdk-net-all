@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public DepositBackInfo DepositBackInfo { get; set; }
 
         /// <summary>
+        /// 因公付退款信息，只有入参的query_options中指定enterprise_pay_info时才返回该字段信息
+        /// </summary>
+        [XmlElement("enterprise_pay_info")]
+        public EnterprisePayInfo EnterprisePayInfo { get; set; }
+
+        /// <summary>
         /// 退款失败错误码。只在使用异步退款接口情况下才会返回该字段
         /// </summary>
         [XmlElement("error_code")]

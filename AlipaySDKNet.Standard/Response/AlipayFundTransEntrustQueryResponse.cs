@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string EntrustOrderId { get; set; }
 
         /// <summary>
+        /// 失败原因
+        /// </summary>
+        [XmlElement("fail_reason")]
+        public string FailReason { get; set; }
+
+        /// <summary>
         /// 商户端的唯一订单号
         /// </summary>
         [XmlElement("out_biz_no")]

@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string ResultMsg { get; set; }
 
         /// <summary>
+        /// 核验比对分数
+        /// </summary>
+        [XmlElement("score")]
+        public string Score { get; set; }
+
+        /// <summary>
         /// 核验源
         /// </summary>
         [XmlElement("source_from")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ContractCode { get; set; }
 
         /// <summary>
+        /// 是否需要主合同的PDF版本
+        /// </summary>
+        [XmlElement("is_pdf_required")]
+        public bool IsPdfRequired { get; set; }
+
+        /// <summary>
         /// 当前系统的名称
         /// </summary>
         [XmlElement("source_system_id")]

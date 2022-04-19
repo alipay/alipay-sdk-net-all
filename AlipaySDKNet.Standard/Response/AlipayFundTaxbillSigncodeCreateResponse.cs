@@ -21,9 +21,15 @@ namespace Aop.Api.Response
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 签约吱口令，请求成功响应时存在
+        /// 签约吱口令/签约短链接，请求成功响应时存在
         /// </summary>
         [XmlElement("sign_code")]
         public string SignCode { get; set; }
+
+        /// <summary>
+        /// 签约码类型，请求成功响应时存在，标明当前sign_code的类型，默认为SHARE_CODE。 1. SHARE_CODE（吱口令） 2.SHORT_URL（短链接）
+        /// </summary>
+        [XmlElement("sign_code_type")]
+        public string SignCodeType { get; set; }
     }
 }

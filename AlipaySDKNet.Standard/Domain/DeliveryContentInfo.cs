@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DeliveryContentInfo : AopObject
     {
         /// <summary>
-        /// 活动对象，包括支付券和导码模式的商家券。
+        /// 活动对象。
         /// </summary>
         [XmlElement("delivery_activity_content")]
         public DeliveryActivityContentInfo DeliveryActivityContent { get; set; }

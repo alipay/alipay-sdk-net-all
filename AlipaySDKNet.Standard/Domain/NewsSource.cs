@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public string FirstPublishMedia { get; set; }
 
         /// <summary>
+        /// 关键字高亮显示
+        /// </summary>
+        [XmlElement("highlight")]
+        public KeywordsHighlight Highlight { get; set; }
+
+        /// <summary>
         /// 图片资源列表
         /// </summary>
         [XmlArray("images")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Algfactors { get; set; }
 
         /// <summary>
+        /// 模糊程度质量分
+        /// </summary>
+        [XmlElement("blur")]
+        public string Blur { get; set; }
+
+        /// <summary>
         /// 姓名信息
         /// </summary>
         [XmlElement("cert_name")]
@@ -70,10 +76,46 @@ namespace Aop.Api.Domain
         public string Hasrisk { get; set; }
 
         /// <summary>
+        /// 综合质量分（不区分具体哪方面质量差）
+        /// </summary>
+        [XmlElement("joint_quality")]
+        public long JointQuality { get; set; }
+
+        /// <summary>
+        /// 光线质量分
+        /// </summary>
+        [XmlElement("light")]
+        public string Light { get; set; }
+
+        /// <summary>
+        /// 遮挡质量分
+        /// </summary>
+        [XmlElement("occlusion")]
+        public string Occlusion { get; set; }
+
+        /// <summary>
+        /// 姿态质量分
+        /// </summary>
+        [XmlElement("pose")]
+        public string Pose { get; set; }
+
+        /// <summary>
         /// 质量分
         /// </summary>
         [XmlElement("quality")]
         public string Quality { get; set; }
+
+        /// <summary>
+        /// 质量不合格时的质量返回码
+        /// </summary>
+        [XmlElement("quality_code")]
+        public string QualityCode { get; set; }
+
+        /// <summary>
+        /// 质量是否合格
+        /// </summary>
+        [XmlElement("qualityok")]
+        public bool Qualityok { get; set; }
 
         /// <summary>
         /// 特征矩形区域"442,231,412,262"
