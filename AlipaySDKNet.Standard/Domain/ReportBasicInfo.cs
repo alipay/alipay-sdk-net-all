@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ReportDate { get; set; }
 
         /// <summary>
+        /// 报案唯一标识，申请理赔所关联的订单号，如一个订单会存在多次理赔，请用唯一标识
+        /// </summary>
+        [XmlElement("report_unique_key")]
+        public string ReportUniqueKey { get; set; }
+
+        /// <summary>
         /// 报案人联系方式
         /// </summary>
         [XmlElement("reporter_contact_info")]

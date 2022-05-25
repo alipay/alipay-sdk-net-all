@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string InitializeCodeType { get; set; }
 
         /// <summary>
+        /// 外部业务号，调用方自定义提供，授权结果推送和授权结果查询中都会提供此单号，用于串联授权流程
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 授权主体信息
         /// </summary>
         [XmlElement("principal_party_info")]

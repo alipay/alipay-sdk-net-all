@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_amount")]
         public string InvoiceAmount { get; set; }
+
+        /// <summary>
+        /// 是否包含因公付资产
+        /// </summary>
+        [XmlElement("is_use_enterprise_pay")]
+        public bool IsUseEnterprisePay { get; set; }
     }
 }

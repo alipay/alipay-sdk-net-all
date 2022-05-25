@@ -16,16 +16,22 @@ namespace Aop.Api.Domain
         public string AccountPrincipalType { get; set; }
 
         /// <summary>
-        /// 账户类型,目前仅支持ENTRUST_SUB_ACC子户
+        /// 账户类型,目前支持ENTRUST_SUB_ACC托管子户,INST_PARTNER_SUB_ACCOUNT银行企业结算子户
         /// </summary>
         [XmlElement("account_type")]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// 可变ID，用来识别同一个user_id账户下面多维度账户。托管根据uid、productChannel、productCode、vid共同确定子户
+        /// 可变ID，用来识别同一个user_id账户下面多维度账户。当account_type=ENTRUST_SUB_ACC或INST_PARTNER_SUB_ACCOUNT时生效。
         /// </summary>
         [XmlElement("external_entity_id")]
         public string ExternalEntityId { get; set; }
+
+        /// <summary>
+        /// 外部机构账户相关要素,当accountPrincipalType=INST_PARTNER_SUB_ACCOUNT或INST_USER_SUB_ACCOUNT时必填
+        /// </summary>
+        [XmlElement("inst_account_elements")]
+        public InstAccountElementsDTO InstAccountElements { get; set; }
 
         /// <summary>
         /// 开户备注

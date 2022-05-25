@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -25,6 +27,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("buyer_scene_id")]
         public string BuyerSceneId { get; set; }
+
+        /// <summary>
+        /// 子额度类型
+        /// </summary>
+        [XmlArray("creditpay_sub_quotas")]
+        [XmlArrayItem("creditpay_subquota")]
+        public List<CreditpaySubquota> CreditpaySubQuotas { get; set; }
 
         /// <summary>
         /// 是否签约

@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string OutParkingId { get; set; }
 
         /// <summary>
+        /// 出场时间，格式"YYYY-MM-DD HH:mm:ss"，24小时制
+        /// </summary>
+        [XmlElement("out_time")]
+        public string OutTime { get; set; }
+
+        /// <summary>
         /// 支付宝停车平台ID，由支付宝定义的该停车场标识，同一个isv或商户范围内唯一。通过 <a href="https://opendocs.alipay.com/apis/api_19/alipay.eco.mycar.parking.parkinglotinfo.create">alipay.eco.mycar.parking.parkinglotinfo.create</a>(录入停车场信息)接口获取。
         /// </summary>
         [XmlElement("parking_id")]
@@ -94,13 +100,19 @@ namespace Aop.Api.Domain
         public string PayMoney { get; set; }
 
         /// <summary>
+        /// 支付场景：INPARKINGLOT_PAY：场内在线缴费；ENTRANCE_EXIT_PAY：出入口缴费、VEH_DEVICE_PAY：车机缴费；会根据场景判断是否发放能量，当前只有场内支付场景会发能量，需要能量发放请与服务接入支持同学提前沟通。
+        /// </summary>
+        [XmlElement("pay_scene")]
+        public string PayScene { get; set; }
+
+        /// <summary>
         /// 缴费时间, 格式"YYYYMM-DD HH:mm:ss"，24小时制
         /// </summary>
         [XmlElement("pay_time")]
         public string PayTime { get; set; }
 
         /// <summary>
-        /// 付款方式，枚举支持： *1：支付宝在线缴费 。 *2：支付宝代扣缴费。 *FTF_IN_PARKINGLOT_PAY：用户通过支付宝场内主动扫码或者提前在线缴费。
+        /// 付款方式，枚举支持： *1：支付宝在线缴费。
         /// </summary>
         [XmlElement("pay_type")]
         public string PayType { get; set; }

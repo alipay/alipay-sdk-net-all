@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string OrderNo { get; set; }
 
         /// <summary>
+        /// 对手方账户
+        /// </summary>
+        [XmlElement("other_account")]
+        public string OtherAccount { get; set; }
+
+        /// <summary>
         /// 外部请求号,跟分账或提现的out_request_no保持一致
         /// </summary>
         [XmlElement("out_request_no")]

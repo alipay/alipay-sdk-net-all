@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string IndustryInfo { get; set; }
 
         /// <summary>
+        /// 商户侧服务编码。回收行业会优先以该字段作为服务唯一键，如果没有传该字段，会用service_name作为服务唯一键。
+        /// </summary>
+        [XmlElement("out_service_code")]
+        public string OutServiceCode { get; set; }
+
+        /// <summary>
         /// 服务动作 SERVICE_CREATE：服务创建 SERVICE_UPDATE：服务更新
         /// </summary>
         [XmlElement("service_action")]

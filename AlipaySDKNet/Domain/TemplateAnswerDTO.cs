@@ -29,6 +29,24 @@ namespace Aop.Api.Domain
         public string LabelName { get; set; }
 
         /// <summary>
+        /// 父问卷表达式
+        /// </summary>
+        [XmlElement("parent_exp")]
+        public string ParentExp { get; set; }
+
+        /// <summary>
+        /// 父问卷唯一标识
+        /// </summary>
+        [XmlElement("parent_id")]
+        public string ParentId { get; set; }
+
+        /// <summary>
+        /// 父问卷结果
+        /// </summary>
+        [XmlElement("parent_result")]
+        public string ParentResult { get; set; }
+
+        /// <summary>
         /// 表单提示
         /// </summary>
         [XmlElement("placeholder")]

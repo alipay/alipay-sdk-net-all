@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string ActionLink { get; set; }
 
         /// <summary>
+        /// 业务来源
+        /// </summary>
+        [XmlElement("biz_from")]
+        public string BizFrom { get; set; }
+
+        /// <summary>
+        /// 服务描述
+        /// </summary>
+        [XmlElement("ext_desc")]
+        public string ExtDesc { get; set; }
+
+        /// <summary>
         /// 门店ID
         /// </summary>
         [XmlElement("shop_id")]

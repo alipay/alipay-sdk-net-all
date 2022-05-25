@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class MybankCreditLoanapplyFinleaseConsultQueryModel : AopObject
     {
         /// <summary>
+        /// 公司名称
+        /// </summary>
+        [XmlElement("corporationname")]
+        public string Corporationname { get; set; }
+
+        /// <summary>
+        /// 工商注册号
+        /// </summary>
+        [XmlElement("registrationno")]
+        public string Registrationno { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("userid")]

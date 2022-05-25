@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 用户是否完成认证
+        /// </summary>
+        [XmlElement("is_certified")]
+        public string IsCertified { get; set; }
+
+        /// <summary>
         /// 脱敏支付宝外标+是+手淘端内绑定支付宝账号+无+token获取+无
         /// </summary>
         [XmlElement("login_id")]

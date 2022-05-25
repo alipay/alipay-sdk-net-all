@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayFundAuthOperationDetailQueryResponse : AopResponse
     {
         /// <summary>
-        /// 该笔资金操作流水opertion_id对应的操作金额，单位为：元（人民币）
+        /// 该笔资金操作流水operation_id对应的操作金额，单位为：元（人民币）
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string AuthNo { get; set; }
 
         /// <summary>
-        /// 该笔资金操作流水opertion_id对应的操作信用金额
+        /// 该笔资金操作流水operation_id对应的操作信用金额
         /// </summary>
         [XmlElement("credit_amount")]
         public string CreditAmount { get; set; }
@@ -45,7 +45,7 @@ namespace Aop.Api.Response
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// 该笔资金操作流水opertion_id对应的操作自有资金金额
+        /// 该笔资金操作流水operation_id对应的操作自有资金金额
         /// </summary>
         [XmlElement("fund_amount")]
         public string FundAmount { get; set; }
@@ -111,7 +111,7 @@ namespace Aop.Api.Response
         public string PayerUserId { get; set; }
 
         /// <summary>
-        /// 预授权类型，目前支持 CREDIT_AUTH(信用预授权);  商户可根据该标识来判断该笔预授权的类型，当返回值为"CREDIT_AUTH"表明该笔预授权为信用预授权，没有真实冻结资金；当返回值为空或者不为"CREDIT_AUTH"则表明该笔预授权为普通资金预授权，会冻结用户资金。
+        /// 预授权类型，信用预授权情况下值为 CREDIT_AUTH，表示该笔预授权为信用预授权，实际没有冻结用户资金；其它情况均不返回该字段。
         /// </summary>
         [XmlElement("pre_auth_type")]
         public string PreAuthType { get; set; }
@@ -123,7 +123,7 @@ namespace Aop.Api.Response
         public string Remark { get; set; }
 
         /// <summary>
-        /// 订单总共剩余的冻结金额，单位为：元（人民币）
+        /// 订单当前剩余冻结金额，单位为：元（人民币）。
         /// </summary>
         [XmlElement("rest_amount")]
         public string RestAmount { get; set; }

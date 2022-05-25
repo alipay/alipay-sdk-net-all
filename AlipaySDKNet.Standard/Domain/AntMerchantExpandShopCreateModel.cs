@@ -37,7 +37,7 @@ namespace Aop.Api.Domain
         public List<ShopBusinessTime> BusinessTime { get; set; }
 
         /// <summary>
-        /// 营业执照图片，需传入<a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。 注意： * 通过蚂蚁门店管理能力创建门店时可选。 * 间连 M1、M2 商家创建门店，必须传入营业执照图片。
+        /// 营业执照图片，需传入<a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。
         /// </summary>
         [XmlElement("cert_image")]
         public string CertImage { get; set; }
@@ -49,7 +49,7 @@ namespace Aop.Api.Domain
         public string CertName { get; set; }
 
         /// <summary>
-        /// 证件号码，请填写店铺营业执照号。 注意： * 通过蚂蚁门店管理能力创建门店时可选。 * 间连 M1、M2商家创建门店，必须传入营业执照号。
+        /// 证件号码，请填写店铺营业执照号。
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
@@ -143,7 +143,7 @@ namespace Aop.Api.Domain
         public string SettleAlipayLogonId { get; set; }
 
         /// <summary>
-        /// 新版门店类目标准二级类目code。类目标准及与原类目映射关系参见 <a href="https://ur.alipay.com/4cmn0n">支付宝门店类目-最新</a> 表格。
+        /// 新版门店类目标准二级类目code。类目标准及与原类目映射关系参见 <a href="https://gw.alipayobjects.com/os/bmw-prod/4b3f82df-e53e-4b84-bc41-fe025101e726.xlsx">支付宝门店类目-最新</a> 表格。
         /// </summary>
         [XmlElement("shop_category")]
         public string ShopCategory { get; set; }

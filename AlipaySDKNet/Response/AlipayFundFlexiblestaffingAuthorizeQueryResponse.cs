@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 外部业务号，取值为授权初始化接口中提供的out_biz_no单号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 授权主体的支付宝账户ID
         /// </summary>
         [XmlElement("principal_id")]

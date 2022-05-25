@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string VoucherActivityId { get; set; }
 
         /// <summary>
+        /// 券类型
+        /// </summary>
+        [XmlElement("voucher_type")]
+        public string VoucherType { get; set; }
+
+        /// <summary>
         /// 商家券 MERCHANT_VOUCHER 支付券 PAYMENT_VOUCHER
         /// </summary>
         [XmlElement("vouvher_type")]

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BillKey { get; set; }
 
         /// <summary>
+        /// 业务场景：flow(流量)、voice(语音话费)、telephone(固话)
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
+        /// <summary>
         /// 业务类型（例如通信，缴费，还款）
         /// </summary>
         [XmlElement("biz_type")]
@@ -58,10 +64,22 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
+        /// 外部协议号
+        /// </summary>
+        [XmlElement("out_agreement_id")]
+        public string OutAgreementId { get; set; }
+
+        /// <summary>
         /// PREPAID预付费，POSTPAID后付费
         /// </summary>
         [XmlElement("pay_mode")]
         public string PayMode { get; set; }
+
+        /// <summary>
+        /// 签约的服务描述
+        /// </summary>
+        [XmlElement("service_desc")]
+        public string ServiceDesc { get; set; }
 
         /// <summary>
         /// 二级业务类型（例如话费，流量，水费，电费）
@@ -74,5 +92,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("threshold_amount")]
         public string ThresholdAmount { get; set; }
+
+        /// <summary>
+        /// 服务名称
+        /// </summary>
+        [XmlElement("title")]
+        public string Title { get; set; }
     }
 }

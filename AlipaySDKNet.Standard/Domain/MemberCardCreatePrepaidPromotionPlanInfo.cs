@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("benefit")]
         public string Benefit { get; set; }
+
+        /// <summary>
+        /// 储值方案对应赠送券信息
+        /// </summary>
+        [XmlArray("benefit_voucher_list")]
+        [XmlArrayItem("member_card_voucher_benefit_info")]
+        public List<MemberCardVoucherBenefitInfo> BenefitVoucherList { get; set; }
 
         /// <summary>
         /// 方案的失效时间，如果不传，则为默认值：2037-12-31 23:59:59
@@ -32,6 +40,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("promotion_plan_id")]
         public string PromotionPlanId { get; set; }
+
+        /// <summary>
+        /// 充值方案总次数限制
+        /// </summary>
+        [XmlElement("publish_total_num")]
+        public long PublishTotalNum { get; set; }
 
         /// <summary>
         /// 方案开始生效时间, 如果不传默认当前时间

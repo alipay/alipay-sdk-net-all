@@ -29,7 +29,7 @@ namespace Aop.Api.Response
         public string BoxId { get; set; }
 
         /// <summary>
-        /// 搜索直达配置状态，INITIAL-初始/AUDIT-审核中/CANCEL-已取消/ONLINE-已上架/REJECT-驳回/OFFLINE-已下架/EXPIRE-已失效
+        /// 搜索直达配置状态，AUDIT-审核中/ONLINE-已上架/REJECT-驳回/OFFLINE-已下架
         /// </summary>
         [XmlElement("box_status")]
         public string BoxStatus { get; set; }

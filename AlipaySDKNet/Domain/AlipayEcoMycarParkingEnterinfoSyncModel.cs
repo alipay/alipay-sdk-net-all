@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public bool IsEncryptCarNumber { get; set; }
 
         /// <summary>
-        /// 智能助理当前的跳转链接
+        /// 智能助理当前的跳转链接。为ISV/商家小程序或H5页面地址。
         /// </summary>
         [XmlElement("isv_url")]
         public string IsvUrl { get; set; }

@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string OtherAccount { get; set; }
 
         /// <summary>
+        /// 门店信息
+        /// </summary>
+        [XmlElement("store_name")]
+        public string StoreName { get; set; }
+
+        /// <summary>
         /// 金额
         /// </summary>
         [XmlElement("trans_amount")]

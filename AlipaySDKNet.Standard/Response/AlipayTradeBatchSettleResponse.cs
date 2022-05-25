@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string ResultCode { get; set; }
 
         /// <summary>
-        /// 结算单据号
+        /// 结算单据号。仅当业务结果码为ACCEPT_SUCCESS 或 SUCCESS时，settle_no有效
         /// </summary>
         [XmlElement("settle_no")]
         public string SettleNo { get; set; }

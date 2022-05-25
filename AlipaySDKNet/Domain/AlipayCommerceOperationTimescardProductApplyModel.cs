@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceOperationTimescardProductApplyModel : AopObject
     {
         /// <summary>
+        /// 预付宝：ALIPAY_YUFUBAO
+        /// </summary>
+        [XmlElement("biz_from")]
+        public string BizFrom { get; set; }
+
+        /// <summary>
         /// 字段已经废弃，无需传参
         /// </summary>
         [XmlElement("isv_partner_id")]
@@ -38,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }
+
+        /// <summary>
+        /// 次卡资金结算信息
+        /// </summary>
+        [XmlElement("settle_info")]
+        public FundSettleInfo SettleInfo { get; set; }
     }
 }

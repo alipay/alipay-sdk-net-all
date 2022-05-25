@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public ExtTemplateConf ExtTemplateConf { get; set; }
 
         /// <summary>
+        /// 扩展参数
+        /// </summary>
+        [XmlElement("extend_params")]
+        public PreOrderExtInfo ExtendParams { get; set; }
+
+        /// <summary>
         /// 冻结金额，单位：元
         /// </summary>
         [XmlElement("freeze_amount")]

@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string PicSourceUrl { get; set; }
 
         /// <summary>
-        /// 商品计价类型: MONTH:月卡 YEAR:年卡 CM：连续包月 CY：连续包年
+        /// 商品计价类型: 天卡：DAY 周卡：WEEK 月卡：MONTH 季卡：QUARTER 年卡：YEAR 连续包周：CW 连续包月：CM 连续包季：CQ 连续包年：CY
         /// </summary>
         [XmlElement("pricing_type")]
         public string PricingType { get; set; }

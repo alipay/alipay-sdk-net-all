@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateCampusInstitutionsQueryModel : AopObject
     {
         /// <summary>
-        /// 市
+        /// 城市编码，编码标准为中华人民共和国行政区划代码，参见 2020年12月中华人民共和国县以上行政区划代码。
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string LikeProperty { get; set; }
 
         /// <summary>
-        /// 省份
+        /// 省份编码，编码标准为中华人民共和国行政区划代码，参见 2020年12月中华人民共和国县以上行政区划代码。
         /// </summary>
         [XmlElement("province_code")]
         public string ProvinceCode { get; set; }

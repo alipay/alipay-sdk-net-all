@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateCampusInstitutionsAddModel : AopObject
     {
         /// <summary>
-        /// 事业单位法人证书或办学许可证的图片
+        /// 事业单位法人证书或办学许可证的图片。入驻学校时，如果流入人工审核，会根据此图片进行辅助验证。
         /// </summary>
         [XmlElement("card_pict_url")]
         public string CardPictUrl { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string InstName { get; set; }
 
         /// <summary>
-        /// 学校外标：统一社会信用编码或教育部提供的学校标识码。
+        /// 学校外标，使用统一社会信用编码
         /// </summary>
         [XmlElement("inst_std_code")]
         public string InstStdCode { get; set; }

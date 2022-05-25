@@ -66,7 +66,7 @@ namespace Aop.Api.Domain
         public string TimetableDirection { get; set; }
 
         /// <summary>
-        /// 单个车次结束后的驻站时长（单位：分钟），不传则由算法自行决策驻站时长
+        /// 版本1.1单个车次结束后的驻站时长（单位：分钟），不传则由算法自行决策驻站时长。 版本1.2该字段从int类型变更为String类型。支持为上行、下行分别设置上限时长、下限时长。同时兼容使用老版本openapi SDK的调用方传入int类型参数。 格式如下（单位：分钟） {     "up_min_break_time":10, // 上行最小驻站时长，也即下行结束之后在主站的最小驻站时长     "up_max_break_time":30, // 上行最大驻站时长，也即下行结束之后在主站的最大驻站时长     "down_min_break_time":10, // 下行最小驻站时长，也即上行结束之后在副站的最小驻站时长     "down_max_break_time":30, // 下行最大驻站时长，也即上行结束之后在副站的最大驻站时长 }
         /// </summary>
         [XmlElement("trip_break_time")]
         public long TripBreakTime { get; set; }

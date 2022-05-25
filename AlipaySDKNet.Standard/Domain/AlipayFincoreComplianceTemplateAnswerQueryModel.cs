@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFincoreComplianceTemplateAnswerQueryModel : AopObject
     {
         /// <summary>
+        /// 业务要素
+        /// </summary>
+        [XmlElement("biz_object_def_json")]
+        public string BizObjectDefJson { get; set; }
+
+        /// <summary>
         /// 模版编码
         /// </summary>
         [XmlElement("template_code")]

@@ -10,37 +10,37 @@ namespace Aop.Api.Domain
     public class FaceAbilityExtInfo : AopObject
     {
         /// <summary>
-        /// 年龄
+        /// 已不支持
         /// </summary>
         [XmlElement("age")]
         public string Age { get; set; }
 
         /// <summary>
-        /// 算法的辅助因子如blur、pitch、yaw、roll值
+        /// 已不支持
         /// </summary>
         [XmlElement("algfactors")]
         public string Algfactors { get; set; }
 
         /// <summary>
-        /// 模糊程度质量分
+        /// 已不支持
         /// </summary>
         [XmlElement("blur")]
         public string Blur { get; set; }
 
         /// <summary>
-        /// 姓名信息
+        /// 已不支持
         /// </summary>
         [XmlElement("cert_name")]
         public string CertName { get; set; }
 
         /// <summary>
-        /// 证件号信息
+        /// 已不支持
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类别
+        /// 已不支持
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string FaceDataType { get; set; }
 
         /// <summary>
-        /// 人脸加密后的特征
+        /// 已不支持
         /// </summary>
         [XmlElement("feature")]
         public string Feature { get; set; }
@@ -76,31 +76,31 @@ namespace Aop.Api.Domain
         public string Hasrisk { get; set; }
 
         /// <summary>
-        /// 综合质量分（不区分具体哪方面质量差）
+        /// 已不支持
         /// </summary>
         [XmlElement("joint_quality")]
         public long JointQuality { get; set; }
 
         /// <summary>
-        /// 光线质量分
+        /// 已不支持
         /// </summary>
         [XmlElement("light")]
         public string Light { get; set; }
 
         /// <summary>
-        /// 遮挡质量分
+        /// 已不支持
         /// </summary>
         [XmlElement("occlusion")]
         public string Occlusion { get; set; }
 
         /// <summary>
-        /// 姿态质量分
+        /// 已不支持
         /// </summary>
         [XmlElement("pose")]
         public string Pose { get; set; }
 
         /// <summary>
-        /// 质量分
+        /// 已不支持
         /// </summary>
         [XmlElement("quality")]
         public string Quality { get; set; }
@@ -118,13 +118,13 @@ namespace Aop.Api.Domain
         public bool Qualityok { get; set; }
 
         /// <summary>
-        /// 特征矩形区域"442,231,412,262"
+        /// 已不支持
         /// </summary>
         [XmlElement("rect")]
         public string Rect { get; set; }
 
         /// <summary>
-        /// 男女
+        /// 已不支持
         /// </summary>
         [XmlElement("sex")]
         public string Sex { get; set; }

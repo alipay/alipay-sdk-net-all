@@ -17,13 +17,19 @@ namespace Aop.Api.Response
         public string Address { get; set; }
 
         /// <summary>
+        /// 用户年龄，实名认证为T，且证件类型为身份证，则输出年龄字段，否则不输出
+        /// </summary>
+        [XmlElement("age")]
+        public string Age { get; set; }
+
+        /// <summary>
         /// 区县名称。
         /// </summary>
         [XmlElement("area")]
         public string Area { get; set; }
 
         /// <summary>
-        /// 用户头像地址。
+        /// 用户头像地址。 注意：如果没有数据（用户未设置）时不会返回该信息，请做好容错。
         /// </summary>
         [XmlElement("avatar")]
         public string Avatar { get; set; }
@@ -76,6 +82,12 @@ namespace Aop.Api.Response
         [XmlArray("deliver_addresses")]
         [XmlArrayItem("alipay_user_deliver_address")]
         public List<AlipayUserDeliverAddress> DeliverAddresses { get; set; }
+
+        /// <summary>
+        /// 展示名称，用于展示和识别用户。返回的值是支付宝账户的可用外标之一，根据展示名称产品规则可能返回手机号/邮箱/支付宝号其中的一个。同一个账户在不同的时期返回的展示名称可能随规则变化而变化。
+        /// </summary>
+        [XmlElement("display_name")]
+        public string DisplayName { get; set; }
 
         /// <summary>
         /// 优先获取email登录名，如果不存在，则返回mobile登录名
@@ -218,6 +230,18 @@ namespace Aop.Api.Response
         public string IdentityCardProvince { get; set; }
 
         /// <summary>
+        /// 是否是金融机构或特殊单位，"I"表示金融机构, "C"表示无余额账户的单位账户, "V", 表示虚拟主体(类似机构仅内部户无余额户), "N"表示非金融机构且非无余额账户的单位账户,"?"表示匿名用户
+        /// </summary>
+        [XmlElement("inst_or_corp")]
+        public string InstOrCorp { get; set; }
+
+        /// <summary>
+        /// T/F, 实名认证为T，且证件类型为身份证，则输出是否成年字段，否则不输出
+        /// </summary>
+        [XmlElement("is_adult")]
+        public string IsAdult { get; set; }
+
+        /// <summary>
         /// 余额账户是否被冻结。  T--被冻结；F--未冻结
         /// </summary>
         [XmlElement("is_balance_frozen")]
@@ -260,7 +284,7 @@ namespace Aop.Api.Response
         public string Mobile { get; set; }
 
         /// <summary>
-        /// 用户昵称。
+        /// 用户昵称。 注意：如果没有数据（用户未设置）时不会返回该信息，请做好容错。
         /// </summary>
         [XmlElement("nick_name")]
         public string NickName { get; set; }

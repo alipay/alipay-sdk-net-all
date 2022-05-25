@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceDataHotelServiceSyncResponse : AopResponse
     {
         /// <summary>
+        /// 服务提报失败原因
+        /// </summary>
+        [XmlElement("audit_msg")]
+        public string AuditMsg { get; set; }
+
+        /// <summary>
         /// 审核状态 [AUDIT_AGREE ：审核通过，AUDIT_REJECT：审核不通过， AUDITING：审核中]
         /// </summary>
         [XmlElement("audit_status")]

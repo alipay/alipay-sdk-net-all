@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string SceneType { get; set; }
 
         /// <summary>
+        /// 任务适用门店范围类型(MULTI_SHOP-多门店任务，SINGLE_SHOP-单门店任务)
+        /// </summary>
+        [XmlElement("shop_scope_type")]
+        public string ShopScopeType { get; set; }
+
+        /// <summary>
         /// 开始时间
         /// </summary>
         [XmlElement("start_time")]
@@ -92,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }
+
+        /// <summary>
+        /// 任务监听规则类型，监听范围包括账号(pid_smid)，门店(shop_store)，小程序(appId)： 1. pid_smid_appId - 账号+小程序 2. pid_smid_shop_store - 账号+门店 3. pid_smid - 账号 4. pid_smid_shop_store_appId - 账号+门店+小程序
+        /// </summary>
+        [XmlElement("task_rule_type")]
+        public string TaskRuleType { get; set; }
 
         /// <summary>
         /// 任务类型：ZMGO-芝麻GO活动

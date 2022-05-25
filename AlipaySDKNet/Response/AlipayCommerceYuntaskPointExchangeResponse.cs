@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceYuntaskPointExchangeResponse : AopResponse
     {
         /// <summary>
+        /// 积分流水id
+        /// </summary>
+        [XmlElement("instruction_id")]
+        public string InstructionId { get; set; }
+
+        /// <summary>
         /// 结果信息
         /// </summary>
         [XmlElement("messsage")]

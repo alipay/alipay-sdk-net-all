@@ -65,6 +65,12 @@ namespace Aop.Api.Response
         public string BuyerUserType { get; set; }
 
         /// <summary>
+        /// 是否可以转为app支付，仅当商户代扣失败场景才会返回该字段信息
+        /// </summary>
+        [XmlElement("can_turn_to_app_pay")]
+        public string CanTurnToAppPay { get; set; }
+
+        /// <summary>
         /// 支付宝卡余额
         /// </summary>
         [XmlElement("card_balance")]

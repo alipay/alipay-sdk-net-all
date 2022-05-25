@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BusinessParams { get; set; }
 
         /// <summary>
+        /// 支付宝订单号，仅批量有密场景下生效
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
         /// 转账订单的标题，用于在收银台和消费记录展示
         /// </summary>
         [XmlElement("order_title")]

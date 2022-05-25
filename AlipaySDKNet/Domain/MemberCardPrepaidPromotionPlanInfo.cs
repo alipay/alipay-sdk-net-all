@@ -52,6 +52,18 @@ namespace Aop.Api.Domain
         public string PromotionPlanId { get; set; }
 
         /// <summary>
+        /// 充值方案总次数限制
+        /// </summary>
+        [XmlElement("publish_total_num")]
+        public long PublishTotalNum { get; set; }
+
+        /// <summary>
+        /// 充值方案剩余次数
+        /// </summary>
+        [XmlElement("publish_total_remain_num")]
+        public string PublishTotalRemainNum { get; set; }
+
+        /// <summary>
         /// 储值方案开始时间
         /// </summary>
         [XmlElement("start_time")]

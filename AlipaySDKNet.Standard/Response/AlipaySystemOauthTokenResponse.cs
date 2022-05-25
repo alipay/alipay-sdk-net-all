@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 授权token开始时间，作为有效期计算的起点
+        /// </summary>
+        [XmlElement("auth_start")]
+        public string AuthStart { get; set; }
+
+        /// <summary>
         /// 令牌类型，permanent表示返回的access_token和refresh_token永久有效，非永久令牌不返回该字段
         /// </summary>
         [XmlElement("auth_token_type")]

@@ -102,6 +102,13 @@ namespace Aop.Api.Domain
         public string PromoParams { get; set; }
 
         /// <summary>
+        /// 通知参数选项。 商户通过传递该参数来定制需要异步通知的额外字段，数组格式。包括但不限于：["fund_bill_list","voucher_detail_list","discount_goods_detail","discount_amount","mdiscount_amount"]
+        /// </summary>
+        [XmlArray("query_options")]
+        [XmlArrayItem("string")]
+        public List<string> QueryOptions { get; set; }
+
+        /// <summary>
         /// 描述分账信息，json格式，详见分账参数说明
         /// </summary>
         [XmlElement("royalty_info")]

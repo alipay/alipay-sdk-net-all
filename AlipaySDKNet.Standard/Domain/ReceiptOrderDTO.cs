@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 绿色能量发放归属的商户信息。 说明： 如果该复杂对象不填。则默认为该绿色能量发放的归属者是调用者本人。 如果填写，则认为该绿色能量发放的归属者是该商户。  限制:服务商身份接入时必传
+        /// </summary>
+        [XmlElement("belong_merchant_info")]
+        public BelongMerchantInfoDTO BelongMerchantInfo { get; set; }
+
+        /// <summary>
         /// 租借时长，精确到分钟;充电宝场景时，必填;
         /// </summary>
         [XmlElement("borrow_time")]
@@ -68,6 +74,19 @@ namespace Aop.Api.Domain
         public List<GoodExpirationListDTO> GoodExpirationList { get; set; }
 
         /// <summary>
+        /// [          {             "cup_type": "zhiyinbei",             "cups_amount": "1"           }  ]
+        /// </summary>
+        [XmlArray("green_cups_list")]
+        [XmlArrayItem("green_cups_d_t_o")]
+        public List<GreenCupsDTO> GreenCupsList { get; set; }
+
+        /// <summary>
+        /// 商家开发票链接
+        /// </summary>
+        [XmlElement("invoice_entry")]
+        public string InvoiceEntry { get; set; }
+
+        /// <summary>
         /// 对接电子小票/无纸化小票能量发放时，必填; 其它场景，无需该字段; 字段含义: 是否接入支付宝电子小票; "0":不接入(商户自己有电子小票终端)；"1":接入; 接入场景:必须传入小票全量商品信息，用于在支付宝侧电子小票阵地展示给到C端用户;  不接入的商户且商户自己有终端实现了电子小票, 可以对接无纸化小票能量; 为空时，默认:"0"
         /// </summary>
         [XmlElement("is_alipay_ticket")]
@@ -104,6 +123,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_create_time")]
         public string OrderCreateTime { get; set; }
+
+        /// <summary>
+        /// 订单商品列表; 环保行为:临期商品，补充替换包装 、再生塑料包装、FSC认证包装、该商品列表必填
+        /// </summary>
+        [XmlArray("order_goods_list")]
+        [XmlArrayItem("order_goods_d_t_o")]
+        public List<OrderGoodsDTO> OrderGoodsList { get; set; }
 
         /// <summary>
         /// APPID,商户可自定义需要跳转到小程序（默认进入小程序首页）

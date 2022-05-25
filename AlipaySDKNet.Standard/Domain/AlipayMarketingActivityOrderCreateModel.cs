@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
-        /// 推广渠道信息。 由支付宝公私域跳转到服务商小程序时带入。例如 aalipays://platformapi/startapp?appId=2021002147682XXX&page=pages/main/mian&query=chInfo%3DchInfo_promotion 其中chInfo为支付宝带入投放渠道信息，需要在调用下单接口时传入
+        /// （待废弃） 推广渠道信息。 由支付宝公私域跳转到服务商小程序时带入。例如 alipays://platformapi/startapp?appId=2021002147682XXX&page=pages/main/mian&query=chInfo%3DchInfo_promotion 其中chInfo为支付宝带入投放渠道信息，需要在调用下单接口时传入
         /// </summary>
         [XmlElement("ch_info")]
         public string ChInfo { get; set; }
@@ -27,6 +27,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }
+
+        /// <summary>
+        /// 投放埋点信息。由支付宝公私域跳转到服务商小程序时带入。例如alipays://platformapi/startapp?appId=2021002140648450&query=promoTraceInfo%3DUFJPTU9fU0NFTkVfSUQ9OkNCMTExOTk3MDBAO0BQT1NJVElPTl9DT0RFPTptb3JwaG9fYzQxYWY2，其中promoTraceInfo由支付宝带入投放埋点信息，需要在调用下单接口时传入
+        /// </summary>
+        [XmlElement("promo_trace_info")]
+        public string PromoTraceInfo { get; set; }
 
         /// <summary>
         /// 售卖活动信息列表。  目前只支持 sale_activity_info_list  中传入单个类型的活动信息。

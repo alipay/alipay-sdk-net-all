@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string PriceMoney { get; set; }
 
         /// <summary>
-        /// 金额展示信息
+        /// 金额展示信息,单位:元
         /// </summary>
         [XmlElement("price_text")]
         public string PriceText { get; set; }

@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public bool CanMark { get; set; }
 
         /// <summary>
+        /// 额外扩展字段 某些属性并非所有子素材都包含 frame_time：被拆分素材若是截帧形成的图片则代表该图片在原视频中的位置 单位：毫秒
+        /// </summary>
+        [XmlElement("ext")]
+        public string Ext { get; set; }
+
+        /// <summary>
         /// 文件素材id，解语花生成的审核素材文件id,查询物料过审规则会用到这个file_id,物料维度打标也会用到这个file_id
         /// </summary>
         [XmlElement("file_id")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CityName { get; set; }
 
         /// <summary>
+        /// 门店logo地址
+        /// </summary>
+        [XmlElement("logo")]
+        public string Logo { get; set; }
+
+        /// <summary>
         /// 平均金额,单位为分
         /// </summary>
         [XmlElement("pirce_per_avg_shop")]

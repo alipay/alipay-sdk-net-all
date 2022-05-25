@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizCode { get; set; }
 
         /// <summary>
-        /// isv英文简称
+        /// 服务商英文简称（SCHOOL_PAYMENT场景不需要提供）
         /// </summary>
         [XmlElement("isv_name")]
         public string IsvName { get; set; }

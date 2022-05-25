@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public List<DiscountInfoDataDTO> DiscountInfoList { get; set; }
 
         /// <summary>
+        /// 商户开发票链接。
+        /// </summary>
+        [XmlElement("invoice_entry")]
+        public string InvoiceEntry { get; set; }
+
+        /// <summary>
         /// 商户商品信息列表;
         /// </summary>
         [XmlArray("item_order_list")]

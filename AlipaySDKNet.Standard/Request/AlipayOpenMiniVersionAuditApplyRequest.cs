@@ -52,6 +52,11 @@ namespace Aop.Api.Request
         public string AuditRule { get; set; }
 
         /// <summary>
+        /// 审核通过后是否自动上架， 自动上架：true；不自动上架（默认）：false
+        /// </summary>
+        public string AutoOnline { get; set; }
+
+        /// <summary>
         /// 小程序投放的端参数。例如投放到支付宝钱包是支付宝端。默认支付宝端。支持： com.alipay.alipaywallet:支付宝端； com.alipay.iot.xpaas：支付宝IoT端。
         /// </summary>
         public string BundleId { get; set; }
@@ -288,6 +293,7 @@ namespace Aop.Api.Request
             parameters.Add("app_slogan", this.AppSlogan);
             parameters.Add("app_version", this.AppVersion);
             parameters.Add("audit_rule", this.AuditRule);
+            parameters.Add("auto_online", this.AutoOnline);
             parameters.Add("bundle_id", this.BundleId);
             parameters.Add("license_name", this.LicenseName);
             parameters.Add("license_no", this.LicenseNo);

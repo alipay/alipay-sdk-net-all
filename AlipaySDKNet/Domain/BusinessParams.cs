@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public string CardType { get; set; }
 
         /// <summary>
+        /// 因公付金额
+        /// </summary>
+        [XmlElement("enterprise_pay_amount")]
+        public string EnterprisePayAmount { get; set; }
+
+        /// <summary>
+        /// 因公付业务信息
+        /// </summary>
+        [XmlElement("enterprise_pay_info")]
+        public string EnterprisePayInfo { get; set; }
+
+        /// <summary>
         /// 商户传入的交易税费。需要落地风控使用
         /// </summary>
         [XmlElement("good_taxes")]

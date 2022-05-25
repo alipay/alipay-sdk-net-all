@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 资金业务信息
+        /// </summary>
+        [XmlElement("fund_biz_info")]
+        public string FundBizInfo { get; set; }
+
+        /// <summary>
         /// 条目id
         /// </summary>
         [XmlElement("fund_item_id")]

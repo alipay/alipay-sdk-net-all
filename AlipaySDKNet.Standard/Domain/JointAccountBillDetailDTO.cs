@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 1-退款，2-支付
+        /// </summary>
+        [XmlElement("in_out")]
+        public string InOut { get; set; }
+
+        /// <summary>
         /// 账单标题
         /// </summary>
         [XmlElement("title")]

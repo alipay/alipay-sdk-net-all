@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 订单状态； DELIVERYED：已发货； RECEIVED：已收货；  CENSOR_PASS：审核通过；  CENSOR_BLOCK：审核不通过 ； ACTIVATED：已激活；  UNMOUNTED：已注销；  CANCEL：取消；
+        /// 订单状态； DELIVERYED：已发货； RECEIVED：已收货；  CENSOR_PASS：审核通过；  CENSOR_BLOCK：审核不通过 ； ACTIVATED：已激活；  UNMOUNTED：已注销；  CANCEL：取消； 拉黑:ADD_BLACKLIST； 解黑:REMOVE_BLACKLIST；
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }

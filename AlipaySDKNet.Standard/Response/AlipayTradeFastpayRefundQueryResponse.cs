@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayTradeFastpayRefundQueryResponse : AopResponse
     {
         /// <summary>
-        /// 银行卡冲退信息。 该字段默认不返回；
+        /// 银行卡冲退信息； 默认不返回该信息，需要在入参的query_options中指定"deposit_back_info"值时才返回该字段信息。
         /// </summary>
         [XmlElement("deposit_back_info")]
         public DepositBackInfo DepositBackInfo { get; set; }

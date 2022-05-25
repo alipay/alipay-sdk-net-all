@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DeliverySingleSendConfig : AopObject
     {
         /// <summary>
+        /// 推广内容配置
+        /// </summary>
+        [XmlElement("delivery_content_config")]
+        public DeliveryContentConfig DeliveryContentConfig { get; set; }
+
+        /// <summary>
         /// 投放展位的投放内容。
         /// </summary>
         [XmlElement("delivery_content_info")]

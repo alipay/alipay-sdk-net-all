@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class HbMeiWeiMerchantInfo : AopObject
     {
         /// <summary>
+        /// 商户门店logo地址
+        /// </summary>
+        [XmlElement("logo")]
+        public string Logo { get; set; }
+
+        /// <summary>
         /// 商家ID
         /// </summary>
         [XmlElement("merchant_id")]

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenSearchBoxModifyModel : AopObject
     {
         /// <summary>
-        /// 品牌介绍，5-15个中文字符。当module_type=BOX_EXCLUSIVE_BASE时传入
+        /// 品牌介绍，5-15个中文字符。当module_type=BOX_EXCLUSIVE_BASE时传入，当brand_id为空时不支持修改
         /// </summary>
         [XmlElement("box_desc")]
         public string BoxDesc { get; set; }
@@ -29,25 +29,25 @@ namespace Aop.Api.Domain
         public string BrandId { get; set; }
 
         /// <summary>
-        /// 自定义关键词，可配置1个，限1-8个中文字符。当module_type=BOX_EXCLUSIVE_KEYWORD传入
+        /// 自定义关键词，最多可配置6个，限1-8个中文字符。当module_type=BOX_EXCLUSIVE_KEYWORD传入，当brand_id为空时不支持修改
         /// </summary>
         [XmlElement("custom_keywords")]
         public string CustomKeywords { get; set; }
 
         /// <summary>
-        /// 氛围图片id，调用alipay.open.file.upload(支付宝文件上传接口https://opendocs.alipay.com/pre-open/032j4c)上传图片获取图片id。当module_type=BOX_ATMOSPHERE_IMAGE时传入。图片规范：https://opendocs.alipay.com/mini/operation/atmospheredesign
+        /// 氛围图片id，调用<a href="https://opendocs.alipay.com/pre-open/032j4c"> 支付宝文件上传接口 </a>上传图片获取图片id。当module_type=BOX_ATMOSPHERE_IMAGE时传入，当brand_id为空时不支持修改。<a href="https://opendocs.alipay.com/mini/operation/atmospheredesign"> 图片规范 </a>
         /// </summary>
         [XmlElement("image_id")]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// 氛围图片名，当module_type=BOX_ATMOSPHERE_IMAGE时传入
+        /// 氛围图片名，当module_type=BOX_ATMOSPHERE_IMAGE时传入，当brand_id为空时不支持修改
         /// </summary>
         [XmlElement("image_name")]
         public string ImageName { get; set; }
 
         /// <summary>
-        /// 商户id，代运营模式下传入
+        /// 商户id，代运营模式下传入。代运营模式，需要服务商已获得商家"运营支付宝小程序"授权。
         /// </summary>
         [XmlElement("merchant_id")]
         public string MerchantId { get; set; }
@@ -65,7 +65,7 @@ namespace Aop.Api.Domain
         public string ModuleType { get; set; }
 
         /// <summary>
-        /// 关联账号信息，可配置1-2个。当module_type=BOX_EXCLUSIVE_ACCOUNTS时传入
+        /// 关联账号信息，可配置1-2个。当module_type=BOX_EXCLUSIVE_ACCOUNTS时传入。当brand_id为空时不支持修改
         /// </summary>
         [XmlArray("related_accounts")]
         [XmlArrayItem("search_box_app_info")]

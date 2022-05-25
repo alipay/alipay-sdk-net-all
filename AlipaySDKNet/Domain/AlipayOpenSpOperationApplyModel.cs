@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AlipayAccount { get; set; }
 
         /// <summary>
-        /// 场景授权列表结构结构：场景codeA:权限code1,权限code2;场景codeB:权限code1,权限code2; 和access_product_code只需要传一个。  场景 + 权限Code含义： SHOP_MANAGE:SHOP_MANAGE_BASE  管理门店信息 MINI_APP_OPER:MINI_APP_OPER_BASE  运营支付宝小程序 PROMOTION_MANAGE:PROMOTION_MANAGE_BASE   运营营销活动 OPERATION_POINTS:OPERATION_POINTS_BASE  管理运营积分
+        /// 场景授权列表结构结构：场景codeA:权限code1,权限code2;场景codeB:权限code1,权限code2; 说明： * 本参数和access_product_code只需要传一个。 * 场景 + 权限Code含义：    SHOP_MANAGE:SHOP_MANAGE_BASE：管理门店信息    MINI_APP_OPER:MINI_APP_OPER_BASE：运营支付宝小程序    PROMOTION_MANAGE:PROMOTION_MANAGE_BASE：运营营销活动    OPERATION_POINTS:OPERATION_POINTS_BASE：管理运营积分    INCENTIVE_POINT_MANAGE:INCENTIVE_POINT_MANAGE_BASE：管理激励点数
         /// </summary>
         [XmlElement("isv_scene_permissions")]
         public string IsvScenePermissions { get; set; }
