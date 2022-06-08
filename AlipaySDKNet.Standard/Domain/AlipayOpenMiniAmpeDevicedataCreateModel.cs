@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniAmpeDevicedataCreateModel : AopObject
     {
         /// <summary>
-        /// 设备信息，jsonString格式，与ampe一致
+        /// {navigationDestination:{longitude:"",latitude:""},navigationHome:{longitude:"",latitude:""},navigationCompany:{longitude:"",latitude:""},realTimeLocation:{longitude:"",latitude:""},deviceStateModel:{state:"",stateValue:"",stateValueType:""},controlActionList:[""],expectSceneCodes:[""]} 设备信息，jsonString格式，与ampe一致
         /// </summary>
         [XmlElement("device_data")]
         public string DeviceData { get; set; }

@@ -39,6 +39,24 @@ namespace Aop.Api.Response
         public string OutAgreementId { get; set; }
 
         /// <summary>
+        /// 代扣付费类型：PREPAID （预付费）、POSTPAID（后付费）
+        /// </summary>
+        [XmlElement("payment_type")]
+        public string PaymentType { get; set; }
+
+        /// <summary>
+        /// 代扣产品类型。CZ_DIRECT_DEDUCT：充值直连代扣
+        /// </summary>
+        [XmlElement("product_type")]
+        public string ProductType { get; set; }
+
+        /// <summary>
+        /// 签约日期
+        /// </summary>
+        [XmlElement("sign_date")]
+        public string SignDate { get; set; }
+
+        /// <summary>
         /// 签约状态：sign：已签约，unsign：已解约，not_sign：未签约，signing： 签约中
         /// </summary>
         [XmlElement("status")]

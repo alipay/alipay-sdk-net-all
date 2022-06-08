@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string TotalTaskCount { get; set; }
 
         /// <summary>
-        /// 芝麻GO结算时，需要传入的扣款单据号。来源于协议到期通知消息
+        /// 芝麻GO结算时，需要传入的扣款单据号。来源于协议到期通知消息，外部商户接入时，该参数必填
         /// </summary>
         [XmlElement("withhold_plan_no")]
         public string WithholdPlanNo { get; set; }

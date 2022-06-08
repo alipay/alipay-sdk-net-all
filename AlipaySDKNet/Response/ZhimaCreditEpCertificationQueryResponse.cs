@@ -34,6 +34,12 @@ namespace Aop.Api.Response
         public string CertifyChannel { get; set; }
 
         /// <summary>
+        /// 认证完成时间
+        /// </summary>
+        [XmlElement("certify_end_date")]
+        public string CertifyEndDate { get; set; }
+
+        /// <summary>
         /// 认证失败原因列表，当certify_status=FAIL时返回
         /// </summary>
         [XmlArray("certify_fail_reasons")]

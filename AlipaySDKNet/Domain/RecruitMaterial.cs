@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Data { get; set; }
 
         /// <summary>
-        /// 素材描述
+        /// 对这个素材的描述，用于后续管理该素材
         /// </summary>
         [XmlElement("description")]
         public string Description { get; set; }

@@ -51,6 +51,18 @@ namespace Aop.Api.Response
         public string InvalidTime { get; set; }
 
         /// <summary>
+        /// 周期扣协议，上次扣款成功时间
+        /// </summary>
+        [XmlElement("last_deduct_time")]
+        public string LastDeductTime { get; set; }
+
+        /// <summary>
+        /// 周期扣协议，预计下次扣款时间
+        /// </summary>
+        [XmlElement("next_deduct_time")]
+        public string NextDeductTime { get; set; }
+
+        /// <summary>
         /// 协议产品码，商户和支付宝签约时确定，不同业务场景对应不同的签约产品码。
         /// </summary>
         [XmlElement("personal_product_code")]

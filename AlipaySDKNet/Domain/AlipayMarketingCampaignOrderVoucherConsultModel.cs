@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCampaignOrderVoucherConsultModel : AopObject
     {
         /// <summary>
+        /// 业务参数大字段，优惠咨询的控制参数，json格式；目前支持传入useBigAmountSkipOrderThold为N来控制不使用大金额跳过优惠的订单门槛检查；默认不传；
+        /// </summary>
+        [XmlElement("business_param")]
+        public string BusinessParam { get; set; }
+
+        /// <summary>
         /// 商品咨询请求列表（当需要咨询单品券时必传，如果某商品不希望参与本次单品优惠咨询则不传递对应信息即可）
         /// </summary>
         [XmlArray("item_consult_list")]

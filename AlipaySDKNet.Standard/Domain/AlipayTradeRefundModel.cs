@@ -49,6 +49,18 @@ namespace Aop.Api.Domain
         public List<string> QueryOptions { get; set; }
 
         /// <summary>
+        /// 指定垫资退款账号主体，可能是用户id或登录名
+        /// </summary>
+        [XmlElement("refund_advance_account")]
+        public string RefundAdvanceAccount { get; set; }
+
+        /// <summary>
+        /// 指定垫资退款账号的类型，取值范围：default，userId，loginName
+        /// </summary>
+        [XmlElement("refund_advance_account_type")]
+        public string RefundAdvanceAccountType { get; set; }
+
+        /// <summary>
         /// 退款金额。 需要退款的金额，该金额不能大于订单金额，单位为元，支持两位小数。 注：如果正向交易使用了营销，该退款金额包含营销金额，支付宝会按业务规则分配营销和买家自有资金分别退多少，默认优先退买家的自有资金。如交易总金额100元，用户支付时使用了80元自有资金和20元无资金流的营销券，商家实际收款80元。如果首次请求退款60元，则60元全部从商家收款资金扣除退回给用户自有资产；如果再请求退款40元，则从商家收款资金扣除20元退回用户资产以及把20元的营销券退回给用户（券是否可再使用取决于券的规则配置）。
         /// </summary>
         [XmlElement("refund_amount")]

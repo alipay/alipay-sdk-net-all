@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,12 @@ namespace Aop.Api.Domain
     [Serializable]
     public class AlipayCommerceEntertainmentItemUploadModel : AopObject
     {
+        /// <summary>
+        /// 业务场景码，不填默认为娱乐会员业务，可选枚举： CONSUME_GOLD（消费金积分兑换）
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
         /// <summary>
         /// 商品是否启用（对客展示），true/false
         /// </summary>
@@ -52,15 +59,70 @@ namespace Aop.Api.Domain
         public string PricingType { get; set; }
 
         /// <summary>
+        /// 优惠价，积分部分
+        /// </summary>
+        [XmlElement("promote_point")]
+        public long PromotePoint { get; set; }
+
+        /// <summary>
+        /// 优惠价，现金部分（元）
+        /// </summary>
+        [XmlElement("promote_price")]
+        public string PromotePrice { get; set; }
+
+        /// <summary>
+        /// 优惠定价方式，不填默认为现金，可选枚举CASH（纯现金），CASH_POINT（现金加积分），POINT（纯积分）
+        /// </summary>
+        [XmlElement("promote_price_mode")]
+        public string PromotePriceMode { get; set; }
+
+        /// <summary>
+        /// 剩余库存
+        /// </summary>
+        [XmlElement("remain_inventory")]
+        public long RemainInventory { get; set; }
+
+        /// <summary>
+        /// 积分商品规则ID，运营提供，非积分场景不用填
+        /// </summary>
+        [XmlElement("rule_id")]
+        public string RuleId { get; set; }
+
+        /// <summary>
         /// 可选类型有： VIDEO:影视 MUSIC:音乐
         /// </summary>
         [XmlElement("service_category")]
         public string ServiceCategory { get; set; }
 
         /// <summary>
+        /// 商品标签，用于召回时筛选商品，积分场景必填
+        /// </summary>
+        [XmlArray("tags")]
+        [XmlArrayItem("string")]
+        public List<string> Tags { get; set; }
+
+        /// <summary>
+        /// 总库存
+        /// </summary>
+        [XmlElement("total_inventory")]
+        public long TotalInventory { get; set; }
+
+        /// <summary>
         /// 商品单价，单位元（人民币）
         /// </summary>
         [XmlElement("unit_price")]
         public string UnitPrice { get; set; }
+
+        /// <summary>
+        /// 失效时间，不填默认长期有效
+        /// </summary>
+        [XmlElement("valid_time_end")]
+        public string ValidTimeEnd { get; set; }
+
+        /// <summary>
+        /// 生效时间，不填默认立即生效
+        /// </summary>
+        [XmlElement("valid_time_start")]
+        public string ValidTimeStart { get; set; }
     }
 }

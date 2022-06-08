@@ -30,7 +30,7 @@ namespace Aop.Api.Response
         public string OrderStatus { get; set; }
 
         /// <summary>
-        /// 同步订单记录id （同步小程序订单成功必返回record_id）
+        /// 同步订单记录id （自2022年5月19日起，新接入商户，除点餐场景，该字段不再返回）
         /// </summary>
         [XmlElement("record_id")]
         public string RecordId { get; set; }

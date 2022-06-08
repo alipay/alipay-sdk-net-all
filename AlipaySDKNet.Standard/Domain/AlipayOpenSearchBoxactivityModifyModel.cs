@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenSearchBoxactivityModifyModel : AopObject
     {
         /// <summary>
-        /// 活动链接
+        /// 活动链接，必须为关联的小程序的页面链接（链接以 alipays 开头），可参考<a href="https://opendocs.alipay.com/support/01rb18"> 小程序scheme链接介绍 </a>
         /// </summary>
         [XmlElement("action_url")]
         public string ActionUrl { get; set; }
@@ -23,13 +23,13 @@ namespace Aop.Api.Domain
         public string BoxActivityId { get; set; }
 
         /// <summary>
-        /// 活动结束时间
+        /// 活动结束时间，开始时间和结束时间之间不能超过90天
         /// </summary>
         [XmlElement("end_time")]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 当material_type="IMAGE"时，为图片id；当material_type="VIDEO"时，为视频id。图片id可以通过调用接口alipay.open.file.upload上传图片，获取图片id。图片规范：https://opendocs.alipay.com/mini/operation/atmospheredesign
+        /// 当material_type="IMAGE"时，为图片id；当material_type="VIDEO"时，为视频id。图片id可以通过调用接口alipay.open.file.upload上传图片，获取图片id(bizCode：search_box_banner)。规范详情可查看 <a href="https://opendocs.alipay.com/b/03al6f"> 图片规范 </a>。
         /// </summary>
         [XmlElement("material_id")]
         public string MaterialId { get; set; }
@@ -47,13 +47,13 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
-        /// 活动开始时间
+        /// 活动开始时间，开始时间和结束时间之间不能超过90天
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 跳转应用ID，当为品牌直达时必传
+        /// 跳转应用ID
         /// </summary>
         [XmlElement("target_appid")]
         public string TargetAppid { get; set; }

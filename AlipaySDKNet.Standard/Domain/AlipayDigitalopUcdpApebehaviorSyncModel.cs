@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayDigitalopUcdpApebehaviorSyncModel : AopObject
     {
         /// <summary>
-        /// 行为类型：click、expose等
+        /// 行为类型：click（点击）、expose（曝光）、order（下单）、pay（支付）等
         /// </summary>
         [XmlElement("action_type")]
         public string ActionType { get; set; }
@@ -22,16 +22,34 @@ namespace Aop.Api.Domain
         public string Channel { get; set; }
 
         /// <summary>
-        /// 行为对应的itemId列表，如曝光的itemid
+        /// 行为对应的itemId列表，多个商品用,分割，如曝光的itemid、转化的itemid等。
         /// </summary>
         [XmlElement("item_id_list")]
         public string ItemIdList { get; set; }
+
+        /// <summary>
+        /// 订单内商品的购买数量（例如一笔订单内买了1包抽纸和2瓶水），多个商品的购买数量用,分割，顺序跟item_id_list的顺序保持一致，一般只有下单/支付行为携带该字段。
+        /// </summary>
+        [XmlElement("item_num")]
+        public string ItemNum { get; set; }
 
         /// <summary>
         /// 埋点上报时间戳、单位 ms
         /// </summary>
         [XmlElement("log_time")]
         public string LogTime { get; set; }
+
+        /// <summary>
+        /// 订单id，一般只有下单/支付行为携带该字段，用于统计效果数据（订单数，gmv指标）、或者归因层面标注conversion数据是否重复
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
+        /// 订单的实际(待)支付金额，一般只有下单/支付行为携带该字段。单位元。
+        /// </summary>
+        [XmlElement("pay_amount")]
+        public string PayAmount { get; set; }
 
         /// <summary>
         /// 每个item的展示位置序号position【非必要，最好有】，和item_id_list对应，逗号分割

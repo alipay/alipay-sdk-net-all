@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string EnterpriseAddr { get; set; }
 
         /// <summary>
+        /// 企业银行卡卡名
+        /// </summary>
+        [XmlElement("enterprise_bank_card_name")]
+        public string EnterpriseBankCardName { get; set; }
+
+        /// <summary>
         /// 开户行名称（开票用）
         /// </summary>
         [XmlElement("enterprise_bank_name")]

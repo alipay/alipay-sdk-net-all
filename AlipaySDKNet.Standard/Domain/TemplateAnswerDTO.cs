@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class TemplateAnswerDTO : AopObject
     {
         /// <summary>
+        /// 路径
+        /// </summary>
+        [XmlArray("attr_path")]
+        [XmlArrayItem("attr_path_item_d_t_o")]
+        public List<AttrPathItemDTO> AttrPath { get; set; }
+
+        /// <summary>
         /// 答题对应的表达式
         /// </summary>
         [XmlElement("exp")]

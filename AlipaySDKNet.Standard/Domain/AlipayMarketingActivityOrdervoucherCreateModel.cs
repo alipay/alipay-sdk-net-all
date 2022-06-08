@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ActivityName { get; set; }
 
         /// <summary>
-        /// 商家券活动归属的商户信息。  说明： 如果该复杂对象不填。则默认为该商家券活动的归属者是调用者本人。 如果填写，则认为该商家券活动的归属者是该商户。  限制:服务商身份接入时必传
+        /// 商家券活动归属的商户信息。  说明： 如果该复杂对象不填。则默认为该商家券活动的归属者是调用者本人。 如果填写，则认为该商家券活动的归属者是该商户。  限制:自研商户可以不传，服务商身份接入时必传
         /// </summary>
         [XmlElement("belong_merchant_info")]
         public BelongMerchantInfo BelongMerchantInfo { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public VoucherSendRuleDetail VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 券类型。  枚举值： FIX_VOUCHER：满减券； DISCOUNT_VOUCHER：折扣券； SPECIAL_VOUCHER：特价券； EXCHANGE_VOUCHER: 兑换券；
+        /// 券类型。  枚举值： 商家券支持三类券类型： FIX_VOUCHER：满减券； DISCOUNT_VOUCHER：折扣券； SPECIAL_VOUCHER：特价券；  兑换券仅支持一类券类型： EXCHANGE_VOUCHER: 兑换券；
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenSearchBoxModifyModel : AopObject
     {
         /// <summary>
-        /// 品牌介绍，5-15个中文字符。当module_type=BOX_EXCLUSIVE_BASE时传入，当brand_id为空时不支持修改
+        /// 品牌介绍，5-15个中文字符。当修改品牌介绍模块(module_type=BOX_EXCLUSIVE_BASE)时传入。 小程序直达时不支持设置
         /// </summary>
         [XmlElement("box_desc")]
         public string BoxDesc { get; set; }
@@ -23,25 +23,25 @@ namespace Aop.Api.Domain
         public string BoxId { get; set; }
 
         /// <summary>
-        /// 品牌id
+        /// 品牌id，参考<a href="https://opendocs.alipay.com/rules/029uy4"> 品牌认证说明 </a>
         /// </summary>
         [XmlElement("brand_id")]
         public string BrandId { get; set; }
 
         /// <summary>
-        /// 自定义关键词，最多可配置6个，限1-8个中文字符。当module_type=BOX_EXCLUSIVE_KEYWORD传入，当brand_id为空时不支持修改
+        /// 自定义关键词，最多可配置6个，限1-8个中文字符。当修改触发词模块时(module_type=BOX_EXCLUSIVE_KEYWORD)传入。 小程序直达不支持设置
         /// </summary>
         [XmlElement("custom_keywords")]
         public string CustomKeywords { get; set; }
 
         /// <summary>
-        /// 氛围图片id，调用<a href="https://opendocs.alipay.com/pre-open/032j4c"> 支付宝文件上传接口 </a>上传图片获取图片id。当module_type=BOX_ATMOSPHERE_IMAGE时传入，当brand_id为空时不支持修改。<a href="https://opendocs.alipay.com/mini/operation/atmospheredesign"> 图片规范 </a>
+        /// 氛围图片id，调用<a href="https://opendocs.alipay.com/mini/03hvkt"> 支付宝文件上传接口 </a>上传图片获取图片id(bizCode：search_box_atmosphere)。当修改氛围图模块(module_type=BOX_ATMOSPHERE_IMAGE)时传入。<a href="https://opendocs.alipay.com/mini/operation/atmospheredesign"> 图片规范 </a> 小程序直达不支持设置
         /// </summary>
         [XmlElement("image_id")]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// 氛围图片名，当module_type=BOX_ATMOSPHERE_IMAGE时传入，当brand_id为空时不支持修改
+        /// 氛围图片名，当修改氛围图模块(module_type=BOX_ATMOSPHERE_IMAGE)时传入。 小程序直达不支持设置
         /// </summary>
         [XmlElement("image_name")]
         public string ImageName { get; set; }
@@ -59,27 +59,27 @@ namespace Aop.Api.Domain
         public string ModuleId { get; set; }
 
         /// <summary>
-        /// 搜索直达模块类型，BOX_EXCLUSIVE_BASE-基础信息/BOX_EXCLUSIVE_KEYWORD-关键词/BOX_EXCLUSIVE_FUNCTIONS-功能服务/BOX_EXCLUSIVE_ACCOUNTS-关联账号/BOX_ATMOSPHERE_IMAGE-氛围图
+        /// 搜索直达模块类型，参考<a href="https://opendocs.alipay.com/mini/03fjba#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"> 搜索直达模块说明 </a>。取值范围：BOX_EXCLUSIVE_BASE-品牌介绍/BOX_EXCLUSIVE_KEYWORD-触发词/BOX_EXCLUSIVE_FUNCTIONS-常用服务/BOX_EXCLUSIVE_ACCOUNTS-官方账号/BOX_ATMOSPHERE_IMAGE-氛围图
         /// </summary>
         [XmlElement("module_type")]
         public string ModuleType { get; set; }
 
         /// <summary>
-        /// 关联账号信息，可配置1-2个。当module_type=BOX_EXCLUSIVE_ACCOUNTS时传入。当brand_id为空时不支持修改
+        /// 关联账号信息，可配置1-2个。当修改官方账号模块(module_type=BOX_EXCLUSIVE_ACCOUNTS)时传入。 小程序直达不支持修改
         /// </summary>
         [XmlArray("related_accounts")]
         [XmlArrayItem("search_box_app_info")]
         public List<SearchBoxAppInfo> RelatedAccounts { get; set; }
 
         /// <summary>
-        /// 服务信息，可配置1-4个。当module_type=BOX_EXCLUSIVE_FUNCTIONS时传入
+        /// 服务信息，服务必须审核通过才能申请搜索直达，可配置1-4个。当修改常用服务模块(module_type=BOX_EXCLUSIVE_FUNCTIONS)时传入
         /// </summary>
         [XmlArray("service_infos")]
         [XmlArrayItem("search_box_service_info")]
         public List<SearchBoxServiceInfo> ServiceInfos { get; set; }
 
         /// <summary>
-        /// 小程序id，brand_id为空时必传
+        /// 小程序id，小程序直达时必传，需要和申请的商户主体保持一致，且符合<a href="https://opendocs.alipay.com/b/03al6e"> 准入类目 </a>
         /// </summary>
         [XmlElement("target_appid")]
         public string TargetAppid { get; set; }

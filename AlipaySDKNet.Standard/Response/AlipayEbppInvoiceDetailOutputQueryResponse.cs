@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceDetailOutputQueryResponse : AopResponse
     {
         /// <summary>
-        /// 防伪码
+        /// 防伪码，发票校验码
         /// </summary>
         [XmlElement("anti_fake_code")]
         public string AntiFakeCode { get; set; }

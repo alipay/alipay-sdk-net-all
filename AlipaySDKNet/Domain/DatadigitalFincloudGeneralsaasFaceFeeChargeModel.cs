@@ -22,7 +22,13 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
-        /// 产品码
+        /// 云上核身的产品码
+        /// </summary>
+        [XmlElement("product")]
+        public string Product { get; set; }
+
+        /// <summary>
+        /// 该字段废弃不用。
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }

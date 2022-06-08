@@ -10,6 +10,30 @@ namespace Aop.Api.Domain
     public class YunTaskVoucherTemplateInfo : AopObject
     {
         /// <summary>
+        /// 模板创建时间。格式为：yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [XmlElement("create_time")]
+        public string CreateTime { get; set; }
+
+        /// <summary>
+        /// 发放结束时间。格式为：yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [XmlElement("publish_end_time")]
+        public string PublishEndTime { get; set; }
+
+        /// <summary>
+        /// 券模板发放开始时间。格式为：yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [XmlElement("publish_start_time")]
+        public string PublishStartTime { get; set; }
+
+        /// <summary>
+        /// 模版状态
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
+
+        /// <summary>
         /// 券模版id
         /// </summary>
         [XmlElement("template_id")]

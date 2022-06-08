@@ -154,6 +154,12 @@ namespace Aop.Api.Response
         public string ShopId { get; set; }
 
         /// <summary>
+        /// 当前名称、地址、经纬度信息准确一致，可用于数字化经营场景消费（01=已认证，02=待优化，99=未知）
+        /// </summary>
+        [XmlElement("shop_info_status")]
+        public string ShopInfoStatus { get; set; }
+
+        /// <summary>
         /// 店铺名称。
         /// </summary>
         [XmlElement("shop_name")]

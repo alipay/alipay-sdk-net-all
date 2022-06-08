@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("project_id")]
         public string ProjectId { get; set; }
+
+        /// <summary>
+        /// 设备sn号
+        /// </summary>
+        [XmlElement("sn")]
+        public string Sn { get; set; }
     }
 }

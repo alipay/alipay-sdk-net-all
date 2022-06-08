@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AuthNotifyPath { get; set; }
 
         /// <summary>
+        /// 认证类型，请跟服务方获取
+        /// </summary>
+        [XmlElement("certification_type")]
+        public string CertificationType { get; set; }
+
+        /// <summary>
         /// 已认证法人身份证号
         /// </summary>
         [XmlElement("cognizant_cert_no")]
@@ -76,7 +82,7 @@ namespace Aop.Api.Domain
         public string MerchantRequestId { get; set; }
 
         /// <summary>
-        /// 税票信息模型(在biz_type为TAXRECEIPT时，该字段为必填)
+        /// 税票信息模型(在data_type为TAXRECEIPT时，该字段为必填)
         /// </summary>
         [XmlElement("tax_receipt_once_info")]
         public TaxReceiptOnceInfo TaxReceiptOnceInfo { get; set; }
