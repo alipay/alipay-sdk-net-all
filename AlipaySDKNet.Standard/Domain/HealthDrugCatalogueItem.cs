@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string DrugClassification { get; set; }
 
         /// <summary>
+        /// 处方药、非处方药的分类标识
+        /// </summary>
+        [XmlElement("drug_type")]
+        public string DrugType { get; set; }
+
+        /// <summary>
         /// 药品通用名
         /// </summary>
         [XmlElement("general_name")]

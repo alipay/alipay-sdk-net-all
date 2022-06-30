@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class ZhimaCreditEpLixinUserfillformQueryModel : AopObject
     {
         /// <summary>
+        /// 表单提交结束时间，与表单开始时间组合前开后闭[start_time,end_time)
+        /// </summary>
+        [XmlElement("end_time")]
+        public string EndTime { get; set; }
+
+        /// <summary>
         /// 企业信用立信平台问卷的问卷ID
         /// </summary>
         [XmlElement("form_id")]
@@ -27,6 +33,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
+
+        /// <summary>
+        /// 表单提交开始时间，与表单结束时间组合前开后闭[start_time,end_time)
+        /// </summary>
+        [XmlElement("start_time")]
+        public string StartTime { get; set; }
 
         /// <summary>
         /// 支付宝用户id

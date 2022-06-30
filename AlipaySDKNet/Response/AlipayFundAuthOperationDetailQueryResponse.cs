@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -31,6 +32,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("credit_merchant_ext")]
         public string CreditMerchantExt { get; set; }
+
+        /// <summary>
+        /// 信用风险信息，如租物场景风险等级、履约历史等级等
+        /// </summary>
+        [XmlElement("credit_risk_info")]
+        public CreditRiskInfo CreditRiskInfo { get; set; }
 
         /// <summary>
         /// 因公付业务信息

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class ApeRecContext : AopObject
     {
+        /// <summary>
+        /// 类目列表，推荐结果只会包含该类目的商品，为空时代表返回所有的商品。多个条件是与的关系。
+        /// </summary>
+        [XmlArray("cate")]
+        [XmlArrayItem("string")]
+        public List<string> Cate { get; set; }
+
         /// <summary>
         /// 用户当前城市编码
         /// </summary>
@@ -44,5 +52,19 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("longitude")]
         public string Longitude { get; set; }
+
+        /// <summary>
+        /// 指定召回的索引列表，例如：["crowdType#新客", "crowdType#老客"]，多个条件是与的关系。
+        /// </summary>
+        [XmlArray("other_index_list")]
+        [XmlArrayItem("string")]
+        public List<string> OtherIndexList { get; set; }
+
+        /// <summary>
+        /// 标签列表，推荐结果只会包含该标签的商品，为空时代表返回所有的商品。多个条件是与的关系。
+        /// </summary>
+        [XmlArray("tags")]
+        [XmlArrayItem("string")]
+        public List<string> Tags { get; set; }
     }
 }

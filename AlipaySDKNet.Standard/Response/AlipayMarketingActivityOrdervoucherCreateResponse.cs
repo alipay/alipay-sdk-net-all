@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -13,5 +14,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }
+
+        /// <summary>
+        /// 券核销规则请求结果
+        /// </summary>
+        [XmlElement("voucher_use_rule_result")]
+        public OrderVoucherUseRuleResult VoucherUseRuleResult { get; set; }
     }
 }

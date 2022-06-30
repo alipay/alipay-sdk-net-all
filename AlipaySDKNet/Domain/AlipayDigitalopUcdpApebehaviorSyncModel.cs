@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayDigitalopUcdpApebehaviorSyncModel : AopObject
     {
         /// <summary>
-        /// 行为类型：click（点击）、expose（曝光）、order（下单）、pay（支付）等
+        /// 行为类型：click（点击）、expose（曝光）、order（下单）、pay（支付）、collect（收藏）、like（点赞）、comment（评论）、share（分享）等
         /// </summary>
         [XmlElement("action_type")]
         public string ActionType { get; set; }
@@ -76,9 +76,15 @@ namespace Aop.Api.Domain
         public string TraceId { get; set; }
 
         /// <summary>
-        /// 用户唯一标识id，支付宝的用户填写支付宝的用户id。
+        /// 用户唯一标识id，可以是支付宝userid、商家自定义的userid等
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 用户id的类型，可选值：ALIPAY（支付宝userid）、CUSTOM（商家自定义的userid）
+        /// </summary>
+        [XmlElement("user_id_type")]
+        public string UserIdType { get; set; }
     }
 }

@@ -218,5 +218,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("template_name")]
         public string TemplateName { get; set; }
+
+        /// <summary>
+        /// 动作
+        /// </summary>
+        [XmlElement("work_process")]
+        public string WorkProcess { get; set; }
     }
 }

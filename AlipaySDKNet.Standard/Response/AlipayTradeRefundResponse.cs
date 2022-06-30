@@ -35,7 +35,7 @@ namespace Aop.Api.Response
         public string GmtRefundPay { get; set; }
 
         /// <summary>
-        /// 是否有银行卡冲退
+        /// 是否有银行卡冲退，仅当query_options中传入deposit_back_info时返回
         /// </summary>
         [XmlElement("has_deposit_back")]
         public string HasDepositBack { get; set; }

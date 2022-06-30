@@ -18,6 +18,13 @@ namespace Aop.Api.Response
         public List<HotelRoomFaceInfoRes> FaceList { get; set; }
 
         /// <summary>
+        /// 下发设备开启的功能列表
+        /// </summary>
+        [XmlArray("function_list")]
+        [XmlArrayItem("string")]
+        public List<string> FunctionList { get; set; }
+
+        /// <summary>
         /// 刷脸组ID
         /// </summary>
         [XmlElement("group_id")]

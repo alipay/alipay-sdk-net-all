@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingActivityDeliveryStopModel : AopObject
     {
         /// <summary>
-        /// 服务商代商户创建投放必选。 bussinessType设置为ISV_FOR_MERCHANT。
+        /// 服务商代运营商户信息。 限制: 服务商代运营模式必选
         /// </summary>
         [XmlElement("belong_merchant_info")]
         public DeliveryAgencyMerchantInfo BelongMerchantInfo { get; set; }
@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<DeliveryConfig> DeliveryConfigList { get; set; }
 
         /// <summary>
-        /// 投放计划id
+        /// 推广计划id
         /// </summary>
         [XmlElement("delivery_id")]
         public string DeliveryId { get; set; }

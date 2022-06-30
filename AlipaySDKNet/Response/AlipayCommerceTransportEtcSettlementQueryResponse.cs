@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceTransportEtcSettlementQueryResponse : AopResponse
     {
         /// <summary>
+        /// 行程描述等展示信息
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 行程单id
         /// </summary>
         [XmlElement("out_order_id")]

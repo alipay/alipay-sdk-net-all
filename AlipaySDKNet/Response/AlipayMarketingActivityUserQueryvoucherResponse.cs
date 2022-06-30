@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public string ActivityId { get; set; }
 
         /// <summary>
+        /// 若商家券操作过关联商户订单信息，则该字段返回商家券已关联的商户订单号。
+        /// </summary>
+        [XmlElement("associate_trade_no")]
+        public string AssociateTradeNo { get; set; }
+
+        /// <summary>
         /// 可用开始时间
         /// </summary>
         [XmlElement("available_begin_time")]

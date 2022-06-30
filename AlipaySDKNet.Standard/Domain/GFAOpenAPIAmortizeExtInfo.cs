@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AmortizePeriodType { get; set; }
 
         /// <summary>
+        /// 摊销总天数
+        /// </summary>
+        [XmlElement("amortize_total_day")]
+        public string AmortizeTotalDay { get; set; }
+
+        /// <summary>
         /// 摊销类型
         /// </summary>
         [XmlElement("amortize_type")]

@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 任务规则配置
+        /// </summary>
+        [XmlElement("rule_config")]
+        public TaskRuleConfig RuleConfig { get; set; }
+
+        /// <summary>
         /// 任务模版id
         /// </summary>
         [XmlElement("template_id")]

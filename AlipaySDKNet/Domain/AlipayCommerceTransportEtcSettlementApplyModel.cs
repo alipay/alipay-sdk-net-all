@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
+        /// 行程描述
+        /// </summary>
+        [XmlElement("memo")]
+        public string Memo { get; set; }
+
+        /// <summary>
         /// 发行方扣款订单号： 1、需要与真实的扣款行程对应 2、可以直接使用行程单id
         /// </summary>
         [XmlElement("out_order_id")]

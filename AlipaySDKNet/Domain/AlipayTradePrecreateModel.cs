@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string BuyerLogonId { get; set; }
 
         /// <summary>
+        /// 码类型，如果请求时传入了share_code，将在响应参数返回吱口令；如果为空，则默认为订单码
+        /// </summary>
+        [XmlElement("code_type")]
+        public string CodeType { get; set; }
+
+        /// <summary>
         /// 禁用渠道,用户不可用指定渠道支付，多个渠道以逗号分割 注，与enable_pay_channels互斥 <a href="https://docs.open.alipay.com/common/wifww7">渠道列表</a>
         /// </summary>
         [XmlElement("disable_pay_channels")]

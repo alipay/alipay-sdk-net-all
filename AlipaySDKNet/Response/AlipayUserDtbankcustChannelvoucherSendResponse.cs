@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayUserDtbankcustChannelvoucherSendResponse : AopResponse
     {
         /// <summary>
+        /// 接收渠道红包的，脱敏后的支付宝登录号
+        /// </summary>
+        [XmlElement("account_no")]
+        public string AccountNo { get; set; }
+
+        /// <summary>
         /// 活动id
         /// </summary>
         [XmlElement("activity_id")]

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingActivityOrdervoucherCodedepositModel : AopObject
     {
         /// <summary>
-        /// 活动id
+        /// 活动id  限制 请在接收alipay.marketing.activity.message.created消息后，再进行调用。
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }

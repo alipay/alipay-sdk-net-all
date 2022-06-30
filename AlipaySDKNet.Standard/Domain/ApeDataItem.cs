@@ -11,13 +11,20 @@ namespace Aop.Api.Domain
     public class ApeDataItem : AopObject
     {
         /// <summary>
+        /// 商品可用的城市列表
+        /// </summary>
+        [XmlArray("available_city_list")]
+        [XmlArrayItem("string")]
+        public List<string> AvailableCityList { get; set; }
+
+        /// <summary>
         /// 商品品牌。可以传输品牌id，也可传输品牌明文。
         /// </summary>
         [XmlElement("brand")]
         public string Brand { get; set; }
 
         /// <summary>
-        /// 商品不同级类目之间用$##$分隔，且自左向右类目层级逐渐细化。类目值推荐全部传名称，举例如“家电$##$电视$##$OLED电视”。某一段为空时直接传空字符串，如第二段为空， 则传“家电$##$$##$OLED电视”。
+        /// 商品不同级类目之间用$##$分隔，且自左向右类目层级逐渐细化。类目值推荐全部传名称，举例如“家电$##$电视$##$OLED电视”。某一段为空时直接传空字符串，如第二段为空， 则传“家电$##$$##$OLED电视”。如果有多个类目，多个类目之间用,分割。
         /// </summary>
         [XmlElement("cate")]
         public string Cate { get; set; }
@@ -132,7 +139,13 @@ namespace Aop.Api.Domain
         public long Status { get; set; }
 
         /// <summary>
-        /// 商品标签，如首页展示标签“特惠”，“热卖”,或详情页“满50包邮”,“假一赔三”等。多值示例：“特惠$##$热卖"
+        /// 库存数量，库存数量为0的商品不会出现在推荐结果里面
+        /// </summary>
+        [XmlElement("stock_num")]
+        public long StockNum { get; set; }
+
+        /// <summary>
+        /// 商品标签，如首页展示标签“特惠”，“热卖”,或详情页“满50包邮”,“假一赔三”等。多值示例：“特惠,热卖"
         /// </summary>
         [XmlElement("tags")]
         public string Tags { get; set; }

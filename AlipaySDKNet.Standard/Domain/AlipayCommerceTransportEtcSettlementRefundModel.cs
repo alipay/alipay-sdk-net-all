@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }
+
+        /// <summary>
+        /// 退款原因描述：退费
+        /// </summary>
+        [XmlElement("refund_reason")]
+        public string RefundReason { get; set; }
     }
 }

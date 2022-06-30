@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public string RefundAmount { get; set; }
 
         /// <summary>
-        /// 支付宝收单：  "I","未知，原请求单号需要重试";  "RI", "退款中，原请求单号需要重试";  "R", "已退款";  "PR", "部分退款";
+        /// 支付宝收单： </br> "I","未知，原请求单号需要重试"; </br> "RI", "退款中，原请求单号需要重试"; </br> "R", "已退款"; </br> "F", "退款失败";</br>
         /// </summary>
         [XmlElement("refund_status")]
         public string RefundStatus { get; set; }

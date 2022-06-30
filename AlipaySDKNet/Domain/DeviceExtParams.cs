@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ExternalId { get; set; }
 
         /// <summary>
-        /// 外部门店id
+        /// 外部门店id，可用绑定必传
         /// </summary>
         [XmlElement("external_shop_id")]
         public string ExternalShopId { get; set; }

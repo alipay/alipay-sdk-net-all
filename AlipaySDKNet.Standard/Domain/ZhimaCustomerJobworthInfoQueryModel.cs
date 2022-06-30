@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
+        /// 外部订单号out_agreement_no
+        /// </summary>
+        [XmlElement("conn_key")]
+        public string ConnKey { get; set; }
+
+        /// <summary>
         /// 行业描述ID
         /// </summary>
         [XmlElement("industry_id")]

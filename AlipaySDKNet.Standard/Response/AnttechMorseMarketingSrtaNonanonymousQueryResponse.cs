@@ -15,6 +15,24 @@ namespace Aop.Api.Response
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 曝光命中的活动唯一标识，主要数据回调
+        /// </summary>
+        [XmlElement("campaign_id")]
+        public string CampaignId { get; set; }
+
+        /// <summary>
+        /// 活动文案
+        /// </summary>
+        [XmlElement("campaign_text")]
+        public string CampaignText { get; set; }
+
+        /// <summary>
+        /// 活动文案类型，如binding(绑卡)，activating（促活）
+        /// </summary>
+        [XmlElement("campaign_text_type")]
+        public string CampaignTextType { get; set; }
+
+        /// <summary>
         /// 优惠渠道
         /// </summary>
         [XmlElement("channel")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZhimaCreditEpCertificationInitializeModel : AopObject
     {
         /// <summary>
+        /// 支付宝登陆账号(邮箱或者手机号)
+        /// </summary>
+        [XmlElement("alipay_account")]
+        public string AlipayAccount { get; set; }
+
+        /// <summary>
         /// 认证类别，由蚂蚁企业信用方分发提供，配置有误会返回参数错误
         /// </summary>
         [XmlElement("certify_category")]

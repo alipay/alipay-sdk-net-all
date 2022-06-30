@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string IncentiveRule { get; set; }
 
         /// <summary>
+        /// 任务标的物推广数
+        /// </summary>
+        [XmlElement("marker_promoted_count")]
+        public long MarkerPromotedCount { get; set; }
+
+        /// <summary>
         /// 任务最大激励笔数
         /// </summary>
         [XmlElement("max_incentive_count")]

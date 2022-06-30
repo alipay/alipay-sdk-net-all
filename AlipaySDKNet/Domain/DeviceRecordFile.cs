@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DeviceRecordFile : AopObject
     {
         /// <summary>
-        /// 1.直联商户三绑定必传： RECORDS_TYPE_PID(直连pid)、 RECORDS_TYPE_SHOPID(shopid); 2.间联商户三绑定必传： RECORDS_TYPE_SMID（间连smid）、 RECORDS_TYPE_PID(直连pid)、 RECORDS_TYPE_SHOPID(shopid); 3.极简绑定必传： RECORDS_TYPE_SMID（间连smid） 4.极简绑定升级三绑定必传： RECORDS_TYPE_SMID（间连smid）、 RECORDS_TYPE_PID(直连pid)、 RECORDS_TYPE_SHOPID(shopid);
+        /// 1.直联商户三绑定必传： RECORDS_TYPE_PID(直连pid)、 RECORDS_TYPE_SHOPID(shopid); 2.间联商户三绑定必传： RECORDS_TYPE_SMID（间连smid）、 RECORDS_TYPE_PID(直连pid)、 RECORDS_TYPE_SHOPID(shopid); 3.极简绑定必传： RECORDS_TYPE_SMID（间连smid） 4.极简绑定、可用绑定升级三绑定必传： RECORDS_TYPE_SMID（间连smid）、 RECORDS_TYPE_PID(直连pid)、 RECORDS_TYPE_SHOPID(shopid); 5.可用绑定必传： RECORDS_TYPE_SMID（间连smid）  RECORDS_TYPE_PID(pid)
         /// </summary>
         [XmlElement("records_type")]
         public string RecordsType { get; set; }

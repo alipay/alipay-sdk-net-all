@@ -23,6 +23,18 @@ namespace Aop.Api.Response
         public string AuthimgBase64 { get; set; }
 
         /// <summary>
+        /// 证件姓名
+        /// </summary>
+        [XmlElement("cert_name")]
+        public string CertName { get; set; }
+
+        /// <summary>
+        /// 身份证号码
+        /// </summary>
+        [XmlElement("cert_no")]
+        public string CertNo { get; set; }
+
+        /// <summary>
         /// 由ISV定义的对自然人唯一编码，举例可以是身份证号码和姓名的MD5值，或者是其他编码方式，要求脱敏、随机且在ISV可以唯一说明一个自然人
         /// </summary>
         [XmlElement("face_id")]

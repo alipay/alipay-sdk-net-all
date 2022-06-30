@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class SendVoucherInfoResult : AopObject
     {
         /// <summary>
-        /// 用户领券之后在服务商(商户)侧提供的券详情展示页面。在支付宝卡包中展示链接，用户点击可以跳转到服务商券详情页。 限制: 该字段在兑换券场景下必传。 链接必须是alipays开头的小程序链接，详见《小程序scheme链接介绍》https://opendocs.alipay.com/support/01rb18
+        /// 用户领券之后在服务商(商户)侧提供的券详情展示页面。在支付宝卡包中展示链接，用户点击可以跳转到服务商券详情页。 限制: 该字段在兑换券场景下必传。 链接必须是alipays开头的小程序链接，详见《小程序scheme链接介绍》https://opendocs.alipay.com/support/01rb18 其中[pagePath]参数必须进行encode编码
         /// </summary>
         [XmlElement("merchant_order_url")]
         public string MerchantOrderUrl { get; set; }
@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("voucher_code")]
         public string VoucherCode { get; set; }
+
+        /// <summary>
+        /// 发奖后返回的与券码对应的券码使用链接，在支付宝卡包-券详情以二维码方式展示 注意: 该链接风控审核不通过，将继续使用券码生成二维码
+        /// </summary>
+        [XmlElement("voucher_code_url")]
+        public string VoucherCodeUrl { get; set; }
     }
 }

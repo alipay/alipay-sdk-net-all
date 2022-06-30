@@ -11,7 +11,13 @@ namespace Aop.Api.Response
     public class ZhimaCreditEpCreditlinkCollectQueryResponse : AopResponse
     {
         /// <summary>
-        /// INIT表示任务还在初始化状态，COLLECT表示任务在进行中，END状态表示任务处理完成。
+        /// 非文件模式下的数据返回结果。如果data_status为END，则该字段为空
+        /// </summary>
+        [XmlElement("data_content")]
+        public string DataContent { get; set; }
+
+        /// <summary>
+        /// INIT表示任务还在初始化状态，COLLECT表示任务在进行中，END表示任务处理完成，FAIL表示任务处理失败。
         /// </summary>
         [XmlElement("data_status")]
         public string DataStatus { get; set; }

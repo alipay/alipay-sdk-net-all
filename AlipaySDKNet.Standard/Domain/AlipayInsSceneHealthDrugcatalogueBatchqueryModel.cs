@@ -35,5 +35,12 @@ namespace Aop.Api.Domain
         [XmlArray("general_name_list")]
         [XmlArrayItem("string")]
         public List<string> GeneralNameList { get; set; }
+
+        /// <summary>
+        /// 商品名称列表
+        /// </summary>
+        [XmlArray("item_name_list")]
+        [XmlArrayItem("string")]
+        public List<string> ItemNameList { get; set; }
     }
 }

@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public List<DiscountInfoDataDTO> DiscountInfoList { get; set; }
 
         /// <summary>
-        /// 有环保行为时，必填; 环保数据为空时，认为没有环保行为，将不发能量;
+        /// 有对应环保类型 符合字段“environmental_ext"中的环保字典值时，则必填；除此之外的环保类型时，该字段为空。请务必准确对照，如有疑问，请联系业务经理。
         /// </summary>
         [XmlArray("environmental_info")]
         [XmlArrayItem("enviromental_info_d_t_o")]

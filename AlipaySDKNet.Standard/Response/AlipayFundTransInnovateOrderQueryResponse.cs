@@ -51,6 +51,12 @@ namespace Aop.Api.Response
         public string PayDate { get; set; }
 
         /// <summary>
+        /// 退款时间
+        /// </summary>
+        [XmlElement("refund_date")]
+        public string RefundDate { get; set; }
+
+        /// <summary>
         /// 转账单据状态。可能出现的状态如下： SUCCESS：转账成功； WAIT_PAY：等待支付； CLOSE：订单超时关闭； FAIL：失败（适用于"单笔转账到银行卡"）； DEALING：处理中（适用于"单笔转账到银行卡"）； REFUND：退票（适用于"单笔转账到银行卡"）；
         /// </summary>
         [XmlElement("status")]

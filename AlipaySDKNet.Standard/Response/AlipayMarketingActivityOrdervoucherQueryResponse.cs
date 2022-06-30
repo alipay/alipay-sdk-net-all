@@ -22,13 +22,13 @@ namespace Aop.Api.Response
         public string ActivityName { get; set; }
 
         /// <summary>
-        /// 活动操作状态    CREATING：创建中    MODIFYING：修改中    APPENDING：追加中    FINISHEING：停止中    如果该值为空，说明活动当前没有正在执行中的操作。
+        /// 活动操作状态。  取值范围： 1.CREATING：创建中。 2.MODIFYING：修改中。 3.APPENDING：追加中。 4.FINISHEING：终止中。  限制： 该值为空，说明活动当前没有正在执行中的操作。
         /// </summary>
         [XmlElement("activity_operation_status")]
         public string ActivityOperationStatus { get; set; }
 
         /// <summary>
-        /// 活动状态，状态枚举：    ACTIVE：已激活    FINISHED：已停止    如果该值为空，说明活动还未创建成功。可以使用  activity_operation_status字段判断活动是否处于CREATING状态。
+        /// 活动状态。  取值范围： 1.ACTIVE：已激活（活动正常运行）。 2.FINISHED：已终止（商家终止活动，不可再发放。  限制： 1.该值为空，说明活动还未创建成功。可以使用 activity_operation_status字段判断活动是否处于CREATING状态。
         /// </summary>
         [XmlElement("activity_status")]
         public string ActivityStatus { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Response
         public VoucherSendRuleDetail VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 券类型。  枚举值： FIX_VOUCHER：固定面额满减券 EXCHANGE_VOUCHER: 兑换券
+        /// 券类型。  取值范围： 1.FIX_VOUCHER：满减券。 2.DISCOUNT_VOUCHER：折扣券。 3.SPECIAL_VOUCHER：特价券。 4.EXCHANGE_VOUCHER: 兑换券。
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

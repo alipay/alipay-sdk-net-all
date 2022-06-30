@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<string> FinancialOrgCertImg { get; set; }
 
         /// <summary>
-        /// 金融机构类型：银行业(BANK)、支付机构(PAYMENT_INST)、保险业(INSURE)、交易及结算类金融机构(SETTLE_INST)、OTHER(OTHER)
+        /// 机构（INST）、银行业(BANK)、支付机构(PAYMENT)、保险业(INSURANCE)、交易及结算类金融机构(SETTLE)、OTHER(OTHER)
         /// </summary>
         [XmlElement("financial_org_type")]
         public string FinancialOrgType { get; set; }

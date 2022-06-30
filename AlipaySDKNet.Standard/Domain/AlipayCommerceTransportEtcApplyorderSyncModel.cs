@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string CardNo { get; set; }
 
         /// <summary>
+        /// 审核不通过原因标准码，审核不通过时可以传递此标准码，域内将优先以标准码为准。
+        /// </summary>
+        [XmlElement("censor_code")]
+        public string CensorCode { get; set; }
+
+        /// <summary>
         /// 审核不通过原因， 审核不通过时必传
         /// </summary>
         [XmlElement("censor_info")]
@@ -76,7 +82,7 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 订单状态； DELIVERYED：已发货； RECEIVED：已收货；  CENSOR_PASS：审核通过；  CENSOR_BLOCK：审核不通过 ； ACTIVATED：已激活；  UNMOUNTED：已注销；  CANCEL：取消； 拉黑:ADD_BLACKLIST； 解黑:REMOVE_BLACKLIST；
+        /// 订单状态； DELIVERYED：已发货； RECEIVED：已收货；  CENSOR_PASS：审核通过；  CENSOR_BLOCK：审核不通过 ； ACTIVATED：已激活；  UNMOUNTED：已注销；  CANCEL：取消；
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }
@@ -104,5 +110,77 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-核定载人数
+        /// </summary>
+        [XmlElement("vi_license_apc")]
+        public string ViLicenseApc { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-品牌车型
+        /// </summary>
+        [XmlElement("vi_license_brand_model")]
+        public string ViLicenseBrandModel { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-车辆类型
+        /// </summary>
+        [XmlElement("vi_license_car_type")]
+        public string ViLicenseCarType { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-发动机号
+        /// </summary>
+        [XmlElement("vi_license_engine")]
+        public string ViLicenseEngine { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-总质量
+        /// </summary>
+        [XmlElement("vi_license_gross_mass")]
+        public string ViLicenseGrossMass { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-发证时间
+        /// </summary>
+        [XmlElement("vi_license_issue_date")]
+        public string ViLicenseIssueDate { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-外廓尺寸
+        /// </summary>
+        [XmlElement("vi_license_overall_dinmension")]
+        public string ViLicenseOverallDinmension { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-车辆所有人
+        /// </summary>
+        [XmlElement("vi_license_owner")]
+        public string ViLicenseOwner { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-注册时间
+        /// </summary>
+        [XmlElement("vi_license_register_date")]
+        public string ViLicenseRegisterDate { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-整备质量
+        /// </summary>
+        [XmlElement("vi_license_unladen_mass")]
+        public string ViLicenseUnladenMass { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-使用性质：运营/非营运
+        /// </summary>
+        [XmlElement("vi_license_use_type")]
+        public string ViLicenseUseType { get; set; }
+
+        /// <summary>
+        /// 行驶证信息-车辆识别号
+        /// </summary>
+        [XmlElement("vi_license_vin")]
+        public string ViLicenseVin { get; set; }
     }
 }

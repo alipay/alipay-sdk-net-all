@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("id")]
         public long Id { get; set; }
+
+        /// <summary>
+        /// 操作人ID+唯一+删除人群
+        /// </summary>
+        [XmlElement("operator_id")]
+        public string OperatorId { get; set; }
     }
 }

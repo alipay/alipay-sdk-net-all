@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BizNoPrefix { get; set; }
 
         /// <summary>
+        /// 业务卡号后缀长度，与biz_no_prefix配合，扣除系统预留2位，剩下对应seq长度。在生成卡号时，若seq位数不足前置补0，若seq位数超出则以实际为准。举例：设为10，其中8位用于生成seq，可覆盖1亿用户，即使seq超过1亿，生成卡号也不报错，但总长度不得超过32位。建议按需设置合适的值，以获得长度一致的业务卡号，建议长度20，性能更好。
+        /// </summary>
+        [XmlElement("biz_no_suffix_len")]
+        public string BizNoSuffixLen { get; set; }
+
+        /// <summary>
         /// 卡行动点配置；  行动点，即用户可点击跳转的区块，类似按钮控件的交互；  单张卡最多定制4个行动点。
         /// </summary>
         [XmlArray("card_action_list")]
@@ -87,6 +93,12 @@ namespace Aop.Api.Domain
         [XmlArray("shop_ids")]
         [XmlArrayItem("string")]
         public List<string> ShopIds { get; set; }
+
+        /// <summary>
+        /// spi_app_id：若使用openspi模式开卡，该字段必填，为实现spi.alipay.user.opencard.get接口的app_id
+        /// </summary>
+        [XmlElement("spi_app_id")]
+        public string SpiAppId { get; set; }
 
         /// <summary>
         /// 权益信息，  1、在卡包的卡详情页面会自动添加权益栏位，展现会员卡特权，  2、如果添加门店渠道，则可在门店页展现会员卡的权益

@@ -48,14 +48,14 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
-        /// 关联账号信息，1-2个。 内部字段均需设置。
+        /// 关联账号信息，1-2个。 内部字段均需设置。当为品牌直达时，数组中的第1个账号会被设置为"账号1"，也就是将作为搜索直达专区头部的跳转地址
         /// </summary>
         [XmlArray("related_accounts")]
         [XmlArrayItem("search_box_app_info")]
         public List<SearchBoxAppInfo> RelatedAccounts { get; set; }
 
         /// <summary>
-        /// 服务信息，服务必须审核通过才能申请搜索直达。 内部字段均需设置。
+        /// 服务信息，服务必须审核通过才能申请搜索直达。品牌直达最多可配置同一品牌认证下的小程序4个，小程序直达最多可配置2个。 内部字段均需设置。
         /// </summary>
         [XmlArray("service_infos")]
         [XmlArrayItem("search_box_service_info")]

@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class ReceiptSimpleOrderDTO : AopObject
     {
         /// <summary>
+        /// 支付宝支付方式对应的支付金额;
+        /// </summary>
+        [XmlElement("alipay_amout")]
+        public long AlipayAmout { get; set; }
+
+        /// <summary>
         /// 支付宝用户uid
         /// </summary>
         [XmlElement("alipay_uid")]
@@ -55,6 +61,12 @@ namespace Aop.Api.Domain
         public List<ItemOrderInfoDTO> ItemOrderList { get; set; }
 
         /// <summary>
+        /// 商家扩展信息
+        /// </summary>
+        [XmlElement("merchant_extend_info")]
+        public ReceiptMerchantExtendInfo MerchantExtendInfo { get; set; }
+
+        /// <summary>
         /// 商户名字
         /// </summary>
         [XmlElement("merchant_name")]
@@ -89,6 +101,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_type")]
         public string OrderType { get; set; }
+
+        /// <summary>
+        /// 其它支付金额；如果有除支付宝支付方式以外的所有支付方式金额(包括各类卡，现金等)，必填
+        /// </summary>
+        [XmlElement("other_pay_amount")]
+        public long OtherPayAmount { get; set; }
 
         /// <summary>
         /// 外部商户订单号;out_biz_no唯一对应一笔订单，相同的订单需传入相同的out_biz_no

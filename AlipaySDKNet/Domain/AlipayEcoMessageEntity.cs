@@ -52,10 +52,16 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 行业类型. 1=社保，2=公积金，3=交警
+        /// 行业类型. 1=社保，2=公积金，3=交警，4=公安非交管，5=医保，8=疫情
         /// </summary>
         [XmlElement("industry_type")]
         public long IndustryType { get; set; }
+
+        /// <summary>
+        /// 手机号
+        /// </summary>
+        [XmlElement("mobile")]
+        public string Mobile { get; set; }
 
         /// <summary>
         /// 消息类型. 1=动账.2=账单.3=缴费.4=办件进度.5=证件到期.6=违章提醒.  更多请参考接口补充说明

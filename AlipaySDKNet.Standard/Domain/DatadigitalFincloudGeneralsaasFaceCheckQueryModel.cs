@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string NeedAlivePhoto { get; set; }
 
         /// <summary>
-        /// 是否需要返回攻击判断结果，非必填，默认 N。N表示不需要返回，Y表示需要返回
+        /// 该参数已废弃
         /// </summary>
         [XmlElement("need_attack_result")]
         public string NeedAttackResult { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string NeedQualityScore { get; set; }
 
         /// <summary>
-        /// 是否需要返回活体检测分数，非必填，Y表示需要返回活体检测分数；N表示不需要。默认 Y
+        /// 该入参已经废弃。
         /// </summary>
         [XmlElement("need_score")]
         public string NeedScore { get; set; }

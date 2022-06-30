@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Logo { get; set; }
 
         /// <summary>
+        /// 标的物完成数
+        /// </summary>
+        [XmlElement("marker_amount")]
+        public long MarkerAmount { get; set; }
+
+        /// <summary>
         /// 已经发放积分数量
         /// </summary>
         [XmlElement("published_point_amount")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DriverUserId { get; set; }
 
         /// <summary>
+        /// Y-风控，N-不风控，null或空代表不风控
+        /// </summary>
+        [XmlElement("risk_control")]
+        public string RiskControl { get; set; }
+
+        /// <summary>
         /// 交易单号
         /// </summary>
         [XmlElement("trade_no")]

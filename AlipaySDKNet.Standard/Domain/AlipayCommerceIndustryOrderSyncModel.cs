@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string PaymentAmount { get; set; }
 
         /// <summary>
-        /// 商户订单同步记录id（同一订单，非第一次同步 必填）
+        /// 商户订单同步记录id
         /// </summary>
         [XmlElement("record_id")]
         public string RecordId { get; set; }

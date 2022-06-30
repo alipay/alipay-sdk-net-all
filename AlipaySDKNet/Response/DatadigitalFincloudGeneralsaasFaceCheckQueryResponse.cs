@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string AlivePhoto { get; set; }
 
         /// <summary>
-        /// 是否为攻击，true：本次判定为攻击；false：非攻击。
+        /// 已废弃
         /// </summary>
         [XmlElement("attack_flag")]
         public string AttackFlag { get; set; }
@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public string Quality { get; set; }
 
         /// <summary>
-        /// double值，活体检测结果分数
+        /// 已废弃
         /// </summary>
         [XmlElement("score")]
         public string Score { get; set; }

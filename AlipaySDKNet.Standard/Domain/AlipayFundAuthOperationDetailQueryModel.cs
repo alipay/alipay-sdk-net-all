@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -38,5 +39,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_request_no")]
         public string OutRequestNo { get; set; }
+
+        /// <summary>
+        /// 需要查询的额外信息
+        /// </summary>
+        [XmlArray("query_options")]
+        [XmlArrayItem("string")]
+        public List<string> QueryOptions { get; set; }
     }
 }

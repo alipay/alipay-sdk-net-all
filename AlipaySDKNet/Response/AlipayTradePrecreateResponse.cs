@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("qr_code")]
         public string QrCode { get; set; }
+
+        /// <summary>
+        /// 当前预下单请求生成的吱口令码串，有效时间2小时，可以在支付宝app端访问对应内容
+        /// </summary>
+        [XmlElement("share_code")]
+        public string ShareCode { get; set; }
     }
 }

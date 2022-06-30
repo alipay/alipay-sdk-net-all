@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// 创建人ID+唯一
+        /// </summary>
+        [XmlElement("creator_id")]
+        public string CreatorId { get; set; }
+
+        /// <summary>
         /// 创建人+不唯一
         /// </summary>
         [XmlElement("creator_name")]
@@ -56,6 +62,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 人群创建方式+不唯一
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
 
         /// <summary>
         /// 人群更新时间+不唯一

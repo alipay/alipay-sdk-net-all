@@ -1,6 +1,5 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -30,8 +29,7 @@ namespace Aop.Api.Response
         /// <summary>
         /// 是否通过，通过为T，不通过为F
         /// </summary>
-        [XmlArray("passed")]
-        [XmlArrayItem("string")]
-        public List<string> Passed { get; set; }
+        [XmlElement("passed")]
+        public string Passed { get; set; }
     }
 }

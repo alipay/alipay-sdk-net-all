@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -38,6 +39,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payee_info")]
         public Participant PayeeInfo { get; set; }
+
+        /// <summary>
+        /// 付款指定支付渠道类型
+        /// </summary>
+        [XmlArray("payer_enable_channels_info_list")]
+        [XmlArrayItem("payer_payment_d_t_o")]
+        public List<PayerPaymentDTO> PayerEnableChannelsInfoList { get; set; }
 
         /// <summary>
         /// 付款用户账号信息，房租场景是必填

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 账单业务号
+        /// </summary>
+        [XmlElement("bill_no")]
+        public string BillNo { get; set; }
+
+        /// <summary>
         /// 业务时间
         /// </summary>
         [XmlElement("biz_date")]
