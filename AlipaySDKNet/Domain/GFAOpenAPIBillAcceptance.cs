@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string OutBusinessNo { get; set; }
 
         /// <summary>
+        /// 外部计税来源标识，当前只有 ibiztaxcore国际标识
+        /// </summary>
+        [XmlElement("outer_tax_source")]
+        public string OuterTaxSource { get; set; }
+
+        /// <summary>
         /// 业务系统收付款状态
         /// </summary>
         [XmlElement("pay_status")]
@@ -164,6 +170,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("system_origin")]
         public string SystemOrigin { get; set; }
+
+        /// <summary>
+        /// 外部计税信息。在外部计税时传入
+        /// </summary>
+        [XmlElement("tax_info")]
+        public GFAOpenAPIOuterTaxInfo TaxInfo { get; set; }
 
         /// <summary>
         /// 租户id

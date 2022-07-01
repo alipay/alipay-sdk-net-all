@@ -80,7 +80,7 @@ namespace Aop.Api.Domain
         public List<RefundGoodsDetail> RefundGoodsDetail { get; set; }
 
         /// <summary>
-        /// 退款原因说明。 商家自定义，将在对账单的退款明细中作为备注返回，同时会在商户和用户的pc退款账单详情中展示
+        /// 退款原因说明。 商家自定义，将在会在商户和用户的pc退款账单详情中展示
         /// </summary>
         [XmlElement("refund_reason")]
         public string RefundReason { get; set; }

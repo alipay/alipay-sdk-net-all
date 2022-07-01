@@ -10,7 +10,7 @@
     <RootNamespace>AlipaySDKNet</RootNamespace>
     <AssemblyName>AlipaySDKNet</AssemblyName>
     <PackageId>AlipaySDKNet</PackageId>
-    <PackageVersion>4.6.340</PackageVersion>
+    <PackageVersion>4.6.341</PackageVersion>
     <Authors>antopen</Authors>
     <NeutralLanguage>zh</NeutralLanguage>
     <Description>支付宝开放平台官方SDK，支持.Net Framework 3.5(SP1)及其以上版本。</Description>
@@ -2308,6 +2308,7 @@
     <Compile Include="Response\AlipayOpenMiniAmpeTracerSyncResponse.cs" />
     <Compile Include="Response\AlipayOpenMiniAmpeSceneQueryResponse.cs" />
     <Compile Include="Response\AlipayOpenMiniAmpeRecommendDetectResponse.cs" />
+    <Compile Include="Response\AlipayOpenMiniAmpeQrcodeCreateResponse.cs" />
     <Compile Include="Response\AlipayOpenMiniAmpeProductModifyResponse.cs" />
     <Compile Include="Response\AlipayOpenMiniAmpeProductCreateResponse.cs" />
     <Compile Include="Response\AlipayOpenMiniAmpeProductBatchqueryResponse.cs" />
@@ -9992,6 +9993,7 @@
     <Compile Include="Domain\AlipayOpenMiniAmpeTracerSyncModel.cs" />
     <Compile Include="Domain\AlipayOpenMiniAmpeSceneQueryModel.cs" />
     <Compile Include="Domain\AlipayOpenMiniAmpeRecommendDetectModel.cs" />
+    <Compile Include="Domain\AlipayOpenMiniAmpeQrcodeCreateModel.cs" />
     <Compile Include="Domain\AlipayOpenMiniAmpeProductModifyModel.cs" />
     <Compile Include="Domain\AlipayOpenMiniAmpeProductBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayOpenMiniAmpeMobileappUnbindModel.cs" />
@@ -14581,6 +14583,7 @@
     <Compile Include="Request\AlipayOpenMiniAmpeTracerSyncRequest.cs" />
     <Compile Include="Request\AlipayOpenMiniAmpeSceneQueryRequest.cs" />
     <Compile Include="Request\AlipayOpenMiniAmpeRecommendDetectRequest.cs" />
+    <Compile Include="Request\AlipayOpenMiniAmpeQrcodeCreateRequest.cs" />
     <Compile Include="Request\AlipayOpenMiniAmpeProductModifyRequest.cs" />
     <Compile Include="Request\AlipayOpenMiniAmpeProductCreateRequest.cs" />
     <Compile Include="Request\AlipayOpenMiniAmpeProductBatchqueryRequest.cs" />

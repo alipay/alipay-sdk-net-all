@@ -17,6 +17,13 @@ namespace Aop.Api.Response
         public TaskInstanceInfo TaskInstanceInfo { get; set; }
 
         /// <summary>
+        /// 标的物信息
+        /// </summary>
+        [XmlArray("task_marker_info_list")]
+        [XmlArrayItem("task_marker_info")]
+        public List<TaskMarkerInfo> TaskMarkerInfoList { get; set; }
+
+        /// <summary>
         /// 任务券信息
         /// </summary>
         [XmlArray("task_voucher_list")]
