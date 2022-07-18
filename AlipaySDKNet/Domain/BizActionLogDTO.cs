@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string BizUkId { get; set; }
 
         /// <summary>
+        /// 币种编码，不填默认156人民币
+        /// </summary>
+        [XmlElement("currency_code")]
+        public string CurrencyCode { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [XmlElement("gmt_create")]

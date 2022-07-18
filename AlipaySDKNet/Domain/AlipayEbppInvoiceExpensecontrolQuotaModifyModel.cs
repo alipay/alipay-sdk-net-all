@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 企业ID
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
+
+        /// <summary>
         /// 外部操作幂等ID（接入方接口调用幂等控制ID）
         /// </summary>
         [XmlElement("outer_source_id")]

@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayTradeOverdraftReturnmoneyResponse : AopResponse
     {
         /// <summary>
+        /// 汇率（仅跨境追款执行成功后返回）
+        /// </summary>
+        [XmlElement("exchange_rate")]
+        public string ExchangeRate { get; set; }
+
+        /// <summary>
         /// 退款时上送的外部退款请求号
         /// </summary>
         [XmlElement("out_request_no")]
@@ -19,6 +25,24 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("receive_account")]
         public string ReceiveAccount { get; set; }
+
+        /// <summary>
+        /// 追款人民币金额（仅追款执行成功后返回）
+        /// </summary>
+        [XmlElement("return_amount")]
+        public string ReturnAmount { get; set; }
+
+        /// <summary>
+        /// 追款外币金额（仅跨境追款执行成功后返回）
+        /// </summary>
+        [XmlElement("return_foreign_amount")]
+        public string ReturnForeignAmount { get; set; }
+
+        /// <summary>
+        /// 追款外币币种（仅跨境追款执行成功后返回）
+        /// </summary>
+        [XmlElement("return_foreign_currency")]
+        public string ReturnForeignCurrency { get; set; }
 
         /// <summary>
         /// 垫资追款结果。枚举值： SUCCESS：追款成功 FAILED：追款失败 PROCESSING：追款中

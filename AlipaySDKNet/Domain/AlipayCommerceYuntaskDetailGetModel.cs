@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceYuntaskDetailGetModel : AopObject
     {
         /// <summary>
+        /// 出资方pid，出资方模式下必传merchant_pid
+        /// </summary>
+        [XmlElement("funder_id")]
+        public string FunderId { get; set; }
+
+        /// <summary>
         /// 商户pid
         /// </summary>
         [XmlElement("merchant_pid")]

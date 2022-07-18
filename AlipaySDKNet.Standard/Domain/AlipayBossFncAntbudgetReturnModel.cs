@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string BizUkId { get; set; }
 
         /// <summary>
+        /// 币种编码
+        /// </summary>
+        [XmlElement("currency_code")]
+        public string CurrencyCode { get; set; }
+
+        /// <summary>
         /// 幂等字段
         /// </summary>
         [XmlElement("idempotent_id")]
@@ -44,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("modify_type")]
         public string ModifyType { get; set; }
+
+        /// <summary>
+        /// 时区
+        /// </summary>
+        [XmlElement("time_zone")]
+        public string TimeZone { get; set; }
     }
 }

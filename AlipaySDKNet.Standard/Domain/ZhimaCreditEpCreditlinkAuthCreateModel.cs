@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<CreditLinkAgreementInfo> AgreementInfoList { get; set; }
 
         /// <summary>
-        /// 授权商户ID，如果为空则使用merchant_request_id填充
+        /// 授权商户ID。针对授权方与取数方不一致的场景，传入取数方的商户ID。未传入时会默认使用接口发起方的商户ID进行填充
         /// </summary>
         [XmlElement("auth_merchant_id")]
         public string AuthMerchantId { get; set; }

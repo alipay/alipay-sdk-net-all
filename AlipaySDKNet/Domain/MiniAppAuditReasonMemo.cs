@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,5 +15,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("memo")]
         public string Memo { get; set; }
+
+        /// <summary>
+        /// 规则图片链接
+        /// </summary>
+        [XmlArray("memo_image_list")]
+        [XmlArrayItem("string")]
+        public List<string> MemoImageList { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ZhimaCreditPayafteruseCreditagreementSignModel : AopObject
     {
         /// <summary>
-        /// 当用户进入芝麻先用后付开通页面后，点击左上角的回退按钮，中断开通流程，跳转回商户的页面地址。支持scheme协议。不传该链接时，默认返回上一级页面，由外部app唤起支付宝的情况，会返回支付宝首页。
+        /// 当用户进入信用服务开通/授权页面后，点击左上角的回退按钮，中断开通流程，跳转回商户的页面地址。支持scheme协议。不传该链接时，默认返回上一级页面，由外部app唤起支付宝的情况，会返回支付宝首页。
         /// </summary>
         [XmlElement("cancel_back_link")]
         public string CancelBackLink { get; set; }
@@ -40,19 +40,19 @@ namespace Aop.Api.Domain
         public string OutAgreementNo { get; set; }
 
         /// <summary>
-        /// 产品码，不填默认为 CREDIT_PAY_AFTER_USE。芝麻先用后付产品为CREDIT_PAY_AFTER_USE，其他产品请根据对应的技术支持文档传入。
+        /// 产品码，不填默认为 CREDIT_PAY_AFTER_USE。芝麻先享产品为CREDIT_PAY_AFTER_USE，其他产品请根据对应的技术支持文档传入。
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 用户成功完成芝麻先用后付开通流程后，跳转回商户的页面地址。支持scheme协议。不传该链接时，默认返回上一级页面，由外部app 唤起支付宝的情况，会返回支付宝首页。
+        /// 用户成功完成信用服务开通/授权流程后，跳转回商户的页面地址。支持scheme协议。不传该链接时，默认返回上一级页面，由外部app 唤起支付宝的情况，会返回支付宝首页。
         /// </summary>
         [XmlElement("return_back_link")]
         public string ReturnBackLink { get; set; }
 
         /// <summary>
-        /// 芝麻服务ID
+        /// 芝麻信用服务ID
         /// </summary>
         [XmlElement("zm_service_id")]
         public string ZmServiceId { get; set; }

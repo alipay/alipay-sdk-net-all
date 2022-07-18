@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ZhimaCreditPayafteruseCreditagreementQueryModel : AopObject
     {
         /// <summary>
-        /// 芝麻先用后付开通协议号，out_agreement_no与credit_agreement_id必填一个，推荐使用credit_agreement_id。
+        /// 芝麻开通/授权协议号，out_agreement_no与credit_agreement_id必填一个，推荐使用credit_agreement_id。
         /// </summary>
         [XmlElement("credit_agreement_id")]
         public string CreditAgreementId { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class EcOrderItem : AopObject
     {
         /// <summary>
-        /// 企业ID
+        /// 共同账户ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -20,6 +20,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("biz_out_no")]
         public string BizOutNo { get; set; }
+
+        /// <summary>
+        /// 员工ID
+        /// </summary>
+        [XmlElement("employee_id")]
+        public string EmployeeId { get; set; }
+
+        /// <summary>
+        /// 企业ID
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
 
         /// <summary>
         /// 创建时间
@@ -46,7 +58,7 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 订单类型 METRO：地铁
+        /// 订单类型 METRO：地铁 TAKEAWAY：外卖 OTHER：其他
         /// </summary>
         [XmlElement("order_type")]
         public string OrderType { get; set; }

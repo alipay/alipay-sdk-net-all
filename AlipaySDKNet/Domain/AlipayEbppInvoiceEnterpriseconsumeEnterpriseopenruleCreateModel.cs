@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("seller_type")]
         public string SellerType { get; set; }
+
+        /// <summary>
+        /// 开票规则标记： DEFAULT-默认 EMPLOYEE_TITLE_FIRST-员工签约抬头优先于开票规则
+        /// </summary>
+        [XmlElement("tag")]
+        public string Tag { get; set; }
     }
 }

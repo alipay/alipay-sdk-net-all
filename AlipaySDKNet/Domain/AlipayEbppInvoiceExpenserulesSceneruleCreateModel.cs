@@ -55,7 +55,7 @@ namespace Aop.Api.Domain
         public string ExpenseType { get; set; }
 
         /// <summary>
-        /// 当笔消费金额大于规则可用余额时，用于控制支付策略，该字段缺省时采取因公账户和个人账户组合支付策略， 枚举值：PERSONAL（全部个人账户支付）
+        /// 当笔消费金额大于规则可用余额时，用于控制支付策略，该字段缺省时采取因公账户和个人账户组合支付策略， 枚举值：PERSONAL（全部个人账户支付）, COMBINATION（因公账户和个人账户组合支付）
         /// </summary>
         [XmlElement("payment_policy")]
         public string PaymentPolicy { get; set; }

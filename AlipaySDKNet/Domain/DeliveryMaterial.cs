@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,5 +15,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("delivery_single_material")]
         public DeliverySingleMaterial DeliverySingleMaterial { get; set; }
+
+        /// <summary>
+        /// 素材ID，通过alipay.marketing.material.create接口提供的素材组
+        /// </summary>
+        [XmlArray("material_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> MaterialIdList { get; set; }
     }
 }

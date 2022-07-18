@@ -25,7 +25,13 @@ namespace Aop.Api.Domain
         /// 发奖系数
         /// </summary>
         [XmlElement("modulus")]
-        public string Modulus { get; set; }
+        public long Modulus { get; set; }
+
+        /// <summary>
+        /// 奖品价格
+        /// </summary>
+        [XmlElement("price")]
+        public string Price { get; set; }
 
         /// <summary>
         /// 奖品id

@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string OutMergeNo { get; set; }
 
         /// <summary>
-        /// 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm:ss。  注： 1. 如果已经和支付宝约定要求子订单明细必须同时支付成功或者同时支付失败，则不需要填入该字段。 2. time_expire和timeout_express两者只需传入一个或者都不传，两者均传入时，优先使用time_expire。
+        /// 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm:ss。  注： 1. 如果已经和支付宝约定要求子订单明细必须同时成功同时失败，则不需要填入该字段，默认为15分钟，此场景下如果需要支持自定义超时时间，请联系技术小二。 2. time_expire和timeout_express两者只需传入一个或者都不传，两者均传入时，优先使用time_expire。
         /// </summary>
         [XmlElement("time_expire")]
         public string TimeExpire { get; set; }

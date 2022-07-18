@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public string BatchId { get; set; }
 
         /// <summary>
+        /// 该申请批次对应的实际账单对应结束时间
+        /// </summary>
+        [XmlElement("gmt_biz_end")]
+        public string GmtBizEnd { get; set; }
+
+        /// <summary>
+        /// 该申请批次对应的实际账单对应起始时间
+        /// </summary>
+        [XmlElement("gmt_biz_start")]
+        public string GmtBizStart { get; set; }
+
+        /// <summary>
         /// 开票（介质）类型 可选值： 0: 电票 1：纸质普票 2：纸质专票 3：电子专票
         /// </summary>
         [XmlElement("invoice_kind")]

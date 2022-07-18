@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateSchoolcontentModifyModel : AopObject
     {
         /// <summary>
+        /// 自动关联服务（默认true，推荐使用false）
+        /// </summary>
+        [XmlElement("auto_bind")]
+        public bool AutoBind { get; set; }
+
+        /// <summary>
         /// 来源应用ID
         /// </summary>
         [XmlElement("carrier_app_id")]
@@ -58,6 +64,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("school_name")]
         public string SchoolName { get; set; }
+
+        /// <summary>
+        /// 已上架服务id列表
+        /// </summary>
+        [XmlArray("service_ids")]
+        [XmlArrayItem("string")]
+        public List<string> ServiceIds { get; set; }
 
         /// <summary>
         /// 来源ID

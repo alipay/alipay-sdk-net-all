@@ -54,13 +54,13 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 卖家支付宝用户ID。  如果该值为空，则默认为商户签约账号对应的支付宝用户ID
+        /// 卖家支付宝用户ID。 如果该值与seller_logon_id同时为空，则卖家默认为app_id对应的支付宝用户ID
         /// </summary>
         [XmlElement("seller_id")]
         public string SellerId { get; set; }
 
         /// <summary>
-        /// 支持手机和Email格式,如果同时使用参数seller_logon_id和seller_id,以seller_id为准
+        /// 卖家支付宝logon_id 支持手机和Email格式,如果该值与seller_id同时传入,将以seller_id为准
         /// </summary>
         [XmlElement("seller_logon_id")]
         public string SellerLogonId { get; set; }

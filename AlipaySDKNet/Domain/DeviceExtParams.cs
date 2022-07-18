@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// 极简绑定时必传，用于设备左上角展示，可以区分设备所在门店
+        /// 可用绑定时必传，用于设备左上角展示，可以区分设备所在门店
         /// </summary>
         [XmlElement("shop_name")]
         public string ShopName { get; set; }

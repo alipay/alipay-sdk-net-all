@@ -102,6 +102,12 @@ namespace Aop.Api.Response
         public List<string> ShopIds { get; set; }
 
         /// <summary>
+        /// spi_app_id：若使用openspi模式开卡，该字段为创建模版时，设置的实现spi.alipay.user.opencard.get接口的app_id
+        /// </summary>
+        [XmlElement("spi_app_id")]
+        public string SpiAppId { get; set; }
+
+        /// <summary>
         /// 权益信息，  1、在卡包的卡详情页面会自动添加权益栏位，展现会员卡特权，  2、如果添加门店渠道，则可在门店页展现会员卡的权益
         /// </summary>
         [XmlArray("template_benefit_info")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ApplyBizBudgetRequest : AopObject
     {
         /// <summary>
-        /// 预算申请金额，人民币
+        /// 预算申请金额
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -50,5 +50,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("biz_uk_id")]
         public string BizUkId { get; set; }
+
+        /// <summary>
+        /// 币种编码，如果不填写，默认为156人民币
+        /// </summary>
+        [XmlElement("currency_code")]
+        public string CurrencyCode { get; set; }
+
+        /// <summary>
+        /// 时区
+        /// </summary>
+        [XmlElement("time_zone")]
+        public string TimeZone { get; set; }
     }
 }

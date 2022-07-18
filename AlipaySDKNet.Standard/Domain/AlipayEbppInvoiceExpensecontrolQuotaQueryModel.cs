@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 企业ID
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
+
+        /// <summary>
         /// 余额所属者ID owner_type为员工时为员工支付宝ID
         /// </summary>
         [XmlElement("owner_id")]

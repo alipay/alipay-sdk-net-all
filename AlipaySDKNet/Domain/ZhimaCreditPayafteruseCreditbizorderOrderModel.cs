@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// 芝麻后付开通协议号
+        /// 芝麻开通协议号
         /// </summary>
         [XmlElement("credit_agreement_id")]
         public string CreditAgreementId { get; set; }

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string PublicId { get; set; }
 
         /// <summary>
-        /// 作者
+        /// 作者；预留字段，当前不对用户透出
         /// </summary>
         [XmlElement("source_author")]
         public string SourceAuthor { get; set; }
@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public List<SourceMediaInfo> SourceMediaInfos { get; set; }
 
         /// <summary>
-        /// 关联服务,目前只支持一个，offerId为关联的服务ID，目前只支持小程序，offerId为小程序ID，offerType为 mini_app
+        /// 内容关联服务，1个内容最多关联1个服务；offerId为关联的服务ID，支持小程序/小程序服务/优惠券活动
         /// </summary>
         [XmlArray("source_offers")]
         [XmlArrayItem("source_offer")]
@@ -55,7 +55,7 @@ namespace Aop.Api.Domain
         public string SourcePublishDate { get; set; }
 
         /// <summary>
-        /// 文章的摘要
+        /// 文章摘要；预留字段，当前不对用户透出
         /// </summary>
         [XmlElement("source_summary")]
         public string SourceSummary { get; set; }

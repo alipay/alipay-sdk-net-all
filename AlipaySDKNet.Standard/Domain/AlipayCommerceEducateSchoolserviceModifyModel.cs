@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string OutServiceId { get; set; }
 
         /// <summary>
+        /// 学校名称
+        /// </summary>
+        [XmlElement("school_name")]
+        public string SchoolName { get; set; }
+
+        /// <summary>
         /// 服务code
         /// </summary>
         [XmlElement("service_app_id")]
