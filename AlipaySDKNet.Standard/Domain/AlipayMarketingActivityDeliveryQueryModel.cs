@@ -28,5 +28,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("delivery_id")]
         public string DeliveryId { get; set; }
+
+        /// <summary>
+        /// 商户接入模式  枚举值 SELF_MODE 商户自接入模式 AGENCY_MODE 服务商代接入模式
+        /// </summary>
+        [XmlElement("merchant_access_mode")]
+        public string MerchantAccessMode { get; set; }
     }
 }

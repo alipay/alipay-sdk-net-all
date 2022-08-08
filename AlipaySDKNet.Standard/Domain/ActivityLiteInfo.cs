@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ActivityLiteInfo : AopObject
     {
         /// <summary>
+        /// 活动基础信息
+        /// </summary>
+        [XmlElement("activity_base_info")]
+        public ActivityBaseInfo ActivityBaseInfo { get; set; }
+
+        /// <summary>
         /// 活动id
         /// </summary>
         [XmlElement("activity_id")]
@@ -52,16 +58,46 @@ namespace Aop.Api.Domain
         public string PublishStartTime { get; set; }
 
         /// <summary>
+        /// 券可用范围
+        /// </summary>
+        [XmlElement("voucher_available_scope_info")]
+        public VoucherAvailableScopeInfo VoucherAvailableScopeInfo { get; set; }
+
+        /// <summary>
+        /// 券优惠信息
+        /// </summary>
+        [XmlElement("voucher_deduct_info")]
+        public VoucherDeductInfo VoucherDeductInfo { get; set; }
+
+        /// <summary>
         /// 券展示规则
         /// </summary>
         [XmlElement("voucher_display_lite_info")]
         public CommonVoucherDisplayLiteInfo VoucherDisplayLiteInfo { get; set; }
 
         /// <summary>
+        /// 券展示信息
+        /// </summary>
+        [XmlElement("voucher_display_pattern_info")]
+        public VoucherDisplayPatternInfo VoucherDisplayPatternInfo { get; set; }
+
+        /// <summary>
+        /// 券发放
+        /// </summary>
+        [XmlElement("voucher_send_mode_info")]
+        public VoucherSendModeInfo VoucherSendModeInfo { get; set; }
+
+        /// <summary>
         /// 券类型。  枚举值： FIX_VOUCHER：满减券； DISCOUNT_VOUCHER：折扣券； SPECIAL_VOUCHER：特价券； EXCHANGE_VOUCHER: 兑换券；
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }
+
+        /// <summary>
+        /// 券核销
+        /// </summary>
+        [XmlElement("voucher_use_rule_info")]
+        public VoucherUseRuleInfo VoucherUseRuleInfo { get; set; }
 
         /// <summary>
         /// 券核销规则

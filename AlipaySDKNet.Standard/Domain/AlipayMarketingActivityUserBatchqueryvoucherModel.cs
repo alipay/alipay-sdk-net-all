@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BelongMerchantId { get; set; }
 
         /// <summary>
+        /// 商户接入模式  枚举值 SELF_MODE 商户自接入模式 AGENCY_MODE 服务商代接入模式
+        /// </summary>
+        [XmlElement("merchant_access_mode")]
+        public string MerchantAccessMode { get; set; }
+
+        /// <summary>
         /// 分页查询页码。  限制: 必须为大于0的整数
         /// </summary>
         [XmlElement("page_num")]

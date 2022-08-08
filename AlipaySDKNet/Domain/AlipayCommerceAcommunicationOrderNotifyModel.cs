@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
-        /// SUCCESS 业务办理成功 FAIL 业务办理失败 在回调接口中只有终态
+        /// SUCCESS 业务办理成功 FAILED 业务办理失败 在回调接口中只有终态
         /// </summary>
         [XmlElement("out_order_status")]
         public string OutOrderStatus { get; set; }

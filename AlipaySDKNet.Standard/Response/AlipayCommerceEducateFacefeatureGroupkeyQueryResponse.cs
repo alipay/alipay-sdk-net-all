@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceEducateFacefeatureGroupkeyQueryResponse : AopResponse
     {
         /// <summary>
-        /// 人脸库key
+        /// 学校人脸库ID
         /// </summary>
         [XmlElement("group_key")]
         public string GroupKey { get; set; }

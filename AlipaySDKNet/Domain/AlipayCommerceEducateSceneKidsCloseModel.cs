@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 家长uid。（如果是关闭家长代开通，当前参数必选）
+        /// 用于开通一脸通行的支付宝账户 uid。如果是父母为孩子开通，则为父母支付宝 uid；如果是用户为本人开通，则为本人支付宝 uid（如果是关闭家长代开通，当前参数必选）
         /// </summary>
         [XmlElement("parent_uid")]
         public string ParentUid { get; set; }
 
         /// <summary>
-        /// 学校外标，即学校的统一信用编码。（当biz_code为SCHOOL_PAYMENT时，当前参数必选）
+        /// 学校外标（当biz_code为SCHOOL_PAYMENT时，当前参数必选）
         /// </summary>
         [XmlElement("school_stdcode")]
         public string SchoolStdcode { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string SubBizCode { get; set; }
 
         /// <summary>
-        /// 蚂蚁统一会员ID （当biz_code为SCHOOL_PAYMENT时，当前参数必选）
+        /// 刷脸用户id（当biz_code为SCHOOL_PAYMENT时，当前参数必选）
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

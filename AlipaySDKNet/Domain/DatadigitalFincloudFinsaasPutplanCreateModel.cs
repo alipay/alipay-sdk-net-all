@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string ActivityPage { get; set; }
 
         /// <summary>
+        /// 活动主标题
+        /// </summary>
+        [XmlElement("activity_title")]
+        public string ActivityTitle { get; set; }
+
+        /// <summary>
+        /// 权益描述内容
+        /// </summary>
+        [XmlElement("benefit_desc")]
+        public string BenefitDesc { get; set; }
+
+        /// <summary>
         /// 计费方式
         /// </summary>
         [XmlElement("bill_way")]
@@ -52,6 +64,12 @@ namespace Aop.Api.Domain
         public string CustomizePage { get; set; }
 
         /// <summary>
+        /// 详情页标题
+        /// </summary>
+        [XmlElement("detail_page_title")]
+        public string DetailPageTitle { get; set; }
+
+        /// <summary>
         /// 投放计划结束时间
         /// </summary>
         [XmlElement("end_time")]
@@ -68,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("page_type")]
         public string PageType { get; set; }
+
+        /// <summary>
+        /// 列表页展示图
+        /// </summary>
+        [XmlElement("pic_url")]
+        public string PicUrl { get; set; }
 
         /// <summary>
         /// 投放内容

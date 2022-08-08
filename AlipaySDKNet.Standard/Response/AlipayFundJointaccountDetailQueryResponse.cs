@@ -30,7 +30,7 @@ namespace Aop.Api.Response
         public List<JointAccountQuotaRespDTO> AccountQuota { get; set; }
 
         /// <summary>
-        /// 账户状态<br> -NORMAL：正常<br> -RELEASING：注销中<br> -RELEASED：已注销<br>
+        /// 账户状态<br> -NORMAL：正常<br> -RELEASING：注销中<br> -RELEASED：已注销<br> - FREEZE：冻结
         /// </summary>
         [XmlElement("account_status")]
         public string AccountStatus { get; set; }
@@ -96,5 +96,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 生息状态：</br> - MAKING    ：开启中</br> - MADE.       ：已开启</br> - CLEARING：关闭中</br> - NONE.       ：未生息
+        /// </summary>
+        [XmlElement("profit_status")]
+        public string ProfitStatus { get; set; }
+
+        /// <summary>
+        /// 昨日收益
+        /// </summary>
+        [XmlElement("yesterday_profit")]
+        public string YesterdayProfit { get; set; }
     }
 }

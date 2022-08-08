@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public ZMGOBasicConfig BasicConfig { get; set; }
 
         /// <summary>
+        /// 芝麻GO模板拓展配置
+        /// </summary>
+        [XmlElement("ext_config")]
+        public ZMGOExtConfig ExtConfig { get; set; }
+
+        /// <summary>
         /// 芝麻GO模板义务配置，若为承诺模式，必传
         /// </summary>
         [XmlElement("obligation_config")]

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string VoucherCode { get; set; }
 
         /// <summary>
-        /// 发奖后返回的与券码对应的券码使用链接，在支付宝卡包-券详情以二维码方式展示 注意: 该链接风控审核不通过，将继续使用券码生成二维码
+        /// 发奖后返回的与券码对应的券码使用链接，在支付宝卡包-券详情以二维码方式展示 注意: 该链接审核不通过，将继续使用券码生成二维码
         /// </summary>
         [XmlElement("voucher_code_url")]
         public string VoucherCodeUrl { get; set; }

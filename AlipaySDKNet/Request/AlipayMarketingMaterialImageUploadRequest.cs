@@ -26,6 +26,11 @@ namespace Aop.Api.Request
         /// </summary>
         public string FileKey { get; set; }
 
+        /// <summary>
+        /// 商户接入模式  枚举值 SELF_MODE 商户自接入模式 AGENCY_MODE 服务商代接入模式
+        /// </summary>
+        public string MerchantAccessMode { get; set; }
+
         #region IAopRequest Members
 		private bool needEncrypt=false;
 		private string apiVersion = "1.0";
@@ -113,6 +118,7 @@ namespace Aop.Api.Request
             AopDictionary parameters = new AopDictionary();
             parameters.Add("belong_merchant_info", this.BelongMerchantInfo);
             parameters.Add("file_key", this.FileKey);
+            parameters.Add("merchant_access_mode", this.MerchantAccessMode);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);

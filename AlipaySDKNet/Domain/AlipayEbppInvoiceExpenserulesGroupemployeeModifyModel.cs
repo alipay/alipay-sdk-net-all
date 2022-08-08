@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 企业码企业id
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
+
+        /// <summary>
         /// 费控规则ID列表
         /// </summary>
         [XmlArray("group_id_list")]

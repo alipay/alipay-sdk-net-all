@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string BizCode { get; set; }
 
         /// <summary>
-        /// 需要将该字段返回给学校
+        /// 证件号码
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
@@ -27,13 +27,13 @@ namespace Aop.Api.Response
         public string CertType { get; set; }
 
         /// <summary>
-        /// 家长支付宝账户的脱敏信息
+        /// 家长支付宝账户的脱敏信息（特例：特殊标识"ALREADY_RELEASED"，须通过技术支持反馈来关闭开通记录）
         /// </summary>
         [XmlElement("parent_logon_id")]
         public string ParentLogonId { get; set; }
 
         /// <summary>
-        /// 家长uid。其为当前开通的支付宝会员id，用于支付，与刷脸uid不同（历史原因，部分学生和教职工本人开通，其刷脸uid与当前uid一致）
+        /// 用于开通一脸通行的支付宝账户 uid。如果是父母为孩子开通，则为父母支付宝 uid；如果是用户为本人开通，则为本人支付宝 uid。
         /// </summary>
         [XmlElement("parent_user_id")]
         public string ParentUserId { get; set; }
@@ -57,13 +57,13 @@ namespace Aop.Api.Response
         public string SchoolFacePaymentStatus { get; set; }
 
         /// <summary>
-        /// 学校外标（即学校的统一信用编码）
+        /// 学校外标
         /// </summary>
         [XmlElement("school_stdcode")]
         public string SchoolStdcode { get; set; }
 
         /// <summary>
-        /// 用户uid。用于扫脸和刷脸支付
+        /// 刷脸用户id
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

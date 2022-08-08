@@ -102,6 +102,12 @@ namespace Aop.Api.Response
         public List<TradeFundBill> RefundDetailItemList { get; set; }
 
         /// <summary>
+        /// 本次退款金额中退惠营宝的金额
+        /// </summary>
+        [XmlElement("refund_hyb_amount")]
+        public string RefundHybAmount { get; set; }
+
+        /// <summary>
         /// 发起退款时，传入的退款原因
         /// </summary>
         [XmlElement("refund_reason")]

@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 业务渠道</br> 补充说明：</br> 需要商户侧必传，支付宝侧不做强校验
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// 当前合花群中的自动攒计划唯一标识列表<br> 补充说明：自动攒计划唯一标识列表最多包括30个<br> - 该字段可新增自动攒计划后，由alipay.fund.jointaccount.depositplan.list.query中返回
         /// </summary>
         [XmlArray("fund_plan_id_list")]

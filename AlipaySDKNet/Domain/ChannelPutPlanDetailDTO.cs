@@ -11,16 +11,46 @@ namespace Aop.Api.Domain
     public class ChannelPutPlanDetailDTO : AopObject
     {
         /// <summary>
-        /// 自定义活动页面地址
+        /// 已有活动页面 code
         /// </summary>
         [XmlElement("activity_page")]
         public string ActivityPage { get; set; }
+
+        /// <summary>
+        /// 已有活动页面名称
+        /// </summary>
+        [XmlElement("activity_page_name")]
+        public string ActivityPageName { get; set; }
+
+        /// <summary>
+        /// 已有活动页面链接
+        /// </summary>
+        [XmlElement("activity_page_url")]
+        public string ActivityPageUrl { get; set; }
+
+        /// <summary>
+        /// 活动主标题
+        /// </summary>
+        [XmlElement("activity_title")]
+        public string ActivityTitle { get; set; }
+
+        /// <summary>
+        /// 权益描述
+        /// </summary>
+        [XmlElement("benefit_desc")]
+        public string BenefitDesc { get; set; }
 
         /// <summary>
         /// 计费方式
         /// </summary>
         [XmlElement("bill_way")]
         public string BillWay { get; set; }
+
+        /// <summary>
+        /// 渠道 code，渠道信息唯一标识
+        /// </summary>
+        [XmlElement("channel_code")]
+        public string ChannelCode { get; set; }
 
         /// <summary>
         /// 投放计划绑定渠道 id
@@ -54,10 +84,23 @@ namespace Aop.Api.Domain
         public List<string> CrowdIds { get; set; }
 
         /// <summary>
+        /// 人群信息
+        /// </summary>
+        [XmlArray("crowd_info")]
+        [XmlArrayItem("channel_put_plan_crowd_d_t_o")]
+        public List<ChannelPutPlanCrowdDTO> CrowdInfo { get; set; }
+
+        /// <summary>
         /// 自定义活动页面地址
         /// </summary>
         [XmlElement("customize_page")]
         public string CustomizePage { get; set; }
+
+        /// <summary>
+        /// 详情页标题
+        /// </summary>
+        [XmlElement("detail_page_title")]
+        public string DetailPageTitle { get; set; }
 
         /// <summary>
         /// 创建时间
@@ -112,6 +155,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("page_type")]
         public string PageType { get; set; }
+
+        /// <summary>
+        /// 列表页展示图
+        /// </summary>
+        [XmlElement("pic_url")]
+        public string PicUrl { get; set; }
 
         /// <summary>
         /// 投放计划拒绝原因

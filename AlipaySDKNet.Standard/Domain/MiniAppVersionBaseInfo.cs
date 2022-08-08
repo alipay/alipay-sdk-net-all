@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ExtJson { get; set; }
 
         /// <summary>
+        /// 包版本构建拓展参数
+        /// </summary>
+        [XmlElement("extend_info")]
+        public string ExtendInfo { get; set; }
+
+        /// <summary>
         /// 更新时间
         /// </summary>
         [XmlElement("gmt_modified")]

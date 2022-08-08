@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string OrderPayMode { get; set; }
 
         /// <summary>
-        /// 商户请求号，标识一次请求的唯一id，用于幂等控制。部分履约支付场景下必传。
+        /// 商户请求号，标识一次请求的唯一id，用于幂等控制。
         /// </summary>
         [XmlElement("out_request_no")]
         public string OutRequestNo { get; set; }

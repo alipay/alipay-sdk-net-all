@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayDigitalopUcdpApedataSyncModel : AopObject
     {
         /// <summary>
+        /// 内容数据的列表
+        /// </summary>
+        [XmlArray("content_list")]
+        [XmlArrayItem("ape_content_item")]
+        public List<ApeContentItem> ContentList { get; set; }
+
+        /// <summary>
         /// 同步数据的列表
         /// </summary>
         [XmlArray("data_list")]

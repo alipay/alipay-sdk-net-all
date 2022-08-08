@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string Account { get; set; }
 
         /// <summary>
+        /// 作为查询返回结果：分账收款方绑定时的支付宝登录号。分账关系绑定（alipay.trade.royalty.relation.bind）时，通过type为loginName绑定传入的支付宝登录号，若使用userId绑定则不返回。
+        /// </summary>
+        [XmlElement("bind_login_name")]
+        public string BindLoginName { get; set; }
+
+        /// <summary>
+        /// 作为查询返回结果：当前userId对应的支付宝登录号。当login_name与bind_login_name不相等时，表明该支付宝账户发生了登录号变更。
+        /// </summary>
+        [XmlElement("login_name")]
+        public string LoginName { get; set; }
+
+        /// <summary>
         /// 分账关系描述
         /// </summary>
         [XmlElement("memo")]

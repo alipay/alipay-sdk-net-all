@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string IsvName { get; set; }
 
         /// <summary>
-        /// 国家统一分配的学校社会信用代码
+        /// 学校外标
         /// </summary>
         [XmlElement("school_stdcode")]
         public string SchoolStdcode { get; set; }

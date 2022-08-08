@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class IndirectBenefitPersonInfo : AopObject
     {
         /// <summary>
-        /// 证件反面照（只有身份证类型需要上传反面，使用图片上传接口）
+        /// 受益人证件反面照（使用图片上传接口的image_id）。当证件类型为身份证时，此字段必传；当证件类型为非身份证时，此字段非必传。
         /// </summary>
         [XmlElement("card_back_img")]
         public string CardBackImg { get; set; }
 
         /// <summary>
-        /// 证件正面照（使用图片上传接口）
+        /// 受益人证件正面照（使用图片上传接口的image_id）
         /// </summary>
         [XmlElement("card_front_img")]
         public string CardFrontImg { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateScenePhotoremoteApplyModel : AopObject
     {
         /// <summary>
-        /// 证件号。
+        /// 证件编号
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string ParentPhoneNumber { get; set; }
 
         /// <summary>
-        /// 学校外标（即学校的统一信用编码）。（注：若您不知道学校的统一信用编码，请联系对应的业务/产品咨询）
+        /// 学校外标
         /// </summary>
         [XmlElement("school_std_code")]
         public string SchoolStdCode { get; set; }
 
         /// <summary>
-        /// 学生姓名。
+        /// 学生/教职工/访客姓名
         /// </summary>
         [XmlElement("student_name")]
         public string StudentName { get; set; }

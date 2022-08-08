@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public List<string> EmployeeList { get; set; }
 
         /// <summary>
+        /// 企业码企业id
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
+
+        /// <summary>
         /// 费控条件列表 特殊说明： 1）至少存在日额度（QUOTA_DAY）、月额度（QUOTA_MONTH）、有效期总额度（QUOTA_TOTAL）三者中的一个额度条件； 2）如果费用类型为MEAL，费控维度商户（MEAL_MERCHANT）和商户类型（MCC）对应的费控条件必须存在其一且不能同时存在； 3）如果费用类型为METRO，费控维度地铁卡类型（CARD_TYPE）对应的费控条件必须存在； 4）如果因公场景为OVERTIME，费控维度时间段（ALARM_CLOCK_TIME）对应的费控条件必须存在； 5）不能存在重复的费控维度对应的费控条件； 6）非MEAL费用类型，商户仅支持MERCHANT，不支持MEAL_MERCHANT
         /// </summary>
         [XmlArray("expense_ctrl_rule_info_list")]

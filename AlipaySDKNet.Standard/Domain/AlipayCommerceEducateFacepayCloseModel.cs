@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateFacepayCloseModel : AopObject
     {
         /// <summary>
-        /// 采集人脸学生uid
+        /// 刷脸用户id
         /// </summary>
         [XmlElement("face_uid")]
         public string FaceUid { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Scene { get; set; }
 
         /// <summary>
-        /// 学生所在学校外标
+        /// 学校外标
         /// </summary>
         [XmlElement("school_stdcode")]
         public string SchoolStdcode { get; set; }

@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string LegalPersonalName { get; set; }
 
         /// <summary>
+        /// 营业执照图片的Base64编码字符串，图片大小不能超过2M
+        /// </summary>
+        [XmlElement("license_pic")]
+        public string LicensePic { get; set; }
+
+        /// <summary>
         /// 开发者外部订单号，通过开发者账号+outOrderNo做业务幂等
         /// </summary>
         [XmlElement("out_order_no")]

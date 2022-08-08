@@ -43,6 +43,24 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 业务渠道</br> 补充说明：</br> 需要商户侧必传，支付宝侧不做强校验
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
+        /// 资金转入计划详情</br> 补充说明：</br> 开户+手动转入场景，必传
+        /// </summary>
+        [XmlElement("deposit")]
+        public DepositForm Deposit { get; set; }
+
+        /// <summary>
+        /// 资金计划详情</br> 补充说明：</br>开户+自动攒场景，必传
+        /// </summary>
+        [XmlElement("fund_plan")]
+        public FundPlanForm FundPlan { get; set; }
+
+        /// <summary>
         /// 开户账号：<br> -当identity_type是ALIPAY_USER_ID时填支付宝会员ID（2088开头）<br> -当identity_type是ALIPAY_LOGON_ID 时填支付宝登录号<br> -当identity_type是OUT_USER_ID时填外部平台的用户uid
         /// </summary>
         [XmlElement("identity")]

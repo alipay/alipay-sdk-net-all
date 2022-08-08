@@ -114,6 +114,13 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// 返回参数选项。 商户通过传递该参数来定制需要额外返回的信息字段，数组格式。包括但不限于：["enterprise_pay_info","hyb_amount"]
+        /// </summary>
+        [XmlArray("query_options")]
+        [XmlArrayItem("string")]
+        public List<string> QueryOptions { get; set; }
+
+        /// <summary>
         /// 收货人及地址信息
         /// </summary>
         [XmlElement("receiver_address_info")]

@@ -132,6 +132,12 @@ namespace Aop.Api.Response
         public string GmtPayment { get; set; }
 
         /// <summary>
+        /// 惠营宝回票金额
+        /// </summary>
+        [XmlElement("hyb_amount")]
+        public string HybAmount { get; set; }
+
+        /// <summary>
         /// 交易中可给用户开具发票的金额
         /// </summary>
         [XmlElement("invoice_amount")]

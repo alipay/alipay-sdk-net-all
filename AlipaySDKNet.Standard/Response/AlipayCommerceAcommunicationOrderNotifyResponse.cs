@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string OutOrderNo { get; set; }
 
         /// <summary>
-        /// SUCCESS结算成功 FAIL失败退款
+        /// SUCCESS结算成功 FAILED失败退款
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

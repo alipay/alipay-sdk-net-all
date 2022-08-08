@@ -42,6 +42,13 @@ namespace Aop.Api.Domain
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// 承接的itemId列表
+        /// </summary>
+        [XmlArray("landing_item_list")]
+        [XmlArrayItem("string")]
+        public List<string> LandingItemList { get; set; }
+
+        /// <summary>
         /// 用户当前位置纬度
         /// </summary>
         [XmlElement("latitude")]

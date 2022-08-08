@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class UserVoucherInfo : AopObject
     {
         /// <summary>
+        /// 活动基础信息
+        /// </summary>
+        [XmlElement("activity_base_info")]
+        public ActivityBaseInfo ActivityBaseInfo { get; set; }
+
+        /// <summary>
         /// 活动id
         /// </summary>
         [XmlElement("activity_id")]
@@ -40,10 +46,34 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// 用户券实例信息
+        /// </summary>
+        [XmlElement("user_voucher_base_info")]
+        public UserVoucherBaseInfo UserVoucherBaseInfo { get; set; }
+
+        /// <summary>
+        /// 券可用范围
+        /// </summary>
+        [XmlElement("voucher_available_scope_info")]
+        public VoucherAvailableScopeInfo VoucherAvailableScopeInfo { get; set; }
+
+        /// <summary>
+        /// 券优惠信息
+        /// </summary>
+        [XmlElement("voucher_deduct_info")]
+        public VoucherDeductInfo VoucherDeductInfo { get; set; }
+
+        /// <summary>
         /// 券展示信息
         /// </summary>
         [XmlElement("voucher_display_lite_info")]
         public CommonVoucherDisplayLiteInfo VoucherDisplayLiteInfo { get; set; }
+
+        /// <summary>
+        /// 券展示信息
+        /// </summary>
+        [XmlElement("voucher_display_pattern_info")]
+        public VoucherDisplayPatternInfo VoucherDisplayPatternInfo { get; set; }
 
         /// <summary>
         /// 用户券id。支付宝为用户优惠券唯一分配的id。
@@ -56,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("voucher_name")]
         public string VoucherName { get; set; }
+
+        /// <summary>
+        /// 券发放信息
+        /// </summary>
+        [XmlElement("voucher_send_mode_info")]
+        public VoucherSendModeInfo VoucherSendModeInfo { get; set; }
 
         /// <summary>
         /// 券状态 枚举值 SENDED：可用 USED：已核销 EXPIRED:已过期(可查询6个月内数据)

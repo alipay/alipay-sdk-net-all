@@ -114,6 +114,13 @@ namespace Aop.Api.Domain
         public string QrCodeTimeoutExpress { get; set; }
 
         /// <summary>
+        /// 返回参数选项。 商户通过传递该参数来定制需要额外返回的信息字段，数组格式。包括但不限于：["hyb_amount","enterprise_pay_info"]
+        /// </summary>
+        [XmlArray("query_options")]
+        [XmlArrayItem("string")]
+        public List<string> QueryOptions { get; set; }
+
+        /// <summary>
         /// 描述分账信息，json格式。
         /// </summary>
         [XmlElement("royalty_info")]

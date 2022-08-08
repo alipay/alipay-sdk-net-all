@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMerchantIndirectAuthorderQuerystatusModel : AopObject
     {
         /// <summary>
-        /// 意愿申请单号，参数二选一
+        /// 商家认证申请单号，参数二选一
         /// </summary>
         [XmlElement("order_no")]
         public string OrderNo { get; set; }

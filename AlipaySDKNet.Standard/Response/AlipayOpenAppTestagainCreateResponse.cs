@@ -8,5 +8,10 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayOpenAppTestagainCreateResponse : AopResponse
     {
+        /// <summary>
+        /// 1313
+        /// </summary>
+        [XmlElement("xxxxxx")]
+        public string Xxxxxx { get; set; }
     }
 }

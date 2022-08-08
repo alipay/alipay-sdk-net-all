@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string EffectiveStartDate { get; set; }
 
         /// <summary>
+        /// 企业码企业id
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
+
+        /// <summary>
         /// 费控规则条件列表 特殊说明：新增费控条件/修改费控条件/删除费控条件操作时必填
         /// </summary>
         [XmlArray("expense_ctrl_rule_info_list")]

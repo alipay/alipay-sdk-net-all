@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 业务渠道</br> 补充说明：</br> 需要商户侧必传，支付宝侧不做强校验
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// （发起人）用户唯一标识
         /// </summary>
         [XmlElement("identity")]

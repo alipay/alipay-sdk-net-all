@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bill_type")]
         public string BillType { get; set; }
+
+        /// <summary>
+        /// 二级商户smid
+        /// </summary>
+        [XmlElement("smid")]
+        public string Smid { get; set; }
     }
 }

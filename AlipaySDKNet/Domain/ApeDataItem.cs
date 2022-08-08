@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string Brand { get; set; }
 
         /// <summary>
+        /// 商品购买链接
+        /// </summary>
+        [XmlElement("buy_url")]
+        public string BuyUrl { get; set; }
+
+        /// <summary>
         /// 商品不同级类目之间用$##$分隔，且自左向右类目层级逐渐细化。类目值推荐全部传名称，举例如“家电$##$电视$##$OLED电视”。某一段为空时直接传空字符串，如第二段为空， 则传“家电$##$$##$OLED电视”。如果有多个类目，多个类目之间用,分割。
         /// </summary>
         [XmlElement("cate")]
@@ -66,6 +72,12 @@ namespace Aop.Api.Domain
         public string Id { get; set; }
 
         /// <summary>
+        /// 需要公域推广，默认情况下为false
+        /// </summary>
+        [XmlElement("need_public_promo")]
+        public bool NeedPublicPromo { get; set; }
+
+        /// <summary>
         /// 商品原价/划线价
         /// </summary>
         [XmlElement("origin_price")]
@@ -83,6 +95,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("praise_cnt")]
         public long PraiseCnt { get; set; }
+
+        /// <summary>
+        /// 商品的logo图片列表，可用于公域推广对用户展示的图片，建议600*600
+        /// </summary>
+        [XmlArray("promo_pic_url_list")]
+        [XmlArrayItem("string")]
+        public List<string> PromoPicUrlList { get; set; }
 
         /// <summary>
         /// 商品上架时间戳，精确到秒，如1520327038

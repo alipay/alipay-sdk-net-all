@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipayMarketingActivityQueryResponse : AopResponse
     {
         /// <summary>
+        /// 活动基础信息
+        /// </summary>
+        [XmlElement("activity_base_info")]
+        public ActivityBaseInfo ActivityBaseInfo { get; set; }
+
+        /// <summary>
         /// 活动id
         /// </summary>
         [XmlElement("activity_id")]
@@ -46,10 +52,34 @@ namespace Aop.Api.Response
         public string PublishStartTime { get; set; }
 
         /// <summary>
+        /// 可用范围
+        /// </summary>
+        [XmlElement("voucher_available_scope_info")]
+        public VoucherAvailableScopeInfo VoucherAvailableScopeInfo { get; set; }
+
+        /// <summary>
+        /// 券优惠抵扣信息
+        /// </summary>
+        [XmlElement("voucher_deduct_info")]
+        public VoucherDeductInfo VoucherDeductInfo { get; set; }
+
+        /// <summary>
         /// 券展示信息
         /// </summary>
         [XmlElement("voucher_display_info")]
         public CommonVoucherDisplayInfo VoucherDisplayInfo { get; set; }
+
+        /// <summary>
+        /// 券展示信息
+        /// </summary>
+        [XmlElement("voucher_display_pattern_info")]
+        public VoucherDisplayPatternInfo VoucherDisplayPatternInfo { get; set; }
+
+        /// <summary>
+        /// 券发放模式
+        /// </summary>
+        [XmlElement("voucher_send_mode_info")]
+        public VoucherSendModeInfo VoucherSendModeInfo { get; set; }
 
         /// <summary>
         /// 券发放规则
@@ -68,5 +98,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("voucher_use_rule")]
         public CommonVoucherUseRule VoucherUseRule { get; set; }
+
+        /// <summary>
+        /// 券核销规则
+        /// </summary>
+        [XmlElement("voucher_use_rule_info")]
+        public VoucherUseRuleInfo VoucherUseRuleInfo { get; set; }
     }
 }

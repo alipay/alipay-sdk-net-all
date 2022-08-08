@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ChannelType { get; set; }
 
         /// <summary>
+        /// 表单模板id+唯一+渠道列表查询+数据库
+        /// </summary>
+        [XmlElement("form_template_id")]
+        public long FormTemplateId { get; set; }
+
+        /// <summary>
         /// 渠道图片+不唯一+渠道列表查询+数据库
         /// </summary>
         [XmlElement("pic_url")]

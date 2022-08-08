@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string AgreementStatus { get; set; }
 
         /// <summary>
-        /// 开通/授权时间，agreement_status为VALID时消费
+        /// 开通时间，agreement_status为VALID有效。
         /// </summary>
         [XmlElement("biz_time")]
         public string BizTime { get; set; }

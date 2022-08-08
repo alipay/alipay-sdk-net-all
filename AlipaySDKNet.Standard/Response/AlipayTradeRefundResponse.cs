@@ -96,6 +96,12 @@ namespace Aop.Api.Response
         public string RefundFee { get; set; }
 
         /// <summary>
+        /// 本次请求退惠营宝金额
+        /// </summary>
+        [XmlElement("refund_hyb_amount")]
+        public string RefundHybAmount { get; set; }
+
+        /// <summary>
         /// 退回的前置资产列表
         /// </summary>
         [XmlElement("refund_preset_paytool_list")]

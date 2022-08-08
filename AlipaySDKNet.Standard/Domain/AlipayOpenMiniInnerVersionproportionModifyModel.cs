@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BundleId { get; set; }
 
         /// <summary>
+        /// 开发者id（平替操作员id）
+        /// </summary>
+        [XmlElement("dev_id")]
+        public string DevId { get; set; }
+
+        /// <summary>
         /// 小程序id
         /// </summary>
         [XmlElement("mini_app_id")]

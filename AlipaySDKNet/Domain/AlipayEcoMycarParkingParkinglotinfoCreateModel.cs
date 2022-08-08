@@ -84,13 +84,13 @@ namespace Aop.Api.Domain
         public string IsvMobile { get; set; }
 
         /// <summary>
-        /// 该参数废弃
+        /// 纬度
         /// </summary>
         [XmlElement("latitude")]
         public string Latitude { get; set; }
 
         /// <summary>
-        /// 该参数废弃
+        /// 经度
         /// </summary>
         [XmlElement("longitude")]
         public string Longitude { get; set; }

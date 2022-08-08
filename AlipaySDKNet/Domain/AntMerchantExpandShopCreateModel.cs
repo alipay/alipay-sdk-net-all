@@ -131,7 +131,7 @@ namespace Aop.Api.Domain
         public List<IndustryQualificationInfo> Qualifications { get; set; }
 
         /// <summary>
-        /// 场景，非加油站等特殊门店无需关注。
+        /// 场景，非加油站/酒店等特殊门店无需关注。
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }

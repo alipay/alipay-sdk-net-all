@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string BizTransId { get; set; }
 
         /// <summary>
+        /// 业务渠道</br> 补充说明：</br> 需要商户侧必传，支付宝侧不做强校验
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// 资金操作类型：<br/> - FREEZE：提现申请 <br/> - UNFREEZE：提现审批拒绝 <br/> - WITHDRAW：提现审批同意 <br/> - DEPOSIT：手动转入 <br/> - SINGLE_TRANSFER：存量资金搬迁
         /// </summary>
         [XmlElement("operate_type")]

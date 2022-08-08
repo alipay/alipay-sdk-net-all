@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public AuthIdentityInfo AuthIdentityInfo { get; set; }
 
         /// <summary>
-        /// 受益人身份信息，仅主体为企业且经营者/法人不是最终受益所有人，则需提填写受益所有人信息。
+        /// 受益人信息。 如下情况时必填：主体类型为企业，且其法人/经营者不为最终受益所有人（即：legal_person_info内的is_benefit_person=false）；其他情况不填。
         /// </summary>
         [XmlElement("benefit_person_info")]
         public IndirectBenefitPersonInfo BenefitPersonInfo { get; set; }

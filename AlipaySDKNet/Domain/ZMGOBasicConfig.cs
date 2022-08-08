@@ -16,10 +16,22 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
+        /// 商家客服电话
+        /// </summary>
+        [XmlElement("contact")]
+        public string Contact { get; set; }
+
+        /// <summary>
         /// 运营商商户支付宝ID。若非ISV代理模式，也就是商户自运营模式，此属性取值与partner_id一致。
         /// </summary>
         [XmlElement("isv_pid")]
         public string IsvPid { get; set; }
+
+        /// <summary>
+        /// 商户LOGO
+        /// </summary>
+        [XmlElement("merchant_custom_logo")]
+        public string MerchantCustomLogo { get; set; }
 
         /// <summary>
         /// 外部业务单号，供幂等使用，需保证每次请求的值都不同

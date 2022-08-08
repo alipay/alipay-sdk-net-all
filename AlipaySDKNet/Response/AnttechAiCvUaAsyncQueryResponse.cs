@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string ResultCode { get; set; }
 
         /// <summary>
+        /// 预测结果详情
+        /// </summary>
+        [XmlElement("result_detail")]
+        public string ResultDetail { get; set; }
+
+        /// <summary>
         /// 返回结果msg
         /// </summary>
         [XmlElement("result_msg")]

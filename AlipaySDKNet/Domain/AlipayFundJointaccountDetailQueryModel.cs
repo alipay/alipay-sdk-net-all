@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 业务渠道</br> 补充说明：</br> 需要商户侧必传，支付宝侧不做强校验
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// 商户侧单号（查询方式一：通过传入 out_biz_no查询）<br> 补充说明：<br> -该字段与签约接口alipay.fund.jointaccount.sign请求参数中传入值保持一致
         /// </summary>
         [XmlElement("out_biz_no")]

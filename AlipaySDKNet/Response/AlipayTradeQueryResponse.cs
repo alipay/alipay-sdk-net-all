@@ -126,6 +126,12 @@ namespace Aop.Api.Response
         public HbFqPayInfo HbFqPayInfo { get; set; }
 
         /// <summary>
+        /// 惠营宝回票金额
+        /// </summary>
+        [XmlElement("hyb_amount")]
+        public string HybAmount { get; set; }
+
+        /// <summary>
         /// 行业特殊信息（例如在医保卡支付业务中，向用户返回医疗信息）。
         /// </summary>
         [XmlElement("industry_sepc_detail")]

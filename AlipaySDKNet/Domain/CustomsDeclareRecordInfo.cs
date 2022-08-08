@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
-        /// 此记录所报关的海关编号，参见“海关编号”。
+        /// 此记录所报关的海关编号，参见“ <a href="https://opendocs.alipay.com/pre-open/01x3kh#%E6%B5%B7%E5%85%B3%E7%BC%96%E5%8F%B7">海关编号</a>”。
         /// </summary>
         [XmlElement("customs_place")]
         public string CustomsPlace { get; set; }

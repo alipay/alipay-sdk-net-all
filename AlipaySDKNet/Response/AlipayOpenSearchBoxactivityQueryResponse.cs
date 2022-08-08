@@ -23,7 +23,7 @@ namespace Aop.Api.Response
         public string BoxId { get; set; }
 
         /// <summary>
-        /// 活动结束收件
+        /// 活动结束时间
         /// </summary>
         [XmlElement("end_time")]
         public string EndTime { get; set; }

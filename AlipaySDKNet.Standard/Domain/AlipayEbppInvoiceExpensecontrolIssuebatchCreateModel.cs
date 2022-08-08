@@ -11,6 +11,18 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpensecontrolIssuebatchCreateModel : AopObject
     {
         /// <summary>
+        /// 共同账户id - 适用于在企业码小程序创建的共同账户，和agreement_no搭配使用
+        /// </summary>
+        [XmlElement("account_id")]
+        public string AccountId { get; set; }
+
+        /// <summary>
+        /// 授权签约协议号
+        /// </summary>
+        [XmlElement("agreement_no")]
+        public string AgreementNo { get; set; }
+
+        /// <summary>
         /// 发放批次号，用于幂等校验本次发放
         /// </summary>
         [XmlElement("batch_no")]
@@ -29,7 +41,7 @@ namespace Aop.Api.Domain
         public string EffectiveStartDate { get; set; }
 
         /// <summary>
-        /// 企业ID
+        /// 企业ID - 适用于在企业码PC端创建的企业账号
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }

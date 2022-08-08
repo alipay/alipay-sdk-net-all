@@ -16,5 +16,23 @@ namespace Aop.Api.Response
         [XmlArray("appx_version_config_vos")]
         [XmlArrayItem("appx_version_config_vo")]
         public List<AppxVersionConfigVo> AppxVersionConfigVos { get; set; }
+
+        /// <summary>
+        /// 页码
+        /// </summary>
+        [XmlElement("page_num")]
+        public long PageNum { get; set; }
+
+        /// <summary>
+        /// 每页大小
+        /// </summary>
+        [XmlElement("page_size")]
+        public long PageSize { get; set; }
+
+        /// <summary>
+        /// 总数
+        /// </summary>
+        [XmlElement("total_number")]
+        public string TotalNumber { get; set; }
     }
 }
