@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CustomOpenTipList { get; set; }
 
         /// <summary>
+        /// 规则详情
+        /// </summary>
+        [XmlElement("custom_open_tips")]
+        public string CustomOpenTips { get; set; }
+
+        /// <summary>
         /// 担保金额额度
         /// </summary>
         [XmlElement("freeze_amount")]

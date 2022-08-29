@@ -1,14 +1,20 @@
 using System;
 using System.Collections.Generic;
 using Aop.Api.Response;
+using Aop.Api.Util;
 
 namespace Aop.Api.Request
 {
     /// <summary>
     /// AOP API: datadigital.fincloud.generalsaas.ocr.server.detect
     /// </summary>
-    public class DatadigitalFincloudGeneralsaasOcrServerDetectRequest : IAopRequest<DatadigitalFincloudGeneralsaasOcrServerDetectResponse>
+    public class DatadigitalFincloudGeneralsaasOcrServerDetectRequest : IAopUploadRequest<DatadigitalFincloudGeneralsaasOcrServerDetectResponse>
     {
+        /// <summary>
+        /// 二进制流图片，大小限制1M
+        /// </summary>
+        public FileItem FileContent { get; set; }
+
         /// <summary>
         /// 可识别OCR类型。如，ID_CARD_FRONT 身份证正面；ID_CARD_FRONT 身份证反面等。具体支持的类型以接入文档为准。
         /// </summary>
@@ -20,17 +26,17 @@ namespace Aop.Api.Request
         public string OuterOrderNo { get; set; }
 
         #region IAopRequest Members
-        private bool  needEncrypt=false;
-        private string apiVersion = "1.0";
-	    private string terminalType;
-	    private string terminalInfo;
+		private bool needEncrypt=false;
+		private string apiVersion = "1.0";
+		private string terminalType;
+		private string terminalInfo;
         private string prodCode;
-	    private string notifyUrl;
+		private string notifyUrl;
         private string returnUrl;
-	    private AopObject bizModel;
+		private AopObject bizModel;
         private Dictionary<string, string> udfParams; //add user-defined text parameters
 
-		public void SetNeedEncrypt(bool needEncrypt){
+    	 public void SetNeedEncrypt(bool needEncrypt){
              this.needEncrypt=needEncrypt;
         }
 
@@ -55,7 +61,7 @@ namespace Aop.Api.Request
             return this.returnUrl;
         }
 
-        public void SetTerminalType(String terminalType){
+		public void SetTerminalType(String terminalType){
 			this.terminalType=terminalType;
 		}
 
@@ -79,17 +85,17 @@ namespace Aop.Api.Request
             return this.prodCode;
         }
 
-        public string GetApiName()
-        {
-            return "datadigital.fincloud.generalsaas.ocr.server.detect";
-        }
-
-        public void SetApiVersion(string apiVersion){
+		public void SetApiVersion(string apiVersion){
             this.apiVersion=apiVersion;
         }
 
         public string GetApiVersion(){
             return this.apiVersion;
+        }
+
+        public string GetApiName()
+        {
+            return "datadigital.fincloud.generalsaas.ocr.server.detect";
         }
 
         public void PutOtherTextParam(string key, string value) 
@@ -112,7 +118,7 @@ namespace Aop.Api.Request
             }
             return parameters;
         }
-
+		
 		public AopObject GetBizModel()
         {
             return this.bizModel;
@@ -121,6 +127,17 @@ namespace Aop.Api.Request
         public void SetBizModel(AopObject bizModel)
         {
             this.bizModel = bizModel;
+        }
+
+        #endregion
+
+        #region IAopUploadRequest Members
+
+        public IDictionary<string, FileItem> GetFileParameters()
+        {
+            IDictionary<string, FileItem> parameters = new Dictionary<string, FileItem>();
+            parameters.Add("file_content", this.FileContent);
+            return parameters;
         }
 
         #endregion

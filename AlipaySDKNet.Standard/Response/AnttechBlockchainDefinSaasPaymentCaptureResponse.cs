@@ -39,9 +39,15 @@ namespace Aop.Api.Response
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 外部请求ID
+        /// 外部请求ID，需要支持部分请款/退款的平台必填
         /// </summary>
         [XmlElement("out_request_id")]
         public string OutRequestId { get; set; }
+
+        /// <summary>
+        /// 资金操作状态。PROCESSING(处理中);SUCCESS(成功);FAIL(失败);
+        /// </summary>
+        [XmlElement("state")]
+        public string State { get; set; }
     }
 }

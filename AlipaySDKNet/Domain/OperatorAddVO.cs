@@ -66,6 +66,13 @@ namespace Aop.Api.Domain
         public string NickName { get; set; }
 
         /// <summary>
+        /// 初始角色码清单
+        /// </summary>
+        [XmlArray("role_codes")]
+        [XmlArrayItem("string")]
+        public List<string> RoleCodes { get; set; }
+
+        /// <summary>
         /// 指定租户ID，新增值需联系蚂蚁操作员operator团队人工处理
         /// </summary>
         [XmlElement("tenant_id")]

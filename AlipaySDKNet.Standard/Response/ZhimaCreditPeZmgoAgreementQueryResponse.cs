@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string AgreementName { get; set; }
 
         /// <summary>
-        /// 协议状态。Y表示状态有效，N表示状态失效
+        /// 协议状态。Y表示状态有效，P表示状态失效中，N表示状态已失效
         /// </summary>
         [XmlElement("agreement_status")]
         public string AgreementStatus { get; set; }
@@ -31,5 +31,23 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }
+
+        /// <summary>
+        /// 代表签约芝麻GO所属业务类型
+        /// </summary>
+        [XmlElement("biz_type")]
+        public string BizType { get; set; }
+
+        /// <summary>
+        /// 该条芝麻GO协议签约时间
+        /// </summary>
+        [XmlElement("sign_time")]
+        public string SignTime { get; set; }
+
+        /// <summary>
+        /// 该芝麻GO协议开始时间
+        /// </summary>
+        [XmlElement("start_time")]
+        public string StartTime { get; set; }
     }
 }

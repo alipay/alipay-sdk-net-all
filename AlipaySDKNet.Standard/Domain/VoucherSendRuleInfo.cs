@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class VoucherSendRuleInfo : AopObject
     {
         /// <summary>
-        /// 设置此字段，允许指定单天最大发券数量。  限制:  每天发放张数*活动天数应小于等于优惠券发放总量
+        /// 设置此字段，允许指定单天最大发券数量。
         /// </summary>
         [XmlElement("max_quantity_by_day")]
         public long MaxQuantityByDay { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string PublishStartTime { get; set; }
 
         /// <summary>
-        /// 发行券的数量。  限制：  code_mode=MERCHANT_UPLOAD模式下数量必须为0。 其他模式下该数值必须是大于0的整数。
+        /// 发行券的数量。
         /// </summary>
         [XmlElement("quantity")]
         public long Quantity { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public long QuantityLimitPerUser { get; set; }
 
         /// <summary>
-        /// 周期限领配置,限制每人在固定周期内领取张数(voucher_quantity_limit_per_user),默认LIFE_CYCLE 枚举值为 DAY:每天 WEEK:每周 MONTH:每月 LIFE_CYCLE:整个活动周期
+        /// 周期限领配置,限制每人在固定周期内领取张数(voucher_quantity_limit_per_user),默认LIFE_CYCLE
         /// </summary>
         [XmlElement("quantity_limit_per_user_period_type")]
         public string QuantityLimitPerUserPeriodType { get; set; }

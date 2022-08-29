@@ -15,13 +15,13 @@ namespace Aop.Api.Response
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 授权编码值，根据输入的code_type决定具体内容，比如code_type为SHORT_URL时，返回https短链
+        /// 授权编码值，根据输入的code_type决定具体内容，比如initialize_code_type为SHORT_URL时，返回https短链；为PAGE_PARAM时返回用于跳转小程序的页面参数
         /// </summary>
         [XmlElement("initialize_code")]
         public string InitializeCode { get; set; }
 
         /// <summary>
-        /// 授权编码类型，有限枚举：1. SHORT_URL
+        /// 授权编码类型，有限枚举：1. SHORT_URL 2.PAGE_PARAM
         /// </summary>
         [XmlElement("initialize_code_type")]
         public string InitializeCodeType { get; set; }

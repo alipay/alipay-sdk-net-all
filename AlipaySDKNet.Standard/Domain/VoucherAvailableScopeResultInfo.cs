@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class VoucherAvailableScopeResultInfo : AopObject
     {
         /// <summary>
-        /// 可用地理位置
+        /// 可用地理位置。
         /// </summary>
         [XmlElement("voucher_available_geography_scope_result_info")]
         public VoucherAvailableGeographyScopeResultInfo VoucherAvailableGeographyScopeResultInfo { get; set; }

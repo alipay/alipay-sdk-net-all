@@ -73,6 +73,13 @@ namespace Aop.Api.Domain
         public string RelIpRoleType { get; set; }
 
         /// <summary>
+        /// 角色列表
+        /// </summary>
+        [XmlArray("role_codes")]
+        [XmlArrayItem("string")]
+        public List<string> RoleCodes { get; set; }
+
+        /// <summary>
         /// 操作员状态。枚举参考OperatorStatusEnum。 T=正常 W=未激活 B=已冻结 C=已删除
         /// </summary>
         [XmlElement("status")]

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public InsCompany Merchant { get; set; }
 
         /// <summary>
+        /// 合作商信息
+        /// </summary>
+        [XmlElement("partner_organization")]
+        public InsPartnerOrganization PartnerOrganization { get; set; }
+
+        /// <summary>
         /// 指定产品方案ID
         /// </summary>
         [XmlElement("product_plan_id")]

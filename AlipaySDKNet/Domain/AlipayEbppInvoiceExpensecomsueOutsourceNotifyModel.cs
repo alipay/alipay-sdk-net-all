@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpensecomsueOutsourceNotifyModel : AopObject
     {
         /// <summary>
-        /// 企业ID
+        /// 企业共同账户id
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -34,19 +34,25 @@ namespace Aop.Api.Domain
         public string DealTime { get; set; }
 
         /// <summary>
-        /// 员工ID 特殊说明：根据员工账号类型来决定为员工UID还是员工工号
+        /// 员工ID 特殊说明：根据员工账号类型来决定为员工UID、员工工号、员工企业码ID或者员工手机号
         /// </summary>
         [XmlElement("employee_id")]
         public string EmployeeId { get; set; }
 
         /// <summary>
-        /// 员工账号类型 枚举值： 0（员工支付宝账号） 1（ 员工工号）
+        /// 员工账号类型 枚举值： 0（员工支付宝账号） 1（ 员工工号） 2（员工企业码id） 3（员工手机号）
         /// </summary>
         [XmlElement("employee_id_type")]
         public long EmployeeIdType { get; set; }
 
         /// <summary>
-        /// 拓展参数 如需使用，请联系技术支持
+        /// 企业id
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
+
+        /// <summary>
+        /// 拓展参数，如果控制消费的城市，可传入消费城市的adcode，如需使用，请联系技术支持
         /// </summary>
         [XmlElement("extend")]
         public string Extend { get; set; }

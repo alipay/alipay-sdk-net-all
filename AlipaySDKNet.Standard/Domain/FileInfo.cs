@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class FileInfo : AopObject
     {
         /// <summary>
-        /// 文件类型，唯一值，枚举。  VIDEO=视频; VOICE=语音; PICTURE=图片; TEXT=文本; DOC, DOCX, XLS, XLSX, PPT, PPTX=MS Office
+        /// 文件类型，唯一值，枚举。  VIDEO=视频; VOICE=语音; PICTURE/JPG/JPEG/PNG=图片; TEXT=文本; DOC, DOCX, XLS, XLSX, PPT, PPTX=MS Office
         /// </summary>
         [XmlElement("data_type")]
         public string DataType { get; set; }
@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("file_url")]
         public string FileUrl { get; set; }
+
+        /// <summary>
+        /// 素材外部唯一标识用于风险匹配
+        /// </summary>
+        [XmlElement("origin_file_id")]
+        public string OriginFileId { get; set; }
     }
 }

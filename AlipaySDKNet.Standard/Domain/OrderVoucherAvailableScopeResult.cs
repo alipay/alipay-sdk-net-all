@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class OrderVoucherAvailableScopeResult : AopObject
     {
         /// <summary>
-        /// 可用门店请求结果
+        /// 可用门店请求结果。
         /// </summary>
         [XmlElement("order_voucher_available_shop_result")]
         public OrderVoucherAvailableShopResult OrderVoucherAvailableShopResult { get; set; }
 
         /// <summary>
-        /// 可用范围类型。 枚举值： SHOP:可用门店 CITY_CODE:可用城市
+        /// 可用范围类型。
         /// </summary>
         [XmlElement("voucher_available_type")]
         public string VoucherAvailableType { get; set; }

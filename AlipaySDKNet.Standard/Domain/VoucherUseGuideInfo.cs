@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public VoucherMiniAppUseGuideInfo MiniAppUseGuideInfo { get; set; }
 
         /// <summary>
-        /// OFFLINE_CODE 券码扫码核销 MINI_APP 小程序线上核销 SCAN_CODE 跳转付款码支付核销 CAN_USE 展示可使用
+        /// 使用引导模式
         /// </summary>
         [XmlArray("use_guide_mode")]
         [XmlArrayItem("string")]

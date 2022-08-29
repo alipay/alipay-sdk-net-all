@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ValidBeginTime { get; set; }
 
         /// <summary>
-        /// 券可使用的结束时间。 格式为yyyy-MM-dd HH:mm:ss 限制： 券可使用的结束时间valid_end_time 必须大于 券的发放结束时间 publish_end_time
+        /// 券可使用的结束时间。 格式为yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("valid_end_time")]
         public string ValidEndTime { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string VoucherName { get; set; }
 
         /// <summary>
-        /// 券状态： 枚举值: SENDED:可用 USED:已核销(即完全使用), EXPIRED:已过期(只能查询6个月内数据)
+        /// 券状态。SENDED:可用 USED:已核销(即完全使用), EXPIRED:已过期(只能查询6个月内数据)
         /// </summary>
         [XmlElement("voucher_status")]
         public string VoucherStatus { get; set; }

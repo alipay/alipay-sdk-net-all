@@ -30,6 +30,12 @@ namespace Aop.Api.Response
         public string DrawdownNo { get; set; }
 
         /// <summary>
+        /// 支用逾期天数
+        /// </summary>
+        [XmlElement("ovd_days")]
+        public string OvdDays { get; set; }
+
+        /// <summary>
         /// 网商traceId，便于查询日志内容
         /// </summary>
         [XmlElement("trace_id")]

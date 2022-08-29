@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// C端用户使用的绿色小程序appId
+        /// </summary>
+        [XmlElement("energy_appid")]
+        public string EnergyAppid { get; set; }
+
+        /// <summary>
         /// 发放的物品清单明细
         /// </summary>
         [XmlArray("item_list")]

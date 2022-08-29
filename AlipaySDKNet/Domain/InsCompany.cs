@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
+        /// 证件类型
+        /// </summary>
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
+
+        /// <summary>
         /// 渠道用户ID
         /// </summary>
         [XmlElement("channel_account_id")]
@@ -38,6 +44,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("channel_account_type")]
         public string ChannelAccountType { get; set; }
+
+        /// <summary>
+        /// 企业社会信用编号
+        /// </summary>
+        [XmlElement("company_cert_no")]
+        public string CompanyCertNo { get; set; }
+
+        /// <summary>
+        /// 企业中文名称
+        /// </summary>
+        [XmlElement("company_name")]
+        public string CompanyName { get; set; }
 
         /// <summary>
         /// 手机号

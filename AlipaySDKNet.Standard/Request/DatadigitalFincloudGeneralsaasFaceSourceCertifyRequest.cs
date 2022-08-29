@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using Aop.Api.Response;
+using Aop.Api.Util;
 
 namespace Aop.Api.Request
 {
     /// <summary>
     /// AOP API: datadigital.fincloud.generalsaas.face.source.certify
     /// </summary>
-    public class DatadigitalFincloudGeneralsaasFaceSourceCertifyRequest : IAopRequest<DatadigitalFincloudGeneralsaasFaceSourceCertifyResponse>
+    public class DatadigitalFincloudGeneralsaasFaceSourceCertifyRequest : IAopUploadRequest<DatadigitalFincloudGeneralsaasFaceSourceCertifyResponse>
     {
         /// <summary>
         /// 用户姓名，与身份证上的姓名相匹配
@@ -25,6 +26,11 @@ namespace Aop.Api.Request
         public string CertType { get; set; }
 
         /// <summary>
+        /// 二进制流图片，大小限制1M
+        /// </summary>
+        public FileItem FileContent { get; set; }
+
+        /// <summary>
         /// 客户业务单据号
         /// </summary>
         public string OuterBizNo { get; set; }
@@ -40,17 +46,17 @@ namespace Aop.Api.Request
         public Nullable<bool> Reserved { get; set; }
 
         #region IAopRequest Members
-        private bool  needEncrypt=false;
-        private string apiVersion = "1.0";
-	    private string terminalType;
-	    private string terminalInfo;
+		private bool needEncrypt=true;
+		private string apiVersion = "1.0";
+		private string terminalType;
+		private string terminalInfo;
         private string prodCode;
-	    private string notifyUrl;
+		private string notifyUrl;
         private string returnUrl;
-	    private AopObject bizModel;
+		private AopObject bizModel;
         private Dictionary<string, string> udfParams; //add user-defined text parameters
 
-		public void SetNeedEncrypt(bool needEncrypt){
+    	 public void SetNeedEncrypt(bool needEncrypt){
              this.needEncrypt=needEncrypt;
         }
 
@@ -75,7 +81,7 @@ namespace Aop.Api.Request
             return this.returnUrl;
         }
 
-        public void SetTerminalType(String terminalType){
+		public void SetTerminalType(String terminalType){
 			this.terminalType=terminalType;
 		}
 
@@ -99,17 +105,17 @@ namespace Aop.Api.Request
             return this.prodCode;
         }
 
-        public string GetApiName()
-        {
-            return "datadigital.fincloud.generalsaas.face.source.certify";
-        }
-
-        public void SetApiVersion(string apiVersion){
+		public void SetApiVersion(string apiVersion){
             this.apiVersion=apiVersion;
         }
 
         public string GetApiVersion(){
             return this.apiVersion;
+        }
+
+        public string GetApiName()
+        {
+            return "datadigital.fincloud.generalsaas.face.source.certify";
         }
 
         public void PutOtherTextParam(string key, string value) 
@@ -136,7 +142,7 @@ namespace Aop.Api.Request
             }
             return parameters;
         }
-
+		
 		public AopObject GetBizModel()
         {
             return this.bizModel;
@@ -145,6 +151,17 @@ namespace Aop.Api.Request
         public void SetBizModel(AopObject bizModel)
         {
             this.bizModel = bizModel;
+        }
+
+        #endregion
+
+        #region IAopUploadRequest Members
+
+        public IDictionary<string, FileItem> GetFileParameters()
+        {
+            IDictionary<string, FileItem> parameters = new Dictionary<string, FileItem>();
+            parameters.Add("file_content", this.FileContent);
+            return parameters;
         }
 
         #endregion

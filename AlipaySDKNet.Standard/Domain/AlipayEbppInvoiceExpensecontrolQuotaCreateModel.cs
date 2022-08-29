@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpensecontrolQuotaCreateModel : AopObject
     {
         /// <summary>
-        /// 企业ID
+        /// 企业共同账户id
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 余额失效时间（格式：yyyy-MM-dd HH:mm:ss）
+        /// 额度失效时间（格式：yyyy-MM-dd HH:mm:ss），额度类型为点券时必填，额度类型为余额时有默认值，无需填写
         /// </summary>
         [XmlElement("effective_end_date")]
         public string EffectiveEndDate { get; set; }
 
         /// <summary>
-        /// 余额生效时间（格式：yyyy-MM-dd HH:mm:ss）
+        /// 额度生效时间（格式：yyyy-MM-dd HH:mm:ss），额度类型为点券时必填，额度类型为余额时有默认值，无需填写
         /// </summary>
         [XmlElement("effective_start_date")]
         public string EffectiveStartDate { get; set; }
@@ -40,19 +40,19 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 外部操作幂等ID（接入方接口调用幂等控制ID）
+        /// 外部操作幂等ID（接入方接口调用幂等控制ID），创建额度类型为点券时必填
         /// </summary>
         [XmlElement("outer_source_id")]
         public string OuterSourceId { get; set; }
 
         /// <summary>
-        /// 余额所属者ID owner_type为EMPLOYEE时为员工支付宝ID
+        /// 额度所属者ID： owner_type为EMPLOYEE时填写员工支付宝ID； owner_type为ENTERPRISE_PAY_UID时填写员工企业码ID； owner_type为PHONE时填写员工手机号； owner_type为ENTERPRISE时填写企业ID。
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// 余额所属者类型 EMPLOYEE: 员工
+        /// 额度所属者类型，可通过设置该字段来指定操作的owner_id类型，如果设置企业额度则设置为ENTERPRISE
         /// </summary>
         [XmlElement("owner_type")]
         public string OwnerType { get; set; }
@@ -64,19 +64,25 @@ namespace Aop.Api.Domain
         public string Platform { get; set; }
 
         /// <summary>
-        /// 余额，以（分）为单位 约束：余额不超过100000元
+        /// 创建额度类型，支持点券和余额，不填写则默认为余额类型
+        /// </summary>
+        [XmlElement("quota_type")]
+        public string QuotaType { get; set; }
+
+        /// <summary>
+        /// 额度值，以（分）为单位 约束：不超过100000元
         /// </summary>
         [XmlElement("quota_value")]
         public string QuotaValue { get; set; }
 
         /// <summary>
-        /// 余额维度ID 当 target_type=EXPENSE_TYPE 时，值为 MEAL（工作餐） 当target_type=RULE_GROUP_AGGREGATION 时，值为费控规则聚合ID
+        /// 额度维度ID 当 target_type=EXPENSE_TYPE 时，值为 MEAL（工作餐） 当target_type=RULE_GROUP_AGGREGATION 时，值为费控规则聚合ID 当target_type=INSTITUTION 时，值为制度ID
         /// </summary>
         [XmlElement("target_id")]
         public string TargetId { get; set; }
 
         /// <summary>
-        /// 余额维度 枚举值： EXPENSE_TYPE（费用类型维度）， RULE_GROUP_AGGREGATION（规则聚合维度
+        /// 额度维度 枚举值： EXPENSE_TYPE（费用类型维度）， RULE_GROUP_AGGREGATION（规则聚合维度）， INSTITUTION（制度维度）
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }

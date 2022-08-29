@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public OrderVoucherAvailableCityCode OrderVoucherAvailableCityCode { get; set; }
 
         /// <summary>
-        /// 券可用门店信息。  当voucher_available_type=SHOP时，该字段必填。
+        /// 券可用门店信息。当voucher_available_type=SHOP时，该字段必填。
         /// </summary>
         [XmlElement("order_voucher_available_shop")]
         public OrderVoucherAvailableShop OrderVoucherAvailableShop { get; set; }
 
         /// <summary>
-        /// 可用范围类型。 枚举值：  SHOP:可用门店 CITY_CODE:可用城市
+        /// 可用范围类型。
         /// </summary>
         [XmlElement("voucher_available_type")]
         public string VoucherAvailableType { get; set; }

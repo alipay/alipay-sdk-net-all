@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public VoucherMiniAppSendGuideInfo MiniAppSendGuideInfo { get; set; }
 
         /// <summary>
-        /// 发放引导模式 枚举值: MINI_APP 小程序发放引导
+        /// 发放引导模式
         /// </summary>
         [XmlArray("send_guide_mode")]
         [XmlArrayItem("string")]

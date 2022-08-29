@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayMarketingActivityDeliveryCreateResponse : AopResponse
     {
         /// <summary>
+        /// 预览链接。 可用于预览用户在承接页面领券的流程。
+        /// </summary>
+        [XmlElement("delivery_guide_preview_url")]
+        public string DeliveryGuidePreviewUrl { get; set; }
+
+        /// <summary>
         /// 投放计划id。
         /// </summary>
         [XmlElement("delivery_id")]

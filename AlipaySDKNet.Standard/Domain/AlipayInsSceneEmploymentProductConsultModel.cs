@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public InsCompany Merchant { get; set; }
 
         /// <summary>
+        /// 保险合作商信息
+        /// </summary>
+        [XmlElement("partner_organization")]
+        public InsPartnerOrganization PartnerOrganization { get; set; }
+
+        /// <summary>
         /// 场景码
         /// </summary>
         [XmlElement("scene_code")]

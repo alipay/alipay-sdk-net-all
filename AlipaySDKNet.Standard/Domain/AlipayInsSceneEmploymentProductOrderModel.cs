@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 保险合作商信息
+        /// </summary>
+        [XmlElement("partner_organization")]
+        public InsPartnerOrganization PartnerOrganization { get; set; }
+
+        /// <summary>
         /// 订购产品对应的推荐流水号列表
         /// </summary>
         [XmlArray("recom_flow_no_list")]

@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 保险合作商信息
+        /// </summary>
+        [XmlElement("partner_organization")]
+        public InsPartnerOrganization PartnerOrganization { get; set; }
+
+        /// <summary>
         /// 保单号，一次最多50个
         /// </summary>
         [XmlArray("policy_no_list")]

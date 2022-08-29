@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public EnterpriseCustomerInfoVO ApplyUserInfo { get; set; }
 
         /// <summary>
+        /// 投标人公钥
+        /// </summary>
+        [XmlElement("apply_user_public_key")]
+        public string ApplyUserPublicKey { get; set; }
+
+        /// <summary>
         /// 收益人信息（招标人信息）
         /// </summary>
         [XmlElement("beneficiary_user_info")]
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bid_detail")]
         public BidDetailVO BidDetail { get; set; }
+
+        /// <summary>
+        /// 是否密文
+        /// </summary>
+        [XmlElement("encrypted")]
+        public bool Encrypted { get; set; }
 
         /// <summary>
         /// 担保到期时间

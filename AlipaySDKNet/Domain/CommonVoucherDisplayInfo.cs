@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class CommonVoucherDisplayInfo : AopObject
     {
         /// <summary>
-        /// 商家品牌logo链接
+        /// 商家品牌 logo 链接。
         /// </summary>
         [XmlElement("brand_logo")]
         public string BrandLogo { get; set; }
@@ -29,14 +29,14 @@ namespace Aop.Api.Domain
         public string VoucherDescription { get; set; }
 
         /// <summary>
-        /// 券详情图片链接
+        /// 券详情图片链接。
         /// </summary>
         [XmlArray("voucher_detail_images")]
         [XmlArrayItem("string")]
         public List<string> VoucherDetailImages { get; set; }
 
         /// <summary>
-        /// 券封面图链接
+        /// 券封面图链接。
         /// </summary>
         [XmlElement("voucher_image")]
         public string VoucherImage { get; set; }

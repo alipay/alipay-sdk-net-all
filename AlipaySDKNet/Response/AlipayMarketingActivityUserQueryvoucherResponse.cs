@@ -16,7 +16,7 @@ namespace Aop.Api.Response
         public ActivityBaseInfo ActivityBaseInfo { get; set; }
 
         /// <summary>
-        /// 活动id
+        /// 活动 id
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Response
         public string AvailableEndTime { get; set; }
 
         /// <summary>
-        /// 券归属pid
+        /// 券归属 pid
         /// </summary>
         [XmlElement("belong_merchant_id")]
         public string BelongMerchantId { get; set; }
@@ -94,13 +94,13 @@ namespace Aop.Api.Response
         public CommonVoucherSendRule VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 券状态：  枚举值: SENDED:可用 USED:已核销(即完全使用), EXPIRED:已过期(只能查询6个月内数据)
+        /// 券状态。
         /// </summary>
         [XmlElement("voucher_status")]
         public string VoucherStatus { get; set; }
 
         /// <summary>
-        /// 券类型。 枚举值： FIX_VOUCHER：满减券； DISCOUNT_VOUCHER：折扣券； SPECIAL_VOUCHER：特价券； EXCHANGE_VOUCHER: 兑换券；
+        /// 券类型。
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

@@ -34,5 +34,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("record_id")]
         public string RecordId { get; set; }
+
+        /// <summary>
+        /// 订单同步优化建议，供开发者参考
+        /// </summary>
+        [XmlArray("sync_suggestions")]
+        [XmlArrayItem("order_data_sync_suggestion")]
+        public List<OrderDataSyncSuggestion> SyncSuggestions { get; set; }
     }
 }

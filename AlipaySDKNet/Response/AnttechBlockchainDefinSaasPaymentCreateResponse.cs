@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -37,6 +38,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_payer_id")]
         public string OutPayerId { get; set; }
+
+        /// <summary>
+        /// 收款方账号
+        /// </summary>
+        [XmlElement("payee_account")]
+        public AccountDTO PayeeAccount { get; set; }
 
         /// <summary>
         /// 会员所属业务平台在智能科技的会员ID

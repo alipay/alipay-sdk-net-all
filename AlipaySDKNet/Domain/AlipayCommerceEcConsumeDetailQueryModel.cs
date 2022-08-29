@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string PayNo { get; set; }
 
         /// <summary>
-        /// 查询选项，只针对消费账单生效 查询关联退款账单：Refund
+        /// 查询选项，只针对消费账单生效 查询关联退款账单：Refund 查询关联订单：Order 查询关联票据：Ticket
         /// </summary>
         [XmlArray("query_options")]
         [XmlArrayItem("string")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceYuntaskCreateormodifyModel : AopObject
     {
         /// <summary>
-        /// 小程序appid
+        /// 小程序appid，支持带跳转链接
         /// </summary>
         [XmlElement("applet_id")]
         public string AppletId { get; set; }

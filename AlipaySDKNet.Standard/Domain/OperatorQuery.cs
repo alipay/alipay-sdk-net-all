@@ -26,5 +26,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("logon_id_type")]
         public string LogonIdType { get; set; }
+
+        /// <summary>
+        /// 操作员所属主账号ID，ID类型由main_ip_role_type定义
+        /// </summary>
+        [XmlElement("main_ip_role_id")]
+        public string MainIpRoleId { get; set; }
+
+        /// <summary>
+        /// 操作员所属主账号类型，枚举值参考RelIpRoleTypeEnum，取值范围： 1=支付宝商户客户customerId 2=支付宝商户PID 6=支付宝开放账号OID 7=蚂蚁通行证虚拟账号ID
+        /// </summary>
+        [XmlElement("main_ip_role_type")]
+        public string MainIpRoleType { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class VoucherAvailableAppInfo : AopObject
     {
         /// <summary>
-        /// 可核销的支付宝小程序id 限制： 1、必须是支付宝小程序 2、如果包含重复的小程序id会自动进行去重操作。
+        /// 可核销的支付宝小程序id
         /// </summary>
         [XmlArray("available_app_ids")]
         [XmlArrayItem("string")]

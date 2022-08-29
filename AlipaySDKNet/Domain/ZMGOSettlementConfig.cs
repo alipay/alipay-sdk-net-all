@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public ZMGOCycleFlexConfig CycleFlexWithholdConfig { get; set; }
 
         /// <summary>
+        /// 芝麻GO周期扣配置
+        /// </summary>
+        [XmlElement("cycle_withhold_config")]
+        public ZMGOCycleWithholdConfig CycleWithholdConfig { get; set; }
+
+        /// <summary>
         /// 预计结算延迟天数，当exp_stop_time_mode取值RELATIVE_DATE、ABSOLATE_DATE、ABSOLUTE_PLUS_1_DATE时，必传
         /// </summary>
         [XmlElement("exp_stop_delay_days")]

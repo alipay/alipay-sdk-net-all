@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public VoucherAvailableGeographyCityInfo AvailableGeographyCityInfo { get; set; }
 
         /// <summary>
-        /// 券可用地理位置类型。 枚举值： SHOP:可用门店 CITY_CODE:可用城市
+        /// 券可用地理位置类型。
         /// </summary>
         [XmlElement("available_geography_scope_type")]
         public string AvailableGeographyScopeType { get; set; }

@@ -11,14 +11,14 @@ namespace Aop.Api.Domain
     public class VoucherAvailableAccountInfo : AopObject
     {
         /// <summary>
-        /// 优惠券可核销的直连商户PID 限制： 1、available_pids和available_smids至少二选一。
+        /// 优惠券可核销的直连商户PID
         /// </summary>
         [XmlArray("available_pids")]
         [XmlArrayItem("string")]
         public List<string> AvailablePids { get; set; }
 
         /// <summary>
-        /// 优惠券可核销的间连商户SMID 限制： 1、available_pids和available_smids至少二选一。
+        /// 优惠券可核销的间连商户SMID
         /// </summary>
         [XmlArray("available_smids")]
         [XmlArrayItem("string")]

@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("template_name")]
         public string TemplateName { get; set; }
+
+        /// <summary>
+        /// 模板编号
+        /// </summary>
+        [XmlElement("template_no")]
+        public string TemplateNo { get; set; }
     }
 }

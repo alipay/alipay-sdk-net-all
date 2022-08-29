@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DatadigitalFincloudFinsaasInsuranceriskGetModel : AopObject
     {
         /// <summary>
-        /// 身份证MD5或者hash码
+        /// 身份证MD5或者sha1码
         /// </summary>
         [XmlElement("cert_no_code")]
         public string CertNoCode { get; set; }
@@ -20,6 +20,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("data_type")]
         public string DataType { get; set; }
+
+        /// <summary>
+        /// 请求Id
+        /// </summary>
+        [XmlElement("request_id")]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// 电话号码

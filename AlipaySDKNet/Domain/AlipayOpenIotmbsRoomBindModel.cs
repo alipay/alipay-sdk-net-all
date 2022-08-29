@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public long DeviceType { get; set; }
 
         /// <summary>
+        /// 楼层号
+        /// </summary>
+        [XmlElement("floor_num")]
+        public string FloorNum { get; set; }
+
+        /// <summary>
         /// 酒店编号
         /// </summary>
         [XmlElement("hotel_id")]

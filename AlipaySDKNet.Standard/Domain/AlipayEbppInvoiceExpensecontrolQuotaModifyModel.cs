@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpensecontrolQuotaModifyModel : AopObject
     {
         /// <summary>
-        /// 企业ID
+        /// 企业共同账户ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 变更模式 ADD - 给余额增加amount DEDUCT - 给余额扣减amount UPDATE_BALANCE-更新可用余额为amount FREEZE-余额冻结（若冻结，则员工因公支付不可用） UNFREEZE-余额解冻 DELETE-余额删除
+        /// 变更模式 ADD - 给余额增加amount DEDUCT - 给余额扣减amount UPDATE_BALANCE-更新可用余额为amount FREEZE-余额冻结（若冻结，则员工因公支付不可用） UNFREEZE-余额解冻 DELETE-余额删除/点券删除
         /// </summary>
         [XmlElement("action")]
         public string Action { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string Platform { get; set; }
 
         /// <summary>
-        /// 余额ID
+        /// 额度ID
         /// </summary>
         [XmlElement("quota_id")]
         public string QuotaId { get; set; }

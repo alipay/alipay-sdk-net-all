@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string AmountBudget { get; set; }
 
         /// <summary>
+        /// 贴息范围选择指定活动码后，必须传入活动码参数，活动码仅支持字母数字下划线且长度5-30以内，并且必须包含字母或者数字
+        /// </summary>
+        [XmlElement("benefit_activity_code")]
+        public string BenefitActivityCode { get; set; }
+
+        /// <summary>
         /// 预算提醒邮件列表，邮箱必须符合邮箱地址规则，提醒邮箱个数不能超过5个,多个邮箱用逗号隔开
         /// </summary>
         [XmlElement("budget_warning_mail_list")]
@@ -103,7 +109,7 @@ namespace Aop.Api.Domain
         public string StartTime { get; set; }
 
         /// <summary>
-        /// ALL代表全场贴息 ORDER代表订单贴息，默认按照全场贴息处理
+        /// ALL代表全场贴息 ORDER代表订单贴息，benefit_activity_code代表指定活动码贴息，默认按照全场贴息处理
         /// </summary>
         [XmlElement("subsidy_scope")]
         public string SubsidyScope { get; set; }

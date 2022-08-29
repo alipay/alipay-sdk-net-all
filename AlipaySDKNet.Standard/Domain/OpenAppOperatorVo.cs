@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string LogonId { get; set; }
 
         /// <summary>
+        /// 昵称
+        /// </summary>
+        [XmlElement("nick_name")]
+        public string NickName { get; set; }
+
+        /// <summary>
+        /// 用户头像
+        /// </summary>
+        [XmlElement("portrait")]
+        public string Portrait { get; set; }
+
+        /// <summary>
         /// 角色
         /// </summary>
         [XmlElement("role")]

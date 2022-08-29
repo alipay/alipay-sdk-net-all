@@ -47,10 +47,22 @@ namespace Aop.Api.Domain
         public string OriginFile { get; set; }
 
         /// <summary>
+        /// 素材外部唯一标识用于风险匹配
+        /// </summary>
+        [XmlElement("origin_file_id")]
+        public string OriginFileId { get; set; }
+
+        /// <summary>
         /// 原始文件名
         /// </summary>
         [XmlElement("origin_name")]
         public string OriginName { get; set; }
+
+        /// <summary>
+        /// 经过内部处理生成的父子层级素材
+        /// </summary>
+        [XmlElement("parent_file_id")]
+        public string ParentFileId { get; set; }
 
         /// <summary>
         /// 风险规则详情

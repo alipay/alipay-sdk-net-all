@@ -28,7 +28,7 @@ namespace Aop.Api.Response
         public string ActivityName { get; set; }
 
         /// <summary>
-        /// 活动状态  枚举值：  ACTIVE:活动已激活，表示活动已经生效，等到活动开始(publish_start_time)之后用户就可以参与活动。 PAUSE:活动已暂停，表示商户临时暂停该活动，该状态下用户不能参与活动 FINISHED:活动已结束，表示商户主动停止活动或活动到期结束(publish_end_time)不能再进行领取或修改等操作。
+        /// 活动状态。活动已激活，表示活动已经生效，等到活动开始(publish_start_time)之后用户就可以参与活动。活动已暂停，表示商户临时暂停该活动，该状态下用户不能参与活动。活动已结束，表示商户主动停止活动或活动到期结束(publish_end_time)不能再进行领取或修改等操作。
         /// </summary>
         [XmlElement("activity_status")]
         public string ActivityStatus { get; set; }
@@ -88,7 +88,7 @@ namespace Aop.Api.Response
         public CommonVoucherSendRule VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 券类型。  枚举值：  FIX_VOUCHER：满减券；  DISCOUNT_VOUCHER：折扣券； SPECIAL_VOUCHER：特价券； EXCHANGE_VOUCHER: 兑换券；
+        /// 券类型。
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }
