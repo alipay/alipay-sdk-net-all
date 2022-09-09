@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string BidOpenDate { get; set; }
 
         /// <summary>
+        /// 招标开始时间，密文开函时使用 yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [XmlElement("bid_open_date_str")]
+        public string BidOpenDateStr { get; set; }
+
+        /// <summary>
         /// 标的类别
         /// </summary>
         [XmlElement("bid_type")]

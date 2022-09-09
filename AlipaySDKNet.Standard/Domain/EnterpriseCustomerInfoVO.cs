@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string EnterpriseBankNo { get; set; }
 
         /// <summary>
+        /// 企业电话号码
+        /// </summary>
+        [XmlElement("enterprise_phone")]
+        public string EnterprisePhone { get; set; }
+
+        /// <summary>
         /// 法人证件号码（身份证）
         /// </summary>
         [XmlElement("legal_cert_no")]

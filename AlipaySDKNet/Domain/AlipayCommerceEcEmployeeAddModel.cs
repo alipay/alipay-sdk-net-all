@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcEmployeeAddModel : AopObject
     {
         /// <summary>
+        /// 员工所属部门
+        /// </summary>
+        [XmlArray("department_ids")]
+        [XmlArrayItem("string")]
+        public List<string> DepartmentIds { get; set; }
+
+        /// <summary>
         /// 员工邮箱
         /// </summary>
         [XmlElement("employee_email")]

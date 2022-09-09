@@ -11,16 +11,22 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEntertainmentItemUploadModel : AopObject
     {
         /// <summary>
-        /// 业务场景码，不填默认为娱乐会员业务，可选枚举： CONSUME_GOLD（消费金积分兑换） DEFAULT_CAMP（默认-娱乐会员优惠商品）
+        /// 业务场景码，不填默认为娱乐会员业务，可选枚举： CONSUME_GOLD（消费金积分兑换） DEFAULT_CAMP（默认-娱乐会员优惠商品） CAMP_FEEDS （商品内容投放）
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 商品是否启用（对客展示），true/false
+        /// 商品是否启用（上架展示），true/false
         /// </summary>
         [XmlElement("enable")]
         public bool Enable { get; set; }
+
+        /// <summary>
+        /// 商品描述（作为副标题展示）
+        /// </summary>
+        [XmlElement("item_desc")]
+        public string ItemDesc { get; set; }
 
         /// <summary>
         /// 商品扩展信息，具体传值根据商户及商品类型不同另行约定。 json格式，请将需要传递的key和value字段放入map中，转成json string传入。  通用扩展参数： merchant_display_priority 商品排序字段，正整数，数字越大优先级越高
@@ -29,13 +35,13 @@ namespace Aop.Api.Domain
         public string ItemExtendedInfo { get; set; }
 
         /// <summary>
-        /// 商品Id,用于后续spi查询时关联
+        /// 商户侧商品ID，同商户下需唯一
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 优惠商品名，对客展示的商品名称
+        /// 商品名称
         /// </summary>
         [XmlElement("item_name")]
         public string ItemName { get; set; }
@@ -47,13 +53,19 @@ namespace Aop.Api.Domain
         public string ItemUrl { get; set; }
 
         /// <summary>
+        /// 商品图片通过 alipay.open.file.upload 接口上传获得的文件ID
+        /// </summary>
+        [XmlElement("pic_file_id")]
+        public string PicFileId { get; set; }
+
+        /// <summary>
         /// 商品图片地址
         /// </summary>
         [XmlElement("pic_source_url")]
         public string PicSourceUrl { get; set; }
 
         /// <summary>
-        /// 商品计价类型: 天卡：DAY 周卡：WEEK 月卡：MONTH 季卡：QUARTER 年卡：YEAR 连续包周：CW 连续包月：CM 连续包季：CQ 连续包年：CY
+        /// 商品计价类型: 其他：OTHER 天卡：DAY 周卡：WEEK 月卡：MONTH 季卡：QUARTER 半年卡：SEMI_YEAR 年卡：YEAR 连续包周：CW 连续包月：CM 连续包季：CQ 连续包半年：CSY 连续包年：CY
         /// </summary>
         [XmlElement("pricing_type")]
         public string PricingType { get; set; }
@@ -71,7 +83,7 @@ namespace Aop.Api.Domain
         public string PromotePrice { get; set; }
 
         /// <summary>
-        /// 优惠定价方式，不填默认为现金，可选枚举CASH（纯现金），CASH_POINT（现金加积分），POINT（纯积分）
+        /// 优惠定价方式，不填默认为现金，可选枚举CASH（纯现金），CASH_POINT（现金加积分），POINT（纯积分），FREE（免费）
         /// </summary>
         [XmlElement("promote_price_mode")]
         public string PromotePriceMode { get; set; }
@@ -83,7 +95,7 @@ namespace Aop.Api.Domain
         public long RemainInventory { get; set; }
 
         /// <summary>
-        /// 积分商品规则ID，运营提供，非积分场景不用填
+        /// 积分商品规则ID，积分商品必填
         /// </summary>
         [XmlElement("rule_id")]
         public string RuleId { get; set; }
@@ -108,7 +120,7 @@ namespace Aop.Api.Domain
         public long TotalInventory { get; set; }
 
         /// <summary>
-        /// 商品单价，单位元（人民币）
+        /// 商品原价，单位元（人民币）
         /// </summary>
         [XmlElement("unit_price")]
         public string UnitPrice { get; set; }

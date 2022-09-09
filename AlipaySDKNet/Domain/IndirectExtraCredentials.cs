@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class IndirectExtraCredentials : AopObject
     {
         /// <summary>
-        /// 待确认商户号列表，最多10个
+        /// 待确认商户号列表，最多20个
         /// </summary>
         [XmlArray("smid_list")]
         [XmlArrayItem("string")]

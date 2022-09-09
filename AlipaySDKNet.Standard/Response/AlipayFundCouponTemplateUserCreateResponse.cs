@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipayFundCouponTemplateUserCreateResponse : AopResponse
     {
         /// <summary>
+        /// 用户封面容器信息，包含封面生效时间区间以及封面、封底等图片、视频资源
+        /// </summary>
+        [XmlElement("gift_user_template_box_info")]
+        public GiftUserTemplateBoxInfo GiftUserTemplateBoxInfo { get; set; }
+
+        /// <summary>
         /// 红包皮肤模板信息
         /// </summary>
         [XmlElement("template_info")]

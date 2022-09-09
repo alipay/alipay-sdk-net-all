@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reason")]
         public string Reason { get; set; }
+
+        /// <summary>
+        /// 单次刷脸请求唯一请求id
+        /// </summary>
+        [XmlElement("request_id")]
+        public string RequestId { get; set; }
     }
 }

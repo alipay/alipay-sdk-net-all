@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -13,6 +14,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("effective_hour")]
         public string EffectiveHour { get; set; }
+
+        /// <summary>
+        /// 返回用户订阅提醒的小时数列表
+        /// </summary>
+        [XmlArray("reminder_hour_list")]
+        [XmlArrayItem("number")]
+        public List<long> ReminderHourList { get; set; }
 
         /// <summary>
         /// 最新一次核酸报告时间，当订阅状态为已订阅时，改字段返回

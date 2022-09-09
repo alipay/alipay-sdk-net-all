@@ -154,13 +154,13 @@ namespace Aop.Api.Domain
         public string PeerPayerCardNo { get; set; }
 
         /// <summary>
-        /// 消费账单企业代付部分退款金额，单位：元 未退款：0
+        /// 消费账单企业代付部分退款金额，单位：元。退款账单该值无意义，值为0。
         /// </summary>
         [XmlElement("peer_refund_amount")]
         public string PeerRefundAmount { get; set; }
 
         /// <summary>
-        /// 消费账单企业代付部分退款状态，默认为INIT，当消费账单有退款，该值会变为REFUND_PART或REFUND_FULL 未退款：INIT， 部分退款：REFUND_PART， 全额退款：REFUND_FULL
+        /// 消费账单企业代付部分退款状态，默认为INIT。当消费账单有退款，该值会变为REFUND_PART或REFUND_FULL；退款账单该值无意义，为初始值INIT。 未退款：INIT， 部分退款：REFUND_PART， 全额退款：REFUND_FULL
         /// </summary>
         [XmlElement("peer_refund_status")]
         public string PeerRefundStatus { get; set; }

@@ -34,10 +34,22 @@ namespace Aop.Api.Domain
         public long Quantity { get; set; }
 
         /// <summary>
+        /// 商品数量（精度: 小数点后三位）
+        /// </summary>
+        [XmlElement("quantity_dec")]
+        public string QuantityDec { get; set; }
+
+        /// <summary>
         /// 商品 sku id
         /// </summary>
         [XmlElement("sku_id")]
         public string SkuId { get; set; }
+
+        /// <summary>
+        /// 商品销售总价（精度: 小数点后两位，单位：元）
+        /// </summary>
+        [XmlElement("sku_total_price")]
+        public string SkuTotalPrice { get; set; }
 
         /// <summary>
         /// 商品单价（单位: 元）

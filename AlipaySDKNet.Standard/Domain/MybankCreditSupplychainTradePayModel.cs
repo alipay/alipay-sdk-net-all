@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string PayAmount { get; set; }
 
         /// <summary>
+        /// 运营商分期保理反接提前还款扣款账户
+        /// </summary>
+        [XmlElement("pre_payment_account")]
+        public Account PrePaymentAccount { get; set; }
+
+        /// <summary>
         /// 幂等编号，用于幂等控制，格式 instIpRoleId_yyyymmddhhmmss_8位uniqId
         /// </summary>
         [XmlElement("request_id")]

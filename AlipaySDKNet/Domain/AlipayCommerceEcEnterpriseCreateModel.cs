@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcEnterpriseCreateModel : AopObject
     {
         /// <summary>
+        /// 企业简称
+        /// </summary>
+        [XmlElement("enterprise_alias")]
+        public string EnterpriseAlias { get; set; }
+
+        /// <summary>
         /// 企业名称
         /// </summary>
         [XmlElement("enterprise_name")]

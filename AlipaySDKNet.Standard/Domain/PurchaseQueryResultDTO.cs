@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -12,8 +13,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 协议条款
         /// </summary>
-        [XmlElement("agreement_list")]
-        public InsAgreementDTO AgreementList { get; set; }
+        [XmlArray("agreement_list")]
+        [XmlArrayItem("ins_agreement_d_t_o")]
+        public List<InsAgreementDTO> AgreementList { get; set; }
 
         /// <summary>
         /// 开始生效时间，限时订购时有效
@@ -42,8 +44,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 保障方案列表
         /// </summary>
-        [XmlElement("insure_plans")]
-        public PurchaseInsurePlanDTO InsurePlans { get; set; }
+        [XmlArray("insure_plans")]
+        [XmlArrayItem("purchase_insure_plan_d_t_o")]
+        public List<PurchaseInsurePlanDTO> InsurePlans { get; set; }
 
         /// <summary>
         /// 已出单量,按量订购时有效

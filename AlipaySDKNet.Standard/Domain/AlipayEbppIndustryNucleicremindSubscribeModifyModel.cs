@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
+
+        /// <summary>
+        /// 订阅提醒时间列表,单位小时，必须不小于48
+        /// </summary>
+        [XmlArray("reminder_hour_list")]
+        [XmlArrayItem("number")]
+        public List<long> ReminderHourList { get; set; }
 
         /// <summary>
         /// 订阅状态，1 订阅  0 退订 。

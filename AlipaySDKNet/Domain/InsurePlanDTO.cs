@@ -34,7 +34,13 @@ namespace Aop.Api.Domain
         public long OriginalPremium { get; set; }
 
         /// <summary>
-        /// 保费
+        /// 折扣前原保费，单位元，两位小数
+        /// </summary>
+        [XmlElement("original_premium_yuan")]
+        public string OriginalPremiumYuan { get; set; }
+
+        /// <summary>
+        /// 保费，单位分
         /// </summary>
         [XmlElement("premium")]
         public long Premium { get; set; }
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("premium_rate")]
         public string PremiumRate { get; set; }
+
+        /// <summary>
+        /// 保费，单位元，两位小数
+        /// </summary>
+        [XmlElement("premium_yuan")]
+        public string PremiumYuan { get; set; }
 
         /// <summary>
         /// 产品方案id
@@ -64,9 +76,15 @@ namespace Aop.Api.Domain
         public bool Recommend { get; set; }
 
         /// <summary>
-        /// 保额
+        /// 保额，单位分
         /// </summary>
         [XmlElement("sum_insured")]
         public long SumInsured { get; set; }
+
+        /// <summary>
+        /// 保额，单位元，两位小数
+        /// </summary>
+        [XmlElement("sum_insured_yuan")]
+        public string SumInsuredYuan { get; set; }
     }
 }

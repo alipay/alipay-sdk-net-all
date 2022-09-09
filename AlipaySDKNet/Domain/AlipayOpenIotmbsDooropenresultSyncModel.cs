@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("project_id")]
         public string ProjectId { get; set; }
+
+        /// <summary>
+        /// 单次刷脸开门请求全链路唯一标识
+        /// </summary>
+        [XmlElement("request_id")]
+        public string RequestId { get; set; }
     }
 }

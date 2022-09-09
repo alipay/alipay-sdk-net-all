@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payee_pid")]
         public string PayeePid { get; set; }
+
+        /// <summary>
+        /// 进件账号归属的资金结算请求模式，默认为请款模式 PERIOD 账期模式 CAPTURE 请款模式
+        /// </summary>
+        [XmlElement("payee_settle_mode")]
+        public string PayeeSettleMode { get; set; }
     }
 }

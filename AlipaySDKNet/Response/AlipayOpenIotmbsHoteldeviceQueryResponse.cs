@@ -37,6 +37,12 @@ namespace Aop.Api.Response
         public string HotelName { get; set; }
 
         /// <summary>
+        /// 心跳同步间隔时间，单位秒
+        /// </summary>
+        [XmlElement("poll_time")]
+        public string PollTime { get; set; }
+
+        /// <summary>
         /// 设备绑定的房间号
         /// </summary>
         [XmlElement("room_no")]

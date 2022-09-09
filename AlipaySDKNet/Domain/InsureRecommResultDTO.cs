@@ -24,10 +24,22 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
+        /// 保司图标
+        /// </summary>
+        [XmlElement("inst_logo")]
+        public string InstLogo { get; set; }
+
+        /// <summary>
         /// 保险公司名称
         /// </summary>
         [XmlElement("inst_name")]
         public string InstName { get; set; }
+
+        /// <summary>
+        /// 保司简称
+        /// </summary>
+        [XmlElement("inst_short_name")]
+        public string InstShortName { get; set; }
 
         /// <summary>
         /// 保障方案列表

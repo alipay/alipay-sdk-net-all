@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string RuleFactor { get; set; }
 
         /// <summary>
+        /// 费控条件ID
+        /// </summary>
+        [XmlElement("rule_id")]
+        public string RuleId { get; set; }
+
+        /// <summary>
         /// 费控条件名称 约束：敏感词校验
         /// </summary>
         [XmlElement("rule_name")]

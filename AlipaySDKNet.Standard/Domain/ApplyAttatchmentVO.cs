@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("legal_person_cert")]
         public string LegalPersonCert { get; set; }
+
+        /// <summary>
+        /// 合并文档
+        /// </summary>
+        [XmlElement("merge_doc")]
+        public string MergeDoc { get; set; }
     }
 }
