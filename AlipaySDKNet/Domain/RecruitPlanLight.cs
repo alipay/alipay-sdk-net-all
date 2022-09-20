@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string EnrollEndTime { get; set; }
 
         /// <summary>
+        /// 招商方案所属报名场景 枚举值： VOUCHER：券报名场景； MINI_APP：小程序报名场景；
+        /// </summary>
+        [XmlElement("enroll_scene_type")]
+        public string EnrollSceneType { get; set; }
+
+        /// <summary>
         /// 报名开始时间
         /// </summary>
         [XmlElement("enroll_start_time")]

@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 关联的报名主体ID，目前都是activity_id
+        /// 关联的报名主体ID。 enroll_scene_type是VOUCHER时，报名主体ID是activity_id； enroll_scene_type是MINI_APP时，报名主体ID是mini_app_id；
         /// </summary>
         [XmlElement("subject_id")]
         public string SubjectId { get; set; }

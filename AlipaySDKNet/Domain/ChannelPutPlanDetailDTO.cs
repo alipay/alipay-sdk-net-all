@@ -169,6 +169,12 @@ namespace Aop.Api.Domain
         public string RejectReason { get; set; }
 
         /// <summary>
+        /// 投放描述+不唯一+投放计划修改+数据库获取
+        /// </summary>
+        [XmlElement("rule_text")]
+        public string RuleText { get; set; }
+
+        /// <summary>
         /// 投放计划状态值
         /// </summary>
         [XmlElement("status")]

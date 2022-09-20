@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string OperatorId { get; set; }
 
         /// <summary>
-        /// 调用方订单号。 由调用方(商户或者收单受理机构)定义，64个字符以内，仅支持字母、数字、下划线且需保证在调用方不重复。 用于幂等
+        /// 调用方订单号。 由调用方定义，64个字符以内，仅支持字母、数字、下划线。作为幂等字段，需保证在调用方内部不重复。
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }

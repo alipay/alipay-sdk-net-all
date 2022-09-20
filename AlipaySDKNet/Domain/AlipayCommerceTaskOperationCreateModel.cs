@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string SceneType { get; set; }
 
         /// <summary>
+        /// 默认结算到品牌
+        /// </summary>
+        [XmlElement("settle_type")]
+        public string SettleType { get; set; }
+
+        /// <summary>
         /// 任务适用门店范围类型(MULTI_SHOP-多门店任务，SINGLE_SHOP-单门店任务)
         /// </summary>
         [XmlElement("shop_scope_type")]

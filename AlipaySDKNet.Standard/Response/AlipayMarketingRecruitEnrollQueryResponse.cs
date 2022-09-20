@@ -22,6 +22,12 @@ namespace Aop.Api.Response
         public RecruitEnrollInfo EnrollInfo { get; set; }
 
         /// <summary>
+        /// 报名所属的活动报名场景。 枚举值： VOUCHER：属于券报名场景； MINI_APP：属于小程序报名场景；
+        /// </summary>
+        [XmlElement("enroll_scene_type")]
+        public string EnrollSceneType { get; set; }
+
+        /// <summary>
         /// 报名时间
         /// </summary>
         [XmlElement("enroll_time")]

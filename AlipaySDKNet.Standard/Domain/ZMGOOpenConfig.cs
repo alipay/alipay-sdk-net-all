@@ -58,6 +58,18 @@ namespace Aop.Api.Domain
         public string PeriodTime { get; set; }
 
         /// <summary>
+        /// 是否展示签约完成页
+        /// </summary>
+        [XmlElement("show_sign_success_page")]
+        public bool ShowSignSuccessPage { get; set; }
+
+        /// <summary>
+        /// 签约完成页任务按钮描述，当展示签约完成页=true的时候 改内容必填
+        /// </summary>
+        [XmlElement("sign_success_task_button_desc")]
+        public string SignSuccessTaskButtonDesc { get; set; }
+
+        /// <summary>
         /// 是否支持延期特权
         /// </summary>
         [XmlElement("support_expire_deferral")]

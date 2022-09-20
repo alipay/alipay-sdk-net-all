@@ -40,6 +40,18 @@ namespace Aop.Api.Domain
         public string ConsumeAmount { get; set; }
 
         /// <summary>
+        /// 员工消费记账分类
+        /// </summary>
+        [XmlElement("consume_category")]
+        public string ConsumeCategory { get; set; }
+
+        /// <summary>
+        /// 员工消费记账备注
+        /// </summary>
+        [XmlElement("consume_memo")]
+        public string ConsumeMemo { get; set; }
+
+        /// <summary>
         /// 账单类型 -消费账单：CONSUME -退款账单：REFUND -转账账单：TRANSFER
         /// </summary>
         [XmlElement("consume_type")]

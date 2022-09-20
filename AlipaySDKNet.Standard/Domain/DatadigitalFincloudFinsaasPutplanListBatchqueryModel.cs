@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DatadigitalFincloudFinsaasPutplanListBatchqueryModel : AopObject
     {
         /// <summary>
+        /// 渠道类别+不唯一+租户渠道列表查询+数据库
+        /// </summary>
+        [XmlElement("channel_category")]
+        public string ChannelCategory { get; set; }
+
+        /// <summary>
         /// 投放计划名称
         /// </summary>
         [XmlElement("name")]

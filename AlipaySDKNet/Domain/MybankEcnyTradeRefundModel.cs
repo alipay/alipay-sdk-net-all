@@ -10,13 +10,19 @@ namespace Aop.Api.Domain
     public class MybankEcnyTradeRefundModel : AopObject
     {
         /// <summary>
-        /// 退款请求号。标识一次退款请求，需要保证在交易号下唯一，如需部分退款，则此参数必传。 注：针对同一次退款请求，如果调用接口失败或异常了，重试时需要保证退款请求号不能变更，防止该笔交易重复退款。运营机构会保证同样的退款请求号多次请求只会退一次。
+        /// 商户ID
+        /// </summary>
+        [XmlElement("merchant_id")]
+        public string MerchantId { get; set; }
+
+        /// <summary>
+        /// 退款请求号。标识一次退款请求，需要保证在交易号下唯一。 注：针对同一次退款请求，如果调用接口失败或异常了，重试时需要保证退款请求号不能变更，防止该笔交易重复退款。运营机构会保证同样的退款请求号多次请求只会退一次。
         /// </summary>
         [XmlElement("out_request_no")]
         public string OutRequestNo { get; set; }
 
         /// <summary>
-        /// 调用方订单号。由调用方(商户或者收单受理机构)定义，64个字符以内，仅支持字母、数字、下划线且需保证在调用方不重复。 out_trade_no与trade_no二选一 用于幂等
+        /// 调用方订单号
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
@@ -34,7 +40,7 @@ namespace Aop.Api.Domain
         public string RefundReason { get; set; }
 
         /// <summary>
-        /// 运营机构交易号。和商户订单号 out_trade_no 不能同时为空。 out_trade_no与trade_no二选一
+        /// 运营机构交易号
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

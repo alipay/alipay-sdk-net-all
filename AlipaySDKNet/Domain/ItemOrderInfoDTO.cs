@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public long Quantity { get; set; }
 
         /// <summary>
-        /// 商品数量（精度: 小数点后三位）
+        /// 商品数量（精度: 小数点后三位），使用商品功能时必填
         /// </summary>
         [XmlElement("quantity_dec")]
         public string QuantityDec { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string SkuId { get; set; }
 
         /// <summary>
-        /// 商品销售总价（精度: 小数点后两位，单位：元）
+        /// 商品销售总价（精度: 小数点后两位，单位：元），使用商品功能必填
         /// </summary>
         [XmlElement("sku_total_price")]
         public string SkuTotalPrice { get; set; }

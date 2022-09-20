@@ -10,13 +10,19 @@ namespace Aop.Api.Domain
     public class MybankEcnyTradeQueryModel : AopObject
     {
         /// <summary>
-        /// 调用方单号 商户订单号和运营机构交易号不能同时为空。 trade_no,out_trade_no如果同时存在优先取trade_no
+        /// 商户ID
+        /// </summary>
+        [XmlElement("merchant_id")]
+        public string MerchantId { get; set; }
+
+        /// <summary>
+        /// 调用方单号
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 运营机构交易号，和商户订单号不能同时为空
+        /// 运营机构单号
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

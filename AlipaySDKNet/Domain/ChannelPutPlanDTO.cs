@@ -22,10 +22,22 @@ namespace Aop.Api.Domain
         public string BillWay { get; set; }
 
         /// <summary>
-        /// 渠道关联业务 id，比如运营活动 id
+        /// 渠道关联业务 id，比如运营活动 id 一期回填的是运营增长活动 id V1.1 版本开始废弃
         /// </summary>
         [XmlElement("channel_biz_id")]
         public long ChannelBizId { get; set; }
+
+        /// <summary>
+        /// 渠道关联业务 id，比如运营活动 id 一期回填的是运营增长活动 id
+        /// </summary>
+        [XmlElement("channel_biz_id_str")]
+        public string ChannelBizIdStr { get; set; }
+
+        /// <summary>
+        /// 渠道类别+不唯一+租户渠道列表查询+数据库
+        /// </summary>
+        [XmlElement("channel_categorychannel_category")]
+        public string ChannelCategorychannelCategory { get; set; }
 
         /// <summary>
         /// 渠道 id

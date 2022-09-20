@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppTestagainCreateModel : AopObject
     {
         /// <summary>
+        /// 在门店消费用户的标识
+        /// </summary>
+        [XmlElement("buyer_openid")]
+        public string BuyerOpenid { get; set; }
+
+        /// <summary>
         /// 金额
         /// </summary>
         [XmlElement("xxxxxx")]

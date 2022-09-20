@@ -12,6 +12,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 1
         /// </summary>
+        [XmlElement("open_json")]
+        public string OpenJson { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
         [XmlElement("test_comple_2")]
         public ManjiangTestComplexOneData TestComple2 { get; set; }
 

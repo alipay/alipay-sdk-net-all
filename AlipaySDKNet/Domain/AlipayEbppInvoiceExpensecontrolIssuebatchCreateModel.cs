@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string QuotaType { get; set; }
 
         /// <summary>
-        /// 额度分享类型（1：可转赠 2 不可转赠）
+        /// 是否可转赠，枚举：0（不可转赠）、1（可转赠）
         /// </summary>
         [XmlElement("share_mode")]
         public string ShareMode { get; set; }

@@ -248,6 +248,12 @@ namespace Aop.Api.Response
         public string IsBalanceFrozen { get; set; }
 
         /// <summary>
+        /// 账户是否被冻结，T/F，T冻结，F未冻结
+        /// </summary>
+        [XmlElement("is_blocked")]
+        public string IsBlocked { get; set; }
+
+        /// <summary>
         /// 是否通过实名认证。T是通过 F是没有实名认证。
         /// </summary>
         [XmlElement("is_certified")]

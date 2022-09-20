@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class ReceiptSimpleOrderDTO : AopObject
     {
         /// <summary>
+        /// 支付宝支付方式对应支付金额
+        /// </summary>
+        [XmlElement("alipay_amount")]
+        public long AlipayAmount { get; set; }
+
+        /// <summary>
         /// 支付宝支付方式对应的支付金额;
         /// </summary>
         [XmlElement("alipay_amout")]
@@ -121,7 +127,7 @@ namespace Aop.Api.Domain
         public string PayAmount { get; set; }
 
         /// <summary>
-        /// 支付类型:alipay:支付宝，cashpay：现金，otherpay：其它; 支付宝支付时，必填;  森林能量发放仅支持支付宝支付("alipay")和0元订单("otherpay")
+        /// 支付类型:alipay:支付宝，otherpay：其它; 支付宝支付时，必填;  森林能量发放仅支持支付宝支付("alipay")和0元订单("otherpay")
         /// </summary>
         [XmlElement("pay_type")]
         public string PayType { get; set; }

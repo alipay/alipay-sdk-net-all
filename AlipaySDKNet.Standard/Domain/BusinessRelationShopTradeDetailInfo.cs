@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_amount")]
         public string TradeAmount { get; set; }
+
+        /// <summary>
+        /// 交易订单号
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
     }
 }

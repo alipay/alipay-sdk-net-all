@@ -79,7 +79,7 @@ namespace Aop.Api.Domain
         /// 剩余库存
         /// </summary>
         [XmlElement("remaining_quantity")]
-        public string RemainingQuantity { get; set; }
+        public long RemainingQuantity { get; set; }
 
         /// <summary>
         /// 单位"元"的售价，传入数字，不需要传入"元"
@@ -91,7 +91,7 @@ namespace Aop.Api.Domain
         /// 已售数量
         /// </summary>
         [XmlElement("sold_quantity")]
-        public string SoldQuantity { get; set; }
+        public long SoldQuantity { get; set; }
 
         /// <summary>
         /// 总库存量

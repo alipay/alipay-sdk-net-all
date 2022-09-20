@@ -12,7 +12,19 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 1
         /// </summary>
+        [XmlElement("json")]
+        public string Json { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
         [XmlElement("t")]
         public string T { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("t_openid")]
+        public string TOpenid { get; set; }
     }
 }

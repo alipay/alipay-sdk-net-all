@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public RecruitEnrollMerchant EnrollMerchant { get; set; }
 
         /// <summary>
+        /// 活动报名场景配置。  枚举值： VOUCHER：券报名场景查询； MINI_APP：小程序报名场景查询； VOUCHER,MINI_APP：同时进行券报名场景和小程序报名场景的查询；
+        /// </summary>
+        [XmlElement("enroll_scene_type")]
+        public string EnrollSceneType { get; set; }
+
+        /// <summary>
         /// 第几页，默认1（需要在1和999之间）
         /// </summary>
         [XmlElement("page_num")]

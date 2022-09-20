@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string LegalPersonalName { get; set; }
 
         /// <summary>
-        /// 营业执照图片的Base64编码字符串，图片大小不能超过2M
+        /// 营业执照图片的Base64编码字符串，图片大小不能超过2M。将is_individual设置为true，当传入该参数后，如果商家账号不是个体工商户类型，将同时为商家升级账号。
         /// </summary>
         [XmlElement("license_pic")]
         public string LicensePic { get; set; }
