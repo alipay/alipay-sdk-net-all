@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public long VoucherMaxUseTimes { get; set; }
 
         /// <summary>
+        /// 自定义扩展信息
+        /// </summary>
+        [XmlElement("voucher_use_ext_info")]
+        public string VoucherUseExtInfo { get; set; }
+
+        /// <summary>
         /// 券核销时间。
         /// </summary>
         [XmlElement("voucher_use_time_info")]

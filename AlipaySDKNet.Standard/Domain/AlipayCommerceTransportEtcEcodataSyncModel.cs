@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceTransportEtcEcodataSyncModel : AopObject
     {
         /// <summary>
-        /// 收单方式，支付宝收单：ALIPAY;银行收单：BANK
+        /// 收单方式。支付宝收单：ALIPAY；银行收单：BANK；建行-支付宝轮扣收单：CCB_ZS；
         /// </summary>
         [XmlElement("acquire_inst")]
         public string AcquireInst { get; set; }
@@ -26,6 +26,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("agree_id")]
         public string AgreeId { get; set; }
+
+        /// <summary>
+        /// 订单申请场景（可空，默认为ONLINE。ONLINE：线上；OFFLINE：线下）
+        /// </summary>
+        [XmlElement("apply_scene")]
+        public string ApplyScene { get; set; }
+
+        /// <summary>
+        /// 订单的业务来源（可空，无默认值）
+        /// </summary>
+        [XmlElement("apply_sub_scene")]
+        public string ApplySubScene { get; set; }
 
         /// <summary>
         /// 申请类型, 货车：truck; 客车：bus
@@ -98,6 +110,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("gross_mass")]
         public string GrossMass { get; set; }
+
+        /// <summary>
+        /// 蚂蚁会员统一ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 订单状态； 0、ORDER_CREATE：创建订单； 1、INFO_SUBMIT：信息已提交； 2、CENSOR_PASS：审核通过； 3、CENSOR_BLOCK：审核驳回； 4、DELIVERYED：已发货； 5、RECEIVED：已收货； 6、ACTIVATED：已激活； 7、UNMOUNTED：已注销； 8、ADD_BLACK：拉黑； 9、REMOVE_BLACK：解黑； 10、CANCEL：取消；

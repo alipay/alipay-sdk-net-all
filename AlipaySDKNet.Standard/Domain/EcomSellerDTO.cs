@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AlipayId { get; set; }
 
         /// <summary>
+        /// 支付宝账号id
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 卖家标
         /// </summary>
         [XmlElement("attributes")]
@@ -62,6 +68,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("id_card_type")]
         public string IdCardType { get; set; }
+
+        /// <summary>
+        /// 卖家主营类目的平台全量订单数（近30天）
+        /// </summary>
+        [XmlElement("main_cat_order_count_of_platform")]
+        public long MainCatOrderCountOfPlatform { get; set; }
+
+        /// <summary>
+        /// 卖家主营类目的平台全量订单退换货率（近30天）
+        /// </summary>
+        [XmlElement("main_cat_refund_exchange_rate_of_platform")]
+        public string MainCatRefundExchangeRateOfPlatform { get; set; }
 
         /// <summary>
         /// 手机号

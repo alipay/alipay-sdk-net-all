@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string Brand { get; set; }
 
         /// <summary>
-        /// 商品购买链接
+        /// 支付宝小程序的商品详情页面
         /// </summary>
         [XmlElement("buy_url")]
         public string BuyUrl { get; set; }
@@ -72,6 +72,12 @@ namespace Aop.Api.Domain
         public string Id { get; set; }
 
         /// <summary>
+        /// 商品归属的小程序ID
+        /// </summary>
+        [XmlElement("mini_app_id")]
+        public string MiniAppId { get; set; }
+
+        /// <summary>
         /// 需要公域推广，默认情况下为false
         /// </summary>
         [XmlElement("need_public_promo")]
@@ -114,6 +120,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("rating")]
         public string Rating { get; set; }
+
+        /// <summary>
+        /// 数据类型
+        /// </summary>
+        [XmlElement("row_type")]
+        public string RowType { get; set; }
 
         /// <summary>
         /// 商品累积销量

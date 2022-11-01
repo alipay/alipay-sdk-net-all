@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OperationTaskName { get; set; }
 
         /// <summary>
+        /// operation_task_type + 运营任务查询
+        /// </summary>
+        [XmlElement("operation_task_type")]
+        public string OperationTaskType { get; set; }
+
+        /// <summary>
         /// page_num + 运营任务查询 + 前端
         /// </summary>
         [XmlElement("page_num")]

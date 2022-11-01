@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 签约方账号,当identity_type为ALIPAY_USER_ID时，是2088xx，当identity_type为ALIPAY_LOGON_ID时，是支付宝登录号
+        /// </summary>
+        [XmlElement("identity")]
+        public string Identity { get; set; }
+
+        /// <summary>
+        /// 签约方类型(ALIPAY_USER_ID或ALIPAY_LOGON_ID)
+        /// </summary>
+        [XmlElement("identity_type")]
+        public string IdentityType { get; set; }
+
+        /// <summary>
         /// 成员昵称
         /// </summary>
         [XmlElement("member_name")]
@@ -44,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 成员真实姓名(当identity_type为ALIPAY_LOGON_ID时，real_name不能为空且传入真实姓名，进行一致性校验。当identity_type为ALIPAY_USER_ID秋娥real_name不为空时，请传入真实姓名，进行一致性校验)
+        /// </summary>
+        [XmlElement("real_name")]
+        public string RealName { get; set; }
 
         /// <summary>
         /// 子场景码

@@ -34,6 +34,18 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
+        /// 查询授权的渠道，如小程序首页：MINIAPP_HOME，订单同步：ORDER_SYNC
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
+        /// 蚂蚁统一会员ID（对外）。当没有传证件类型时，必须传本字段。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号，唯一标志本次请求
         /// </summary>
         [XmlElement("out_biz_no")]

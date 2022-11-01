@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string KeyVersion { get; set; }
 
         /// <summary>
+        /// 用户（UserId）在应用（AppId）下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 钢铁匣为接入方提供的应用场景码。一个APPID可以对应多个场景码
         /// </summary>
         [XmlElement("scene_code")]

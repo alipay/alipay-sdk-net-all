@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string CorpId { get; set; }
 
         /// <summary>
-        /// 下行首站的临时停车容量，大于等于0整数
+        /// （注意：该字段已废弃）下行首站的临时停车容量，大于等于0整数
         /// </summary>
         [XmlElement("down_first_station_capacity")]
         public long DownFirstStationCapacity { get; set; }
@@ -72,7 +72,7 @@ namespace Aop.Api.Domain
         public long TripBreakTime { get; set; }
 
         /// <summary>
-        /// 上行首站的临时停车容量，大于等于0整数
+        /// （注意：该字段已废弃）上行首站的临时停车容量，大于等于0整数
         /// </summary>
         [XmlElement("up_first_station_capacity")]
         public long UpFirstStationCapacity { get; set; }
@@ -83,5 +83,11 @@ namespace Aop.Api.Domain
         [XmlArray("work_pattern_list")]
         [XmlArrayItem("work_pattern")]
         public List<WorkPattern> WorkPatternList { get; set; }
+
+        /// <summary>
+        /// 不同的排班模式对应不同的排班算法。目前支持： HUMAN_LIKE_BY_WORK_PATTERN：仿人工排班（基于班型） HUMAN_LIKE_BY_MATRIX_TEMPLATE：仿人工排班（基于矩阵模板） DELICATE_BY_WORK_PATTERN_TEMPLATE：精细化排班（基于班型模板） USE_RECOMMENDED_PARAMS_WITH_TIMETABLE_PRIORITY：使用推荐参数排班（时刻表优先） USE_RECOMMENDED_PARAMS_WITH_RESOURCE_PRIORITY：使用推荐参数排班（人车资源优先）
+        /// </summary>
+        [XmlElement("work_schedule_mode")]
+        public string WorkScheduleMode { get; set; }
     }
 }

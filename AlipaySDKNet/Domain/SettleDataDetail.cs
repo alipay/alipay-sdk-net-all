@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string DataDetail { get; set; }
 
         /// <summary>
+        /// openid
+        /// </summary>
+        [XmlElement("openid")]
+        public string Openid { get; set; }
+
+        /// <summary>
         /// 用户ID
         /// </summary>
         [XmlElement("user_id")]

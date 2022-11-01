@@ -25,6 +25,11 @@ namespace Aop.Api.Request
         public string Memo { get; set; }
 
         /// <summary>
+        /// 收款方OpenId
+        /// </summary>
+        public string ReceiveOpenId { get; set; }
+
+        /// <summary>
         /// 收款方的支付宝ID
         /// </summary>
         public string ReceiveUserId { get; set; }
@@ -122,6 +127,7 @@ namespace Aop.Api.Request
             parameters.Add("alipay_order_no", this.AlipayOrderNo);
             parameters.Add("amount", this.Amount);
             parameters.Add("memo", this.Memo);
+            parameters.Add("receive_open_id", this.ReceiveOpenId);
             parameters.Add("receive_user_id", this.ReceiveUserId);
             parameters.Add("transfer_out_order_no", this.TransferOutOrderNo);
             if(udfParams != null) 

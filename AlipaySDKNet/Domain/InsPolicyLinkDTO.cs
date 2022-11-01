@@ -22,10 +22,16 @@ namespace Aop.Api.Domain
         public string AuthedUrl { get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// url过期时间
         /// </summary>
         [XmlElement("expiration")]
         public string Expiration { get; set; }
+
+        /// <summary>
+        /// 保单状态
+        /// </summary>
+        [XmlElement("policy_status")]
+        public string PolicyStatus { get; set; }
 
         /// <summary>
         /// 产品名称

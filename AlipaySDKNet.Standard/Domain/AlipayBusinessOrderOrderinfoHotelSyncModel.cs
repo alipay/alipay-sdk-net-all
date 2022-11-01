@@ -90,6 +90,12 @@ namespace Aop.Api.Domain
         public string MembershipGrade { get; set; }
 
         /// <summary>
+        /// open_id是用户（UserId）在应用（AppId）下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单创建时间
         /// </summary>
         [XmlElement("order_create_time")]

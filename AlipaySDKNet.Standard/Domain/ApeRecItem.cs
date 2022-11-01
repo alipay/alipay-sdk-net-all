@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Id { get; set; }
 
         /// <summary>
+        /// 关键字段
+        /// </summary>
+        [XmlElement("key_words")]
+        public string KeyWords { get; set; }
+
+        /// <summary>
         /// item的打分
         /// </summary>
         [XmlElement("score")]

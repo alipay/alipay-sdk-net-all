@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string BillKey { get; set; }
 
         /// <summary>
+        /// 代扣金额，单位：元
+        /// </summary>
+        [XmlElement("deduct_amount")]
+        public string DeductAmount { get; set; }
+
+        /// <summary>
         /// 签约机构编码
         /// </summary>
         [XmlElement("inst_id")]

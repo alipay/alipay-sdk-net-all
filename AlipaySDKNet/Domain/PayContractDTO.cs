@@ -89,6 +89,12 @@ namespace Aop.Api.Domain
         public string IpRoleSource { get; set; }
 
         /// <summary>
+        /// 发起人/操作者的域账号，发起审批后作为展示需要
+        /// </summary>
+        [XmlElement("operator_domain_id")]
+        public string OperatorDomainId { get; set; }
+
+        /// <summary>
         /// 付款条款明细
         /// </summary>
         [XmlArray("pay_contract_items")]

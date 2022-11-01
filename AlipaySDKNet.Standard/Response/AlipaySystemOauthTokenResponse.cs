@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string ExpiresIn { get; set; }
 
         /// <summary>
+        /// 支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 刷新令牌的有效时间，单位是秒。
         /// </summary>
         [XmlElement("re_expires_in")]
@@ -49,6 +55,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("refresh_token")]
         public string RefreshToken { get; set; }
+
+        /// <summary>
+        /// union_id是支付宝用户在开放平台的唯一标识符，在配置应用分组后会返回该值。 同一用户的union_id在同一分组内应用的union_id一致。
+        /// </summary>
+        [XmlElement("union_id")]
+        public string UnionId { get; set; }
 
         /// <summary>
         /// 支付宝用户的唯一标识。以2088开头的16位数字。

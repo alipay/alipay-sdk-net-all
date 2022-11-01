@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string AuthToken { get; set; }
 
         /// <summary>
+        /// h5url
+        /// </summary>
+        [XmlElement("html_url")]
+        public string HtmlUrl { get; set; }
+
+        /// <summary>
         /// 职得工作证图片url,可以直接用于展示
         /// </summary>
         [XmlElement("picture_url")]

@@ -9,13 +9,13 @@ namespace Aop.Api.Response
     public class AlipayMerchantIndirectIotQueryResponse : AopResponse
     {
         /// <summary>
-        /// 内容id，下发如果是阿里云等平台可以播报的，是一种内容id
+        /// 内容id，不同物联网平台值类型不一样
         /// </summary>
         [XmlElement("content_id")]
         public string ContentId { get; set; }
 
         /// <summary>
-        /// 代表内容id可以播报的平台
+        /// 固定枚举值（阿里云物联网平台：ALIYUN，支付宝物联网平台：SDK）
         /// </summary>
         [XmlElement("content_type")]
         public string ContentType { get; set; }

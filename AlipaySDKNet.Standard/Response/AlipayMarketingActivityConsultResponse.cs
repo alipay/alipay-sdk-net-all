@@ -18,6 +18,12 @@ namespace Aop.Api.Response
         public List<ConsultActivityResultInfo> ConsultResultInfoList { get; set; }
 
         /// <summary>
+        /// 领券的用户openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 领券的用户uid
         /// </summary>
         [XmlElement("user_id")]

@@ -42,10 +42,22 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 推进任务外部业务号，用于推进某个指定的生活记录任务，通过该id进行关联查询
+        /// </summary>
+        [XmlElement("push_record_out_biz_no")]
+        public string PushRecordOutBizNo { get; set; }
 
         /// <summary>
         /// 场景

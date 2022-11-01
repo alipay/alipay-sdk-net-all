@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayEcoMycarVehicleCertifiedQueryModel : AopObject
     {
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 车牌列表
         /// </summary>
         [XmlArray("plate_no_list")]

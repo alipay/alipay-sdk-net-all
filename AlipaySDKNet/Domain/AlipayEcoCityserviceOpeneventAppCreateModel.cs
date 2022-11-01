@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ServiceGuide { get; set; }
 
         /// <summary>
+        /// 服务的标签列表，用来标明服务的一些特征属性
+        /// </summary>
+        [XmlElement("service_labels")]
+        public string ServiceLabels { get; set; }
+
+        /// <summary>
         /// 服务名称
         /// </summary>
         [XmlElement("service_name")]

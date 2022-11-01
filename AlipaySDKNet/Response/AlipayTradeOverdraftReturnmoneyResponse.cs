@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string ExchangeRate { get; set; }
 
         /// <summary>
-        /// 退款时上送的外部退款请求号
+        /// 追款请求号
         /// </summary>
         [XmlElement("out_request_no")]
         public string OutRequestNo { get; set; }
@@ -25,6 +25,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("receive_account")]
         public string ReceiveAccount { get; set; }
+
+        /// <summary>
+        /// 退款时上传的外部请求号
+        /// </summary>
+        [XmlElement("refund_out_request_no")]
+        public string RefundOutRequestNo { get; set; }
 
         /// <summary>
         /// 追款人民币金额（仅追款执行成功后返回）

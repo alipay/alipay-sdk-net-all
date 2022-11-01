@@ -83,6 +83,12 @@ namespace Aop.Api.Response
         public string EpName { get; set; }
 
         /// <summary>
+        /// 该企业是否有立信企业芝麻证 true:有;false:无
+        /// </summary>
+        [XmlElement("has_li_xin_certificate")]
+        public bool HasLiXinCertificate { get; set; }
+
+        /// <summary>
         /// 法人身份证反面有效访问定制，有效时间2分钟，接口返回后开始计时，auth_status为SUCCESS时返回，特定场景下返回
         /// </summary>
         [XmlElement("legal_person_id_card_back")]
@@ -93,6 +99,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("legal_person_id_card_front")]
         public string LegalPersonIdCardFront { get; set; }
+
+        /// <summary>
+        /// 是否是立信企业 true:是;false:否
+        /// </summary>
+        [XmlElement("li_xin_ep")]
+        public bool LiXinEp { get; set; }
 
         /// <summary>
         /// 个人用户姓名，字段auth_status为SUCCESS时返回

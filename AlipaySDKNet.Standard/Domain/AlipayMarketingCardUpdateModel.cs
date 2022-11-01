@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 注意：此字段已废弃，卡面样式以模板中的定义为准。  会员卡卡面展示样式  参考：展示位置详情参考"商户会员卡->快速接入文档->第四步"   备注：mcard_style_info与card_info下的template_id不能同时更新
+        /// 注意：此字段已废弃，卡面样式以模板中的定义为准。 会员卡卡面展示样式 参考：展示位置详情参考"商家会员卡->快速接入文档->第四步"  备注：mcard_style_info与card_info下的template_id不能同时更新
         /// </summary>
         [XmlElement("mcard_style_info")]
         public McardStylInfo McardStyleInfo { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string TargetCardNo { get; set; }
 
         /// <summary>
-        /// 卡号ID类型。支持： BIZ_CARD：支付宝业务卡号（商户会员卡场景使用）。
+        /// 卡号ID类型。支持： BIZ_CARD：支付宝业务卡号（商家会员卡场景使用）。
         /// </summary>
         [XmlElement("target_card_no_type")]
         public string TargetCardNoType { get; set; }

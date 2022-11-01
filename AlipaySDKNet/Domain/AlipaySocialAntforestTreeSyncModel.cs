@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 待同步证书的所属用户，蚂蚁统一会员ID
         /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 待同步证书的所属用户，蚂蚁统一会员ID
+        /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
     }

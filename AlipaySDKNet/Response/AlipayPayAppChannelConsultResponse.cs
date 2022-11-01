@@ -22,5 +22,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("pre_consult_id")]
         public string PreConsultId { get; set; }
+
+        /// <summary>
+        /// 虚拟账号
+        /// </summary>
+        [XmlElement("virtual_alipay_user_id")]
+        public string VirtualAlipayUserId { get; set; }
     }
 }

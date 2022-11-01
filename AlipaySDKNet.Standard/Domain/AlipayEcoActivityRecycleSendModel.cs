@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 买家的用户id
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// C端用户使用的绿色小程序appId
         /// </summary>
         [XmlElement("energy_appid")]
@@ -46,5 +52,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("seller_id")]
         public string SellerId { get; set; }
+
+        /// <summary>
+        /// 卖家的用户id
+        /// </summary>
+        [XmlElement("seller_open_id")]
+        public string SellerOpenId { get; set; }
     }
 }

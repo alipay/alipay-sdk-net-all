@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public long Longitude { get; set; }
 
         /// <summary>
+        /// 支付宝用户openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 事件唯一编号，用来做幂等控制。每一次用户在商户所发生的事件，out_biz_no都不能一样。比如用户每次进入停车场、离开停车场的out_biz_no不能一样。
         /// </summary>
         [XmlElement("out_biz_no")]

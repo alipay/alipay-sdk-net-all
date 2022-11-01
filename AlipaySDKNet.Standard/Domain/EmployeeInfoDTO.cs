@@ -71,5 +71,11 @@ namespace Aop.Api.Domain
         [XmlArray("role_list")]
         [XmlArrayItem("string")]
         public List<string> RoleList { get; set; }
+
+        /// <summary>
+        /// 用户id
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

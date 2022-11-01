@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
+        /// 商品价格
+        /// </summary>
+        [XmlElement("goods_price")]
+        public string GoodsPrice { get; set; }
+
+        /// <summary>
         /// 设备中该商品的剩余数量
         /// </summary>
         [XmlElement("quantity")]

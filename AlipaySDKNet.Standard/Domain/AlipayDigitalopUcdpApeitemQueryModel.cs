@@ -55,7 +55,7 @@ namespace Aop.Api.Domain
         public string RelevantId { get; set; }
 
         /// <summary>
-        /// 标识一次用户会话的id，用于分页。
+        /// 标识一次用户会话的id，用于稳定分页。如果翻页过程中，item_total_count为0，说明分页数据失效，请重新请求第一页以刷新数据。
         /// </summary>
         [XmlElement("session_id")]
         public string SessionId { get; set; }

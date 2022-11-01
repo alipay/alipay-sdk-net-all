@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -134,6 +135,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("seller_nick")]
         public string SellerNick { get; set; }
+
+        /// <summary>
+        /// 子订单列表
+        /// </summary>
+        [XmlArray("sub_order_list")]
+        [XmlArrayItem("ecom_sub_order_d_t_o")]
+        public List<EcomSubOrderDTO> SubOrderList { get; set; }
 
         /// <summary>
         /// 交易结束时间

@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 用付款码下单并冻结成功后会返回支付宝用户openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 退税机构业务流水号
         /// </summary>
         [XmlElement("out_tax_refund_no")]

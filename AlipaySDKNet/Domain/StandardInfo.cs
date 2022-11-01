@@ -17,7 +17,13 @@ namespace Aop.Api.Domain
         public string ConsumeMode { get; set; }
 
         /// <summary>
-        /// 开票规则id
+        /// 费用类型子类，当制度的费用类型为MEAL时，支持到店、外卖；当费用类型为非MEAL时，与费用类型保持一致
+        /// </summary>
+        [XmlElement("expense_type_sub_category")]
+        public string ExpenseTypeSubCategory { get; set; }
+
+        /// <summary>
+        /// 开票规则id，可通过接口alipay.ebpp.invoice.enterpriseconsume.enterpriseopenrule.create 创建并得到开票规则ID
         /// </summary>
         [XmlElement("open_rule_id")]
         public string OpenRuleId { get; set; }
@@ -40,6 +46,18 @@ namespace Aop.Api.Domain
         [XmlArray("standard_condition_info_list")]
         [XmlArrayItem("standard_condition_info")]
         public List<StandardConditionInfo> StandardConditionInfoList { get; set; }
+
+        /// <summary>
+        /// 使用规则描述(敏感词校验)
+        /// </summary>
+        [XmlElement("standard_desc")]
+        public string StandardDesc { get; set; }
+
+        /// <summary>
+        /// 制度ID（创建使用规则时非必填）
+        /// </summary>
+        [XmlElement("standard_id")]
+        public string StandardId { get; set; }
 
         /// <summary>
         /// 规则名称

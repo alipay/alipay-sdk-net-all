@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFinancialnetPromotionApplyCreateModel : AopObject
     {
         /// <summary>
+        /// 申请人支付宝UID
+        /// </summary>
+        [XmlElement("apply_open_id")]
+        public string ApplyOpenId { get; set; }
+
+        /// <summary>
         /// 额度申请需要传入： 1. 进件模版信息 2. 业务订单扩展字段extParam，json格式,  firstpayamt,lastpayamt,monthpayamt下单要求必传，值大于等于0
         /// </summary>
         [XmlElement("apply_template_info")]
@@ -68,6 +74,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 推广人支付宝UID
+        /// </summary>
+        [XmlElement("promote_open_id")]
+        public string PromoteOpenId { get; set; }
 
         /// <summary>
         /// 推广人支付宝UID

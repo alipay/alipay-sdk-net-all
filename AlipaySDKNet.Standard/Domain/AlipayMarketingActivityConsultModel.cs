@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
+        /// 领券的用户openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 领券的用户uid
         /// </summary>
         [XmlElement("user_id")]

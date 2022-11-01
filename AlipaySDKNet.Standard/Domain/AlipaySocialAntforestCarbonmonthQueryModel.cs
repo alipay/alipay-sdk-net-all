@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string Month { get; set; }
 
         /// <summary>
+        /// 在对应商户的消费者id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID，执行该操作的支付宝用户
         /// </summary>
         [XmlElement("user_id")]

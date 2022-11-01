@@ -46,9 +46,21 @@ namespace Aop.Api.Domain
         public string PreOrderId { get; set; }
 
         /// <summary>
+        /// 保费，单位分
+        /// </summary>
+        [XmlElement("premium")]
+        public long Premium { get; set; }
+
+        /// <summary>
         /// 产品编码，标识某一类产品 :YFX (运费险),JYBZ(交易保障险),SHX(售后险)
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 保额，单位分
+        /// </summary>
+        [XmlElement("sum_insured")]
+        public long SumInsured { get; set; }
     }
 }

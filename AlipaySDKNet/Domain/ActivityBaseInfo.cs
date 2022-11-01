@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ActivityOperationStatus { get; set; }
 
         /// <summary>
+        /// 券活动产品类型
+        /// </summary>
+        [XmlElement("activity_product_type")]
+        public string ActivityProductType { get; set; }
+
+        /// <summary>
         /// 活动状态。 已激活状态表示活动正常运行。已终止状态表示商家终止活动，不可再发放。
         /// </summary>
         [XmlElement("activity_status")]

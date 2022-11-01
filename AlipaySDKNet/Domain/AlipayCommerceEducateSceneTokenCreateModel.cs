@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string OperatorUserId { get; set; }
 
         /// <summary>
+        /// 服务商内部唯一ID，升级token模式后必须提供，默认可以不填
+        /// </summary>
+        [XmlElement("out_user_id")]
+        public string OutUserId { get; set; }
+
+        /// <summary>
         /// 家长手机号码。
         /// </summary>
         [XmlElement("parent_phone")]

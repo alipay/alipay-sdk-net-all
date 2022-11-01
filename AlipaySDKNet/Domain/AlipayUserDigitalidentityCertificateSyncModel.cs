@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
+        /// 含义：支付宝用户的openId，是用户（userId）在应用（AppId）下的唯一用户标识（新接入的ISV必传open_id，不传user_id）。网关会将传入的open_id字段的值转换为user_id（2088格式），并放入与之映射的原user_id字段，并移除open_id参数，业务系统获取到的参数仅有user_id。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 含义：凭证状态（用于控制该凭证是否在用户证件夹是否可见） 如何设置： T：展示凭证，当用户从卡包点击待领取跳转领取成功（无论是否首次，凡是识别到是卡包领取链接过来的）或者从其他渠道领取成功且需要同步到卡包时，需要传送该值。 F：不展示，当用户在机构页面将凭证删除时，需要传送该值。
         /// </summary>
         [XmlElement("status")]

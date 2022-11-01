@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string GmtRefundPay { get; set; }
 
         /// <summary>
+        /// 应用维度的用户Id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 退款外部请求号，多次退款会有
         /// </summary>
         [XmlElement("out_request_no")]
@@ -39,7 +45,7 @@ namespace Aop.Api.Response
         public string RefundAmount { get; set; }
 
         /// <summary>
-        /// 支付宝收单： "RI", "退款中"; "R", "已退款"; "PR", "部分退款"; 银行收单： "PART_PROCESS_REFUND", "受理部分退款"; "IN_PROCESSING_REFUND", "受理退款中"; "PROCESS_REFUND", "已受理退款".
+        /// 支付宝收单： "I","未知，原请求单号需要重试"; "RI", "退款中"; "R", "已退款"; "PR", "部分退款"; 银行收单： "I","未知，原请求单号需要重试"; "PART_PROCESS_REFUND", "受理部分退款"; "IN_PROCESSING_REFUND", "受理退款中"; "PROCESS_REFUND", "已受理退款".
         /// </summary>
         [XmlElement("refund_status")]
         public string RefundStatus { get; set; }

@@ -16,7 +16,7 @@ namespace Aop.Api.Response
         public ActivityBaseInfo ActivityBaseInfo { get; set; }
 
         /// <summary>
-        /// 活动ID
+        /// 活动 ID
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Response
         public string ActivityName { get; set; }
 
         /// <summary>
-        /// 活动状态 枚举值： INIT 未激活  ACTIVE：已激活 FINISHED：已停止  如果该值为空，说明活动还未创建成功。
+        /// 活动状态。 如果该值为空，说明活动还未创建成功。
         /// </summary>
         [XmlElement("activity_status")]
         public string ActivityStatus { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Response
         public PaymentVoucherBelongMerchantInfo BelongMerchantInfo { get; set; }
 
         /// <summary>
-        /// 券发放结束时间。 格式为：yyyy-MM-dd HH:mm:ss 限制： 券发放结束时间 publish_end_time 与 券发放开始时间 publish_start_time 间隔必须小于等于180天
+        /// 券发放结束时间。 格式为：yyyy-MM-dd HH:mm:ss。
         /// </summary>
         [XmlElement("publish_end_time")]
         public string PublishEndTime { get; set; }
@@ -118,7 +118,7 @@ namespace Aop.Api.Response
         public PaymentVoucherSendRule VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 优惠类型  枚举值：  FIX_VOUCHER：固定面额满减券
+        /// 优惠类型。
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

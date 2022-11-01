@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ContentData { get; set; }
 
         /// <summary>
-        /// 素材传输方式,枚举 目前支持 文字-WORDS/图片-PICTURE
+        /// 素材传输方式,枚举 目前支持 文字-WORDS/图片-PICTURE/音频-VOICE/文件-FILE
         /// </summary>
         [XmlElement("content_type")]
         public string ContentType { get; set; }

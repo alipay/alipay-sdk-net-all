@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpensecontrolQuotaCreateModel : AopObject
     {
         /// <summary>
-        /// 企业共同账户id
+        /// 企业共同账户id，和授权签约协议号共同使用。
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 授权签约协议号
+        /// 授权签约协议号，可通过签约消息获取。配合企业共同账户id使用，当填写企业共同账户id时，此字段必填。
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string QuotaType { get; set; }
 
         /// <summary>
-        /// 额度值，以（分）为单位 约束：不超过100000元
+        /// 额度值，以（分）为单位 约束：个人额度不超过100000元，企业额度不超过100000000元
         /// </summary>
         [XmlElement("quota_value")]
         public string QuotaValue { get; set; }

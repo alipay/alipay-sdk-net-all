@@ -79,7 +79,7 @@ namespace Aop.Api.Domain
         public string SubStatus { get; set; }
 
         /// <summary>
-        /// 下单用户id
+        /// 下单用户id(外部系统ID)
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

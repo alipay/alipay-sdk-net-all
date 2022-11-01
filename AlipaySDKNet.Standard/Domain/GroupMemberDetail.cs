@@ -22,7 +22,13 @@ namespace Aop.Api.Domain
         public string InviteId { get; set; }
 
         /// <summary>
-        /// 入群方式。 1 - 由群成员邀请入群（直接邀请入群） 2 - 由群成员邀请入群（通过邀请链接入群） 3 - 通过扫描群二维码入群
+        /// 邀请商家开放id
+        /// </summary>
+        [XmlElement("invite_open_id")]
+        public string InviteOpenId { get; set; }
+
+        /// <summary>
+        /// 入群方式。 BY_TOKEN - 通过吱口令入群 BY_INV - 通过被邀请或者被选择入群 BY_COD - 通过面对面入群 BY_FTF- 通过面对面入群 BY_ADD - 外部添加来源 BY_OPENAPI - 开放平台 BY_SELF_ENTER -通过自主进群 BY_BIZ_INVOKE - 通过业务系统调用进群 BY_SHARE_INV - 通过分享的邀请链接进群 BY_UNKNOW -未知来源
         /// </summary>
         [XmlElement("join_scene")]
         public string JoinScene { get; set; }
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("join_time")]
         public string JoinTime { get; set; }
+
+        /// <summary>
+        /// 商家openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 支付宝用户id

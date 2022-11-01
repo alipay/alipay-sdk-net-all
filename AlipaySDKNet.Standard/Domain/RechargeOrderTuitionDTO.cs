@@ -94,5 +94,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 缴费用户的支付宝pid
+        /// </summary>
+        [XmlElement("user_open_id")]
+        public string UserOpenId { get; set; }
     }
 }

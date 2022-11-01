@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string LegalPerson { get; set; }
 
         /// <summary>
+        /// 用户的支付宝用户open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 表单中的其他字段
         /// </summary>
         [XmlArray("other_fields")]

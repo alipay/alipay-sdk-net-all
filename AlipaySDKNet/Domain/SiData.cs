@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string TargetMobile { get; set; }
 
         /// <summary>
+        /// 支付宝用户ID,可以通过获取会员信息产品 获取支付宝用户ID  证件信息和userid同时存在以userid为主  target_user_id>target_idcard
+        /// </summary>
+        [XmlElement("target_open_id")]
+        public string TargetOpenId { get; set; }
+
+        /// <summary>
         /// 社会保障卡卡号
         /// </summary>
         [XmlElement("target_sicard_no")]

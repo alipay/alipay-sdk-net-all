@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceInstitutionExpenseruleCreateModel : AopObject
     {
         /// <summary>
-        /// 企业共同账户id
+        /// 企业共同账户id，和授权签约协议号共同使用。
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 授权签约协议号
+        /// 授权签约协议号，可通过签约消息获取。配合企业共同账户id使用，当填写企业共同账户id时，此字段必填。
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
@@ -40,6 +41,12 @@ namespace Aop.Api.Domain
         public ExpenseCtrRuleInfo ExpenseCtrlRuleInfoList { get; set; }
 
         /// <summary>
+        /// 费用类型子类，当制度的费用类型为MEAL时，支持到店、外卖；当费用类型为非MEAL时，与费用类型保持一致
+        /// </summary>
+        [XmlElement("expense_type_sub_category")]
+        public string ExpenseTypeSubCategory { get; set; }
+
+        /// <summary>
         /// 制度id
         /// </summary>
         [XmlElement("institution_id")]
@@ -56,6 +63,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payment_policy")]
         public string PaymentPolicy { get; set; }
+
+        /// <summary>
+        /// 使用规则条件列表
+        /// </summary>
+        [XmlArray("standard_condition_info_list")]
+        [XmlArrayItem("standard_condition_info")]
+        public List<StandardConditionInfo> StandardConditionInfoList { get; set; }
 
         /// <summary>
         /// 使用规则描述(敏感词校验)

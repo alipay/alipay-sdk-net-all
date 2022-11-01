@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 商家openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// BC互动，B端实体对应的实际B端操作人员的用户帐号id
         /// </summary>
         [XmlElement("uid")]

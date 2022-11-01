@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class PushDTO : AopObject
     {
         /// <summary>
-        /// 推进计算类型，如计次:cal_count
+        /// 推进计算类型，如计次:CAL_COUNT
         /// </summary>
         [XmlElement("cal_type")]
         public string CalType { get; set; }

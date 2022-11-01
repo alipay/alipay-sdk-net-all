@@ -112,6 +112,12 @@ namespace Aop.Api.Domain
         public string RecipientTown { get; set; }
 
         /// <summary>
+        /// 是否拒签
+        /// </summary>
+        [XmlElement("refusal")]
+        public bool Refusal { get; set; }
+
+        /// <summary>
         /// 发货地址
         /// </summary>
         [XmlElement("sender_address")]

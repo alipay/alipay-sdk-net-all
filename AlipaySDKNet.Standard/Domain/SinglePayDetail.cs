@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string PayUrl { get; set; }
 
         /// <summary>
+        /// 收款方OpenId
+        /// </summary>
+        [XmlElement("receive_open_id")]
+        public string ReceiveOpenId { get; set; }
+
+        /// <summary>
         /// 收款人的userId
         /// </summary>
         [XmlElement("receive_user_id")]

@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayDataBillEreceiptQueryResponse : AopResponse
     {
         /// <summary>
-        /// 下载链接，status 为 SUCCESS 时返回。用户可以使用此http链接下载文件内容。有效时间为 20s。  生成文件为PDF格式，下载即可获取电子回单 PDF 内容。
+        /// 下载链接，status 为 SUCCESS 时返回。用户可以使用此http链接下载文件内容。有效时间为 30s。  生成文件为PDF格式，下载即可获取电子回单 PDF 内容。
         /// </summary>
         [XmlElement("download_url")]
         public string DownloadUrl { get; set; }

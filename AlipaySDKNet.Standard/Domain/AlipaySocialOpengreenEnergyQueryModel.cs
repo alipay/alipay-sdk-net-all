@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public List<string> GreenActions { get; set; }
 
         /// <summary>
+        /// 在对应商户的消费者id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户接入绿色开发平台的id
         /// </summary>
         [XmlElement("pid")]

@@ -40,5 +40,12 @@ namespace Aop.Api.Domain
         [XmlArray("risk_info_list")]
         [XmlArrayItem("risk_info")]
         public List<RiskInfo> RiskInfoList { get; set; }
+
+        /// <summary>
+        /// 子素材风险信息列表
+        /// </summary>
+        [XmlArray("sub_content_risk_info_list")]
+        [XmlArrayItem("sub_content_risk_info")]
+        public List<SubContentRiskInfo> SubContentRiskInfoList { get; set; }
     }
 }

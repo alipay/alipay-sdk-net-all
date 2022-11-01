@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
-        /// 联系人信息
+        /// 联系人信息，限制最大长度为20
         /// </summary>
         [XmlArray("contact")]
         [XmlArrayItem("contact")]
@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         [XmlArray("ext_info")]
         [XmlArrayItem("scenic_ext_info")]
         public List<ScenicExtInfo> ExtInfo { get; set; }
+
+        /// <summary>
+        /// open_id是用户（UserId）在应用（AppId）下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 订单属性 FORWARD("FORWARD", "提前购"), DAY("DAY","当日购")
@@ -109,7 +115,7 @@ namespace Aop.Api.Domain
         public string PartnerId { get; set; }
 
         /// <summary>
-        /// Passengers
+        /// Passengers， 限制最大长度为20
         /// </summary>
         [XmlArray("passengers")]
         [XmlArrayItem("passengers")]

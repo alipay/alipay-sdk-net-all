@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 购买者的支付宝用户openId
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// （待废弃） 推广渠道信息。 由支付宝公私域跳转到服务商小程序时带入。例如 alipays://platformapi/startapp?appId=2021002147682XXX&page=pages/main/mian&query=chInfo%3DchInfo_promotion 其中chInfo为支付宝带入投放渠道信息，需要在调用下单接口时传入
         /// </summary>
         [XmlElement("ch_info")]

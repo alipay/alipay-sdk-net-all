@@ -42,6 +42,12 @@ namespace Aop.Api.Response
         public string GmtPayment { get; set; }
 
         /// <summary>
+        /// 应用维度的用户Id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户订单号
         /// </summary>
         [XmlElement("out_trade_no")]

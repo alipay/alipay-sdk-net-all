@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ExtJson { get; set; }
 
         /// <summary>
+        /// 订单所属支付宝用户对应的统一开放ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 业务流水号，用来映射需要回退积分的订单号，与权益兑换时传入的值一致。
         /// </summary>
         [XmlElement("out_biz_no")]

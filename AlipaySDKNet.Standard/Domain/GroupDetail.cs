@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class GroupDetail : AopObject
     {
         /// <summary>
+        /// 管理员商家id
+        /// </summary>
+        [XmlArray("admin_open_ids")]
+        [XmlArrayItem("string")]
+        public List<string> AdminOpenIds { get; set; }
+
+        /// <summary>
         /// 群管理员user_id
         /// </summary>
         [XmlArray("admin_user_ids")]
@@ -40,6 +47,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("group_name")]
         public string GroupName { get; set; }
+
+        /// <summary>
+        /// 群主商家openId
+        /// </summary>
+        [XmlElement("master_open_id")]
+        public string MasterOpenId { get; set; }
 
         /// <summary>
         /// 群主的user_id

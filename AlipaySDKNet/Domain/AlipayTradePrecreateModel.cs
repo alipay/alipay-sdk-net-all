@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string AlipayStoreId { get; set; }
 
         /// <summary>
+        /// 间联交易下，由收单机构上送的信息
+        /// </summary>
+        [XmlElement("bkagent_req_info")]
+        public BkAgentReqInfo BkagentReqInfo { get; set; }
+
+        /// <summary>
         /// 订单附加信息。 如果请求时传递了该参数，将在异步通知、对账单中原样返回，同时会在商户和用户的pc账单详情中作为交易描述展示
         /// </summary>
         [XmlElement("body")]

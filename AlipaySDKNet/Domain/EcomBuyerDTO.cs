@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AlipayId { get; set; }
 
         /// <summary>
+        /// 支付宝账号id
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 银行卡持卡人姓名:资金账号类型为银行卡时，必传
         /// </summary>
         [XmlElement("bank_card_holder_name")]

@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string MemberId { get; set; }
 
         /// <summary>
-        /// 操作类型： ACCOUNT-账户 MEMBER-成员
+        /// 操作类型： ACCOUNT-账户（支持单笔，月） MEMBER-成员（支持单笔，日，月，年，终身累计，自定义周期）
         /// </summary>
         [XmlElement("operation_type")]
         public string OperationType { get; set; }
@@ -47,7 +47,7 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 额度列表： 额度类型不可重复：单笔- ONCE，日-DAY，月-MONTH，年-YEAR； 额度金额：单位为元，精确到分（整数或小数点后两位及以内的小数）；金额设置为-1表示无限制额度。
+        /// 额度列表： 额度类型不可重复： 额度金额：单位为元，精确到分（整数或小数点后两位及以内的小数）；金额设置为-1表示无限制额度。
         /// </summary>
         [XmlArray("quota_list")]
         [XmlArrayItem("joint_account_quota_d_t_o")]

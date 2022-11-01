@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string MobileSha256 { get; set; }
 
         /// <summary>
+        /// 外部业务号，业务的标识由商户生成，可以设置成订单号，如果不填写，默认采用trade_no作为外部请求号处理
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 支付金额，单位元，用于标识用户支付的金额
         /// </summary>
         [XmlElement("payment_amt")]

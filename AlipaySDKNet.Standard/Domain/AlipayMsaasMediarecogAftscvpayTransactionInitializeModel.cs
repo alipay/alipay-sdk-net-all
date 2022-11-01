@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayMsaasMediarecogAftscvpayTransactionInitializeModel : AopObject
     {
         /// <summary>
+        /// 货柜类型，static为静态货柜，dynamic为动态货柜
+        /// </summary>
+        [XmlElement("device_identify_type")]
+        public string DeviceIdentifyType { get; set; }
+
+        /// <summary>
         /// 商品信息,列表
         /// </summary>
         [XmlArray("goods_infos")]

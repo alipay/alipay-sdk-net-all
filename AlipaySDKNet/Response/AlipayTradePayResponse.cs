@@ -29,6 +29,12 @@ namespace Aop.Api.Response
         public string AuthTradePayMode { get; set; }
 
         /// <summary>
+        /// 间联交易下，返回给机构的信息
+        /// </summary>
+        [XmlElement("bkagent_resp_info")]
+        public BkAgentRespInfo BkagentRespInfo { get; set; }
+
+        /// <summary>
         /// 商户传入业务信息，具体值要和支付宝约定  将商户传入信息分发给相应系统，应用于安全，营销等参数直传场景  格式为json格式
         /// </summary>
         [XmlElement("business_params")]

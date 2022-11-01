@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string EpName { get; set; }
 
         /// <summary>
+        /// openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户唯一业务流水号，由大小写字母和数字构成
         /// </summary>
         [XmlElement("org_biz_no")]

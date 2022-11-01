@@ -50,7 +50,7 @@ namespace Aop.Api.Domain
         public List<TemplateColumnInfoDTO> ColumnInfoList { get; set; }
 
         /// <summary>
-        /// 字段规则列表，会员卡开卡过程中，会员卡信息的生成规则， 例如：卡有效期为开卡后两年内有效，则设置为：DATE_IN_FUTURE 注意：商户会员卡场景不支持修改该内容。 
+        /// 字段规则列表，会员卡开卡过程中，会员卡信息的生成规则， 例如：卡有效期为开卡后两年内有效，则设置为：DATE_IN_FUTURE 注意：商家会员卡场景不支持修改该内容。 
         /// </summary>
         [XmlArray("field_rule_list")]
         [XmlArrayItem("template_field_rule_d_t_o")]

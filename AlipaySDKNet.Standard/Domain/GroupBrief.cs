@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("master_uid")]
         public string MasterUid { get; set; }
+
+        /// <summary>
+        /// 商家open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
     }
 }

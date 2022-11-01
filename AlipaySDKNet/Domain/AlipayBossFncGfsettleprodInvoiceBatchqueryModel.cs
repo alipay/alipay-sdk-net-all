@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayBossFncGfsettleprodInvoiceBatchqueryModel : AopObject
     {
         /// <summary>
+        /// 业务身份id
+        /// </summary>
+        [XmlArray("business_identify_ids")]
+        [XmlArrayItem("string")]
+        public List<string> BusinessIdentifyIds { get; set; }
+
+        /// <summary>
         /// OU
         /// </summary>
         [XmlArray("buyer_inst_id_list")]

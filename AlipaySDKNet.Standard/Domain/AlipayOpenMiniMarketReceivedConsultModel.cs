@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public bool MultiDeliver { get; set; }
 
         /// <summary>
+        /// 商户小程序中的用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

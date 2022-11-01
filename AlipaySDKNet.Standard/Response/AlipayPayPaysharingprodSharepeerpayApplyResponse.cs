@@ -11,8 +11,8 @@ namespace Aop.Api.Response
         /// <summary>
         /// 支付宝好友分享代付链接
         /// </summary>
-        [XmlElement("firend_share_page_url")]
-        public string FirendSharePageUrl { get; set; }
+        [XmlElement("friend_share_page_url")]
+        public string FriendSharePageUrl { get; set; }
 
         /// <summary>
         /// 代付单号

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string NeedAddress { get; set; }
 
         /// <summary>
-        /// 结果页是否展示认证ID，可选范围【0， 1】 0不需要，1需要，不填写或填错默认1
+        /// 结果页是否需要展示支付宝侧登记码，可选范围【0， 1】0不需要，1需要，不填写或填错默认1。若不需要展示支付宝侧登记码，则需要isv实时返回isv侧登记码，不返回则不显示登记码
         /// </summary>
         [XmlElement("need_certify_id")]
         public string NeedCertifyId { get; set; }

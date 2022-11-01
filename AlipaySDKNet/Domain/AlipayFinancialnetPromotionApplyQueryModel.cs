@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 申请人支付宝UID
         /// </summary>
+        [XmlElement("apply_open_id")]
+        public string ApplyOpenId { get; set; }
+
+        /// <summary>
+        /// 申请人支付宝UID
+        /// </summary>
         [XmlElement("apply_user_id")]
         public string ApplyUserId { get; set; }
     }

@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string InOut { get; set; }
 
         /// <summary>
+        /// 外部交易单号，正向支付为外部交易单号，逆向退款是为外部退款单号
+        /// </summary>
+        [XmlElement("out_trade_no")]
+        public string OutTradeNo { get; set; }
+
+        /// <summary>
         /// 账单标题
         /// </summary>
         [XmlElement("title")]

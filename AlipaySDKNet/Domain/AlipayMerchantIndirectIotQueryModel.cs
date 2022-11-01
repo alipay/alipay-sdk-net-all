@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayMerchantIndirectIotQueryModel : AopObject
     {
         /// <summary>
-        /// 设备id，根据不同的设备类型device_id_type传不同的值
+        /// 不同物联网平台接入渠道不同值，支付宝物联网平台传设备SN号，阿里云物联网平台传设备deviceName
         /// </summary>
         [XmlElement("device_id")]
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// 设备id类型，SN指设备sn号，BIZ_TID指蚂蚁iot对应的唯一biz_tid，ALIYUN指阿里云对应的唯一的设备id类型，其他类型待补充
+        /// 固定枚举值,支付宝物联网平台传SN，阿里云物联网平台传ALIYUN
         /// </summary>
         [XmlElement("device_id_type")]
         public string DeviceIdType { get; set; }
@@ -28,19 +28,19 @@ namespace Aop.Api.Domain
         public string Occasion { get; set; }
 
         /// <summary>
-        /// 最终营销文案的播报方式 SDK：指服务商的设备接入了支付宝SDK，最终由支付宝播报； ALIYUN:指服务商接入了阿里云的播报平台，最终服务商消费返回的字段，通过阿里云平台进行播报
+        /// 固定枚举值（阿里云物联网平台：ALIYUN，支付宝物联网平台：SDK）
         /// </summary>
         [XmlElement("play_mode")]
         public string PlayMode { get; set; }
 
         /// <summary>
-        /// 间连商户id
+        /// 间连商户在支付宝体系内的唯一id,一般以2088开头
         /// </summary>
         [XmlElement("smid")]
         public string Smid { get; set; }
 
         /// <summary>
-        /// 补充定义设备device_id,当device_id_type是SN时，传对应的服务商source_id。 其他场景待补充
+        /// 不同物联网平台接入渠道不同值，支付宝物联网平台传设备sourceId号，阿里云物联网平台传设备productKey
         /// </summary>
         [XmlElement("suppler_id")]
         public string SupplerId { get; set; }

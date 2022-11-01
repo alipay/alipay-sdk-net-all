@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string AuthNotifyPath { get; set; }
 
         /// <summary>
-        /// 认证类型，请跟服务方获取
+        /// 认证类型，请联系服务提供方获取
         /// </summary>
         [XmlElement("certification_type")]
         public string CertificationType { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string CognizantName { get; set; }
 
         /// <summary>
-        /// 连接数据类型，请跟服务方获取
+        /// 信用链接数据类型，请联系服务提供方获取
         /// </summary>
         [XmlElement("data_type")]
         public string DataType { get; set; }
@@ -64,13 +64,13 @@ namespace Aop.Api.Domain
         public string EpName { get; set; }
 
         /// <summary>
-        /// 信用链接类型，一次性和周期性，请跟服务方获取
+        /// 信用链接类型，请联系服务提供方确认对应类型
         /// </summary>
         [XmlElement("link_type")]
         public string LinkType { get; set; }
 
         /// <summary>
-        /// 商户需要在授权回跳时需要带回的透传字段（ 回跳auth_callback时候）
+        /// 商户需要在授权回跳时需要带回的透传字段（ 回跳auth_callback_path时）
         /// </summary>
         [XmlElement("merchant_context")]
         public string MerchantContext { get; set; }

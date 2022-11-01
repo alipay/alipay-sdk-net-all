@@ -23,6 +23,13 @@ namespace Aop.Api.Domain
         public long FormId { get; set; }
 
         /// <summary>
+        /// 支付宝用户openId列表
+        /// </summary>
+        [XmlArray("open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> OpenIdList { get; set; }
+
+        /// <summary>
         /// 分页请求的页码，从1开始
         /// </summary>
         [XmlElement("page_index")]

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BillKey { get; set; }
 
         /// <summary>
-        /// 业务类型（例如通信，缴费，还款）
+        /// 业务类型。 例：通信(TX)，缴费(JF)，还款(HK)
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }
@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public string EdeductProductCode { get; set; }
 
         /// <summary>
-        /// 机构ID（支付宝侧分配）
+        /// 机构ID（接入时由支付宝技术提供）
         /// </summary>
         [XmlElement("inst_id")]
         public string InstId { get; set; }
 
         /// <summary>
-        /// 级业务类型（例如话费，流量，水费，电费）
+        /// 二级业务类型。例：充值(CZ)，水费(WATER)，电费(ELECTRIC)
         /// </summary>
         [XmlElement("sub_biz_type")]
         public string SubBizType { get; set; }

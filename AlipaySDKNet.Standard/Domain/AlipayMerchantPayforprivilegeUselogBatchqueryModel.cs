@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string MemberId { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 查询的页数，从1开始，最大100
         /// </summary>
         [XmlElement("page_num")]

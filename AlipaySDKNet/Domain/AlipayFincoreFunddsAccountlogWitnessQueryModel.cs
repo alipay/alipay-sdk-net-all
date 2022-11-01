@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AccountType { get; set; }
 
         /// <summary>
+        /// 此字段专门用于：存管户在支付宝收单类型入金场景下，按照支付宝交易单号查询该入金账务流水。
+        /// </summary>
+        [XmlElement("biz_no")]
+        public string BizNo { get; set; }
+
+        /// <summary>
         /// 结束时间，yyyy-mm-dd hh:mm:ss形式
         /// </summary>
         [XmlElement("end_time")]

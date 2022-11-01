@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public bool Enable { get; set; }
 
         /// <summary>
+        /// 客户是否有网商二类户
+        /// </summary>
+        [XmlElement("has_current_account")]
+        public bool HasCurrentAccount { get; set; }
+
+        /// <summary>
         /// 资产名称-贷款支付，赊呗
         /// </summary>
         [XmlElement("name")]

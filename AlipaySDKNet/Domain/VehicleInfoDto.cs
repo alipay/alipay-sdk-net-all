@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string ModelName { get; set; }
 
         /// <summary>
+        /// 用户支付宝id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 所有人
         /// </summary>
         [XmlElement("owner")]

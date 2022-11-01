@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CreatorName { get; set; }
 
         /// <summary>
+        /// 不传即查询所有类型活动
+        /// </summary>
+        [XmlElement("operation_task_type")]
+        public string OperationTaskType { get; set; }
+
+        /// <summary>
         /// 页面名字
         /// </summary>
         [XmlElement("page_name")]

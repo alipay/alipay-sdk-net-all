@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ItemType { get; set; }
 
         /// <summary>
+        /// 此付款条款是否需要审批
+        /// </summary>
+        [XmlElement("need_audit")]
+        public bool NeedAudit { get; set; }
+
+        /// <summary>
         /// 是否有票
         /// </summary>
         [XmlElement("need_invoice")]

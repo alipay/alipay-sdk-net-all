@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceLogisticsWaybillInstantdeliverySettleModel : AopObject
     {
         /// <summary>
+        /// 取消上门费
+        /// </summary>
+        [XmlElement("cancel_fee")]
+        public string CancelFee { get; set; }
+
+        /// <summary>
         /// 即时配送公司编码
         /// </summary>
         [XmlElement("logistics_code")]

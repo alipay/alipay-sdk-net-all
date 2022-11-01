@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 购买者的支付宝openId  用于水平权限校验。
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 购买商家兑换券的营销订单号。
         /// </summary>
         [XmlElement("order_no")]

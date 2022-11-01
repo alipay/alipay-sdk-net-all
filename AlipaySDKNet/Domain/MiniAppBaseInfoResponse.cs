@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string MiniAppId { get; set; }
 
         /// <summary>
+        /// 小程序归属者ID
+        /// </summary>
+        [XmlElement("oid")]
+        public string Oid { get; set; }
+
+        /// <summary>
         /// 小程序状态
         /// </summary>
         [XmlElement("status")]

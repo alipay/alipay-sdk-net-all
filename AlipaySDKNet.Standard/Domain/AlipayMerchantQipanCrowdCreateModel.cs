@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayMerchantQipanCrowdCreateModel : AopObject
     {
         /// <summary>
+        /// 人群应用渠道。<br> 未传值或传入渠道均非法时 采用默认渠道，默认渠道：支付结果页AA、繁星激励。<br> 传入值时，以商户入参为准。
+        /// </summary>
+        [XmlArray("apply_channel_list")]
+        [XmlArrayItem("string")]
+        public List<string> ApplyChannelList { get; set; }
+
+        /// <summary>
         /// 人群描述
         /// </summary>
         [XmlElement("crowd_desc")]

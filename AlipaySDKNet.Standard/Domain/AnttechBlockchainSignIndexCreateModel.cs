@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string BizUniqueKey { get; set; }
 
         /// <summary>
+        /// 0xxxca
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 签约主体ID， 必填， 请填签约用户的userId
         /// </summary>
         [XmlElement("principal_id")]

@@ -46,13 +46,13 @@ namespace Aop.Api.Domain
         public string EquipmentType { get; set; }
 
         /// <summary>
-        /// 商户编号，由ISV定义，需要保证在ISV下唯一
+        /// 商户编号，由服务商定义，需要保证在服务商下唯一
         /// </summary>
         [XmlElement("external_id")]
         public string ExternalId { get; set; }
 
         /// <summary>
-        /// external_id对应的secret秘钥
+        /// external_id 对应的 secret 密钥。
         /// </summary>
         [XmlElement("external_id_secret")]
         public string ExternalIdSecret { get; set; }
@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
-        /// 受理商户的ISV在支付宝的pid
+        /// 受理商户的服务商在支付宝的pid
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }

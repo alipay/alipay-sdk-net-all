@@ -8,5 +8,10 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayOpenMiniTemplateMarketingCreateResponse : AopResponse
     {
+        /// <summary>
+        /// 投放详情主键id
+        /// </summary>
+        [XmlElement("detail_id")]
+        public string DetailId { get; set; }
     }
 }

@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<string> AlgorithmGoodsIds { get; set; }
 
         /// <summary>
+        /// 设备类型，static静态货柜，dynamic为动态货柜
+        /// </summary>
+        [XmlElement("device_identify_type")]
+        public string DeviceIdentifyType { get; set; }
+
+        /// <summary>
         /// 商品数量
         /// </summary>
         [XmlElement("good_count")]
@@ -40,5 +46,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("template_id")]
         public string TemplateId { get; set; }
+
+        /// <summary>
+        /// 商品id冲突校验白名单，逗号分隔字符串对List。例如，一个商品有ABC三个外观，需传入["A,B", "B,C", "A,C"]
+        /// </summary>
+        [XmlArray("white_list")]
+        [XmlArrayItem("string")]
+        public List<string> WhiteList { get; set; }
     }
 }

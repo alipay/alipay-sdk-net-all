@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
+        /// 发起该行为的支付宝用户 蚂蚁统一会员ID，可选
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用于幂等操作
         /// </summary>
         [XmlElement("out_biz_no")]

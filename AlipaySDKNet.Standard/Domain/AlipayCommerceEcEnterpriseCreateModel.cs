@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcEnterpriseCreateModel : AopObject
     {
         /// <summary>
+        /// 场景码，联系支付宝分配
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
+        /// <summary>
         /// 企业简称
         /// </summary>
         [XmlElement("enterprise_alias")]
@@ -32,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }
+
+        /// <summary>
+        /// 外部业务号 1.作为创建该企业的唯一幂等标识，不传默认使用identity幂等 2.传入out_biz_no创建返回结果成功后，如需再新建其他企业，则out_biz_no传不同的参数，否则会被幂等 3.如果调用失败或者超时，可以使用相同的outBizNo进行重试处理 4.并发使用相同outBizNo调用，会返回企业创建中，不要重复操作的错误信息
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
     }
 }

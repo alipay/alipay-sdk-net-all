@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string EndDate { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID。目前该参数服务端没有用
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 种树开始时间
         /// </summary>
         [XmlElement("start_date")]

@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string Certified { get; set; }
 
         /// <summary>
+        /// 支付宝OpenId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 隐藏的真实姓名，如 *三(张三)
         /// </summary>
         [XmlElement("real_name")]

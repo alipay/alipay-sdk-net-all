@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string PartnerId { get; set; }
 
         /// <summary>
+        /// 支付宝用户pid
+        /// </summary>
+        [XmlElement("plan_open_id")]
+        public string PlanOpenId { get; set; }
+
+        /// <summary>
         /// 扣款调度时间
         /// </summary>
         [XmlElement("schedule_time")]

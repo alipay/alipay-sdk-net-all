@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string IssueEndDate { get; set; }
 
         /// <summary>
+        /// 发放规则id，创建时无需填写
+        /// </summary>
+        [XmlElement("issue_rule_id")]
+        public string IssueRuleId { get; set; }
+
+        /// <summary>
         /// 发放规则名称
         /// </summary>
         [XmlElement("issue_rule_name")]

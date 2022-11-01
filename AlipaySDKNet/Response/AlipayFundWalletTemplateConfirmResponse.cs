@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 销售产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
         /// 钱包模版id
         /// </summary>
         [XmlElement("wallet_template_id")]

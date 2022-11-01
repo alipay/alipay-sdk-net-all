@@ -106,6 +106,12 @@ namespace Aop.Api.Domain
         public string VoucherType { get; set; }
 
         /// <summary>
+        /// 券核销规则
+        /// </summary>
+        [XmlElement("voucher_use_rule_info")]
+        public VoucherUseRuleInfo VoucherUseRuleInfo { get; set; }
+
+        /// <summary>
         /// 券核销规则。
         /// </summary>
         [XmlElement("voucher_use_rule_lite_info")]

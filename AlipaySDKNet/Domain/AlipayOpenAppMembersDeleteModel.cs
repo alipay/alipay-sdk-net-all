@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppMembersDeleteModel : AopObject
     {
         /// <summary>
+        /// 被删除成员的openId。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 被删除成员的角色类型，枚举支持： DEVELOPER：开发者。 EXPERIENCER：体验者。
         /// </summary>
         [XmlElement("role")]

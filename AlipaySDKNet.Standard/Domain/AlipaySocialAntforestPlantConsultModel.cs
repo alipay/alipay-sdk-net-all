@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ApplyType { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 项目id，需要配合其他查询接口，查询到相关的项目之后使用。不限于树种，还包括保护地等
         /// </summary>
         [XmlElement("project_id")]

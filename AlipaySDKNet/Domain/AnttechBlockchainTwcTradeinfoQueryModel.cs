@@ -10,10 +10,22 @@ namespace Aop.Api.Domain
     public class AnttechBlockchainTwcTradeinfoQueryModel : AopObject
     {
         /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 支付者用户的支付宝id
         /// </summary>
         [XmlElement("buyeruid")]
         public string Buyeruid { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("seller_open_id")]
+        public string SellerOpenId { get; set; }
 
         /// <summary>
         /// 卖家支付宝账户

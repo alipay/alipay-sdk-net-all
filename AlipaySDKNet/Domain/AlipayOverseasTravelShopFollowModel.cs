@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ChInfo { get; set; }
 
         /// <summary>
+        /// 用户id，与user_id_type配合使用，暂时仅支持集团havanaId和支付宝2088开头的16位数字ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝跨境游店铺ID
         /// </summary>
         [XmlElement("shop_id")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
+        /// 支付宝用户user_id对应的open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户和支付宝交互时，用于代表支付宝分配给商户ID
         /// </summary>
         [XmlElement("partner_id")]

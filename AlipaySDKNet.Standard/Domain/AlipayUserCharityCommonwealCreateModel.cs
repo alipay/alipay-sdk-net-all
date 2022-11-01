@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public long Numerical { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员Id 对应的open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 其他业务信息，JSON格式；
         /// </summary>
         [XmlElement("original_data")]

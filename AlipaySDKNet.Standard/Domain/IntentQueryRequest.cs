@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string NluJsonParam { get; set; }
 
         /// <summary>
+        /// 全局唯一 open id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用户输入的query
         /// </summary>
         [XmlElement("query")]

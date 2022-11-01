@@ -124,6 +124,12 @@ namespace Aop.Api.Domain
         public string LocationTag { get; set; }
 
         /// <summary>
+        /// 商品归属的小程序ID
+        /// </summary>
+        [XmlElement("mini_app_id")]
+        public string MiniAppId { get; set; }
+
+        /// <summary>
         /// 可选 图片url，如果多张图，头图放在前面，使用$##$链接多个url
         /// </summary>
         [XmlElement("pic_url")]
@@ -152,6 +158,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("related_goods_ids")]
         public string RelatedGoodsIds { get; set; }
+
+        /// <summary>
+        /// 数据类型
+        /// </summary>
+        [XmlElement("row_type")]
+        public string RowType { get; set; }
 
         /// <summary>
         /// 内容累计分享次数

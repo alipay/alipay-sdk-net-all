@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AlipayId { get; set; }
 
         /// <summary>
+        /// 操作关联的支付宝openId
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 证件名称
         /// </summary>
         [XmlElement("cert_name")]
@@ -28,7 +34,7 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类型
+        /// 证件类型 10: 身份证  23 社会统一信用代码
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }

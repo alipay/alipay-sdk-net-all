@@ -84,6 +84,12 @@ namespace Aop.Api.Domain
         public string InvoiceNo { get; set; }
 
         /// <summary>
+        /// 发票来源，取值范围 SUMMARY_INVOICE_AUTO_OPEN 汇总开票系统自动开票，SUMMARY_INVOICE_MERCHANT_UPLOAD 汇总开票商户手动上传
+        /// </summary>
+        [XmlElement("invoice_source")]
+        public string InvoiceSource { get; set; }
+
+        /// <summary>
         /// 发票抬头
         /// </summary>
         [XmlElement("invoice_title")]

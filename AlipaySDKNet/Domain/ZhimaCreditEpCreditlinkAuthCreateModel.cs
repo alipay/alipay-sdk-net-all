@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string CognizantName { get; set; }
 
         /// <summary>
-        /// 信用链接数据类型
+        /// 信用链接数据类型，请联系服务提供方获取
         /// </summary>
         [XmlElement("data_type")]
         public string DataType { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string EpName { get; set; }
 
         /// <summary>
-        /// 授权类型，请联系服务提供方获取
+        /// 信用链接类型，请联系服务提供方确认对应类型
         /// </summary>
         [XmlElement("link_type")]
         public string LinkType { get; set; }

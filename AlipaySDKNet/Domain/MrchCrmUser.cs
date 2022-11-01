@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string EncryptIdentityId { get; set; }
 
         /// <summary>
-        /// 用身份信息类型-手机号、邮箱，枚举如下： mobile-手机号码，email-邮箱
+        /// 用户身份信息类型-手机号、邮箱，枚举如下： mobile-手机号码，email-邮箱
         /// </summary>
         [XmlElement("encrypt_identity_type")]
         public string EncryptIdentityType { get; set; }

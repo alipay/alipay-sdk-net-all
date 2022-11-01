@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public List<CommonKeyword> KeywordList { get; set; }
 
         /// <summary>
+        /// 蚂蚁开放平台OpenId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 机构编码，bizType的二级分类，不传默认为“normal”
         /// </summary>
         [XmlElement("org_code")]

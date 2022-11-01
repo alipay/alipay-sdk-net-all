@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
+        /// 用户在视频处的停留时长（单位为ms）
+        /// </summary>
+        [XmlElement("page_stay")]
+        public string PageStay { get; set; }
+
+        /// <summary>
         /// 订单的实际(待)支付金额，一般只有下单/支付行为携带该字段。单位元。
         /// </summary>
         [XmlElement("pay_amount")]
@@ -86,5 +92,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id_type")]
         public string UserIdType { get; set; }
+
+        /// <summary>
+        /// 视频的总时长（单位为s）
+        /// </summary>
+        [XmlElement("video_duration")]
+        public string VideoDuration { get; set; }
+
+        /// <summary>
+        /// 视频的播放时长（单位为ms）
+        /// </summary>
+        [XmlElement("video_play")]
+        public string VideoPlay { get; set; }
     }
 }

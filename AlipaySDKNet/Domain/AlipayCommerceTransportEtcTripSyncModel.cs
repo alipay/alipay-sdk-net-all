@@ -10,10 +10,28 @@ namespace Aop.Api.Domain
     public class AlipayCommerceTransportEtcTripSyncModel : AopObject
     {
         /// <summary>
+        /// 垫资状态（ 0：无垫资； 1：有垫资； 2：垫资已偿还；）
+        /// </summary>
+        [XmlElement("advance_status")]
+        public string AdvanceStatus { get; set; }
+
+        /// <summary>
         /// 高速场景数据
         /// </summary>
         [XmlElement("highway_data")]
         public HighwaySceneData HighwayData { get; set; }
+
+        /// <summary>
+        /// 蚂蚁会员统一ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 外部业务号，对应用户该笔ETC申请单号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
 
         /// <summary>
         /// 外部订单号,商户端唯一
@@ -52,7 +70,7 @@ namespace Aop.Api.Domain
         public string TradeNo { get; set; }
 
         /// <summary>
-        /// 交易状态； S：扣款成功； R: 退款成功；
+        /// 支付宝交易状态（S：扣款成功； R: 退款成功）银行交易状态（PROCESS_SUCCESS：受理成功；PROCESS_FAIL：受理失败；）
         /// </summary>
         [XmlElement("trade_status")]
         public string TradeStatus { get; set; }

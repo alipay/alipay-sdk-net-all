@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
+        /// 外部业务单号，自定义提供。如果不为空，则会在alipay.fund.taxbill.sign.completed的通知消息中提供，方便识别签约用户。注意：out_biz_no不参与签约流程的幂等，只用于流程串联
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 产品码，固定值：TAX_BILL_PLATFORM
         /// </summary>
         [XmlElement("product_code")]

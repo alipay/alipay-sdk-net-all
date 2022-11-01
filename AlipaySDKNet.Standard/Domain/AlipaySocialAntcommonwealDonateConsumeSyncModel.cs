@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string GmtTradeFinished { get; set; }
 
         /// <summary>
+        /// 交易发起用户user_id对应的open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部商户Id
         /// </summary>
         [XmlElement("out_merchant_id")]

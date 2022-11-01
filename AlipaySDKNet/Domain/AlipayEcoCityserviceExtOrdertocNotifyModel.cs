@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AppCode { get; set; }
 
         /// <summary>
+        /// 城市编码
+        /// </summary>
+        [XmlElement("city_code")]
+        public string CityCode { get; set; }
+
+        /// <summary>
         /// 扩展信息 咨询BD获取
         /// </summary>
         [XmlElement("ext_info")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("industry_type")]
         public long IndustryType { get; set; }
+
+        /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 订单金额
@@ -68,6 +80,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 跳转地址
+        /// </summary>
+        [XmlElement("target_url")]
+        public string TargetUrl { get; set; }
 
         /// <summary>
         /// 模板Id 请联系BD获取

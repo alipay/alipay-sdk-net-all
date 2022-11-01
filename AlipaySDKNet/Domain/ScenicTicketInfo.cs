@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public List<ScenicExtInfo> ExtInfo { get; set; }
 
         /// <summary>
-        /// 具体不可用的日期
+        /// 具体不可用的日期， 长度最大为100
         /// </summary>
         [XmlArray("invalid_dates")]
         [XmlArrayItem("date")]
@@ -97,7 +97,7 @@ namespace Aop.Api.Domain
         public string TicketName { get; set; }
 
         /// <summary>
-        /// 单据号
+        /// 单据号，确保同一笔订单下单据号唯一
         /// </summary>
         [XmlElement("ticket_no")]
         public string TicketNo { get; set; }

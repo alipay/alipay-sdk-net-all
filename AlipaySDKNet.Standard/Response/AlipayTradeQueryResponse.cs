@@ -29,6 +29,12 @@ namespace Aop.Api.Response
         public string AuthTradePayMode { get; set; }
 
         /// <summary>
+        /// 间联交易下，返回给机构的信 息
+        /// </summary>
+        [XmlElement("bkagent_resp_info")]
+        public BkAgentRespInfo BkagentRespInfo { get; set; }
+
+        /// <summary>
         /// 订单描述； 只在银行间联交易场景下返回该信息；
         /// </summary>
         [XmlElement("body")]

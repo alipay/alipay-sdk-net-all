@@ -16,10 +16,16 @@ namespace Aop.Api.Domain
         public string ExtendParams { get; set; }
 
         /// <summary>
-        /// 手机号 hash后的值；  uid和mobile_sha_256二选一
+        /// 手机号 hash后的值；  open_id和mobile_sha_256二选一
         /// </summary>
         [XmlElement("mobile_sha_256")]
         public string MobileSha256 { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的open_id， open_id和 mobile_sha256二选一
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 订单金额
@@ -34,7 +40,7 @@ namespace Aop.Api.Domain
         public string ReqId { get; set; }
 
         /// <summary>
-        /// 用户id，可以使用2088账号，可以使用hash后的匿名用户id是； uid和 mobile_sha256二选一
+        /// 用户id，后面将废弃
         /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }
