@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string EducationStatus { get; set; }
 
         /// <summary>
+        /// 工作证图片上传接口返回的id
+        /// </summary>
+        [XmlElement("head_pic_id")]
+        public string HeadPicId { get; set; }
+
+        /// <summary>
         /// 求职意向，城市
         /// </summary>
         [XmlElement("intention_city")]

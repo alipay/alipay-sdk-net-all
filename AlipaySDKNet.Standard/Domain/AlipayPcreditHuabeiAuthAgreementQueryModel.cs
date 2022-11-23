@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AuthScene { get; set; }
 
         /// <summary>
+        /// 买家在支付宝的用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部签约号，由商户提供，花芝轻会员协议中标识用户的唯一签约号（确保在商户系统中唯一）。
         /// </summary>
         [XmlElement("out_sign_no")]

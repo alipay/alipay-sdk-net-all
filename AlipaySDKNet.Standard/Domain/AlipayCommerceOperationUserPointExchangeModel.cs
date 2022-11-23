@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
+        /// 蚂蚁open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 将要扣减的用户积分
         /// </summary>
         [XmlElement("point")]

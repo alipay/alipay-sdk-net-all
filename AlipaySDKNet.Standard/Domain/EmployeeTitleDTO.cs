@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ModifyBy { get; set; }
 
         /// <summary>
+        /// 员工支付宝账号open_id,与employee_id两者必填其一
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 抬头id
         /// </summary>
         [XmlElement("title_id")]

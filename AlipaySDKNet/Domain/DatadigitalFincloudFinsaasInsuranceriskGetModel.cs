@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string RequestId { get; set; }
 
         /// <summary>
+        /// 名称：场景编码 是否唯一：不唯一 应用场景：通过该参数区分不同风控场景  枚举值：黑名单(BlackList)、硬规则(RiskRule)、模型计算(Prediction)、同人(SameUser)
+        /// </summary>
+        [XmlElement("scene_code")]
+        public string SceneCode { get; set; }
+
+        /// <summary>
         /// 电话号码
         /// </summary>
         [XmlElement("telephone_num")]

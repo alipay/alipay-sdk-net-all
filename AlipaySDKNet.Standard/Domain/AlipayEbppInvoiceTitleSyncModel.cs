@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OpenBankName { get; set; }
 
         /// <summary>
+        /// 支付宝用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 税号
         /// </summary>
         [XmlElement("tax_register_no")]

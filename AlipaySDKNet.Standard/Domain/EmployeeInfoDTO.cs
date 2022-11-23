@@ -66,6 +66,12 @@ namespace Aop.Api.Domain
         public string Mobile { get; set; }
 
         /// <summary>
+        /// 用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 角色列表，可选值：USER-用户；ADMIM-管理员 SUPER_ADMIN-超级管理员
         /// </summary>
         [XmlArray("role_list")]

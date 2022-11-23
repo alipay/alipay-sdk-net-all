@@ -23,6 +23,13 @@ namespace Aop.Api.Domain
         public string BillEndMonth { get; set; }
 
         /// <summary>
+        /// 账单号
+        /// </summary>
+        [XmlArray("bill_nos")]
+        [XmlArrayItem("string")]
+        public List<string> BillNos { get; set; }
+
+        /// <summary>
         /// 账单月份
         /// </summary>
         [XmlElement("bill_start_month")]
@@ -33,6 +40,19 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bill_status_list")]
         public string BillStatusList { get; set; }
+
+        /// <summary>
+        /// 业务产品码列表
+        /// </summary>
+        [XmlArray("biz_pd_code_list")]
+        [XmlArrayItem("string")]
+        public List<string> BizPdCodeList { get; set; }
+
+        /// <summary>
+        /// 资金结算时点
+        /// </summary>
+        [XmlElement("fund_settle_time")]
+        public string FundSettleTime { get; set; }
 
         /// <summary>
         /// 机构OU
@@ -79,6 +99,12 @@ namespace Aop.Api.Domain
         [XmlArray("settle_time_type_list")]
         [XmlArrayItem("string")]
         public List<string> SettleTimeTypeList { get; set; }
+
+        /// <summary>
+        /// 来源系统
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
 
         /// <summary>
         /// 扩展汇总维度1 （智科业务是：外部合约号outContractId，前端给到参数“outContractId=XXXX”)

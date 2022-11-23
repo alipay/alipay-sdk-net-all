@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string StrongestArea { get; set; }
 
         /// <summary>
-        /// 长势预警值，值域-1～1
+        /// 长势预警值，值域-1～0
         /// </summary>
         [XmlElement("warn")]
         public string Warn { get; set; }

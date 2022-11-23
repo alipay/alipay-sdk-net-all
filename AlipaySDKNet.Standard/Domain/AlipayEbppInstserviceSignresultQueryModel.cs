@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
+        /// 支付宝用户的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 二级业务类型。例：充值(CZ)，水费(WATER)，电费(ELECTRIC)
         /// </summary>
         [XmlElement("sub_biz_type")]

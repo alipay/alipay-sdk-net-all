@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustryAntforestEventSendModel : AopObject
     {
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用于标识行业-蚂蚁森林能量事件的类别
         /// </summary>
         [XmlElement("type")]

@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string BizOptNo { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户本次操作的请求流水号
         /// </summary>
         [XmlElement("out_request_no")]

@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string BuyerNick { get; set; }
 
         /// <summary>
+        /// 免押金额
+        /// </summary>
+        [XmlElement("credit_deposit_money")]
+        public long CreditDepositMoney { get; set; }
+
+        /// <summary>
         /// 优惠金额
         /// </summary>
         [XmlElement("discount_fee")]
@@ -81,6 +87,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_title")]
         public string ItemTitle { get; set; }
+
+        /// <summary>
+        /// 商品总价值
+        /// </summary>
+        [XmlElement("item_total_value")]
+        public long ItemTotalValue { get; set; }
 
         /// <summary>
         /// 物流单
@@ -144,9 +156,21 @@ namespace Aop.Api.Domain
         public List<EcomSubOrderDTO> SubOrderList { get; set; }
 
         /// <summary>
+        /// 交易天数
+        /// </summary>
+        [XmlElement("trade_days")]
+        public long TradeDays { get; set; }
+
+        /// <summary>
         /// 交易结束时间
         /// </summary>
         [XmlElement("trade_end_time")]
         public string TradeEndTime { get; set; }
+
+        /// <summary>
+        /// 交易开始时间
+        /// </summary>
+        [XmlElement("trade_start_time")]
+        public string TradeStartTime { get; set; }
     }
 }

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string InsType { get; set; }
 
         /// <summary>
+        /// 买家支付宝账号对应的支付宝唯一用户号。  以2088开头的纯16位数字。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 跳回的地址
         /// </summary>
         [XmlElement("return_url")]

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string FreezeAmount { get; set; }
 
         /// <summary>
+        /// 支付宝的用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部请求号，对应一次请求交互流水，由调用方生成
         /// </summary>
         [XmlElement("out_request_no")]

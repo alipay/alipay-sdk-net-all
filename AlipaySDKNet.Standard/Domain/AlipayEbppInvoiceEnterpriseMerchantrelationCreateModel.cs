@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceEnterpriseMerchantrelationCreateModel : AopObject
     {
         /// <summary>
-        /// 企业ID
+        /// 共同账户ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -20,6 +20,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
+
+        /// <summary>
+        /// 企业ID
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
 
         /// <summary>
         /// 传入操作人员标识

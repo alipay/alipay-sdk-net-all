@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string ReceiverId { get; set; }
 
         /// <summary>
+        /// 接收消息者openId
+        /// </summary>
+        [XmlElement("receiver_open_id")]
+        public string ReceiverOpenId { get; set; }
+
+        /// <summary>
         /// 模板code值，根据这个值获取对应的模板填充数据协议
         /// </summary>
         [XmlElement("template_code")]

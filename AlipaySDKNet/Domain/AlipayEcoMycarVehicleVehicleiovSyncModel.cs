@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string IovSeqNo { get; set; }
 
         /// <summary>
+        /// 支付宝用户openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 当前系统时间戳
         /// </summary>
         [XmlElement("system_timestamp")]

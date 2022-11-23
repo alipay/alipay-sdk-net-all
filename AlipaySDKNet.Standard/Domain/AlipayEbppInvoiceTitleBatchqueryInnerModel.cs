@@ -12,6 +12,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 抬头所属支付宝用户id
         /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 抬头所属支付宝用户id
+        /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
     }

@@ -34,6 +34,18 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
+        /// 刷脸用户openId（当biz_code为SCHOOL_PAYMENT时，当前参数必选）
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 用于开通一脸通行的支付宝账户openId。如果是父母为孩子开通，则为父母支付宝 openId；如果是用户为本人开通，则为本人支付宝 openId（如果是关闭家长代开通，当前参数必选）
+        /// </summary>
+        [XmlElement("parent_open_id")]
+        public string ParentOpenId { get; set; }
+
+        /// <summary>
         /// 用于开通一脸通行的支付宝账户 uid。如果是父母为孩子开通，则为父母支付宝 uid；如果是用户为本人开通，则为本人支付宝 uid（如果是关闭家长代开通，当前参数必选）
         /// </summary>
         [XmlElement("parent_uid")]

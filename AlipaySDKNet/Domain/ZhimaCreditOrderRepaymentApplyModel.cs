@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Category { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID，确保传入与业务订单相匹配的会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// Json 字符串，订单对应业务信息同步，会影响订单C端展现；  如有特殊诉求，接入前找业务对口人对接
         /// </summary>
         [XmlElement("order_info")]

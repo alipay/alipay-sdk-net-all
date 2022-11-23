@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AuthOptId { get; set; }
 
         /// <summary>
+        /// 买家在支付宝的用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户原先调用冻结、解冻接口传入的请求流水号。按照流水号查询订单时，此字段不能为空。
         /// </summary>
         [XmlElement("out_request_no")]

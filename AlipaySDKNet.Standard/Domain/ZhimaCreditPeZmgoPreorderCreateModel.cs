@@ -12,6 +12,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 支付宝用户ID。同一个外部请求号，调用方要确保支付宝userId取值不变
         /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
+        /// 支付宝用户ID。同一个外部请求号，调用方要确保支付宝userId取值不变
+        /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }
 

@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string CityCode { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订阅提醒时间列表,单位小时，必须不小于48
         /// </summary>
         [XmlArray("reminder_hour_list")]

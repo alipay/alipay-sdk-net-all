@@ -112,6 +112,12 @@ namespace Aop.Api.Response
         public string PayerLogonId { get; set; }
 
         /// <summary>
+        /// 支付宝openId，用户（userId）在应用（appId）下的唯一标识。
+        /// </summary>
+        [XmlElement("payer_open_id")]
+        public string PayerOpenId { get; set; }
+
+        /// <summary>
         /// 付款方支付宝账号对应的支付宝唯一用户号，以2088开头的16位纯数字组成
         /// </summary>
         [XmlElement("payer_user_id")]

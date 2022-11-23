@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 支付宝用户的openId
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 租车信息
         /// </summary>
         [XmlElement("car_rental_info")]

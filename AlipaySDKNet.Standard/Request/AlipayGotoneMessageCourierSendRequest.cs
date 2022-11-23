@@ -20,6 +20,11 @@ namespace Aop.Api.Request
         public string ExtInfo { get; set; }
 
         /// <summary>
+        /// 支付宝openId
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 业务配置码serviceCode
         /// </summary>
         public string ServiceCode { get; set; }
@@ -116,6 +121,7 @@ namespace Aop.Api.Request
             AopDictionary parameters = new AopDictionary();
             parameters.Add("arguments", this.Arguments);
             parameters.Add("ext_info", this.ExtInfo);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("service_code", this.ServiceCode);
             parameters.Add("user_id", this.UserId);
             if(udfParams != null) 

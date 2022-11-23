@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
+        /// 支付宝用户的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单总金额
         /// </summary>
         [XmlElement("order_amount")]

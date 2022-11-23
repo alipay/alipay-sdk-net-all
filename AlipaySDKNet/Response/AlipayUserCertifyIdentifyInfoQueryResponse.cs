@@ -64,6 +64,12 @@ namespace Aop.Api.Response
         public string LogonId { get; set; }
 
         /// <summary>
+        /// 用户在应用（AppId）下的用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 企业客户维度的证件有效期，格式为yyyyMMdd或者“长期”
         /// </summary>
         [XmlElement("org_customer_expire_date")]

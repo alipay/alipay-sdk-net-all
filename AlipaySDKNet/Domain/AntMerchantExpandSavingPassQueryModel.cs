@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ChInfo { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商家ID
         /// </summary>
         [XmlElement("pid")]

@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public bool HasAlipayTrade { get; set; }
 
         /// <summary>
+        /// 用户userId，蚂蚁统一会员ID，为必传入参。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号。需保证唯一，为必传入参。 若接口调用失败，提示信息为更换幂等号，商户更换此字段重新发起调用。
         /// </summary>
         [XmlElement("out_biz_no")]

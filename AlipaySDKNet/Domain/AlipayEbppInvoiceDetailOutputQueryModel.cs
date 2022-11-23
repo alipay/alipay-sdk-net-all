@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string InvoiceNo { get; set; }
 
         /// <summary>
+        /// 支付宝用户 id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 获取发票明细应用场景。固定为 INVOICE_EXPENSE  表示发票报销。
         /// </summary>
         [XmlElement("scene")]

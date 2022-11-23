@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 买家的蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 芝麻信用类目码，由芝麻信用侧分配
         /// </summary>
         [XmlElement("category_code")]

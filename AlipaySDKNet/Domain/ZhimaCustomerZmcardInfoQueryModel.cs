@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZhimaCustomerZmcardInfoQueryModel : AopObject
     {
         /// <summary>
+        /// 特性列表 默认不用传 特性1,特性2 多个特性用,分割 传入COMPAT_V1代表兼容V1版本
+        /// </summary>
+        [XmlElement("features")]
+        public string Features { get; set; }
+
+        /// <summary>
         /// 查看者的证件号或者支付宝用户UID,A申请查看B的芝麻证信息，则传入A的证件号，若是自己查看自己的，则传入自己的证件号，无法确定查看者，则传入空
         /// </summary>
         [XmlElement("guest_cert_no")]

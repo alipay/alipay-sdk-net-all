@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public long DeclareMode { get; set; }
 
         /// <summary>
+        /// 定金在支付宝系统中的交易流水号，最长64位。当该参数不为空时，代表为”定金+尾款“报关场景。
+        /// </summary>
+        [XmlElement("deposit_trade_no")]
+        public string DepositTradeNo { get; set; }
+
+        /// <summary>
         /// 商户控制本单是否拆单的报关参数。  仅当该参数传值为T或者t时，才会触发拆单。
         /// </summary>
         [XmlElement("is_split")]

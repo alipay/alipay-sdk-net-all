@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string IsvAppid { get; set; }
 
         /// <summary>
+        /// 用户open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 分页查询的起始页数
         /// </summary>
         [XmlElement("page_num")]

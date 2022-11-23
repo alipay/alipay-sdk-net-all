@@ -35,6 +35,30 @@ namespace Aop.Api.Domain
         public bool IsHarvested { get; set; }
 
         /// <summary>
+        /// 是否高温风险
+        /// </summary>
+        [XmlElement("is_high_temperature_risk")]
+        public bool IsHighTemperatureRisk { get; set; }
+
+        /// <summary>
+        /// 是否低温风险
+        /// </summary>
+        [XmlElement("is_low_temperature_risk")]
+        public bool IsLowTemperatureRisk { get; set; }
+
+        /// <summary>
+        /// 是否暴雨风险
+        /// </summary>
+        [XmlElement("is_rainstorm_risk")]
+        public bool IsRainstormRisk { get; set; }
+
+        /// <summary>
+        /// 是否墒情风险
+        /// </summary>
+        [XmlElement("is_soil_moisture_risk")]
+        public bool IsSoilMoistureRisk { get; set; }
+
+        /// <summary>
         /// 当为true时，仅返回地块相关作物编码字段，同时接受页大小开放
         /// </summary>
         [XmlElement("need_crop_only")]
@@ -58,5 +82,11 @@ namespace Aop.Api.Domain
         [XmlArray("region_codes")]
         [XmlArrayItem("string")]
         public List<string> RegionCodes { get; set; }
+
+        /// <summary>
+        /// 区块分组编码
+        /// </summary>
+        [XmlElement("region_group_code")]
+        public string RegionGroupCode { get; set; }
     }
 }

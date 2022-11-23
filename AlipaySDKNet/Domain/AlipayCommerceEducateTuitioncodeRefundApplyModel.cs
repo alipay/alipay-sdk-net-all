@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateTuitioncodeRefundApplyModel : AopObject
     {
         /// <summary>
+        /// 订单支付人支付宝编号
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部商户的订单编号
         /// </summary>
         [XmlElement("out_order_no")]
@@ -46,5 +52,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("smid")]
         public string Smid { get; set; }
+
+        /// <summary>
+        /// 订单支付人支付宝编号
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

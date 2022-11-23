@@ -22,13 +22,19 @@ namespace Aop.Api.Domain
         public string LogonId { get; set; }
 
         /// <summary>
+        /// 映射user_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 用户手机号。user_id，logon_id，phone_id不能同时为空，优先级依次降低。 注：该参数将先匹配用户手机号对应支付宝账号，若不存在，则再匹配用户手机号绑定支付宝账号。若用户手机号绑定多个支付宝账号，则以系统判定的常用支付宝账号为准。请优先使用user_id和logon_id。
+        /// 该参数将先匹配用户手机号对应支付宝账号，若存在且完成实名认证则以此支付宝账号发放，若该支付宝账号未完成实名认证则发放失败；若用户手机号对应支付宝账号不存在，则再匹配用户手机号绑定支付宝账号。若用户手机号绑定多个支付宝账号，则以系统判定的常用支付宝账号为准。请优先使用user_id和logon_id。
         /// </summary>
         [XmlElement("phone_id")]
         public string PhoneId { get; set; }

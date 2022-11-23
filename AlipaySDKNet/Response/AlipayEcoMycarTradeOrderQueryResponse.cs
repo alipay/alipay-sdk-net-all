@@ -69,6 +69,12 @@ namespace Aop.Api.Response
         public string GmtUpdated { get; set; }
 
         /// <summary>
+        /// 应用维度用户ID，唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部订单号
         /// </summary>
         [XmlElement("out_biz_trade_no")]

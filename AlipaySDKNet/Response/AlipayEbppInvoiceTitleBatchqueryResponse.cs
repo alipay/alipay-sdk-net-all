@@ -18,6 +18,12 @@ namespace Aop.Api.Response
         public List<InvoiceElementModel> InvoiceElementList { get; set; }
 
         /// <summary>
+        /// 支付宝用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 依据条件查询到的发票总条数
         /// </summary>
         [XmlElement("total_count")]

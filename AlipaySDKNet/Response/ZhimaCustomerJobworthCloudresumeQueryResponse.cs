@@ -43,6 +43,12 @@ namespace Aop.Api.Response
         public string Phone { get; set; }
 
         /// <summary>
+        /// 智能简历头像
+        /// </summary>
+        [XmlElement("pic_url")]
+        public CloudResumeHeadPic PicUrl { get; set; }
+
+        /// <summary>
         /// 求职期望
         /// </summary>
         [XmlArray("position_intentions")]

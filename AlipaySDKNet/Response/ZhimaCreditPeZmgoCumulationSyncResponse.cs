@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string FailReason { get; set; }
 
         /// <summary>
+        /// 用户userId，蚂蚁统一会员ID。 累计成功后返回此字段。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号。需保证唯一，若接口调用失败，提示信息为更换幂等号，商户更换此字段重新发起调用。 累计成功后返回此字段。
         /// </summary>
         [XmlElement("out_biz_no")]

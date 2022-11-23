@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
+        /// 支付宝用户的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// sign为查询签约流程，unsign为查询解约流程
         /// </summary>
         [XmlElement("operation_type")]

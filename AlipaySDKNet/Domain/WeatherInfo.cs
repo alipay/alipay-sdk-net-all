@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class WeatherInfo : AopObject
     {
         /// <summary>
+        /// 附加信息
+        /// </summary>
+        [XmlElement("addition_info")]
+        public string AdditionInfo { get; set; }
+
+        /// <summary>
         /// 数据预报时间
         /// </summary>
         [XmlElement("forecast_date")]

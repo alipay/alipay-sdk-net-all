@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string CancelDate { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 一般是户号/订单号/2088等； 1、签约与解约保持一致； 2、与离线口径的签约Id保持一致；
         /// </summary>
         [XmlElement("out_sign_no")]

@@ -296,6 +296,12 @@ namespace Aop.Api.Response
         public string NickName { get; set; }
 
         /// <summary>
+        /// 支付宝用户的openId。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 组织机构代码（用户类型是公司类型时才有此字段）。
         /// </summary>
         [XmlElement("organization_code")]
@@ -318,6 +324,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("person_cert_expiry_date")]
         public string PersonCertExpiryDate { get; set; }
+
+        /// <summary>
+        /// 证件起始日期（用户类型是个人的时候才可能有此字段，不保证准确，同时有可能为空）。
+        /// </summary>
+        [XmlElement("person_cert_issue_date")]
+        public string PersonCertIssueDate { get; set; }
 
         /// <summary>
         /// 个人证件图片（用户类型是个人的时候才有此字段）。

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 场景
         /// </summary>
         [XmlElement("scene_code")]

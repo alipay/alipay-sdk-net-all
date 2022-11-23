@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("game_name")]
         public string GameName { get; set; }
+
+        /// <summary>
+        /// 设备是否支持锁定
+        /// </summary>
+        [XmlElement("lockable_device")]
+        public bool LockableDevice { get; set; }
     }
 }

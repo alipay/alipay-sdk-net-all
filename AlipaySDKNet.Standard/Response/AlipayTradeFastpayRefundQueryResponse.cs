@@ -95,6 +95,13 @@ namespace Aop.Api.Response
         public string RefundChargeAmount { get; set; }
 
         /// <summary>
+        /// 退费信息
+        /// </summary>
+        [XmlArray("refund_charge_info_list")]
+        [XmlArrayItem("refund_charge_info")]
+        public List<RefundChargeInfo> RefundChargeInfoList { get; set; }
+
+        /// <summary>
         /// 本次退款使用的资金渠道； 默认不返回该信息，需要在入参的query_options中指定"refund_detail_item_list"值时才返回该字段信息。
         /// </summary>
         [XmlArray("refund_detail_item_list")]

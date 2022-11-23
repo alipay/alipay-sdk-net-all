@@ -47,6 +47,12 @@ namespace Aop.Api.Response
         public string BuyerLogonId { get; set; }
 
         /// <summary>
+        /// 买家支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 买家实付金额，单位为元，两位小数。该金额代表该笔交易买家实际支付的金额，不包含商户折扣等金额
         /// </summary>
         [XmlElement("buyer_pay_amount")]
@@ -81,6 +87,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("charge_flags")]
         public string ChargeFlags { get; set; }
+
+        /// <summary>
+        /// 计费信息列表
+        /// </summary>
+        [XmlArray("charge_info_list")]
+        [XmlArrayItem("charge_info")]
+        public List<ChargeInfo> ChargeInfoList { get; set; }
 
         /// <summary>
         /// 信用业务单号。信用支付场景才有值，先用后付产品里是芝麻订单号。

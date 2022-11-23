@@ -22,6 +22,19 @@ namespace Aop.Api.Response
         public string NextUserId { get; set; }
 
         /// <summary>
+        /// 支付宝用户的
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的唯一标识列表
+        /// </summary>
+        [XmlArray("open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> OpenIdList { get; set; }
+
+        /// <summary>
         /// 用户的userId列表
         /// </summary>
         [XmlArray("user_id_list")]

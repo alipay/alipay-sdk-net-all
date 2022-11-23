@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string DeviceNo { get; set; }
 
         /// <summary>
+        /// 蚂蚁会员统一ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝侧申请订单号，在订单同步接口中会同步给外部机构。与biz_agreement_no参数，两者二选一必传。
         /// </summary>
         [XmlElement("order_id")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string IsvOrderNo { get; set; }
 
         /// <summary>
+        /// 实际付款人编号
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 交易单状态： 4-已退款
         /// </summary>
         [XmlElement("order_status")]

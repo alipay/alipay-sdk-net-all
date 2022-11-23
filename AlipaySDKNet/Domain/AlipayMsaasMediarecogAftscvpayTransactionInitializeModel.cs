@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string MachineType { get; set; }
 
         /// <summary>
+        /// 用户uid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 标识是什么场景下的视觉识别请求
         /// </summary>
         [XmlElement("scene")]

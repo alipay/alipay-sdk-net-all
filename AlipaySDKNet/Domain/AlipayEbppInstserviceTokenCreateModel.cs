@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BillKey { get; set; }
 
         /// <summary>
+        /// 可传：固定充/低额充/账单充（ 低额充：THRESHOLD_DEDUCT、 固定充：REGULAR_QUOTA_DEDUCT、 账单充：BILL_DEDUCT )，仅支持传英文
+        /// </summary>
+        [XmlElement("bill_type")]
+        public string BillType { get; set; }
+
+        /// <summary>
         /// 业务场景：flow(流量)、voice(语音话费)、telephone(固话)
         /// </summary>
         [XmlElement("biz_scene")]

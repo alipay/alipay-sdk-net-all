@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
+        /// 交易的买家支付宝账户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户交易订单号
         /// </summary>
         [XmlElement("out_biz_no")]

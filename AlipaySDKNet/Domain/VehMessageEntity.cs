@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string MsgTemplateId { get; set; }
 
         /// <summary>
+        /// (certificate_type/certificate_number/用户名字) 或者open_id必须有一个不为空。两个都不为空则以open_id为准
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// identity字段：值为不大于64位的保证唯一的字符串；该字段用于保证消息唯一性，防止消息重复推送，相当于业务流水号，由接入方自行生成
         /// </summary>
         [XmlElement("out_msg_id")]

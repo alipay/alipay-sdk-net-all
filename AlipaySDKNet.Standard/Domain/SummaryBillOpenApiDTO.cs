@@ -40,6 +40,18 @@ namespace Aop.Api.Domain
         public string BillStatus { get; set; }
 
         /// <summary>
+        /// 业财身份编码
+        /// </summary>
+        [XmlElement("biz_pd_code")]
+        public string BizPdCode { get; set; }
+
+        /// <summary>
+        /// 资金结算时点
+        /// </summary>
+        [XmlElement("fund_settle_time")]
+        public string FundSettleTime { get; set; }
+
+        /// <summary>
         /// 机构OU
         /// </summary>
         [XmlElement("inst_id")]
@@ -80,5 +92,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("settled_amount")]
         public MultiCurrencyMoneyOpenApi SettledAmount { get; set; }
+
+        /// <summary>
+        /// 调用者系统名称
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
     }
 }

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Money { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一开放ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 幂等ID，对于交易类业务可为交易流水号，一次性业务可为userId，外围业务控制。在系统异常重试时需要确保传入同样的流水号
         /// </summary>
         [XmlElement("out_biz_no")]

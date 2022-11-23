@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BeginTime { get; set; }
 
         /// <summary>
+        /// 支付宝open_id
+        /// </summary>
+        [XmlElement("driver_open_id")]
+        public string DriverOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝uid
         /// </summary>
         [XmlElement("driver_user_id")]

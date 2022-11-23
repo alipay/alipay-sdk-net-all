@@ -23,6 +23,13 @@ namespace Aop.Api.Domain
         public string GroupId { get; set; }
 
         /// <summary>
+        /// 商家id列表
+        /// </summary>
+        [XmlArray("open_ids")]
+        [XmlArrayItem("string")]
+        public List<string> OpenIds { get; set; }
+
+        /// <summary>
         /// 增加群成员的时候，选择的用户userid,每次不能超过50个，每个群人数上限500人，user_ids的值为错误的uid时，多个uid的情况下会添加成功正确的uid，如果所有添加的uid全部错误，则会报错
         /// </summary>
         [XmlArray("user_ids")]

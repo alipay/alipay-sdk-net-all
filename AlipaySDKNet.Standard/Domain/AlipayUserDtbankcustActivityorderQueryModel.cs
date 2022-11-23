@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string LogonId { get; set; }
 
         /// <summary>
+        /// 本字段映射use_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号，activity_order_id为空时必填
         /// </summary>
         [XmlElement("out_biz_no")]

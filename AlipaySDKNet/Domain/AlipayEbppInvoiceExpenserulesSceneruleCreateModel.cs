@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpenserulesSceneruleCreateModel : AopObject
     {
         /// <summary>
-        /// 企业ID
+        /// 共同账号ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -35,11 +35,18 @@ namespace Aop.Api.Domain
         public string EffectiveStartDate { get; set; }
 
         /// <summary>
-        /// 员工支付宝uid列表 特殊说明：单次传入的最大员工数为50，后续通过修改费控规则员工接口进行员工调整
+        /// 切换open_id前请使用：员工支付宝uid列表 特殊说明：单次传入的最大员工数为50，后续通过修改费控规则员工接口进行员工调整
         /// </summary>
         [XmlArray("employee_list")]
         [XmlArrayItem("string")]
         public List<string> EmployeeList { get; set; }
+
+        /// <summary>
+        /// 切换open_id后请使用：员工open_id/企业码员工ID列表 特殊说明：单次传入的最大员工数为50，后续通过修改费控规则员工接口进行员工调整
+        /// </summary>
+        [XmlArray("employee_open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> EmployeeOpenIdList { get; set; }
 
         /// <summary>
         /// 企业码企业id

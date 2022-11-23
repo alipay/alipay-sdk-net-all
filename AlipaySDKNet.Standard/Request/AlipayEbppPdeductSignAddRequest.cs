@@ -60,6 +60,11 @@ namespace Aop.Api.Request
         public string NotifyConfig { get; set; }
 
         /// <summary>
+        /// 用户UserId在应用AppId下的唯一用户标识
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部产生的协议ID
         /// </summary>
         public string OutAgreementId { get; set; }
@@ -194,6 +199,7 @@ namespace Aop.Api.Request
             parameters.Add("ext_user_info", this.ExtUserInfo);
             parameters.Add("extend_field", this.ExtendField);
             parameters.Add("notify_config", this.NotifyConfig);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("out_agreement_id", this.OutAgreementId);
             parameters.Add("owner_name", this.OwnerName);
             parameters.Add("pay_config", this.PayConfig);

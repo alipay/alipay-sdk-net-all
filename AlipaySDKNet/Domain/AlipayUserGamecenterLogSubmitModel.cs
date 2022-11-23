@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ErrorDesc { get; set; }
 
         /// <summary>
+        /// 商户app_id维度下的用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 出现异常的openapi接口名字
         /// </summary>
         [XmlElement("openapi_name")]

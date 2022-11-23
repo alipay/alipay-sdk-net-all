@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpenserulesProjectruleQueryModel : AopObject
     {
         /// <summary>
-        /// 企业ID
+        /// 共同账号ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -26,6 +26,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("employee_id")]
         public string EmployeeId { get; set; }
+
+        /// <summary>
+        /// 切换open_id后请使用：员工open_id（可空）
+        /// </summary>
+        [XmlElement("employee_open_id")]
+        public string EmployeeOpenId { get; set; }
 
         /// <summary>
         /// 页数

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BatchNo { get; set; }
 
         /// <summary>
-        /// 渠道
+        /// 渠道，对接时由蚂蚁保技术提供
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
@@ -72,7 +72,7 @@ namespace Aop.Api.Domain
         public string RecomFlowNo { get; set; }
 
         /// <summary>
-        /// 投保场景
+        /// 投保场景，对接时由蚂蚁保技术提供
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

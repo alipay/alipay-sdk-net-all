@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string LastUpdateTime { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户卡状态
         /// </summary>
         [XmlElement("status_code")]

@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceOperationUserBenefitBatchqueryModel : AopObject
     {
         /// <summary>
+        /// 开放平台用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 页码
         /// </summary>
         [XmlElement("page_num")]

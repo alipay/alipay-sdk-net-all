@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 对应的证件号(未脱敏)或支付宝uid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 产品码，固定为 w1010100000000002733。
         /// </summary>
         [XmlElement("product_code")]

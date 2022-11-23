@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BillKey { get; set; }
 
         /// <summary>
+        /// 支付宝用户的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用户签约的支付宝账号id
         /// </summary>
         [XmlElement("user_id")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string MerchantStatusDesc { get; set; }
 
         /// <summary>
+        /// 支付宝用户openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 服务操作的业务时间戳
         /// </summary>
         [XmlElement("service_operate_timestamp")]

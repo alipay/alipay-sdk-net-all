@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("pass_through_info")]
         public string PassThroughInfo { get; set; }
+
+        /// <summary>
+        /// 用于透传主站错误码描述
+        /// </summary>
+        [XmlElement("result_msg")]
+        public string ResultMsg { get; set; }
     }
 }

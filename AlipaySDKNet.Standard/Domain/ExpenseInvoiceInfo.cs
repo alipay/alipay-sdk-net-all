@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string EmployeeId { get; set; }
 
         /// <summary>
+        /// 员工ID
+        /// </summary>
+        [XmlElement("employee_open_id")]
+        public string EmployeeOpenId { get; set; }
+
+        /// <summary>
         /// 电子发票结构化信息
         /// </summary>
         [XmlElement("invoice_output_info")]

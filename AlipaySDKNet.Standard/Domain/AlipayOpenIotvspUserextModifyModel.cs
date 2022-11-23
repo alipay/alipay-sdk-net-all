@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ComponentOutId { get; set; }
 
         /// <summary>
+        /// 扩展信息，ISV自定义
+        /// </summary>
+        [XmlElement("ext")]
+        public string Ext { get; set; }
+
+        /// <summary>
         /// ISV的PID
         /// </summary>
         [XmlElement("isv_pid")]

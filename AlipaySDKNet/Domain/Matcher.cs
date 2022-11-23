@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string MobileNo { get; set; }
 
         /// <summary>
+        /// 支付宝用户openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝用户id，2088开头16位长度的字符串，与mobile_no、identity_card不能同时为空
         /// </summary>
         [XmlElement("user_id")]

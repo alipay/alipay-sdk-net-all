@@ -22,10 +22,16 @@ namespace Aop.Api.Domain
         public string Message { get; set; }
 
         /// <summary>
-        /// owner_id
+        /// 入参的 owner_id
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
+
+        /// <summary>
+        /// 入参的  owner_open_id
+        /// </summary>
+        [XmlElement("owner_open_id")]
+        public string OwnerOpenId { get; set; }
 
         /// <summary>
         /// owner_type

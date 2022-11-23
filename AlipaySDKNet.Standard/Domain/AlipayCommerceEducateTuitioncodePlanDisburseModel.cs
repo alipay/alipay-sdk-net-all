@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateTuitioncodePlanDisburseModel : AopObject
     {
         /// <summary>
+        /// 订单支付人支付宝用户编号
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// ISV订单号
         /// </summary>
         [XmlElement("out_order_no")]

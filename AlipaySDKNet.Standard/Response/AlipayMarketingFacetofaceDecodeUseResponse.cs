@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayMarketingFacetofaceDecodeUseResponse : AopResponse
     {
         /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用户userId
         /// </summary>
         [XmlElement("user_id")]

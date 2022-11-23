@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BizProduct { get; set; }
 
         /// <summary>
+        /// 买家的支付宝用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 原始的业务单号，通常为支付宝交易号
         /// </summary>
         [XmlElement("orig_biz_order_id")]

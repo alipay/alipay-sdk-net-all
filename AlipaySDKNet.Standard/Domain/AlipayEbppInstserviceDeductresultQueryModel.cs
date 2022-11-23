@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayEbppInstserviceDeductresultQueryModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 申请代扣时的流水号
         /// </summary>
         [XmlElement("out_order_no")]

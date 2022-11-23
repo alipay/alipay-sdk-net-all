@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string MShortName { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID，该字段未传的情况下，商户简称和外部交易流水号必填
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部交易流水号，userId未传的情况下，该字段必填
         /// </summary>
         [XmlElement("out_biz_no")]

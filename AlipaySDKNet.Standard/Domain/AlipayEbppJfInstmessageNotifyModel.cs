@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string InstTime { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 组织代码，支付宝分配
         /// </summary>
         [XmlElement("org_code")]

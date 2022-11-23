@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class InvoiceTitleQueryOpenModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户id，支付宝用户的唯一标识。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 购买方地址
         /// </summary>
         [XmlElement("payer_address")]

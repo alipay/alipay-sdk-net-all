@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateSceneUserQueryModel : AopObject
     {
         /// <summary>
+        /// 开通人绑定的支付宝openid
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝学校内标
         /// </summary>
         [XmlElement("alipay_school_id")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
+
+        /// <summary>
+        /// 学生（教职工）的刷脸openId。刷脸openId与用户三要素二选一，都传优先使用刷脸openId
+        /// </summary>
+        [XmlElement("face_open_id")]
+        public string FaceOpenId { get; set; }
 
         /// <summary>
         /// 学生（教职工）的刷脸UID。刷脸UID与用户三要素二选一，都传优先使用刷脸UID

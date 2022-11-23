@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public Template Template { get; set; }
 
         /// <summary>
+        /// 支付宝openId，用于支付宝用户在当前应用下的用户标识。
+        /// </summary>
+        [XmlElement("to_open_id")]
+        public string ToOpenId { get; set; }
+
+        /// <summary>
         /// 消息接收用户的支付宝用户id，用户在支付宝的唯一标识，以 2088 开头的 16 位纯数字组成。
         /// </summary>
         [XmlElement("to_user_id")]

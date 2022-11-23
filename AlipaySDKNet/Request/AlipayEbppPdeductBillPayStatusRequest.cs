@@ -15,6 +15,11 @@ namespace Aop.Api.Request
         public string AgreementId { get; set; }
 
         /// <summary>
+        /// 用户UserId在应用AppId下的唯一用户标识
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户代扣业务流水
         /// </summary>
         public string OutOrderNo { get; set; }
@@ -105,6 +110,7 @@ namespace Aop.Api.Request
         {
             AopDictionary parameters = new AopDictionary();
             parameters.Add("agreement_id", this.AgreementId);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("out_order_no", this.OutOrderNo);
             if(udfParams != null) 
             {

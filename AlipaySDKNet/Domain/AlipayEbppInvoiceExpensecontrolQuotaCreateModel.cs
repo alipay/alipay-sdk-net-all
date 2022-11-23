@@ -46,10 +46,16 @@ namespace Aop.Api.Domain
         public string OuterSourceId { get; set; }
 
         /// <summary>
-        /// 额度所属者ID： owner_type为EMPLOYEE时填写员工支付宝ID； owner_type为ENTERPRISE_PAY_UID时填写员工企业码ID； owner_type为PHONE时填写员工手机号； owner_type为ENTERPRISE时填写企业ID。
+        /// 额度所属者ID（未切换open_id请使用此字段）： owner_type为EMPLOYEE时填写员工支付宝ID； owner_type为ENTERPRISE_PAY_UID时填写员工企业码ID； owner_type为PHONE时填写员工手机号； owner_type为ENTERPRISE时填写企业ID。
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
+
+        /// <summary>
+        /// 额度所属者ID（切换open_id后请使用此字段）： owner_type为EMPLOYEE时填写open_id； owner_type为ENTERPRISE_PAY_UID时填写员工企业码ID； owner_type为PHONE时填写员工手机号； owner_type为ENTERPRISE时填写企业ID。
+        /// </summary>
+        [XmlElement("owner_open_id")]
+        public string OwnerOpenId { get; set; }
 
         /// <summary>
         /// 额度所属者类型，可通过设置该字段来指定操作的owner_id类型，如果设置企业额度则设置为ENTERPRISE

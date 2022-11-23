@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string BizType { get; set; }
 
         /// <summary>
+        /// 支付宝用户userId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 该条芝麻GO协议签约时间
         /// </summary>
         [XmlElement("sign_time")]

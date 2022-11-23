@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string NeedTerminated { get; set; }
 
         /// <summary>
+        /// 用户在支付宝的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户本次操作的请求流水号，用于标示请求流水的唯一性，不能包含除中文、英文、数字以外的字符，需要保证在商户端不重复。
         /// </summary>
         [XmlElement("out_request_no")]

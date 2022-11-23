@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string CardType { get; set; }
 
         /// <summary>
+        /// 用户open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 交易扩展信息,json格式字符串。
         /// </summary>
         [XmlElement("order_biz_context")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayUserDetail : AopObject
     {
         /// <summary>
+        /// 支付宝OpenId
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝用户userId
         /// </summary>
         [XmlElement("alipay_user_id")]

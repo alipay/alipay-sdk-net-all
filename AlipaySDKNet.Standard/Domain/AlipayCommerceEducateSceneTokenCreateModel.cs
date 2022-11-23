@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
+        /// 采集人员的支付宝openId。（当sub_code为SCHOOL_PAYMENT_REMOTE_OPEN_ACCOUNT时，当前参数必选）
+        /// </summary>
+        [XmlElement("operator_open_id")]
+        public string OperatorOpenId { get; set; }
+
+        /// <summary>
         /// 采集人员的支付宝会员标识。（当sub_code为SCHOOL_PAYMENT_REMOTE_OPEN_ACCOUNT时，当前参数必选）
         /// </summary>
         [XmlElement("operator_user_id")]

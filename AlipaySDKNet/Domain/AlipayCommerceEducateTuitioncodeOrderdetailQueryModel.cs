@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public bool IncludePlans { get; set; }
 
         /// <summary>
+        /// 订单购买人支付宝uid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部订单号
         /// </summary>
         [XmlElement("out_order_no")]
@@ -32,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("smid")]
         public string Smid { get; set; }
+
+        /// <summary>
+        /// 订单购买人支付宝uid
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

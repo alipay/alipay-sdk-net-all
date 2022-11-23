@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string InstNo { get; set; }
 
         /// <summary>
+        /// 用户UserId在应用AppId下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// ISV流水号，用于控制幂等，须确保全局唯一（缴税业务：可采用{征收机关代码}-{外部申报号}的形式）
         /// </summary>
         [XmlElement("out_order_no")]

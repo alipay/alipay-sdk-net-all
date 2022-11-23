@@ -63,6 +63,12 @@ namespace Aop.Api.Response
         public string PayerLogonId { get; set; }
 
         /// <summary>
+        /// 支付宝openId，用户（userId）在应用（appId）下的唯一用户标识。
+        /// </summary>
+        [XmlElement("payer_open_id")]
+        public string PayerOpenId { get; set; }
+
+        /// <summary>
         /// 付款方支付宝用户号
         /// </summary>
         [XmlElement("payer_user_id")]

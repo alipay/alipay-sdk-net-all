@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 买家支付宝用户唯一标识  注： 1.用于校验与已存交易中的买家是否相等
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 买家支付明细    目前支持的支付渠道为：  - offline_pos：本次买家使用的是pos刷卡支付    注：  各支付工具金额总和=订单总金额
         /// </summary>
         [XmlArray("buyer_pay_detail")]

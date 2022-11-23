@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<GoodInfo> GoodsInfos { get; set; }
 
         /// <summary>
+        /// 用户uid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 一键开柜链路唯一识别id
         /// </summary>
         [XmlElement("req_id")]

@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 支付宝用户ID
         /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
+        /// 支付宝用户ID
+        /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }
 

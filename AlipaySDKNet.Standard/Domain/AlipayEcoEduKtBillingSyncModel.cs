@@ -114,6 +114,12 @@ namespace Aop.Api.Domain
         public string PayUserId { get; set; }
 
         /// <summary>
+        /// 支付宝用户编号的加密信息
+        /// </summary>
+        [XmlElement("pay_user_open_id")]
+        public string PayUserOpenId { get; set; }
+
+        /// <summary>
         /// 学校所在省
         /// </summary>
         [XmlElement("province")]

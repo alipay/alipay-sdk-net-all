@@ -66,6 +66,12 @@ namespace Aop.Api.Response
         public string CreatorId { get; set; }
 
         /// <summary>
+        /// （创建人）支付宝侧用户唯一标识
+        /// </summary>
+        [XmlElement("creator_open_id")]
+        public string CreatorOpenId { get; set; }
+
+        /// <summary>
         /// （创建人）商户侧用户唯一标识<br> 补充说明：<br> -如果签约时，发起人标识传递的是商户侧用户唯一标识，则该字段会返回<br> -如果签约时，发起人标识传递的是支付宝侧用户唯一标识，则该字段为空
         /// </summary>
         [XmlElement("creator_out_id")]

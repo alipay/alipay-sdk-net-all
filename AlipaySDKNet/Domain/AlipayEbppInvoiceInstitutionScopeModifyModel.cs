@@ -23,11 +23,18 @@ namespace Aop.Api.Domain
         public string AdapterType { get; set; }
 
         /// <summary>
-        /// adapterType为EMPLOYEE_ALL时，无需填写；adapterType为EMPLOYEE_SELECT时，填写员工id（可通过设置owner_type来指定id类型，支持员工支付宝id，员工企业码id和员工手机号）; adapterType为EMPLOYEE_DEPARTMENT时，填写部门id
+        /// 未切换open_id时请使用：adapterType为EMPLOYEE_ALL时，无需填写；adapterType为EMPLOYEE_SELECT时，填写员工id（可通过设置owner_type来指定id类型，支持员工支付宝id，员工企业码id和员工手机号）; adapterType为EMPLOYEE_DEPARTMENT时，填写部门id
         /// </summary>
         [XmlArray("add_owner_id_list")]
         [XmlArrayItem("string")]
         public List<string> AddOwnerIdList { get; set; }
+
+        /// <summary>
+        /// 切换open_id后请使用：adapterType为EMPLOYEE_ALL时，无需填写；adapterType为EMPLOYEE_SELECT时，填写员工id（可通过设置owner_type来指定id类型，支持员工open_id，员工企业码id和员工手机号）; adapterType为EMPLOYEE_DEPARTMENT时，填写部门id
+        /// </summary>
+        [XmlArray("add_owner_open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> AddOwnerOpenIdList { get; set; }
 
         /// <summary>
         /// 授权签约协议号
@@ -54,10 +61,17 @@ namespace Aop.Api.Domain
         public string OwnerType { get; set; }
 
         /// <summary>
-        /// adapterType为EMPLOYEE_ALL时，无需填写；adapterType为EMPLOYEE_SELECT时，填写员工id（可通过设置owner_type来指定id类型，支持员工支付宝id，员工企业码id和员工手机号）; adapterType为EMPLOYEE_DEPARTMENT时，填写部门id
+        /// 未切换open_id时请使用：adapterType为EMPLOYEE_ALL时，无需填写；adapterType为EMPLOYEE_SELECT时，填写员工id（可通过设置owner_type来指定id类型，支持员工支付宝id，员工企业码id和员工手机号）; adapterType为EMPLOYEE_DEPARTMENT时，填写部门id
         /// </summary>
         [XmlArray("remove_owner_id_list")]
         [XmlArrayItem("string")]
         public List<string> RemoveOwnerIdList { get; set; }
+
+        /// <summary>
+        /// 切换open_id后请使用：adapterType为EMPLOYEE_ALL时，无需填写；adapterType为EMPLOYEE_SELECT时，填写员工id（可通过设置owner_type来指定id类型，支持员工open_id，员工企业码id和员工手机号）; adapterType为EMPLOYEE_DEPARTMENT时，填写部门id
+        /// </summary>
+        [XmlArray("remove_owner_open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> RemoveOwnerOpenIdList { get; set; }
     }
 }

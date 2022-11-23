@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("next_user_id")]
         public string NextUserId { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
     }
 }

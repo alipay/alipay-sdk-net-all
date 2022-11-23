@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateFacepayCloseModel : AopObject
     {
         /// <summary>
+        /// 刷脸用户openId
+        /// </summary>
+        [XmlElement("face_open_id")]
+        public string FaceOpenId { get; set; }
+
+        /// <summary>
         /// 刷脸用户id
         /// </summary>
         [XmlElement("face_uid")]

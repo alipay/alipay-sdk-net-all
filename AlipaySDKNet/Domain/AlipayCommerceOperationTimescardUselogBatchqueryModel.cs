@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string LogTimeStart { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 分页码
         /// </summary>
         [XmlElement("page_num")]

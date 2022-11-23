@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 特殊场景下扩展字段
+        /// </summary>
+        [XmlElement("ext_params")]
+        public string ExtParams { get; set; }
+
+        /// <summary>
         /// 开户账号： 当identity_type是ALIPAY_USER_ID时填支付宝会员ID（2088开头）； 当identity_type是ALIPAY_LOGON_ID 时填支付宝登录号； 当identity_type是OUT_USER_ID时填外部平台的用户uid
         /// </summary>
         [XmlElement("identity")]

@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public long MsgType { get; set; }
 
         /// <summary>
+        /// (certificate_type/certificate_number/用户名字) 或者 open_id  必须有一个不为空。两个都不为空则以open_id为准
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 消息跳转url
         /// </summary>
         [XmlElement("target_url")]

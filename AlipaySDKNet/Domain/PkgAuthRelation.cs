@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Mobile { get; set; }
 
         /// <summary>
+        /// 支付宝uid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 家人称谓
         /// </summary>
         [XmlElement("role")]

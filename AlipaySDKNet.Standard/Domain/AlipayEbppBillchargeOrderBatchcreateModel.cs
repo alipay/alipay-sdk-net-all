@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<SelectedBillInfo> BillList { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 1234567890
         /// </summary>
         [XmlElement("out_biz_id")]

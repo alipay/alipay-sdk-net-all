@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
+        /// 乘客open_id
+        /// </summary>
+        [XmlElement("passenger_open_id")]
+        public string PassengerOpenId { get; set; }
+
+        /// <summary>
         /// 乘客userId
         /// </summary>
         [XmlElement("passenger_user_id")]

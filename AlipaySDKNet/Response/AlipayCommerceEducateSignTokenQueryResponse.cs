@@ -27,10 +27,22 @@ namespace Aop.Api.Response
         public string CertType { get; set; }
 
         /// <summary>
+        /// 刷脸用户openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 家长支付宝账户的脱敏信息（特例：特殊标识"ALREADY_RELEASED"，须通过技术支持反馈来关闭开通记录）
         /// </summary>
         [XmlElement("parent_logon_id")]
         public string ParentLogonId { get; set; }
+
+        /// <summary>
+        /// 用于开通一脸通行的支付宝账户 openId。如果是父母为孩子开通，则为父母支付宝 openId；如果是用户为本人开通，则为本人支付宝 openId。
+        /// </summary>
+        [XmlElement("parent_open_id")]
+        public string ParentOpenId { get; set; }
 
         /// <summary>
         /// 用于开通一脸通行的支付宝账户 uid。如果是父母为孩子开通，则为父母支付宝 uid；如果是用户为本人开通，则为本人支付宝 uid。

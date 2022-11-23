@@ -40,5 +40,12 @@ namespace Aop.Api.Domain
         [XmlArray("employee_list")]
         [XmlArrayItem("string")]
         public List<string> EmployeeList { get; set; }
+
+        /// <summary>
+        /// 员工支付宝UID列表，单次传入最大员工数量为10
+        /// </summary>
+        [XmlArray("employee_open_ids")]
+        [XmlArrayItem("string")]
+        public List<string> EmployeeOpenIds { get; set; }
     }
 }

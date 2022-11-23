@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string InvokeState { get; set; }
 
         /// <summary>
+        /// 借用者的open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 芝麻信用借还订单号
         /// </summary>
         [XmlElement("order_no")]

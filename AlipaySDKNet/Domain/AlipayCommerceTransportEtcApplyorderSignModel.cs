@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AlipayOrderId { get; set; }
 
         /// <summary>
+        /// 蚂蚁会员统一ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部订单号
         /// </summary>
         [XmlElement("out_order_id")]

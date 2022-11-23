@@ -16,7 +16,14 @@ namespace Aop.Api.Response
         public string AdapterType { get; set; }
 
         /// <summary>
-        /// 员工id列表，如owner_type为phone返回员工手机号
+        /// 切换 open_id 后请使用此字段： adapter_type为： EMPLOYEE_DEPARTMENT：返回部门ID EMPLOYEE_SELECT：当owner_type为PHONE时返回手机号，其他值则根据对接方式返回open_id，或企业码员工ID
+        /// </summary>
+        [XmlArray("onwer_open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> OnwerOpenIdList { get; set; }
+
+        /// <summary>
+        /// 未切换 open_id 时请使用此字段： adapter_type为： EMPLOYEE_DEPARTMENT：返回部门ID EMPLOYEE_SELECT：当owner_type为PHONE时返回手机号，其他值则根据对接方式返回支付宝用户ID，或企业码员工ID
         /// </summary>
         [XmlArray("owner_id_list")]
         [XmlArrayItem("string")]

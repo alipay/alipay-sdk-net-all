@@ -41,6 +41,12 @@ namespace Aop.Api.Response
         public string FaceId { get; set; }
 
         /// <summary>
+        /// 支付宝用户open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝uid
         /// </summary>
         [XmlElement("uid")]

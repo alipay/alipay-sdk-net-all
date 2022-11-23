@@ -34,16 +34,22 @@ namespace Aop.Api.Domain
         public string DealTime { get; set; }
 
         /// <summary>
-        /// 员工ID 特殊说明：根据员工账号类型来决定为员工UID、员工工号、员工企业码ID或者员工手机号
+        /// 切换open_id前请使用此字段：员工ID 特殊说明：根据员工账号类型来决定为员工UID、员工工号、员工企业码ID或者员工手机号
         /// </summary>
         [XmlElement("employee_id")]
         public string EmployeeId { get; set; }
 
         /// <summary>
-        /// 员工账号类型 枚举值： 0（员工支付宝账号） 1（ 员工工号） 2（员工企业码id） 3（员工手机号）
+        /// 员工账号类型 枚举值： 0（员工支付宝账号/open_id） 1（ 员工工号） 2（员工企业码id） 3（员工手机号）
         /// </summary>
         [XmlElement("employee_id_type")]
         public long EmployeeIdType { get; set; }
+
+        /// <summary>
+        /// 切换open_id后请使用此字段：员工ID 特殊说明：根据员工账号类型来决定为open_id、员工工号、员工企业码ID或者员工手机号
+        /// </summary>
+        [XmlElement("employee_open_id")]
+        public string EmployeeOpenId { get; set; }
 
         /// <summary>
         /// 企业id

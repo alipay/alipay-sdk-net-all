@@ -24,6 +24,12 @@ namespace Aop.Api.Response
         public List<VoucherBillDetail> BillDetails { get; set; }
 
         /// <summary>
+        /// 折扣信息
+        /// </summary>
+        [XmlElement("discount_info")]
+        public VcpDiscountInfo DiscountInfo { get; set; }
+
+        /// <summary>
         /// 扩展信息,JSON格式
         /// </summary>
         [XmlElement("extend_info")]
@@ -54,6 +60,12 @@ namespace Aop.Api.Response
         public string Name { get; set; }
 
         /// <summary>
+        /// 券所属用户ID(映射openId)
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 券状态。枚举值如下： ENABLED：可用； DISABLED：不可用； DELETE：删除状态； TRANS：发放中； TRANSFER：已转增； UNC：未领取； USED：已使用； USING：使用中； REFUNDED：已退款； REFUNDING：退款中； UNACTIVE：未激活； EXPIRED：已过期。
         /// </summary>
         [XmlElement("status")]
@@ -76,6 +88,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 券核销规则信息
+        /// </summary>
+        [XmlElement("voucher_description")]
+        public string VoucherDescription { get; set; }
 
         /// <summary>
         /// 券ID(同入参券ID)

@@ -110,7 +110,7 @@ namespace Aop.Api.Response
         public string Memo { get; set; }
 
         /// <summary>
-        /// 新版门店类目标准二级类目code。类目标准及与原shop_category映射关系参见文档https://ur.alipay.com/3oJ26c0veETkLXgTbtQnYY
+        /// 新版门店类目标准二级类目code。类目标准及与原shop_category映射关系参见文档https://gw.alipayobjects.com/os/bmw-prod/4b3f82df-e53e-4b84-bc41-fe025101e726.xlsx
         /// </summary>
         [XmlElement("new_shop_category")]
         public string NewShopCategory { get; set; }

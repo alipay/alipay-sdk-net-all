@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// 支付宝用户ID，新接入商户必填，历史已接入商户请尽快补传
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户指定卡券唯一值，卡券JSON模板中fileInfo->serialNumber字段对应的值
         /// </summary>
         [XmlElement("serial_number")]

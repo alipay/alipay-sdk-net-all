@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string EmployeeId { get; set; }
 
         /// <summary>
+        /// 员工ID
+        /// </summary>
+        [XmlElement("employee_open_id")]
+        public string EmployeeOpenId { get; set; }
+
+        /// <summary>
         /// 扩展预留
         /// </summary>
         [XmlElement("extension")]
@@ -46,13 +52,13 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// 行业
+        /// 行业属性值（从支付宝主账单复制）
         /// </summary>
         [XmlElement("industry")]
         public string Industry { get; set; }
 
         /// <summary>
-        /// 是否冲抵凭证：0 否；1 是(如:红票)
+        /// 是否冲抵凭证：0 否（蓝票）；1 是(如:红票)
         /// </summary>
         [XmlElement("is_off_set")]
         public string IsOffSet { get; set; }
@@ -64,7 +70,7 @@ namespace Aop.Api.Domain
         public string Medium { get; set; }
 
         /// <summary>
-        /// 外部唯一id
+        /// 外部唯一ID（和凭证类型有关，如果发票类型为发票号码+发票编码，如果是账单，则为账单号）
         /// </summary>
         [XmlElement("outer_source_id")]
         public string OuterSourceId { get; set; }

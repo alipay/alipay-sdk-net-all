@@ -57,6 +57,12 @@ namespace Aop.Api.Response
         public string GmtUnsign { get; set; }
 
         /// <summary>
+        /// 支付宝用户userId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务类型，用于区分本次业务交互在商户侧具体的业务类别，提供给商家进行特定逻辑的处理
         /// </summary>
         [XmlElement("out_biz_type")]

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string FileDownloadUrl { get; set; }
 
         /// <summary>
+        /// 支付宝用户id，当apply_id为空时，open_id必填
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部ISV的唯一发票标识
         /// </summary>
         [XmlElement("out_invoice_id")]

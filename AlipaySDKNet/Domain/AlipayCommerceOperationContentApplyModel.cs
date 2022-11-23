@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ExtParams { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号，只由可由字母、数字、下划线组成。同一个活动中不可重复，相同的外部业务号会被幂等并返回之前的结果。不填时，系统会生成一个默认固定的外部业务号。
         /// </summary>
         [XmlElement("out_biz_no")]

@@ -16,10 +16,16 @@ namespace Aop.Api.Domain
         public string IssueQuota { get; set; }
 
         /// <summary>
-        /// owner_id
+        /// 切换open_id前请使用：owner类型，PHONE为员工手机号，EMPLOYEE为员工支付宝uid
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
+
+        /// <summary>
+        /// 切换open_id后请使用：owner类型，PHONE为员工手机号，EMPLOYEE为员工open_id
+        /// </summary>
+        [XmlElement("owner_open_id")]
+        public string OwnerOpenId { get; set; }
 
         /// <summary>
         /// owner类型

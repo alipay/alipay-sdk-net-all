@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizIdentity { get; set; }
 
         /// <summary>
+        /// 支付宝openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 实际支付金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]
         /// </summary>
         [XmlElement("real_pay_amount")]

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Page { get; set; }
 
         /// <summary>
+        /// 支付宝openId，用于支付宝用户在当前应用下的用户标识。
+        /// </summary>
+        [XmlElement("to_open_id")]
+        public string ToOpenId { get; set; }
+
+        /// <summary>
         /// 接收模板消息的用户 user_id，一般为2088开头的16为数字。 注意：需为实际支付/提交表单/刷脸/订阅消息的用户。
         /// </summary>
         [XmlElement("to_user_id")]

@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceEducateSceneUserSignResponse : AopResponse
     {
         /// <summary>
+        /// 支付宝为学生（教职工）生成的刷脸openId
+        /// </summary>
+        [XmlElement("face_open_id")]
+        public string FaceOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝为学生（教职工）生成的刷脸UID
         /// </summary>
         [XmlElement("face_user_id")]

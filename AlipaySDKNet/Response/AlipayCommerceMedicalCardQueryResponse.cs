@@ -90,6 +90,12 @@ namespace Aop.Api.Response
         public string MedicalCardType { get; set; }
 
         /// <summary>
+        /// 买家支付宝账号对应的支付宝唯一用户号。以2088开头的纯16位数字
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// bind_satus= OTHER_BIND情况下输出,买家支付宝账号，将用*号屏蔽部分内容
         /// </summary>
         [XmlElement("other_user_logon_id")]

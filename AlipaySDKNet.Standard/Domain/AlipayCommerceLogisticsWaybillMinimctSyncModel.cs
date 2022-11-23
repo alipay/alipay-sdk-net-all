@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<ParamExtInfo> MerchantExtInfo { get; set; }
 
         /// <summary>
+        /// 收件人手机号
+        /// </summary>
+        [XmlElement("receiver_mobile")]
+        public string ReceiverMobile { get; set; }
+
+        /// <summary>
         /// 运单号
         /// </summary>
         [XmlElement("waybill_no")]

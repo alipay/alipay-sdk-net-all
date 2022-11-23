@@ -29,10 +29,16 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 额度所属者ID owner_type为EMPLOYEE时为员工支付宝ID owner_type为PHONE时为员工手机号 owner_type为ENTERPRISE_PAY_UID时为员工企业码ID
+        /// 切换open_id前请使用：额度所属者ID owner_type为EMPLOYEE时为员工支付宝ID owner_type为PHONE时为员工手机号 owner_type为ENTERPRISE_PAY_UID时为员工企业码ID
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
+
+        /// <summary>
+        /// 切换open_id后请使用：额度所属者ID owner_type为EMPLOYEE时为员工open_id owner_type为PHONE时为员工手机号 owner_type为ENTERPRISE_PAY_UID时为员工企业码ID
+        /// </summary>
+        [XmlElement("owner_open_id")]
+        public string OwnerOpenId { get; set; }
 
         /// <summary>
         /// 额度所属者类型 EMPLOYEE 员工

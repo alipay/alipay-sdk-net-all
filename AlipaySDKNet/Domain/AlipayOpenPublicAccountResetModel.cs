@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string FromUserId { get; set; }
 
         /// <summary>
+        /// 支付宝用户的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 要绑定的商户会员的真实姓名，最长10个汉字
         /// </summary>
         [XmlElement("real_name")]

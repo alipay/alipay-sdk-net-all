@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string OpData { get; set; }
 
         /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 场景标识,由支付宝分配
         /// </summary>
         [XmlElement("scene_code")]

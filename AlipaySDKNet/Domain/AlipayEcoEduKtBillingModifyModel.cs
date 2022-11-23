@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BuyerUserId { get; set; }
 
         /// <summary>
+        /// 支付宝返回的买家支付宝用户id加密后信息
+        /// </summary>
+        [XmlElement("buyer_user_open_id")]
+        public string BuyerUserOpenId { get; set; }
+
+        /// <summary>
         /// 本次退款是否发生了资金变化
         /// </summary>
         [XmlElement("fund_change")]

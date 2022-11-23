@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// buyer_open_id是用户（UserId）在应用（AppId）下的唯一用户标识
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 用于标明此单是否获得积分， true为获得积分， false为未获得
         /// </summary>
         [XmlElement("earn_points")]

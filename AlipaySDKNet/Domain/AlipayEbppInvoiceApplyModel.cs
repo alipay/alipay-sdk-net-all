@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string MShortName { get; set; }
 
         /// <summary>
+        /// 支付宝用户id，支付宝用户的唯一标识。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 定义商户的二级简称,用于标识商户品牌下的分支机构，如门店，对应于商户入驻时填写的"商户门店简称"。  如：肯德基-杭州西湖区文一西路店：KFC-HZ-19003  要求："商户品牌简称+商户门店简称"作为确定商户及其下属机构的唯一标识，不可重复。
         /// </summary>
         [XmlElement("sub_m_short_name")]

@@ -140,7 +140,7 @@ namespace Aop.Api.Domain
         public string LicenseAuthLetterImage { get; set; }
 
         /// <summary>
-        /// 商户类别码 mcc，可查看  <a href="https://gw.alipayobjects.com/os/bmw-prod/40b5721a-51ca-4482-b29d-81c1471e7ee5.xlsx">进件MCC与资质要求 202208.xlsx</a>，特殊行业要按照MCC说明中的资质一栏上传辅助资质，辅助资质要在 qualifications 中上传，会有人工审核。
+        /// 商户类别码 mcc，可查看  <a href="https://mdn.alipayobjects.com/portal_mdssth/afts/file/A*-EYjSJ2soV0AAAAAAAAAAAAAAQAAAQ">进件MCC与资质要求 202211.xlsx</a>，特殊行业要按照MCC说明中的资质一栏上传辅助资质，辅助资质要在 qualifications 中上传，会有人工审核。
         /// </summary>
         [XmlElement("mcc")]
         public string Mcc { get; set; }

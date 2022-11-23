@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateSceneUserSignModel : AopObject
     {
         /// <summary>
+        /// 开通人绑定的支付宝openId
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝学校内标
         /// </summary>
         [XmlElement("alipay_school_id")]

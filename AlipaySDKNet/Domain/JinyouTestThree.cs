@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public JinyouTestTwo Th1F { get; set; }
 
         /// <summary>
-        /// 1
+        /// 无枚举值
         /// </summary>
         [XmlElement("th_2_n")]
         public string Th2N { get; set; }

@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string ExtendField { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部产生的协议ID
         /// </summary>
         [XmlElement("out_agreement_id")]

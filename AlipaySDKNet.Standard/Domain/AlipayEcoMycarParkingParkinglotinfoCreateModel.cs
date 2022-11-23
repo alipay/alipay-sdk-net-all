@@ -180,7 +180,7 @@ namespace Aop.Api.Domain
         public string ParkingNumber { get; set; }
 
         /// <summary>
-        /// 高德地图唯一标识，查看方法可参考 https://openclub.alipay.com/club/history/read/5150  若需新增高德兴趣点，请访问高德网站http://map.amap.com/help/index.html?type=addpoi
+        /// 如何获取parking_poiid（高德地图唯一标标识）参考文档 https://opendocs.alipay.com/support/01rghx；若无法成功获取高德POI时，也可选用经纬度的方式注册。
         /// </summary>
         [XmlElement("parking_poiid")]
         public string ParkingPoiid { get; set; }

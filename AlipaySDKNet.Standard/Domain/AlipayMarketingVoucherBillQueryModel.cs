@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayMarketingVoucherBillQueryModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户的openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 第多少页，从1开始
         /// </summary>
         [XmlElement("page_num")]

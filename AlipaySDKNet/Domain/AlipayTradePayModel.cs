@@ -71,6 +71,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 买家支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 禁用支付渠道。 多个渠道以逗号分割，如同时禁用信用支付类型和积分，则传入："credit_group,point"。 支持传入的值：<a target="_blank" href="https://docs.open.alipay.com/common/wifww7">渠道列表</a>
         /// </summary>
         [XmlElement("disable_pay_channels")]
@@ -223,7 +229,7 @@ namespace Aop.Api.Domain
         public string TerminalParams { get; set; }
 
         /// <summary>
-        /// 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm:ss。 注：time_expire和timeout_express两者只需传入一个或者都不传，如果两者都传，优先使用time_expire。
+        /// 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm:ss。超时时间范围：1m~15d。 注：time_expire和timeout_express两者只需传入一个或者都不传，如果两者都传，优先使用time_expire。
         /// </summary>
         [XmlElement("time_expire")]
         public string TimeExpire { get; set; }

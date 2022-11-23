@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AgreementId { get; set; }
 
         /// <summary>
+        /// 修复的金额数字
+        /// </summary>
+        [XmlElement("fix_amount")]
+        public long FixAmount { get; set; }
+
+        /// <summary>
         /// 机构PID
         /// </summary>
         [XmlElement("pid")]

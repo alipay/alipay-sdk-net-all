@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 费控规则ID
+        /// 使用规则ID
         /// </summary>
         [XmlElement("expense_rule_group_id")]
         public string ExpenseRuleGroupId { get; set; }
@@ -134,6 +134,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_name")]
         public string MerchantName { get; set; }
+
+        /// <summary>
+        /// 员工支付宝UID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 订单完结标识 0：未完结 1：已完结

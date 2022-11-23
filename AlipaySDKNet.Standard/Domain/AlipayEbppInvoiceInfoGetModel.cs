@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 用户id，当用户发起发票查询时，可以先通过用户授权获取当前访问用户的userId
         /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 用户id，当用户发起发票查询时，可以先通过用户授权获取当前访问用户的userId
+        /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
     }

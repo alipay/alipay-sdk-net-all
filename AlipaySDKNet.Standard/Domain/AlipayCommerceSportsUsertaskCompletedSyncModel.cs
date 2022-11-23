@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CompletedTime { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 服务商自己的业务号。
         /// </summary>
         [XmlElement("out_biz_no")]

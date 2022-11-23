@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string MemberId { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号，用于幂等控制一次充值行为
         /// </summary>
         [XmlElement("out_biz_no")]

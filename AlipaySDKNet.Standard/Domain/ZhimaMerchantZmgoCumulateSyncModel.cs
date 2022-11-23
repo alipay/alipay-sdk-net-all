@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public DiscountTypeSyncData DiscountTypeSyncData { get; set; }
 
         /// <summary>
+        /// 用户 id，用户在支付宝的唯一标识，以 2088 开头的 16 位纯数字组成。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号，唯一标识一笔回传数据。
         /// </summary>
         [XmlElement("out_biz_no")]

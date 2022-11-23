@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateTuitioncodeFundtransferQueryModel : AopObject
     {
         /// <summary>
+        /// 订单付款人的支付宝用户编号
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 资金划拨操作类型：DISBURSE - 打款；REFUND - 退款
         /// </summary>
         [XmlElement("operation_type")]

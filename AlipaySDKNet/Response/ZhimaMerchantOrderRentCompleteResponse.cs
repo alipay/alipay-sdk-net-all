@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AlipayFundOrderNo { get; set; }
 
         /// <summary>
+        /// 借用人支付宝open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 信用借还的订单号
         /// </summary>
         [XmlElement("order_no")]

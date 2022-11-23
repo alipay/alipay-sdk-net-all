@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class ZhimaMerchantOrderConfirmResponse : AopResponse
     {
         /// <summary>
+        /// 支付宝buyer_open_id
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 证件号
         /// </summary>
         [XmlElement("cert_no")]

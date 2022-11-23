@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string MemberProductId { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID，指定则查询指定用户的交易记录，不指定则查所有用户的交易记录
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 查询的页数，从1开始，最大1000
         /// </summary>
         [XmlElement("page_num")]

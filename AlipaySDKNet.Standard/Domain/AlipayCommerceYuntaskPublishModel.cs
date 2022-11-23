@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 操作者id
         /// </summary>
+        [XmlElement("operate_open_id")]
+        public string OperateOpenId { get; set; }
+
+        /// <summary>
+        /// 操作者id
+        /// </summary>
         [XmlElement("operate_user_id")]
         public string OperateUserId { get; set; }
 

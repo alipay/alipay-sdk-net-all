@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string OnceToken { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID 和身份证任选一个传入
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// exact:精确查询,dim:模糊查询
         /// </summary>
         [XmlElement("query_type")]

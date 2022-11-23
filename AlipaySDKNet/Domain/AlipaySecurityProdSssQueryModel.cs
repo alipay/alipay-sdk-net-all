@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string AaaOpenId { get; set; }
 
         /// <summary>
-        /// 1
+        /// activity_id 词条描述
         /// </summary>
         [XmlElement("bbb")]
         public string Bbb { get; set; }
@@ -34,5 +34,11 @@ namespace Aop.Api.Domain
         [XmlArray("tesst")]
         [XmlArrayItem("promise_detail")]
         public List<PromiseDetail> Tesst { get; set; }
+
+        /// <summary>
+        /// 111
+        /// </summary>
+        [XmlElement("xxx")]
+        public JinyouTestFive Xxx { get; set; }
     }
 }

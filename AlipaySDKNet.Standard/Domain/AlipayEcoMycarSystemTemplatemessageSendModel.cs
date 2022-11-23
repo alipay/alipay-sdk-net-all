@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public string MsgType { get; set; }
 
         /// <summary>
+        /// 支付宝用户openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 跳转消息详情所需要的动态参数
         /// </summary>
         [XmlElement("params")]

@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string BuyerLogonId { get; set; }
 
         /// <summary>
+        /// 买家支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 买家在支付宝的用户id
         /// </summary>
         [XmlElement("buyer_user_id")]
@@ -75,6 +81,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("refund_charge_amount")]
         public string RefundChargeAmount { get; set; }
+
+        /// <summary>
+        /// 退费信息
+        /// </summary>
+        [XmlArray("refund_charge_info_list")]
+        [XmlArrayItem("refund_charge_info")]
+        public List<RefundChargeInfo> RefundChargeInfoList { get; set; }
 
         /// <summary>
         /// 退款币种信息

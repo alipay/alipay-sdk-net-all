@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string EmployeeId { get; set; }
 
         /// <summary>
+        /// 所属员工支付宝uid
+        /// </summary>
+        [XmlElement("employee_open_id")]
+        public string EmployeeOpenId { get; set; }
+
+        /// <summary>
         /// 商户id
         /// </summary>
         [XmlElement("merchant_id")]

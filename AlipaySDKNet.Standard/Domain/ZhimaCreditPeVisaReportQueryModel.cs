@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public bool IncludeFile { get; set; }
 
         /// <summary>
+        /// 用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 申请场景，报告申请国家
         /// </summary>
         [XmlElement("scene_code")]

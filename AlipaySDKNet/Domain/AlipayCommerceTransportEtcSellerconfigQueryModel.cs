@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string AgentPid { get; set; }
 
         /// <summary>
+        /// 蚂蚁会员统一ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 需要查询的发行方信息配置类目
         /// </summary>
         [XmlArray("query_scopes")]

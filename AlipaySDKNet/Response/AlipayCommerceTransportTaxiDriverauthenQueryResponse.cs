@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string DriverId { get; set; }
 
         /// <summary>
+        /// 司机支付宝open_id
+        /// </summary>
+        [XmlElement("driver_open_id")]
+        public string DriverOpenId { get; set; }
+
+        /// <summary>
         /// 司机支付宝uid
         /// </summary>
         [XmlElement("driver_user_id")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceOperationTimescardAuthorityDeleteModel : AopObject
     {
         /// <summary>
+        /// 店员支付宝账户
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 场景码
         /// </summary>
         [XmlElement("scene_code")]

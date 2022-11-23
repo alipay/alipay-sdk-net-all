@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string MainTargetValue { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 一级属性
         /// </summary>
         [XmlElement("property")]

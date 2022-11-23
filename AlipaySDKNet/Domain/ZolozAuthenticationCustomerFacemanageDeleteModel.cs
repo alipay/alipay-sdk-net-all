@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Extinfo { get; set; }
 
         /// <summary>
-        /// 入库类型  IDCARD:身份证  ALIPAY_USER:支付宝用户id,  ALIPAY_TEL:手机号入库  CUSTOMER:自定义
+        /// 入库类型 IDCARD:身份证 ALIPAY_USER:支付宝用户id, ALIPAY_TEL:手机号入库 CUSTOMER:自定义
         /// </summary>
         [XmlElement("facetype")]
         public string Facetype { get; set; }

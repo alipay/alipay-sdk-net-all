@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public UserInfomation BuyerInfo { get; set; }
 
         /// <summary>
+        /// OpenId是用户（buyer_id）在应用（AppId）下的唯一用户标识.
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 优惠金额，单位为【元】
         /// </summary>
         [XmlElement("discount_amount")]

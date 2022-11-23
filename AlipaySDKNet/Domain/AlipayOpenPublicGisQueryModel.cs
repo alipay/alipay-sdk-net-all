@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenPublicGisQueryModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 该用户的userId
         /// </summary>
         [XmlElement("user_id")]

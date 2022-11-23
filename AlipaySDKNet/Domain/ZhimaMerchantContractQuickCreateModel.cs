@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string OfferCreaterName { get; set; }
 
         /// <summary>
+        /// 发约创建者主体id(商户pid/用户芝麻id/支付宝用户id/淘宝用户id)
+        /// </summary>
+        [XmlElement("offer_creater_open_id")]
+        public string OfferCreaterOpenId { get; set; }
+
+        /// <summary>
         /// 发约创建者类型： MERCHANT:商户 ZHIMA_ROLE:芝麻用户 ALIPAY_ROLE:支付宝用户 TAOBAO_ROLE:淘宝用户
         /// </summary>
         [XmlElement("offer_creater_type")]

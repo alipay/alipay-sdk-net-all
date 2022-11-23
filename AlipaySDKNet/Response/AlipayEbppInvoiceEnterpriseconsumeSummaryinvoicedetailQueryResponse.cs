@@ -66,7 +66,7 @@ namespace Aop.Api.Response
         public string SummaryId { get; set; }
 
         /// <summary>
-        /// 企业汇总场景下，即企业ID（建议使用account_id）
+        /// 企业汇总场景下，即企业ID（请使用account_id）
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string LogType { get; set; }
 
         /// <summary>
+        /// 用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 次卡简单细心你
         /// </summary>
         [XmlElement("time_card_info")]

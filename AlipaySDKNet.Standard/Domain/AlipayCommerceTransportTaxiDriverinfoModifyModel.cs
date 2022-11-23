@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public DriverCarInfo DriverCarInfo { get; set; }
 
         /// <summary>
+        /// 司机open_id
+        /// </summary>
+        [XmlElement("driver_open_id")]
+        public string DriverOpenId { get; set; }
+
+        /// <summary>
         /// 司机uid
         /// </summary>
         [XmlElement("driver_user_id")]

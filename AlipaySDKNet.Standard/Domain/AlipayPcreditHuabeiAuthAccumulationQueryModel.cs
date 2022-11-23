@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 买家在支付宝的用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 协议结算周期，使用支付宝端回传的周期信息。
         /// </summary>
         [XmlElement("period")]

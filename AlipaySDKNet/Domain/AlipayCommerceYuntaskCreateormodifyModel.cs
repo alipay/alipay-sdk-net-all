@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 操作者uid
         /// </summary>
+        [XmlElement("operate_open_id")]
+        public string OperateOpenId { get; set; }
+
+        /// <summary>
+        /// 操作者uid
+        /// </summary>
         [XmlElement("operate_user_id")]
         public string OperateUserId { get; set; }
 
@@ -86,6 +92,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plan_info")]
         public PlanInfo PlanInfo { get; set; }
+
+        /// <summary>
+        /// 支持统一物料码激励到店长, 默认false
+        /// </summary>
+        [XmlElement("support_unified_material_code")]
+        public bool SupportUnifiedMaterialCode { get; set; }
 
         /// <summary>
         /// 任务描述

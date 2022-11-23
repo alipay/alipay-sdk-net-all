@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class DatadigitalFincloudFinsaasInsuranceriskGetResponse : AopResponse
     {
         /// <summary>
-        /// 风险内容
+        /// 风控信息 不唯一 模型预测、硬规则等场景返回的风险信息
         /// </summary>
         [XmlElement("risk_content")]
         public string RiskContent { get; set; }

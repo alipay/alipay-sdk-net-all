@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class EnterpriseOpenRuleInfo : AopObject
     {
         /// <summary>
+        /// 企业ID
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
+
+        /// <summary>
         /// 当前生效和下次生效的开票规则记录
         /// </summary>
         [XmlArray("enterprise_open_rule_record_info_list")]
@@ -49,7 +55,7 @@ namespace Aop.Api.Domain
         public string InvoiceRuleName { get; set; }
 
         /// <summary>
-        /// 所有者id（企业情况下=enterpriseId）
+        /// 原企业共同账户ID（不推荐使用）
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }

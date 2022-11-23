@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string GmtTrans { get; set; }
 
         /// <summary>
+        /// 买家在支付宝的用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户本次操作的请求流水号，用于标识请求流水的唯一性，不能包含除中文、英文、数字以外的字符，需要保证在商户端不重复。由商户传入，最终返回给商户。
         /// </summary>
         [XmlElement("out_request_no")]

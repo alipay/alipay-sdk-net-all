@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceOperationUserPointQueryModel : AopObject
     {
         /// <summary>
+        /// 蚂蚁统一open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 场景代码，由行业运营平台分配，提供枚举值。 user_id + scene_code 确定返回内容。 bigTrip-出行
         /// </summary>
         [XmlElement("scene_code")]

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// 对应fromUserId，标准Alipay UserId
+        /// </summary>
+        [XmlElement("from_alipay_user_id")]
+        public string FromAlipayUserId { get; set; }
+
+        /// <summary>
         /// 绑定的商户会员对应的支付宝用户号，以2088 开头的16位数字。
         /// </summary>
         [XmlElement("from_user_id")]

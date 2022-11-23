@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string MobileNo { get; set; }
 
         /// <summary>
+        /// 蚂蚁会员统一ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 审核资料提交状态。WAIT_SUBMIT：信息待提交；SUBMITTED：信息已提交。
         /// </summary>
         [XmlElement("order_censor_status")]

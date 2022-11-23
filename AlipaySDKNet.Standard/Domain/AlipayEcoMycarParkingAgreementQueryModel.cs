@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CarNumber { get; set; }
 
         /// <summary>
+        /// 应用用户ID，支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 车场录入接口返回的parking_id字段
         /// </summary>
         [XmlElement("parking_id")]

@@ -76,6 +76,12 @@ namespace Aop.Api.Domain
         public bool NeedRefund { get; set; }
 
         /// <summary>
+        /// 蚂蚁会员统一ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝侧订单号
         /// </summary>
         [XmlElement("order_id")]

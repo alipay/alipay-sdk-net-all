@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CarNumber { get; set; }
 
         /// <summary>
+        /// 应用维度用户ID，唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝支付流水trade_no，系统唯一
         /// </summary>
         [XmlElement("order_no")]

@@ -49,6 +49,12 @@ namespace Aop.Api.Domain
         public List<LogisticsCompanyIstd> LogisticsCompanies { get; set; }
 
         /// <summary>
+        /// 消费者id， 如果consumer_source是alipay，则consumer_id必须是支付宝用户uid；如果consumer_source是wx，则consumer_id可以为空
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 即时配送订单扩展
         /// </summary>
         [XmlElement("order_ext_istd")]

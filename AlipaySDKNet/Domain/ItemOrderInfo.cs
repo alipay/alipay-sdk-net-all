@@ -42,6 +42,18 @@ namespace Aop.Api.Domain
         public string SkuId { get; set; }
 
         /// <summary>
+        /// 商品状态枚举，默认无需传入，如需使用请联系业务负责人
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 商品状态描述，默认无需传入，如需使用请联系业务负责人
+        /// </summary>
+        [XmlElement("status_desc")]
+        public string StatusDesc { get; set; }
+
+        /// <summary>
         /// 商品规格
         /// </summary>
         [XmlElement("unit")]

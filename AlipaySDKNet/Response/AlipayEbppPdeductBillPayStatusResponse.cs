@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AgreementId { get; set; }
 
         /// <summary>
+        /// 用户UserId在应用AppId下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝流billNo
         /// </summary>
         [XmlElement("order_no")]

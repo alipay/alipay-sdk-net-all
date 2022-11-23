@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string FollowAppId { get; set; }
 
         /// <summary>
-        /// 扩展信息，会员领卡完成后将此参数原样带回商户页面。
+        /// 该值为商家拉起开卡组件的传递的 out_string 值。通常可用于区分不同业务场景，禁止将该字段作为开卡流程的必要字段，否则会导致会员推广场景下的入会失败
         /// </summary>
         [XmlElement("out_string")]
         public string OutString { get; set; }

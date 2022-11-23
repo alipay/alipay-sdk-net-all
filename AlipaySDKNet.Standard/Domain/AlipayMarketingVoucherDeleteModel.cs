@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayMarketingVoucherDeleteModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户的openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部唯一业务号，用于做幂等控制
         /// </summary>
         [XmlElement("out_biz_no")]

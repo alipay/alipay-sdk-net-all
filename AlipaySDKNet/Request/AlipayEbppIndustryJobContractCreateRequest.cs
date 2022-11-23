@@ -12,19 +12,9 @@ namespace Aop.Api.Request
     public class AlipayEbppIndustryJobContractCreateRequest : IAopUploadRequest<AlipayEbppIndustryJobContractCreateResponse>
     {
         /// <summary>
-        /// 用户身份证号码
+        /// 企业列表
         /// </summary>
-        public string CertNo { get; set; }
-
-        /// <summary>
-        /// 企业信用代码或者营业执照注册号
-        /// </summary>
-        public string CompanyCertNo { get; set; }
-
-        /// <summary>
-        /// 企业名称
-        /// </summary>
-        public string CompanyName { get; set; }
+        public List<ContractCompanyInfo> CompanyList { get; set; }
 
         /// <summary>
         /// 上传文件的二进制流
@@ -32,29 +22,9 @@ namespace Aop.Api.Request
         public FileItem FileContent { get; set; }
 
         /// <summary>
-        /// 企业法人身份证号码
-        /// </summary>
-        public string LegalPersonCertNo { get; set; }
-
-        /// <summary>
-        /// 企业法人名称
-        /// </summary>
-        public string LegalPersonName { get; set; }
-
-        /// <summary>
-        /// 蚂蚁统一会员ID
-        /// </summary>
-        public string OpenId { get; set; }
-
-        /// <summary>
         /// 外部订单号
         /// </summary>
         public string OuterBizNo { get; set; }
-
-        /// <summary>
-        /// 电子合同签署区配置，必须包含个人和企业两部分信息
-        /// </summary>
-        public List<ContractSignArea> SignArea { get; set; }
 
         /// <summary>
         /// 签署平台: H5 或者 ALIPAY
@@ -62,14 +32,9 @@ namespace Aop.Api.Request
         public string SignPlatform { get; set; }
 
         /// <summary>
-        /// 蚂蚁统一会员ID
+        /// 合同用户列表
         /// </summary>
-        public string UserId { get; set; }
-
-        /// <summary>
-        /// 用户名称
-        /// </summary>
-        public string UserName { get; set; }
+        public List<ContractUserInfo> UserList { get; set; }
 
         #region IAopRequest Members
 		private bool needEncrypt=false;
@@ -156,17 +121,10 @@ namespace Aop.Api.Request
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
-            parameters.Add("cert_no", this.CertNo);
-            parameters.Add("company_cert_no", this.CompanyCertNo);
-            parameters.Add("company_name", this.CompanyName);
-            parameters.Add("legal_person_cert_no", this.LegalPersonCertNo);
-            parameters.Add("legal_person_name", this.LegalPersonName);
-            parameters.Add("open_id", this.OpenId);
+            parameters.Add("company_list", this.CompanyList);
             parameters.Add("outer_biz_no", this.OuterBizNo);
-            parameters.Add("sign_area", this.SignArea);
             parameters.Add("sign_platform", this.SignPlatform);
-            parameters.Add("user_id", this.UserId);
-            parameters.Add("user_name", this.UserName);
+            parameters.Add("user_list", this.UserList);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);

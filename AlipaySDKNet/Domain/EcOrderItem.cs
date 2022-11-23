@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// 用户支付宝UID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单内容，JSON格式。
         /// </summary>
         [XmlElement("order_content")]

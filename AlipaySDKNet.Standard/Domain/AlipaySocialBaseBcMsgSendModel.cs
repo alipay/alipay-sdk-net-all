@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string ClientMsgId { get; set; }
 
         /// <summary>
+        /// bc互动c端商家openId
+        /// </summary>
+        [XmlElement("consumer_open_id")]
+        public string ConsumerOpenId { get; set; }
+
+        /// <summary>
         /// BC互动，C端帐号，如C端在支付宝内则为支付宝统一用户id
         /// </summary>
         [XmlElement("consumer_user_id")]
@@ -118,6 +124,12 @@ namespace Aop.Api.Domain
         public string ReceiverId { get; set; }
 
         /// <summary>
+        /// 接收方商家openId
+        /// </summary>
+        [XmlElement("receiver_open_id")]
+        public string ReceiverOpenId { get; set; }
+
+        /// <summary>
         /// BC互动消息，发送者类型，标识是B端还是C端，枚举： C端传1，B端传2
         /// </summary>
         [XmlElement("receiver_user_type")]
@@ -134,6 +146,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sender_id")]
         public string SenderId { get; set; }
+
+        /// <summary>
+        /// 发送方openId
+        /// </summary>
+        [XmlElement("sender_open_id")]
+        public string SenderOpenId { get; set; }
 
         /// <summary>
         /// BC互动关系id，C端id+B端id+关系类型组成唯一值，调用绑定关系接口返回的sessionId

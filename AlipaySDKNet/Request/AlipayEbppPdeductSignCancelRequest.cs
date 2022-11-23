@@ -25,6 +25,11 @@ namespace Aop.Api.Request
         public string AgreementId { get; set; }
 
         /// <summary>
+        /// 用户UserId在应用AppId下的唯一用户标识
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 需要用户首先处于登陆态，然后访问https://ebppprod.alipay.com/deduct/enterMobileicPayPassword.htm?cb=自己指定的回跳连接地址,访问页面后会进到独立密码校验页，用户输入密码校验成功后，会生成token回调到指定的回跳地址，如果设置cb=www.baidu.com则最后回调的内容是www.baidu.com?token=312314ADFDSFAS,然后签约时直接取得地址后token的值即可
         /// </summary>
         public string PayPasswordToken { get; set; }
@@ -122,6 +127,7 @@ namespace Aop.Api.Request
             parameters.Add("agent_channel", this.AgentChannel);
             parameters.Add("agent_code", this.AgentCode);
             parameters.Add("agreement_id", this.AgreementId);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("pay_password_token", this.PayPasswordToken);
             parameters.Add("user_id", this.UserId);
             if(udfParams != null) 

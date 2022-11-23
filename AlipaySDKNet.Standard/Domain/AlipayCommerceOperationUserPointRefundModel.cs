@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ExchangeRequestId { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 退回原因，例如：RETURN_GOODS-退货
         /// </summary>
         [XmlElement("refund_reason")]

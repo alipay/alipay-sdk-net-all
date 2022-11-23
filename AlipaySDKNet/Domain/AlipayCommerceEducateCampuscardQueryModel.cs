@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateCampuscardQueryModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝用户ID
         /// </summary>
         [XmlElement("user_id")]

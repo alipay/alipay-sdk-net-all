@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string GmtTrans { get; set; }
 
         /// <summary>
+        /// 支付宝用户userId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户业务订单的简单描述，如商品名称等，长度不超过100个字母或50个汉字
         /// </summary>
         [XmlElement("order_title")]

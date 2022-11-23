@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string HighTemperatureDays { get; set; }
 
         /// <summary>
-        /// 高温一年灾害等级
+        /// 高温一年灾害频率等级： 0-无风险，1-极低频，2-较低频，3-中度，4-较高频，5-极高频
         /// </summary>
         [XmlElement("high_temperature_level")]
         public string HighTemperatureLevel { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string LowTemperatureDays { get; set; }
 
         /// <summary>
-        /// 低温一年灾害等级
+        /// 低温一年灾害频率等级： 0-无风险，1-极低频，2-较低频，3-中度，4-较高频，5-极高频
         /// </summary>
         [XmlElement("low_temperature_level")]
         public string LowTemperatureLevel { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string RainstormDays { get; set; }
 
         /// <summary>
-        /// 暴雨一年灾害等级
+        /// 暴雨一年灾害频率等级： 0-无风险，1-极低频，2-较低频，3-中度，4-较高频，5-极高频
         /// </summary>
         [XmlElement("rainstorm_level")]
         public string RainstormLevel { get; set; }

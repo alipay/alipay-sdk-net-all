@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 员工支付宝UID
         /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 员工支付宝UID
+        /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
 

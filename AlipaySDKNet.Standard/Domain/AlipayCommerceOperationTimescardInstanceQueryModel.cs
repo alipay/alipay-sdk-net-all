@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string IsvPartnerId { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 字段已废弃，无需传参
         /// </summary>
         [XmlElement("partner_id")]

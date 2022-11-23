@@ -10,11 +10,18 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceExpenserulesEmployeeQueryResponse : AopResponse
     {
         /// <summary>
-        /// 员工列表
+        /// 切换open_id前请使用此字段：员工列表
         /// </summary>
         [XmlArray("employee_list")]
         [XmlArrayItem("string")]
         public List<string> EmployeeList { get; set; }
+
+        /// <summary>
+        /// 切换open_id后请使用此字段：员工open_id列表
+        /// </summary>
+        [XmlArray("employee_open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> EmployeeOpenIdList { get; set; }
 
         /// <summary>
         /// 当前页数

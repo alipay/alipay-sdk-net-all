@@ -157,7 +157,7 @@ namespace Aop.Api.Domain
         public string Subject { get; set; }
 
         /// <summary>
-        /// 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm:ss。 注：time_express和timeout_express两者只需传入一个或者都不传，如果两者都传，优先使用time_expire。
+        /// 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm:ss。超时时间范围：1m~15d。 注：time_express和timeout_express两者只需传入一个或者都不传，如果两者都传，优先使用time_expire。
         /// </summary>
         [XmlElement("time_expire")]
         public string TimeExpire { get; set; }

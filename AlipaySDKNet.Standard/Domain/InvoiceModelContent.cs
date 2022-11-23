@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string ExtendFields { get; set; }
 
         /// <summary>
-        /// 下载的发票文件类型 可选值： pdf（发票原文件） ofd (发票原文件） jpg（发票原文件缩略图）
+        /// 下载的发票文件类型，可选值： pdf（发票原文件） ofd（发票原文件） jpg（发票原文件缩略图）
         /// </summary>
         [XmlElement("file_download_type")]
         public string FileDownloadType { get; set; }
@@ -106,6 +106,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_type")]
         public string InvoiceType { get; set; }
+
+        /// <summary>
+        /// 支付宝用户id，支付宝端的申请id存在的时候也不需要传，其他情况下，当同步的是蓝票时，必传，红票时不需传。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 仅用于同步红票，原始蓝票发票代码，同步红票时必传

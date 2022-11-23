@@ -1,0 +1,30 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// LoginUserDTO Data Structure.
+    /// </summary>
+    [Serializable]
+    public class LoginUserDTO : AopObject
+    {
+        /// <summary>
+        /// ipRoleId-否-操作员唯一标识-无枚举-被调方返回值-无特殊说明
+        /// </summary>
+        [XmlElement("ip_role_id")]
+        public string IpRoleId { get; set; }
+
+        /// <summary>
+        /// tenantId-否-租户唯一标识-无枚举-被调方返回值-无特殊说明
+        /// </summary>
+        [XmlElement("tenant_id")]
+        public string TenantId { get; set; }
+
+        /// <summary>
+        /// tenantName-否-租户名称-无枚举-被调方返回值-无特殊说明
+        /// </summary>
+        [XmlElement("tenant_name")]
+        public string TenantName { get; set; }
+    }
+}

@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string MedicalCardInstId { get; set; }
 
         /// <summary>
+        /// 买家id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 医疗机构名称
         /// </summary>
         [XmlElement("org_name")]

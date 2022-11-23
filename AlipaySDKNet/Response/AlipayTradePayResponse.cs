@@ -47,6 +47,12 @@ namespace Aop.Api.Response
         public string BuyerLogonId { get; set; }
 
         /// <summary>
+        /// 买家支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 买家付款的金额
         /// </summary>
         [XmlElement("buyer_pay_amount")]
@@ -93,6 +99,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("charge_flags")]
         public string ChargeFlags { get; set; }
+
+        /// <summary>
+        /// 计费信息列表
+        /// </summary>
+        [XmlElement("charge_info_list")]
+        public ChargeInfo ChargeInfoList { get; set; }
 
         /// <summary>
         /// 信用业务单号。信用支付场景才有值。先用后付产品里是芝麻订单号。

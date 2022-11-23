@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class EcomItemDTO : AopObject
     {
         /// <summary>
+        /// 买断金额
+        /// </summary>
+        [XmlElement("buyout_money")]
+        public long BuyoutMoney { get; set; }
+
+        /// <summary>
         /// 类目历史30天完结父订单数
         /// </summary>
         [XmlElement("cat_order_count")]
@@ -22,6 +28,12 @@ namespace Aop.Api.Domain
         public string CatOrderRefundExchangeRate { get; set; }
 
         /// <summary>
+        /// NEW(全新),CONDITION_99_NEW( 99成新),CONDITION_98_NEW( 98成新),CONDITION_95_NEW( 95成新),CONDITION_90_NEW( 90成新),CONDITION_80_NEW( 80成新),
+        /// </summary>
+        [XmlElement("item_condition")]
+        public string ItemCondition { get; set; }
+
+        /// <summary>
         /// 商品详情
         /// </summary>
         [XmlElement("item_detail")]
@@ -32,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
+
+        /// <summary>
+        /// 商品型号
+        /// </summary>
+        [XmlElement("item_model")]
+        public string ItemModel { get; set; }
 
         /// <summary>
         /// 商品图片
@@ -50,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_title")]
         public string ItemTitle { get; set; }
+
+        /// <summary>
+        /// 商品自身价值
+        /// </summary>
+        [XmlElement("item_value")]
+        public long ItemValue { get; set; }
 
         /// <summary>
         /// 叶子类目id

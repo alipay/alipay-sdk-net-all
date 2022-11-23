@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpensecontrolEmployeequotaCreateModel : AopObject
     {
         /// <summary>
-        /// 企业ID
+        /// 共同账号ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -40,10 +40,16 @@ namespace Aop.Api.Domain
         public string OuterSourceId { get; set; }
 
         /// <summary>
-        /// 余额所属者ID owner_type为员工时为员工支付宝ID
+        /// 切换open_id前请使用：余额所属者ID owner_type为员工时为员工支付宝ID
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
+
+        /// <summary>
+        /// 切换open_id后请使用：余额所属者ID owner_type为员工时为员工open_id
+        /// </summary>
+        [XmlElement("owner_open_id")]
+        public string OwnerOpenId { get; set; }
 
         /// <summary>
         /// 余额所属者类型 EMPLOYEE: 员工

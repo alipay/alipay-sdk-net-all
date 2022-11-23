@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<ImageInfos> ImageInfoList { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一开放ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 自定义参数，json格式
         /// </summary>
         [XmlElement("params")]

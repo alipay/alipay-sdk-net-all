@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string ChargeInst { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 二级业务
         /// </summary>
         [XmlElement("sub_biz_type")]

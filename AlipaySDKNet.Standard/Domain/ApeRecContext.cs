@@ -55,6 +55,12 @@ namespace Aop.Api.Domain
         public string Latitude { get; set; }
 
         /// <summary>
+        /// 通过LBS召回的距离，范围是[100,50 000],如果不传则会默认是5000米。此数据单位为米。
+        /// </summary>
+        [XmlElement("lbs_distance")]
+        public long LbsDistance { get; set; }
+
+        /// <summary>
         /// 用户当前位置经度
         /// </summary>
         [XmlElement("longitude")]
@@ -66,6 +72,13 @@ namespace Aop.Api.Domain
         [XmlArray("other_index_list")]
         [XmlArrayItem("string")]
         public List<string> OtherIndexList { get; set; }
+
+        /// <summary>
+        /// 选品池id list
+        /// </summary>
+        [XmlArray("select_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> SelectIdList { get; set; }
 
         /// <summary>
         /// 标签列表，推荐结果只会包含该标签的商品，为空时代表返回所有的商品。多个条件是与的关系。

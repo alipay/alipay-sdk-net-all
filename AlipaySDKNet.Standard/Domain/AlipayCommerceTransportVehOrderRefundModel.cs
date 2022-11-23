@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string AlipayOrderNo { get; set; }
 
         /// <summary>
+        /// 应用维度用户ID，唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单类型，使用时务必联系业务或解决方案。
         /// </summary>
         [XmlElement("order_type")]

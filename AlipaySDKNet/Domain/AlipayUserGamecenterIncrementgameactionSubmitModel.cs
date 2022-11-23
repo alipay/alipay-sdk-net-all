@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 商户app_id维度下的用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 数据的全局唯一标识。用于幂等
         /// </summary>
         [XmlElement("out_biz_no")]

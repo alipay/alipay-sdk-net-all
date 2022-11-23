@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string HavanaId { get; set; }
 
         /// <summary>
+        /// openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// otp校验结果
         /// </summary>
         [XmlElement("otp_verify")]

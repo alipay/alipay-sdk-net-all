@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZhubUidTelPair : AopObject
     {
         /// <summary>
+        /// 支付宝用户open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 手机号
         /// </summary>
         [XmlElement("phone")]

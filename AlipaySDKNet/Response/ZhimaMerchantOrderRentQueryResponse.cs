@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string GoodsName { get; set; }
 
         /// <summary>
+        /// 支付宝open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 芝麻信用借还订单号
         /// </summary>
         [XmlElement("order_no")]

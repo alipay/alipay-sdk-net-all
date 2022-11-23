@@ -20,5 +20,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bind_account_no")]
         public string BindAccountNo { get; set; }
+
+        /// <summary>
+        /// 绑定用户的支付宝userid，2088开头16位长度的字符串，与agreementId不能同时为空
+        /// </summary>
+        [XmlElement("from_user_id")]
+        public string FromUserId { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
     }
 }

@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public string BizCode { get; set; }
 
         /// <summary>
+        /// 刷脸用户openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用户外部ID。（服务商内部唯一ID，唯一关联一位学生/教职工)
         /// </summary>
         [XmlElement("out_user_id")]
@@ -26,6 +32,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("parent_logon_id")]
         public string ParentLogonId { get; set; }
+
+        /// <summary>
+        /// 如果是父母为孩子开通，则为父母支付宝openid；如果是用户为本人开通，则为本人支付宝openid。
+        /// </summary>
+        [XmlElement("parent_open_id")]
+        public string ParentOpenId { get; set; }
 
         /// <summary>
         /// 如果是父母为孩子开通，则为父母支付宝uid；如果是用户为本人开通，则为本人支付宝uid。

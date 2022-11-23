@@ -114,6 +114,12 @@ namespace Aop.Api.Domain
         public string InvoiceType { get; set; }
 
         /// <summary>
+        /// 支付宝用户userId，当发送红字发票时，即invoice_type＝RED时，可选填；或者apply_id不为空的时候，可选填；其他情况必填。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 红票情况下，必须填入原始蓝票的发票代码。
         /// </summary>
         [XmlElement("ori_blue_inv_code")]
