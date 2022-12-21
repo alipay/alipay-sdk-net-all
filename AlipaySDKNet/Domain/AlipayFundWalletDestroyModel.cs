@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string PrincipalId { get; set; }
 
         /// <summary>
+        /// openid
+        /// </summary>
+        [XmlElement("principal_open_id")]
+        public string PrincipalOpenId { get; set; }
+
+        /// <summary>
         /// 枚举值 alipay_user_id, mechant_user_id
         /// </summary>
         [XmlElement("principal_type")]

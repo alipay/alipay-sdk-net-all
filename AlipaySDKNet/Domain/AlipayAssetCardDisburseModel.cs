@@ -52,6 +52,18 @@ namespace Aop.Api.Domain
         public string FundScence { get; set; }
 
         /// <summary>
+        /// 支付宝用户id映射
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 收款方支付宝用户id映射
+        /// </summary>
+        [XmlElement("payee_open_id")]
+        public string PayeeOpenId { get; set; }
+
+        /// <summary>
         /// 收款方支付宝用户id
         /// </summary>
         [XmlElement("payee_user_id")]

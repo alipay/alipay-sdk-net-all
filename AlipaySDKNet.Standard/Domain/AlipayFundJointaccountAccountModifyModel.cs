@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string ModifyItems { get; set; }
 
         /// <summary>
+        /// （发起人）支付宝侧用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 销售产品码
         /// </summary>
         [XmlElement("product_code")]

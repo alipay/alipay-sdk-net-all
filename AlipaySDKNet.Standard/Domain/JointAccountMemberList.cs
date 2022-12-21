@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<JointAccountQuotaDTO> AccountQuota { get; set; }
 
         /// <summary>
+        /// 成员openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 成员ID
         /// </summary>
         [XmlElement("user_id")]

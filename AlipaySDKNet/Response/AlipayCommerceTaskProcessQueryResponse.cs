@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string Current { get; set; }
 
         /// <summary>
+        /// 支付宝用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 任务指标数值
         /// </summary>
         [XmlElement("target")]

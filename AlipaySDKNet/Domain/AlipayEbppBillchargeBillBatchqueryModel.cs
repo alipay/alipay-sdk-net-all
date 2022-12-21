@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<BillKeyInfo> BillkeyList { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 来源渠道，由支付宝侧分配
         /// </summary>
         [XmlElement("source")]

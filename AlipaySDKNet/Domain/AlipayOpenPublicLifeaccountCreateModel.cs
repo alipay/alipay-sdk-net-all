@@ -96,6 +96,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 平台帐号id（比如1688帐号id）
         /// </summary>
         [XmlElement("platform_account_id")]

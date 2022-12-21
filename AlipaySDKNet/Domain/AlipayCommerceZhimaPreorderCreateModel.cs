@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string IsvPid { get; set; }
 
         /// <summary>
+        /// 支付宝用户ID。同一个外部请求号，调用方要确保支付宝userId取值不变
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 开放平台appId
         /// </summary>
         [XmlElement("openapi_app_id")]

@@ -41,6 +41,13 @@ namespace Aop.Api.Domain
         public string ApplyStartTime { get; set; }
 
         /// <summary>
+        /// 审批操作记录信息
+        /// </summary>
+        [XmlArray("approve_node_info_list")]
+        [XmlArrayItem("approve_node_page_group_d_t_o")]
+        public List<ApproveNodePageGroupDTO> ApproveNodeInfoList { get; set; }
+
+        /// <summary>
         /// 自动续约周期
         /// </summary>
         [XmlElement("auto_renew_period")]
@@ -273,6 +280,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payer")]
         public string Payer { get; set; }
+
+        /// <summary>
+        /// 支付条款
+        /// </summary>
+        [XmlArray("payment_terms_list")]
+        [XmlArrayItem("open_api_payment_terms_d_t_o")]
+        public List<OpenApiPaymentTermsDTO> PaymentTermsList { get; set; }
 
         /// <summary>
         /// 实体章用印备注

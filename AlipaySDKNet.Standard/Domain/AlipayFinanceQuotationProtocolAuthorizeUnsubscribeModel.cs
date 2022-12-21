@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayFinanceQuotationProtocolAuthorizeUnsubscribeModel : AopObject
     {
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 与蚂蚁业务方约定的类型，同时约定$orgCode值
         /// </summary>
         [XmlArray("protocol_type_list")]

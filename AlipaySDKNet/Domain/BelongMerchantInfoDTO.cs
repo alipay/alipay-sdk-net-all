@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_id")]
         public string MerchantId { get; set; }
+
+        /// <summary>
+        /// 商户PID;限制:1、服务商代运营模式必传
+        /// </summary>
+        [XmlElement("merchant_open_id")]
+        public string MerchantOpenId { get; set; }
     }
 }

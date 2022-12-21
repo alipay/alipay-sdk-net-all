@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public bool ShowSignSuccessPage { get; set; }
 
         /// <summary>
+        /// 用户签约商户活动到期
+        /// </summary>
+        [XmlElement("sign_again_schema")]
+        public string SignAgainSchema { get; set; }
+
+        /// <summary>
         /// 签约完成页任务按钮描述，当展示签约完成页=true的时候 改内容必填
         /// </summary>
         [XmlElement("sign_success_task_button_desc")]

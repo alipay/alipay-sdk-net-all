@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string LogonId { get; set; }
 
         /// <summary>
+        /// openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 对应的核销数据
         /// </summary>
         [XmlElement("pass_id")]

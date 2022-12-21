@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public long H { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一开放ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 车牌号
         /// </summary>
         [XmlElement("plate_number")]

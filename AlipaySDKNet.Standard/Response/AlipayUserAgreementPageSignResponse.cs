@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string AlipayLogonId { get; set; }
 
         /// <summary>
+        /// 用户签约的支付宝账号对应的支付宝唯一用户号。 (只有签约成功时才会返回)
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 用户签约的支付宝账号对应的支付宝唯一用户号。  以2088开头的16位纯数字组成。(只有签约成功时才会返回)
         /// </summary>
         [XmlElement("alipay_user_id")]

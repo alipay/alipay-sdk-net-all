@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 用户(buyer_user_id)在应用(appId)下的唯一标识
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 扩展信息（键值对列表，有重复的键后者覆盖前者，建议唯一，以免出现不可预期的结果）
         /// </summary>
         [XmlArray("ext_info")]

@@ -75,6 +75,12 @@ namespace Aop.Api.Response
         public string Name { get; set; }
 
         /// <summary>
+        /// 用户的支付宝账号对应的支付宝唯一用户号映射的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 产品编码
         /// </summary>
         [XmlElement("product_code")]

@@ -104,6 +104,18 @@ namespace Aop.Api.Domain
         public List<string> InDoorImages { get; set; }
 
         /// <summary>
+        /// （平替原来的info_source_uid字段，如果能拿到openId，请传本字段，原字段留空）。信息关联的openId
+        /// </summary>
+        [XmlElement("info_source_open_id")]
+        public string InfoSourceOpenId { get; set; }
+
+        /// <summary>
+        /// （已废弃，请使用info_source_open_id）。信息关联的uid
+        /// </summary>
+        [XmlElement("info_source_uid")]
+        public string InfoSourceUid { get; set; }
+
+        /// <summary>
         /// 开票资料信息
         /// </summary>
         [XmlElement("invoice_info")]
@@ -146,7 +158,7 @@ namespace Aop.Api.Domain
         public string LicenseAuthLetterImage { get; set; }
 
         /// <summary>
-        /// 商户类别码mcc，参见https://gw.alipayobjects.com/os/bmw-prod/b28421ce-0ddf-422f-9e9c-c2c3c7f30c73.xlsx 特殊行业要按照MCC说明中的资质一栏上传辅助资质，辅助资质要在qualifications中上传，会有人工审核。
+        /// 商户类别码 mcc，可查看  <a href="https://mdn.alipayobjects.com/portal_mdssth/afts/file/A*-EYjSJ2soV0AAAAAAAAAAAAAAQAAAQ">进件MCC与资质要求 202211.xlsx</a>，特殊行业要按照MCC说明中的资质一栏上传辅助资质，辅助资质要在 qualifications 中上传，会有人工审核。特殊行业要按照MCC说明中的资质一栏上传辅助资质，辅助资质在qualifications字段中上传，会有人工审核特殊行业要按照MCC说明中的资质一栏上传辅助资质，辅助资质要在qualifications中上传，会有人工审核。
         /// </summary>
         [XmlElement("mcc")]
         public string Mcc { get; set; }
@@ -169,6 +181,18 @@ namespace Aop.Api.Domain
         [XmlArray("out_door_images")]
         [XmlArrayItem("string")]
         public List<string> OutDoorImages { get; set; }
+
+        /// <summary>
+        /// （已废弃，请使用oversea_settle_open_id）境外结算账号
+        /// </summary>
+        [XmlElement("oversea_settle_account")]
+        public string OverseaSettleAccount { get; set; }
+
+        /// <summary>
+        /// （平替原来的oversea_settle_open_id字段，如能够获取到该场景的open_id，请传本字段，原字段留空）境外结算账号
+        /// </summary>
+        [XmlElement("oversea_settle_open_id")]
+        public string OverseaSettleOpenId { get; set; }
 
         /// <summary>
         /// 商户行业资质，当商户是特殊行业时必填。每项行业资质信息中，industry_qualification_type和industry_qualification_image均必填

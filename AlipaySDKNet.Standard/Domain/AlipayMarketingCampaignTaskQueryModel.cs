@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCampaignTaskQueryModel : AopObject
     {
         /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 任务中心id
         /// </summary>
         [XmlElement("task_cen_id")]

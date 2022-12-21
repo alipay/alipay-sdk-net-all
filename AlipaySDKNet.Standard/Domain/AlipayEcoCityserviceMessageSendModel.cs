@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public long BatchSize { get; set; }
 
         /// <summary>
-        /// 敏感字段加密类型，目前支持md5，默认加密字段是msg_list中每条消息的“certificate_number”字段
+        /// 敏感字段加密类型，目前支持md5,sm3; 值为md5时，certificate_number需传入md5值，certificate_username传入未加密值 值为sm3时，certificate_number+certificate_username均需传入sm3加密后值
         /// </summary>
         [XmlElement("encrypt_type")]
         public string EncryptType { get; set; }

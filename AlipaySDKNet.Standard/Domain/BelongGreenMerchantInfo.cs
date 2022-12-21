@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BusinessType { get; set; }
 
         /// <summary>
+        /// 商户openid
+        /// </summary>
+        [XmlElement("merchant_open_id")]
+        public string MerchantOpenId { get; set; }
+
+        /// <summary>
         /// 商户PID
         /// </summary>
         [XmlElement("merchant_pid")]

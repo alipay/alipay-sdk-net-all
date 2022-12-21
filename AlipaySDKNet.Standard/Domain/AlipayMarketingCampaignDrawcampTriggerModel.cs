@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ClientIp { get; set; }
 
         /// <summary>
+        /// 扩展字段：key-value格式
+        /// </summary>
+        [XmlElement("ext_info")]
+        public KeyValueMap ExtInfo { get; set; }
+
+        /// <summary>
         /// rds嵌入页面的js收集的用户行为数据
         /// </summary>
         [XmlElement("json_ua")]
@@ -50,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("login_id")]
         public string LoginId { get; set; }
+
+        /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 幂等id，用于判断是否重复调用

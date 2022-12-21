@@ -34,6 +34,18 @@ namespace Aop.Api.Domain
         public string BizData { get; set; }
 
         /// <summary>
+        /// 证件生效日期，提供给银保监会用于实名查验，"yyyy-mm-dd"格式
+        /// </summary>
+        [XmlElement("cert_effective_date")]
+        public string CertEffectiveDate { get; set; }
+
+        /// <summary>
+        /// 证件失效日期，提供给银保监会用于实名查验，"yyyy-mm-dd"格式，若超过或等于2999-01-01代表长期生效
+        /// </summary>
+        [XmlElement("cert_expiration_date")]
+        public string CertExpirationDate { get; set; }
+
+        /// <summary>
         /// 证件上名称;如果渠道账号字段没填则必填
         /// </summary>
         [XmlElement("cert_name")]
@@ -56,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("channel_user_id")]
         public string ChannelUserId { get; set; }
+
+        /// <summary>
+        /// channel_user_id为支付宝id时对应的openid
+        /// </summary>
+        [XmlElement("channel_user_open_id")]
+        public string ChannelUserOpenId { get; set; }
 
         /// <summary>
         /// 渠道账号来源;1:支付宝账号 2:淘宝账号;如果证件类型字段没填则必填
@@ -86,6 +104,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("nationality")]
         public string Nationality { get; set; }
+
+        /// <summary>
+        /// user_id为支付宝id时对应的openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 电话号码

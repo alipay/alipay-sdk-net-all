@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 业务开始时间，毫秒时间戳
         /// </summary>
         [XmlElement("start_time")]

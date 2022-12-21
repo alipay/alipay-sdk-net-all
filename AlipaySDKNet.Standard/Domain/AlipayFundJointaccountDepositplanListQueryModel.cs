@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
+        /// （发起人）用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号</br> 商户侧单号（幂等字段） 补充说明：</br> - 该字段由签约接口alipay.fund.jointaccount.sign调用后，由自动攒变更通知alipay.fund.jointaccount.fundplan.completed中返回</br>- 自动攒场景幂等逻辑,如换号重复发起，则认为是一笔新的请求
         /// </summary>
         [XmlArray("out_biz_no_list")]

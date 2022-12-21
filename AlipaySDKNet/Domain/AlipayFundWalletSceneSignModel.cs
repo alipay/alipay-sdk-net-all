@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("principal_open_id")]
+        public string PrincipalOpenId { get; set; }
+
+        /// <summary>
         /// 产品码
         /// </summary>
         [XmlElement("product_code")]
@@ -32,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 钱包模版id
+        /// </summary>
+        [XmlElement("wallet_template_id")]
+        public string WalletTemplateId { get; set; }
     }
 }

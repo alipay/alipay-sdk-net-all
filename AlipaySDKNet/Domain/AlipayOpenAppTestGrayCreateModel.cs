@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string C { get; set; }
 
         /// <summary>
+        /// 复杂参数
+        /// </summary>
+        [XmlElement("complex_param")]
+        public OpenidComplex ComplexParam { get; set; }
+
+        /// <summary>
         /// xx
         /// </summary>
         [XmlElement("open_id")]

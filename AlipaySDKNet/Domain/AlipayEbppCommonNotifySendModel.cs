@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string NotifyType { get; set; }
 
         /// <summary>
+        /// 支付宝用户id，可空，用于特定场景下向指定用户发送通知
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 子业务类型英文名称:  ELECTRIC-电力  GAS-燃气  WATER-水
         /// </summary>
         [XmlElement("sub_biz_type")]

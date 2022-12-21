@@ -76,5 +76,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("voucher_code")]
         public string VoucherCode { get; set; }
+
+        /// <summary>
+        /// 券核销详情
+        /// </summary>
+        [XmlElement("voucher_use_detail_info")]
+        public VoucherUseDetailInfo VoucherUseDetailInfo { get; set; }
     }
 }

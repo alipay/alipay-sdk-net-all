@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string NotifyType { get; set; }
 
         /// <summary>
+        /// 支付宝用户的open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 二级业务类型，话费，流量，水费，电费等
         /// </summary>
         [XmlElement("sub_biz_type")]

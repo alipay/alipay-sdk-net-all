@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string CreatorId { get; set; }
 
         /// <summary>
+        /// （创建人）支付宝侧用户唯一标识<br> 补充说明：该字段与alipay.fund.jointaccount.fundplan.create请求参数中传入值保持一致
+        /// </summary>
+        [XmlElement("creator_open_id")]
+        public string CreatorOpenId { get; set; }
+
+        /// <summary>
         /// 转入周期值，需要与calendar_type字段配合计算传入时间<br> - 当calendar_type=DAILY时，该字段不填，表示每天（上午6点-下午3点间）会执行调拨任务进行资金转入操作<br> - 当calendar_type=WEEKLY时，该字段为必填（可选值为1-7），对应表示每周星期一或每周星期天（上午6点-下午3点间），会执行调拨任务进行资金转入操作<br> - 当calendar_type=MONTHLY时，该字段为必填（可选值为1-28），对应表示每月一号或每月28号（上午6点-下午3点间），会执行调拨任务进行资金转入操作<br> 补充说明：该字段与alipay.fund.jointaccount.fundplan.create请求参数中传入值保持一致
         /// </summary>
         [XmlElement("date")]

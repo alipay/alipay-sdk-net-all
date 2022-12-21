@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string NotifyObject { get; set; }
 
         /// <summary>
+        /// 订阅实体的值，ETC订阅实体为人，则为open_id
+        /// </summary>
+        [XmlElement("notify_object_open_id")]
+        public string NotifyObjectOpenId { get; set; }
+
+        /// <summary>
+        /// 蚂蚁统一会员ID（对外）
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

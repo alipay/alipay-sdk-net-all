@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string IsFollow { get; set; }
 
         /// <summary>
+        /// 支付宝用户的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝用户id，2088开头的16位长度字符串
         /// </summary>
         [XmlElement("user_id")]

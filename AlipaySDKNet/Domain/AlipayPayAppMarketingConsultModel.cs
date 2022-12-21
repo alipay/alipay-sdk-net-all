@@ -55,6 +55,12 @@ namespace Aop.Api.Domain
         public List<GoodsDetail> GoodsDetail { get; set; }
 
         /// <summary>
+        /// 商户用户id
+        /// </summary>
+        [XmlElement("merchant_user_id")]
+        public string MerchantUserId { get; set; }
+
+        /// <summary>
         /// 已废弃不支持
         /// </summary>
         [XmlElement("mobile")]
@@ -77,6 +83,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("need_return_tag")]
         public bool NeedReturnTag { get; set; }
+
+        /// <summary>
+        /// OpenId是用户在应用下的唯一用户标识。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 商户订单号,64个字符以内、可包含字母、数字、下划线；需保证在商户端不重复

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Logo { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 门店ID
         /// </summary>
         [XmlElement("shop_id")]

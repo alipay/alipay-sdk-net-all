@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public List<OrderExtInfo> ExtInfo { get; set; }
 
         /// <summary>
+        /// 用户(buyer中的identiidentity)在应用(appId)下的唯一标识，当type为USER_ID且issuer为ALIPAY时使用
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 下单并支付的时候返回的订单号，与外部请求号两者之间必须传一个
         /// </summary>
         [XmlElement("order_id")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Account { get; set; }
 
         /// <summary>
+        /// 分账接收方OpenId。本参数为分账接收方在该应用（AppId）下的唯一用户标识。
+        /// </summary>
+        [XmlElement("account_open_id")]
+        public string AccountOpenId { get; set; }
+
+        /// <summary>
         /// 作为查询返回结果：分账收款方绑定时的支付宝登录号。分账关系绑定（alipay.trade.royalty.relation.bind）时，通过type为loginName绑定传入的支付宝登录号，若使用userId绑定则不返回。
         /// </summary>
         [XmlElement("bind_login_name")]

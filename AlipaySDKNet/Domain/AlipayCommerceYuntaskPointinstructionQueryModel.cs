@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string HunterId { get; set; }
 
         /// <summary>
+        /// 导购员id
+        /// </summary>
+        [XmlElement("hunter_open_id")]
+        public string HunterOpenId { get; set; }
+
+        /// <summary>
         /// 积分流水id
         /// </summary>
         [XmlElement("instruction_id")]

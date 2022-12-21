@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string OutBizType { get; set; }
 
         /// <summary>
+        /// 家长支付宝openid，创建的账户将会同时与家长绑定关系
+        /// </summary>
+        [XmlElement("parent_open_id")]
+        public string ParentOpenId { get; set; }
+
+        /// <summary>
         /// 家长支付宝userId，创建的账户将会同时与家长绑定关系
         /// </summary>
         [XmlElement("parent_uid")]

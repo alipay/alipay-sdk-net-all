@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Logo { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 状态 初始化INIT/已生效VALID/已失效INVALID/退款失效REFUND_INVALID
         /// </summary>
         [XmlElement("status")]

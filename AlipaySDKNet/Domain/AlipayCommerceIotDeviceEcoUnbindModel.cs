@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceIotDeviceEcoUnbindModel : AopObject
     {
         /// <summary>
-        /// 绑定类型，可选项[SUB_MERCHANT]
+        /// 绑定类型，可选项[SUB_MERCHANT,DIRECT_MERCHANT]
         /// </summary>
         [XmlElement("bind_type")]
         public string BindType { get; set; }
 
         /// <summary>
-        /// 绑定用户id
+        /// 绑定用户id，间联绑定请填入smid，直连绑定填商户pid
         /// </summary>
         [XmlElement("bind_user_id")]
         public string BindUserId { get; set; }

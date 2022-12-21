@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string SettleAccountIdType { get; set; }
 
         /// <summary>
+        /// 结算账户的OpenId，本参数是用户在该应用（AppId）下的唯一用户标识。
+        /// </summary>
+        [XmlElement("settle_account_open_id")]
+        public string SettleAccountOpenId { get; set; }
+
+        /// <summary>
         /// 结算账户类型。 bankCard: 结算账户为银行卡； alipayBalance: 结算账户为支付宝余额户
         /// </summary>
         [XmlElement("settle_account_type")]

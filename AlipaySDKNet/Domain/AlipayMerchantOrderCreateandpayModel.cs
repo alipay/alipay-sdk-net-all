@@ -37,6 +37,12 @@ namespace Aop.Api.Domain
         public List<GoodsInformation> GoodsInfos { get; set; }
 
         /// <summary>
+        /// 用户(buyer中的identity)在应用(appid)下的唯一标识，当issuer为ALIPAY且type为USER_ID时使用
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单金额，比如[{"type":"MONEY","amount":88.66},{"type":"FAMILY_POINT","amount":2000}]，代表订单中所有商品需要支付的总金额是88.66元+2000家庭积分。
         /// </summary>
         [XmlArray("order_amount")]

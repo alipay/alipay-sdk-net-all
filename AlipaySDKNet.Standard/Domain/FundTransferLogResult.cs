@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 失败原因
+        /// </summary>
+        [XmlElement("fail_reason")]
+        public string FailReason { get; set; }
+
+        /// <summary>
         /// 资金操作备注
         /// </summary>
         [XmlElement("remark")]
@@ -26,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("source_account")]
         public string SourceAccount { get; set; }
+
+        /// <summary>
+        /// 转账日志记录状态
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
 
         /// <summary>
         /// 目标账户

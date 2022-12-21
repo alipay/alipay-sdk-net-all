@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ContactNo { get; set; }
 
         /// <summary>
+        /// 商户侧投递唯一ID，后续芝麻快招同步给商户侧联系情况或者其他信息时候商户侧用此ID进行关联
+        /// </summary>
+        [XmlElement("deliver_id")]
+        public string DeliverId { get; set; }
+
+        /// <summary>
         /// 标准时间格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("deliver_time")]

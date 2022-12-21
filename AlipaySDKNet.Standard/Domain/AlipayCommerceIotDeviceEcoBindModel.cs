@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceIotDeviceEcoBindModel : AopObject
     {
         /// <summary>
-        /// 绑定类型，可选项[SUB_MERCHANT]
+        /// 绑定类型，可选项[SUB_MERCHANT,DIRECT_MERCHANT]
         /// </summary>
         [XmlElement("bind_type")]
         public string BindType { get; set; }

@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 用户id
         /// </summary>
+        [XmlElement("self_open_id")]
+        public string SelfOpenId { get; set; }
+
+        /// <summary>
+        /// 用户id
+        /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
     }

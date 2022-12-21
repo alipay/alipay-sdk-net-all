@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Id { get; set; }
 
         /// <summary>
+        /// 买家支付宝OPENID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 该交易操作发起的时间
         /// </summary>
         [XmlElement("operation_time")]

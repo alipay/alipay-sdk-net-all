@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZhimaCreditEpCertificationRiskIdentifyModel : AopObject
     {
         /// <summary>
+        /// 一次认证的唯一标识,在商户调用认证初始化接口的时候获取。risk_identify_type=BIZNO 必填
+        /// </summary>
+        [XmlElement("biz_no")]
+        public string BizNo { get; set; }
+
+        /// <summary>
         /// 统一社会信用代码或营业执照注册号risk_identify_type=ENTERPRISE 必填
         /// </summary>
         [XmlElement("ep_cert_no")]
@@ -22,7 +28,7 @@ namespace Aop.Api.Domain
         public string EpName { get; set; }
 
         /// <summary>
-        /// 风险识别类别，可传入ENTERPRISE或者PERSON，用于认证场景，通过传入不同的类别返回不同的风险结果
+        /// 风险识别类别，可传入ENTERPRISE或者PERSON或者BIZNO，用于认证场景，通过传入不同的类别返回不同的风险结果
         /// </summary>
         [XmlElement("risk_identify_type")]
         public string RiskIdentifyType { get; set; }

@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public string NotifyObject { get; set; }
 
         /// <summary>
+        /// 订阅实体（uid为对外版本的openId）
+        /// </summary>
+        [XmlElement("notify_object_open_id")]
+        public string NotifyObjectOpenId { get; set; }
+
+        /// <summary>
+        /// 用户id（对外）
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订阅状态
         /// </summary>
         [XmlElement("status")]

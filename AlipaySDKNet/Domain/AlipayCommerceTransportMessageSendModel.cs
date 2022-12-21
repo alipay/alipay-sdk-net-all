@@ -41,6 +41,13 @@ namespace Aop.Api.Domain
         public string NotifyType { get; set; }
 
         /// <summary>
+        /// 目标用户ID（对外版）列表，最大支持50个。
+        /// </summary>
+        [XmlArray("open_ids")]
+        [XmlArrayItem("string")]
+        public List<string> OpenIds { get; set; }
+
+        /// <summary>
         /// 目标用户ID列表，最大支持50个。
         /// </summary>
         [XmlArray("user_ids")]

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("buying_url")]
         public string BuyingUrl { get; set; }
+
+        /// <summary>
+        /// 需要修改的商品品牌
+        /// </summary>
+        [XmlElement("goods_brand")]
+        public string GoodsBrand { get; set; }
 
         /// <summary>
         /// 需要修改的商品辅助说明文案
@@ -58,6 +65,12 @@ namespace Aop.Api.Domain
         public string MainPicUrl { get; set; }
 
         /// <summary>
+        /// 是否需要进行公域推广
+        /// </summary>
+        [XmlElement("need_public_promo")]
+        public bool NeedPublicPromo { get; set; }
+
+        /// <summary>
         /// 需要修改的商品排序，自然整数, 数字越小越靠前
         /// </summary>
         [XmlElement("order_number")]
@@ -80,5 +93,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sell_price")]
         public string SellPrice { get; set; }
+
+        /// <summary>
+        /// 需要修改的商品卖点标签
+        /// </summary>
+        [XmlArray("sell_tag_list")]
+        [XmlArrayItem("string")]
+        public List<string> SellTagList { get; set; }
     }
 }

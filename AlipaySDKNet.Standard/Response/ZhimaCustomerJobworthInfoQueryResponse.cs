@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string PictureUrl { get; set; }
 
         /// <summary>
+        /// 场景授权结果
+        /// </summary>
+        [XmlElement("scene_result")]
+        public bool SceneResult { get; set; }
+
+        /// <summary>
         /// 业务编码
         /// </summary>
         [XmlElement("sub_code")]

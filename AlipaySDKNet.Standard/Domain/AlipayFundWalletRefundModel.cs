@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string PrincipalId { get; set; }
 
         /// <summary>
+        /// 用户唯一表示
+        /// </summary>
+        [XmlElement("principal_open_id")]
+        public string PrincipalOpenId { get; set; }
+
+        /// <summary>
         /// alipay_user_id代表支付宝用户id mechant_user_id代表商户id
         /// </summary>
         [XmlElement("principal_type")]
@@ -44,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 钱包id
+        /// </summary>
+        [XmlElement("user_wallet_id")]
+        public string UserWalletId { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string CustomEndDate { get; set; }
 
         /// <summary>
-        /// 额度维度 日：DAY 月：MONTH 年：YEAR 终身：LIFETIME 自定义周期：CUSTOMIZED，需要传自定义周期时间区间
+        /// 额度维度 单笔上限：ONCE 日：DAY 月：MONTH 季度：QUARTER 年：YEAR 终身：LIFETIME 一次性使用额度：ONLYONE
         /// </summary>
         [XmlElement("quota_dimension")]
         public string QuotaDimension { get; set; }

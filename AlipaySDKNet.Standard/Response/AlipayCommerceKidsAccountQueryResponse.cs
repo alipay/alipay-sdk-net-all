@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string LoginName { get; set; }
 
         /// <summary>
+        /// 会员openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 会员id
         /// </summary>
         [XmlElement("user_id")]

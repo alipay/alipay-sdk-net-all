@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZhimaCreditEpDossierCourtassessSubmitModel : AopObject
     {
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单号
         /// </summary>
         [XmlElement("order_no")]

@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }
+
+        /// <summary>
+        /// 参与者账号
+        /// </summary>
+        [XmlElement("principal_open_id")]
+        public string PrincipalOpenId { get; set; }
     }
 }

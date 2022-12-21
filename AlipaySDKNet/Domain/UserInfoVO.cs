@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string NickName { get; set; }
 
         /// <summary>
+        /// 孩子OpenID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 孩子UID
         /// </summary>
         [XmlElement("user_id")]

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string PrincipalId { get; set; }
 
         /// <summary>
+        /// 签约主体标识。 当principal_type为CARD 时，该字段为支付宝用户号; 当principal_type为 CUSTOMER 时，该字段为支付宝用户标识。一个用户 可能有多个支付宝账号，即多个支付宝用户号，但只有一个是支付宝用户标识。
+        /// </summary>
+        [XmlElement("principal_open_id")]
+        public string PrincipalOpenId { get; set; }
+
+        /// <summary>
         /// 签约协议的场景。
         /// </summary>
         [XmlElement("sign_scene")]

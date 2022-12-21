@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 买家的支付宝用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单待同步信息，不能为空，json格式字符串，自定义key需要提前与接口owner进行沟通确认
         /// </summary>
         [XmlElement("order_info")]

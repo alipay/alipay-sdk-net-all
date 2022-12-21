@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class TechriskTechriskTtYOnlineModel : AopObject
     {
         /// <summary>
-        /// 1
+        /// 2
         /// </summary>
         [XmlElement("s_openid")]
         public string SOpenid { get; set; }

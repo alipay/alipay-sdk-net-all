@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string MiniAppId { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 收藏实体principleIds的来源，需要申请分配
         /// </summary>
         [XmlElement("principal_biz_type")]

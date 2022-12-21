@@ -35,6 +35,11 @@ namespace Aop.Api.Request
         public string FromUserId { get; set; }
 
         /// <summary>
+        /// 支付宝用户唯一标识（关注者）
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 绑定账户的用户名
         /// </summary>
         public string RealName { get; set; }
@@ -129,6 +134,7 @@ namespace Aop.Api.Request
             parameters.Add("biz_content", this.BizContent);
             parameters.Add("display_name", this.DisplayName);
             parameters.Add("from_user_id", this.FromUserId);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("real_name", this.RealName);
             if(udfParams != null) 
             {

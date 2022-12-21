@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustryJobSyncModel : AopObject
     {
         /// <summary>
+        /// 不限      UNLIMITED 高中      H 技校      T 中专      S 大专      C 本科      B 硕士      M 博士      D
+        /// </summary>
+        [XmlElement("academic_require")]
+        public string AcademicRequire { get; set; }
+
+        /// <summary>
         /// 岗位详细地址。 如果是线下岗位，则传具体岗位地址信息 如果是线上岗位，则传空
         /// </summary>
         [XmlElement("address")]
@@ -64,6 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("hire_status")]
         public string HireStatus { get; set; }
+
+        /// <summary>
+        /// 岗位详情内容
+        /// </summary>
+        [XmlElement("job_detail")]
+        public string JobDetail { get; set; }
 
         /// <summary>
         /// 岗位的小程序详情页URL
@@ -144,5 +156,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("work_online")]
         public bool WorkOnline { get; set; }
+
+        /// <summary>
+        /// 不限       UNLIMITED 1年以下    LESS_THAN_ONE_YEAR 1-2年      ONE_TO_TWO 3-5年      THREE_TO_FIVE 6-7年      SIX_TO_SEVEN 8-10年     EIGHT_TO_TEN 10年以上   MORE_THAN_TEN_YEARS
+        /// </summary>
+        [XmlElement("working_years")]
+        public string WorkingYears { get; set; }
     }
 }

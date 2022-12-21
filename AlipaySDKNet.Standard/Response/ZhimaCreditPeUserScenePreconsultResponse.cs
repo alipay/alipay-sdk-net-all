@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string EvalInvokeId { get; set; }
 
         /// <summary>
+        /// 买家的蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 场景等级 A,B ,C等,A B C D分别代表业务方不同的差异化服务
         /// </summary>
         [XmlElement("scene_level")]

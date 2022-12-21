@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class EcomSellerDTO : AopObject
     {
         /// <summary>
+        /// 卖家联系地址
+        /// </summary>
+        [XmlElement("address")]
+        public string Address { get; set; }
+
+        /// <summary>
         /// 支付宝账号id
         /// </summary>
         [XmlElement("alipay_id")]

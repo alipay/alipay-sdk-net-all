@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string CommodityType { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部资源品类的id（长度<128）
         /// </summary>
         [XmlElement("out_commodity_id")]

@@ -28,10 +28,16 @@ namespace Aop.Api.Domain
         public string Mobile { get; set; }
 
         /// <summary>
-        /// 阿里通信通知类型
+        /// 阿里通信通知类型 TX:超时提醒 BC:超时补偿
         /// </summary>
         [XmlElement("notify_type")]
         public string NotifyType { get; set; }
+
+        /// <summary>
+        /// 支付宝用户open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 外部用户id

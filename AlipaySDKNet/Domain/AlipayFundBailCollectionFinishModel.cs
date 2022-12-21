@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 催收案件主体，请输入2088开头的16位uid
         /// </summary>
+        [XmlElement("principal_open_id")]
+        public string PrincipalOpenId { get; set; }
+
+        /// <summary>
+        /// 催收案件主体，请输入2088开头的16位uid
+        /// </summary>
         [XmlElement("principal_user_id")]
         public string PrincipalUserId { get; set; }
 

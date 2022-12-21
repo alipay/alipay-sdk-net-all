@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 在门店消费用户的标识
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 点餐信息
         /// </summary>
         [XmlElement("catering_order_info")]

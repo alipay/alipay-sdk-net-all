@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public ConsultExtParams ExtParams { get; set; }
 
         /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 指定过滤奖品id列表，最多支持10个，多个奖品用英文逗号分割，为空时咨询活动下所有的奖品
         /// </summary>
         [XmlElement("prize_id_list")]

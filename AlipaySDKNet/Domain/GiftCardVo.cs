@@ -58,10 +58,22 @@ namespace Aop.Api.Domain
         public string GiftCardStatus { get; set; }
 
         /// <summary>
+        /// 创建时间
+        /// </summary>
+        [XmlElement("gmt_create")]
+        public string GmtCreate { get; set; }
+
+        /// <summary>
         /// 采购方id
         /// </summary>
         [XmlElement("merchant_id")]
         public string MerchantId { get; set; }
+
+        /// <summary>
+        /// 子账户详情
+        /// </summary>
+        [XmlElement("sub_account_info")]
+        public CardSubAccountResult SubAccountInfo { get; set; }
 
         /// <summary>
         /// 卡绑定的用户id

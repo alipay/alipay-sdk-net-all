@@ -59,6 +59,12 @@ namespace Aop.Api.Domain
         public string LastId { get; set; }
 
         /// <summary>
+        /// （发起人）用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 从起始标识往后查询多少条调拨记录<br> 补充说明：<br> - 该字段不传时，支付宝侧默认查询20条<br> - 超过20时按20条查询<br> - 剩余记录数不足20条则按实际记录数返回
         /// </summary>
         [XmlElement("page_size")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CreateDate { get; set; }
 
         /// <summary>
+        /// 支付宝司机open_id
+        /// </summary>
+        [XmlElement("driver_open_id")]
+        public string DriverOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝司机uid
         /// </summary>
         [XmlElement("driver_user_id")]

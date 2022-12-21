@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AssetUserId { get; set; }
 
         /// <summary>
+        /// 资产的属主openid
+        /// </summary>
+        [XmlElement("asset_user_open_id")]
+        public string AssetUserOpenId { get; set; }
+
+        /// <summary>
         /// 支付业务类型  PAY-支付  REFUND-退款
         /// </summary>
         [XmlElement("biz_pay_type")]

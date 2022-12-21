@@ -52,10 +52,22 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单标题
         /// </summary>
         [XmlElement("order_title")]
         public string OrderTitle { get; set; }
+
+        /// <summary>
+        /// 平台uid
+        /// </summary>
+        [XmlElement("partner_open_id")]
+        public string PartnerOpenId { get; set; }
 
         /// <summary>
         /// 平台uid

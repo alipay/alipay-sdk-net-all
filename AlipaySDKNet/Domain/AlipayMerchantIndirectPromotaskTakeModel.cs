@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string TakeTime { get; set; }
 
         /// <summary>
+        /// 支付宝侧返回的任务目标值，数值类型
+        /// </summary>
+        [XmlElement("target_value")]
+        public long TargetValue { get; set; }
+
+        /// <summary>
         /// 任务英文编号
         /// </summary>
         [XmlElement("task_code")]

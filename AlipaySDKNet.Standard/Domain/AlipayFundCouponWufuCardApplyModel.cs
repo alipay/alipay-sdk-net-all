@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayFundCouponWufuCardApplyModel : AopObject
     {
         /// <summary>
-        /// 唯一请求码
+        /// 业务流水号（不做幂等处理，只用于记录回溯）
         /// </summary>
         [XmlElement("biz_id")]
         public string BizId { get; set; }

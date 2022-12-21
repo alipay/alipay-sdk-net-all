@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
+        /// 支付宝用户的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部协议号
         /// </summary>
         [XmlElement("out_agreement_id")]

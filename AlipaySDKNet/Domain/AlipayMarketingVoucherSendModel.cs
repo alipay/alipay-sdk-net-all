@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
+        /// 支付宝用户ID 。user_id, login_id, taobao_nick不能同时为空，优先级依次降低
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务订单号，用于幂等控制，相同template_id和out_biz_no认为是同一次业务
         /// </summary>
         [XmlElement("out_biz_no")]

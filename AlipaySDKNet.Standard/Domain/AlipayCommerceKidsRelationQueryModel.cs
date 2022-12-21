@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceKidsRelationQueryModel : AopObject
     {
         /// <summary>
+        /// 家长支付宝openid，用于查询与该家长关联的孩子
+        /// </summary>
+        [XmlElement("parent_open_id")]
+        public string ParentOpenId { get; set; }
+
+        /// <summary>
         /// 家长支付宝userId，用于查询与该家长关联的孩子
         /// </summary>
         [XmlElement("parent_uid")]

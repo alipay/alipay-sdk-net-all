@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string AuthMerchantId { get; set; }
 
         /// <summary>
+        /// 授权过期时间。格式"yyyy-MM-dd HH:mm:ss"。
+        /// </summary>
+        [XmlElement("authorization_expire_time")]
+        public string AuthorizationExpireTime { get; set; }
+
+        /// <summary>
         /// 法人身份证号
         /// </summary>
         [XmlElement("cognizant_cert_no")]

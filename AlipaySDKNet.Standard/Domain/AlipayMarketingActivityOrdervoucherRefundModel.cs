@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("voucher_code")]
         public string VoucherCode { get; set; }
+
+        /// <summary>
+        /// 券取消核销详情
+        /// </summary>
+        [XmlElement("voucher_refund_detail_info")]
+        public VoucherRefundDetailInfo VoucherRefundDetailInfo { get; set; }
     }
 }

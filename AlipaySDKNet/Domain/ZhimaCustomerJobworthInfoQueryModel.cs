@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
+        /// 子场景
+        /// </summary>
+        [XmlElement("cloud_resume_scene")]
+        public string CloudResumeScene { get; set; }
+
+        /// <summary>
         /// 公司社会统一代码h5页面访客展示使用
         /// </summary>
         [XmlElement("company_certificate")]

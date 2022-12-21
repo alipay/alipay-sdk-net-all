@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceGreenItemenergySendModel : AopObject
     {
         /// <summary>
+        /// 支付宝openid
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝用户ID
         /// </summary>
         [XmlElement("alipay_uid")]

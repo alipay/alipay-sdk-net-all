@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class ZhimaCreditEpCreditlinkAuthCreateResponse : AopResponse
     {
         /// <summary>
+        /// 业务订单号
+        /// </summary>
+        [XmlElement("biz_no")]
+        public string BizNo { get; set; }
+
+        /// <summary>
         /// 授权有效时间
         /// </summary>
         [XmlElement("expire_time")]

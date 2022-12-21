@@ -21,9 +21,21 @@ namespace Aop.Api.Response
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// 失败的支付宝用户id（对外版）列表
+        /// </summary>
+        [XmlElement("failed_open_ids")]
+        public string FailedOpenIds { get; set; }
+
+        /// <summary>
         /// 失败的支付宝用户id列表。
         /// </summary>
         [XmlElement("failed_user_ids")]
         public string FailedUserIds { get; set; }
+
+        /// <summary>
+        /// 业务成功标志。true表示业务成功，false表示业务失败。
+        /// </summary>
+        [XmlElement("success")]
+        public bool Success { get; set; }
     }
 }

@@ -20,6 +20,11 @@ namespace Aop.Api.Request
         public string MType { get; set; }
 
         /// <summary>
+        /// 付款方外部用户ID
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝订单号
         /// </summary>
         public string OrderId { get; set; }
@@ -116,6 +121,7 @@ namespace Aop.Api.Request
             AopDictionary parameters = new AopDictionary();
             parameters.Add("biz_type", this.BizType);
             parameters.Add("m_type", this.MType);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("order_id", this.OrderId);
             parameters.Add("uid", this.Uid);
             if(udfParams != null) 

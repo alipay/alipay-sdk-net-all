@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZMGORightConfig : AopObject
     {
         /// <summary>
+        /// 芝麻GO管理页已享优惠进度的重定向链接
+        /// </summary>
+        [XmlElement("cumulative_preferential_redirect_schema")]
+        public string CumulativePreferentialRedirectSchema { get; set; }
+
+        /// <summary>
         /// 权益描述
         /// </summary>
         [XmlElement("custom_benefit_desc")]

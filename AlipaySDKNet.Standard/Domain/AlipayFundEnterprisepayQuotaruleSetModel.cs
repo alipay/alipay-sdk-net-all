@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string MemberId { get; set; }
 
         /// <summary>
-        /// 操作类型： ACCOUNT-账户（支持单笔，月） MEMBER-成员（支持单笔，日，月，年，终身累计，自定义周期）
+        /// 操作类型： ACCOUNT-账户（支持单笔，月） MEMBER-成员（支持单笔，日，月，季度，年，终身累计，自定义周期，一次性额度）
         /// </summary>
         [XmlElement("operation_type")]
         public string OperationType { get; set; }

@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public List<QYBMapInfo> ExtInfoList { get; set; }
 
         /// <summary>
+        /// 商户app_id维度下的用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号，与权益宝业务号唯一对应
         /// </summary>
         [XmlElement("third_biz_no")]

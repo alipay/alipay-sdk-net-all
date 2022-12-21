@@ -41,6 +41,12 @@ namespace Aop.Api.Response
         public long ExpiresIn { get; set; }
 
         /// <summary>
+        /// 当商家选择全权委托授权时值为true，未选择时为false。
+        /// </summary>
+        [XmlElement("is_by_app_auth")]
+        public bool IsByAppAuth { get; set; }
+
+        /// <summary>
         /// valid：有效状态；invalid：无效状态
         /// </summary>
         [XmlElement("status")]

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string PromoterId { get; set; }
 
         /// <summary>
+        /// 导购员id
+        /// </summary>
+        [XmlElement("promoter_open_id")]
+        public string PromoterOpenId { get; set; }
+
+        /// <summary>
         /// 导购员角色 店长 MANAGER 普通导购员 GENERAL 临促员 TEMPORARY 默认值GENERAL
         /// </summary>
         [XmlElement("role")]

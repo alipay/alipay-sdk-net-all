@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string EstimatePickUpTime { get; set; }
 
         /// <summary>
+        /// 是否为高价值订单,取值为true/false
+        /// </summary>
+        [XmlElement("is_high_value")]
+        public bool IsHighValue { get; set; }
+
+        /// <summary>
         /// 外部订单号
         /// </summary>
         [XmlElement("order_id")]

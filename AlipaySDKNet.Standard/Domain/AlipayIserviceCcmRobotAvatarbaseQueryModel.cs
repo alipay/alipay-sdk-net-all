@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("target_method")]
         public string TargetMethod { get; set; }
+
+        /// <summary>
+        /// 租户code&租户id，对于子部门客户需要上传子部门id
+        /// </summary>
+        [XmlElement("tenant_code")]
+        public string TenantCode { get; set; }
     }
 }

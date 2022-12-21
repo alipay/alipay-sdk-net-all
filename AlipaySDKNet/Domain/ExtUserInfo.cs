@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string FixBuyer { get; set; }
 
         /// <summary>
+        /// 买家加密身份信息。当指定了此参数且指定need_check_info=true时，支付宝会对买家身份进行校验，校验逻辑为买家姓名、买家证件号拼接后的字符串，以sha256算法utf-8编码计算hash，若与传入的值不匹配则会拦截本次支付。注意：如果同时指定了用户明文身份信息（name，cert_type，cert_no中任意一个），则忽略identity_hash以明文参数校验。
+        /// </summary>
+        [XmlElement("identity_hash")]
+        public string IdentityHash { get; set; }
+
+        /// <summary>
         /// 允许的最小买家年龄。 买家年龄必须大于等于所传数值  注： 1. need_check_info=T时该参数才有效 2. min_age为整数，必须大于等于0
         /// </summary>
         [XmlElement("min_age")]

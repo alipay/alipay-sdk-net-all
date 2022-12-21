@@ -28,10 +28,22 @@ namespace Aop.Api.Domain
         public InfoSource InfoSource { get; set; }
 
         /// <summary>
+        /// 当前操作者支付宝openid
+        /// </summary>
+        [XmlElement("operator_open_id")]
+        public string OperatorOpenId { get; set; }
+
+        /// <summary>
         /// 当前操作者支付宝userId
         /// </summary>
         [XmlElement("operator_uid")]
         public string OperatorUid { get; set; }
+
+        /// <summary>
+        /// 家长支付宝openid，用于查询与该家长关联的孩子
+        /// </summary>
+        [XmlElement("parent_open_id")]
+        public string ParentOpenId { get; set; }
 
         /// <summary>
         /// 家长支付宝userId，用于查询与该家长关联的孩子

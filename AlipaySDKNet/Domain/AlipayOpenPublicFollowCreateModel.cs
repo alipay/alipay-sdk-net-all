@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenPublicFollowCreateModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 来源，目前只有"tmall"
         /// </summary>
         [XmlElement("source")]

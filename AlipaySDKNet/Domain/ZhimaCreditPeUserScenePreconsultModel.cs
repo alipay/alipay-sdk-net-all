@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ExtParams { get; set; }
 
         /// <summary>
+        /// 买家的蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 接入商家的订单号
         /// </summary>
         [XmlElement("out_order_no")]

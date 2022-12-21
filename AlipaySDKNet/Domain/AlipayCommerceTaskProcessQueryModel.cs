@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Channel { get; set; }
 
         /// <summary>
+        /// 支付宝用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 任务类型
         /// </summary>
         [XmlElement("type")]

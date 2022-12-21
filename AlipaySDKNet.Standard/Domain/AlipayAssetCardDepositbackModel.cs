@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string FundScene { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝原始充值订单号
         /// </summary>
         [XmlElement("original_bill_no")]

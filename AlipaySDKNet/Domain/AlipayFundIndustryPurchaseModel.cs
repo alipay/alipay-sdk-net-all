@@ -28,7 +28,13 @@ namespace Aop.Api.Domain
         public string GmtPay { get; set; }
 
         /// <summary>
-        /// 开放用户id，appid+uid维度唯一。 与user_id二选一。
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 已废弃，勿用。请使用open_id字段
         /// </summary>
         [XmlElement("openid")]
         public string Openid { get; set; }

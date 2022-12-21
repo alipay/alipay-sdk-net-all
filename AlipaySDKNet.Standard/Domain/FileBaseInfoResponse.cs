@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AbsolutePath { get; set; }
 
         /// <summary>
+        /// 文件访问地址
+        /// </summary>
+        [XmlElement("download_url")]
+        public string DownloadUrl { get; set; }
+
+        /// <summary>
         /// 是否生效,true:是，false:否
         /// </summary>
         [XmlElement("enable")]

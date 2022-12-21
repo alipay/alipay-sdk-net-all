@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceSportsGreenenergyDepositModel : AopObject
     {
         /// <summary>
+        /// 用户支付宝OPENID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单交易状态，verify_succ-已使用，目前仅支持对已使用的订单发放能量
         /// </summary>
         [XmlElement("order_status")]

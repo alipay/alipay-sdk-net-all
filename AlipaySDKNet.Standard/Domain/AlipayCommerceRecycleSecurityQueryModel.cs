@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Mobile { get; set; }
 
         /// <summary>
+        /// 风险咨询主体的支付宝账号
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 预估回收价格，单位元。
         /// </summary>
         [XmlElement("order_amount")]

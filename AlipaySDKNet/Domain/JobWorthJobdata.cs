@@ -10,10 +10,22 @@ namespace Aop.Api.Domain
     public class JobWorthJobdata : AopObject
     {
         /// <summary>
+        /// 证书发证机构
+        /// </summary>
+        [XmlElement("certificate_grant_institution")]
+        public string CertificateGrantInstitution { get; set; }
+
+        /// <summary>
         /// 证书编号
         /// </summary>
         [XmlElement("certificate_id")]
         public string CertificateId { get; set; }
+
+        /// <summary>
+        /// 证书等级：中文
+        /// </summary>
+        [XmlElement("certificate_level")]
+        public string CertificateLevel { get; set; }
 
         /// <summary>
         /// 证书名称
@@ -40,10 +52,28 @@ namespace Aop.Api.Domain
         public string Degree { get; set; }
 
         /// <summary>
+        /// 商户侧投递岗位id
+        /// </summary>
+        [XmlElement("delivery_position_id")]
+        public string DeliveryPositionId { get; set; }
+
+        /// <summary>
+        /// 投递时间戳
+        /// </summary>
+        [XmlElement("delivery_time")]
+        public long DeliveryTime { get; set; }
+
+        /// <summary>
         /// 教育状态只有两种，GRADUATE(毕业)，STUDY（未毕业）
         /// </summary>
         [XmlElement("education_status")]
         public string EducationStatus { get; set; }
+
+        /// <summary>
+        /// 考试分数
+        /// </summary>
+        [XmlElement("exam_score")]
+        public string ExamScore { get; set; }
 
         /// <summary>
         /// 工作证图片上传接口返回的id
@@ -52,10 +82,16 @@ namespace Aop.Api.Domain
         public string HeadPicId { get; set; }
 
         /// <summary>
-        /// 求职意向，城市
+        /// 求职意向，城市的adccode  例如110000（北京市）
         /// </summary>
         [XmlElement("intention_city")]
         public string IntentionCity { get; set; }
+
+        /// <summary>
+        /// 发证日期，ms时间戳
+        /// </summary>
+        [XmlElement("issue_date")]
+        public string IssueDate { get; set; }
 
         /// <summary>
         /// 岗位对应的职业id，字段参考https://www.yuque.com/wx3dkp/gwckr4/bs03t3
@@ -158,6 +194,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }
+
+        /// <summary>
+        /// 有效期：开始结束 ms 时间戳
+        /// </summary>
+        [XmlElement("valid_date_end")]
+        public string ValidDateEnd { get; set; }
+
+        /// <summary>
+        /// 有效期：开始时间 ms时间戳
+        /// </summary>
+        [XmlElement("valid_date_start")]
+        public string ValidDateStart { get; set; }
 
         /// <summary>
         /// 工作描述

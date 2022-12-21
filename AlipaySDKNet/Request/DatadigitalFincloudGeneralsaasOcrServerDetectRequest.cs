@@ -16,7 +16,7 @@ namespace Aop.Api.Request
         public FileItem FileContent { get; set; }
 
         /// <summary>
-        /// 可识别OCR类型。如，ID_CARD_FRONT 身份证正面；ID_CARD_FRONT 身份证反面等。具体支持的类型以接入文档为准。
+        /// 可识别OCR类型。如，ID_CARD_FRONT 大陆身份证正面；ID_CARD_BACK 大陆身份证反面等。具体支持的类型以接入文档为准。
         /// </summary>
         public string OcrType { get; set; }
 

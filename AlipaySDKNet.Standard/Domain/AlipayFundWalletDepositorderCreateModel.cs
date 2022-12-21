@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 膨胀金的生效开始日期
+        /// </summary>
+        [XmlElement("effective_end_date")]
+        public string EffectiveEndDate { get; set; }
+
+        /// <summary>
         /// 充值的膨胀金额
         /// </summary>
         [XmlElement("expand_amount")]
@@ -62,5 +68,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("time_expire")]
         public string TimeExpire { get; set; }
+
+        /// <summary>
+        /// 钱包id
+        /// </summary>
+        [XmlElement("user_wallet_id")]
+        public string UserWalletId { get; set; }
+
+        /// <summary>
+        /// 膨胀金的生效结束日期
+        /// </summary>
+        [XmlElement("valid_date")]
+        public string ValidDate { get; set; }
     }
 }

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
+        /// OPENID(支付宝用户2088账号对应的OPENID)
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 业务订单号，每次操作不可重复。
         /// </summary>
         [XmlElement("out_biz_no")]

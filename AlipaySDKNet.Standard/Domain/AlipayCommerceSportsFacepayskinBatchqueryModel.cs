@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string ClientVersion { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 付款码皮肤ID集合
         /// </summary>
         [XmlArray("skin_id_list")]

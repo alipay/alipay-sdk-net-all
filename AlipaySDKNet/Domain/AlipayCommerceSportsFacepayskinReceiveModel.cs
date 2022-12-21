@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ExpireDate { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 付款码皮肤ID
         /// </summary>
         [XmlElement("skin_id")]

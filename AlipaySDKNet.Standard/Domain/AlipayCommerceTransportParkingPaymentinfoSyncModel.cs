@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public bool IsEncryptPlateNo { get; set; }
 
         /// <summary>
+        /// 蚂蚁会员统一ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部停车流水号(用于串通进场与出场信息)
         /// </summary>
         [XmlElement("out_serial_no")]

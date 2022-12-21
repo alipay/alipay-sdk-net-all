@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceEnterpriseconsumeOpenrulerelationCreateModel : AopObject
     {
         /// <summary>
-        /// 企业ID
+        /// 企业共同账户ID【不推荐使用】
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -21,6 +21,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
+
+        /// <summary>
+        /// 企业ID【推荐使用】
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
 
         /// <summary>
         /// 开票规则ID

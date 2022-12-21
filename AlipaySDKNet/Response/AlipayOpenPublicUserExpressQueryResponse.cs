@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public bool ExpressUser { get; set; }
 
         /// <summary>
+        /// 支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

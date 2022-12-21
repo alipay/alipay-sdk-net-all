@@ -10,6 +10,30 @@ namespace Aop.Api.Domain
     public class EcomItemExtendDetailDTO : AopObject
     {
         /// <summary>
+        /// cardType + 唯一 + 储值卡类目投保场景 + 通过上下游约定获取 枚举类型：     STORED("STORED", "储值卡"),     FREQUENCY("FREQUENCY", "次卡"),     TERM("TERM", "周期卡"),
+        /// </summary>
+        [XmlElement("card_type")]
+        public string CardType { get; set; }
+
+        /// <summary>
+        /// 储值卡可用金额，单位分
+        /// </summary>
+        [XmlElement("card_use_amount")]
+        public long CardUseAmount { get; set; }
+
+        /// <summary>
+        /// 储值卡可用次数
+        /// </summary>
+        [XmlElement("card_use_count")]
+        public long CardUseCount { get; set; }
+
+        /// <summary>
+        /// 储值卡使用周期，单位天
+        /// </summary>
+        [XmlElement("card_use_period")]
+        public long CardUsePeriod { get; set; }
+
+        /// <summary>
         /// extInfo
         /// </summary>
         [XmlElement("ext_info")]

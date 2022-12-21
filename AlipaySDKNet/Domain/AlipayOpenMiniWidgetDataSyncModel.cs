@@ -24,6 +24,13 @@ namespace Aop.Api.Domain
         public string DataType { get; set; }
 
         /// <summary>
+        /// 商品信息列表
+        /// </summary>
+        [XmlArray("goods_list")]
+        [XmlArrayItem("widget_goods_info")]
+        public List<WidgetGoodsInfo> GoodsList { get; set; }
+
+        /// <summary>
         /// 商家小程序ID
         /// </summary>
         [XmlElement("mini_app_id")]

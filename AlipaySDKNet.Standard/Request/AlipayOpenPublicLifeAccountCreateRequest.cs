@@ -51,6 +51,11 @@ namespace Aop.Api.Request
         public FileItem Logo { get; set; }
 
         /// <summary>
+        /// 支付宝用户唯一标识
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝用户id，由支付宝同学提供用户id，为该生活号对应pid
         /// </summary>
         public string UserId { get; set; }
@@ -146,6 +151,7 @@ namespace Aop.Api.Request
             parameters.Add("content", this.Content);
             parameters.Add("customer_tel", this.CustomerTel);
             parameters.Add("life_name", this.LifeName);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("user_id", this.UserId);
             if(udfParams != null) 
             {

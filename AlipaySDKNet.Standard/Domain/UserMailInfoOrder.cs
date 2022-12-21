@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string DetailAddress { get; set; }
 
         /// <summary>
+        /// 电子邮箱
+        /// </summary>
+        [XmlElement("email")]
+        public string Email { get; set; }
+
+        /// <summary>
         /// 商户ipRole(pid)
         /// </summary>
         [XmlElement("ip_role_id")]

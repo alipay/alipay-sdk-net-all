@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string Channel { get; set; }
 
         /// <summary>
+        /// 发起人）支付宝侧用户唯一标识 补充说明： - 发起人可为C端用户 - 发起人也可为B端商户
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 资金操作类型：<br/> - FREEZE：提现申请 <br/> - UNFREEZE：提现审批拒绝 <br/> - WITHDRAW：提现审批同意 <br/> - DEPOSIT：手动转入 <br/> - SINGLE_TRANSFER：存量资金搬迁
         /// </summary>
         [XmlElement("operate_type")]

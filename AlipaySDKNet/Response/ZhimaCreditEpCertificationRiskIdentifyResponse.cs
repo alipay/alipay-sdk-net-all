@@ -15,5 +15,11 @@ namespace Aop.Api.Response
         [XmlArray("risk_identify_result")]
         [XmlArrayItem("string")]
         public List<string> RiskIdentifyResult { get; set; }
+
+        /// <summary>
+        /// 空壳企业等级，描述企业空壳程度。
+        /// </summary>
+        [XmlElement("shell_company_level")]
+        public string ShellCompanyLevel { get; set; }
     }
 }

@@ -16,5 +16,12 @@ namespace Aop.Api.Response
         [XmlArray("recommend_results")]
         [XmlArrayItem("insure_recomm_result_d_t_o")]
         public List<InsureRecommResultDTO> RecommendResults { get; set; }
+
+        /// <summary>
+        /// 拦截原因
+        /// </summary>
+        [XmlArray("reject_results")]
+        [XmlArrayItem("ins_open_reject_result_d_t_o")]
+        public List<InsOpenRejectResultDTO> RejectResults { get; set; }
     }
 }

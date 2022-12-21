@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string TransIn { get; set; }
 
         /// <summary>
+        /// 分账转入方的OpenId，OpenId为用户在该应用下支付宝的唯一用户标识。
+        /// </summary>
+        [XmlElement("trans_in_open_id")]
+        public string TransInOpenId { get; set; }
+
+        /// <summary>
         /// 分账转入账号类型，userId表示是支付宝账号对应的支付宝唯一用户号，loginName表示是支付宝登录号，secondMerchantID表示是二级商户id。 只有在operation_type为replenish_refund(退补差)，transfer(分账)才返回该字段
         /// </summary>
         [XmlElement("trans_in_type")]
@@ -62,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trans_out")]
         public string TransOut { get; set; }
+
+        /// <summary>
+        /// 分账转出方的OpenId，OpenId为用户在该应用下支付宝内的唯一用户标识。
+        /// </summary>
+        [XmlElement("trans_out_open_id")]
+        public string TransOutOpenId { get; set; }
 
         /// <summary>
         /// 分账转出账号类型，userId表示是支付宝账号对应的支付宝唯一用户号，loginName表示是支付宝登录号，secondMerchantID表示是二级商户id。 只有在operation_type为replenish(补差)，transfer_refund(退分账)类型才返回该字段

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ExtraMap { get; set; }
 
         /// <summary>
+        /// 支付宝openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]

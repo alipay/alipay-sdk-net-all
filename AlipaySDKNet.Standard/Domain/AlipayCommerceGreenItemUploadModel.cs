@@ -29,13 +29,13 @@ namespace Aop.Api.Domain
         public string GoodsId { get; set; }
 
         /// <summary>
-        /// 商品名称
+        /// 商品名称，当data_operation传入1的时候必填
         /// </summary>
         [XmlElement("goods_name")]
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 能量码列表，最多不能超过100条。
+        /// 能量码列表，格式由商户自定义上传，最多不能超过100条。
         /// </summary>
         [XmlArray("qr_code_list")]
         [XmlArrayItem("string")]

@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
+        /// 支持同码激励
+        /// </summary>
+        [XmlElement("support_unified_material_code")]
+        public bool SupportUnifiedMaterialCode { get; set; }
+
+        /// <summary>
         /// 任务描述
         /// </summary>
         [XmlElement("task_desc")]

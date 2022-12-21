@@ -40,7 +40,13 @@ namespace Aop.Api.Domain
         public string TaskEndTime { get; set; }
 
         /// <summary>
-        /// 任务状态，枚举值： - START，任务开始 - CANCEL，任务取消 - FINISH，任务完成
+        /// 任务实例ID，领取任务后有效
+        /// </summary>
+        [XmlElement("task_id")]
+        public string TaskId { get; set; }
+
+        /// <summary>
+        /// 任务状态，枚举值： 1. FINISH，结束任务(任务已完成) 2. UN_FINISH，任务结束((任务未完成))
         /// </summary>
         [XmlElement("task_state")]
         public string TaskState { get; set; }

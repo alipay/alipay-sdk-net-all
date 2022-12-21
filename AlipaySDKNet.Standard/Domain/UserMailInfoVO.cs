@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string DetailAddress { get; set; }
 
         /// <summary>
+        /// 邮件人的电子邮箱
+        /// </summary>
+        [XmlElement("email")]
+        public string Email { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [XmlElement("gmt_create")]

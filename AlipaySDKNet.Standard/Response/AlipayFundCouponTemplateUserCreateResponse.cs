@@ -16,13 +16,13 @@ namespace Aop.Api.Response
         public GiftUserTemplateBoxInfo GiftUserTemplateBoxInfo { get; set; }
 
         /// <summary>
-        /// 红包皮肤模板信息
+        /// 红包封面模板信息
         /// </summary>
         [XmlElement("template_info")]
         public GiftUserTemplateInfo TemplateInfo { get; set; }
 
         /// <summary>
-        /// 和user_id一起，唯一标识发放给该用户的一个红包皮肤实例，需要业务方记录维护用户该皮肤实例的状态
+        /// 和user_id一起，唯一标识发放给该用户的一个红包封面实例，需要业务方记录维护用户该封面实例的状态
         /// </summary>
         [XmlElement("user_template_id")]
         public string UserTemplateId { get; set; }

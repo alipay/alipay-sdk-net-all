@@ -61,6 +61,12 @@ namespace Aop.Api.Domain
         public string DeliveryRecallMode { get; set; }
 
         /// <summary>
+        /// 指定搜索直达投放区块
+        /// </summary>
+        [XmlElement("delivery_search_box_rule")]
+        public DeliverySearchBoxRule DeliverySearchBoxRule { get; set; }
+
+        /// <summary>
         /// 小程序推广可用。枚举值：SERVICE_DIRECT
         /// </summary>
         [XmlElement("delivery_type")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenPublicSummaryQueryModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户ID
         /// </summary>
         [XmlElement("partner_id")]

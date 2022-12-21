@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// 买家支付宝OPENID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单交易状态,pay_succ-已支付（若支持多次核销则在全部核销之前都是已支付状态）,refund_succ-已退款,verify_proc-使用中（已入场但是还未结束）,verify_succ-已使用,overdue-已过期（超过使用时间未使用且未退款）
         /// </summary>
         [XmlElement("order_status")]

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string OlBizTypeCode { get; set; }
 
         /// <summary>
+        /// 支付宝用户Id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 定点医药机构编码
         /// </summary>
         [XmlElement("org_cfc_id")]

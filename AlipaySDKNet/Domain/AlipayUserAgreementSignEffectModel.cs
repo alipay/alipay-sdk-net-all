@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AlipayLogonId { get; set; }
 
         /// <summary>
+        /// 用户的支付宝账号对应的支付宝唯一用户号， 本参数与alipay_logon_id不可同时为空，若都填写，则以本参数为准，优先级高于alipay_logon_id。
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 用户的支付宝账号对应的支付宝唯一用户号，以2088开头的16位纯数字组成;  本参数与alipay_logon_id不可同时为空，若都填写，则以本参数为准，优先级高于alipay_logon_id。
         /// </summary>
         [XmlElement("alipay_user_id")]

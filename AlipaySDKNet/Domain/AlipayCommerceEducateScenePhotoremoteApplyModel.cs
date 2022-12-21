@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string OutPhotoId { get; set; }
 
         /// <summary>
+        /// 用户外部ID。（服务商内部唯一ID，唯一关联一位学生/教职工)
+        /// </summary>
+        [XmlElement("out_user_id")]
+        public string OutUserId { get; set; }
+
+        /// <summary>
         /// 学生家长支付宝账号绑定的手机号。
         /// </summary>
         [XmlElement("parent_phone_number")]

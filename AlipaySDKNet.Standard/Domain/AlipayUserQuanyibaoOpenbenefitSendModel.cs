@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
+        /// 商户app_id维度下的用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 权益发放第三方业务号，权益宝会使用该字段做幂等，请保证该值唯一
         /// </summary>
         [XmlElement("third_biz_no")]
