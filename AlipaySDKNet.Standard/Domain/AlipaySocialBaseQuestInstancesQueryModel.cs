@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipaySocialBaseQuestInstancesQueryModel : AopObject
     {
         /// <summary>
+        /// openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 目标ID列表，列表长度不能超过20
         /// </summary>
         [XmlArray("quest_ids")]

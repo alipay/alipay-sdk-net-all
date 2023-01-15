@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
+        /// OpenId是用户（UserId）在应用（AppId）下的唯一用户标识。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商户系统的用户uid。是外部商户系统中的用户唯一id
         /// </summary>
         [XmlElement("out_user_id")]

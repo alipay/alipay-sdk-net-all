@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// 授权编码类型，有限枚举：1. SHORT_URL （短链接）2.PAGE_PARAM（小程序跳转参数）
+        /// 授权编码类型，有限枚举：1. SHORT_URL （短链接）2.PAGE_PARAM（小程序跳转参数）3.SHARE_CODE（小程序跳转参数）
         /// </summary>
         [XmlElement("initialize_code_type")]
         public string InitializeCodeType { get; set; }

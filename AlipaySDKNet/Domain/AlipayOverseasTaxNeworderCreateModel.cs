@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string Nationality { get; set; }
 
         /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部退税商户ID，商户在退税机构的ID，一键退税必填
         /// </summary>
         [XmlElement("out_merchant_id")]

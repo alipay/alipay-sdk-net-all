@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 登录号
+        /// 如果是ALIPAY_USER_ID，则传用户账号；如果是ALIPAY_LOGIN_ID，则传手机号
         /// </summary>
         [XmlElement("identity")]
         public string Identity { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 真实姓名
+        /// 如果账号类型是ALIPAY_LOGIN_ID，则必传用户真实姓名，进行信息校验
         /// </summary>
         [XmlElement("real_name")]
         public string RealName { get; set; }

@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayMerchantIndirectFiletaskSubmitResponse : AopResponse
     {
         /// <summary>
+        /// 数据文件任务提交后，为任务文件分配的编号
+        /// </summary>
+        [XmlElement("task_file_no")]
+        public string TaskFileNo { get; set; }
+
+        /// <summary>
         /// 文件任务处理结果
         /// </summary>
         [XmlElement("task_state")]

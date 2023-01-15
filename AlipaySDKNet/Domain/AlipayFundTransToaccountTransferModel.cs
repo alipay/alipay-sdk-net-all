@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string PayeeRealName { get; set; }
 
         /// <summary>
-        /// 收款方账户类型。可取值：  1、ALIPAY_USERID：支付宝账号对应的支付宝唯一用户号。以2088开头的16位纯数字组成。  2、ALIPAY_LOGONID：支付宝登录号，支持邮箱和手机号格式。
+        /// 收款方账户类型。可取值： 1、ALIPAY_USERID：支付宝账号对应的支付宝唯一用户号。以2088开头的16位纯数字组成。 2、ALIPAY_LOGONID：支付宝登录号，支持邮箱和手机号格式。 2、ALIPAY_OPENID：支付宝openid
         /// </summary>
         [XmlElement("payee_type")]
         public string PayeeType { get; set; }

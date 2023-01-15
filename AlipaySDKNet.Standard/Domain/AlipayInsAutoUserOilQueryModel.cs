@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayInsAutoUserOilQueryModel : AopObject
     {
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 车险开发分配，source+scene_type决定了返回的内容
         /// </summary>
         [XmlElement("scene_type")]

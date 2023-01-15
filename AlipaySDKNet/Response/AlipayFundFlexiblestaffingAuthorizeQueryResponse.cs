@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string PrincipalId { get; set; }
 
         /// <summary>
+        /// 授权主体的openId，当当前AppId支持openId时，返回openId，否则默认为空
+        /// </summary>
+        [XmlElement("principal_open_id")]
+        public string PrincipalOpenId { get; set; }
+
+        /// <summary>
         /// 灵工授权产品码
         /// </summary>
         [XmlElement("product_code")]

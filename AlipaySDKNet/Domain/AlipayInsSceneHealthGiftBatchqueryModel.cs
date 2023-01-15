@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// health_gift_batch_gain_sum_insured_list 健康险赠险待领取权益，目前包含待领取保额，准入 health_gift_batch_valid_gift_list 用户生效赠险查询结果 health_gift_batch_already_opened_list 健康险赠险险种是否已开通查询结果 health_gift_batch_my_sum_insured_list 健康险赠险用户总保额查询结果 health_send_flow_list 赠险发放流水列表 health_gain_flow_list 赠险领取流水列表 gained_sum_insured_by_source 赠险从某个source领取的保额
         /// </summary>
         [XmlArray("operation_list")]

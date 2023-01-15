@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public string AccountNo { get; set; }
 
         /// <summary>
+        /// OpenId是某个用户在某个应用下的唯一用户标识， 对于同一个用户，不同应用拿到的OpenId是不同的，而且对于同一个应用，不同用户的OpenId是唯一的
+        /// </summary>
+        [XmlElement("account_no_open_id")]
+        public string AccountNoOpenId { get; set; }
+
+        /// <summary>
         /// 收款方账户类型，枚举值有：  ALIPAY（支付宝）  MY_BANK（网商银行）  OUT_BANK（外部银行）
         /// </summary>
         [XmlElement("account_type")]
@@ -141,6 +147,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("need_sign_contract")]
         public bool NeedSignContract { get; set; }
+
+        /// <summary>
+        /// OpenId是某个用户在某个应用下的唯一用户标识， 对于同一个用户，不同应用拿到的OpenId是不同的，而且对于同一个应用，不同用户的OpenId是唯一的
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 客户签约的销售产品编码，由网商银行事先分配给外部机构

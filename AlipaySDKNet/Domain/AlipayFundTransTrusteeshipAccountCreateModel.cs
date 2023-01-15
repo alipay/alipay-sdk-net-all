@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AccountSceneCode { get; set; }
 
         /// <summary>
+        /// 支付宝用户openid
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝用户id
         /// </summary>
         [XmlElement("alipay_user_id")]

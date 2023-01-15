@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BrandName { get; set; }
 
         /// <summary>
+        /// 设备是否支持上报里程
+        /// </summary>
+        [XmlElement("can_report_riding_distance")]
+        public bool CanReportRidingDistance { get; set; }
+
+        /// <summary>
         /// 智能电动车名称
         /// </summary>
         [XmlElement("ebike_name")]

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string OpCode { get; set; }
 
         /// <summary>
+        /// 网关openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 场景的数据表示. json 数组格式，根据场景不同的模型传入不同参数，由支付宝负责提供参数集合
         /// </summary>
         [XmlElement("order_detail")]

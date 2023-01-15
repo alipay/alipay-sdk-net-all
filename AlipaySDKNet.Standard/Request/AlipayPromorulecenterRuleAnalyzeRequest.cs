@@ -15,6 +15,11 @@ namespace Aop.Api.Request
         public string BizId { get; set; }
 
         /// <summary>
+        /// 支付宝用户id
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 规则id
         /// </summary>
         public string RuleUuid { get; set; }
@@ -110,6 +115,7 @@ namespace Aop.Api.Request
         {
             AopDictionary parameters = new AopDictionary();
             parameters.Add("biz_id", this.BizId);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("rule_uuid", this.RuleUuid);
             parameters.Add("user_id", this.UserId);
             if(udfParams != null) 

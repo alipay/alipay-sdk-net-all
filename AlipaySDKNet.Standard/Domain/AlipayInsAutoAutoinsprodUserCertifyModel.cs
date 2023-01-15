@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AgentIdCardNo { get; set; }
 
         /// <summary>
+        /// 代理人用户唯一标识openId
+        /// </summary>
+        [XmlElement("agent_open_id")]
+        public string AgentOpenId { get; set; }
+
+        /// <summary>
         /// 代理人用户唯一标识
         /// </summary>
         [XmlElement("agent_user_id")]

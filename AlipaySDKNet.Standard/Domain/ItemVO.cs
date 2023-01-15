@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string Feature { get; set; }
 
         /// <summary>
+        /// 是否有价格：true-有价格，false-无价格
+        /// </summary>
+        [XmlElement("has_price")]
+        public bool HasPrice { get; set; }
+
+        /// <summary>
         /// 详情图url列表，不超过3个图片
         /// </summary>
         [XmlArray("image_list")]
@@ -54,7 +60,7 @@ namespace Aop.Api.Domain
         public string MainImage { get; set; }
 
         /// <summary>
-        /// 商品原价，分为单位
+        /// 商品原价，分为单位。has_price为true时才可能有值
         /// </summary>
         [XmlElement("original_price")]
         public string OriginalPrice { get; set; }
@@ -72,10 +78,16 @@ namespace Aop.Api.Domain
         public string PlatformItemId { get; set; }
 
         /// <summary>
-        /// 商品价格，分为单位
+        /// 商品价格，分为单位。has_price为true时才有值
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }
+
+        /// <summary>
+        /// 价格单元，在has_price为true时可设置。和商品价格、商品原价（数值的单位保持为分）配合使用，扩展单位描述。枚举值：元、元/小时、元/日、元/周、元/月、元/季、元/年、元/次、元/场、元起、m2。
+        /// </summary>
+        [XmlElement("price_unit")]
+        public string PriceUnit { get; set; }
 
         /// <summary>
         /// 商品详情页URL

@@ -89,6 +89,12 @@ namespace Aop.Api.Domain
         public string MiniCategoryIds { get; set; }
 
         /// <summary>
+        /// 小程序所属PID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 门头照图片地址，部分小程序类目需要提交，参照 <a href=‘https://opendocs.alipay.com/b/03al2m’>开放服务类目</a> 中是否需要营业执照信息，如果不填默认采用当前小程序门头照图片
         /// </summary>
         [XmlElement("out_door_pic")]

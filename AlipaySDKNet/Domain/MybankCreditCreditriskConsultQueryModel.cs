@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
+        /// OpenId是某个用户在某个应用下的唯一用户标识， 对于同一个用户，不同应用拿到的OpenId是不同的，而且对于同一个应用，不同用户的OpenId是唯一的
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 机构对商户的识别id
         /// </summary>
         [XmlElement("out_distinguish_id")]

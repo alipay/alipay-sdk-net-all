@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string LogTime { get; set; }
 
         /// <summary>
+        /// 加密userId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单id，一般只有下单/支付行为携带该字段，用于统计效果数据（订单数，gmv指标）、或者归因层面标注conversion数据是否重复
         /// </summary>
         [XmlElement("order_id")]

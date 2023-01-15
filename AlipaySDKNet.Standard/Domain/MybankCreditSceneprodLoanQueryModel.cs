@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AppSeqNo { get; set; }
 
         /// <summary>
+        /// 外部机构描述请求背景即可
+        /// </summary>
+        [XmlElement("ext_param")]
+        public string ExtParam { get; set; }
+
+        /// <summary>
         /// 机构编码，机构接入场景金融平台时分配，固定值
         /// </summary>
         [XmlElement("org_code")]

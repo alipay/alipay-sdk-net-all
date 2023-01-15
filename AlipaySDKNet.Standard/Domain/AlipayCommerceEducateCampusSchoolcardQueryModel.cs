@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
+        /// 学生支付宝账号： identity_type是ALIPAY_USER_ID填支付宝会员ID（2088开头）； 是ALIPAY_LOGON_ID 填支付宝登录号
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 学校内标，一般为2088开头的16位数字。支付宝分配，可直接咨询支付宝对接小二，也可通过开放平台接口查询
         /// </summary>
         [XmlElement("school_id")]

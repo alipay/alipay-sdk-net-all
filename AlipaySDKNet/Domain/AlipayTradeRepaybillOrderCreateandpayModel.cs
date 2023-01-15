@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string PassbackParams { get; set; }
 
         /// <summary>
+        /// 还款付款方对应的蚂蚁统一id
+        /// </summary>
+        [XmlElement("payer_open_id")]
+        public string PayerOpenId { get; set; }
+
+        /// <summary>
         /// 还款的付款uid
         /// </summary>
         [XmlElement("payer_user_id")]

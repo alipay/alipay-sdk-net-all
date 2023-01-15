@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ExtendParam { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 跨境游发现平台优惠id
         /// </summary>
         [XmlElement("travel_promotion_id")]

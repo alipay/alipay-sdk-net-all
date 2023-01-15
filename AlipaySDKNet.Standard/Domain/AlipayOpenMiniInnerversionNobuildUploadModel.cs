@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string BuildVersion { get; set; }
 
         /// <summary>
-        /// 已经构建过的amr包大小，单位是字节，主要是给自行构建的场景使用
+        /// 已经构建过的amr包大小，单位是字节，建议如实填写
         /// </summary>
         [XmlElement("builded_package_size")]
         public string BuildedPackageSize { get; set; }

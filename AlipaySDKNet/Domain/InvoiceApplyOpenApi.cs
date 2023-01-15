@@ -88,6 +88,12 @@ namespace Aop.Api.Domain
         public string ServiceMth { get; set; }
 
         /// <summary>
+        /// 外部单据来源系统标识和开票时一致
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
+
+        /// <summary>
         /// 税率
         /// </summary>
         [XmlElement("tax_rate")]

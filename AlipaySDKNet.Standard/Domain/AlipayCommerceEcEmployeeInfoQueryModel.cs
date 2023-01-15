@@ -20,5 +20,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
+
+        /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

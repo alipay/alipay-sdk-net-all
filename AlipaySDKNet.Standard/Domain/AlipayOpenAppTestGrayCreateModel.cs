@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public OpenidComplex ComplexParam { get; set; }
 
         /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("oid")]
+        public string Oid { get; set; }
+
+        /// <summary>
         /// xx
         /// </summary>
         [XmlElement("open_id")]

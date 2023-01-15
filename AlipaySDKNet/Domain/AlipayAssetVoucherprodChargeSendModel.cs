@@ -74,6 +74,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 用户userId
         /// </summary>
+        [XmlElement("publisher_open_id")]
+        public string PublisherOpenId { get; set; }
+
+        /// <summary>
+        /// 用户userId
+        /// </summary>
         [XmlElement("publisher_user_id")]
         public string PublisherUserId { get; set; }
     }

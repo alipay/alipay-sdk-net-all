@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayFundEnterprisepayQuotaruleSetModel : AopObject
     {
         /// <summary>
-        /// 企业签约账户ID
+        /// 企业签约共同账户ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -29,10 +29,16 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 用户ID，当操作类型=MEMBER 时必填
+        /// 成员支付宝ID，当操作类型=MEMBER时，member_id和open_id必填其一
         /// </summary>
         [XmlElement("member_id")]
         public string MemberId { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 操作类型： ACCOUNT-账户（支持单笔，月） MEMBER-成员（支持单笔，日，月，季度，年，终身累计，自定义周期，一次性额度）
@@ -47,7 +53,7 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 额度列表： 额度类型不可重复： 额度金额：单位为元，精确到分（整数或小数点后两位及以内的小数）；金额设置为-1表示无限制额度。
+        /// 额度列表： 额度类型不可重复。 额度金额：单位为元，精确到分（整数或小数点后两位及以内的小数）；金额设置为-1表示无限制额度（一次性额度不支持-1）。
         /// </summary>
         [XmlArray("quota_list")]
         [XmlArrayItem("joint_account_quota_d_t_o")]

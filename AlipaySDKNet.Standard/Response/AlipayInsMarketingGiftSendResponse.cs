@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string GiftProdCode { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 赠险产品保额发放列表
         /// </summary>
         [XmlArray("right_no_send_list")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Activate { get; set; }
 
         /// <summary>
+        /// 企业认证等级 10初级认证  30 高级认证
+        /// </summary>
+        [XmlElement("auth_level")]
+        public string AuthLevel { get; set; }
+
+        /// <summary>
         /// 认证状态  NO_AUTH：未认证 IN_AUTH：认证中 HAS_AUTH：已认证
         /// </summary>
         [XmlElement("auth_status")]

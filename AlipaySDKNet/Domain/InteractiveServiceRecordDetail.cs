@@ -59,6 +59,12 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
+        /// 交互时长，单位秒，如10秒
+        /// </summary>
+        [XmlElement("interact_duration")]
+        public long InteractDuration { get; set; }
+
+        /// <summary>
         /// 流程标签，代表调用或交互结果
         /// </summary>
         [XmlElement("interact_result")]

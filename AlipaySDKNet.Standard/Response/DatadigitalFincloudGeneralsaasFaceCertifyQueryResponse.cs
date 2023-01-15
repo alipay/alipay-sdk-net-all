@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string FailReason { get; set; }
 
         /// <summary>
-        /// 认证的主体信息，一般的认证场景返回为空
+        /// 刷脸用户的身份信息，目前返回为空
         /// </summary>
         [XmlElement("identity_info")]
         public string IdentityInfo { get; set; }

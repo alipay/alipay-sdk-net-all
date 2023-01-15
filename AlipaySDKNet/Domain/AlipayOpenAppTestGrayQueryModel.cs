@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CityId { get; set; }
 
         /// <summary>
+        /// 纬度
+        /// </summary>
+        [XmlElement("latitude")]
+        public string Latitude { get; set; }
+
+        /// <summary>
         /// 1
         /// </summary>
         [XmlElement("uid")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ChannelType { get; set; }
 
         /// <summary>
+        /// 已异步投递问券的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 问券Id
         /// </summary>
         [XmlElement("qstn_id")]

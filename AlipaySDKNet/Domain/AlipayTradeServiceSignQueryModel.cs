@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayTradeServiceSignQueryModel : AopObject
     {
         /// <summary>
+        /// 用户蚂蚁统一会员id
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 用户支付宝UID
         /// </summary>
         [XmlElement("alipay_user_id")]

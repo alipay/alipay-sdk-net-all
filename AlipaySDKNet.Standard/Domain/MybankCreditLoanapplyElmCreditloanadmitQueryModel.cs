@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class MybankCreditLoanapplyElmCreditloanadmitQueryModel : AopObject
     {
         /// <summary>
+        /// 站点的会员ID对应的open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 站点会员
         /// </summary>
         [XmlElement("site")]

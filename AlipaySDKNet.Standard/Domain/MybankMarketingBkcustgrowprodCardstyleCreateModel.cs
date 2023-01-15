@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public bool NeedLink { get; set; }
 
         /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// selected, 是否选中，不唯一，Boolean类型，不传默认为false
         /// </summary>
         [XmlElement("selected")]

@@ -40,16 +40,22 @@ namespace Aop.Api.Domain
         public InviteMemberBusinessParamsDTO BusinessParams { get; set; }
 
         /// <summary>
-        /// 成员账号： identity_type是ALIPAY_USER_ID填支付宝会员ID（2088开头）； 是ALIPAY_LOGON_ID 填支付宝登录号
+        /// 成员账号： identity_type是ALIPAY_USER_ID填支付宝会员ID（2088开头）； 是ALIPAY_LOGON_ID 填支付宝登录号； 是ALIPAY_OPEN_ID 填支付宝openId
         /// </summary>
         [XmlElement("identity")]
         public string Identity { get; set; }
 
         /// <summary>
-        /// 账号类型，目前支持如下类型： 1、ALIPAY_USER_ID 支付宝的会员ID 2、ALIPAY_LOGON_ID：支付宝登录号，支持邮箱和手机号格式
+        /// 账号类型，目前支持如下类型： 1、ALIPAY_USER_ID 支付宝的会员ID  2、ALIPAY_LOGON_ID：支付宝登录号，支持邮箱和手机号格式 3、ALIPAY_OPEN_ID：支付宝openId
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }
+
+        /// <summary>
+        /// 被邀请人的身份信息
+        /// </summary>
+        [XmlElement("identity_verified_info")]
+        public IdentityVerifiedInfoDTO IdentityVerifiedInfo { get; set; }
 
         /// <summary>
         /// 成员姓名，账号类型为ALIPAY_LOGON_ID时必填

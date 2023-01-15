@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 费控咨询模式，默认为0 0-支付宝内部计算 1-咨询外部服务商
+        /// </summary>
+        [XmlElement("consult_mode")]
+        public string ConsultMode { get; set; }
+
+        /// <summary>
         /// 制度生效结束时间，最小粒度为天，结束时间不早于起始时间，时分秒必须为23:59:59，最晚不超过2222-01-01 23:59:59
         /// </summary>
         [XmlElement("effective_end_date")]

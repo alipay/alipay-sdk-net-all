@@ -71,7 +71,7 @@ namespace Aop.Api.Domain
         public string DiscountAmount { get; set; }
 
         /// <summary>
-        /// 拓展信息
+        /// 扩展信息。回流的key值请提前联系支付宝侧人员配置，否则回流的key值不会被消费。
         /// </summary>
         [XmlArray("ext_info")]
         [XmlArrayItem("scenic_ext_info")]
@@ -156,7 +156,7 @@ namespace Aop.Api.Domain
         public string PlanCheckInDate { get; set; }
 
         /// <summary>
-        /// 房型信息
+        /// 房型信息，最大长度限制为10，超出部分不会被消费；房型信息下的出行人信息最大长度限制为10，超出部分不会被消费。
         /// </summary>
         [XmlArray("rooms")]
         [XmlArrayItem("room")]

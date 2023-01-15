@@ -57,7 +57,7 @@ namespace Aop.Api.Response
         public string RefreshToken { get; set; }
 
         /// <summary>
-        /// union_id是支付宝用户在开放平台的唯一标识符，在配置应用分组后会返回该值。 同一用户的union_id在同一分组内应用的union_id一致。
+        /// union_id是支付宝用户在开放平台的唯一标识符，在配置应用分组后会返回该值。 同一用户的union_id在同一分组内应用保持一致。
         /// </summary>
         [XmlElement("union_id")]
         public string UnionId { get; set; }

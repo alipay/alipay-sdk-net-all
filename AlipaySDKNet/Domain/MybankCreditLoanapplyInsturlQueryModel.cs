@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string OpPdCode { get; set; }
 
         /// <summary>
+        /// 机构内部客户的支付宝ID，当biz_type为Dsd时，cert_no +user_name或者user_id不能同时为null。作用：校验机构提供的用户和支付宝当前登录的用户为同一用户，即用户合法性校验。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 入驻的机构的渠道编号，由业务接口人来分配
         /// </summary>
         [XmlElement("org_channel_code")]

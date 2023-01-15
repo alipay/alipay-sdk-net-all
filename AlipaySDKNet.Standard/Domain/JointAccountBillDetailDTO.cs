@@ -46,10 +46,28 @@ namespace Aop.Api.Domain
         public string InOut { get; set; }
 
         /// <summary>
+        /// 共同账户消费的成员openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部交易单号，正向支付为外部交易单号，逆向退款是为外部退款单号
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
+
+        /// <summary>
+        /// 间连商户显示二级商户全名，直连、直付通则显示一级商户全名。企业商户该字段不脱敏，非企业商户该字段会脱敏
+        /// </summary>
+        [XmlElement("seller_full_name")]
+        public string SellerFullName { get; set; }
+
+        /// <summary>
+        /// 收款方登录号信息。间连商户显示二级商户的登录号信息；直连、直付通显示一级商户的登录号信息；该字段脱敏
+        /// </summary>
+        [XmlElement("seller_logon_id")]
+        public string SellerLogonId { get; set; }
 
         /// <summary>
         /// 账单标题

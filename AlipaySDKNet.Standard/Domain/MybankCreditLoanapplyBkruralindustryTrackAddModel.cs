@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
+        /// 用户的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 代表唯一的请求
         /// </summary>
         [XmlElement("request_id")]

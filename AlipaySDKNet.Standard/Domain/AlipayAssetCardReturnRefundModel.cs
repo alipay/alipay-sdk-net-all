@@ -53,6 +53,12 @@ namespace Aop.Api.Domain
         public string IsCancel { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 操作人id
         /// </summary>
         [XmlElement("operator")]

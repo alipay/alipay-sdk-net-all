@@ -28,10 +28,22 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 收款人的蚂蚁统一会员id
+        /// </summary>
+        [XmlElement("payee_open_id")]
+        public string PayeeOpenId { get; set; }
+
+        /// <summary>
         /// 收款者支付宝UID
         /// </summary>
         [XmlElement("payee_user_id")]
         public string PayeeUserId { get; set; }
+
+        /// <summary>
+        /// 付款人的蚂蚁统一会员id
+        /// </summary>
+        [XmlElement("payer_open_id")]
+        public string PayerOpenId { get; set; }
 
         /// <summary>
         /// 付款者支付宝UID

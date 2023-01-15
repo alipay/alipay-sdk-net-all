@@ -31,8 +31,20 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 被保人uid，被保人是当前用户则选择当前user_id
         /// </summary>
+        [XmlElement("insured_open_id")]
+        public string InsuredOpenId { get; set; }
+
+        /// <summary>
+        /// 被保人uid，被保人是当前用户则选择当前user_id
+        /// </summary>
         [XmlElement("insured_user_id")]
         public string InsuredUserId { get; set; }
+
+        /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 和申请人的关系类型，1本人

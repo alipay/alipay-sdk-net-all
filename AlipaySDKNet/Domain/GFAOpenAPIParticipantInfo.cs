@@ -34,6 +34,18 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
+        /// 3位。用于标识入参ip_role_id为UID或者PID
+        /// </summary>
+        [XmlElement("ip_role_id_type")]
+        public string IpRoleIdType { get; set; }
+
+        /// <summary>
+        /// 参与者角色id（如支付宝中的uid）
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 参与者扩展信息。Map<String, String> 类型 JSON 字符串
         /// </summary>
         [XmlElement("properties")]

@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceInstitutionDetailinfoQueryResponse : AopResponse
     {
         /// <summary>
+        /// 费控咨询模式 0-支付宝内部计算 1-咨询外部服务商
+        /// </summary>
+        [XmlElement("consult_mode")]
+        public string ConsultMode { get; set; }
+
+        /// <summary>
         /// 制度启用停用状态 0-停用，1-启用
         /// </summary>
         [XmlElement("effective")]

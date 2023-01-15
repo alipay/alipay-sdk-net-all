@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<string> CampBizTypeList { get; set; }
 
         /// <summary>
+        /// 用户id，当query_type为MERCHANT时生效，如果查询的优惠活动需要过用户规则，则用户id必须传入，目前只支持查询活动列表的场景;
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 查询类型，暂仅支持：MERCHANT(商户活动)。 如果不传递该参数或者指定参数值，出参只返回item_list，discount_list， 反之返回camp_num,camp_list。
         /// </summary>
         [XmlElement("query_type")]
@@ -30,7 +36,7 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
-        /// 用户id，当query_type为MERCHANT时生效，如果查询的优惠活动需要过用户规则，则用户id必须传入，目前只支持查询活动列表的场景
+        /// 用户id，当query_type为MERCHANT时生效，如果查询的优惠活动需要过用户规则，则用户id必须传入，目前只支持查询活动列表的场景;
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

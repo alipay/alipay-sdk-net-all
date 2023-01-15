@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Issuer { get; set; }
 
         /// <summary>
+        /// 用户身份识别值(identity)在应用(appId)下的唯一标识，当type为USER_ID且issuer为ALIPAY时使用，open_id不为空时，identity不能填空字符串
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用户识别ID的类型。  USRE_ID：用户id（支付宝或其他发行主体方中的用户id），BAR_CODE：付款码
         /// </summary>
         [XmlElement("type")]

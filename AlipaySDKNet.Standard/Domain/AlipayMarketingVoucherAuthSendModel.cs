@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayMarketingVoucherAuthSendModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务订单号，用于幂等控制
         /// </summary>
         [XmlElement("out_biz_no")]

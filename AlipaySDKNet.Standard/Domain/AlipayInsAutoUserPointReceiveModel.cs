@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ExtendInfo { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 比如某种业务标准外部订单号,比如交易外部订单号，代表商户端自己订单号
         /// </summary>
         [XmlElement("out_biz_no")]

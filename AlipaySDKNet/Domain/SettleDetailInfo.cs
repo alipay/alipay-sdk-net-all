@@ -10,7 +10,13 @@ namespace Aop.Api.Domain
     public class SettleDetailInfo : AopObject
     {
         /// <summary>
-        /// 结算的金额，单位为元。在创建订单和支付接口时必须和交易金额相同。在结算确认接口时必须等于交易金额减去已退款金额。
+        /// 仅在直付通账期模式场景下，单笔交易需要分多次发起部分确认结算时使用，表示本次确认结算的实际结算金额。传递本字段后，原amount字段不再生效，结算金额以本字段为准。
+        /// </summary>
+        [XmlElement("actual_amount")]
+        public string ActualAmount { get; set; }
+
+        /// <summary>
+        /// 结算的金额，单位为元。在创建订单和支付接口时必须和交易金额相同。在结算确认接口时必须等于交易金额减去已退款金额。直付通账期模式下，如使用部分结算能力、传递了actual_amount字段，则忽略本字段的校验、可不传。
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

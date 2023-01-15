@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string InstOrgId { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 股票工具的类型。每个机构提供的工具会有特定的类型名称。查询时也需要提供类型才可定位到用户是否已经订阅。
         /// </summary>
         [XmlElement("tool_type")]

@@ -68,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("phone")]
         public string Phone { get; set; }
+
+        /// <summary>
+        /// isv自定义的用户唯一标识
+        /// </summary>
+        [XmlElement("vid")]
+        public string Vid { get; set; }
     }
 }

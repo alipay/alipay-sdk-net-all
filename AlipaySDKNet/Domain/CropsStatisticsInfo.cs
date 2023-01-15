@@ -47,10 +47,22 @@ namespace Aop.Api.Domain
         public string GrowthGeneralAreaSum { get; set; }
 
         /// <summary>
+        /// 长势一般地块数
+        /// </summary>
+        [XmlElement("growth_general_plot_count")]
+        public long GrowthGeneralPlotCount { get; set; }
+
+        /// <summary>
         /// 长势较强面积
         /// </summary>
         [XmlElement("growth_stronger_area_sum")]
         public string GrowthStrongerAreaSum { get; set; }
+
+        /// <summary>
+        /// 长势较强地块数
+        /// </summary>
+        [XmlElement("growth_stronger_plot_count")]
+        public long GrowthStrongerPlotCount { get; set; }
 
         /// <summary>
         /// 长势极强面积
@@ -59,16 +71,34 @@ namespace Aop.Api.Domain
         public string GrowthStrongestAreaSum { get; set; }
 
         /// <summary>
+        /// 长势极强地块数
+        /// </summary>
+        [XmlElement("growth_strongest_plot_count")]
+        public long GrowthStrongestPlotCount { get; set; }
+
+        /// <summary>
         /// 长势较弱面积
         /// </summary>
         [XmlElement("growth_weaker_area_sum")]
         public string GrowthWeakerAreaSum { get; set; }
 
         /// <summary>
+        /// 长势较弱地块数
+        /// </summary>
+        [XmlElement("growth_weaker_plot_count")]
+        public long GrowthWeakerPlotCount { get; set; }
+
+        /// <summary>
         /// 长势极弱种植面积
         /// </summary>
         [XmlElement("growth_weakest_area_sum")]
         public string GrowthWeakestAreaSum { get; set; }
+
+        /// <summary>
+        /// 长势极弱地块数
+        /// </summary>
+        [XmlElement("growth_weakest_plot_count")]
+        public long GrowthWeakestPlotCount { get; set; }
 
         /// <summary>
         /// 收割进度值，单位0～1

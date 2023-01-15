@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DatadigitalFincloudGeneralsaasFaceCertifyInitializeModel : AopObject
     {
         /// <summary>
-        /// 认证场景码。入参支持的认证场景码和商户签约的认证场景相关。
+        /// H5人脸核身场景码。入参支持的场景码。
         /// </summary>
         [XmlElement("biz_code")]
         public string BizCode { get; set; }

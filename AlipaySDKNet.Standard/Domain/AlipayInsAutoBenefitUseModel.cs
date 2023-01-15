@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BenefitCode { get; set; }
 
         /// <summary>
+        /// 支付宝用户标识openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// ISV本次使用记录的业务单号，幂等字段
         /// </summary>
         [XmlElement("out_biz_no")]

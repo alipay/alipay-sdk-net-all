@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AccessChannel { get; set; }
 
         /// <summary>
+        /// 用户支付宝的统一身份id
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 用户的支付宝id
         /// </summary>
         [XmlElement("alipay_user_id")]

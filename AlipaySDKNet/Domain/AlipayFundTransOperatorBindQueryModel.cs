@@ -16,10 +16,22 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 企业支付宝主账号openid
+        /// </summary>
+        [XmlElement("master_open_id")]
+        public string MasterOpenId { get; set; }
+
+        /// <summary>
         /// 企业支付宝主账号
         /// </summary>
         [XmlElement("master_user_id")]
         public string MasterUserId { get; set; }
+
+        /// <summary>
+        /// 操作员支付宝账号openid
+        /// </summary>
+        [XmlElement("operator_open_id")]
+        public string OperatorOpenId { get; set; }
 
         /// <summary>
         /// 操作员支付宝账号

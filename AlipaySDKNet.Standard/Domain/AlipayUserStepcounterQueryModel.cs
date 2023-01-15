@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CountDate { get; set; }
 
         /// <summary>
+        /// OpenId是用户（UserId）在应用（AppId）下的唯一用户标识。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 请求方唯一标识。每一个外部商户都会分配一个业务方标识，请使用钉钉联系支付宝小二骁然获取此标识。
         /// </summary>
         [XmlElement("partner_id")]

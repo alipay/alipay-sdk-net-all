@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayTradeAccountFundcompositionQueryModel : AopObject
     {
         /// <summary>
+        /// 用户的蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 用户支付宝UID
         /// </summary>
         [XmlElement("alipay_user_id")]

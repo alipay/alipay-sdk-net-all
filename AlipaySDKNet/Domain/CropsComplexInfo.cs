@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public List<CropsPlantingInfo> PlantingInfo { get; set; }
 
         /// <summary>
+        /// 地块面积
+        /// </summary>
+        [XmlElement("plot_area")]
+        public string PlotArea { get; set; }
+
+        /// <summary>
         /// 区域编码
         /// </summary>
         [XmlElement("region_code")]

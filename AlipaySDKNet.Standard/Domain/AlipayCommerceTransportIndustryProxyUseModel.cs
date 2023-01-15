@@ -28,13 +28,19 @@ namespace Aop.Api.Domain
         public string IndustryScene { get; set; }
 
         /// <summary>
+        /// 网关open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支持商户接入此业务的系统服务商id
         /// </summary>
         [XmlElement("sys_service_provider_id")]
         public string SysServiceProviderId { get; set; }
 
         /// <summary>
-        /// 蚂蚁统一会员ID
+        /// 商户特殊用户ID|蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

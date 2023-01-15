@@ -11,10 +11,22 @@ namespace Aop.Api.Response
     public class AlipayMarketingVoucherQueryResponse : AopResponse
     {
         /// <summary>
+        /// 是否当前可以使用
+        /// </summary>
+        [XmlElement("available")]
+        public bool Available { get; set; }
+
+        /// <summary>
         /// 券余额(元)
         /// </summary>
         [XmlElement("available_amount")]
         public string AvailableAmount { get; set; }
+
+        /// <summary>
+        /// 可用次数
+        /// </summary>
+        [XmlElement("available_count")]
+        public long AvailableCount { get; set; }
 
         /// <summary>
         /// 券交易账单信息(核销交易信息、交易退款信息等可能存在多条)
@@ -34,6 +46,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("extend_info")]
         public string ExtendInfo { get; set; }
+
+        /// <summary>
+        /// 冻结金额
+        /// </summary>
+        [XmlElement("freeze_amount")]
+        public string FreezeAmount { get; set; }
 
         /// <summary>
         /// 券激活时间(券可以使用起始时间)
@@ -66,6 +84,12 @@ namespace Aop.Api.Response
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 回收金额
+        /// </summary>
+        [XmlElement("recycle_amount")]
+        public string RecycleAmount { get; set; }
+
+        /// <summary>
         /// 券状态。枚举值如下： ENABLED：可用； DISABLED：不可用； DELETE：删除状态； TRANS：发放中； TRANSFER：已转增； UNC：未领取； USED：已使用； USING：使用中； REFUNDED：已退款； REFUNDING：退款中； UNACTIVE：未激活； EXPIRED：已过期。
         /// </summary>
         [XmlElement("status")]
@@ -82,6 +106,24 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }
+
+        /// <summary>
+        /// 总次数
+        /// </summary>
+        [XmlElement("total_count")]
+        public long TotalCount { get; set; }
+
+        /// <summary>
+        /// 已转移金额
+        /// </summary>
+        [XmlElement("transfer_amount")]
+        public string TransferAmount { get; set; }
+
+        /// <summary>
+        /// 已使用次数
+        /// </summary>
+        [XmlElement("used_count")]
+        public long UsedCount { get; set; }
 
         /// <summary>
         /// 券所属用户ID

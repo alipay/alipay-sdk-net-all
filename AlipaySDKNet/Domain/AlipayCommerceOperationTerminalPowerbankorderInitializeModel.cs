@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AuthId { get; set; }
 
         /// <summary>
+        /// OpenId是用户（user_id）在应用（AppId）下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部订单编号，唯一标识一个商户预授权订单，商户维度下外部订单号唯一。
         /// </summary>
         [XmlElement("out_trade_id")]

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public long Oil { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 请求业务单号，单号一致的两次请求将保证幂等
         /// </summary>
         [XmlElement("request_id")]

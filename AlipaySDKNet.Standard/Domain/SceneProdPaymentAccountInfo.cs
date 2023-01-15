@@ -88,9 +88,21 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
+        /// 该笔账号涉及业务的贷款类型
+        /// </summary>
+        [XmlElement("loan_type")]
+        public string LoanType { get; set; }
+
+        /// <summary>
         /// 账单备注
         /// </summary>
         [XmlElement("payment_mark")]
         public string PaymentMark { get; set; }
+
+        /// <summary>
+        /// 涉及该账号的账号序号
+        /// </summary>
+        [XmlElement("seq_no")]
+        public string SeqNo { get; set; }
     }
 }

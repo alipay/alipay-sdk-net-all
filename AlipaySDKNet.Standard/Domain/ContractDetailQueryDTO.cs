@@ -276,6 +276,20 @@ namespace Aop.Api.Domain
         public long Number { get; set; }
 
         /// <summary>
+        /// 对方关联公司列表
+        /// </summary>
+        [XmlArray("other_relate_company_list")]
+        [XmlArrayItem("open_api_partner_d_t_o")]
+        public List<OpenApiPartnerDTO> OtherRelateCompanyList { get; set; }
+
+        /// <summary>
+        /// 我方关联公司列表
+        /// </summary>
+        [XmlArray("our_relate_company_list")]
+        [XmlArrayItem("open_api_partner_d_t_o")]
+        public List<OpenApiPartnerDTO> OurRelateCompanyList { get; set; }
+
+        /// <summary>
         /// 付款方
         /// </summary>
         [XmlElement("payer")]

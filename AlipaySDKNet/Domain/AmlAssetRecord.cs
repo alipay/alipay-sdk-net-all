@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 客户ID
         /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 客户ID
+        /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }
 

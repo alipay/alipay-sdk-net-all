@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string EndDate { get; set; }
 
         /// <summary>
+        /// 员工的openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 采用分页查询，本参数为空或0默认显示第一页。如果输入的值大于总页数，则支付宝返回最后一页数据
         /// </summary>
         [XmlElement("page_num")]

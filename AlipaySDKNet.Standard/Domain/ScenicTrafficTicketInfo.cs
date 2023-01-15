@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -28,10 +29,17 @@ namespace Aop.Api.Domain
         public string DestinationOuterScenicId { get; set; }
 
         /// <summary>
-        /// 扩展信息
+        /// 扩展信息【废弃】
         /// </summary>
         [XmlElement("ext_info")]
         public ScenicExtInfo ExtInfo { get; set; }
+
+        /// <summary>
+        /// 扩展信息。回流的key值请提前联系支付宝侧人员配置，否则回流的key值不会被消费
+        /// </summary>
+        [XmlArray("ext_infos")]
+        [XmlArrayItem("scenic_ext_info")]
+        public List<ScenicExtInfo> ExtInfos { get; set; }
 
         /// <summary>
         /// 乘客信息。

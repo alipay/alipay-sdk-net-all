@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public bool NeedRedirect { get; set; }
 
         /// <summary>
+        /// 支付宝用户ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务单号。用作幂等控制。同一个template_id、user_id、out_biz_no返回相同的发券码
         /// </summary>
         [XmlElement("out_biz_no")]

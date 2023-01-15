@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayMarketingExchangevoucherUseModel : AopObject
     {
         /// <summary>
+        /// 业务上下文
+        /// </summary>
+        [XmlElement("biz_context")]
+        public string BizContext { get; set; }
+
+        /// <summary>
+        /// 是否需要校验规则
+        /// </summary>
+        [XmlElement("need_rule_check")]
+        public bool NeedRuleCheck { get; set; }
+
+        /// <summary>
         /// 支付宝用户ID(映射的openId) ，必须保证待使用的券ID归属于该支付宝用户ID
         /// </summary>
         [XmlElement("open_id")]

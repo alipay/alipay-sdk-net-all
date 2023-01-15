@@ -257,6 +257,12 @@ namespace Aop.Api.Response
         public long EpHolderEqtyFrezRatio12M { get; set; }
 
         /// <summary>
+        /// 近12个月内企业股东股权冻结/强制转让总额占注册资本比例(%)
+        /// </summary>
+        [XmlElement("ep_holder_eqty_frez_ratio_12_m_new")]
+        public string EpHolderEqtyFrezRatio12MNew { get; set; }
+
+        /// <summary>
         /// 近12个月内企业股东出质股权总数额(万元/万股)
         /// </summary>
         [XmlElement("ep_holder_eqty_pledge_amt_12_m")]

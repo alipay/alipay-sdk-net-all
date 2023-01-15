@@ -31,6 +31,12 @@ namespace Aop.Api.Domain
         public List<string> ItemIdList { get; set; }
 
         /// <summary>
+        /// 加密userID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 当前页码，第一页是1
         /// </summary>
         [XmlElement("page_num")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AutoCampaignType { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 车险活动接入场景码。  例如，车险攒油活动接入场景码。  高德导航：gaode_use
         /// </summary>
         [XmlElement("scene_type")]

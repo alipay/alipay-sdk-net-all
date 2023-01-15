@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
+        /// 加密的userId
+        /// </summary>
+        [XmlElement("ip_role_open_id")]
+        public string IpRoleOpenId { get; set; }
+
+        /// <summary>
         /// 商品归属的小程序ID
         /// </summary>
         [XmlElement("mini_app_id")]
@@ -86,7 +92,7 @@ namespace Aop.Api.Domain
         public List<string> PromoPicUrlList { get; set; }
 
         /// <summary>
-        /// 数据类型
+        /// 门店零售商品的数据类型，如果是用门店零售商品，请传SHOP_GOODS，如果不传，默认为GOODS。有且仅有SHOP_GOODS类型的商品支持LBS。
         /// </summary>
         [XmlElement("row_type")]
         public string RowType { get; set; }

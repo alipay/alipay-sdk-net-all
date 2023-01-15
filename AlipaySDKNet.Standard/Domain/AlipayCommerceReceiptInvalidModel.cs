@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceReceiptInvalidModel : AopObject
     {
         /// <summary>
+        /// 支付宝用户openid
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝用户uid
         /// </summary>
         [XmlElement("alipay_uid")]

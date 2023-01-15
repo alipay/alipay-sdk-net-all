@@ -41,10 +41,17 @@ namespace Aop.Api.Domain
         public string DiscountAmount { get; set; }
 
         /// <summary>
-        /// 扩展信息
+        /// 扩展信息【废弃】
         /// </summary>
         [XmlElement("ext_info")]
         public ScenicExtInfo ExtInfo { get; set; }
+
+        /// <summary>
+        /// 扩展信息。回流的key值请提前联系支付宝侧人员配置，否则回流的key值不会被消费
+        /// </summary>
+        [XmlArray("ext_infos")]
+        [XmlArrayItem("scenic_ext_info")]
+        public List<ScenicExtInfo> ExtInfos { get; set; }
 
         /// <summary>
         /// open_id是用户（UserId）在应用（AppId）下的唯一用户标识
@@ -137,7 +144,7 @@ namespace Aop.Api.Domain
         public string RefundTime { get; set; }
 
         /// <summary>
-        /// 票务信息
+        /// 票务信息。 最大长度限制为10，超出部分不会被消费
         /// </summary>
         [XmlArray("ticket_info")]
         [XmlArrayItem("scenic_traffic_ticket_info")]

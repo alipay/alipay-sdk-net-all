@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public InsPerson Agent { get; set; }
 
         /// <summary>
+        /// 代理人openId
+        /// </summary>
+        [XmlElement("agent_open_id")]
+        public string AgentOpenId { get; set; }
+
+        /// <summary>
         /// 中介(经办)组织信息
         /// </summary>
         [XmlElement("agent_organization")]

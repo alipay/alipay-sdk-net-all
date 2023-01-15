@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZMGOOpenConfig : AopObject
     {
         /// <summary>
+        /// 开通页按钮文案描述;传入内容后开通页点击开通按钮展示文案会使用该字段传入内容
+        /// </summary>
+        [XmlElement("apply_button_desc")]
+        public string ApplyButtonDesc { get; set; }
+
+        /// <summary>
         /// 固定到期时间或每月的第几日。 （1）当period_mode为APPOINT_DATE时，取值固定日期，如"2022-06-01 00:00:00"，表示协议在6月1号0点到期; （2）当period_mode为FIX_DATE，取值"3"，表示协议在period_time个月后的3号到期。
         /// </summary>
         [XmlElement("appoint_date")]

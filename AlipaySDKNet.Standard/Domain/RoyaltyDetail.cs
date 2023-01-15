@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string State { get; set; }
 
         /// <summary>
-        /// 分账转入账号，只有在operation_type为replenish_refund(退补差)，transfer(分账)才返回该字段
+        /// 分账转入账号，只有在operation_type为replenish_refund(退补差)，transfer(分账)才返回该字段或trans_in_open_id。trans_in_open_id为分账转入方的openId，当trans_in_open_id不为空的时候，请优先使用trans_in_open_id。
         /// </summary>
         [XmlElement("trans_in")]
         public string TransIn { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string TransInType { get; set; }
 
         /// <summary>
-        /// 分账转出账号，只有在operation_type为replenish(补差),transfer_refund(退分账)类型才返回该字段
+        /// 分账转出账号，只有在operation_type为replenish(补差),transfer_refund(退分账)类型才返回该字段或trans_out_open_id字段。trans_out_open_id字段为分账转出方的openId，当trans_out_open_id 字段不为空时，请优先使用trans_out_open_id。
         /// </summary>
         [XmlElement("trans_out")]
         public string TransOut { get; set; }

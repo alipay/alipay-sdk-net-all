@@ -24,6 +24,24 @@ namespace Aop.Api.Response
         public string PreConsultId { get; set; }
 
         /// <summary>
+        /// 真实账号
+        /// </summary>
+        [XmlElement("real_alipay_account_id")]
+        public string RealAlipayAccountId { get; set; }
+
+        /// <summary>
+        /// 真实账号
+        /// </summary>
+        [XmlElement("real_alipay_open_id")]
+        public string RealAlipayOpenId { get; set; }
+
+        /// <summary>
+        /// 虚拟账号
+        /// </summary>
+        [XmlElement("virtual_alipay_open_id")]
+        public string VirtualAlipayOpenId { get; set; }
+
+        /// <summary>
         /// 虚拟账号
         /// </summary>
         [XmlElement("virtual_alipay_user_id")]

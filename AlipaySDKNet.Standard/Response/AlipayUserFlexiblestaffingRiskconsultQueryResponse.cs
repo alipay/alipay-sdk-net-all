@@ -23,7 +23,7 @@ namespace Aop.Api.Response
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// 咨询参与方信息
+        /// 【已废弃】咨询参与方信息，默认不返回
         /// </summary>
         [XmlElement("consult_party")]
         public ConsultParticipant ConsultParty { get; set; }

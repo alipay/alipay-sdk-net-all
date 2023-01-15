@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayFundEnterprisepayQuotaQueryResponse : AopResponse
     {
         /// <summary>
-        /// 额度信息列表
+        /// 额度详情信息列表
         /// </summary>
         [XmlArray("quota_list")]
         [XmlArrayItem("joint_account_quota_resp_d_t_o")]

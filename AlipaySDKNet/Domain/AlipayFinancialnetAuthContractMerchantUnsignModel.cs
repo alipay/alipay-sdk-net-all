@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFinancialnetAuthContractMerchantUnsignModel : AopObject
     {
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 场景码
         /// </summary>
         [XmlElement("scene_code")]

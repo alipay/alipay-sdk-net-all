@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 授权签约协议号
+        /// 授权签约协议号（仅使用account_id时必传）
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }

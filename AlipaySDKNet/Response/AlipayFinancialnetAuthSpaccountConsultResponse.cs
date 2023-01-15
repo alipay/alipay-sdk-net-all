@@ -43,5 +43,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("opened_account_user_id")]
         public string OpenedAccountUserId { get; set; }
+
+        /// <summary>
+        /// 已开专户的uid对应的openId
+        /// </summary>
+        [XmlElement("opened_account_user_open_id")]
+        public string OpenedAccountUserOpenId { get; set; }
     }
 }

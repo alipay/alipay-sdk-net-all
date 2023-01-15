@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 发送到的用户ID
         /// </summary>
+        [XmlElement("to_open_id")]
+        public string ToOpenId { get; set; }
+
+        /// <summary>
+        /// 发送到的用户ID
+        /// </summary>
         [XmlElement("to_user_id")]
         public string ToUserId { get; set; }
     }

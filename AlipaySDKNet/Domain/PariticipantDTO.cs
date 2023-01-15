@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }
+
+        /// <summary>
+        /// 参与方名称
+        /// </summary>
+        [XmlElement("name")]
+        public string Name { get; set; }
     }
 }

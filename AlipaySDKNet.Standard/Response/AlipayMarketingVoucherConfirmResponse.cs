@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public bool NeedRedirect { get; set; }
 
         /// <summary>
+        /// 支付宝用户ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务单号
         /// </summary>
         [XmlElement("out_biz_no")]

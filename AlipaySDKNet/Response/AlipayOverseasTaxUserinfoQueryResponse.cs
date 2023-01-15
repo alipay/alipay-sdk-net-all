@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string LogonId { get; set; }
 
         /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用户Id:蚂蚁统一会员ID,唯一
         /// </summary>
         [XmlElement("user_id")]

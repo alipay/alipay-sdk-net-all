@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public string AlipayAccountNo { get; set; }
 
         /// <summary>
+        /// 开设的支付宝账号open_id
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 开设的支付宝账号user_id
         /// </summary>
         [XmlElement("alipay_user_id")]

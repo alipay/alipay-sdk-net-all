@@ -31,6 +31,13 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 客户ID列表
         /// </summary>
+        [XmlArray("open_ids")]
+        [XmlArrayItem("string")]
+        public List<string> OpenIds { get; set; }
+
+        /// <summary>
+        /// 客户ID列表
+        /// </summary>
         [XmlArray("uids")]
         [XmlArrayItem("string")]
         public List<string> Uids { get; set; }

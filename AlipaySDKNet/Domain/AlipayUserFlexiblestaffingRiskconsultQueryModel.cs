@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string EnterpriseName { get; set; }
 
         /// <summary>
-        /// 转账的外部单号，如果是转账过程中的咨询结果查询，可以传入外部单号； 否则可以不传。
+        /// 咨询或者转账的外部单号，新逻辑幂等，外部单号必传
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

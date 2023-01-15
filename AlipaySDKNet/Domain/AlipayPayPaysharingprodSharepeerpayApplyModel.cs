@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AlipayTradeNo { get; set; }
 
         /// <summary>
+        /// 代付申请人
+        /// </summary>
+        [XmlElement("applyer_open_id")]
+        public string ApplyerOpenId { get; set; }
+
+        /// <summary>
         /// 如果没有传入alipay_user_id，该external_user_token需要传入用于申请人用户发现
         /// </summary>
         [XmlElement("external_user_token")]

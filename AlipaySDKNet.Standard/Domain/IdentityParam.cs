@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
+        /// 用户openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用户id
         /// </summary>
         [XmlElement("user_id")]

@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string CurrentPrice { get; set; }
 
         /// <summary>
+        /// 非负数。保留两位小数。币种默认CNY。
+        /// </summary>
+        [XmlElement("deposit_amount")]
+        public string DepositAmount { get; set; }
+
+        /// <summary>
         /// 商品图片数量
         /// </summary>
         [XmlElement("detail_pic_num")]
@@ -64,6 +70,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("detail_url")]
         public string DetailUrl { get; set; }
+
+        /// <summary>
+        /// 未定义在标准字段内的字段，可以通过扩展json字段进行同步
+        /// </summary>
+        [XmlElement("ext_json")]
+        public string ExtJson { get; set; }
+
+        /// <summary>
+        /// 租赁商品的新日描述
+        /// </summary>
+        [XmlElement("fresh_degree")]
+        public string FreshDegree { get; set; }
+
+        /// <summary>
+        /// 用户在小程序前端感知的类目值
+        /// </summary>
+        [XmlElement("front_end_category")]
+        public string FrontEndCategory { get; set; }
 
         /// <summary>
         /// 物品的唯一id
@@ -110,16 +134,52 @@ namespace Aop.Api.Domain
         public string Rating { get; set; }
 
         /// <summary>
+        /// 商品最小租赁天数
+        /// </summary>
+        [XmlElement("rental_date")]
+        public string RentalDate { get; set; }
+
+        /// <summary>
+        /// 商品是否支持租满即送
+        /// </summary>
+        [XmlElement("rental_free")]
+        public string RentalFree { get; set; }
+
+        /// <summary>
         /// 物品类型
         /// </summary>
         [XmlElement("row_type")]
         public string RowType { get; set; }
 
         /// <summary>
+        /// 商品支持自提：1：支持 2：不支持 3：满足条件支持
+        /// </summary>
+        [XmlElement("self_pickup")]
+        public string SelfPickup { get; set; }
+
+        /// <summary>
+        /// 百分比，值范国0.00%-100.00%，保留两位小数
+        /// </summary>
+        [XmlElement("shipment_rate")]
+        public string ShipmentRate { get; set; }
+
+        /// <summary>
+        /// 商品支持的发货城市列表
+        /// </summary>
+        [XmlElement("shipments")]
+        public string Shipments { get; set; }
+
+        /// <summary>
         /// 商品所属店铺id（如有）
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }
+
+        /// <summary>
+        /// 商品所在店铺对应的店铺名称
+        /// </summary>
+        [XmlElement("shop_name")]
+        public string ShopName { get; set; }
 
         /// <summary>
         /// spu维度的id
@@ -138,6 +198,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("stock_num")]
         public long StockNum { get; set; }
+
+        /// <summary>
+        /// 非负数，保留两位小数，值范国0.00-5.00分
+        /// </summary>
+        [XmlElement("store_rating")]
+        public string StoreRating { get; set; }
 
         /// <summary>
         /// 商品标签，如首页展示标签“特惠”，“热卖”,或详情页“满50包邮”,“假一赔三”等。多值示例：“特惠,热卖"

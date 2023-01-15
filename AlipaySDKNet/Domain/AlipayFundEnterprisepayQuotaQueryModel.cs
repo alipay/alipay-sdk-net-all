@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 用户ID，当操作类型=MEMBER 时必填
+        /// 用户支付宝ID，当操作类型=MEMBER时， member_id和open_id必填其一
         /// </summary>
         [XmlElement("member_id")]
         public string MemberId { get; set; }

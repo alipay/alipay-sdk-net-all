@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string MerchantUserId { get; set; }
 
         /// <summary>
+        /// OpenId是用户在应用（AppId）下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 所需查询的订单来源    取值范围：  ALL-全部订单来源（默认值）  TINY_APP-来自小程序的订单
         /// </summary>
         [XmlElement("order_source")]

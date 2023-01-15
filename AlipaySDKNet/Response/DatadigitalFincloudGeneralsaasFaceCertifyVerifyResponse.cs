@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class DatadigitalFincloudGeneralsaasFaceCertifyVerifyResponse : AopResponse
     {
         /// <summary>
-        /// 返回用于唤起认证页面的认证url
+        /// 返回用于唤起刷脸页面的url
         /// </summary>
         [XmlElement("certify_url")]
         public string CertifyUrl { get; set; }

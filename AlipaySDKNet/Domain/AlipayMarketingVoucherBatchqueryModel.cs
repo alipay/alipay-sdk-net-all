@@ -56,6 +56,12 @@ namespace Aop.Api.Domain
         public List<string> ProductCodes { get; set; }
 
         /// <summary>
+        /// 查询排序类型，可选（drawTime：券领取时间，startTime：券开始使用时间）
+        /// </summary>
+        [XmlElement("sort_type")]
+        public string SortType { get; set; }
+
+        /// <summary>
         /// ENABLED查询可用券
         /// </summary>
         [XmlArray("status_list")]

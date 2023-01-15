@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AntfortuneStockStocktoolDeliverQueryResponse : AopResponse
     {
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 展位准入列表
         /// </summary>
         [XmlArray("position_list")]

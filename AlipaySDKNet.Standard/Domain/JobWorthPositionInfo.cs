@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string Age { get; set; }
 
         /// <summary>
-        /// 福利，现有标签，最多5个标签，使用英文,分割
+        /// 福利，现有标签，最多5个标签，使用英文,分割 参考 https://www.yuque.com/docs/share/805e9840-ae9d-499c-b566-46b3b8c9fb2d?# 《4.1 服务端接入----职位传入接口》的1.3.1.1
         /// </summary>
         [XmlElement("benefit")]
         public string Benefit { get; set; }
 
         /// <summary>
-        /// 技能、证书等要求，比如学历、健康证、普通话或其他技能证书等,参考https://www.yuque.com/wx3dkp/gwckr4/bs03t3
+        /// 技能、证书等要求，比如学历、健康证、普通话或其他技能证书等
         /// </summary>
         [XmlElement("certifications")]
         public string Certifications { get; set; }
@@ -32,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("company_certificate")]
         public string CompanyCertificate { get; set; }
+
+        /// <summary>
+        /// 上传的aftsid
+        /// </summary>
+        [XmlElement("company_logo_afts_id")]
+        public string CompanyLogoAftsId { get; set; }
 
         /// <summary>
         /// 企业工商全称
@@ -58,7 +64,7 @@ namespace Aop.Api.Domain
         public string Gender { get; set; }
 
         /// <summary>
-        /// 合作方jobId
+        /// 合作方岗位id自定义保持唯一性
         /// </summary>
         [XmlElement("ka_position_id")]
         public string KaPositionId { get; set; }
@@ -70,13 +76,13 @@ namespace Aop.Api.Domain
         public string PositionDesc { get; set; }
 
         /// <summary>
-        /// 工作证岗位库的职位主键，只有更新职位信息时需要传入
+        /// 工作证岗位库的职位主键，只有更新职位信息时需要传入。第一次传入岗位后返回
         /// </summary>
         [XmlElement("position_id")]
         public string PositionId { get; set; }
 
         /// <summary>
-        /// 岗位对应的行业id，字段参考https://www.yuque.com/wx3dkp/gwckr4/bs03t3
+        /// 岗位对应的行业id，字段参考https://www.yuque.com/docs/share/805e9840-ae9d-499c-b566-46b3b8c9fb2d?# 《4.1 服务端接入----职位传入接口》的1.3.1.2
         /// </summary>
         [XmlElement("position_job_id")]
         public string PositionJobId { get; set; }
@@ -88,7 +94,7 @@ namespace Aop.Api.Domain
         public string PositionJobName { get; set; }
 
         /// <summary>
-        /// 岗位对应的职业id，字段参考https://www.yuque.com/wx3dkp/gwckr4/bs03t3
+        /// 岗位对应的职业id，字段参考https://www.yuque.com/docs/share/805e9840-ae9d-499c-b566-46b3b8c9fb2d?# 《4.1 服务端接入----职位传入接口》的1.3.1.2
         /// </summary>
         [XmlElement("position_profession_id")]
         public string PositionProfessionId { get; set; }
@@ -148,7 +154,7 @@ namespace Aop.Api.Domain
         public string SkipUrl { get; set; }
 
         /// <summary>
-        /// 高德city code，例：北京010，线上工作9999
+        /// 高德city code，例：北京010，线上工作9999 参考https://www.yuque.com/docs/share/805e9840-ae9d-499c-b566-46b3b8c9fb2d?# 《4.1 服务端接入----职位传入接口》的1.3.1.3
         /// </summary>
         [XmlElement("work_city")]
         public string WorkCity { get; set; }
@@ -160,7 +166,7 @@ namespace Aop.Api.Domain
         public string WorkLongitude { get; set; }
 
         /// <summary>
-        /// 工作地所在的区县,使用高德的adcode，例：朝阳区110105
+        /// 工作地所在的区县,使用高德的adcode，例：朝阳区110105 参考https://www.yuque.com/docs/share/805e9840-ae9d-499c-b566-46b3b8c9fb2d?# 《4.1 服务端接入----职位传入接口》的1.3.1.2
         /// </summary>
         [XmlElement("work_region")]
         public string WorkRegion { get; set; }

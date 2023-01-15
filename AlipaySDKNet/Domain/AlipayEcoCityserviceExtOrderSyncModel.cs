@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayEcoCityserviceExtOrderSyncModel : AopObject
     {
         /// <summary>
+        /// 当回流的订单需要根据在光华平台录入的服务相关信息进行分佣的时候，需要传入在光华平台录入的服务的appCode 字段
+        /// </summary>
+        [XmlElement("app_code")]
+        public string AppCode { get; set; }
+
+        /// <summary>
         /// appid，订单归属的小程序id，当order_type=1时 必填
         /// </summary>
         [XmlElement("appid")]
@@ -22,7 +28,7 @@ namespace Aop.Api.Domain
         public string Body { get; set; }
 
         /// <summary>
-        /// buyer_id，订单买家的支付宝uid，当order_type=1时 必填。buyer_id不可以和商户pid一样。
+        /// buyer_id，服务用户的uid
         /// </summary>
         [XmlElement("buyer_id")]
         public string BuyerId { get; set; }
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("gmt_service")]
         public string GmtService { get; set; }
+
+        /// <summary>
+        /// open_id，订单买家的支付宝open_id，当order_type=1时 必填。open_id映射到的uid不可以和商户pid一样。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// order_type，必填字段，枚举可数。枚举值 '1' 代表正向收费订单，'2' 代表逆向退费订单，由调用方根据业务数据填写。

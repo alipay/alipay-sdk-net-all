@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Ftoken { get; set; }
 
         /// <summary>
+        /// 支付宝账户openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝账户uid
         /// </summary>
         [XmlElement("uid")]

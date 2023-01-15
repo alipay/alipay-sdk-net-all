@@ -92,6 +92,12 @@ namespace Aop.Api.Domain
         public string MerchantUserId { get; set; }
 
         /// <summary>
+        /// OpenId是用户在应用（AppId）下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 支付宝小程序订单详情地址链接
         /// </summary>
         [XmlElement("order_detail_link_page")]

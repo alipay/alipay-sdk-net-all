@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public long GrowthStrength { get; set; }
 
         /// <summary>
+        /// 是否有墒情/长势/气候等风险
+        /// </summary>
+        [XmlElement("is_certain_risk")]
+        public bool IsCertainRisk { get; set; }
+
+        /// <summary>
         /// 长势是否预警条件搜索
         /// </summary>
         [XmlElement("is_growth_warn")]
