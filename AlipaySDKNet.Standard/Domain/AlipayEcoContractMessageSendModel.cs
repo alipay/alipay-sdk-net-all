@@ -48,6 +48,13 @@ namespace Aop.Api.Domain
         public string MsgTemplateId { get; set; }
 
         /// <summary>
+        /// 支付宝账号openId,数组关联多个支付宝账号 （如果未注册支付宝账号 则为空）
+        /// </summary>
+        [XmlArray("open_ids")]
+        [XmlArrayItem("string")]
+        public List<string> OpenIds { get; set; }
+
+        /// <summary>
         /// 签署平台的代码
         /// </summary>
         [XmlElement("sign_platform_code")]

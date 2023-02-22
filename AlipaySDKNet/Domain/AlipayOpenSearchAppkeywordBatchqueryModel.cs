@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
+        /// 关键词的状态，枚举值，不传该字段表示查询所有状态
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
+
+        /// <summary>
         /// 小程序id
         /// </summary>
         [XmlElement("target_appid")]

@@ -90,6 +90,12 @@ namespace Aop.Api.Response
         public List<MiniAppPluginInfo> PluginRefs { get; set; }
 
         /// <summary>
+        /// 流程id
+        /// </summary>
+        [XmlElement("process_task_id")]
+        public string ProcessTaskId { get; set; }
+
+        /// <summary>
         /// 审核失败原因
         /// </summary>
         [XmlElement("reject_reason")]

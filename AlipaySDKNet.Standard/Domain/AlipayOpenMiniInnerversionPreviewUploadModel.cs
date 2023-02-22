@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BuildJsPermission { get; set; }
 
         /// <summary>
-        /// 构建参数-IDE 构建好的包地址
+        /// 构建参数-IDE 构建好的包地址，如果是免加签场景该字段对应的是加签后的包地址
         /// </summary>
         [XmlElement("build_pkg_url")]
         public string BuildPkgUrl { get; set; }
@@ -27,6 +27,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("build_plugin_url")]
         public string BuildPluginUrl { get; set; }
+
+        /// <summary>
+        /// 包大小,免加签场景这里指加签包大小
+        /// </summary>
+        [XmlElement("builded_package_size")]
+        public long BuildedPackageSize { get; set; }
+
+        /// <summary>
+        /// 构建好的插件包大小，对应免加签场景是加签后的包地址大小
+        /// </summary>
+        [XmlElement("builded_plugin_size")]
+        public long BuildedPluginSize { get; set; }
 
         /// <summary>
         /// 一个端的标识，用于区分不同的客户端，每接入一个客户端，都需要向小程序应用中心申请bundelId入驻
@@ -59,7 +71,7 @@ namespace Aop.Api.Domain
         public string MiniAppId { get; set; }
 
         /// <summary>
-        /// 构建参数-IDE 构建好的appx2.0包地址
+        /// 构建参数-IDE 构建好的appx2.0包地址，如果是免加签场景该字段对应的是加签后的包地址
         /// </summary>
         [XmlElement("new_build_pkg_url")]
         public string NewBuildPkgUrl { get; set; }
@@ -69,6 +81,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("new_build_plugin_url")]
         public string NewBuildPluginUrl { get; set; }
+
+        /// <summary>
+        /// 包大小,免加签场景这里指加签包大小
+        /// </summary>
+        [XmlElement("new_builded_package_size")]
+        public long NewBuildedPackageSize { get; set; }
+
+        /// <summary>
+        /// appx2.0构建好的插件包大小,免加签场景是加签后的包大小
+        /// </summary>
+        [XmlElement("new_builded_plugin_size")]
+        public long NewBuildedPluginSize { get; set; }
+
+        /// <summary>
+        /// 是否免加签，当true的时候代表不需要加签即传过来的包地址是加签好的地址
+        /// </summary>
+        [XmlElement("no_sign")]
+        public bool NoSign { get; set; }
 
         /// <summary>
         /// 小程序代码中引用的插件列表，包含插件id和插件版本信息

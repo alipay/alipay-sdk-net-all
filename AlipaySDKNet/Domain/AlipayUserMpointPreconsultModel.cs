@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
+        /// 用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 目标操作的积分数
         /// </summary>
         [XmlElement("point")]

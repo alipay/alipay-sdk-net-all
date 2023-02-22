@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string LoginId { get; set; }
 
         /// <summary>
+        /// open_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID：支付宝用户唯一标识。该参数用于已知支付宝账号的活动触发。user_id、login_id两个参数至少有一个非空。
         /// </summary>
         [XmlElement("user_id")]

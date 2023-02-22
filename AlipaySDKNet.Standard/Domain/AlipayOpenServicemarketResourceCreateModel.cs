@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string ExecutionTimeStart { get; set; }
 
         /// <summary>
+        /// 描述
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 资源上报接口,订单消息里面的商品code
         /// </summary>
         [XmlElement("outer_code")]

@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 本方卡号（对应用户userid），即16位的2088开头的支付宝uid。
         /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 本方卡号（对应用户userid），即16位的2088开头的支付宝uid。
+        /// </summary>
         [XmlElement("owner_card_no")]
         public string OwnerCardNo { get; set; }
     }

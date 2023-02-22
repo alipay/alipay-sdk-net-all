@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -36,8 +37,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 风险咨询结果集
         /// </summary>
-        [XmlElement("risk_results")]
-        public RiskApplyConsult RiskResults { get; set; }
+        [XmlArray("risk_results")]
+        [XmlArrayItem("risk_apply_consult")]
+        public List<RiskApplyConsult> RiskResults { get; set; }
 
         /// <summary>
         /// 建议风险等级

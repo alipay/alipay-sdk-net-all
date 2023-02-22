@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("userid")]
         public string Userid { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("xixihha")]
+        public string Xixihha { get; set; }
     }
 }

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
+        /// 商户统一会员ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 操作类型
         /// </summary>
         [XmlElement("option_type")]

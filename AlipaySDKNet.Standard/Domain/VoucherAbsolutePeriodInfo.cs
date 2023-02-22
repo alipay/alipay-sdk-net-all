@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class VoucherAbsolutePeriodInfo : AopObject
     {
         /// <summary>
+        /// 核销时间限制
+        /// </summary>
+        [XmlElement("time_restrict_info")]
+        public TimeRestrictInfo TimeRestrictInfo { get; set; }
+
+        /// <summary>
         /// 券可使用的开始时间。 格式为：yyyy-MM-dd HH:mm:ss。
         /// </summary>
         [XmlElement("valid_begin_time")]

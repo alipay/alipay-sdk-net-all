@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string Identity { get; set; }
 
         /// <summary>
-        /// 参与方的标识类型，默认必输。值为有限枚举，用于指定identity字段类型，如提供，参与方的唯一标识（identity)也不能为空，目前支持如下类型： 1.ALIPAY_ACCOUNT_NO（支付宝账号） 2.ALIPAY_USER_ID（支付宝ID）
+        /// 参与方的标识类型，默认必输。值为有限枚举，用于指定identity字段类型，如提供，参与方的唯一标识（identity)也不能为空，目前支持如下类型： 1.ALIPAY_ACCOUNT_NO（支付宝账号） 2.ALIPAY_USER_ID（支付宝ID） 3.ALIPAY_OPEN_ID（支付宝用户的OPENID）
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }

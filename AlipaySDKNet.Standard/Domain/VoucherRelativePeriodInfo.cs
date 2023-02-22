@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class VoucherRelativePeriodInfo : AopObject
     {
         /// <summary>
+        /// 核销时间限制
+        /// </summary>
+        [XmlElement("time_restrict_info")]
+        public TimeRestrictInfo TimeRestrictInfo { get; set; }
+
+        /// <summary>
         /// 券生效后 N 天内可以使用。 可以配合wait_days_after_receive 字段使用。
         /// </summary>
         [XmlElement("valid_days_after_receive")]

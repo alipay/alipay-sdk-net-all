@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 商户ID
         /// </summary>
+        [XmlElement("pid")]
+        public string Pid { get; set; }
+
+        /// <summary>
+        /// 商户ID
+        /// </summary>
         [XmlElement("role_id")]
         public string RoleId { get; set; }
 

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string MerchantName { get; set; }
 
         /// <summary>
+        /// 商户ID
+        /// </summary>
+        [XmlElement("pid")]
+        public string Pid { get; set; }
+
+        /// <summary>
         /// 商户角色ID
         /// </summary>
         [XmlElement("role_id")]

@@ -15,6 +15,11 @@ namespace Aop.Api.Request
         public string Arguments { get; set; }
 
         /// <summary>
+        /// 支付宝openId，用于支付宝用户在当前应用下的用户标识。
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 收件人邮箱地址
         /// </summary>
         public string Receiver { get; set; }
@@ -120,6 +125,7 @@ namespace Aop.Api.Request
         {
             AopDictionary parameters = new AopDictionary();
             parameters.Add("arguments", this.Arguments);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("receiver", this.Receiver);
             parameters.Add("service_code", this.ServiceCode);
             parameters.Add("subject", this.Subject);

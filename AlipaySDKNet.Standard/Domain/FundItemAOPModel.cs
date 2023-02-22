@@ -190,6 +190,12 @@ namespace Aop.Api.Domain
         public string FundToolOwnerCardNo { get; set; }
 
         /// <summary>
+        /// fundToolBelongToCROwner为false时，该字段记录资金工具的实际拥有者
+        /// </summary>
+        [XmlElement("fund_tool_owner_open_id")]
+        public string FundToolOwnerOpenId { get; set; }
+
+        /// <summary>
         /// 面向用户的资金工具类型
         /// </summary>
         [XmlElement("fund_tool_type_for_crowner")]
@@ -232,10 +238,22 @@ namespace Aop.Api.Domain
         public string OppositeBizCardNo { get; set; }
 
         /// <summary>
+        /// 导致该资金变动在业务上的另一方的卡别名。
+        /// </summary>
+        [XmlElement("opposite_biz_open_id")]
+        public string OppositeBizOpenId { get; set; }
+
+        /// <summary>
         /// 导致该资金变动在资金上的另一方的卡别名。
         /// </summary>
         [XmlElement("opposite_fund_card_no")]
         public string OppositeFundCardNo { get; set; }
+
+        /// <summary>
+        /// 导致该资金变动在资金上的另一方的卡别名。
+        /// </summary>
+        [XmlElement("opposite_fund_open_id")]
+        public string OppositeFundOpenId { get; set; }
 
         /// <summary>
         /// 外部请求号
@@ -248,6 +266,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("owner_card_no")]
         public string OwnerCardNo { get; set; }
+
+        /// <summary>
+        /// 本方卡号
+        /// </summary>
+        [XmlElement("owner_open_id")]
+        public string OwnerOpenId { get; set; }
 
         /// <summary>
         /// 银行卡退款进度状态

@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string BuyerOrderRefundExchangeRate { get; set; }
 
         /// <summary>
+        /// 买家标签数据
+        /// </summary>
+        [XmlElement("buyer_tag_data")]
+        public string BuyerTagData { get; set; }
+
+        /// <summary>
         /// 身份证号
         /// </summary>
         [XmlElement("id_card_no")]

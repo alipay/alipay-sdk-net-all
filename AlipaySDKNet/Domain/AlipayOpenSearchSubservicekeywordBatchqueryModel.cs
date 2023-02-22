@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 审核状态，服务关键词的审核状态，枚举值
+        /// 审核状态，服务关键词的审核状态，枚举值，不传该字段表示查询所有状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

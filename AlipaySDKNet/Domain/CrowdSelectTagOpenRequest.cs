@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -12,7 +13,8 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 圈选标签值
         /// </summary>
-        [XmlElement("select_tag_values")]
-        public CrowdSelectTagValuesOpenRequest SelectTagValues { get; set; }
+        [XmlArray("select_tag_values")]
+        [XmlArrayItem("crowd_select_tag_values_open_request")]
+        public List<CrowdSelectTagValuesOpenRequest> SelectTagValues { get; set; }
     }
 }

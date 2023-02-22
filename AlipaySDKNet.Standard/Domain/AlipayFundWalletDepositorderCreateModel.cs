@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ExpandAmount { get; set; }
 
         /// <summary>
-        /// 标题
+        /// 会展示在用户个人消费记录备注，默认为专属钱包充值
         /// </summary>
         [XmlElement("order_title")]
         public string OrderTitle { get; set; }
@@ -52,13 +52,19 @@ namespace Aop.Api.Domain
         public ParticipantForm PayeeInfo { get; set; }
 
         /// <summary>
+        /// 如何是app充值使用mobile 如果是pc充值使用PC
+        /// </summary>
+        [XmlElement("platform")]
+        public string Platform { get; set; }
+
+        /// <summary>
         /// 销售产品码
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 备注
+        /// 会展示在用户个人消费记录备注，默认为专属钱包充值
         /// </summary>
         [XmlElement("remark")]
         public string Remark { get; set; }

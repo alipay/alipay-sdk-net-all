@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string RelationType { get; set; }
 
         /// <summary>
-        /// 数据日期，格式yyyyMMdd，非必填。由于数据每天可能有变化，可以指定数据对应的日期，指定后可以查询日期对应的数据计算结果，不填默认返回前一天的数据
+        /// 数据日期，格式yyyyMMdd，非必填。由于数据每天可能有变化，可以指定数据对应的日期，指定后可以查询日期对应的数据计算结果，不填默认返回前一天的数据。
         /// </summary>
         [XmlElement("report_date")]
         public string ReportDate { get; set; }

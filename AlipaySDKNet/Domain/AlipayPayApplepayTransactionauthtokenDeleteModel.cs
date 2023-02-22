@@ -40,5 +40,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reference_identifier")]
         public string ReferenceIdentifier { get; set; }
+
+        /// <summary>
+        /// uid
+        /// </summary>
+        [XmlElement("reference_open_id")]
+        public string ReferenceOpenId { get; set; }
     }
 }

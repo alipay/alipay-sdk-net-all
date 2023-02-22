@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string BizStateDesc { get; set; }
 
         /// <summary>
-        /// 账单金额，单位分
+        /// 账单金额，单位元
         /// </summary>
         [XmlElement("consume_fee")]
         public string ConsumeFee { get; set; }
@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_order_no")]
         public string MerchantOrderNo { get; set; }
+
+        /// <summary>
+        /// 本方卡号
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 对方展示logo

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string BusinessPid { get; set; }
 
         /// <summary>
-        /// 业务类型ONLINE_PAY(在线缴费) 、AGREEMENT_PAY(无感停车)
+        /// 业务类型ONLINE_PAY(在线缴费) 、AGREEMENT_PAY(无感停车) DEVICE_ONLINE_PAY(车机在线缴费)
         /// </summary>
         [XmlElement("business_type")]
         public string BusinessType { get; set; }

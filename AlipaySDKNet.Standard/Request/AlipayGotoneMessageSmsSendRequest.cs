@@ -20,6 +20,11 @@ namespace Aop.Api.Request
         public string Mobile { get; set; }
 
         /// <summary>
+        /// 支付宝openId，用于支付宝用户在当前应用下的用户标识。
+        /// </summary>
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 短信模板对应的serviceCode
         /// </summary>
         public string ServiceCode { get; set; }
@@ -116,6 +121,7 @@ namespace Aop.Api.Request
             AopDictionary parameters = new AopDictionary();
             parameters.Add("arguments", this.Arguments);
             parameters.Add("mobile", this.Mobile);
+            parameters.Add("open_id", this.OpenId);
             parameters.Add("service_code", this.ServiceCode);
             parameters.Add("user_id", this.UserId);
             if(udfParams != null) 

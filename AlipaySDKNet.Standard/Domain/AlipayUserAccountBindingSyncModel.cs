@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ModifyTime { get; set; }
 
         /// <summary>
+        /// 支付宝用户开放ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 淘宝绑定关系领域枚举：     TAOBAO("0", "淘宝"),     CBU("1", "1688(CBU)"),     ALIYUN_LOGIN("2", "阿里云(免登)"),     ALIYUN_CERTIFY("3", "阿里云(认证)")
         /// </summary>
         [XmlElement("realm")]

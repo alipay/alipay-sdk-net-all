@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 支付宝账号openidId,数组关联多个支付宝账号 （如果未注册支付宝账号 则为空）
+        /// </summary>
+        [XmlArray("open_ids")]
+        [XmlArrayItem("string")]
+        public List<string> OpenIds { get; set; }
+
+        /// <summary>
         /// 参与人主体名称
         /// </summary>
         [XmlElement("principal_name")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AccountName { get; set; }
 
         /// <summary>
+        /// 指定签约终端类型 PC-电脑浏览器 MOBILE-手机端
+        /// </summary>
+        [XmlElement("appoint_sign_terminal")]
+        public string AppointSignTerminal { get; set; }
+
+        /// <summary>
         /// 业务场景，联系支付宝分配
         /// </summary>
         [XmlElement("biz_scene")]
@@ -28,7 +34,7 @@ namespace Aop.Api.Domain
         public string ExtParams { get; set; }
 
         /// <summary>
-        /// 开户账号： 当identity_type是ALIPAY_USER_ID时填支付宝会员ID（2088开头）； 当identity_type是ALIPAY_LOGON_ID 时填支付宝登录号； 当identity_type是OUT_USER_ID时填外部平台的用户uid
+        /// 开户账号： 当identity_type是ALIPAY_USER_ID时填支付宝会员ID（2088开头）； 当identity_type是ALIPAY_LOGON_ID 时填支付宝登录号； 当identity_type是OUT_USER_ID时填外部平台的用户uid; 当identity_type是ALIPAY_OPEN_ID时填用户openId
         /// </summary>
         [XmlElement("identity")]
         public string Identity { get; set; }

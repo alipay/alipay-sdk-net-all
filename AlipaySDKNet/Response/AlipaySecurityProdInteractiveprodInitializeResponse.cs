@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string ExtParams { get; set; }
 
         /// <summary>
-        /// 交互Id，格式为SSP_CONTEXT_bizId_userId
+        /// 交互Id，格式为SSP_CONTEXT_bizId
         /// </summary>
         [XmlElement("interact_id")]
         public string InteractId { get; set; }

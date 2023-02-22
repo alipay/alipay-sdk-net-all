@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenSearchBoxApplyModel : AopObject
     {
         /// <summary>
+        /// 小程序直达配置的常用服务中带有门店信息时，可添加简称触发词
+        /// </summary>
+        [XmlArray("area_keywords")]
+        [XmlArrayItem("string")]
+        public List<string> AreaKeywords { get; set; }
+
+        /// <summary>
         /// 品牌介绍，5-15个中文字符。 小程序直达不支持设置此项
         /// </summary>
         [XmlElement("box_desc")]
@@ -23,6 +30,19 @@ namespace Aop.Api.Domain
         public string BrandId { get; set; }
 
         /// <summary>
+        /// 可通过配置来开启商圈权益模块，关闭后搜索直达不展示商圈权益模块
+        /// </summary>
+        [XmlElement("business_benefit_switch")]
+        public bool BusinessBenefitSwitch { get; set; }
+
+        /// <summary>
+        /// 小程序已关联商圈时，可添加商圈id（目前仅对品牌直达开放，小程序直达暂未开放）
+        /// </summary>
+        [XmlArray("business_district_ids")]
+        [XmlArrayItem("string")]
+        public List<string> BusinessDistrictIds { get; set; }
+
+        /// <summary>
         /// 自定义触发词，最多可配置6个，限1-8个中文字符。 小程序直达不支持设置此项
         /// </summary>
         [XmlArray("custom_keywords")]
@@ -30,7 +50,7 @@ namespace Aop.Api.Domain
         public List<string> CustomKeywords { get; set; }
 
         /// <summary>
-        /// 氛围图片id，调用<a href="https://opendocs.alipay.com/mini/03hvkt"> 支付宝文件上传接口 </a>上传图片获取图片id(bizCode：search_box_atmosphere)。<a href="https://opendocs.alipay.com/b/03al6f"> 图片规范 </a> 小程序直达不支持设置此项。
+        /// 氛围图片id，调用 <a href="https://opendocs.alipay.com/mini/03hvl1?ref=api">支付宝文件上传接口</a> 上传图片获取图片id(bizCode：search_box_atmosphere)。 <a href="https://opendocs.alipay.com/b/03al6f">图片规范</a>  小程序直达不支持设置此项。
         /// </summary>
         [XmlElement("image_id")]
         public string ImageId { get; set; }

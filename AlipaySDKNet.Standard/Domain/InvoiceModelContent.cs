@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string FileDownloadType { get; set; }
 
         /// <summary>
-        /// 发票原文件下载地址 1.当tax_type=PLAIN时， file_download_url必传 且file_download_type取值范围为pdf或ofd； 2.当tax_type=SPECIAL时， file_download_url必传 file_download_type可以传入pdf，ofd，jpg 3.当其他票种时，file_download_url可以不传
+        /// 发票原文件下载地址 1.当tax_type=PLAIN、ALL_ELECTRONIC_GENERAL或ALL_ELECTRONIC_SPECIAL时， file_download_url必传 且file_download_type取值范围为pdf或ofd； 2.当tax_type=SPECIAL时， file_download_url必传 file_download_type可以传入pdf，ofd，jpg 3.当其他票种时，file_download_url可以不传
         /// </summary>
         [XmlElement("file_download_url")]
         public string FileDownloadUrl { get; set; }
@@ -47,7 +47,7 @@ namespace Aop.Api.Domain
         public string InvoiceAmount { get; set; }
 
         /// <summary>
-        /// 发票代码，国税局生成的唯一值，不可为空串
+        /// 发票代码，为国税局生成的唯一值，全电票时为空，其他情况不可为空
         /// </summary>
         [XmlElement("invoice_code")]
         public string InvoiceCode { get; set; }
@@ -114,7 +114,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 仅用于同步红票，原始蓝票发票代码，同步红票时必传
+        /// 仅用于同步红票，原始蓝票发票代码，同步红票时必传（全电票时为空）
         /// </summary>
         [XmlElement("original_blue_invoice_code")]
         public string OriginalBlueInvoiceCode { get; set; }
@@ -186,7 +186,7 @@ namespace Aop.Api.Domain
         public string TaxAmount { get; set; }
 
         /// <summary>
-        /// 税种 可选值： PLAIN：增值税电子普通发票 SPECIAL：增值税专用发票 PLAIN_INVOICE:增值税普通发票 FINANCIAL_ELECTRONIC_BILL:财政电子票据
+        /// 税种 可选值： PLAIN：增值税电子普通发票 ALL_ELECTRONIC_GENERAL：电子发票（普通发票） ALL_ELECTRONIC_SPECIAL：电子发票（增值税专用发票） SPECIAL：增值税专用发票 PLAIN_INVOICE:增值税普通发票 FINANCIAL_ELECTRONIC_BILL:财政电子票据
         /// </summary>
         [XmlElement("tax_type")]
         public string TaxType { get; set; }

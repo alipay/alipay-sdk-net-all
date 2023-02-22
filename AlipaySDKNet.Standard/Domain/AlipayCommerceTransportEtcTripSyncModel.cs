@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string TradeNo { get; set; }
 
         /// <summary>
-        /// 支付宝交易状态（S：扣款成功； R: 退款成功）银行交易状态（PROCESS_SUCCESS：受理成功；PROCESS_FAIL：受理失败；）
+        /// 支付宝交易状态（S：扣款成功； R: 退款成功）银行交易状态（IN_PROCESSING：处理中，PROCESS_SUCCESS：受理成功；PROCESS_FAIL：受理失败；）
         /// </summary>
         [XmlElement("trade_status")]
         public string TradeStatus { get; set; }

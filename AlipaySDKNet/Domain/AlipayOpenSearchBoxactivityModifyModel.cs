@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string ActionUrl { get; set; }
 
         /// <summary>
+        /// 创建banner活动时，可添加底纹推广词，有机会在首页搜索框内展示，提升banner活动曝光机会
+        /// </summary>
+        [XmlElement("background_word")]
+        public string BackgroundWord { get; set; }
+
+        /// <summary>
         /// 搜索直达活动id
         /// </summary>
         [XmlElement("box_activity_id")]

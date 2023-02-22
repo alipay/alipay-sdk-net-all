@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayFundJointaccountBillQueryResponse : AopResponse
     {
         /// <summary>
-        /// 返回账单列表
+        /// 返回账单列表。账单列表为空时，返回为空
         /// </summary>
         [XmlArray("bill_list")]
         [XmlArrayItem("joint_account_bill_detail_d_t_o")]

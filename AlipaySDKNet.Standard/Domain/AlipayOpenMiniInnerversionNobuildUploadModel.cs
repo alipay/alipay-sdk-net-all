@@ -113,6 +113,12 @@ namespace Aop.Api.Domain
         public string NewBuildedPluginUrl { get; set; }
 
         /// <summary>
+        /// 否免加签, true的时候代表传过来的是加签后的包地址
+        /// </summary>
+        [XmlElement("no_sign")]
+        public bool NoSign { get; set; }
+
+        /// <summary>
         /// 小程序代码中引用的插件列表，包含插件id和插件版本信息，业务方需要自行解析源码包的app.json里面的plugins信息
         /// </summary>
         [XmlArray("plugin_refs")]

@@ -39,7 +39,7 @@ namespace Aop.Api.Response
         public string OutOrderNo { get; set; }
 
         /// <summary>
-        /// 试用小程序状态，PRECREATE 待授权确认 PROCESS 已授权使用中 SUCCESS 已转正 FAILED 已失败
+        /// WAIT_CONFIRM待确认创建， CONFIRM_TIMEOUT待创建确认授权超时， CREATE_MINI_APP_SUCCESS创建应用成功，CREATE_MINI_APP_FAILED创建应用失败，CANCELLED已注销，CERTIFY_SUCCESS认证成功，CERTIFY_FAILED认证失败，CERTIFY_OPERATOR管理员认证中，CERTIFY_MERCHANT法人认证中
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

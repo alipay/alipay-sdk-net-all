@@ -65,7 +65,7 @@ namespace Aop.Api.Domain
         public string InvoiceImgUrl { get; set; }
 
         /// <summary>
-        /// 发票类型  可选值  PLAIN：增值税电子普通发票  SPECIAL：增值税专用发票  PLAIN_INVOICE:增值税普通发票  PAPER_INVOICE:增值税普通发票（卷式）  SALSE_INVOICE:机动车销售统一发票  财政电子票据：FINANCIAL_ELECTRONIC_BILL
+        /// 发票类型 可选值 PLAIN：增值税电子普通发票 SPECIAL：增值税专用发票 ALL_ELECTRONIC_GENERAL： "电子发票（普通发票） ALL_ELECTRONIC_SPECIAL： "电子发票（专用发票） PLAIN_INVOICE:增值税普通发票 PAPER_INVOICE:增值税普通发票（卷式） SALSE_INVOICE:机动车销售统一发票 财政电子票据：FINANCIAL_ELECTRONIC_BILL
         /// </summary>
         [XmlElement("invoice_kind")]
         public string InvoiceKind { get; set; }

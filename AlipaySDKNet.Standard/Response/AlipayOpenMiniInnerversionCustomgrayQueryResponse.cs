@@ -22,5 +22,11 @@ namespace Aop.Api.Response
         [XmlArray("member_infos")]
         [XmlArrayItem("mini_app_custom_gray_member_info_dto")]
         public List<MiniAppCustomGrayMemberInfoDto> MemberInfos { get; set; }
+
+        /// <summary>
+        /// 总数
+        /// </summary>
+        [XmlElement("total_count")]
+        public long TotalCount { get; set; }
     }
 }

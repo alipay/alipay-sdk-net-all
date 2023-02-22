@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
+        /// 用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 业务流水号，会用于幂等性校验，所以请保证每次请求的业务流水号的唯一性
         /// </summary>
         [XmlElement("out_biz_no")]

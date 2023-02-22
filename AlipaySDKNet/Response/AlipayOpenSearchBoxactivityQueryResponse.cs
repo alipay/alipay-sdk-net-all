@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayOpenSearchBoxactivityQueryResponse : AopResponse
     {
         /// <summary>
+        /// 底纹词
+        /// </summary>
+        [XmlElement("background_word")]
+        public string BackgroundWord { get; set; }
+
+        /// <summary>
         /// 搜索直达活动id
         /// </summary>
         [XmlElement("box_activity_id")]

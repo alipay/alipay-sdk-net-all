@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMerchantQipanCrowdModifyModel : AopObject
     {
         /// <summary>
-        /// 人群应用渠道。
+        /// 人群应用渠道
         /// </summary>
         [XmlArray("apply_channel_list")]
         [XmlArrayItem("string")]

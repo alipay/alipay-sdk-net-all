@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
+        /// LabelDTO 不唯一 作为map拓展字段 无枚举 调用方提供 无特殊说明
+        /// </summary>
+        [XmlElement("tenant_ext_info")]
+        public LabelDTO TenantExtInfo { get; set; }
+
+        /// <summary>
         /// tenantId-否-租户唯一标识-无枚举-被调方返回值-无特殊说明
         /// </summary>
         [XmlElement("tenant_id")]

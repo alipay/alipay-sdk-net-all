@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string OppositeName { get; set; }
 
         /// <summary>
+        /// 对手方openid
+        /// </summary>
+        [XmlElement("opposite_open_id")]
+        public string OppositeOpenId { get; set; }
+
+        /// <summary>
         /// 对方支付宝账号
         /// </summary>
         [XmlElement("opposite_user_id")]
@@ -92,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("owner_name")]
         public string OwnerName { get; set; }
+
+        /// <summary>
+        /// 本方支付宝账号OPOENID
+        /// </summary>
+        [XmlElement("owner_open_id")]
+        public string OwnerOpenId { get; set; }
 
         /// <summary>
         /// 本方支付宝账号

@@ -118,7 +118,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 订单状态； 0、ORDER_CREATE：创建订单； 1、INFO_SUBMIT：信息已提交； 2、CENSOR_PASS：审核通过； 3、CENSOR_BLOCK：审核驳回； 4、DELIVERYED：已发货； 5、RECEIVED：已收货； 6、ACTIVATED：已激活； 7、UNMOUNTED：已注销； 8、ADD_BLACK：拉黑； 9、REMOVE_BLACK：解黑； 10、CANCEL：取消；
+        /// 订单状态； 0、ORDER_CREATE：创建订单； 1、PAYED：订单支付； 2、INFO_SUBMIT：信息已提交； 3、BANK_SIGNED：已签约银行代扣； 4、ALIPAY_SIGNED：已签约支付宝代扣； 5、CENSOR_PASS：审核通过； 6、CENSOR_BLOCK：审核驳回； 7、DELIVERYED：已发货； 8、RECEIVED：已收货； 9、ACTIVATED：已激活； 10、UNMOUNTED：已注销； 11、ADD_BLACK：拉黑； 12、REMOVE_BLACK：解黑； 13、CANCEL：取消；
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }
@@ -170,6 +170,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("traction_mass")]
         public string TractionMass { get; set; }
+
+        /// <summary>
+        /// 订单支付交易号
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
 
         /// <summary>
         /// 整备质量

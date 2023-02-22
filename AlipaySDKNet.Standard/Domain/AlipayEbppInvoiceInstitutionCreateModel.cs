@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 费控咨询模式，默认为0 0-支付宝内部计算 1-咨询外部服务商
+        /// 费控咨询模式，默认为0。 0-支付宝内部计算 1-咨询外部服务商（此模式不可创建发放规则，不可创建额度相关规则的条件，消费模式需为"默认"）
         /// </summary>
         [XmlElement("consult_mode")]
         public string ConsultMode { get; set; }
@@ -65,7 +65,7 @@ namespace Aop.Api.Domain
         public string InstitutionName { get; set; }
 
         /// <summary>
-        /// 发放规则列表（可空），一个制度下最多创建10条发放规则。
+        /// 发放规则列表（可空），一个制度下最多创建10条发放规则。咨询模式为“咨询外部服务商”时不可用
         /// </summary>
         [XmlArray("issue_rule_info_list")]
         [XmlArrayItem("issue_rule_info")]

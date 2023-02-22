@@ -240,6 +240,12 @@ namespace Aop.Api.Domain
         public string OppositeNickName { get; set; }
 
         /// <summary>
+        /// 对方卡号
+        /// </summary>
+        [XmlElement("opposite_open_id")]
+        public string OppositeOpenId { get; set; }
+
+        /// <summary>
         /// 消费记录原标题
         /// </summary>
         [XmlElement("orig_consume_title")]
@@ -274,6 +280,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("owner_nick")]
         public string OwnerNick { get; set; }
+
+        /// <summary>
+        /// 本方卡号
+        /// </summary>
+        [XmlElement("owner_open_id")]
+        public string OwnerOpenId { get; set; }
 
         /// <summary>
         /// 合作伙伴ID

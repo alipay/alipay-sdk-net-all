@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayFundWalletSceneSignResponse : AopResponse
     {
         /// <summary>
+        /// 资产id
+        /// </summary>
+        [XmlElement("asset_no")]
+        public string AssetNo { get; set; }
+
+        /// <summary>
         /// 可用金额，本金+权益
         /// </summary>
         [XmlElement("available_amount")]

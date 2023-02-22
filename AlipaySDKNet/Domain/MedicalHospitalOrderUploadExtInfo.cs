@@ -118,6 +118,12 @@ namespace Aop.Api.Domain
         public string HospitalRegisterId { get; set; }
 
         /// <summary>
+        /// 是否本人挂号：是/否/未知
+        /// </summary>
+        [XmlElement("is_done_by_self")]
+        public string IsDoneBySelf { get; set; }
+
+        /// <summary>
         /// 就诊/检查序号
         /// </summary>
         [XmlElement("medical_num")]
@@ -134,6 +140,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_order_link_page")]
         public string MerchantOrderLinkPage { get; set; }
+
+        /// <summary>
+        /// 医院小程序链接：HOSPITAL_TINYAPP_LINK 区域平台小程序链接：REGIONAL_PLATFORM_TINYAPP_LINK
+        /// </summary>
+        [XmlElement("merchant_order_link_type")]
+        public string MerchantOrderLinkType { get; set; }
 
         /// <summary>
         /// 导航地址页面跳转链接，支付宝小程序链接
@@ -158,6 +170,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scheduled_time")]
         public string ScheduledTime { get; set; }
+
+        /// <summary>
+        /// 温馨提示，文本类型，最长200个中文字
+        /// </summary>
+        [XmlElement("summary_tip")]
+        public string SummaryTip { get; set; }
 
         /// <summary>
         /// 取药地址

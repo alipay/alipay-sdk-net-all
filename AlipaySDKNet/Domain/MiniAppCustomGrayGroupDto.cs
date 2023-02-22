@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class MiniAppCustomGrayGroupDto : AopObject
     {
         /// <summary>
+        /// 灰度分组id
+        /// </summary>
+        [XmlElement("id")]
+        public long Id { get; set; }
+
+        /// <summary>
         /// 名称
         /// </summary>
         [XmlElement("name")]

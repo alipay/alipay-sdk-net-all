@@ -10,6 +10,24 @@ namespace Aop.Api.Domain
     public class TestDemoWzw : AopObject
     {
         /// <summary>
+        /// 88
+        /// </summary>
+        [XmlElement("aaopen_id")]
+        public string AaopenId { get; set; }
+
+        /// <summary>
+        /// 88
+        /// </summary>
+        [XmlElement("aauids")]
+        public string Aauids { get; set; }
+
+        /// <summary>
+        /// 88
+        /// </summary>
+        [XmlElement("id_type")]
+        public string IdType { get; set; }
+
+        /// <summary>
         /// test
         /// </summary>
         [XmlElement("oid_open_id")]

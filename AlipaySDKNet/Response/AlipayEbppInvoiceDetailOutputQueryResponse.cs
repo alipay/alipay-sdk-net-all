@@ -47,7 +47,7 @@ namespace Aop.Api.Response
         public string InvoiceAmount { get; set; }
 
         /// <summary>
-        /// 发票代码
+        /// 发票代码 （全电票为空）
         /// </summary>
         [XmlElement("invoice_code")]
         public string InvoiceCode { get; set; }
@@ -168,7 +168,7 @@ namespace Aop.Api.Response
         public string SumTaxAmount { get; set; }
 
         /// <summary>
-        /// 票种  PLAIN：增值税电子普通发票  SPECIAL：增值税专用发票  PLAIN_INVOICE:增值税普通发票  PAPER_INVOICE:增值税普通发票（卷式）  SALSE_INVOICE:机动车销售统一发票
+        /// 票种 PLAIN：增值税电子普通发票 SPECIAL：增值税专用发票 ALL_ELECTRONIC_GENERAL：电子发票（普通发票） ALL_ELECTRONIC_SPECIAL：电子发票（增值税专用发票） PLAIN_INVOICE:增值税普通发票 PAPER_INVOICE:增值税普通发票（卷式） SALSE_INVOICE:机动车销售统一发票
         /// </summary>
         [XmlElement("tax_type")]
         public string TaxType { get; set; }

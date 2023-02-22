@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ClientPcidguid { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 服务器名
         /// </summary>
         [XmlElement("server_name")]

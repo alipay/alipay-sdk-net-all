@@ -84,7 +84,7 @@ namespace Aop.Api.Domain
         public string InvoiceDate { get; set; }
 
         /// <summary>
-        /// 标识发票的类型， PLAIN:增值税电子普通发票; SPECIAL:增值税专用发票; PLAIN_INVOICE:增值税普通发票; FINANCIAL_ELECTRONIC_BILL:财政电子票据;
+        /// 标识发票的类型， PLAIN:增值税电子普通发票; SPECIAL:增值税专用发票; ALL_ELECTRONIC_GENERAL:电子发票（普通发票）; ALL_ELECTRONIC_SPECIAL:电子发票（增值税专用发票）; PLAIN_INVOICE:增值税普通发票; FINANCIAL_ELECTRONIC_BILL:财政电子票据;
         /// </summary>
         [XmlElement("invoice_kind")]
         public string InvoiceKind { get; set; }
@@ -120,7 +120,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 红票情况下，必须填入原始蓝票的发票代码。
+        /// 红票情况下，必须填入原始蓝票的发票代码（全电票时为空）。
         /// </summary>
         [XmlElement("ori_blue_inv_code")]
         public string OriBlueInvCode { get; set; }

@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public SearchBoxAccountModule AccountModule { get; set; }
 
         /// <summary>
+        /// 地域触发词
+        /// </summary>
+        [XmlElement("area_keyword_module")]
+        public SearchBoxAreaKeyWordModule AreaKeywordModule { get; set; }
+
+        /// <summary>
         /// 搜索直达基础信息模块
         /// </summary>
         [XmlElement("basic_info_module")]
@@ -33,6 +39,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("box_status")]
         public string BoxStatus { get; set; }
+
+        /// <summary>
+        /// 商圈信息
+        /// </summary>
+        [XmlElement("business_district_module")]
+        public BoxBusinessDistrictModule BusinessDistrictModule { get; set; }
 
         /// <summary>
         /// 搜索直达默认触发词，由系统生成，无法修改

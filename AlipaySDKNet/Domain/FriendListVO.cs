@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string HeadImg { get; set; }
 
         /// <summary>
+        /// open_id用于原user_id字段映射
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 是否双向好友
         /// </summary>
         [XmlElement("real_friend")]

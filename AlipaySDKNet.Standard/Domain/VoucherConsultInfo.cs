@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string SpecifiedAmount { get; set; }
 
         /// <summary>
-        /// 优惠门槛，单位为元
+        /// 优惠门槛，单位为元（部分券没有门槛金额）
         /// </summary>
         [XmlElement("threshold_amount")]
         public string ThresholdAmount { get; set; }

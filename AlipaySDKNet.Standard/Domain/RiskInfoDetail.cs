@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RiskInfoDetail : AopObject
     {
         /// <summary>
+        /// 对话下标
+        /// </summary>
+        [XmlElement("dialog_index")]
+        public string DialogIndex { get; set; }
+
+        /// <summary>
         /// 命中词
         /// </summary>
         [XmlElement("hit_word")]
@@ -20,6 +26,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("hit_word_index")]
         public string HitWordIndex { get; set; }
+
+        /// <summary>
+        /// 命中词类别（全文/对话 FULL_TEXT/DIALOGUE）
+        /// </summary>
+        [XmlElement("hit_word_type")]
+        public string HitWordType { get; set; }
 
         /// <summary>
         /// 数组中8个数字分别代表左上、右上、右下、左下的坐标信息

@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string ActionUrl { get; set; }
 
         /// <summary>
+        /// 创建banner活动时，可添加底纹推广词，有机会在首页搜索框内展示，提升banner活动曝光机会
+        /// </summary>
+        [XmlElement("background_word")]
+        public string BackgroundWord { get; set; }
+
+        /// <summary>
         /// 搜索直达配置id
         /// </summary>
         [XmlElement("box_id")]
@@ -29,7 +35,7 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 当material_type="IMAGE"时，为图片id；当material_type="VIDEO"时，为视频id。小程序直达仅支持图片类型。图片id可以通过调用<a href="https://opendocs.alipay.com/mini/03hvkt"> 支付宝文件上传接口 </a>上传图片，获取图片id(bizCode：search_box_banner)。<a href="https://opendocs.alipay.com/b/03al6f"> 图片规范 </a>
+        /// 当material_type="IMAGE"时，为图片id；当material_type="VIDEO"时，为视频id。小程序直达仅支持图片类型。图片id可以通过调用<a href="https://opendocs.alipay.com/mini/03hvl1?ref=api"> 支付宝文件上传接口 </a>上传图片，获取图片id(bizCode：search_box_banner)。<a href="https://opendocs.alipay.com/b/03al6f"> 图片规范 </a>
         /// </summary>
         [XmlElement("material_id")]
         public string MaterialId { get; set; }

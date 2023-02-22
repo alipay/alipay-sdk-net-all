@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 买家身份
+        /// 买家身份。当issuer=ALIPAY &&type=USERID时，identity表示的是支付宝用户ID，此时identity和open_id至少传一个。其他情况，不用传oepn_id
         /// </summary>
         [XmlElement("buyer")]
         public UserIdentity Buyer { get; set; }
@@ -35,12 +35,6 @@ namespace Aop.Api.Domain
         [XmlArray("goods_infos")]
         [XmlArrayItem("goods_information")]
         public List<GoodsInformation> GoodsInfos { get; set; }
-
-        /// <summary>
-        /// 用户(buyer中的identity)在应用(appid)下的唯一标识，当issuer为ALIPAY且type为USER_ID时使用
-        /// </summary>
-        [XmlElement("open_id")]
-        public string OpenId { get; set; }
 
         /// <summary>
         /// 订单金额，比如[{"type":"MONEY","amount":88.66},{"type":"FAMILY_POINT","amount":2000}]，代表订单中所有商品需要支付的总金额是88.66元+2000家庭积分。
@@ -63,7 +57,7 @@ namespace Aop.Api.Domain
         public List<PaymentInformation> PaymentRequest { get; set; }
 
         /// <summary>
-        /// 卖家身份
+        /// 卖家身份，openid字段不用传递，依旧使用原有的identity字段
         /// </summary>
         [XmlElement("seller")]
         public UserIdentity Seller { get; set; }

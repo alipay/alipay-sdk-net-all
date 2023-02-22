@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceFileOutputQueryModel : AopObject
     {
         /// <summary>
-        /// 发票代码  字段长度（10-12位）
+        /// 发票代码 字段长度（10-12位），全电票时为空
         /// </summary>
         [XmlElement("invoice_code")]
         public string InvoiceCode { get; set; }
 
         /// <summary>
-        /// 发票号码  字段长度（8-10位）
+        /// 发票号码 字段长度（8-10位），全电票时为20位
         /// </summary>
         [XmlElement("invoice_no")]
         public string InvoiceNo { get; set; }
