@@ -76,6 +76,12 @@ namespace Aop.Api.Domain
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// 推荐场景，枚举值：home（首页）、goods_detail（商详页）、search（搜索）、order_detail（订单详情）
+        /// </summary>
+        [XmlElement("scene")]
+        public string Scene { get; set; }
+
+        /// <summary>
         /// SPM(Super Position Model)全称超级位置模型，主要用于标识行为发生的位置。SPM位置编码由A/B/C/D四段构成， 各分段分别代表 A:业务， B:页面， C:页面区块， D:区块内点位。段之间用$##$分隔，即A$##$B$##$C$##$D，spm各段建议传明文。允许某一段为空，为空时以_代替。
         /// </summary>
         [XmlElement("spm")]

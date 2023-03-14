@@ -22,15 +22,15 @@ namespace Aop.Api.Domain
         public string AuthNotifyUrl { get; set; }
 
         /// <summary>
-        /// openId
-        /// </summary>
-        [XmlElement("open_id")]
-        public string OpenId { get; set; }
-
-        /// <summary>
         /// 外部订单号
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }
+
+        /// <summary>
+        /// 商户2088
+        /// </summary>
+        [XmlElement("uid")]
+        public string Uid { get; set; }
     }
 }

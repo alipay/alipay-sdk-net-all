@@ -8,5 +8,10 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayOpenMiniAutocheckCaseCreateResponse : AopResponse
     {
+        /// <summary>
+        /// 用例ID
+        /// </summary>
+        [XmlElement("case_id")]
+        public string CaseId { get; set; }
     }
 }

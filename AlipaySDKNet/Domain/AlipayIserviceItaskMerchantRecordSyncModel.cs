@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public BuyerInfo BuyerInfo { get; set; }
 
         /// <summary>
+        /// buyer_id的open_id映射字段
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 内容扩展参数
         /// </summary>
         [XmlElement("content")]

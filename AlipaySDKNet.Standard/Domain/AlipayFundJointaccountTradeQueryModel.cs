@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string MemberId { get; set; }
 
         /// <summary>
+        /// 消费发起人的openId
+        /// </summary>
+        [XmlElement("member_open_id")]
+        public string MemberOpenId { get; set; }
+
+        /// <summary>
         /// 外部平台订单号。使用该参数查询时，返回结果见trade_info_list
         /// </summary>
         [XmlElement("platform_order_id")]

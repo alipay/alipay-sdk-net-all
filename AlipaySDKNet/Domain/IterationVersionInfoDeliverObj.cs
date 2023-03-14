@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string L3Code { get; set; }
 
         /// <summary>
+        /// 迭代版本部署的硬件平台信息
+        /// </summary>
+        [XmlElement("multiplatform")]
+        public string Multiplatform { get; set; }
+
+        /// <summary>
         /// 性能测试报告
         /// </summary>
         [XmlElement("performance_test_report")]
@@ -116,6 +122,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("security_white_paper")]
         public string SecurityWhitePaper { get; set; }
+
+        /// <summary>
+        /// 版本创建的时间
+        /// </summary>
+        [XmlElement("stamp_time")]
+        public string StampTime { get; set; }
 
         /// <summary>
         /// 系统设计说明书（系分）/技术白皮书

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Type { get; set; }
 
         /// <summary>
-        /// 当type=AMOUNT_LIMIT时，传入格式[100,+∞)
+        /// lowerLimit（金额门槛）必填，upperLimit（金额上限） 如果无上限，upperLimit可不填
         /// </summary>
         [XmlElement("value")]
         public string Value { get; set; }

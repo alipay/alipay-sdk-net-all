@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string LogisticsToken { get; set; }
 
         /// <summary>
-        /// 消费者id， 如果consumer_source是alipay，则consumer_id必须是支付宝用户uid；如果consumer_source是wx，则consumer_id可以为空
+        /// 消费者id， 如果consumer_source是alipay，则consumer_id必须是支付宝用户openId；如果consumer_source是wx，则consumer_id可以为空
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }

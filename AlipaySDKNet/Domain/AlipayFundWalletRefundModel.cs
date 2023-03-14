@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 原充值单号
+        /// </summary>
+        [XmlElement("original_deposit_order_id")]
+        public string OriginalDepositOrderId { get; set; }
+
+        /// <summary>
         /// 用户唯一请求标识
         /// </summary>
         [XmlElement("out_biz_no")]
@@ -50,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 提现策略
+        /// </summary>
+        [XmlElement("refund_strategy")]
+        public string RefundStrategy { get; set; }
 
         /// <summary>
         /// 钱包id

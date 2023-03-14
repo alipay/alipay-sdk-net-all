@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CreditPayUserVO : AopObject
     {
         /// <summary>
+        /// 开放id
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝UID，可选
         /// </summary>
         [XmlElement("alipay_user_id")]
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("site")]
         public string Site { get; set; }
+
+        /// <summary>
+        /// 可选，如果站点用户ID存在，site一定存在
+        /// </summary>
+        [XmlElement("site_open_id")]
+        public string SiteOpenId { get; set; }
 
         /// <summary>
         /// 可选，如果站点用户ID存在，site一定存在

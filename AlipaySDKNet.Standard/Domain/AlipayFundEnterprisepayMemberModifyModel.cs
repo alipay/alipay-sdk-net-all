@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public List<string> GroupIdList { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 更新操作类型：多个时逗号分隔 GROUP-群组信息 FUND-出资信息 字段不传时，默认全量更新
         /// </summary>
         [XmlArray("operation_type_list")]

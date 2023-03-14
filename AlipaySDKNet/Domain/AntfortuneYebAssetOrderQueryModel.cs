@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AntfortuneYebAssetOrderQueryModel : AopObject
     {
         /// <summary>
+        /// 用户UserId在应用AppId下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]

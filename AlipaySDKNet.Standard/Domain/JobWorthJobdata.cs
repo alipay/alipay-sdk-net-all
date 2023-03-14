@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string EducationStatus { get; set; }
 
         /// <summary>
+        /// 报名流水号
+        /// </summary>
+        [XmlElement("entry_no")]
+        public string EntryNo { get; set; }
+
+        /// <summary>
         /// 考试分数
         /// </summary>
         [XmlElement("exam_score")]
@@ -206,6 +212,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("valid_date_start")]
         public string ValidDateStart { get; set; }
+
+        /// <summary>
+        /// 校验状态
+        /// </summary>
+        [XmlElement("verify_status")]
+        public string VerifyStatus { get; set; }
 
         /// <summary>
         /// 工作描述

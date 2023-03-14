@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class ApeRecContext : AopObject
     {
         /// <summary>
+        /// 黑名单的索引列表，用于将推荐列表中包含该索引值的商品进行过滤
+        /// </summary>
+        [XmlArray("black_index_list")]
+        [XmlArrayItem("string")]
+        public List<string> BlackIndexList { get; set; }
+
+        /// <summary>
         /// 类目列表，推荐结果只会包含该类目的商品，为空时代表返回所有的商品。多个条件是与的关系。
         /// </summary>
         [XmlArray("cate")]

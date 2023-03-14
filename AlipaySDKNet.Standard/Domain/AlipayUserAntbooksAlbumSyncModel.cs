@@ -96,6 +96,13 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// 拓展信息List，内部为AlbumExtInfo对象，其中包含两个字段key及value，以此实现业务上的Map<String, String>
+        /// </summary>
+        [XmlArray("ext_info_list")]
+        [XmlArrayItem("album_ext_info")]
+        public List<AlbumExtInfo> ExtInfoList { get; set; }
+
+        /// <summary>
         /// 专辑名称，用于对C端用户展示。
         /// </summary>
         [XmlElement("name")]

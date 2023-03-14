@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
+        /// 按游标查询，传入上次查询最后一个用户的openId
+        /// </summary>
+        [XmlElement("last_open_id")]
+        public string LastOpenId { get; set; }
+
+        /// <summary>
         /// 按游标查询，传入上次查询最后一个用户ID，适用于逐页查询。优先级大于page_num
         /// </summary>
         [XmlElement("last_user_id")]

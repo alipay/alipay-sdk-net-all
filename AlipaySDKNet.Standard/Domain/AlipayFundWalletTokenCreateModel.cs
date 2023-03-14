@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("real_name")]
         public string RealName { get; set; }
+
+        /// <summary>
+        /// 场景钱包模版id
+        /// </summary>
+        [XmlElement("wallet_template_id")]
+        public string WalletTemplateId { get; set; }
     }
 }

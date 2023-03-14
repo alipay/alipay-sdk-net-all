@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string LaneNo { get; set; }
 
         /// <summary>
+        /// 发行方/路网原始行程Id，对账使用
+        /// </summary>
+        [XmlElement("out_trip_id")]
+        public string OutTripId { get; set; }
+
+        /// <summary>
         /// 本交易进站省份，使用国家区域编码
         /// </summary>
         [XmlElement("start_province_code")]

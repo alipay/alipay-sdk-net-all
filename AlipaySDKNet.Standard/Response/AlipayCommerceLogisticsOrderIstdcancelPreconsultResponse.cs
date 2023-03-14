@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("allow_cancel")]
         public bool AllowCancel { get; set; }
+
+        /// <summary>
+        /// 取消金额
+        /// </summary>
+        [XmlElement("cancel_fee")]
+        public string CancelFee { get; set; }
     }
 }

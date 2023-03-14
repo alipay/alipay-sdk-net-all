@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenIpsponsorConsumegoldModifyModel : AopObject
     {
         /// <summary>
+        /// 蚂蚁统一会员OPEN ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 用于标识具体扣、增消费金的值
         /// </summary>
         [XmlElement("scene_id")]

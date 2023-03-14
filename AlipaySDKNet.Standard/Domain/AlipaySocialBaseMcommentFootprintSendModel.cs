@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
+        /// 用于openId的改造，将openId转成支付宝内部的userId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 上报数据来源
         /// </summary>
         [XmlElement("source")]

@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// 用户UserId在应用AppId下的唯一用户标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单号
         /// </summary>
         [XmlElement("order_no")]

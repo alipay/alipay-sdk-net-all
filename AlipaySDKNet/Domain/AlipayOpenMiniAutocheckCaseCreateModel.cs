@@ -11,6 +11,24 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniAutocheckCaseCreateModel : AopObject
     {
         /// <summary>
+        /// 业务线
+        /// </summary>
+        [XmlElement("biz_line_name")]
+        public string BizLineName { get; set; }
+
+        /// <summary>
+        /// 用例执行时的小程序类型
+        /// </summary>
+        [XmlElement("case_app_type")]
+        public string CaseAppType { get; set; }
+
+        /// <summary>
+        /// slm上的用例ID，在用例类型为脚本时必填，多个用例ID之间用,分割
+        /// </summary>
+        [XmlElement("case_ids")]
+        public string CaseIds { get; set; }
+
+        /// <summary>
         /// 针对用例进行描述
         /// </summary>
         [XmlElement("case_intro")]
@@ -46,5 +64,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("time_out")]
         public string TimeOut { get; set; }
+
+        /// <summary>
+        /// slm脚本用例中使用到的参数
+        /// </summary>
+        [XmlElement("use_case_exe_map")]
+        public string UseCaseExeMap { get; set; }
+
+        /// <summary>
+        /// 用例类型
+        /// </summary>
+        [XmlElement("use_case_type")]
+        public string UseCaseType { get; set; }
     }
 }

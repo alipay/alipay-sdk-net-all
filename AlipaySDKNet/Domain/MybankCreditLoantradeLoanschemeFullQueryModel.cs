@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string AlipayId { get; set; }
 
         /// <summary>
+        /// OpenId是某个用户在某个应用下的唯一用户标识， 对于同一个用户，不同应用拿到的OpenId是不同的，而且对于同一个应用，不同用户的OpenId是唯一的
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 支用金额，默认单位是人民币，精确到小数点两位，单位元
         /// </summary>
         [XmlElement("apply_amt")]

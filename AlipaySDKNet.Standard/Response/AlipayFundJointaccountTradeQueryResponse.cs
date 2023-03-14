@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string BuyerId { get; set; }
 
         /// <summary>
+        /// 买家的openId
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 交易创建时间
         /// </summary>
         [XmlElement("create_time")]

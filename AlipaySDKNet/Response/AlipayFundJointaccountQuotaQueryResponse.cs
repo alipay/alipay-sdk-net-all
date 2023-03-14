@@ -36,6 +36,12 @@ namespace Aop.Api.Response
         public string MemberId { get; set; }
 
         /// <summary>
+        /// 员工openId
+        /// </summary>
+        [XmlElement("member_open_id")]
+        public string MemberOpenId { get; set; }
+
+        /// <summary>
         /// 产品码
         /// </summary>
         [XmlElement("product_code")]

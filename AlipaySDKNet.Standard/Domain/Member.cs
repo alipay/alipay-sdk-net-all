@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string SiteLoginId { get; set; }
 
         /// <summary>
+        /// 会员站点ID映射
+        /// </summary>
+        [XmlElement("site_open_id")]
+        public string SiteOpenId { get; set; }
+
+        /// <summary>
         /// 会员站点ID
         /// </summary>
         [XmlElement("site_user_id")]

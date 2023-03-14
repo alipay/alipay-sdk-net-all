@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string Link { get; set; }
 
         /// <summary>
+        /// 内容分发范围。0 - 仅创作者自己可见，1 - 所有人可见，2 - 分发范围受限。
+        /// </summary>
+        [XmlElement("permission_status")]
+        public string PermissionStatus { get; set; }
+
+        /// <summary>
         /// 作者
         /// </summary>
         [XmlElement("source_author")]

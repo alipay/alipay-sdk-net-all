@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -21,7 +22,13 @@ namespace Aop.Api.Response
         public string CampaignId { get; set; }
 
         /// <summary>
-        /// 发奖订单号
+        /// 发奖权益订单结果列表
+        /// </summary>
+        [XmlElement("send_equity_order_result_list")]
+        public SendEquityOrderResult SendEquityOrderResultList { get; set; }
+
+        /// <summary>
+        /// 发奖订单号，组合奖品则设置为第一个订单号
         /// </summary>
         [XmlElement("send_order_id")]
         public string SendOrderId { get; set; }

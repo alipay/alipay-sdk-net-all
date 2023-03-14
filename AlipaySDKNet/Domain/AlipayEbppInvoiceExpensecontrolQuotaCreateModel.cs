@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string QuotaValue { get; set; }
 
         /// <summary>
+        /// 0:不可转赠（注：不传模式为0） 1:可以转增（注：只有quota_type=COUPON,可设置）
+        /// </summary>
+        [XmlElement("share_mode")]
+        public string ShareMode { get; set; }
+
+        /// <summary>
         /// 额度维度ID 当 target_type=EXPENSE_TYPE 时，值为 MEAL（工作餐） 当target_type=RULE_GROUP_AGGREGATION 时，值为费控规则聚合ID 当target_type=INSTITUTION 时，值为制度ID
         /// </summary>
         [XmlElement("target_id")]

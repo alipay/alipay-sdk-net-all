@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("good_taxes")]
         public string GoodTaxes { get; set; }
+
+        /// <summary>
+        /// 商户端创建订单的 IP，须上传正确的用户端外网 IP，支持 ipv4/ipv6 格式； mc_create_trade_ip和mcCreateTradeIp（旧）参数描述相同，首选mc_create_trade_ip入参，请勿重复入参； 如已入参mcCreateTradeIp（旧），无需新增入参mc_create_trade_ip。
+        /// </summary>
+        [XmlElement("mc_create_trade_ip")]
+        public string McCreateTradeIp { get; set; }
     }
 }

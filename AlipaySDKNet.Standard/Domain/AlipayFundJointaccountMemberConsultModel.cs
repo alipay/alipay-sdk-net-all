@@ -29,6 +29,13 @@ namespace Aop.Api.Domain
         public string BusinessParams { get; set; }
 
         /// <summary>
+        /// 要检查的员工openId
+        /// </summary>
+        [XmlArray("open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> OpenIdList { get; set; }
+
+        /// <summary>
         /// 要检查的员工ID
         /// </summary>
         [XmlArray("user_id_list")]

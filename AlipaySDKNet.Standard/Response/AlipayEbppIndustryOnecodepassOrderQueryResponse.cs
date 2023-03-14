@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// I("I", "等待付款"),     N("N","付款失败"),     P("P", "处理中"),     C("C", "单据关闭"),     T("T", "退款中"),     F("F", "失败"),     S("S", "成功"),     H("H", "部分退款");
+        /// I("I", "等待付款"),     N("N","付款失败"),     C("C", "单据关闭"),     F("F", "失败"),     S("S", "成功"),     H("H", "部分退款");
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string MemberId { get; set; }
 
         /// <summary>
+        /// 员工的openid
+        /// </summary>
+        [XmlElement("member_open_id")]
+        public string MemberOpenId { get; set; }
+
+        /// <summary>
         /// 角色：创建方(CREATOR)、参与方(PARTICIPANT)
         /// </summary>
         [XmlElement("operate_role")]
