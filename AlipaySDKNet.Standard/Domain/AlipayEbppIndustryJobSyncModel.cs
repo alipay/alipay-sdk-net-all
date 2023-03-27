@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public long Count { get; set; }
 
         /// <summary>
-        /// 雇主名称
+        /// 雇主名称，请使用企业工商注册名
         /// </summary>
         [XmlElement("employer_name")]
         public string EmployerName { get; set; }
@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string JobDetail { get; set; }
 
         /// <summary>
-        /// 岗位的小程序详情页URL
+        /// 岗位的小程序详情页URL，地址处理可以参考：https://opendocs.alipay.com/support/01rb18
         /// </summary>
         [XmlElement("job_detail_url")]
         public string JobDetailUrl { get; set; }
@@ -97,7 +97,7 @@ namespace Aop.Api.Domain
         public string JobName { get; set; }
 
         /// <summary>
-        /// 岗位标签
+        /// 岗位标签，标签为枚举值，“大学生”、“退役军人”、“特殊人群”、”乡村”，如同步这些标签，会提高透出权重
         /// </summary>
         [XmlArray("job_tags")]
         [XmlArrayItem("string")]
@@ -122,7 +122,7 @@ namespace Aop.Api.Domain
         public string OutJobId { get; set; }
 
         /// <summary>
-        /// 岗位模式：QUANZHI-全职、JIANZHI-兼职
+        /// 岗位就业模式
         /// </summary>
         [XmlElement("part_time_mode")]
         public string PartTimeMode { get; set; }
@@ -134,13 +134,13 @@ namespace Aop.Api.Domain
         public string PayPeriod { get; set; }
 
         /// <summary>
-        /// 岗位优先级， 在以下类型中选择： 1：高优先级 2：中优先级 3：低优先级  高优先级的岗位，平台会优先展示。  建议只将少量岗位设置为高优先级，否则这个优先级的效果会低于预期。
+        /// 岗位优先级， 在以下类型中选择： 1：高优先级 2：中优先级 3：低优先级 建议只将少量岗位设置为高优先级，否则这个优先级的效果会低于预期。
         /// </summary>
         [XmlElement("priority")]
         public long Priority { get; set; }
 
         /// <summary>
-        /// 薪资范围。支持薪资范围，格式：最低薪资（含）,最高薪资（含），薪资结算方式是面议时为空
+        /// 薪资范围，格式：最低薪资（含）,最高薪资（含），薪资结算方式是面议时为空。最高薪资不超过5万。如果为单价型岗位，最低薪资和最高薪资内容保持一致，如: 800,800
         /// </summary>
         [XmlElement("salary")]
         public string Salary { get; set; }

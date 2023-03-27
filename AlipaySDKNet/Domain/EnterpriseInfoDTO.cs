@@ -82,6 +82,18 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// 封闭场景（如班车）的人脸库id
+        /// </summary>
+        [XmlElement("iot_group_id")]
+        public string IotGroupId { get; set; }
+
+        /// <summary>
+        /// 开放场景（如团餐）的人脸库id
+        /// </summary>
+        [XmlElement("iot_logic_group_id")]
+        public string IotLogicGroupId { get; set; }
+
+        /// <summary>
         /// 外部平台code
         /// </summary>
         [XmlElement("platform_code")]

@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string ActualAvailableAmount { get; set; }
 
         /// <summary>
+        /// 专项账户金额详情
+        /// </summary>
+        [XmlElement("amount_details")]
+        public string AmountDetails { get; set; }
+
+        /// <summary>
         /// 可用金额
         /// </summary>
         [XmlElement("available_amount")]

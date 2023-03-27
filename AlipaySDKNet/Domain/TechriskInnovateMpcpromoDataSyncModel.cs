@@ -20,11 +20,11 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 数据类型
         /// </summary>
-        [XmlElement("date_type")]
-        public string DateType { get; set; }
+        [XmlElement("data_type")]
+        public string DataType { get; set; }
 
         /// <summary>
-        /// 商户所在行业；normal （通用行业）  leasing（租赁行业）、 travel（旅游行业）
+        /// 商户所在行业:  goodsNormal（通用行业商品数据）  goodsLease（租赁行业商品数据）
         /// </summary>
         [XmlElement("industry")]
         public string Industry { get; set; }

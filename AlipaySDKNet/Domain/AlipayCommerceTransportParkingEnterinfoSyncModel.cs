@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public bool IsEncryptPlateNo { get; set; }
 
         /// <summary>
+        /// 当前行程是否需要计费。true：需要，false：不需要。不传默认为true。
+        /// </summary>
+        [XmlElement("need_charge")]
+        public bool NeedCharge { get; set; }
+
+        /// <summary>
         /// 蚂蚁会员统一ID
         /// </summary>
         [XmlElement("open_id")]

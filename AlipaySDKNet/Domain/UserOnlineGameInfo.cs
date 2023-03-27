@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string UserName { get; set; }
 
         /// <summary>
+        /// 用户参赛详情支付宝小程序跳转地址
+        /// </summary>
+        [XmlElement("user_online_detail_url")]
+        public string UserOnlineDetailUrl { get; set; }
+
+        /// <summary>
         /// 用户进度计量单位
         /// </summary>
         [XmlElement("user_progress_game_unit")]

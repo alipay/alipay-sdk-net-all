@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class MpcpromoGoodsList : AopObject
     {
         /// <summary>
+        /// 商品可用的城市列表
+        /// </summary>
+        [XmlArray("available_city_list")]
+        [XmlArrayItem("string")]
+        public List<string> AvailableCityList { get; set; }
+
+        /// <summary>
         /// 商品品牌名称
         /// </summary>
         [XmlElement("brand")]
@@ -35,22 +42,34 @@ namespace Aop.Api.Domain
         public string CateCnt { get; set; }
 
         /// <summary>
+        /// 正整数
+        /// </summary>
+        [XmlElement("comment_cnt")]
+        public string CommentCnt { get; set; }
+
+        /// <summary>
+        /// 商品描述
+        /// </summary>
+        [XmlElement("content")]
+        public string Content { get; set; }
+
+        /// <summary>
         /// 必填，非负数且保留两位小数，免费商品填写0.00
         /// </summary>
         [XmlElement("current_price")]
         public string CurrentPrice { get; set; }
 
         /// <summary>
-        /// 正整数
+        /// 币种默认CNY。非负数。保留两位小数。
+        /// </summary>
+        [XmlElement("deposit_amount")]
+        public string DepositAmount { get; set; }
+
+        /// <summary>
+        /// 商品详情图片数量；正整数
         /// </summary>
         [XmlElement("detail_pic_num")]
         public string DetailPicNum { get; set; }
-
-        /// <summary>
-        /// 用于接收返回的错误信息
-        /// </summary>
-        [XmlElement("ext_info")]
-        public string ExtInfo { get; set; }
 
         /// <summary>
         /// 包邮/不包邮/满足条件包邮，三选一
@@ -59,13 +78,19 @@ namespace Aop.Api.Domain
         public string FreeShipping { get; set; }
 
         /// <summary>
+        /// 租赁商品的新旧描述
+        /// </summary>
+        [XmlElement("fresh_degree")]
+        public string FreshDegree { get; set; }
+
+        /// <summary>
         /// 物品的唯一id
         /// </summary>
         [XmlElement("id")]
         public string Id { get; set; }
 
         /// <summary>
-        /// 非负数且保留两位小数
+        /// 商品原价；非负数且保留两位小数
         /// </summary>
         [XmlElement("origin_price")]
         public string OriginPrice { get; set; }
@@ -97,13 +122,74 @@ namespace Aop.Api.Domain
         public string PubTime { get; set; }
 
         /// <summary>
+        /// 满分5分
+        /// </summary>
+        [XmlElement("rating")]
+        public string Rating { get; set; }
+
+        /// <summary>
+        /// 商品最小租赁天数
+        /// </summary>
+        [XmlElement("rental_date")]
+        public string RentalDate { get; set; }
+
+        /// <summary>
+        /// 商品是否支持租满即送
+        /// </summary>
+        [XmlElement("rental_free")]
+        public string RentalFree { get; set; }
+
+        /// <summary>
+        /// 商品积累销量
+        /// </summary>
+        [XmlElement("sale_number")]
+        public string SaleNumber { get; set; }
+
+        /// <summary>
+        /// 1：支持 2：不支持 3：满足条件支持
+        /// </summary>
+        [XmlElement("self_pickup")]
+        public string SelfPickup { get; set; }
+
+        /// <summary>
+        /// 非负整数
+        /// </summary>
+        [XmlElement("share_cnt")]
+        public string ShareCnt { get; set; }
+
+        /// <summary>
+        /// 百分比，值范围0.00%-100.00%，保留两位小数
+        /// </summary>
+        [XmlElement("shipment_rate")]
+        public string ShipmentRate { get; set; }
+
+        /// <summary>
+        /// 商品支持的发货城市列表
+        /// </summary>
+        [XmlArray("shipments")]
+        [XmlArrayItem("string")]
+        public List<string> Shipments { get; set; }
+
+        /// <summary>
         /// 运费
         /// </summary>
         [XmlElement("shipping_money")]
         public string ShippingMoney { get; set; }
 
         /// <summary>
-        /// spu维度的id
+        /// 商品所在店铺对应的店铺名称
+        /// </summary>
+        [XmlElement("shop_name")]
+        public string ShopName { get; set; }
+
+        /// <summary>
+        /// 商品来源类型
+        /// </summary>
+        [XmlElement("source_id")]
+        public string SourceId { get; set; }
+
+        /// <summary>
+        /// 商品spu维度的id
         /// </summary>
         [XmlElement("spu_id")]
         public string SpuId { get; set; }
@@ -113,6 +199,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 库存数量为0的商品不会出现在搜索结果里面
+        /// </summary>
+        [XmlElement("stock_num")]
+        public string StockNum { get; set; }
+
+        /// <summary>
+        /// 非负数，保留两位小数，值范围0.00-5.00分
+        /// </summary>
+        [XmlElement("store_rating")]
+        public string StoreRating { get; set; }
 
         /// <summary>
         /// 商品标签，如首页展示标签“特惠”，“热卖”,或详情页“满50包邮”,“假一赔三”等。多值示例：“特惠,热卖"

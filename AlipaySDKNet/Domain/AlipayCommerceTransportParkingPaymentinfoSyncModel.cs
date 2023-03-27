@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string PaymentTime { get; set; }
 
         /// <summary>
+        /// 支付方式 ALIPAY：支付宝支付 CASH：现金 OTHER：其他渠道 FREE：免费
+        /// </summary>
+        [XmlElement("payment_type")]
+        public string PaymentType { get; set; }
+
+        /// <summary>
         /// 车牌颜色，车牌颜色，枚举支持： *BLUE：蓝。 *GREEN：绿。 *YELLOW：黄。 *WHITE：白。 *BLACK：黑。 *LIMEGREEN：黄绿色。
         /// </summary>
         [XmlElement("plate_color")]

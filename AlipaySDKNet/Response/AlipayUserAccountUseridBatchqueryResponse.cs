@@ -10,6 +10,13 @@ namespace Aop.Api.Response
     public class AlipayUserAccountUseridBatchqueryResponse : AopResponse
     {
         /// <summary>
+        /// 支付宝用户OpenID列表
+        /// </summary>
+        [XmlArray("open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> OpenIdList { get; set; }
+
+        /// <summary>
         /// 用户列表
         /// </summary>
         [XmlArray("user_id_list")]

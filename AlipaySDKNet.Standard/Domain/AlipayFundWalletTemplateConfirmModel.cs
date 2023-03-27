@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 钱包名字
+        /// </summary>
+        [XmlElement("wallet_template_name")]
+        public string WalletTemplateName { get; set; }
     }
 }

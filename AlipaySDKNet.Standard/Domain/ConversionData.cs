@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 转化回调扩展信息
+        /// </summary>
+        [XmlElement("callback_ext_info")]
+        public string CallbackExtInfo { get; set; }
+
+        /// <summary>
         /// 当source=DATASET或者OTHER时使用：  转化金额，单位分
         /// </summary>
         [XmlElement("conversion_amount")]

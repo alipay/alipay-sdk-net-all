@@ -11,12 +11,6 @@ namespace Aop.Api.Domain
     public class ServiceProductInfo : AopObject
     {
         /// <summary>
-        /// 是否可以独立对客
-        /// </summary>
-        [XmlElement("service_alone")]
-        public string ServiceAlone { get; set; }
-
-        /// <summary>
         /// 服务描述
         /// </summary>
         [XmlElement("service_desc")]
@@ -45,18 +39,6 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_name")]
         public string ServiceName { get; set; }
-
-        /// <summary>
-        /// 是否可以对外开放
-        /// </summary>
-        [XmlElement("service_open")]
-        public string ServiceOpen { get; set; }
-
-        /// <summary>
-        /// 服务排序key
-        /// </summary>
-        [XmlElement("service_order_key")]
-        public long ServiceOrderKey { get; set; }
 
         /// <summary>
         /// 服务是否需要订购

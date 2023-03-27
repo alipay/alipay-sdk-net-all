@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceOperationBsEnrollSubmitModel : AopObject
     {
         /// <summary>
-        /// 报名参与者，支持批量传参，最大100
+        /// 报名参与者，支持批量传参，最大10
         /// </summary>
         [XmlArray("participants")]
         [XmlArrayItem("bs_enroll_participant")]

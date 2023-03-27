@@ -60,6 +60,18 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// 是否在库，0：在，1：不在
+        /// </summary>
+        [XmlElement("iot_face_status")]
+        public string IotFaceStatus { get; set; }
+
+        /// <summary>
+        /// 员工在企业人脸库的人脸唯一标识
+        /// </summary>
+        [XmlElement("iot_vid")]
+        public string IotVid { get; set; }
+
+        /// <summary>
         /// 手机号码
         /// </summary>
         [XmlElement("mobile")]
@@ -72,7 +84,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 角色列表，可选值：USER-用户；ADMIM-管理员 SUPER_ADMIN-超级管理员
+        /// 角色列表，可选值：USER-用户；ADMIM-管理员; SUPER_ADMIN-超级管理员; AGENCY_OPERATION - 代运营
         /// </summary>
         [XmlArray("role_list")]
         [XmlArrayItem("string")]

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ApplyInfoUrl { get; set; }
 
         /// <summary>
-        /// 状态枚举： APPLYING：应聘人投递，雇主未处理。 PROCESSING：雇主开始应聘流程 APPLY_SUCCESS：应聘成功 APPLY_FAILED：应聘失败
+        /// 状态枚举
         /// </summary>
         [XmlElement("apply_status")]
         public string ApplyStatus { get; set; }

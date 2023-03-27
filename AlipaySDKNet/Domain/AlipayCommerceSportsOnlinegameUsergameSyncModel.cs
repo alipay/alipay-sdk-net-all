@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceSportsOnlinegameUsergameSyncModel : AopObject
     {
         /// <summary>
+        /// 用户参赛的场次组别ID
+        /// </summary>
+        [XmlElement("game_event_id")]
+        public string GameEventId { get; set; }
+
+        /// <summary>
         /// 文体侧赛事业务号
         /// </summary>
         [XmlElement("game_id")]
@@ -34,6 +40,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 用户参赛的服务商场次组别ID
+        /// </summary>
+        [XmlElement("out_game_event_no")]
+        public string OutGameEventNo { get; set; }
+
+        /// <summary>
         /// 外部赛事业务号
         /// </summary>
         [XmlElement("out_game_no")]
@@ -46,7 +58,7 @@ namespace Aop.Api.Domain
         public string OutUserGameNo { get; set; }
 
         /// <summary>
-        /// 已参加
+        /// JOIN("JOIN", "已参加"), COMPLETED("COMPLETED", "已完成"), STOPPED("STOPPED", "未完成"),
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
@@ -80,5 +92,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_name")]
         public string UserName { get; set; }
+
+        /// <summary>
+        /// 用户参赛详情支付宝小程序跳转地址
+        /// </summary>
+        [XmlElement("user_online_detail_url")]
+        public string UserOnlineDetailUrl { get; set; }
     }
 }

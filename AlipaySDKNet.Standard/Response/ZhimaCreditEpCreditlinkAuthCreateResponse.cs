@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string BizNo { get; set; }
 
         /// <summary>
-        /// 授权有效时间
+        /// 授权有效时间,格式"yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [XmlElement("expire_time")]
         public string ExpireTime { get; set; }

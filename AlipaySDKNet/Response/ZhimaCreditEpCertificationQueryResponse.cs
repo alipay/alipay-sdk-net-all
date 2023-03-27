@@ -53,7 +53,7 @@ namespace Aop.Api.Response
         public string CertifyMode { get; set; }
 
         /// <summary>
-        /// 认证人有效证件后四位，当职业身份认证时返回
+        /// 认证人有效证件号码
         /// </summary>
         [XmlElement("certify_person_card_no_postfix")]
         public string CertifyPersonCardNoPostfix { get; set; }

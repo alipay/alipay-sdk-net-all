@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("desc")]
         public string Desc { get; set; }
+
+        /// <summary>
+        /// 参赛详情支付宝小程序跳转地址
+        /// </summary>
+        [XmlElement("detail_url")]
+        public string DetailUrl { get; set; }
 
         /// <summary>
         /// 赛事结束时间
@@ -50,6 +57,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 线上赛事场次组别信息列表
+        /// </summary>
+        [XmlArray("online_game_event_list")]
+        [XmlArrayItem("online_game_event_info")]
+        public List<OnlineGameEventInfo> OnlineGameEventList { get; set; }
 
         /// <summary>
         /// 三方赛事ID(唯一值)
@@ -98,5 +112,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_biz_type")]
         public string SubBizType { get; set; }
+
+        /// <summary>
+        /// 用户参赛结束时间
+        /// </summary>
+        [XmlElement("user_join_end_time")]
+        public string UserJoinEndTime { get; set; }
+
+        /// <summary>
+        /// 用户参赛时间
+        /// </summary>
+        [XmlElement("user_join_start_time")]
+        public string UserJoinStartTime { get; set; }
     }
 }

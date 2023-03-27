@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("tenant_name")]
         public string TenantName { get; set; }
+
+        /// <summary>
+        /// tenant_status 不唯一 表示租户状态 无枚举 被调方提供 无特殊说明
+        /// </summary>
+        [XmlElement("tenant_status")]
+        public string TenantStatus { get; set; }
     }
 }

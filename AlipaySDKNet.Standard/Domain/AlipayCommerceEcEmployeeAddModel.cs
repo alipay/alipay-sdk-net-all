@@ -18,6 +18,18 @@ namespace Aop.Api.Domain
         public List<string> DepartmentIds { get; set; }
 
         /// <summary>
+        /// 证件号码，根据employee_cert_type指定的证件类型，传入对应的证件号码，用于企业人脸库员工刷脸开通时的核验。
+        /// </summary>
+        [XmlElement("employee_cert_no")]
+        public string EmployeeCertNo { get; set; }
+
+        /// <summary>
+        /// 证件类型，用于企业人脸库员工刷脸开通时的核验， 枚举支持：IDENTITY_CARD身份证，PASS_PORT护照，STU_NUM学生学号，COMPANY_NUM工号，TAIWAN_CARD台胞证，HK_MC_CARD港澳证件
+        /// </summary>
+        [XmlElement("employee_cert_type")]
+        public string EmployeeCertType { get; set; }
+
+        /// <summary>
         /// 员工邮箱
         /// </summary>
         [XmlElement("employee_email")]
@@ -66,7 +78,19 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// 角色列表，目前只支持填一种角色，默认为USER USER 普通员工 ADMIN 管理员 SUPER_ADMIN 超级管理员
+        /// 员工刷脸加入企业人脸库时的核验方式，如果设置为business_facepay_checkall，则employee_name、employee_cert_type、employee_cert_no必传，如果不传则默认不核验。
+        /// </summary>
+        [XmlElement("iot_check_type")]
+        public string IotCheckType { get; set; }
+
+        /// <summary>
+        /// 员工在企业人脸库的人脸唯一标识，支持自定义传入，如果未传入则会默认生成
+        /// </summary>
+        [XmlElement("iot_vid")]
+        public string IotVid { get; set; }
+
+        /// <summary>
+        /// 角色列表，目前只支持填一种角色，默认为USER USER：普通员工 ADMIN：管理员
         /// </summary>
         [XmlArray("role_list")]
         [XmlArrayItem("string")]

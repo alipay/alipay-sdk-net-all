@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string RiskLevel { get; set; }
 
         /// <summary>
+        /// 规则编码
+        /// </summary>
+        [XmlElement("rule_code")]
+        public string RuleCode { get; set; }
+
+        /// <summary>
         /// 规则名称
         /// </summary>
         [XmlElement("rule_name")]

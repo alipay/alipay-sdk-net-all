@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayFundAuthorizeUniApplyModel : AopObject
     {
         /// <summary>
-        /// 超时时间，过期跳转链接失效。不传，有效期默认7天
+        /// 超时时间，过期跳转链接失效，格式为yyyy-MM-dd HH:mm。不传，有效期默认7天
         /// </summary>
         [XmlElement("apply_expire_time")]
         public string ApplyExpireTime { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public AuthBizParam AuthBizParam { get; set; }
 
         /// <summary>
-        /// 授权失效时间, 不传默认2115-01-01过期
+        /// 授权失效时间，格式为yyyy-MM-dd HH:mm。 不传默认2115-01-01 00:00过期
         /// </summary>
         [XmlElement("auth_expire_time")]
         public string AuthExpireTime { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Channel { get; set; }
 
         /// <summary>
-        /// 外部业务号
+        /// 授权申请外部业务号，用于幂等控制
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

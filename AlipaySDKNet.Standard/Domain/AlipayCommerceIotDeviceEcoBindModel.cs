@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string IdentifyType { get; set; }
 
         /// <summary>
+        /// 收钱码SN，按需写入
+        /// </summary>
+        [XmlElement("paycode_sn")]
+        public string PaycodeSn { get; set; }
+
+        /// <summary>
         /// 设备sn，与supplier_id配合作为设备识别的唯一标识;identity_type='SN'时必填
         /// </summary>
         [XmlElement("sn")]

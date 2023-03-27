@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string EpCertNo { get; set; }
 
         /// <summary>
+        /// 是否授权;true:已授权,false:未授权
+        /// </summary>
+        [XmlElement("has_authed")]
+        public bool HasAuthed { get; set; }
+
+        /// <summary>
         /// 企业标签内容列表
         /// </summary>
         [XmlArray("label_content")]

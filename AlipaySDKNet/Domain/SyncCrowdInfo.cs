@@ -11,10 +11,22 @@ namespace Aop.Api.Domain
     public class SyncCrowdInfo : AopObject
     {
         /// <summary>
-        /// 来源应用
+        /// 来源app
         /// </summary>
-        [XmlElement("auth_info")]
-        public CrowdAuthInfo AuthInfo { get; set; }
+        [XmlElement("app_name")]
+        public string AppName { get; set; }
+
+        /// <summary>
+        /// 外部app给出
+        /// </summary>
+        [XmlElement("app_token")]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// 业务code
+        /// </summary>
+        [XmlElement("biz_code")]
+        public string BizCode { get; set; }
 
         /// <summary>
         /// 操作的人群对象
@@ -24,9 +36,15 @@ namespace Aop.Api.Domain
         public List<CrowdOperations> Operations { get; set; }
 
         /// <summary>
-        /// 目标账号
+        /// 目标用户
         /// </summary>
-        [XmlElement("target")]
-        public CrowdTarget Target { get; set; }
+        [XmlElement("target_id")]
+        public string TargetId { get; set; }
+
+        /// <summary>
+        /// 目标类型
+        /// </summary>
+        [XmlElement("target_type")]
+        public string TargetType { get; set; }
     }
 }

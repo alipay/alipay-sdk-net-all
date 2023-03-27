@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayOpenServicemarketOrderQueryResponse : AopResponse
     {
         /// <summary>
+        /// true：开启；false：关闭；需要同步校验commodity_id，如果没有查询到订购信息的话，忽略该字段返回值
+        /// </summary>
+        [XmlElement("auto_upgrade")]
+        public bool AutoUpgrade { get; set; }
+
+        /// <summary>
         /// 订购服务商品ID
         /// </summary>
         [XmlElement("commodity_id")]

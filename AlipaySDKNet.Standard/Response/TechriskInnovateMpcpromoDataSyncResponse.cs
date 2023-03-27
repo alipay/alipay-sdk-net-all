@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -10,15 +11,10 @@ namespace Aop.Api.Response
     public class TechriskInnovateMpcpromoDataSyncResponse : AopResponse
     {
         /// <summary>
-        /// 商品数据列表
+        /// 校验信息列表
         /// </summary>
-        [XmlElement("data_list")]
-        public MpcpromoGoodsList DataList { get; set; }
-
-        /// <summary>
-        /// 请求链路标识，用于排查问题
-        /// </summary>
-        [XmlElement("trace_id")]
-        public string TraceId { get; set; }
+        [XmlArray("check_info_list")]
+        [XmlArrayItem("mpcpormo_data_check_info")]
+        public List<MpcpormoDataCheckInfo> CheckInfoList { get; set; }
     }
 }

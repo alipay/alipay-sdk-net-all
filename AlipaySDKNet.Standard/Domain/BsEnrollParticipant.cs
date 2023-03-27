@@ -16,7 +16,13 @@ namespace Aop.Api.Domain
         public string OutMerchantNo { get; set; }
 
         /// <summary>
-        /// 参与类型，支持PARTERN_ID 、LOGON_ID等
+        /// 报名操作返回的失败原因，入参无须填写！
+        /// </summary>
+        [XmlElement("reason")]
+        public string Reason { get; set; }
+
+        /// <summary>
+        /// 参与类型，支持PARTNER_ID 、LOGON_ID等
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }
