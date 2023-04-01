@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("main_ip_role_type")]
         public string MainIpRoleType { get; set; }
+
+        /// <summary>
+        /// 查询操作员的OPENID。类型由id_type决定，当id_type为 OPEN_ID 时，使用 open_id 的值。
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
     }
 }

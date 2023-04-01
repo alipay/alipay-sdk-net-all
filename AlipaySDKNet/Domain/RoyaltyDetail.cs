@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 支付宝分账明细单号，每笔分账业务执行的明细单号
+        /// </summary>
+        [XmlElement("detail_id")]
+        public string DetailId { get; set; }
+
+        /// <summary>
         /// 分账失败错误码，只在分账失败时返回
         /// </summary>
         [XmlElement("error_code")]

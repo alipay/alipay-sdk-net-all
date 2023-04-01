@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string FloorNum { get; set; }
 
         /// <summary>
+        /// project_id，项目唯一id
+        /// </summary>
+        [XmlElement("project_id")]
+        public string ProjectId { get; set; }
+
+        /// <summary>
         /// sn，关联的房间的sn
         /// </summary>
         [XmlElement("sn")]

@@ -121,7 +121,7 @@ namespace Aop.Api.Response
         public string RefundReason { get; set; }
 
         /// <summary>
-        /// 退分账明细信息
+        /// 退分账明细信息，当前仅在直付通产品中返回。
         /// </summary>
         [XmlArray("refund_royaltys")]
         [XmlArrayItem("refund_royalty_result")]

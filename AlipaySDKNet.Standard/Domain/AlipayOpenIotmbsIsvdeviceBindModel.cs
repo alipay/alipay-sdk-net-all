@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string RoomNum { get; set; }
 
         /// <summary>
-        /// 绑定设备使用的场景 枚举值： 1:酒店前台设备 2:刷脸开门设备 3:刷脸乘梯设备 4:刷脸门禁设备 5:刷脸闸机设备 6:刷脸就餐设备 7:公区共享设备
+        /// 绑定设备使用的场景 枚举值： 1:酒店前台设备 2:刷脸开门设备 3:刷脸乘梯设备 4:刷脸门禁设备 5:刷脸闸机设备 6:刷脸就餐设备 7:公区共享设备 8:网吧前台设备
         /// </summary>
         [XmlElement("scene_type")]
         public string SceneType { get; set; }

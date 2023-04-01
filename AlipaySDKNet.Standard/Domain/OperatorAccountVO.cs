@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("account_type")]
         public string AccountType { get; set; }
+
+        /// <summary>
+        /// 关联账号openId
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
     }
 }

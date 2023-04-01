@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string IndustryRefluxInfo { get; set; }
 
         /// <summary>
+        /// 是否进行资金冻结，用于后续分账，true表示资金冻结，false或不传表示资金不冻结
+        /// </summary>
+        [XmlElement("royalty_freeze")]
+        public string RoyaltyFreeze { get; set; }
+
+        /// <summary>
         /// 特殊场景下，允许商户指定交易展示的卖家名称
         /// </summary>
         [XmlElement("specified_seller_name")]

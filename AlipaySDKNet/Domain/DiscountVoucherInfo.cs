@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("floor_amount")]
         public string FloorAmount { get; set; }
+
+        /// <summary>
+        /// 优惠门槛信息
+        /// </summary>
+        [XmlElement("voucher_deduct_threshold_info")]
+        public VoucherDeductThresholdInfo VoucherDeductThresholdInfo { get; set; }
     }
 }

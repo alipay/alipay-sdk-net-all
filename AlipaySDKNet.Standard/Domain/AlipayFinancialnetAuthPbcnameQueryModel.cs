@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BankCode { get; set; }
 
         /// <summary>
-        /// 支行名称
+        /// 分支行名称
         /// </summary>
         [XmlElement("branch_name")]
         public string BranchName { get; set; }

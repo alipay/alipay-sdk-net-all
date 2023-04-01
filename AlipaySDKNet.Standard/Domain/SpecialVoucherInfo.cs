@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("special_amount")]
         public string SpecialAmount { get; set; }
+
+        /// <summary>
+        /// 优惠门槛信息
+        /// </summary>
+        [XmlElement("voucher_deduct_threshold_info")]
+        public VoucherDeductThresholdInfo VoucherDeductThresholdInfo { get; set; }
     }
 }

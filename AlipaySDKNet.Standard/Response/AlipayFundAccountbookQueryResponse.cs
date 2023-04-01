@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public string AccountBookId { get; set; }
 
         /// <summary>
+        /// 资金记账本关联的授权信息
+        /// </summary>
+        [XmlElement("auth_info")]
+        public AuthInfoDTO AuthInfo { get; set; }
+
+        /// <summary>
         /// 可用余额
         /// </summary>
         [XmlElement("available_amount")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ZhimaCreditPeZmgoSettleApplyModel : AopObject
     {
         /// <summary>
-        /// DEFAULT_SETTLE 默认结算模式;
+        /// DEFAULT_SETTLE 默认结算模式; PAY_TO_ZERO 支付转0元；
         /// </summary>
         [XmlElement("action_type")]
         public string ActionType { get; set; }

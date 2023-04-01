@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string BankName { get; set; }
 
         /// <summary>
+        /// USER_VOUCHER   或者DISCOUNT
+        /// </summary>
+        [XmlElement("delivery_prefer_type")]
+        public string DeliveryPreferType { get; set; }
+
+        /// <summary>
         /// 红包可能的最大金额，分
         /// </summary>
         [XmlElement("discount_max_amount")]
