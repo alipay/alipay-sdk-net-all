@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class EmployeeInfoDTO : AopObject
     {
         /// <summary>
-        /// 是否激活，可选值：ACTIVATED-已激活；UNACTIVATED-未激活；ACTIVATING-激活中
+        /// 是否激活
         /// </summary>
         [XmlElement("activate")]
         public string Activate { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// 是否在库，0：在，1：不在
+        /// 员工是否人脸在库
         /// </summary>
         [XmlElement("iot_face_status")]
         public string IotFaceStatus { get; set; }
@@ -84,7 +84,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 角色列表，可选值：USER-用户；ADMIM-管理员; SUPER_ADMIN-超级管理员; AGENCY_OPERATION - 代运营
+        /// 角色列表
         /// </summary>
         [XmlArray("role_list")]
         [XmlArrayItem("string")]

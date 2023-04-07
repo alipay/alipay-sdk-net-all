@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class IndirectContactPersonInfo : AopObject
     {
         /// <summary>
-        /// 联系人身份证号
+        /// 联系人身份证件号。 可传身份证、港澳居民来往内地通行证、港澳居民居住证、台湾居民来往大陆通行证、台湾居民居住证、护照、外国人永久居住证等证件号码，号码枚举见contact_card_type。若传身份证，需保证18位，且英文字母大写
         /// </summary>
         [XmlElement("contact_card_no")]
         public string ContactCardNo { get; set; }

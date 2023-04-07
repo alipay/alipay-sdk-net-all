@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string OnlineTime { get; set; }
 
         /// <summary>
+        /// 应用用户标识模式
+        /// </summary>
+        [XmlElement("open_id_model")]
+        public string OpenIdModel { get; set; }
+
+        /// <summary>
         /// TO_DO-未实施,DOING-实施中,TO_CONFIRM-待商户确认,CONFIRMED-商户已确认,DONE-已完成,MERCHANT_REJECTED-商户已回绝,MERCHANT_CANCELLED-商户已取消,ISV_REJECTED-服务商已回绝,ISV_CANCELLED-服务商已取消
         /// </summary>
         [XmlElement("order_status")]

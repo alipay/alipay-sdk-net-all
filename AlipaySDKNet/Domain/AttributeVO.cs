@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AttributeVO : AopObject
     {
         /// <summary>
+        /// 是否必填属性
+        /// </summary>
+        [XmlElement("is_required")]
+        public bool IsRequired { get; set; }
+
+        /// <summary>
         /// 属性值长度区间,上下限,分隔,属性组件类型是input时可用
         /// </summary>
         [XmlElement("length")]
@@ -26,12 +32,6 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("range")]
         public string Range { get; set; }
-
-        /// <summary>
-        /// 是否必填属性
-        /// </summary>
-        [XmlElement("required")]
-        public bool Required { get; set; }
 
         /// <summary>
         /// 属性组件类型,文本输入框:input,单选框:select_one,数值输入框:number_picker

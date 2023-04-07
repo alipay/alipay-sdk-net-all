@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenIotmbsIsvdeviceBindModel : AopObject
     {
         /// <summary>
-        /// 传入绑定设备的类型。 枚举值： 0:未初始化设备 1:蜻蜓前台设备 2:蜻蜓房门设备 3:蜻蜓公区设备 11:咖啡机 12:洗衣机 13:视觉货柜 14:送物机器人 15:客控音响 16:弹簧机 17:小型售货机
+        /// 传入绑定设备的类型。 枚举值： 1:蜻蜓前台设备 2:蜻蜓房门设备 3:蜻蜓公区设备 11:咖啡机 12:洗衣机 13:视觉货柜 14:送物机器人 15:客控音响 16:弹簧机 17:小型售货机
         /// </summary>
         [XmlElement("device_category")]
         public string DeviceCategory { get; set; }

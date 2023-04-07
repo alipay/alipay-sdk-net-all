@@ -31,6 +31,25 @@ namespace Aop.Api.Domain
         public string GoodsDescription { get; set; }
 
         /// <summary>
+        /// 商品详情，会展示在特定渠道(如服务市场团购业务插件的套餐明细)。
+        /// </summary>
+        [XmlElement("goods_detail")]
+        public string GoodsDetail { get; set; }
+
+        /// <summary>
+        /// 商品详情图片列表，会展示在特定渠道(如服务市场团购业务插件的头图)
+        /// </summary>
+        [XmlArray("goods_detail_images")]
+        [XmlArrayItem("string")]
+        public List<string> GoodsDetailImages { get; set; }
+
+        /// <summary>
+        /// 商品详情富文本描述
+        /// </summary>
+        [XmlElement("goods_detail_rich_description")]
+        public string GoodsDetailRichDescription { get; set; }
+
+        /// <summary>
         /// 商品名称。
         /// </summary>
         [XmlElement("goods_name")]

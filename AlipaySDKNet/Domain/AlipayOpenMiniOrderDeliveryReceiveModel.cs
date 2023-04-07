@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderDeliveryReceiveModel : AopObject
     {
         /// <summary>
-        /// 商户openId
+        /// 用户openId
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 商户UID（与openId二选一）
+        /// 用户UID（与openId二选一）
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

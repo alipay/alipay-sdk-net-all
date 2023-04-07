@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public bool PhoneNumberLimit { get; set; }
 
         /// <summary>
+        /// 下单时是否需要用户填写手机号码
+        /// </summary>
+        [XmlElement("phone_number_need_input_limit")]
+        public bool PhoneNumberNeedInputLimit { get; set; }
+
+        /// <summary>
         /// 券发放结束时间。 格式为：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("publish_end_time")]

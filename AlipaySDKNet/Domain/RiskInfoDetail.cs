@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RiskInfoDetail : AopObject
     {
         /// <summary>
+        /// 一致性ID
+        /// </summary>
+        [XmlElement("consistency_id")]
+        public string ConsistencyId { get; set; }
+
+        /// <summary>
         /// 对话下标
         /// </summary>
         [XmlElement("dialog_index")]

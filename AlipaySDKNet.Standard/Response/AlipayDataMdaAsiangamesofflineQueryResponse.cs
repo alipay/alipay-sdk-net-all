@@ -18,7 +18,7 @@ namespace Aop.Api.Response
         /// 步数绕地球圈数
         /// </summary>
         [XmlElement("ring_cnt")]
-        public long RingCnt { get; set; }
+        public string RingCnt { get; set; }
 
         /// <summary>
         /// 累计步数

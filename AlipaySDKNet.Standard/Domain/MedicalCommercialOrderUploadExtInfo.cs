@@ -24,12 +24,6 @@ namespace Aop.Api.Domain
         public string MedicalExaminationUser { get; set; }
 
         /// <summary>
-        /// 商家小程序appId
-        /// </summary>
-        [XmlElement("mini_app_id")]
-        public string MiniAppId { get; set; }
-
-        /// <summary>
         /// 当订单状态为“已退款”、“部分退款”时必填，单位为元，不能大于订单金额，精确到小数点后2位
         /// </summary>
         [XmlElement("refund_amount")]

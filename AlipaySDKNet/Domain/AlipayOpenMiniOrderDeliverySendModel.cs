@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public long FinishAllDelivery { get; set; }
 
         /// <summary>
-        /// 商户openId
+        /// 用户openId
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 由商家自定义，64个字符以内，仅支持字母、数字、下划线且需保证在商户端不重复。
+        /// 由商家自定义，64个字符以内，仅支持字母、数字、下划线且需保证在商户端不重复。order_id、out_order_id，二选一
         /// </summary>
         [XmlElement("out_order_id")]
         public string OutOrderId { get; set; }
@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string ShipDoneTime { get; set; }
 
         /// <summary>
-        /// 商户UID（与openId二选一）
+        /// 用户UID（与openId二选一）
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

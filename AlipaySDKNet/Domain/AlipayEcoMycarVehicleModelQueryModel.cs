@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayEcoMycarVehicleModelQueryModel : AopObject
     {
         /// <summary>
+        /// 业务场景：基础(BASE)、租车（RENT_CAR） 可为空，为空默认“BASE”
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
+        /// <summary>
         /// 查询结束时间，开区间，格式为「yyyy-MM-dd HH:mm:ss」，不传默认当前时间
         /// </summary>
         [XmlElement("end_date")]

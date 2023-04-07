@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string LabelCategory { get; set; }
 
         /// <summary>
+        /// 标签代码
+        /// </summary>
+        [XmlElement("label_code")]
+        public string LabelCode { get; set; }
+
+        /// <summary>
         /// 标签解释说明
         /// </summary>
         [XmlElement("label_definition")]

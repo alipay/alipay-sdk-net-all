@@ -16,7 +16,13 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 截止日期。支持yyyy-MM-dd和yyyy-MM-dd HH:mm:ss两种格式
+        /// 员工id
+        /// </summary>
+        [XmlElement("employee_id")]
+        public string EmployeeId { get; set; }
+
+        /// <summary>
+        /// 截止日期
         /// </summary>
         [XmlElement("end_date")]
         public string EndDate { get; set; }
@@ -34,19 +40,19 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 页数。本参数为空或小于1默认显示第一页；如果输入的值大于总页数，则返回最后一页数据。
+        /// 页码
         /// </summary>
         [XmlElement("page_num")]
         public string PageNum { get; set; }
 
         /// <summary>
-        /// 每页大小。本参数为空或小于1默认20条；超过20条默认按20条查询；不足20条则按实际记录数返回。
+        /// 每页大小
         /// </summary>
         [XmlElement("page_size")]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// 起始日期。支持yyyy-MM-dd和yyyy-MM-dd HH:mm:ss两种格式
+        /// 起始日期
         /// </summary>
         [XmlElement("start_date")]
         public string StartDate { get; set; }

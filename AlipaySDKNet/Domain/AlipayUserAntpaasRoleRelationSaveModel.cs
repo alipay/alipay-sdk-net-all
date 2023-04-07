@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public bool AlipayUserOccupiedAutoDelete { get; set; }
 
         /// <summary>
+        /// 扩展参数
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 可为enable/delete, 表示存储/删除绑定关系
         /// </summary>
         [XmlElement("op_type")]

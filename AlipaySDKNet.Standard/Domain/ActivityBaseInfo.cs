@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("code_mode")]
         public string CodeMode { get; set; }
+
+        /// <summary>
+        /// 外部活动ID
+        /// </summary>
+        [XmlElement("out_activity_id")]
+        public string OutActivityId { get; set; }
     }
 }
