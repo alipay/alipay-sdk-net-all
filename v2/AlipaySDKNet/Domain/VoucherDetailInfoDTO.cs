@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 其他出资，非交易本商家
+        /// 其他出资，非交易商家
         /// </summary>
         [XmlElement("other_contribute")]
         public string OtherContribute { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string PurchaseAntContribute { get; set; }
 
         /// <summary>
-        /// 购买该张券的资金中买家自已出资的部分
+        /// 购买该张券的资金中买家自己出资的部分
         /// </summary>
         [XmlElement("purchase_buyer_contribute")]
         public string PurchaseBuyerContribute { get; set; }

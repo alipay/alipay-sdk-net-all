@@ -36,6 +36,18 @@ namespace Aop.Api.Domain
         public List<string> CreditAssetTypes { get; set; }
 
         /// <summary>
+        /// 授权场景码
+        /// </summary>
+        [XmlElement("mybk_auth_scene_code")]
+        public string MybkAuthSceneCode { get; set; }
+
+        /// <summary>
+        /// 授权令牌
+        /// </summary>
+        [XmlElement("mybk_auth_token")]
+        public string MybkAuthToken { get; set; }
+
+        /// <summary>
         /// 交易订单信息，JSON数组格式的***字符串***，用于描述交易订单详情。再次强调，该字段是字符串形式，用于当做订单扩展使用。序列化整个请求的时候，这个字段一定要是字符串类型，只不过该字段产生，需要将订单List额外进行一次json序列化
         /// </summary>
         [XmlElement("order_infos")]

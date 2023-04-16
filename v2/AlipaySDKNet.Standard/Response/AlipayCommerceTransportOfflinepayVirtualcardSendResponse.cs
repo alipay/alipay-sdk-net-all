@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// 支付宝用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 请求失败时返回的子错误码信息
         /// </summary>
         [XmlElement("sub_error_code")]

@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class DeliveryInfoDTO : AopObject
     {
         /// <summary>
-        /// 232
+        /// HZABC https://opendocs.alipay.com/mini/00au7e
         /// </summary>
         [XmlElement("delivery_id")]
         public string DeliveryId { get; set; }
 
         /// <summary>
-        /// 是 商品信息
+        /// 商品信息
         /// </summary>
         [XmlArray("item_info_list")]
         [XmlArrayItem("goods_item_d_t_o")]

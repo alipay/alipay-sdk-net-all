@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -42,8 +43,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// sku销售属性
         /// </summary>
-        [XmlElement("sku_attrs")]
-        public ItemSkuAttrVO SkuAttrs { get; set; }
+        [XmlArray("sku_attrs")]
+        [XmlArrayItem("item_sku_attr_v_o")]
+        public List<ItemSkuAttrVO> SkuAttrs { get; set; }
 
         /// <summary>
         /// 支付宝平台侧商品sku的唯一标识，后续与平台交互，需要使用该 ID，建议持久化。

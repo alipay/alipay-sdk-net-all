@@ -16,19 +16,19 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 小程序交易组件交易号,和商家自定义交易号二选一
+        /// 交易组件订单号,和商家自定义交易号二选一
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 商家自定义交易号，和小程序交易组件交易号二选一
+        /// 商家自定义订单号，和小程序交易组件交易号二选一
         /// </summary>
         [XmlElement("out_order_id")]
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 用户user_id，和open_id二选一
+        /// 用户user_id
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

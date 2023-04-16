@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 用户UID（与openId二选一）
+        /// 用户UID
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

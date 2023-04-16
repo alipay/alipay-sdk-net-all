@@ -11,12 +11,6 @@ namespace Aop.Api.Domain
     public class PayInfoVO : AopObject
     {
         /// <summary>
-        /// 0: 支付类型
-        /// </summary>
-        [XmlElement("pay_method_type")]
-        public string PayMethodType { get; set; }
-
-        /// <summary>
         /// 付款时间，yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("pay_time")]

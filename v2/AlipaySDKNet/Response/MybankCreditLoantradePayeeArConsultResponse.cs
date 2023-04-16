@@ -22,6 +22,12 @@ namespace Aop.Api.Response
         public string AdmitAlipayLoginId { get; set; }
 
         /// <summary>
+        /// 准入支付宝UID-映射开放id
+        /// </summary>
+        [XmlElement("admit_alipay_open_id")]
+        public string AdmitAlipayOpenId { get; set; }
+
+        /// <summary>
         /// 准入支付宝UID
         /// </summary>
         [XmlElement("admit_alipay_user_id")]

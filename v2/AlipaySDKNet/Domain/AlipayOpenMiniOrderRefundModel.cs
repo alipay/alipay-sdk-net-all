@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,13 +11,20 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderRefundModel : AopObject
     {
         /// <summary>
-        /// 用户open_id,和user_id二选一
+        /// 部分商品退款信息
+        /// </summary>
+        [XmlArray("item_infos")]
+        [XmlArrayItem("mini_refund_goods_info_d_t_o")]
+        public List<MiniRefundGoodsInfoDTO> ItemInfos { get; set; }
+
+        /// <summary>
+        /// 用户open_id
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 订单ID
+        /// 交易组件订单号
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
@@ -34,19 +42,19 @@ namespace Aop.Api.Domain
         public string OutRefundId { get; set; }
 
         /// <summary>
-        /// 退款金额
+        /// 退款金额,单位"元"
         /// </summary>
         [XmlElement("refund")]
         public string Refund { get; set; }
 
         /// <summary>
-        /// 退款原因说明。 商家自定义，将在会在商户和用户的pc退款账单详情中展示
+        /// 退款原因说明。 商家自定义，将会在商户和用户的pc退款账单详情中展示
         /// </summary>
         [XmlElement("refund_reason")]
         public string RefundReason { get; set; }
 
         /// <summary>
-        /// 用户UID（与openId二选一）
+        /// 用户UID
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

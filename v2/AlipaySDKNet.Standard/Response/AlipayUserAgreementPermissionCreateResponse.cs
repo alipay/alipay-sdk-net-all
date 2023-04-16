@@ -25,5 +25,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("effective_time_start")]
         public string EffectiveTimeStart { get; set; }
+
+        /// <summary>
+        /// 消息是否发送成功
+        /// </summary>
+        [XmlElement("is_success_send")]
+        public bool IsSuccessSend { get; set; }
     }
 }

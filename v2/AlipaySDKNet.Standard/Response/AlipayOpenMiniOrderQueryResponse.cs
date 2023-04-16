@@ -34,16 +34,16 @@ namespace Aop.Api.Response
         public DeliveryDetailInfoVO DeliveryDetail { get; set; }
 
         /// <summary>
-        /// 订单类型：0，普通单，1，二级商户单
+        /// 订单类型
         /// </summary>
-        [XmlElement("fund_type")]
-        public long FundType { get; set; }
+        [XmlElement("merchant_biz_type")]
+        public string MerchantBizType { get; set; }
 
         /// <summary>
-        /// 用户的openid
+        /// 用户openId
         /// </summary>
-        [XmlElement("openid")]
-        public string Openid { get; set; }
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 订单详细数据
@@ -52,7 +52,7 @@ namespace Aop.Api.Response
         public OrderDetailInfoVO OrderDetail { get; set; }
 
         /// <summary>
-        /// 商家自定义订单ID(字符集包括大小写字幕数字，长度小于128个字符）
+        /// 商家自定义订单ID(字符仅支持下划线字母数字，长度小于128个字符）
         /// </summary>
         [XmlElement("out_order_id")]
         public string OutOrderId { get; set; }
@@ -67,7 +67,7 @@ namespace Aop.Api.Response
         /// 确认收货时间，秒级时间戳，fund_type = 1且确认收货之后存在
         /// </summary>
         [XmlElement("receive_time")]
-        public long ReceiveTime { get; set; }
+        public string ReceiveTime { get; set; }
 
         /// <summary>
         /// 退款信息
@@ -76,15 +76,21 @@ namespace Aop.Api.Response
         public RefundInfoVO RefundInfo { get; set; }
 
         /// <summary>
-        /// 下单场景值
+        /// normal：即时到账  extended：账期结算
         /// </summary>
-        [XmlElement("scene")]
-        public string Scene { get; set; }
+        [XmlElement("settle_type")]
+        public string SettleType { get; set; }
 
         /// <summary>
         /// 订单状态
         /// </summary>
         [XmlElement("status")]
-        public long Status { get; set; }
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

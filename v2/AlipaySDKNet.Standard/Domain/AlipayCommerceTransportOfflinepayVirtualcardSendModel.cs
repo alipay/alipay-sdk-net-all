@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string LastUpdateTime { get; set; }
 
         /// <summary>
+        /// 支付宝用户id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 子动作类型。取值为：VERIFY：表示核销；EXPIRE：表示过期
         /// </summary>
         [XmlElement("sub_action")]

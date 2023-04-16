@@ -52,19 +52,13 @@ namespace Aop.Api.Domain
         public LogisticsInfoDTO DeliveryDetail { get; set; }
 
         /// <summary>
-        /// 暂不支持 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm:ss。 注：time_expire和timeout_express两者只需传入一个或者都不传，如果两者都传，优先使用time_expire。
-        /// </summary>
-        [XmlElement("expire_time")]
-        public string ExpireTime { get; set; }
-
-        /// <summary>
         /// 订单扩展字段
         /// </summary>
         [XmlElement("ext_info")]
         public MiniOrderExtInfoDTO ExtInfo { get; set; }
 
         /// <summary>
-        /// 订单类型, KX_SHOPPING:电商购物 WASH_PROTECT_ON_LINE:洗护
+        /// 订单类型
         /// </summary>
         [XmlElement("merchant_biz_type")]
         public string MerchantBizType { get; set; }
@@ -76,13 +70,13 @@ namespace Aop.Api.Domain
         public MiniOrderDetailDTO OrderDetail { get; set; }
 
         /// <summary>
-        /// 外部商家由商家自定义，64个字符以内，仅支持字母、数字、下划线且需保证在商户端不重复。
+        /// 由商家自定义，64个字符以内，仅支持字母、数字、下划线且需保证在商户端不重复。
         /// </summary>
         [XmlElement("out_order_id")]
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 是 商家小程序对应的订单详情页路径地址 value。仅需传入小程序页面路径即可。同一笔订单的链接必须与第一次传入的地址相同，且需是小程序内部页面路径，例如：/pages/index/index?orderId=10190608609185。
+        /// 商家小程序对应的订单详情页路径地址 value。仅需传入小程序页面路径即可。同一笔订单的链接必须与第一次传入的地址相同，且需是小程序内部页面路径，例如：/pages/index/index?orderId=10190608609185。
         /// </summary>
         [XmlElement("path")]
         public string Path { get; set; }
@@ -94,7 +88,7 @@ namespace Aop.Api.Domain
         public string SellerId { get; set; }
 
         /// <summary>
-        /// 订单相对超时时间。从交易创建时间开始计算。 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。 当面付场景默认值为3h。 注：time_expire和timeout_express两者只需传入一个或者都不传，如果两者都传，优先使用time_expire。
+        /// 订单相对超时时间。从交易创建时间开始计算。 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。 当面付场景默认值为3h。
         /// </summary>
         [XmlElement("timeout_express")]
         public string TimeoutExpress { get; set; }

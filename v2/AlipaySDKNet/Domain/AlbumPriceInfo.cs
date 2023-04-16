@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlbumPriceInfo : AopObject
     {
         /// <summary>
-        /// 专辑实际待支付价格，单位元，最多两位小数。收费专辑必填。
+        /// 已废弃。营销活动实际价格填写在promo_info中的discount_price
         /// </summary>
         [XmlElement("actual_price")]
         public string ActualPrice { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 专辑原价（划线价），非实际需支付金额。单位元，最多两位小数。收费专辑必填。
+        /// 专辑原价。单位元，最多两位小数。收费专辑必填。
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }

@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_price")]
         public string OrderPrice { get; set; }
+
+        /// <summary>
+        /// 实收金额，商家在交易中实际收到的款项，单位为人民币（元），支持小数点后两位
+        /// </summary>
+        [XmlElement("receipt_amount")]
+        public string ReceiptAmount { get; set; }
     }
 }

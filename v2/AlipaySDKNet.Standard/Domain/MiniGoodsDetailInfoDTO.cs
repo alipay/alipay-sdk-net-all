@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string GoodsCategory { get; set; }
 
         /// <summary>
-        /// 商品的编号，该参数传入支付券上绑定商品goods_id, 倘若无支付券需要消费，该字段传入商品最小粒度的商品ID（如：若商品有sku粒度，则传out_sku_id）
+        /// 商品的编号，该参数传入支付券上绑定商品goods_id, 倘若无支付券需要消费，该字段传入商品最小粒度的商品ID（如：若商品有sku粒度，则传商户sku粒度的ID）
         /// </summary>
         [XmlElement("goods_id")]
         public string GoodsId { get; set; }
@@ -52,13 +52,13 @@ namespace Aop.Api.Domain
         public string ItemCnt { get; set; }
 
         /// <summary>
-        /// 商家商品Id，提报商品库的商品，该字段必传
+        /// 提报商品库的商品，若有外部商品sku_id则必传
         /// </summary>
         [XmlElement("out_item_id")]
         public string OutItemId { get; set; }
 
         /// <summary>
-        /// 商家商品out_sku_id，提报商品库的商品，该字段必传
+        /// 提报商品库的商品，sku维度的商品该字段必传
         /// </summary>
         [XmlElement("out_sku_id")]
         public string OutSkuId { get; set; }

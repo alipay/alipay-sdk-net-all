@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AnttechAiCvRsXytileGetModel : AopObject
     {
         /// <summary>
+        /// 用于描述不同的业务场景
+        /// </summary>
+        [XmlElement("biz_name")]
+        public string BizName { get; set; }
+
+        /// <summary>
         /// 101：玉米 115：大豆 147：水稻
         /// </summary>
         [XmlElement("crow_type")]
@@ -26,6 +32,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("index")]
         public string Index { get; set; }
+
+        /// <summary>
+        /// 101：玉米 115：大豆 147：水稻
+        /// </summary>
+        [XmlElement("object_type")]
+        public string ObjectType { get; set; }
+
+        /// <summary>
+        /// 查询参数
+        /// </summary>
+        [XmlElement("query_params")]
+        public string QueryParams { get; set; }
 
         /// <summary>
         /// 瓦片x

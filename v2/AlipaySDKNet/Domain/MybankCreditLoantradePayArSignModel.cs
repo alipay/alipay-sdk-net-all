@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class MybankCreditLoantradePayArSignModel : AopObject
     {
         /// <summary>
+        /// 用户支付宝ID-映射开放id
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 用户支付宝ID
         /// </summary>
         [XmlElement("alipay_user_id")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("site")]
         public string Site { get; set; }
+
+        /// <summary>
+        /// 根据站点的用户id，如果站点是淘宝或者天猫卖家，此处当填sellerId
+        /// </summary>
+        [XmlElement("site_open_id")]
+        public string SiteOpenId { get; set; }
 
         /// <summary>
         /// 根据站点的用户id，如果站点是淘宝或者天猫卖家，此处当填sellerId

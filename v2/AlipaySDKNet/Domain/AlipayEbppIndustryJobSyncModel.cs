@@ -110,7 +110,7 @@ namespace Aop.Api.Domain
         public string JobType { get; set; }
 
         /// <summary>
-        /// 岗位是否要求应聘人有芝麻工作证。  枚举值： MUST：必须有芝麻工作证 RECOMMEND：优先考虑有芝麻工作证 NO_REQ：不要求芝麻工作证  如果还没有对接芝麻工作证，则传NO_REQ，等对接后再调整。
+        /// 岗位是否要求应聘人有芝麻工作证。  枚举值： RECOMMEND：优先考虑有芝麻工作证 NO_REQ：不要求芝麻工作证  如果还没有对接芝麻工作证，则传NO_REQ，等对接后再调整。
         /// </summary>
         [XmlElement("job_worth_req")]
         public string JobWorthReq { get; set; }

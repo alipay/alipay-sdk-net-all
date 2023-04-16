@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 业务参数，如果notice_template是SERVIOCE_NOTICE时，此参数必传
+        /// </summary>
+        [XmlElement("business_params")]
+        public BusinessParamsMap BusinessParams { get; set; }
+
+        /// <summary>
+        /// 目前共两种类型SERVIOCE_NOTICE和DEFAULT_PERMISSION，如果是服务变更提醒，需传入SERVIOCE_NOTICE
+        /// </summary>
+        [XmlElement("notice_template")]
+        public string NoticeTemplate { get; set; }
+
+        /// <summary>
         /// 商户请求号。 由商家自定义，64个字符以内，仅支持字母、数字、下划线且需保证在商户端不重复。
         /// </summary>
         [XmlElement("out_request_no")]

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ChannelTag { get; set; }
 
         /// <summary>
+        /// 是否签约数据授权,签约=Y,不签约=N
+        /// </summary>
+        [XmlElement("is_sign_data_auth")]
+        public string IsSignDataAuth { get; set; }
+
+        /// <summary>
         /// 请求幂等控制ID
         /// </summary>
         [XmlElement("request_id")]

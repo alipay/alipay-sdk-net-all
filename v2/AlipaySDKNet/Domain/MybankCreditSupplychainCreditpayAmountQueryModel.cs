@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public string ChannelTag { get; set; }
 
         /// <summary>
+        /// 授权场景码
+        /// </summary>
+        [XmlElement("mybk_auth_scene_code")]
+        public string MybkAuthSceneCode { get; set; }
+
+        /// <summary>
+        /// 授权令牌
+        /// </summary>
+        [XmlElement("mybk_auth_token")]
+        public string MybkAuthToken { get; set; }
+
+        /// <summary>
         /// Trace信息
         /// </summary>
         [XmlElement("trace_id")]

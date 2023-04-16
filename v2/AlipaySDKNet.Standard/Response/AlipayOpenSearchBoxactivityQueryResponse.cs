@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string BackgroundWord { get; set; }
 
         /// <summary>
+        /// 底纹词信息
+        /// </summary>
+        [XmlElement("background_word_info")]
+        public BackgroundWordInfo BackgroundWordInfo { get; set; }
+
+        /// <summary>
         /// 搜索直达活动id
         /// </summary>
         [XmlElement("box_activity_id")]
