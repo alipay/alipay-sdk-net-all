@@ -1,0 +1,106 @@
+# AlipaySDKNet.OpenAPI.Api.AlipayOpenMiniTemplateUsageApi
+
+All URIs are relative to *https://openapi.alipay.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**Query**](AlipayOpenMiniTemplateUsageApi.md#query) | **GET** /v3/alipay/open/mini/template/usage/query | 查询使用模板的小程序列表
+
+
+<a name="query"></a>
+# **Query**
+> AlipayOpenMiniTemplateUsageQueryResponseModel Query (string templateId = null, int? pageNum = null, int? pageSize = null, string templateVersion = null, string bundleId = null)
+
+查询使用模板的小程序列表
+
+查询使用模板的小程序列表
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using AlipaySDKNet.OpenAPI.Api;
+using AlipaySDKNet.OpenAPI.Client;
+using AlipaySDKNet.OpenAPI.Model;
+using AlipaySDKNet.OpenAPI.Util;
+using AlipaySDKNet.OpenAPI.Util.Model;
+
+namespace Example
+{
+    public class QueryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://openapi.alipay.com";
+            var apiInstance = new AlipayOpenMiniTemplateUsageApi(config);
+
+            // 设置alipayConfig参数
+            AlipayConfig alipayConfig = new AlipayConfig();
+            alipayConfig.AppId = "app_id";
+            alipayConfig.PrivateKey = "private_key";
+            // 密钥模式
+            alipayConfig.AlipayPublicKey = "alipay_public_key";
+            // 证书模式
+            // alipayConfig.AppCertPath = "../appCertPublicKey.crt";
+            // alipayConfig.AlipayPublicCertPath = "../alipayCertPublicKey_RSA2.crt";
+            // alipayConfig.RootCertPath = "../alipayRootCert.crt";
+            alipayConfig.EncryptKey = "encrypt_key";
+            AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
+            apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
+
+            var templateId = 1;  // string | 小程序模板APPID (optional) 
+            var pageNum = 1;  // int? | 查询的页数，起始为 1（第一页） 。默认第一页。 (optional) 
+            var pageSize = 10;  // int? | 每页的数量，最多查询50个，默认查询10个 (optional) 
+            var templateVersion = 0.0.1;  // string | 模板小程序的版本号 (optional) 
+            var bundleId = com.alipay.alipaywallet;  // string | 小程序投放的端参数，例如投放到支付宝钱包是支付宝端。默认支付宝端。支持： com.alipay.alipaywallet:支付宝端； com.alipay.iot.xpaas：支付宝IoT端。 (optional) 
+
+            try
+            {
+                // 查询使用模板的小程序列表
+                AlipayOpenMiniTemplateUsageQueryResponseModel result = apiInstance.Query(templateId, pageNum, pageSize, templateVersion, bundleId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling AlipayOpenMiniTemplateUsageApi.Query: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **templateId** | **string**| 小程序模板APPID | [optional] 
+ **pageNum** | **int?**| 查询的页数，起始为 1（第一页） 。默认第一页。 | [optional] 
+ **pageSize** | **int?**| 每页的数量，最多查询50个，默认查询10个 | [optional] 
+ **templateVersion** | **string**| 模板小程序的版本号 | [optional] 
+ **bundleId** | **string**| 小程序投放的端参数，例如投放到支付宝钱包是支付宝端。默认支付宝端。支持： com.alipay.alipaywallet:支付宝端； com.alipay.iot.xpaas：支付宝IoT端。 | [optional] 
+
+### Return type
+
+**AlipayOpenMiniTemplateUsageQueryResponseModel**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | common response |  -  |
+| **0** | 请求失败 |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

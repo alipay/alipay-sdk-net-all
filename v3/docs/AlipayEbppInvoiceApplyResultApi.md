@@ -1,0 +1,98 @@
+# AlipaySDKNet.OpenAPI.Api.AlipayEbppInvoiceApplyResultApi
+
+All URIs are relative to *https://openapi.alipay.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**Sync**](AlipayEbppInvoiceApplyResultApi.md#sync) | **POST** /v3/alipay/ebpp/invoice/apply/result/sync | ISV向支付宝同步发票申请结果
+
+
+<a name="sync"></a>
+# **Sync**
+> AlipayEbppInvoiceApplyResultSyncResponseModel Sync (AlipayEbppInvoiceApplyResultSyncModel alipayEbppInvoiceApplyResultSyncModel = null)
+
+ISV向支付宝同步发票申请结果
+
+ISV向支付宝同步发票申请结果
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using AlipaySDKNet.OpenAPI.Api;
+using AlipaySDKNet.OpenAPI.Client;
+using AlipaySDKNet.OpenAPI.Model;
+using AlipaySDKNet.OpenAPI.Util;
+using AlipaySDKNet.OpenAPI.Util.Model;
+
+namespace Example
+{
+    public class SyncExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://openapi.alipay.com";
+            var apiInstance = new AlipayEbppInvoiceApplyResultApi(config);
+
+            // 设置alipayConfig参数
+            AlipayConfig alipayConfig = new AlipayConfig();
+            alipayConfig.AppId = "app_id";
+            alipayConfig.PrivateKey = "private_key";
+            // 密钥模式
+            alipayConfig.AlipayPublicKey = "alipay_public_key";
+            // 证书模式
+            // alipayConfig.AppCertPath = "../appCertPublicKey.crt";
+            // alipayConfig.AlipayPublicCertPath = "../alipayCertPublicKey_RSA2.crt";
+            // alipayConfig.RootCertPath = "../alipayRootCert.crt";
+            alipayConfig.EncryptKey = "encrypt_key";
+            AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
+            apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
+
+            var alipayEbppInvoiceApplyResultSyncModel = new AlipayEbppInvoiceApplyResultSyncModel(); // AlipayEbppInvoiceApplyResultSyncModel |  (optional) 
+
+            try
+            {
+                // ISV向支付宝同步发票申请结果
+                AlipayEbppInvoiceApplyResultSyncResponseModel result = apiInstance.Sync(alipayEbppInvoiceApplyResultSyncModel);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling AlipayEbppInvoiceApplyResultApi.Sync: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **alipayEbppInvoiceApplyResultSyncModel** | **AlipayEbppInvoiceApplyResultSyncModel**|  | [optional] 
+
+### Return type
+
+**AlipayEbppInvoiceApplyResultSyncResponseModel**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | common response |  -  |
+| **0** | 请求失败 |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
