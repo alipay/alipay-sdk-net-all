@@ -41,25 +41,24 @@ namespace AlipaySDKNet.OpenAPI.Test.Api
         private GenericExecuteApi api;
 
         private String privateKey =
-            "MIIEogIBAAKCAQEAgyfCUS7eDw4+ce4wGTvfXcJd1QXg79r+eeRWTFJako9Hu2pjY3f8k36vBW3n9usMPnQNaCoXvskqIogYfD1q3fvRhkdwa+i7lVZ2o3hb41a4BRr9tleIGj9Wshi1MbKarkcCvHFA2cWUGW+KXxffeIJ7qB28w3QjWLj2+WHoQ8K1Ll0jachKA8DCRYVs7Pfy4Yh8woUbI3LpMD6L81Mvcle319/9F72UKI+uXq6tVzwUZlh3UacRszD20XtWU6CiPWnqXV94k1euwCD52DTnS0FI4QdlOjKi1BlBlAdRKYxRj2Y55u7ADaDwPyyAs2kAoDOu4tIJInaZXzyxYzFmewIDAQABAoIBAFqM1bT1FazxWZ2RJDYXxyRVcDEFyQHwgWcohYhWB2BOeejkD9B547D1cuLduZwZNa/csfDrts8q1eNXcQg94w11sXfy1KQ7317AflJoY5B2q8AinW4JytbMSg/VzSuNswuFzVbLHkn8Bj71amQy+D+cXsF4Hn4XLdwwf5s3xIMa6h8JJwBPUyyZe43iL8tqbN9/u4Plj168x9xuSo73X0l+RKnhyt7z06lP+ToYhX5AMO6wCbX+SwfF5+BMrxLEFeI2EkaifYkBjnOLKo79xROuxOsLgsJI0sLbZ5KYqit3TxuOMAOje/oo185dsL7NXHbANyC3w24IEn8v4ZBFizkCgYEAxCbaK6w68YJ3rY1iVikcu2Q1F+zyt85VVqigYzf1ieRjDH8P6g66wgpNTvrOQc34iHRGoEXeNGml8vlf/FSzMp5ELrr9TJ06uALnPGbcCDiVkLObiw6YTjfltYDSROGgauUjowvCxu37V1bYw0389AUyyEYeLTtwovj8yL8BXicCgYEAqywfM/RC9CtfiqqDtDPC6Li8ON6M5f4oz6T8nG1vaS43ZZz/mIzaAG60VGQTeorD1NMny7rtsl9Kxyg2g0AMWjdmY05Nwd5YFHcAr5MTyfGrZL+BDxPwQXooQG95TLv3c3pe27aEexYJBFZYtmIiXxWyCXb6DJsxtLRwUwH8/Y0CgYA3BrMzhzht4ezS6hPJGfVueFkQoi8g8ygrjFiaHOuryD8lFUwQnBs2Lg+r9V4BRdfP59acRZ1lVLHyLJUJw3UV4SI9fcVrRbxgPKhD4JMfV0hV9JzQ8MI3RyUQutfB7Q3Ejw1lQvpcNgzJXpqmh21Lw12Qo2L5y2/4uCKp6jNnBwKBgEEtCayEo0HJihWIm6Fv3BU00iZtRwUD45I85hrB6JwKBvnf78qsRw3HGU7Q1EHiuHI+/HYsdPloI1b1ztvm9U0crxW86QqamLsiHNa9j9li9bnk2UVeeCrWUqFGUM+Q+sWzoI7UTll3qHNIVXsMnr3JywKjlM5cAW8nDWXt6eC5AoGADikCGnQINNGBQn85vbpc835+TEnde2oZEjBnEUcypydx+TGH8bLF/WFEKxnPGXo+bdOFA+nRFPy/TZPIoMjAWwfbMjkIkKPXtz30+p70ueNAFz5/9jhxMcxTrwCnAWhSgb6+qB0YUwsIeZAfAgnAYeZbXSByihfcafcyke1ArnA=";
+            "";
 
         private String publicKey =
-            "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgyfCUS7eDw4+ce4wGTvfXcJd1QXg79r+eeRWTFJako9Hu2pjY3f8k36vBW3n9usMPnQNaCoXvskqIogYfD1q3fvRhkdwa+i7lVZ2o3hb41a4BRr9tleIGj9Wshi1MbKarkcCvHFA2cWUGW+KXxffeIJ7qB28w3QjWLj2+WHoQ8K1Ll0jachKA8DCRYVs7Pfy4Yh8woUbI3LpMD6L81Mvcle319/9F72UKI+uXq6tVzwUZlh3UacRszD20XtWU6CiPWnqXV94k1euwCD52DTnS0FI4QdlOjKi1BlBlAdRKYxRj2Y55u7ADaDwPyyAs2kAoDOu4tIJInaZXzyxYzFmewIDAQAB";
+            "";
 
         public OperationApiTests(ITestOutputHelper output)
         {
             this.output = output;
             instance = new AlipayTradeApi();
             AlipayConfig alipayConfig = new AlipayConfig();
-            // alipayConfig.ServerUrl = "http://ptsv2.com";
-            // alipayConfig.AppId = "2021003126691367";
+            // alipayConfig.AppId = "";
             // alipayConfig.PrivateKey = "";
             // alipayConfig.AlipayPublicKey = "";
             // alipayConfig.EncryptKey = "";
 
-            alipayConfig.AppId = "2021003156675030";
+            alipayConfig.AppId = "";
             alipayConfig.PrivateKey =
-                "MIIEowIBAAKCAQEAi2ntiLHTJ4r2uc+VgcSqU6OLg0OWhXFBiaviWjthGFhY09Abs62T+ZbQVEsk2wFFRufPQ53mt7B/mZy/vCPsRykRVd+qSOkSwsmppp08lrs+mWW9N3fEzS2XnSiHkPZarVDdOmVEc8Qz8RSuLKdeBI/Q61Ly3MkCn8vn1zfa07JlSKES8IB+QRJywHqUA2M3Ty05N3SI5fNIHwnI2gdn8Z1LxXJWpJIUYlkde+iNe/YYTUirFQPyejqLNZnd3cOqMbeXM0v/4o8OB7w/SyyvFZgkBVjVrmhCNPbYzRjXtNvNPAfmt9A+BThuhsROBiWOClERUqOqL7C0yRHCia2bgQIDAQABAoIBAB82B8eih/NCWRogLwhuTvOKmaE5cGlPgaygnnw07vfUT46b+JexNH+cE+fLKuUc07WcD/rDTvOwv+BUB1jHcg48U3U2LZlFFL4nB6QVb4sPQGR3MnVIivakTl0QxcjeXk6O2/hG05xXQImoZ5X3okTDLbKBT32+QqgjrjOwfX0HDCUwDhrCcJ844uMdGVOE42IwkPh+4z66rKQL+0bm+jIsy9ZaQKVuzu588d0/kayO+RJxPme+Id57y8ZmezptUMIT0buzakK/Dhui1/JOMuNQVuf+Bbi3KU/JXenyIfZPxFl4DihJ1XW0MtbaRyjp33GPGWPOwzuO9oRVNRLb5UECgYEA8TenDyqD+85kLLsxqLsh46XUKxzWJRQ0QrJjjYwwZmEM2ZzjJpdwWjpA31bZiU8FZQDkkpRAOVjx9ZiHzSFlQYxTDQKYz9/Auwwe8TQff08DUWoD5CIo7/Fw4mPriTzcUwT96nZWxxVVORCkuWmytsu+GLOxAkPlL2Qfdg9AWW8CgYEAk/UgNCkVKD8luNRuHGfVKsdt8BMVZCPb20q4HEQHkA++izqZZRlsv4IPTZm6KsTMT1SWDXVhAg2AzEr0cd8duZ3GdmCgqIFjG4U6sfGJDEtpF/mbDi9WdQn3oBbSFsQueKhx+7EA5uSNWq1zFl671nyTVqafVw99mJmBWXVigg8CgYANHiWroXhD/VldRWDR+DtDkgUTwyGyKoMdDW50iCcpqiV0wB9qPdoSThCxFJwH55A3ifDkN8O2Wqvt2zmnYiWLhwINNxLwWw60HVihbWA5ICbiCo3jnifzxIGLDjwE3pZsvVzBn2XgtbxIuir7GlBpuHLCDSOXJ/ISvbMoTHQHaQKBgA+ZouGdC0wJDHMmgs2f7Qvrpx3PBUxfs4i1oh/o1FtOLasEbLQKMDso/XATK1vjEB+1LXUR0T6kKdZgeNGg0sOFbS2CFq5tpgN60qt8ahTPxq7udHjUaOtCN8e7YD9iQ/wY1pvRF+VAZ98Ntrq/FlMRI3/ZZaeKTJXQaaEDDXXlAoGBANTJ6zaChnYu4YlOuVEB9WekjXW33bNOCr2C16yzEtiuICOnTDMbMNeopHbXzdvZfmwm+guR48DbEZfVPqUHjnUExcz2NJANnV58uYmukuyQ+RyBw/JGFQZkXdEGwdbBdld4AwXul5Nfbt8+LQCppAXfyaAhPf020pxT7Tch19PM";
+                "";
             alipayConfig.AppCertPath = GetSolutionBasePath() +
                                        "/AlipaySDKNet.OpenAPI.Test/Cert/appCertPublicKey_2021003156675030.crt";
             alipayConfig.RootCertPath = GetSolutionBasePath() + "/AlipaySDKNet.OpenAPI.Test/Cert/alipayRootCert.crt";
