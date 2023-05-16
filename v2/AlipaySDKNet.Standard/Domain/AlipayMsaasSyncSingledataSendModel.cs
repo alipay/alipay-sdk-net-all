@@ -58,10 +58,16 @@ namespace Aop.Api.Domain
         public bool ImmediateSync { get; set; }
 
         /// <summary>
-        /// 根据申请bizType决定，用户维度业务填写userId, 设备维度填写utdid
+        /// 根据申请bizType决定，用户维度业务不要填该字段，请使用open_id字段, 设备维度请再该字段里填写utdid
         /// </summary>
         [XmlElement("link_token")]
         public string LinkToken { get; set; }
+
+        /// <summary>
+        /// 开放平台open ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 指定接收数据的客户端os类型

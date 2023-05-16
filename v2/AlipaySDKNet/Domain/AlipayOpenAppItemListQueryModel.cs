@@ -11,14 +11,14 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppItemListQueryModel : AopObject
     {
         /// <summary>
-        /// 支付宝平台侧spu 商品id 列表，最多20个。
+        /// 支付宝平台侧商品id 列表，最多20个。
         /// </summary>
         [XmlArray("item_id_list")]
         [XmlArrayItem("string")]
         public List<string> ItemIdList { get; set; }
 
         /// <summary>
-        /// 商家侧spu 商品id 列表，最多20个。 与platform_item_id_list二选一。如果都传，优先使用商家侧商品id。
+        /// 商家侧商品id 列表，最多20个。 与item_id_list二选一。如果都传，优先使用商家侧商品id。
         /// </summary>
         [XmlArray("out_item_id_list")]
         [XmlArrayItem("string")]

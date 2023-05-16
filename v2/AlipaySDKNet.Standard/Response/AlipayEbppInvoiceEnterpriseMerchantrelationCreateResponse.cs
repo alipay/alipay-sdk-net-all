@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string Pid { get; set; }
 
         /// <summary>
-        /// 门店类型：0直连门店；1间连门店
+        /// 门店直间连类型
         /// </summary>
         [XmlElement("role_type")]
         public string RoleType { get; set; }

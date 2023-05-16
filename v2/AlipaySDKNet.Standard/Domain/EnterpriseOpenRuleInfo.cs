@@ -43,7 +43,7 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// 开票规则id
+        /// 开票规则ID
         /// </summary>
         [XmlElement("invoice_rule_id")]
         public string InvoiceRuleId { get; set; }
@@ -55,13 +55,13 @@ namespace Aop.Api.Domain
         public string InvoiceRuleName { get; set; }
 
         /// <summary>
-        /// 原企业共同账户ID（不推荐使用）
+        /// 原企业共同账户ID
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// 销方类型：TP开票、商户开票、商户优先 枚举定义：MERCHANT（商户）、TP（TP）、MERCHANT_TP（商户优先，本期不支持）
+        /// 销方类型
         /// </summary>
         [XmlElement("seller_type")]
         public string SellerType { get; set; }

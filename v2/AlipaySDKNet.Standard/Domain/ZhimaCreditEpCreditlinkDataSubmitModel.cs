@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class ZhimaCreditEpCreditlinkDataSubmitModel : AopObject
     {
         /// <summary>
+        /// 任务采集ID
+        /// </summary>
+        [XmlElement("collect_id")]
+        public string CollectId { get; set; }
+
+        /// <summary>
+        /// 消费商户号，可在没有collect_id的时候使用
+        /// </summary>
+        [XmlElement("consumer_merchant_no")]
+        public string ConsumerMerchantNo { get; set; }
+
+        /// <summary>
         /// JSON字符串。征信数据提交内容，具体格式由data_type决定。
         /// </summary>
         [XmlElement("data_content")]
@@ -26,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_request_id")]
         public string MerchantRequestId { get; set; }
+
+        /// <summary>
+        /// 产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
 
         /// <summary>
         /// 请求流水号。保证单场景全局唯一

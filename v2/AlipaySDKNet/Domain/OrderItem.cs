@@ -118,6 +118,18 @@ namespace Aop.Api.Domain
         public string Province { get; set; }
 
         /// <summary>
+        /// 订购的服务有效期生效时间
+        /// </summary>
+        [XmlElement("service_effect_date")]
+        public string ServiceEffectDate { get; set; }
+
+        /// <summary>
+        /// 服务有效期截止时间
+        /// </summary>
+        [XmlElement("service_expire_date")]
+        public string ServiceExpireDate { get; set; }
+
+        /// <summary>
         /// 店铺ID，订购实体为口碑门店的场景该字段必填
         /// </summary>
         [XmlElement("shop_id")]

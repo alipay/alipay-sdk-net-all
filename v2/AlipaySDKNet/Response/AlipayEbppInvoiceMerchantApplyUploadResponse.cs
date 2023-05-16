@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayEbppInvoiceMerchantApplyUploadResponse : AopResponse
     {
         /// <summary>
-        /// 发票号码
+        /// 发票代码
         /// </summary>
         [XmlElement("invoice_code")]
         public string InvoiceCode { get; set; }

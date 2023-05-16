@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string EnterpriseId { get; set; }
 
         /// <summary>
+        /// 支付宝服务商小程序跳入企业码小程序签约链接
+        /// </summary>
+        [XmlElement("mini_app_sign_url")]
+        public string MiniAppSignUrl { get; set; }
+
+        /// <summary>
         /// 邀请链接
         /// </summary>
         [XmlElement("sign_url")]

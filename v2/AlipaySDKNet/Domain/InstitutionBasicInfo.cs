@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class InstitutionBasicInfo : AopObject
     {
         /// <summary>
-        /// 费控咨询模式 0-支付宝内部计算 1-咨询外部服务商
+        /// 费控咨询模式
         /// </summary>
         [XmlElement("consult_mode")]
         public string ConsultMode { get; set; }
 
         /// <summary>
-        /// 制度是否启用,1启用0不启用
+        /// 制度是否启用
         /// </summary>
         [XmlElement("effective")]
         public string Effective { get; set; }

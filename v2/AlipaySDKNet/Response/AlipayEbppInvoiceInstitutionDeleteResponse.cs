@@ -8,5 +8,10 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayEbppInvoiceInstitutionDeleteResponse : AopResponse
     {
+        /// <summary>
+        /// 删除结果是否成功
+        /// </summary>
+        [XmlElement("result")]
+        public bool Result { get; set; }
     }
 }

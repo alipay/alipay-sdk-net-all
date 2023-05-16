@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class InvoiceApplyDTO : AopObject
     {
         /// <summary>
-        /// 合计金额（申请开票总金额，含税） 格式为2位小数
+        /// 合计金额
         /// </summary>
         [XmlElement("apply_amount")]
         public string ApplyAmount { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ApplyId { get; set; }
 
         /// <summary>
-        /// 批次id
+        /// 批次ID
         /// </summary>
         [XmlElement("batch_id")]
         public string BatchId { get; set; }
@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string GmtBizStart { get; set; }
 
         /// <summary>
-        /// 开票（介质）类型 可选值： 0: 电票 1：纸质普票 2：纸质专票 3：电子专票
+        /// 开票（介质）类型
         /// </summary>
         [XmlElement("invoice_kind")]
         public string InvoiceKind { get; set; }
 
         /// <summary>
-        /// 发票（文件）类型 可选值： blue: 蓝票 red: 红票
+        /// 发票（文件）类型
         /// </summary>
         [XmlElement("invoice_type")]
         public string InvoiceType { get; set; }
@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string PayerBankName { get; set; }
 
         /// <summary>
-        /// 购方电子邮箱，需满足邮箱格式。
+        /// 购方电子邮箱
         /// </summary>
         [XmlElement("payer_email")]
         public string PayerEmail { get; set; }
@@ -94,13 +94,13 @@ namespace Aop.Api.Domain
         public string PayerPhone { get; set; }
 
         /// <summary>
-        /// 购方方税务登记证号，由大写字母或数字组成，长度要求15~20位。
+        /// 购方方税务登记证号
         /// </summary>
         [XmlElement("payer_register_no")]
         public string PayerRegisterNo { get; set; }
 
         /// <summary>
-        /// 购方手机号码，用于短信通知收票。 格式为11位数字组成的手机号码
+        /// 购方手机号码
         /// </summary>
         [XmlElement("recieve_mobile")]
         public string RecieveMobile { get; set; }

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CouponTemplateConsumeInfo : AopObject
     {
         /// <summary>
+        /// 该活动上剩余红包金额，分为单位 888代表剩余8.88元 请注意：该结果可能存在2个小时之内的时间延迟，特殊情况下可能延迟会更久
+        /// </summary>
+        [XmlElement("available_amount")]
+        public string AvailableAmount { get; set; }
+
+        /// <summary>
         /// 该活动上已领取红包金额，分为单位 999代表已领取9.99元  请注意：该结果可能存在2个小时之内的时间延迟，特殊情况下可能延迟会更久
         /// </summary>
         [XmlElement("receive_amount")]

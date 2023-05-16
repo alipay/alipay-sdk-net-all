@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -12,8 +13,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 当前批次下的发放记录信息列表
         /// </summary>
-        [XmlElement("issue_record_info_list")]
-        public IssueRecordInfo IssueRecordInfoList { get; set; }
+        [XmlArray("issue_record_info_list")]
+        [XmlArrayItem("issue_record_info")]
+        public List<IssueRecordInfo> IssueRecordInfoList { get; set; }
 
         /// <summary>
         /// 分页查询页码

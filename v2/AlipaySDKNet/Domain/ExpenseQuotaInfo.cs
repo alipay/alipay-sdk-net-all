@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public bool Freeze { get; set; }
 
         /// <summary>
-        /// 切换open_id前请使用：额度所属者ID owner_type为EMPLOYEE时为员工支付宝ID owner_type为ENTERPRISE_PAY_UID时为员工企业码ID owner_type为PHONE时为员工手机号 owner_type为ENTERPRISE时为企业ID
+        /// 额度所属者ID owner_type为EMPLOYEE时为员工支付宝ID owner_type为ENTERPRISE_PAY_UID时为员工企业码ID owner_type为PHONE时为员工手机号 owner_type为ENTERPRISE时为企业ID
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// 切换open_id后请使用：额度所属者ID owner_type为EMPLOYEE时为员工open_id owner_type为PHONE时为员工手机号 owner_type为ENTERPRISE_PAY_UID时为员工企业码ID
+        /// owner_type为EMPLOYEE时为员工open_id owner_type为PHONE时为员工手机号 owner_type为ENTERPRISE_PAY_UID时为员工企业码ID
         /// </summary>
         [XmlElement("owner_open_id")]
         public string OwnerOpenId { get; set; }

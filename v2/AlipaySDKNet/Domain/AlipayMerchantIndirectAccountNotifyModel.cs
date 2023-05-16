@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public long TotalCount { get; set; }
 
         /// <summary>
-        /// 交易时间
+        /// 交易成功时间
         /// </summary>
         [XmlElement("trade_time")]
         public string TradeTime { get; set; }

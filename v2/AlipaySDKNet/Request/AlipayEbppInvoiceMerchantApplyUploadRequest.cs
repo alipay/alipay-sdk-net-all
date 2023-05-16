@@ -21,7 +21,7 @@ namespace Aop.Api.Request
         public string BatchId { get; set; }
 
         /// <summary>
-        /// 合计含税金额（开票金额），格式为2位小数。 当开红票时，该字段为负数。
+        /// 合计含税金额（开票金额）
         /// </summary>
         public string InvoiceAmount { get; set; }
 
@@ -31,22 +31,22 @@ namespace Aop.Api.Request
         public string InvoiceCode { get; set; }
 
         /// <summary>
-        /// 开票日期，格式 yyyy-MM-dd.
+        /// 开票日期
         /// </summary>
         public string InvoiceDate { get; set; }
 
         /// <summary>
-        /// 发票板式文件数据，字节数据。 最大20m
+        /// 发票板式文件数据
         /// </summary>
         public FileItem InvoiceFileData { get; set; }
 
         /// <summary>
-        /// 发票板式文件类型，可选址 pdf，ofd
+        /// 发票板式文件类型
         /// </summary>
         public string InvoiceFileType { get; set; }
 
         /// <summary>
-        /// 开票发票类型 可选值： 0: 电子普票； 1：纸质普票（暂不支持） 2：纸质专票（暂不支持） 3：电子专票；
+        /// 开票发票类型
         /// </summary>
         public Nullable<long> InvoiceKind { get; set; }
 
@@ -56,17 +56,17 @@ namespace Aop.Api.Request
         public string InvoiceNo { get; set; }
 
         /// <summary>
-        /// 发票(开票)类型，可选值： blue: 蓝票； red: 红票；
+        /// 发票(开票)类型
         /// </summary>
         public string InvoiceType { get; set; }
 
         /// <summary>
-        /// 原发票代码，红票时必传
+        /// 原发票代码
         /// </summary>
         public string NormalInvoiceCode { get; set; }
 
         /// <summary>
-        /// 原发票号码，红票时必传
+        /// 原发票号码
         /// </summary>
         public string NormalInvoiceNo { get; set; }
 
@@ -96,7 +96,7 @@ namespace Aop.Api.Request
         public string PayeePhone { get; set; }
 
         /// <summary>
-        /// 销方税务登记证号。由大写字母或数字组成，长度要求15~20位
+        /// 销方税务登记证号
         /// </summary>
         public string PayeeRegisterNo { get; set; }
 
@@ -111,12 +111,12 @@ namespace Aop.Api.Request
         public string PayerRegisterNo { get; set; }
 
         /// <summary>
-        /// 合计金额（不含税），格式为2位小数。 当开红票时，该字段为负数。
+        /// 合计金额（不含税）
         /// </summary>
         public string SumPrice { get; set; }
 
         /// <summary>
-        /// 税额，格式为2位小数。 当开红票时，该字段为0或负数。
+        /// 税额
         /// </summary>
         public string SumTax { get; set; }
 

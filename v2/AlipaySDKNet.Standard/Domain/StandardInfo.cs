@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class StandardInfo : AopObject
     {
         /// <summary>
+        /// 当前规则可使用的其他资产来源信息
+        /// </summary>
+        [XmlElement("asset_share_source_info")]
+        public AssetShareSourceInfo AssetShareSourceInfo { get; set; }
+
+        /// <summary>
         /// 消费模式，不填为默认模式，枚举值：COUPON_ONLY（仅支持点券） COUPON_AND_CAP（支持点券+余额） DEFAULT（默认模式） 点券：消费时找员工的点券，没有或者用完了不可付； 点券+余额：消费时找员工的点券，没有找员工的余额，没有或者用完了不可付。 默认：有给员工设置员工余额以员工余额为准，用完为止。否则只受规则里的限额和企业账户资金上限管控；
         /// </summary>
         [XmlElement("consume_mode")]

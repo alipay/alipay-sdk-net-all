@@ -31,5 +31,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 服务模板类型
+        /// </summary>
+        [XmlElement("template_type")]
+        public string TemplateType { get; set; }
     }
 }

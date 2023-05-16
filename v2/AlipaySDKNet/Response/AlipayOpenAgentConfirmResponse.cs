@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string ExpiresIn { get; set; }
 
         /// <summary>
+        /// 授权商户的user_id
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 签约单号，如果是签约必返回
         /// </summary>
         [XmlElement("order_no")]

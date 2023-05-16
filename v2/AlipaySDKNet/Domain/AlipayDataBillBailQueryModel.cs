@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayDataBillBailQueryModel : AopObject
     {
         /// <summary>
-        /// 保证金类型，目前支持TMALL_BAIL-天猫保证金，TAOBAO_BAIL-淘宝保证金
+        /// 保证金类型，目前支持TMALL_S_BAIL-天猫保证金，TAOBAO_BAIL-淘宝保证金
         /// </summary>
         [XmlElement("bail_type")]
         public string BailType { get; set; }

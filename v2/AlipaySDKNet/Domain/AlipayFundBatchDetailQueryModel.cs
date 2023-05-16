@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 业务补充扩展参数
+        /// </summary>
+        [XmlElement("business_params")]
+        public string BusinessParams { get; set; }
+
+        /// <summary>
         /// 批次文件中明细流水号（注：只有境外代发使用，其他场景请使用out_biz_no）
         /// </summary>
         [XmlElement("detail_no")]

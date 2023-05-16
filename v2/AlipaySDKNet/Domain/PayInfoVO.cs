@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class PayInfoVO : AopObject
     {
         /// <summary>
+        /// 支付渠道列表
+        /// </summary>
+        [XmlArray("pay_channels")]
+        [XmlArrayItem("string")]
+        public List<string> PayChannels { get; set; }
+
+        /// <summary>
         /// 付款时间，yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("pay_time")]

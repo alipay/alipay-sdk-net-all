@@ -51,6 +51,11 @@ namespace Aop.Api.Request
         public string DateLimitation { get; set; }
 
         /// <summary>
+        /// 请输入被签约商户的支付宝生活号ID编号
+        /// </summary>
+        public string LifeAppId { get; set; }
+
+        /// <summary>
         /// 营业期限是否长期有效
         /// </summary>
         public Nullable<bool> LongTerm { get; set; }
@@ -61,9 +66,24 @@ namespace Aop.Api.Request
         public string MccCode { get; set; }
 
         /// <summary>
+        /// 请输入被签约商家下任意小程序APPID ID编号
+        /// </summary>
+        public string MiniAppId { get; set; }
+
+        /// <summary>
+        /// 请上传商家小程序截图信息，最小5KB ，最大5M（暂不限制图片宽高），图片格式必须为：png、bmp、gif、jpg、jpeg
+        /// </summary>
+        public FileItem MiniAppScreenshot { get; set; }
+
+        /// <summary>
         /// isv要代商户签约产品码，产品码是支付宝内部对产品的唯一标识
         /// </summary>
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 服务费率（%），例如：请输入0.38~0.6 之间（小数点后两位，可取0.38%及0.6%），直播买卖通涉及JSAPI支付产品，交易手续费为 0.38%-0.6%，后续费率变化可参考支付宝标准服务费。 当签约且授权标识 sign_and_auth=true 时，该费率信息必填。
+        /// </summary>
+        public string Rate { get; set; }
 
         /// <summary>
         /// 店铺内景图片，最小5KB，最大5M，图片格式必须为：png、bmp、gif、jpg、jpeg。
@@ -79,6 +99,11 @@ namespace Aop.Api.Request
         /// 企业特殊资质图片，可参考 <a href="https://opendocs.alipay.com/common/02khjv">商家经营类目</a> 中的“需要的特殊资质证书”。文件最小为 5KB，最大为5M，图片格式必须为：png、bmp、gif、jpg、jpeg。
         /// </summary>
         public FileItem SpecialLicensePic { get; set; }
+
+        /// <summary>
+        /// 合约特殊资质的类型，不传默认99
+        /// </summary>
+        public string SpecialLicenseType { get; set; }
 
         /// <summary>
         /// 网站首页截图，最小5KB，最大5M，图片格式必须为：png、bmp、gif、jpg、jpeg
@@ -215,9 +240,13 @@ namespace Aop.Api.Request
             parameters.Add("batch_no", this.BatchNo);
             parameters.Add("business_license_no", this.BusinessLicenseNo);
             parameters.Add("date_limitation", this.DateLimitation);
+            parameters.Add("life_app_id", this.LifeAppId);
             parameters.Add("long_term", this.LongTerm);
             parameters.Add("mcc_code", this.MccCode);
+            parameters.Add("mini_app_id", this.MiniAppId);
             parameters.Add("product_code", this.ProductCode);
+            parameters.Add("rate", this.Rate);
+            parameters.Add("special_license_type", this.SpecialLicenseType);
             parameters.Add("web_sites", this.WebSites);
             parameters.Add("web_status", this.WebStatus);
             parameters.Add("web_test_account", this.WebTestAccount);
@@ -250,6 +279,7 @@ namespace Aop.Api.Request
             parameters.Add("app_demo", this.AppDemo);
             parameters.Add("business_license_auth_pic", this.BusinessLicenseAuthPic);
             parameters.Add("business_license_pic", this.BusinessLicensePic);
+            parameters.Add("mini_app_screenshot", this.MiniAppScreenshot);
             parameters.Add("shop_scene_pic", this.ShopScenePic);
             parameters.Add("shop_sign_board_pic", this.ShopSignBoardPic);
             parameters.Add("special_license_pic", this.SpecialLicensePic);

@@ -11,19 +11,19 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcConsumeDetailQueryModel : AopObject
     {
         /// <summary>
-        /// 共同账户ID，有企业ID可不传
+        /// 共同账户ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 授权签约协议号，有企业ID可不传
+        /// 授权签约协议号
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 企业ID，推荐查询方式
+        /// 企业ID
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string PayNo { get; set; }
 
         /// <summary>
-        /// 查询选项，只针对消费账单生效 查询关联退款账单：Refund 查询关联订单：Order 查询关联票据：Ticket 查询关联多媒体凭证：Multimedia
+        /// 查询选项
         /// </summary>
         [XmlArray("query_options")]
         [XmlArrayItem("string")]

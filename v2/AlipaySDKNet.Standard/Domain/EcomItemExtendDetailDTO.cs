@@ -34,6 +34,54 @@ namespace Aop.Api.Domain
         public long CardUsePeriod { get; set; }
 
         /// <summary>
+        /// 充电站点详细地址
+        /// </summary>
+        [XmlElement("charge_station_address")]
+        public string ChargeStationAddress { get; set; }
+
+        /// <summary>
+        /// 充电站点所在地区
+        /// </summary>
+        [XmlElement("charge_station_area")]
+        public string ChargeStationArea { get; set; }
+
+        /// <summary>
+        /// 充电站点所在城市
+        /// </summary>
+        [XmlElement("charge_station_city")]
+        public string ChargeStationCity { get; set; }
+
+        /// <summary>
+        /// 充电站点编号
+        /// </summary>
+        [XmlElement("charge_station_no")]
+        public string ChargeStationNo { get; set; }
+
+        /// <summary>
+        /// 充电站点插座总数
+        /// </summary>
+        [XmlElement("charge_station_plug_total")]
+        public long ChargeStationPlugTotal { get; set; }
+
+        /// <summary>
+        /// 充电站点所在省份
+        /// </summary>
+        [XmlElement("charge_station_prov")]
+        public string ChargeStationProv { get; set; }
+
+        /// <summary>
+        /// 充电站点所在镇、街道
+        /// </summary>
+        [XmlElement("charge_station_town")]
+        public string ChargeStationTown { get; set; }
+
+        /// <summary>
+        /// 充电计费方式
+        /// </summary>
+        [XmlElement("charge_type")]
+        public string ChargeType { get; set; }
+
+        /// <summary>
         /// extInfo
         /// </summary>
         [XmlElement("ext_info")]
@@ -74,5 +122,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("lockable_device")]
         public bool LockableDevice { get; set; }
+
+        /// <summary>
+        /// 插座编号
+        /// </summary>
+        [XmlElement("plug_no")]
+        public string PlugNo { get; set; }
     }
 }

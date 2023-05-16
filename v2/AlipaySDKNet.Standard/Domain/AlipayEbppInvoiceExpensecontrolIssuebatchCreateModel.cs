@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceExpensecontrolIssuebatchCreateModel : AopObject
     {
         /// <summary>
-        /// 共同账户id - 通过企业码1.0接口签约的共同账户，和agreement_no搭配使用
+        /// 共同账户id
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string EffectiveStartDate { get; set; }
 
         /// <summary>
-        /// 企业ID - 通过企业码2.0签约接口签约的企业
+        /// 企业ID
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string QuotaType { get; set; }
 
         /// <summary>
-        /// 是否可转赠，枚举：0（不可转赠）、1（可转赠）
+        /// 是否可转赠
         /// </summary>
         [XmlElement("share_mode")]
         public string ShareMode { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class EnterpriseOpenRuleRelationInfo : AopObject
     {
         /// <summary>
-        /// 企业ID【推荐使用】
+        /// 企业ID
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// 企业共同账户ID【不推荐使用】
+        /// 企业共同账户ID
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }

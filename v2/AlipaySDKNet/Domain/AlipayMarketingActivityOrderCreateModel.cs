@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string ChInfo { get; set; }
 
         /// <summary>
+        /// 公域跳转私域时小程序预埋的官方渠道信息。获取方式：小程序被唤起后，统一通过启动参数referrerInfo.extraData的值内部获取miniTraceInfo。使用场景：在商家小程序售卖商品需要使用平台的渠道专享优惠时需要传入。使用此字段请咨询官方小二，暂不全量开放。
+        /// </summary>
+        [XmlElement("mini_trace_info")]
+        public string MiniTraceInfo { get; set; }
+
+        /// <summary>
         /// 外部业务订单号。  同时具备幂等作用： 参数不变的情况下，再次请求返回与上一次相同的结果。  外部接入方需保证业务单号唯一。
         /// </summary>
         [XmlElement("out_order_no")]

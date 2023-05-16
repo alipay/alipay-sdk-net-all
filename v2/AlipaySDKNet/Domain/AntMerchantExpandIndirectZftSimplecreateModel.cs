@@ -113,6 +113,12 @@ namespace Aop.Api.Domain
         public string Mcc { get; set; }
 
         /// <summary>
+        /// 进件的二级商户名称。一般情况下要与证件的名称相同。个体工商户类型可以放宽到法人名称
+        /// </summary>
+        [XmlElement("name")]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 门头照，使用当面付服务时必填。其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。
         /// </summary>
         [XmlElement("out_door_images")]

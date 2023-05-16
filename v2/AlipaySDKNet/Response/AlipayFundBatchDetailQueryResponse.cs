@@ -114,6 +114,12 @@ namespace Aop.Api.Response
         public string PayerId { get; set; }
 
         /// <summary>
+        /// 付款方身份标识
+        /// </summary>
+        [XmlElement("payer_open_id")]
+        public string PayerOpenId { get; set; }
+
+        /// <summary>
         /// 付款方需要支付的金额，受理成功（status为APPLIED）之后才会有值，受理成功之前是0。
         /// </summary>
         [XmlElement("payment_amount")]

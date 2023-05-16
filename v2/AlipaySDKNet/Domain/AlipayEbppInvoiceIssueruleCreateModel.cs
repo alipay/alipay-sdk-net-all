@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceIssueruleCreateModel : AopObject
     {
         /// <summary>
-        /// 共同账户id - 适用于在企业码小程序创建的共同账户，和agreement_no搭配使用
+        /// 共同账户id
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -22,25 +22,25 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 是否启用，"0"为停用，"1"为启用； 如果target_type指定INSTITUTION，则与制度一致
+        /// 是否启用，"0"为停用，"1"为启用； 如果target_type指定INSTITUTION，则与制度一致,无需填写
         /// </summary>
         [XmlElement("effective")]
         public string Effective { get; set; }
 
         /// <summary>
-        /// 生效周期，不限："{\"all\":true}"，默认为不限
+        /// 生效周期，时间不限格式："{\"all\":true}"
         /// </summary>
         [XmlElement("effective_period")]
         public string EffectivePeriod { get; set; }
 
         /// <summary>
-        /// 企业ID - 适用于在企业码PC端创建的企业账号
+        /// 企业ID
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 是否可累计，枚举：0（不可累计）、1（可累计），默认为0，余额只允许可累计，按城市发放只允许不可累计，设置了生效周期只允许不可累计
+        /// 是否可累计，枚举：0（不可累计）、1（可累计），2（累计天数）、3（累计到指定日期）余额只允许可累计，按城市发放只允许不可累计，设置了生效周期只允许不可累计
         /// </summary>
         [XmlElement("invalid_mode")]
         public long InvalidMode { get; set; }
@@ -76,19 +76,19 @@ namespace Aop.Api.Domain
         public string IssueStartDate { get; set; }
 
         /// <summary>
-        /// 发放类型，枚举：ISSUE_MONTH（按月发放）、ISSUE_DAY（按日发放）
+        /// 发放类型
         /// </summary>
         [XmlElement("issue_type")]
         public string IssueType { get; set; }
 
         /// <summary>
-        /// 额度类型，枚举：COUPON（点券）、CAP（余额）
+        /// 额度类型，枚举：COUPON（点券）、CAP（余额）、ISV（外算额度）
         /// </summary>
         [XmlElement("quota_type")]
         public string QuotaType { get; set; }
 
         /// <summary>
-        /// 是否可转赠，枚举：0（不可转赠）、1（可转赠），默认为0
+        /// 是否可转赠，枚举：0（不可转赠）、1（可转赠）
         /// </summary>
         [XmlElement("share_mode")]
         public long ShareMode { get; set; }

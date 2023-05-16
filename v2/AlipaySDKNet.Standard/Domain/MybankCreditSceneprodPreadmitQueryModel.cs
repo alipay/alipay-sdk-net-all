@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 外部站点的userid，该字段内容与site的内容相关
         /// </summary>
+        [XmlElement("site_open_id")]
+        public string SiteOpenId { get; set; }
+
+        /// <summary>
+        /// 外部站点的userid，该字段内容与site的内容相关
+        /// </summary>
         [XmlElement("site_user_id")]
         public string SiteUserId { get; set; }
     }

@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string InstitutionId { get; set; }
 
         /// <summary>
-        /// 删除的使用规则id列表，当id不存在时，默认删除成功。删除后制度下至少保留一条使用规则。
+        /// 删除的使用规则id列表
         /// </summary>
         [XmlArray("standard_id_list")]
         [XmlArrayItem("string")]

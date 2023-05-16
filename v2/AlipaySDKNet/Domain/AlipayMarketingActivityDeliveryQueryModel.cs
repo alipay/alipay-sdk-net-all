@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<DeliveryConfig> DeliveryConfigList { get; set; }
 
         /// <summary>
-        /// 投放计划id
+        /// 推广计划id
         /// </summary>
         [XmlElement("delivery_id")]
         public string DeliveryId { get; set; }

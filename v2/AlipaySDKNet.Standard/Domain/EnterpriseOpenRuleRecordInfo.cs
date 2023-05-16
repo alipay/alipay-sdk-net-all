@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string EffectiveStart { get; set; }
 
         /// <summary>
-        /// 企业ID【推荐使用】
+        /// 企业ID
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// 开票规则id
+        /// 开票规则ID
         /// </summary>
         [XmlElement("invoice_rule_id")]
         public string InvoiceRuleId { get; set; }
 
         /// <summary>
-        /// 开票规则记录id
+        /// 开票规则记录ID
         /// </summary>
         [XmlElement("invoice_rule_record_id")]
         public string InvoiceRuleRecordId { get; set; }
@@ -58,31 +58,31 @@ namespace Aop.Api.Domain
         public string InvoiceTitleId { get; set; }
 
         /// <summary>
-        /// 开票申请方：ENTERPRISE（企业发起），EMPLOYEE（员工发起）
+        /// 开票申请方
         /// </summary>
         [XmlElement("open_applyer")]
         public string OpenApplyer { get; set; }
 
         /// <summary>
-        /// 开票模式：汇总开、笔笔开 枚举定义：SUMMARY:汇总开 SINGLE:单笔开
+        /// 开票模式
         /// </summary>
         [XmlElement("open_mode")]
         public string OpenMode { get; set; }
 
         /// <summary>
-        /// 开票申请类型：AUTO（自动开票），MANUAL（手动开票）
+        /// 开票申请类型
         /// </summary>
         [XmlElement("open_type")]
         public string OpenType { get; set; }
 
         /// <summary>
-        /// 企业共同账户ID【不推荐使用】
+        /// 企业共同账户ID
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// 开票规则标记： DEFAULT-默认 EMPLOYEE_TITLE_FIRST-员工签约抬头优先于开票规则
+        /// 开票规则标记
         /// </summary>
         [XmlElement("tag")]
         public string Tag { get; set; }

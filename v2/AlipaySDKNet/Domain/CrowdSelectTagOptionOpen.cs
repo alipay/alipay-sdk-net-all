@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class CrowdSelectTagOptionOpen : AopObject
     {
+        /// <summary>
+        /// 二级标签值列表
+        /// </summary>
+        [XmlArray("children")]
+        [XmlArrayItem("crowd_select_tag_sub_option_open")]
+        public List<CrowdSelectTagSubOptionOpen> Children { get; set; }
+
         /// <summary>
         /// 标签值中文名称
         /// </summary>

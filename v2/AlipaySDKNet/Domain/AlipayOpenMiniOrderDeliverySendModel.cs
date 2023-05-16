@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderDeliverySendModel : AopObject
     {
         /// <summary>
-        /// 快递信息，delivery_type=1时必填，订单中心限制5条
+        /// 快递信息，必填，订单中心限制5条
         /// </summary>
         [XmlArray("delivery_list")]
         [XmlArrayItem("delivery_info_d_t_o")]

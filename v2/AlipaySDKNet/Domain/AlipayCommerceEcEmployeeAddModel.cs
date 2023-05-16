@@ -84,7 +84,7 @@ namespace Aop.Api.Domain
         public string IotCheckType { get; set; }
 
         /// <summary>
-        /// 员工在企业人脸库的人脸唯一标识，支持自定义传入，如果未传入则会默认生成
+        /// 员工在企业人脸库的人脸唯一标识（该字段已作废，不支持自定义传入）
         /// </summary>
         [XmlElement("iot_vid")]
         public string IotVid { get; set; }

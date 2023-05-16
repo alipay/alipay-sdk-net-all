@@ -64,13 +64,13 @@ namespace Aop.Api.Domain
         public string OutSkuId { get; set; }
 
         /// <summary>
-        /// 商品单价
+        /// 商品单价，单位：元
         /// </summary>
         [XmlElement("sale_price")]
         public string SalePrice { get; set; }
 
         /// <summary>
-        /// 商品真实单价
+        /// 商品真实单价，单位：元
         /// </summary>
         [XmlElement("sale_real_price")]
         public string SaleRealPrice { get; set; }

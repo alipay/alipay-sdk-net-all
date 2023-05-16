@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string OwnerType { get; set; }
 
         /// <summary>
+        /// 发放状态为发放成功的可返回额度id，未发放和发放中的无法返回额度id
+        /// </summary>
+        [XmlElement("quota_id")]
+        public string QuotaId { get; set; }
+
+        /// <summary>
         /// 发放对应的员工名称
         /// </summary>
         [XmlElement("user_name")]

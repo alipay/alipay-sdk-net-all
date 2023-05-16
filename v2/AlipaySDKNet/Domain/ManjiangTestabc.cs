@@ -18,6 +18,18 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 1
         /// </summary>
+        [XmlElement("ssddf")]
+        public ApiInfoVO Ssddf { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("sss_2")]
+        public ApiInfoVO Sss2 { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
         [XmlElement("t")]
         public string T { get; set; }
 

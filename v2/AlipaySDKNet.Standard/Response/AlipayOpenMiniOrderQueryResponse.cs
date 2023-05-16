@@ -88,6 +88,12 @@ namespace Aop.Api.Response
         public string Status { get; set; }
 
         /// <summary>
+        /// 支付单号
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

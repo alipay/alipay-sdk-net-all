@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BailType { get; set; }
 
         /// <summary>
-        /// 保证金余额
+        /// 本次操作后的保证金余额。字段数据展示为"--"，表明数据暂未更新，请稍等1分钟后重试。
         /// </summary>
         [XmlElement("balance")]
         public string Balance { get; set; }

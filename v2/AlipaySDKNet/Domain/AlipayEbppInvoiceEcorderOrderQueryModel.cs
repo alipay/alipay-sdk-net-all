@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceEcorderOrderQueryModel : AopObject
     {
         /// <summary>
-        /// 共同账户ID，有企业ID可不传
+        /// 共同账户ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 授权签约协议号，有企业ID可不传
+        /// 授权签约协议号
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }

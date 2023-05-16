@@ -25,5 +25,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("schema_xml")]
         public string SchemaXml { get; set; }
+
+        /// <summary>
+        /// 服务模版类型
+        /// </summary>
+        [XmlElement("template_type")]
+        public string TemplateType { get; set; }
     }
 }

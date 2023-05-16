@@ -34,10 +34,16 @@ namespace Aop.Api.Domain
         public string PolicyNo { get; set; }
 
         /// <summary>
-        /// 保单状态.INEFFECTIVE:未生效、GUARANTEE:保障中、EXPIRED:已失效、SURRENDER:已退保
+        /// 保单状态，该状态是出单时间和保单起止期的比较值，业务可根据业务时间和保单起止期自行比较
         /// </summary>
         [XmlElement("policy_status")]
         public string PolicyStatus { get; set; }
+
+        /// <summary>
+        /// 保单类型
+        /// </summary>
+        [XmlElement("policy_type")]
+        public string PolicyType { get; set; }
 
         /// <summary>
         /// 保费 ;单位分

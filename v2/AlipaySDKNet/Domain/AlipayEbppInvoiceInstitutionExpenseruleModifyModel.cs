@@ -11,25 +11,31 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceInstitutionExpenseruleModifyModel : AopObject
     {
         /// <summary>
-        /// 企业共同账户id，和授权签约协议号共同使用。
+        /// 企业共同账户id
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 修改使用规则，操作枚举： ADD_RULE（新增使用条件）， DELETE_RULE（删除使用条件）， MODIFY_RULE（修改使用条件），MODIFY_BASIC_INFO（修改规则基本信息）
+        /// 修改使用规则
         /// </summary>
         [XmlElement("action")]
         public string Action { get; set; }
 
         /// <summary>
-        /// 授权签约协议号，可通过签约消息获取。配合企业共同账户id使用，当填写企业共同账户id时，此字段必填。
+        /// 授权签约协议号
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 该使用规则支持的资产消费模式，不填写则为默认模式，默认模式下有余额时使用余额，没有余额则使用规则中的限额
+        /// 资产共享来源信息
+        /// </summary>
+        [XmlElement("asset_share_source_info")]
+        public AssetShareSourceInfo AssetShareSourceInfo { get; set; }
+
+        /// <summary>
+        /// 该使用规则支持的资产消费模式，不填写则为默认模式，默认模式下有余额时使用余额，没有余额则使用规则中的限额，点券模式为只能使用点券，点券+余额模式为可以使用点券和余额。
         /// </summary>
         [XmlElement("consume_mode")]
         public string ConsumeMode { get; set; }
@@ -41,7 +47,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 使用规则条件列表
+        /// 使用规则条件列表（已废弃）
         /// </summary>
         [XmlArray("expense_ctrl_rule_info_list")]
         [XmlArrayItem("expense_ctr_rule_info")]
@@ -54,13 +60,13 @@ namespace Aop.Api.Domain
         public string InstitutionId { get; set; }
 
         /// <summary>
-        /// 开票规则id，如果之前已关联开票规则，则更换开票规则id不生效
+        /// 开票规则id
         /// </summary>
         [XmlElement("open_rule_id")]
         public string OpenRuleId { get; set; }
 
         /// <summary>
-        /// 当笔消费金额大于规则可用余额时，用于控制支付策略，该字段缺省时采取因公账户和个人账户组合支付策略COMBINATION
+        /// 当笔消费金额大于规则可用余额时，用于控制支付策略
         /// </summary>
         [XmlElement("payment_policy")]
         public string PaymentPolicy { get; set; }
@@ -73,7 +79,7 @@ namespace Aop.Api.Domain
         public List<StandardConditionInfo> StandardConditionInfoList { get; set; }
 
         /// <summary>
-        /// 规则描述（敏感词校验）
+        /// 规则描述
         /// </summary>
         [XmlElement("standard_desc")]
         public string StandardDesc { get; set; }
@@ -85,7 +91,7 @@ namespace Aop.Api.Domain
         public string StandardId { get; set; }
 
         /// <summary>
-        /// 规则名称（敏感词校验）
+        /// 规则名称
         /// </summary>
         [XmlElement("standard_name")]
         public string StandardName { get; set; }

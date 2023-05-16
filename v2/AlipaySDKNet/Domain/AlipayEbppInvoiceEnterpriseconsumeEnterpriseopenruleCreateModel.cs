@@ -10,25 +10,25 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceEnterpriseconsumeEnterpriseopenruleCreateModel : AopObject
     {
         /// <summary>
-        /// 共同账户id
+        /// 共同账户ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 授权签约协议号（仅使用account_id时必传）
+        /// 授权签约协议号
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 账期结束日期，可选范围1-31，只有汇总开需要
+        /// 账期结束日期
         /// </summary>
         [XmlElement("bill_month_day")]
         public long BillMonthDay { get; set; }
 
         /// <summary>
-        /// 企业id
+        /// 企业ID
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
@@ -40,25 +40,25 @@ namespace Aop.Api.Domain
         public string InvoiceRuleName { get; set; }
 
         /// <summary>
-        /// 汇总开需要抬头，笔笔开不需要传抬头
+        /// 发票抬头
         /// </summary>
         [XmlElement("invoice_title_id")]
         public string InvoiceTitleId { get; set; }
 
         /// <summary>
-        /// 开票模式：汇总开、笔笔开 枚举定义：SUMMARY:汇总开 SINGLE:单笔开
+        /// 开票模式
         /// </summary>
         [XmlElement("open_mode")]
         public string OpenMode { get; set; }
 
         /// <summary>
-        /// 销方类型：TP开票、商户开票， 枚举定义：MERCHANT（商户）、TP（TP），不填默认商户
+        /// 销方类型
         /// </summary>
         [XmlElement("seller_type")]
         public string SellerType { get; set; }
 
         /// <summary>
-        /// 开票规则标记： DEFAULT-默认 EMPLOYEE_TITLE_FIRST-员工签约抬头优先于开票规则
+        /// 开票规则标记
         /// </summary>
         [XmlElement("tag")]
         public string Tag { get; set; }

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 企业ID
+        /// 企业id
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string InstitutionId { get; set; }
 
         /// <summary>
-        /// EMPLOYEE（员工支付宝id）,ENTERPRISE_PAY_UID（员工企业码id）,PHONE（员工手机号) 默认返回员工id（支付宝id或企业码员工id），如需返回手机号需指定
+        /// 适配id类型
         /// </summary>
         [XmlElement("owner_type")]
         public string OwnerType { get; set; }

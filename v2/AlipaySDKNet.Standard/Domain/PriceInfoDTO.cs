@@ -10,25 +10,25 @@ namespace Aop.Api.Domain
     public class PriceInfoDTO : AopObject
     {
         /// <summary>
-        /// 不可折扣金额
+        /// 附加金额，单位：元
         /// </summary>
         [XmlElement("additional_price")]
         public string AdditionalPrice { get; set; }
 
         /// <summary>
-        /// 可打折金额
+        /// 商家优惠金额，单位：元
         /// </summary>
         [XmlElement("discounted_price")]
         public string DiscountedPrice { get; set; }
 
         /// <summary>
-        /// 运费
+        /// 运费，单位：元
         /// </summary>
         [XmlElement("freight")]
         public string Freight { get; set; }
 
         /// <summary>
-        /// 订单金额
+        /// 订单金额，单位：元
         /// </summary>
         [XmlElement("order_price")]
         public string OrderPrice { get; set; }

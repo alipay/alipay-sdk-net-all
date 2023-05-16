@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_id")]
         public string RefundId { get; set; }
+
+        /// <summary>
+        /// 退款记录状态
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
     }
 }

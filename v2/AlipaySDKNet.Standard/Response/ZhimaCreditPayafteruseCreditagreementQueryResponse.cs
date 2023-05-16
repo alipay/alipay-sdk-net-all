@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string CreditAgreementId { get; set; }
 
         /// <summary>
+        /// 该字段只在特殊业务场景下，根据业务方约定返回；一般业务场景下不需要消费该字段
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 商户外部协议号
         /// </summary>
         [XmlElement("out_agreement_no")]

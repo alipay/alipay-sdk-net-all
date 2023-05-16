@@ -65,6 +65,12 @@ namespace Aop.Api.Domain
         public string ProdVersion { get; set; }
 
         /// <summary>
+        /// 场景产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
         /// 产品标识符
         /// </summary>
         [XmlElement("product_id")]

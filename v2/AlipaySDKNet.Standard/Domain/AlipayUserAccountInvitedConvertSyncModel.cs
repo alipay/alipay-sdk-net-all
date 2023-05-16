@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayUserAccountInvitedConvertSyncModel : AopObject
     {
         /// <summary>
+        /// 业务转化数据内容
+        /// </summary>
+        [XmlElement("biz_ext_info")]
+        public string BizExtInfo { get; set; }
+
+        /// <summary>
         /// 转化标签
         /// </summary>
         [XmlElement("convert_tag")]

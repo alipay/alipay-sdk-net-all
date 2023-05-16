@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_xml")]
         public string ServiceXml { get; set; }
+
+        /// <summary>
+        /// 服务模版。若当前服务类目只有一个服务模版，可不填。
+        /// </summary>
+        [XmlElement("template_type")]
+        public string TemplateType { get; set; }
     }
 }

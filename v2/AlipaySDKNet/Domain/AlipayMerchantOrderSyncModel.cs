@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 标准服务类目
+        /// </summary>
+        [XmlElement("category_id")]
+        public string CategoryId { get; set; }
+
+        /// <summary>
         /// 优惠金额，单位为【元】
         /// </summary>
         [XmlElement("discount_amount")]

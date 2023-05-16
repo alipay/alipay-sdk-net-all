@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class QipanMerchantCrowd : AopObject
     {
+        /// <summary>
+        /// 安全应用范围，参考文档 <a href="https://opendocs.alipay.com/pre-open/04phhq" target="_blank">安全应用范围枚举</a>
+        /// </summary>
+        [XmlArray("apply_channel_list")]
+        [XmlArrayItem("string")]
+        public List<string> ApplyChannelList { get; set; }
+
         /// <summary>
         /// 支付宝人群code
         /// </summary>
@@ -32,6 +40,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("external_crowd_code")]
         public string ExternalCrowdCode { get; set; }
+
+        /// <summary>
+        /// 人群是否可见,取值如下： <li>0-人群可见，默认为0</li> <li>1-人群不可见</li>
+        /// </summary>
+        [XmlElement("hidden")]
+        public string Hidden { get; set; }
+
+        /// <summary>
+        /// true - 人群支持标签二次加工 false - 人群不支持标签二次加工
+        /// </summary>
+        [XmlElement("processable")]
+        public bool Processable { get; set; }
 
         /// <summary>
         /// INIT-初始化中 EFFECTIVE-生效 INEFFECTIVE-失效

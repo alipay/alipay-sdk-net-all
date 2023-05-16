@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string AlivePhoto { get; set; }
 
         /// <summary>
-        /// 是否为攻击，true：本次判定为攻击；false：非攻击。
+        /// 本次认证是否存在安全风险，true：检测到安全风险；false：未检测到安全风险。
         /// </summary>
         [XmlElement("attack_flag")]
         public string AttackFlag { get; set; }

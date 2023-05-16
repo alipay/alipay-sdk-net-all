@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string StandardId { get; set; }
 
         /// <summary>
-        /// 已扣减 - DEDUCTED 已恢复 - RECOVERED
+        /// 额度状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

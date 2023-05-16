@@ -148,6 +148,12 @@ namespace Aop.Api.Domain
         public string Month { get; set; }
 
         /// <summary>
+        /// 对应类型相关接口生成
+        /// </summary>
+        [XmlElement("once_token")]
+        public string OnceToken { get; set; }
+
+        /// <summary>
         /// 岗位对应的行业id，字段参考https://www.yuque.com/wx3dkp/gwckr4/bs03t3
         /// </summary>
         [XmlElement("profession_id")]

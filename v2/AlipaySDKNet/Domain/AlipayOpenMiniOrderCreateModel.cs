@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 联系人信息
+        /// </summary>
+        [XmlElement("contact_info")]
+        public ContactInfoDTO ContactInfo { get; set; }
+
+        /// <summary>
         /// 默认退货地址
         /// </summary>
         [XmlElement("default_receiving_address")]
@@ -88,7 +94,7 @@ namespace Aop.Api.Domain
         public string SellerId { get; set; }
 
         /// <summary>
-        /// 订单相对超时时间。从交易创建时间开始计算。 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。 当面付场景默认值为3h。
+        /// 订单相对超时时间。从交易创建时间开始计算。 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。 默认值为3h。
         /// </summary>
         [XmlElement("timeout_express")]
         public string TimeoutExpress { get; set; }

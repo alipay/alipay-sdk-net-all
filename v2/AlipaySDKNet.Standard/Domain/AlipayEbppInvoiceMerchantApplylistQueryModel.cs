@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceMerchantApplylistQueryModel : AopObject
     {
         /// <summary>
-        /// 申请状态列表，期望拉取的状态。 申请状态，可选值： waiting_pull：待拉取 ; apply_success: 申请成功； inv_success: 开票成功； inv_fail：开票失败；
+        /// 申请状态列表
         /// </summary>
         [XmlArray("apply_status")]
         [XmlArrayItem("string")]
@@ -30,13 +30,13 @@ namespace Aop.Api.Domain
         public string BizStartTime { get; set; }
 
         /// <summary>
-        /// 品牌名称，全局唯一，接入时约定
+        /// 品牌名称
         /// </summary>
         [XmlElement("brand_name")]
         public string BrandName { get; set; }
 
         /// <summary>
-        /// 支付宝商户id
+        /// 支付宝商户ID列表
         /// </summary>
         [XmlArray("merchant_id")]
         [XmlArrayItem("string")]

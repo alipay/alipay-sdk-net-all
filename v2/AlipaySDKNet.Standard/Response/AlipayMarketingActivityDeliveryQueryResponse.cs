@@ -11,13 +11,13 @@ namespace Aop.Api.Response
     public class AlipayMarketingActivityDeliveryQueryResponse : AopResponse
     {
         /// <summary>
-        /// 投放计划基础信息。
+        /// 运营计划基础信息。
         /// </summary>
         [XmlElement("delivery_base_info")]
         public DeliveryBaseInfo DeliveryBaseInfo { get; set; }
 
         /// <summary>
-        /// 投放的展位编码。
+        /// 运营计划的展位编码。 枚举值： SERVICE_MESSAGE：商家消息（包含订单、订阅、其他消息）
         /// </summary>
         [XmlElement("delivery_booth_code")]
         public string DeliveryBoothCode { get; set; }
@@ -42,7 +42,7 @@ namespace Aop.Api.Response
         public List<PromoDeliveryInfo> DeliveryInfoList { get; set; }
 
         /// <summary>
-        /// 投放计划玩法配置。 限制：投放玩法配置有且仅能配置一个。
+        /// 运营计划发放配置。
         /// </summary>
         [XmlElement("delivery_play_config")]
         public DeliveryPlayConfig DeliveryPlayConfig { get; set; }
@@ -54,7 +54,7 @@ namespace Aop.Api.Response
         public string DeliveryStatus { get; set; }
 
         /// <summary>
-        /// 投放计划定向规则。
+        /// 运营计划定向曝光规则。
         /// </summary>
         [XmlElement("delivery_target_rule")]
         public DeliveryTargetRule DeliveryTargetRule { get; set; }

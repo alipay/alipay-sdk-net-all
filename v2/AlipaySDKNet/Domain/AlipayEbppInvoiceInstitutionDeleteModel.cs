@@ -10,19 +10,19 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceInstitutionDeleteModel : AopObject
     {
         /// <summary>
-        /// 企业共同账户id（条件必填）
+        /// 企业共同账户id
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 授权签约协议号（条件必填）
+        /// 授权签约协议号
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 企业id（条件必填）
+        /// 企业id
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }

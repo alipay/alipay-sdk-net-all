@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string BuyerNick { get; set; }
 
         /// <summary>
+        /// 充电时长，分钟维度
+        /// </summary>
+        [XmlElement("charge_duration")]
+        public InsPeriodDTO ChargeDuration { get; set; }
+
+        /// <summary>
         /// 免押金额
         /// </summary>
         [XmlElement("credit_deposit_money")]

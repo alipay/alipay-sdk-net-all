@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string BizLine { get; set; }
 
         /// <summary>
+        /// 参数描述对应的正向业务场景，包括默认正向以及维保对应发货单
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
+        /// <summary>
         /// 物料渠道标识
         /// </summary>
         [XmlElement("biz_tag")]
@@ -188,6 +194,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("print_data")]
         public string PrintData { get; set; }
+
+        /// <summary>
+        /// 指令排产优先级
+        /// </summary>
+        [XmlElement("priority")]
+        public string Priority { get; set; }
 
         /// <summary>
         /// 生产调拨对应的生产指令.

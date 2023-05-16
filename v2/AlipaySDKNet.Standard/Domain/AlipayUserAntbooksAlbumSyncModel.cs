@@ -66,25 +66,25 @@ namespace Aop.Api.Domain
         public string CopyrightType { get; set; }
 
         /// <summary>
-        /// 专辑原图URL地址
+        /// 专辑原图URL地址，要求图片为方图，尺寸540*540
         /// </summary>
         [XmlElement("cover_url")]
         public string CoverUrl { get; set; }
 
         /// <summary>
-        /// 专辑封面大图
+        /// 专辑封面大图，要求图片为方图，尺寸400*400
         /// </summary>
         [XmlElement("cover_url_big")]
         public string CoverUrlBig { get; set; }
 
         /// <summary>
-        /// 专辑封面中图
+        /// 专辑封面中图，要求图片为方图，尺寸288*288
         /// </summary>
         [XmlElement("cover_url_middle")]
         public string CoverUrlMiddle { get; set; }
 
         /// <summary>
-        /// 专辑封面小图
+        /// 专辑封面小图，要求图片为方图，尺寸140*140
         /// </summary>
         [XmlElement("cover_url_small")]
         public string CoverUrlSmall { get; set; }
