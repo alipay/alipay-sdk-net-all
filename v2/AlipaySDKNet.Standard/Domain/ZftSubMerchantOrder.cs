@@ -110,5 +110,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_confirm")]
         public string SubConfirm { get; set; }
+
+        /// <summary>
+        /// 在快速进件场景下要求二级商户自助签约确认，通过此链接展示的二维码扫码进入支付宝小程序。（仅quickcreate接口返回）
+        /// </summary>
+        [XmlElement("sub_sign_qr_code_url")]
+        public string SubSignQrCodeUrl { get; set; }
+
+        /// <summary>
+        /// 页面跳转的短链接，用于二级商户完成签约确认，可以支持平台商发送此短链接给二级商户，通过链接跳转的方式进入支付宝小程序完成确认。（仅quickcreate接口返回）
+        /// </summary>
+        [XmlElement("sub_sign_short_chain_url")]
+        public string SubSignShortChainUrl { get; set; }
     }
 }

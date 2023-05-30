@@ -53,25 +53,25 @@ namespace Aop.Api.Response
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 本次退款金额中买家退款金额。 该字段默认不返回；
+        /// 本次退款金额中买家退款金额。单位：元。 该字段默认不返回；
         /// </summary>
         [XmlElement("present_refund_buyer_amount")]
         public string PresentRefundBuyerAmount { get; set; }
 
         /// <summary>
-        /// 本次退款金额中平台优惠退款金额。 该字段默认不返回；
+        /// 本次退款金额中平台优惠退款金额。单位：元。 该字段默认不返回；
         /// </summary>
         [XmlElement("present_refund_discount_amount")]
         public string PresentRefundDiscountAmount { get; set; }
 
         /// <summary>
-        /// 本次退款金额中商家优惠退款金额。 该字段默认不返回；
+        /// 本次退款金额中商家优惠退款金额。单位：元。 该字段默认不返回；
         /// </summary>
         [XmlElement("present_refund_mdiscount_amount")]
         public string PresentRefundMdiscountAmount { get; set; }
 
         /// <summary>
-        /// 本次退款请求，对应的退款金额
+        /// 本次退款请求，对应的退款金额。单位：元。
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }
@@ -89,7 +89,7 @@ namespace Aop.Api.Response
         public string RefundChannelStatus { get; set; }
 
         /// <summary>
-        /// 本次退款针对收款方的退收费金额； 只在机构间联模式下返回，其它场景下不返回该字段；
+        /// 本次退款针对收款方的退收费金额；单位：元。 只在机构间联模式下返回，其它场景下不返回该字段；
         /// </summary>
         [XmlElement("refund_charge_amount")]
         public string RefundChargeAmount { get; set; }
@@ -109,7 +109,7 @@ namespace Aop.Api.Response
         public List<TradeFundBill> RefundDetailItemList { get; set; }
 
         /// <summary>
-        /// 本次退款金额中退惠营宝的金额
+        /// 本次退款金额中退惠营宝的金额。单位：元。
         /// </summary>
         [XmlElement("refund_hyb_amount")]
         public string RefundHybAmount { get; set; }
@@ -140,13 +140,13 @@ namespace Aop.Api.Response
         public string RefundStatus { get; set; }
 
         /// <summary>
-        /// 本次商户实际退回金额； 默认不返回该信息，需要在入参的query_options中指定"refund_detail_item_list"值时才返回该字段信息。
+        /// 本次商户实际退回金额；单位：元。 默认不返回该信息，需要在入参的query_options中指定"refund_detail_item_list"值时才返回该字段信息。
         /// </summary>
         [XmlElement("send_back_fee")]
         public string SendBackFee { get; set; }
 
         /// <summary>
-        /// 该笔退款所对应的交易的订单金额
+        /// 该笔退款所对应的交易的订单金额。单位：元。
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

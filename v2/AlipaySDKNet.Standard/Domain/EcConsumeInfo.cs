@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AgreementPeerPayerId { get; set; }
 
         /// <summary>
+        /// 员工优惠金额，单位：元
+        /// </summary>
+        [XmlElement("benefit_amount")]
+        public string BenefitAmount { get; set; }
+
+        /// <summary>
         /// 外部交易流水号
         /// </summary>
         [XmlElement("biz_out_no")]
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("consume_category")]
         public string ConsumeCategory { get; set; }
+
+        /// <summary>
+        /// 订单原价，单位：元，包含营销资产
+        /// </summary>
+        [XmlElement("consume_fee_with_discount")]
+        public string ConsumeFeeWithDiscount { get; set; }
 
         /// <summary>
         /// 员工消费记账备注

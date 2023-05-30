@@ -77,7 +77,7 @@ namespace Aop.Api.Response
         public string BuyerUserType { get; set; }
 
         /// <summary>
-        /// 该笔交易针对收款方的收费金额；  只在银行间联交易场景下返回该信息；
+        /// 该笔交易针对收款方的收费金额；单位：元。  只在银行间联交易场景下返回该信息；
         /// </summary>
         [XmlElement("charge_amount")]
         public string ChargeAmount { get; set; }
@@ -108,7 +108,7 @@ namespace Aop.Api.Response
         public string CreditPayMode { get; set; }
 
         /// <summary>
-        /// 平台优惠金额
+        /// 平台优惠金额。单位：元。
         /// </summary>
         [XmlElement("discount_amount")]
         public string DiscountAmount { get; set; }
@@ -145,7 +145,7 @@ namespace Aop.Api.Response
         public HbFqPayInfo HbFqPayInfo { get; set; }
 
         /// <summary>
-        /// 惠营宝回票金额
+        /// 惠营宝回票金额。单位：元。
         /// </summary>
         [XmlElement("hyb_amount")]
         public string HybAmount { get; set; }
@@ -175,7 +175,7 @@ namespace Aop.Api.Response
         public string InvoiceAmount { get; set; }
 
         /// <summary>
-        /// 商家优惠金额
+        /// 商家优惠金额。单位：元。
         /// </summary>
         [XmlElement("mdiscount_amount")]
         public string MdiscountAmount { get; set; }

@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string CrowdName { get; set; }
 
         /// <summary>
+        /// 人群在支付宝棋盘站点是否可见,取值如下： <li>true-支付宝站点<b>不可见</b></li> <li>false-支付宝站点<b>可见，默认值</b></li> 使用说明：创建的人群后续需使用标签进行二次圈选，且本人群对商户不可见时可设置为true。
+        /// </summary>
+        [XmlElement("hidden")]
+        public bool Hidden { get; set; }
+
+        /// <summary>
         /// 人群标签值列表
         /// </summary>
         [XmlArray("select_tag_list")]

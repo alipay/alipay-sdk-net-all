@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BusinessType { get; set; }
 
         /// <summary>
+        /// 哈啰出行热线会话jobId
+        /// </summary>
+        [XmlElement("job_id")]
+        public string JobId { get; set; }
+
+        /// <summary>
         /// 问题级别
         /// </summary>
         [XmlElement("question_level")]

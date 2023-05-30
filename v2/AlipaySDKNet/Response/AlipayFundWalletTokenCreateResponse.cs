@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("bind_url")]
         public string BindUrl { get; set; }
+
+        /// <summary>
+        /// 用户钱包ID
+        /// </summary>
+        [XmlElement("user_wallet_id")]
+        public string UserWalletId { get; set; }
     }
 }

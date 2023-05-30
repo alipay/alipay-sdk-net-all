@@ -59,25 +59,25 @@ namespace Aop.Api.Response
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 本次退款金额中买家退款金额; 该字段默认不返回；
+        /// 本次退款金额中买家退款金额;单位：元。 该字段默认不返回；
         /// </summary>
         [XmlElement("present_refund_buyer_amount")]
         public string PresentRefundBuyerAmount { get; set; }
 
         /// <summary>
-        /// 本次退款金额中平台优惠退款金额； 该字段默认不返回；
+        /// 本次退款金额中平台优惠退款金额；单位：元。 该字段默认不返回；
         /// </summary>
         [XmlElement("present_refund_discount_amount")]
         public string PresentRefundDiscountAmount { get; set; }
 
         /// <summary>
-        /// 本次退款金额中商家优惠退款金额； 该字段默认不返回；
+        /// 本次退款金额中商家优惠退款金额；单位：元。 该字段默认不返回；
         /// </summary>
         [XmlElement("present_refund_mdiscount_amount")]
         public string PresentRefundMdiscountAmount { get; set; }
 
         /// <summary>
-        /// 本次退款针对收款方的退收费金额； 只在机构间联模式下返回，其它场景下不返回该字段；
+        /// 本次退款针对收款方的退收费金额；单位：元。 只在机构间联模式下返回，其它场景下不返回该字段；
         /// </summary>
         [XmlElement("refund_charge_amount")]
         public string RefundChargeAmount { get; set; }
@@ -103,13 +103,13 @@ namespace Aop.Api.Response
         public List<TradeFundBill> RefundDetailItemList { get; set; }
 
         /// <summary>
-        /// 退款总金额。 指该笔交易累计已经退款成功的金额。
+        /// 退款总金额。单位：元。 指该笔交易累计已经退款成功的金额。
         /// </summary>
         [XmlElement("refund_fee")]
         public string RefundFee { get; set; }
 
         /// <summary>
-        /// 本次请求退惠营宝金额
+        /// 本次请求退惠营宝金额。单位：元。
         /// </summary>
         [XmlElement("refund_hyb_amount")]
         public string RefundHybAmount { get; set; }
@@ -127,7 +127,7 @@ namespace Aop.Api.Response
         public string RefundSettlementId { get; set; }
 
         /// <summary>
-        /// 本次商户实际退回金额。 说明：如需获取该值，需在入参query_options中传入 refund_detail_item_list。
+        /// 本次商户实际退回金额。单位：元。 说明：如需获取该值，需在入参query_options中传入 refund_detail_item_list。
         /// </summary>
         [XmlElement("send_back_fee")]
         public string SendBackFee { get; set; }

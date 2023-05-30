@@ -22,7 +22,13 @@ namespace Aop.Api.Domain
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// 用户材料类型 INVEST_EXPERIENCE——投资经历 INCOME_CERTIFICATE——收入证明 FIN_ASSET_CERTIFICATE——金融资产证明
+        /// 合投材料类型
+        /// </summary>
+        [XmlElement("material_type")]
+        public string MaterialType { get; set; }
+
+        /// <summary>
+        /// 用户材料类型大类
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

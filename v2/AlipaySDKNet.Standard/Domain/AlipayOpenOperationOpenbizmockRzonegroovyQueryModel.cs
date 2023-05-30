@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 测试
         /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 测试
+        /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }
     }

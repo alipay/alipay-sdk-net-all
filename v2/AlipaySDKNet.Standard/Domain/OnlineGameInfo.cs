@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
+        /// TEST(测试数据)/PROD(正式数据)
+        /// </summary>
+        [XmlElement("env")]
+        public string Env { get; set; }
+
+        /// <summary>
         /// 文体侧赛事业务号
         /// </summary>
         [XmlElement("game_id")]
@@ -51,6 +57,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("game_progress_value")]
         public long GameProgressValue { get; set; }
+
+        /// <summary>
+        /// 奖牌图片
+        /// </summary>
+        [XmlElement("medal_image")]
+        public string MedalImage { get; set; }
 
         /// <summary>
         /// 2022跑遍中国-乐享中秋跑量挑战赛
@@ -96,13 +108,19 @@ namespace Aop.Api.Domain
         public string SportsDataType { get; set; }
 
         /// <summary>
+        /// 马拉松
+        /// </summary>
+        [XmlElement("sports_type")]
+        public string SportsType { get; set; }
+
+        /// <summary>
         /// 赛事开始时间
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 上线
+        /// 白名单/上线/下线
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
@@ -112,6 +130,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_biz_type")]
         public string SubBizType { get; set; }
+
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [XmlArray("tag_list")]
+        [XmlArrayItem("string")]
+        public List<string> TagList { get; set; }
 
         /// <summary>
         /// 用户参赛结束时间

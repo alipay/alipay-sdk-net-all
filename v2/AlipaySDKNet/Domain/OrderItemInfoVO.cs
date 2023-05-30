@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,19 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
+
+        /// <summary>
+        /// 商品退款信息
+        /// </summary>
+        [XmlElement("item_refund_info")]
+        public ItemRefundInfoVO ItemRefundInfo { get; set; }
+
+        /// <summary>
+        /// 本地生活商品凭证信息列表
+        /// </summary>
+        [XmlArray("order_certificate_infos")]
+        [XmlArrayItem("order_certificate_info_v_o")]
+        public List<OrderCertificateInfoVO> OrderCertificateInfos { get; set; }
 
         /// <summary>
         /// 外部商品id

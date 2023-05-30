@@ -18,19 +18,19 @@ namespace Aop.Api.Response
         /// 告警响应率
         /// </summary>
         [XmlElement("trade_alarm_response_rate")]
-        public long TradeAlarmResponseRate { get; set; }
+        public string TradeAlarmResponseRate { get; set; }
 
         /// <summary>
         /// 调用平均耗时
         /// </summary>
         [XmlElement("trade_avg_cost")]
-        public long TradeAvgCost { get; set; }
+        public string TradeAvgCost { get; set; }
 
         /// <summary>
         /// 支付接口调用成功率
         /// </summary>
         [XmlElement("trade_success_rate")]
-        public long TradeSuccessRate { get; set; }
+        public string TradeSuccessRate { get; set; }
 
         /// <summary>
         /// 支付接口调用成功量

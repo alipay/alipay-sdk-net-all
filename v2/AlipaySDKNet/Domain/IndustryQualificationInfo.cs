@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string IndustryQualificationImage { get; set; }
 
         /// <summary>
-        /// 商户行业资质类型，具体选值参见https://mif-pub.alipayobjects.com/QualificationType.xlsx
+        /// 商户行业资质类型，具体选值参见，进件MCC与资质要求 202212.xlsx中特殊资质栏
         /// </summary>
         [XmlElement("industry_qualification_type")]
         public string IndustryQualificationType { get; set; }

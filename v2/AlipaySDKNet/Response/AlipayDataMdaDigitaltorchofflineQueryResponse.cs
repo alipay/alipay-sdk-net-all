@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AgeDistribution { get; set; }
 
         /// <summary>
+        /// 数字火炬手热门服装总数
+        /// </summary>
+        [XmlElement("cloth_digital_human_cnt")]
+        public long ClothDigitalHumanCnt { get; set; }
+
+        /// <summary>
         /// 数字火炬手国家分布
         /// </summary>
         [XmlElement("country_distribution")]

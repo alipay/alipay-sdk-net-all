@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("identity_result_skip_url")]
         public string IdentityResultSkipUrl { get; set; }
+
+        /// <summary>
+        /// 代表订单状态
+        /// </summary>
+        [XmlElement("token_status")]
+        public string TokenStatus { get; set; }
     }
 }

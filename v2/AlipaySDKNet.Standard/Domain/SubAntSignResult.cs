@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class SubAntSignResult : AopObject
     {
+        /// <summary>
+        /// 签署链接结果列表
+        /// </summary>
+        [XmlArray("ant_sign_url_result_list")]
+        [XmlArrayItem("ant_sign_url_result")]
+        public List<AntSignUrlResult> AntSignUrlResultList { get; set; }
+
         /// <summary>
         /// 我方签署方id
         /// </summary>

@@ -12,19 +12,19 @@ namespace Aop.Api.Response
         /// 智能服务日环比
         /// </summary>
         [XmlElement("ai_service_ratio")]
-        public long AiServiceRatio { get; set; }
+        public string AiServiceRatio { get; set; }
 
         /// <summary>
         /// 客户满意度
         /// </summary>
         [XmlElement("customer_satisfaction")]
-        public long CustomerSatisfaction { get; set; }
+        public string CustomerSatisfaction { get; set; }
 
         /// <summary>
         /// 人工服务日环比
         /// </summary>
         [XmlElement("manual_service_ratio")]
-        public long ManualServiceRatio { get; set; }
+        public string ManualServiceRatio { get; set; }
 
         /// <summary>
         /// 今日智能服务总量

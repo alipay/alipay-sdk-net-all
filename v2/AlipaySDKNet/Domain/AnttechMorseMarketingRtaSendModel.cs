@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string CertEncryption { get; set; }
 
         /// <summary>
-        /// 加密类型，参数值大写
+        /// 加密类型，参数值大写，如：SHA256或者SM3
         /// </summary>
         [XmlElement("encryption_type")]
         public string EncryptionType { get; set; }
@@ -52,15 +52,21 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 资源位信息确定商户投放场景，由摩斯同学配置并分配给调用方
+        /// 商务项目ID，由摩斯同学配置并分配给调用方
         /// </summary>
         [XmlElement("resource_id")]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// 摩斯营销发奖类型，明确本次调用是预发奖或者发奖，发奖环节可以配置验证预发奖验证，二段式降低发奖风险。参数值大写
+        /// 摩斯营销发奖类型，明确本次调用是预发奖或者发奖，发奖环节可以配置验证预发奖验证，二段式降低发奖风险。参数值大写，【PREGRANT：预发奖；GRANT：发奖】
         /// </summary>
         [XmlElement("send_type")]
         public string SendType { get; set; }
+
+        /// <summary>
+        /// 用户达标时间，精确到秒
+        /// </summary>
+        [XmlElement("user_pass_time")]
+        public string UserPassTime { get; set; }
     }
 }

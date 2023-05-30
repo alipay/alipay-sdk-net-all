@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class TestDemo : AopObject
     {
         /// <summary>
-        /// test
+        /// test 当前字段已废弃(test废弃字段测试)
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string StringYingshe2Openid { get; set; }
 
         /// <summary>
-        /// test
+        /// test 当前字段已废弃(test废弃字段测试)
         /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }

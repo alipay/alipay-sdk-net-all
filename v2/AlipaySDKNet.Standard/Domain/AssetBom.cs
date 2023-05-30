@@ -71,5 +71,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("request_id")]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 供应商履约标准
+        /// </summary>
+        [XmlElement("std")]
+        public AssetStandard Std { get; set; }
     }
 }

@@ -28,6 +28,24 @@ namespace Aop.Api.Domain
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// 消息类型
+        /// </summary>
+        [XmlElement("message_type_code")]
+        public string MessageTypeCode { get; set; }
+
+        /// <summary>
+        /// 当前消息ID,要求会话内唯一
+        /// </summary>
+        [XmlElement("msg_id")]
+        public string MsgId { get; set; }
+
+        /// <summary>
+        /// 消息ID会话内唯一
+        /// </summary>
+        [XmlElement("reference_message_id")]
+        public string ReferenceMessageId { get; set; }
+
+        /// <summary>
         /// 访问DT的渠道 11:LINKS 12:HELLO_BIKE
         /// </summary>
         [XmlElement("src")]

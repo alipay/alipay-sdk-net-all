@@ -80,7 +80,7 @@ namespace Aop.Api.Response
         public List<ShopExtInfo> ExtInfos { get; set; }
 
         /// <summary>
-        ///  商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid。若未传入shop_id 则本参数与store_id均必填。
+        /// 商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid。若未传入shop_id 则本参数与store_id均必填。
         /// </summary>
         [XmlElement("ip_role_id")]
         public string IpRoleId { get; set; }
@@ -164,6 +164,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("shop_name")]
         public string ShopName { get; set; }
+
+        /// <summary>
+        /// 门店不置信推荐信息
+        /// </summary>
+        [XmlElement("shop_recommend_info")]
+        public ShopRecommendInfo ShopRecommendInfo { get; set; }
 
         /// <summary>
         /// 店铺经营类型，01表示直营，02表示加盟

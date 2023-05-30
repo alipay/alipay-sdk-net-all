@@ -20,5 +20,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("loan_ar_no")]
         public string LoanArNo { get; set; }
+
+        /// <summary>
+        /// 为满足网商银行数据跨域输出的合规要求，β计划中预付融资、赊呗、采购贷、池融资、网商贷等产品相关场景进行合规确权改造，确权方案中需在业务接口入参中加入auth_scene_code（授权场景码）和auth_token（授权令牌，用于鉴权）两个字段供调用方传入字段值
+        /// </summary>
+        [XmlElement("mybk_auth_scene_code")]
+        public string MybkAuthSceneCode { get; set; }
+
+        /// <summary>
+        /// 为满足网商银行数据跨域输出的合规要求，β计划中预付融资、赊呗、采购贷、池融资、网商贷等产品相关场景进行合规确权改造，确权方案中需在业务接口入参中加入auth_scene_code（授权场景码）和auth_token（授权令牌，用于鉴权）两个字段供调用方传入字段值
+        /// </summary>
+        [XmlElement("mybk_auth_token")]
+        public string MybkAuthToken { get; set; }
     }
 }

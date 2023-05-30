@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public string AgreeId { get; set; }
 
         /// <summary>
-        /// 订单申请场景（可空，默认为ONLINE。ONLINE：线上；OFFLINE：线下）
+        /// 订单申请场景
         /// </summary>
         [XmlElement("apply_scene")]
         public string ApplyScene { get; set; }
 
         /// <summary>
-        /// 订单的业务来源（可空，无默认值）
+        /// 订单申请子场景
         /// </summary>
         [XmlElement("apply_sub_scene")]
         public string ApplySubScene { get; set; }

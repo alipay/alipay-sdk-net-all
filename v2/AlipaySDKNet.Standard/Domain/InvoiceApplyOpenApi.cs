@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string DutyFreeType { get; set; }
 
         /// <summary>
+        /// 票面展示的费用期间
+        /// </summary>
+        [XmlElement("fee_interval_format_str")]
+        public string FeeIntervalFormatStr { get; set; }
+
+        /// <summary>
         /// 机构号
         /// </summary>
         [XmlElement("inst_id")]
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_product_name")]
         public string InvoiceProductName { get; set; }
+
+        /// <summary>
+        /// 外部指定的发票行内容后缀
+        /// </summary>
+        [XmlElement("invoice_product_name_suffix")]
+        public string InvoiceProductNameSuffix { get; set; }
 
         /// <summary>
         /// 规格型号，可为空
@@ -82,6 +94,18 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// 是否全部回款
+        /// </summary>
+        [XmlElement("received")]
+        public string Received { get; set; }
+
+        /// <summary>
+        /// 注册地区域码 如：新加坡（SG）,香港（HK）
+        /// </summary>
+        [XmlElement("register_country")]
+        public string RegisterCountry { get; set; }
+
+        /// <summary>
         /// 服务月份
         /// </summary>
         [XmlElement("service_mth")]
@@ -98,6 +122,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("tax_rate")]
         public string TaxRate { get; set; }
+
+        /// <summary>
+        /// 免税标识（无发票：NO_INVOICE，零税率：ZERO_TAX_RATE，免税：EXEMPTION，无税收监管：NO_TAX_REGULATION）
+        /// </summary>
+        [XmlElement("tax_rate_tags")]
+        public string TaxRateTags { get; set; }
 
         /// <summary>
         /// 税收类型 02 营业税;01 增值税;00 无税

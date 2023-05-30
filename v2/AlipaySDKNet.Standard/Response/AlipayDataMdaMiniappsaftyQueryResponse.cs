@@ -18,7 +18,7 @@ namespace Aop.Api.Response
         /// 当前拦截率
         /// </summary>
         [XmlElement("intercept_ratio")]
-        public long InterceptRatio { get; set; }
+        public string InterceptRatio { get; set; }
 
         /// <summary>
         /// 拦截趋势

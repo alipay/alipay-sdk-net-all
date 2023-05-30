@@ -51,7 +51,7 @@ namespace Aop.Api.Response
         public string TradeNo { get; set; }
 
         /// <summary>
-        /// 交易状态，TRADE_FINISHED交易成功，TRADE_CLOSED交易失败
+        /// 交易状态 TRADE_FINISHED交易成功 TRADE_CLOSED交易失败 WAIT_SELLER_SEND_GOODS买家付款成功充值进行中
         /// </summary>
         [XmlElement("trade_status")]
         public string TradeStatus { get; set; }

@@ -18,13 +18,13 @@ namespace Aop.Api.Domain
         public List<MpcpromoGoodsList> DataList { get; set; }
 
         /// <summary>
-        /// 数据类型
+        /// 数据类型 : USER（用户数据）、ITEM（商品数据）、BEHAVIOR（行为数据）
         /// </summary>
         [XmlElement("data_type")]
         public string DataType { get; set; }
 
         /// <summary>
-        /// 商户所在行业:  goodsNormal（通用行业商品数据）  goodsLease（租赁行业商品数据）
+        /// 商户所在行业:   goodsLease（租赁行业商品数据）
         /// </summary>
         [XmlElement("industry")]
         public string Industry { get; set; }

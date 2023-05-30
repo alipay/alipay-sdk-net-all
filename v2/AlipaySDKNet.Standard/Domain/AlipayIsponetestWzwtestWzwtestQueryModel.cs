@@ -16,13 +16,37 @@ namespace Aop.Api.Domain
         public string AOpenId { get; set; }
 
         /// <summary>
-        /// test
+        /// 22
+        /// </summary>
+        [XmlElement("aaaa")]
+        public string Aaaa { get; set; }
+
+        /// <summary>
+        /// 33
+        /// </summary>
+        [XmlElement("bbbb")]
+        public string Bbbb { get; set; }
+
+        /// <summary>
+        /// 2
+        /// </summary>
+        [XmlElement("ccc")]
+        public string Ccc { get; set; }
+
+        /// <summary>
+        /// test 当前字段已废弃(test废弃字段测试)
         /// </summary>
         [XmlElement("complex_a")]
         public TestDemo ComplexA { get; set; }
 
         /// <summary>
         /// test
+        /// </summary>
+        [XmlElement("complex_b")]
+        public string ComplexB { get; set; }
+
+        /// <summary>
+        /// test 当前字段已废弃(test废弃原因测试)
         /// </summary>
         [XmlElement("string_a")]
         public string StringA { get; set; }

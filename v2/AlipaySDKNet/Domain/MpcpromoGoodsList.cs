@@ -90,6 +90,19 @@ namespace Aop.Api.Domain
         public string Id { get; set; }
 
         /// <summary>
+        /// 商品的素材图片列表
+        /// </summary>
+        [XmlArray("material_list")]
+        [XmlArrayItem("string")]
+        public List<string> MaterialList { get; set; }
+
+        /// <summary>
+        /// 商品下单页链接
+        /// </summary>
+        [XmlElement("order_url")]
+        public string OrderUrl { get; set; }
+
+        /// <summary>
         /// 商品原价；非负数且保留两位小数
         /// </summary>
         [XmlElement("origin_price")]
@@ -134,7 +147,7 @@ namespace Aop.Api.Domain
         public string RentalDate { get; set; }
 
         /// <summary>
-        /// 商品是否支持租满即送
+        /// 商品是否支持租满即送：是/否
         /// </summary>
         [XmlElement("rental_free")]
         public string RentalFree { get; set; }
@@ -183,7 +196,7 @@ namespace Aop.Api.Domain
         public string ShopName { get; set; }
 
         /// <summary>
-        /// 商品来源类型
+        /// 商品来源类型，如自营/第三方(如有)
         /// </summary>
         [XmlElement("source_id")]
         public string SourceId { get; set; }
@@ -195,7 +208,7 @@ namespace Aop.Api.Domain
         public string SpuId { get; set; }
 
         /// <summary>
-        /// 推荐状态；
+        /// 推荐状态 : 可推荐: 1，不可推荐: 0
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

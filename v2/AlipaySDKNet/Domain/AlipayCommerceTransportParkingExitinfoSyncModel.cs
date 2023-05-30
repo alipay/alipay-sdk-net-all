@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public bool IsEncryptPlateNo { get; set; }
 
         /// <summary>
+        /// 蚂蚁会员统一ID对应的归属应用appid
+        /// </summary>
+        [XmlElement("open_appid")]
+        public string OpenAppid { get; set; }
+
+        /// <summary>
         /// 蚂蚁会员统一ID
         /// </summary>
         [XmlElement("open_id")]

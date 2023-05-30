@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string Authorized { get; set; }
 
         /// <summary>
+        /// ture为需要自动签署，false为手动签署
+        /// </summary>
+        [XmlElement("auto_sign")]
+        public bool AutoSign { get; set; }
+
+        /// <summary>
         /// 签署文件列表（包含印模和签署区域）
         /// </summary>
         [XmlArray("ca_system_sign_file_request_list")]
@@ -64,6 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("our_corp")]
         public bool OurCorp { get; set; }
+
+        /// <summary>
+        /// true为需要发送链接，false为不需要发送链接
+        /// </summary>
+        [XmlElement("send_link_flag")]
+        public bool SendLinkFlag { get; set; }
 
         /// <summary>
         /// signUserType为org时必选  企业子类型      * BUS("BUS", "企业"),      * SINGLE("SINGLE", "个体工商户"),      * GOV("GOV", "党政机关"),      * INST("INST", "事业单位"),      * COMMON("COMMON", "社会组织"),      * OTHER("OTHER", "其他组织");

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 是否创建企业人脸库，适用于对接团餐刷脸付、门禁刷脸通行等场景，不传默认为true
+        /// 是否创建企业人脸库，适用于对接团餐刷脸付、门禁刷脸通行等场景；不传默认创建，创建失败不会阻塞企业的创建；如果传true且创建失败，则会阻塞企业的创建。
         /// </summary>
         [XmlElement("create_iot_group")]
         public bool CreateIotGroup { get; set; }

@@ -118,6 +118,12 @@ namespace Aop.Api.Domain
         public string GameName { get; set; }
 
         /// <summary>
+        /// 游戏交易模式
+        /// </summary>
+        [XmlElement("game_trade_mode")]
+        public string GameTradeMode { get; set; }
+
+        /// <summary>
         /// 设备是否支持锁定
         /// </summary>
         [XmlElement("lockable_device")]

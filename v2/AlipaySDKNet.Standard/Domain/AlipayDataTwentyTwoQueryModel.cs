@@ -10,13 +10,19 @@ namespace Aop.Api.Domain
     public class AlipayDataTwentyTwoQueryModel : AopObject
     {
         /// <summary>
-        /// body基础描述
+        /// body基础描述xxxxxxx111
         /// </summary>
         [XmlElement("body")]
         public string Body { get; set; }
 
         /// <summary>
-        /// id基础描述
+        /// derdesc
+        /// </summary>
+        [XmlElement("body_a")]
+        public string BodyA { get; set; }
+
+        /// <summary>
+        /// id基础描述 当前字段已废弃(废弃原废弃原废弃原废弃原)
         /// </summary>
         [XmlElement("id")]
         public string Id { get; set; }

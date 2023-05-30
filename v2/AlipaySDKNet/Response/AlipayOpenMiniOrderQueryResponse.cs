@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public AddressInfoVO AddressInfo { get; set; }
 
         /// <summary>
+        /// 本地生活商品的联系人信息
+        /// </summary>
+        [XmlElement("contact_info")]
+        public ContactInfoVO ContactInfo { get; set; }
+
+        /// <summary>
         /// 创建时间，yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("create_time")]

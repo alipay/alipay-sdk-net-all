@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string AlipayOrderId { get; set; }
 
         /// <summary>
+        /// 订单申请场景
+        /// </summary>
+        [XmlElement("apply_scene")]
+        public string ApplyScene { get; set; }
+
+        /// <summary>
+        /// 订单申请子场景
+        /// </summary>
+        [XmlElement("apply_sub_scene")]
+        public string ApplySubScene { get; set; }
+
+        /// <summary>
         /// 办理人所在地城市编码
         /// </summary>
         [XmlElement("city_code")]

@@ -30,7 +30,7 @@ namespace Aop.Api.Request
         public string FileId { get; set; }
 
         /// <summary>
-        /// 法人身份证号
+        /// 法人身份证号： 快速创建，小二代入驻非必填。 普通创建，企业自入驻必填。
         /// </summary>
         public string LegalIdNumber { get; set; }
 

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
+        /// 门店不置信时，是否需要返回shop_recommend_info
+        /// </summary>
+        [XmlElement("need_recommend")]
+        public string NeedRecommend { get; set; }
+
+        /// <summary>
         /// 蚂蚁店铺id。填写本参数的话，store_id和ip_role_id可以不填
         /// </summary>
         [XmlElement("shop_id")]

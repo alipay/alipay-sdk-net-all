@@ -33,9 +33,21 @@ namespace Aop.Api.Response
         public string Mobile { get; set; }
 
         /// <summary>
+        /// 清算交易号，如果没有被动清算时，返回空字符串
+        /// </summary>
+        [XmlElement("pay_transaction_id")]
+        public string PayTransactionId { get; set; }
+
+        /// <summary>
         /// 姓名
         /// </summary>
         [XmlElement("user_name")]
         public string UserName { get; set; }
+
+        /// <summary>
+        /// 清算机构号，YL、WL，没有时返回空字段串
+        /// </summary>
+        [XmlElement("ver_dept")]
+        public string VerDept { get; set; }
     }
 }

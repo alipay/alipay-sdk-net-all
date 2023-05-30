@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("fund_type")]
         public string FundType { get; set; }
+
+        /// <summary>
+        /// 间连商户ID
+        /// </summary>
+        [XmlElement("sub_merchant_id")]
+        public string SubMerchantId { get; set; }
     }
 }

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string LogTime { get; set; }
 
         /// <summary>
+        /// 传item的素材id，如果推荐接口没返回素材id，这个就不传
+        /// </summary>
+        [XmlElement("material_id")]
+        public string MaterialId { get; set; }
+
+        /// <summary>
         /// 加密userId
         /// </summary>
         [XmlElement("open_id")]

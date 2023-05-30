@@ -49,5 +49,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("user_wallet_id")]
         public string UserWalletId { get; set; }
+
+        /// <summary>
+        /// 用户钱包开通状态 I - 申请中 E -生效
+        /// </summary>
+        [XmlElement("user_wallet_status")]
+        public string UserWalletStatus { get; set; }
+
+        /// <summary>
+        /// 钱包所属用户的状态 NORMAL - 正常 ABNORMAL - 异常 CLOSED - 已注销
+        /// </summary>
+        [XmlElement("wallet_owner_status")]
+        public string WalletOwnerStatus { get; set; }
     }
 }

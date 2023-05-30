@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string MerchantName { get; set; }
 
         /// <summary>
+        /// 生活记录加入时的外部业务号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 周期类型
         /// </summary>
         [XmlElement("period_type")]

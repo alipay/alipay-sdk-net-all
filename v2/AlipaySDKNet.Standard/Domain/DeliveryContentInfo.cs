@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("delivery_content_type")]
         public string DeliveryContentType { get; set; }
+
+        /// <summary>
+        /// 对客内容表达
+        /// </summary>
+        [XmlElement("delivery_display_info")]
+        public DeliveryDisplayInfo DeliveryDisplayInfo { get; set; }
     }
 }

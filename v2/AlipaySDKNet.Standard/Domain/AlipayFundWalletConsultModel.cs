@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 用户开通钱包时的外部业务号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 用户主体标识
         /// </summary>
         [XmlElement("principal_id")]

@@ -16,5 +16,17 @@ namespace Aop.Api.Response
         [XmlArray("gift_card_vos")]
         [XmlArrayItem("gift_card_vo")]
         public List<GiftCardVo> GiftCardVos { get; set; }
+
+        /// <summary>
+        /// 查询总数量
+        /// </summary>
+        [XmlElement("total_nums")]
+        public string TotalNums { get; set; }
+
+        /// <summary>
+        /// 查询总页数
+        /// </summary>
+        [XmlElement("total_pages")]
+        public string TotalPages { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace Aop.Api.Response
         /// 访问成功率
         /// </summary>
         [XmlElement("success_rate")]
-        public long SuccessRate { get; set; }
+        public string SuccessRate { get; set; }
 
         /// <summary>
         /// 今日告警次数
@@ -30,6 +30,6 @@ namespace Aop.Api.Response
         /// 今日告警响应率
         /// </summary>
         [XmlElement("today_alarm_response_rate")]
-        public long TodayAlarmResponseRate { get; set; }
+        public string TodayAlarmResponseRate { get; set; }
     }
 }
