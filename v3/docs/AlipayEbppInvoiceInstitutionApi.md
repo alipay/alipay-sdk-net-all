@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 制度新增
 
-制度新增
+制度新增，包含制度下使用规则列表和发放规则列表的新增。
 
 ### Example
 ```csharp
@@ -100,7 +100,7 @@ No authorization required
 
 <a name="delete"></a>
 # **Delete**
-> Object Delete (string accountId = null, string agreementNo = null, string enterpriseId = null, string institutionId = null)
+> AlipayEbppInvoiceInstitutionDeleteResponseModel Delete (string accountId = null, string agreementNo = null, string enterpriseId = null, string institutionId = null)
 
 制度删除
 
@@ -140,15 +140,15 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var accountId = 2088000194958956;  // string | 企业共同账户id（条件必填） (optional) 
-            var agreementNo = 1234;  // string | 授权签约协议号（条件必填） (optional) 
-            var enterpriseId = 2088123412341234;  // string | 企业id（条件必填） (optional) 
+            var accountId = 2088000194958956;  // string | 企业共同账户id (optional) 
+            var agreementNo = 20215425001181407500;  // string | 授权签约协议号 (optional) 
+            var enterpriseId = 2088123412341234;  // string | 企业id (optional) 
             var institutionId = 2022031000152617000000000001;  // string | 制度id (optional) 
 
             try
             {
                 // 制度删除
-                Object result = apiInstance.Delete(accountId, agreementNo, enterpriseId, institutionId);
+                AlipayEbppInvoiceInstitutionDeleteResponseModel result = apiInstance.Delete(accountId, agreementNo, enterpriseId, institutionId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -166,14 +166,14 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountId** | **string**| 企业共同账户id（条件必填） | [optional] 
- **agreementNo** | **string**| 授权签约协议号（条件必填） | [optional] 
- **enterpriseId** | **string**| 企业id（条件必填） | [optional] 
+ **accountId** | **string**| 企业共同账户id | [optional] 
+ **agreementNo** | **string**| 授权签约协议号 | [optional] 
+ **enterpriseId** | **string**| 企业id | [optional] 
  **institutionId** | **string**| 制度id | [optional] 
 
 ### Return type
 
-**Object**
+**AlipayEbppInvoiceInstitutionDeleteResponseModel**
 
 ### Authorization
 
@@ -195,7 +195,7 @@ No authorization required
 
 <a name="modify"></a>
 # **Modify**
-> Object Modify (AlipayEbppInvoiceInstitutionModifyModel alipayEbppInvoiceInstitutionModifyModel = null)
+> AlipayEbppInvoiceInstitutionModifyResponseModel Modify (AlipayEbppInvoiceInstitutionModifyModel alipayEbppInvoiceInstitutionModifyModel = null)
 
 制度编辑
 
@@ -240,7 +240,7 @@ namespace Example
             try
             {
                 // 制度编辑
-                Object result = apiInstance.Modify(alipayEbppInvoiceInstitutionModifyModel);
+                AlipayEbppInvoiceInstitutionModifyResponseModel result = apiInstance.Modify(alipayEbppInvoiceInstitutionModifyModel);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**AlipayEbppInvoiceInstitutionModifyResponseModel**
 
 ### Authorization
 

@@ -107,6 +107,10 @@ namespace AlipaySDKNet.OpenAPI.Util
         /// <returns></returns>
         public ApiResponse<Object> Execute(string path, HttpMethod method, OpenApiGenericRequest openApiGenericRequest)
         {
+            if (openApiGenericRequest.BodyParams == null)
+            {
+                openApiGenericRequest.BodyParams = openApiGenericRequest.BizParams;
+            }
             RequestOptions localVarRequestOptions = new RequestOptions();
             bool isFileUpload = openApiGenericRequest.FileParams != null && openApiGenericRequest.FileParams.Count > 0;
 
@@ -151,9 +155,9 @@ namespace AlipaySDKNet.OpenAPI.Util
 
             if (isFileUpload)
             {
-                if (openApiGenericRequest.BizParams != null)
+                if (openApiGenericRequest.BodyParams != null)
                 {
-                    localVarRequestOptions.FormParameters.Add("data", ClientUtils.ParameterToString(openApiGenericRequest.BizParams)); // form parameter
+                    localVarRequestOptions.FormParameters.Add("data", ClientUtils.ParameterToString(openApiGenericRequest.BodyParams)); // form parameter
                 }
 
                 foreach (var param in openApiGenericRequest.FileParams)
@@ -163,7 +167,7 @@ namespace AlipaySDKNet.OpenAPI.Util
             }
             else if (method != HttpMethod.Get && method != HttpMethod.Head)
             {
-                localVarRequestOptions.Data = openApiGenericRequest.BizParams;
+                localVarRequestOptions.Data = openApiGenericRequest.BodyParams;
             }
 
             if (!string.IsNullOrEmpty(openApiGenericRequest.AppAuthToken))

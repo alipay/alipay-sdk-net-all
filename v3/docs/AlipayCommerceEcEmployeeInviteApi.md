@@ -9,11 +9,11 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **Query**
-> AlipayCommerceEcEmployeeInviteQueryResponseModel Query (string enterpriseId = null)
+> AlipayCommerceEcEmployeeInviteQueryResponseModel Query (string enterpriseId = null, string employeeId = null, string pageContentCode = null)
 
 获取员工邀请链接
 
-获取员工邀请链接，每个企业的员工邀请链接都是一样的
+获取员工邀请链接，若只传入企业ID企业则邀请链接对企业员工均有效，若传入了企业ID和员工ID则链接只对传入的员工ID有效
 
 ### Example
 ```csharp
@@ -50,11 +50,13 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var enterpriseId = 2088985758939;  // string | 企业id (optional) 
+            var employeeId = 2288099887700000;  // string | 企业码员工ID (optional) 
+            var pageContentCode = PCC_STANDARD;  // string | 页面内容code (optional) 
 
             try
             {
                 // 获取员工邀请链接
-                AlipayCommerceEcEmployeeInviteQueryResponseModel result = apiInstance.Query(enterpriseId);
+                AlipayCommerceEcEmployeeInviteQueryResponseModel result = apiInstance.Query(enterpriseId, employeeId, pageContentCode);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -73,6 +75,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterpriseId** | **string**| 企业id | [optional] 
+ **employeeId** | **string**| 企业码员工ID | [optional] 
+ **pageContentCode** | **string**| 页面内容code | [optional] 
 
 ### Return type
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="sign"></a>
 # **Sign**
-> Object Sign (System.IO.Stream appDemo = null, System.IO.Stream businessLicenseAuthPic = null, System.IO.Stream businessLicensePic = null, AlipayOpenAgentCommonSignModel data = null, System.IO.Stream shopScenePic = null, System.IO.Stream shopSignBoardPic = null, System.IO.Stream specialLicensePic = null, System.IO.Stream webHomeScreenshot = null, System.IO.Stream webItemScreenshot = null, System.IO.Stream webPayScreenshot = null, System.IO.Stream webSitesLoa = null)
+> Object Sign (System.IO.Stream appDemo = null, System.IO.Stream businessLicenseAuthPic = null, System.IO.Stream businessLicensePic = null, AlipayOpenAgentCommonSignModel data = null, System.IO.Stream miniAppScreenshot = null, System.IO.Stream shopScenePic = null, System.IO.Stream shopSignBoardPic = null, System.IO.Stream specialLicensePic = null, System.IO.Stream webHomeScreenshot = null, System.IO.Stream webItemScreenshot = null, System.IO.Stream webPayScreenshot = null, System.IO.Stream webSitesLoa = null)
 
 代签约产品通用接口
 
@@ -53,6 +53,7 @@ namespace Example
             var businessLicenseAuthPic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var businessLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var data = new AlipayOpenAgentCommonSignModel(); // AlipayOpenAgentCommonSignModel |  (optional) 
+            var miniAppScreenshot = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var shopScenePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var shopSignBoardPic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var specialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
@@ -64,7 +65,7 @@ namespace Example
             try
             {
                 // 代签约产品通用接口
-                Object result = apiInstance.Sign(appDemo, businessLicenseAuthPic, businessLicensePic, data, shopScenePic, shopSignBoardPic, specialLicensePic, webHomeScreenshot, webItemScreenshot, webPayScreenshot, webSitesLoa);
+                Object result = apiInstance.Sign(appDemo, businessLicenseAuthPic, businessLicensePic, data, miniAppScreenshot, shopScenePic, shopSignBoardPic, specialLicensePic, webHomeScreenshot, webItemScreenshot, webPayScreenshot, webSitesLoa);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -86,6 +87,7 @@ Name | Type | Description  | Notes
  **businessLicenseAuthPic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **businessLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **data** | **AlipayOpenAgentCommonSignModel**|  | [optional] 
+ **miniAppScreenshot** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **shopScenePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **shopSignBoardPic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **specialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 

@@ -49,8 +49,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var accountId = 2088000194958956;  // string | 企业共同账户id，和授权签约协议号共同使用。 (optional) 
-            var agreementNo = 20215425001112341234;  // string | 授权签约协议号，可通过签约消息获取。配合企业共同账户id使用，当填写企业共同账户id时，此字段必填。 (optional) 
+            var accountId = 2088000194958956;  // string | 企业共同账户id (optional) 
+            var agreementNo = 20215425001112341234;  // string | 授权签约协议号 (optional) 
             var enterpriseId = 2088000194958956;  // string | 企业ID (optional) 
             var institutionId = 2022071800152609780000004052;  // string | 制度id (optional) 
 
@@ -75,8 +75,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountId** | **string**| 企业共同账户id，和授权签约协议号共同使用。 | [optional] 
- **agreementNo** | **string**| 授权签约协议号，可通过签约消息获取。配合企业共同账户id使用，当填写企业共同账户id时，此字段必填。 | [optional] 
+ **accountId** | **string**| 企业共同账户id | [optional] 
+ **agreementNo** | **string**| 授权签约协议号 | [optional] 
  **enterpriseId** | **string**| 企业ID | [optional] 
  **institutionId** | **string**| 制度id | [optional] 
 

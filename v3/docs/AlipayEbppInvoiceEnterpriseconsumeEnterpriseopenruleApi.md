@@ -229,10 +229,10 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var enterpriseId = 2088000000000;  // string | 企业id (optional) 
+            var enterpriseId = 2088000194958955;  // string | 企业ID (optional) 
             var invoiceRuleId = 2021032900152710950000000001;  // string | 开票规则ID (optional) 
-            var accountId = 2088000194958956;  // string | 共同账户id (optional) 
-            var agreementNo = 20215425001112341234;  // string | 授权签约协议号（仅使用account_id时必传） (optional) 
+            var accountId = 2088000194958956;  // string | 共同账户ID (optional) 
+            var agreementNo = 20215425001112341234;  // string | 授权签约协议号 (optional) 
 
             try
             {
@@ -255,10 +255,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **enterpriseId** | **string**| 企业id | [optional] 
+ **enterpriseId** | **string**| 企业ID | [optional] 
  **invoiceRuleId** | **string**| 开票规则ID | [optional] 
- **accountId** | **string**| 共同账户id | [optional] 
- **agreementNo** | **string**| 授权签约协议号（仅使用account_id时必传） | [optional] 
+ **accountId** | **string**| 共同账户ID | [optional] 
+ **agreementNo** | **string**| 授权签约协议号 | [optional] 
 
 ### Return type
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **Query**
-> AlipayOpenAppServiceSchemaQueryResponseModel Query (string categoryId = null)
+> AlipayOpenAppServiceSchemaQueryResponseModel Query (string categoryId = null, string templateType = null)
 
 服务schema下发
 
@@ -50,11 +50,12 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var categoryId = c11111;  // string | 类目id (optional) 
+            var templateType = DEFAULT;  // string | 服务模版类型。若当前服务类目只有一个服务模版，可不填。 (optional) 
 
             try
             {
                 // 服务schema下发
-                AlipayOpenAppServiceSchemaQueryResponseModel result = apiInstance.Query(categoryId);
+                AlipayOpenAppServiceSchemaQueryResponseModel result = apiInstance.Query(categoryId, templateType);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -73,6 +74,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **categoryId** | **string**| 类目id | [optional] 
+ **templateType** | **string**| 服务模版类型。若当前服务类目只有一个服务模版，可不填。 | [optional] 
 
 ### Return type
 

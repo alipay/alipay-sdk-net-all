@@ -50,7 +50,7 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var accountId = 2088xxx;  // string | 共同账户ID (optional) 
-            var agreementNo = 1234;  // string | 授权签约协议号 (optional) 
+            var agreementNo = 20215713002876184996;  // string | 授权签约协议号 (optional) 
             var enterpriseId = 2088xxx;  // string | 企业ID (optional) 
             var roleId = 2088xxx;  // string | 商户ID (optional) 
             var pid = 2088xxx;  // string | 商户ID (optional) 

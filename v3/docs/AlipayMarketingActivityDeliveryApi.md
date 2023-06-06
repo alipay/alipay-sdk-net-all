@@ -140,7 +140,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var deliveryId = 20121231231242353;  // string | 投放计划id
+            var deliveryId = 20121231231242353;  // string | 推广计划id
             var alipayMarketingActivityDeliveryQueryModel = new AlipayMarketingActivityDeliveryQueryModel(); // AlipayMarketingActivityDeliveryQueryModel |  (optional) 
 
             try
@@ -164,7 +164,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deliveryId** | **string**| 投放计划id | 
+ **deliveryId** | **string**| 推广计划id | 
  **alipayMarketingActivityDeliveryQueryModel** | **AlipayMarketingActivityDeliveryQueryModel**|  | [optional] 
 
 ### Return type

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="cancel"></a>
 # **Cancel**
-> Object Cancel (AlipayCommerceLogisticsOrderInstantdeliveryCancelModel alipayCommerceLogisticsOrderInstantdeliveryCancelModel = null)
+> AlipayCommerceLogisticsOrderInstantdeliveryCancelResponseModel Cancel (AlipayCommerceLogisticsOrderInstantdeliveryCancelModel alipayCommerceLogisticsOrderInstantdeliveryCancelModel = null)
 
 取消即时配送订单
 
@@ -56,7 +56,7 @@ namespace Example
             try
             {
                 // 取消即时配送订单
-                Object result = apiInstance.Cancel(alipayCommerceLogisticsOrderInstantdeliveryCancelModel);
+                AlipayCommerceLogisticsOrderInstantdeliveryCancelResponseModel result = apiInstance.Cancel(alipayCommerceLogisticsOrderInstantdeliveryCancelModel);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**AlipayCommerceLogisticsOrderInstantdeliveryCancelResponseModel**
 
 ### Authorization
 

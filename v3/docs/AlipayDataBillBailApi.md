@@ -51,7 +51,7 @@ namespace Example
 
             var startTime = 2019-01-01 00:00:00;  // string | 保证金流水创建时间的起始范围 (optional) 
             var endTime = 2019-01-02 00:00:00;  // string | 保证金流水创建时间的结束范围。与起始时间间隔不超过31天。查询结果为起始时间至结束时间的左闭右开区间 (optional) 
-            var bailType = TMALL_BAIL;  // string | 保证金类型，目前支持TMALL_BAIL-天猫保证金，TAOBAO_BAIL-淘宝保证金 (optional) 
+            var bailType = TMALL_S_BAIL;  // string | 保证金类型，目前支持TMALL_S_BAIL-天猫保证金，TAOBAO_BAIL-淘宝保证金 (optional) 
             var transLogId = 20190101***;  // string | 保证金流水号。如果查询参数中指定流水号，则只查询流水号相关的记录 (optional) 
             var bizOrigNo = 1***;  // string | 业务基础订单号。如果查询参数中指定订单号，则只查询相关的记录 (optional) 
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startTime** | **string**| 保证金流水创建时间的起始范围 | [optional] 
  **endTime** | **string**| 保证金流水创建时间的结束范围。与起始时间间隔不超过31天。查询结果为起始时间至结束时间的左闭右开区间 | [optional] 
- **bailType** | **string**| 保证金类型，目前支持TMALL_BAIL-天猫保证金，TAOBAO_BAIL-淘宝保证金 | [optional] 
+ **bailType** | **string**| 保证金类型，目前支持TMALL_S_BAIL-天猫保证金，TAOBAO_BAIL-淘宝保证金 | [optional] 
  **transLogId** | **string**| 保证金流水号。如果查询参数中指定流水号，则只查询流水号相关的记录 | [optional] 
  **bizOrigNo** | **string**| 业务基础订单号。如果查询参数中指定订单号，则只查询相关的记录 | [optional] 
 

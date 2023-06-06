@@ -40,31 +40,24 @@ namespace AlipaySDKNet.OpenAPI.Test.Api
         private ITestOutputHelper output;
         private GenericExecuteApi api;
 
-        private String privateKey =
-            "";
+        private String privateKey = "";
 
-        private String publicKey =
-            "";
+        private String publicKey = "";
 
         public OperationApiTests(ITestOutputHelper output)
         {
             this.output = output;
             instance = new AlipayTradeApi();
             AlipayConfig alipayConfig = new AlipayConfig();
-            // alipayConfig.AppId = "";
-            // alipayConfig.PrivateKey = "";
-            // alipayConfig.AlipayPublicKey = "";
-            // alipayConfig.EncryptKey = "";
 
             alipayConfig.AppId = "";
-            alipayConfig.PrivateKey =
-                "";
+            alipayConfig.PrivateKey = "";
             alipayConfig.AppCertPath = GetSolutionBasePath() +
                                        "/AlipaySDKNet.OpenAPI.Test/Cert/appCertPublicKey_2021003156675030.crt";
             alipayConfig.RootCertPath = GetSolutionBasePath() + "/AlipaySDKNet.OpenAPI.Test/Cert/alipayRootCert.crt";
             alipayConfig.AlipayPublicCertPath =
                 GetSolutionBasePath() + "/AlipaySDKNet.OpenAPI.Test/Cert/alipayCertPublicKey_RSA2.crt";
-            // alipayConfig.EncryptKey = "Yy860MatsGQujXalHsTKVg==";
+            // alipayConfig.EncryptKey = "";
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             instance.Client.SetAlipayConfigUtil(alipayConfigUtil);
             

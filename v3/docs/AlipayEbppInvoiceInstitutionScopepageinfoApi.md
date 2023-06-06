@@ -51,9 +51,9 @@ namespace Example
 
             var accountId = 2088000194958956;  // string | 企业共同账户id (optional) 
             var agreementNo = 20215425001112341234;  // string | 授权签约协议号 (optional) 
-            var enterpriseId = 2088000194958956;  // string | 企业ID (optional) 
+            var enterpriseId = 2088000194958956;  // string | 企业id (optional) 
             var institutionId = 2022071800152609780000004052;  // string | 制度id (optional) 
-            var ownerType = PHONE;  // string | EMPLOYEE（员工支付宝id）,ENTERPRISE_PAY_UID（员工企业码id）,PHONE（员工手机号) 默认返回员工id（支付宝id或企业码员工id），如需返回手机号需指定 (optional) 
+            var ownerType = PHONE;  // string | 适配id类型 (optional) 
             var pageNum = 10;  // int? | 页码 (optional) 
             var pageSize = 100;  // int? | 页大小 (optional) 
 
@@ -80,9 +80,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountId** | **string**| 企业共同账户id | [optional] 
  **agreementNo** | **string**| 授权签约协议号 | [optional] 
- **enterpriseId** | **string**| 企业ID | [optional] 
+ **enterpriseId** | **string**| 企业id | [optional] 
  **institutionId** | **string**| 制度id | [optional] 
- **ownerType** | **string**| EMPLOYEE（员工支付宝id）,ENTERPRISE_PAY_UID（员工企业码id）,PHONE（员工手机号) 默认返回员工id（支付宝id或企业码员工id），如需返回手机号需指定 | [optional] 
+ **ownerType** | **string**| 适配id类型 | [optional] 
  **pageNum** | **int?**| 页码 | [optional] 
  **pageSize** | **int?**| 页大小 | [optional] 
 

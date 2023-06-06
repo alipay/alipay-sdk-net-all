@@ -45,11 +45,6 @@ namespace AlipaySDKNet.OpenAPI.Test.Api
         {
             // instance = new AlipayOpenFileApi();
             AlipayConfig alipayConfig = new AlipayConfig();
-            // alipayConfig.AppId = "";
-            // alipayConfig.PrivateKey = "";
-            // alipayConfig.AlipayPublicKey = "";
-            // // alipayConfig.EncryptKey = "";
-            alipayConfig.AppId = "2021003126677278";
             alipayConfig.PrivateKey = "";
             alipayConfig.AlipayPublicKey = "";
             // alipayConfig.EncryptKey = "";
