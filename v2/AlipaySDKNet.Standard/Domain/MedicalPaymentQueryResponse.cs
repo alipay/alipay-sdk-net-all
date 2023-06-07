@@ -136,6 +136,18 @@ namespace Aop.Api.Domain
         public string RealRefundAmount { get; set; }
 
         /// <summary>
+        /// 1:亲情支付,0:本人支付,为空默认0
+        /// </summary>
+        [XmlElement("rels_pay_flag")]
+        public string RelsPayFlag { get; set; }
+
+        /// <summary>
+        /// 亲情支付代办人脱敏姓名，rels_pay_flag为1时不为空
+        /// </summary>
+        [XmlElement("rels_pay_user_name")]
+        public string RelsPayUserName { get; set; }
+
+        /// <summary>
         /// 补充字段描述
         /// </summary>
         [XmlElement("remark")]

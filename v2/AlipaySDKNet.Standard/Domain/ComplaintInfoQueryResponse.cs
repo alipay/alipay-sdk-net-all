@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class ComplaintInfoQueryResponse : AopObject
     {
         /// <summary>
-        /// 投诉单涉及交易总金额
+        /// 投诉单涉及交易总金额（单位：人民币元）
         /// </summary>
         [XmlElement("complain_amount")]
         public string ComplainAmount { get; set; }

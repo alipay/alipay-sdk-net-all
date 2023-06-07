@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 申请人的uid号
+        /// 员工的工号
         /// </summary>
         [XmlElement("operator")]
         public string Operator { get; set; }

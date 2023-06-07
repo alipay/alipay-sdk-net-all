@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCertificateCertificationBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 三方码列表。取值为支付宝调用三方凭证发放spi时商户返回的三方码
+        /// 三方码列表。取值为支付宝调用三方凭证发放spi时商户返回的三方码 当前字段已废弃(统一平台码与三方码字段，后续使用凭证id)
         /// </summary>
         [XmlArray("code_list")]
         [XmlArrayItem("string")]

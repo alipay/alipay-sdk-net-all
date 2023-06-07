@@ -136,6 +136,12 @@ namespace Aop.Api.Domain
         public string RealAmount { get; set; }
 
         /// <summary>
+        /// 外部业务关联单据号
+        /// </summary>
+        [XmlElement("rel_out_business_no")]
+        public string RelOutBusinessNo { get; set; }
+
+        /// <summary>
         /// 业务发生量/业务发生金额。如果是金额，则为各币种的“元”单位，精确到小数点后两位。
         /// </summary>
         [XmlElement("service_amount")]

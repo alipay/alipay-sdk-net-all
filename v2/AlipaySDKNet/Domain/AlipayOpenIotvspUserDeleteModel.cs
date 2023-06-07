@@ -23,7 +23,14 @@ namespace Aop.Api.Domain
         public string OrgOutId { get; set; }
 
         /// <summary>
-        /// 用户ID列表，单次操作最多100个
+        /// 机构内人员所属的场所，部门场景为必传，比如酒店门禁，需传房间
+        /// </summary>
+        [XmlArray("place_name_list")]
+        [XmlArrayItem("string")]
+        public List<string> PlaceNameList { get; set; }
+
+        /// <summary>
+        /// 用户VID列表，目前仅支持一次出库一人
         /// </summary>
         [XmlArray("vid_list")]
         [XmlArrayItem("string")]

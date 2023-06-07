@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipaySecurityRiskComplaintInfoQueryResponse : AopResponse
     {
         /// <summary>
-        /// 投诉单涉及交易总金额
+        /// 投诉单涉及交易总金额（单位：人民币元）
         /// </summary>
         [XmlElement("complain_amount")]
         public string ComplainAmount { get; set; }
@@ -103,7 +103,7 @@ namespace Aop.Api.Response
         public string ProcessRemark { get; set; }
 
         /// <summary>
-        /// [{"value":"DROP_COMPLAIN","name":"用户撤诉"}, {"value":"DROP_OVERDUE_COMPLAIN","name":"超时后用户撤诉"}, {"value":"DROP_OVERDUE_PROCESSED","name":"超时处理完成用户撤诉"}, {"value":"DROP_PROCESSED","name":"处理完成用户撤诉"}, {"value":"OVERDUE","name":"超时未处理"}, {"value":"OVERDUE_PROCESSED","name":"超时处理完成"}, {"value":"PART_OVERDUE","name":"部分超时未处理"}, {"value":"PROCESSED","name":"处理完成"}, {"value":"PROCESSING","name":"处理中"}, {"value":"WAIT_PROCESS","name":"待处理"}]
+        /// 投诉状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

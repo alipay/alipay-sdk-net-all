@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class VoucherDetailInfoDTO : AopObject
     {
         /// <summary>
-        /// 优惠券金额
+        /// 优惠券金额，单位为元
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 商户出资
+        /// 商户出资，单位为元
         /// </summary>
         [XmlElement("merchant_contribute")]
         public string MerchantContribute { get; set; }
@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 其他出资，非交易商家
+        /// 其他出资，非交易商家，单位为元
         /// </summary>
         [XmlElement("other_contribute")]
         public string OtherContribute { get; set; }

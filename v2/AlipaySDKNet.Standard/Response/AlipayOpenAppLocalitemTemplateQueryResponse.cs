@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayOpenAppLocalitemTemplateQueryResponse : AopResponse
     {
         /// <summary>
-        /// 属性分组
+        /// 属性分组，具体的属性值可以参考本地生活商品模板文档：https://opendocs.alipay.com/pre-open/07pywg?pathHash=1c499cb5
         /// </summary>
         [XmlElement("attr")]
         public ItemAttrGroupVO Attr { get; set; }

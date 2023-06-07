@@ -58,6 +58,12 @@ namespace Aop.Api.Response
         public VoucherAvailableScopeInfo VoucherAvailableScopeInfo { get; set; }
 
         /// <summary>
+        /// 券引导详情
+        /// </summary>
+        [XmlElement("voucher_customer_guide_info")]
+        public VoucherCustomerGuideInfo VoucherCustomerGuideInfo { get; set; }
+
+        /// <summary>
         /// 券优惠抵扣信息
         /// </summary>
         [XmlElement("voucher_deduct_info")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ComplaintTradeInfo : AopObject
     {
         /// <summary>
-        /// 交易单金额
+        /// 交易单金额（单位：人民币元）
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

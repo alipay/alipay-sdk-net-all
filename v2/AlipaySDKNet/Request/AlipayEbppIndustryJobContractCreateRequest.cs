@@ -17,14 +17,29 @@ namespace Aop.Api.Request
         public List<ContractCompanyInfo> CompanyList { get; set; }
 
         /// <summary>
+        /// 合同签署失败时的跳转地址，如果不做单独配置，默认与redirect_url一致
+        /// </summary>
+        public string FailureRedirectUrl { get; set; }
+
+        /// <summary>
         /// 上传文件的二进制流
         /// </summary>
         public FileItem FileContent { get; set; }
 
         /// <summary>
+        /// 签署状态变更时的通知地址
+        /// </summary>
+        public string NoticeUrl { get; set; }
+
+        /// <summary>
         /// 外部订单号
         /// </summary>
         public string OuterBizNo { get; set; }
+
+        /// <summary>
+        /// 签署成功后的重定向跳转地址
+        /// </summary>
+        public string RedirectUrl { get; set; }
 
         /// <summary>
         /// 签署平台: H5 或者 ALIPAY
@@ -122,7 +137,10 @@ namespace Aop.Api.Request
         {
             AopDictionary parameters = new AopDictionary();
             parameters.Add("company_list", this.CompanyList);
+            parameters.Add("failure_redirect_url", this.FailureRedirectUrl);
+            parameters.Add("notice_url", this.NoticeUrl);
             parameters.Add("outer_biz_no", this.OuterBizNo);
+            parameters.Add("redirect_url", this.RedirectUrl);
             parameters.Add("sign_platform", this.SignPlatform);
             parameters.Add("user_list", this.UserList);
             if(udfParams != null) 

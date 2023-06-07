@@ -48,6 +48,12 @@ namespace Aop.Api.Response
         public List<InvestorMaterialInfo> MaterialList { get; set; }
 
         /// <summary>
+        /// 材料类型
+        /// </summary>
+        [XmlElement("material_type")]
+        public string MaterialType { get; set; }
+
+        /// <summary>
         /// 码商收入金额，单位元；精度到分
         /// </summary>
         [XmlElement("total_income")]

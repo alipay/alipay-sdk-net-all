@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ActionCode { get; set; }
 
         /// <summary>
-        /// 在第三方游戏中，用户完成行动的渠道。如果是从玩一玩游戏中心跳转到游戏完成，填写gamecenter。如果是其他渠道跳转到游戏内完成，填写other
+        /// 在第三方游戏中，用户完成行动的渠道。识别游戏链接中channel参数，若channel非空，透传channel；若channel为空，传other。
         /// </summary>
         [XmlElement("action_finish_channel")]
         public string ActionFinishChannel { get; set; }

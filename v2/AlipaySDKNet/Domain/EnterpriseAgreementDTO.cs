@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string SignDate { get; set; }
 
         /// <summary>
-        /// 签约状态（UNSIGNED：未签约，SIGNED：已签约，TERMINATED：已解约）
+        /// 签约状态
         /// </summary>
         [XmlElement("sign_status")]
         public string SignStatus { get; set; }

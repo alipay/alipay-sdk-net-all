@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public bool IsRequired { get; set; }
 
         /// <summary>
+        /// 属性key
+        /// </summary>
+        [XmlElement("key")]
+        public string Key { get; set; }
+
+        /// <summary>
         /// 属性值长度区间,上下限,分隔,属性组件类型是input时可用
         /// </summary>
         [XmlElement("length")]

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string EbikeNo { get; set; }
 
         /// <summary>
+        /// 车类型（4G车/蓝牙车/非智能车）
+        /// </summary>
+        [XmlElement("ebike_type")]
+        public string EbikeType { get; set; }
+
+        /// <summary>
         /// 绑定状态
         /// </summary>
         [XmlElement("is_bind")]

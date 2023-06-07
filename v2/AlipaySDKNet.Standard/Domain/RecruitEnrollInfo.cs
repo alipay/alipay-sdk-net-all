@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<string> Cities { get; set; }
 
         /// <summary>
-        /// 报名商户
+        /// 报名商户 当前字段已废弃(原本是承载活动报名归属商户的信息，现在改为开放平台代开发（代调用）模式了，该字段废弃。)
         /// </summary>
         [XmlElement("enroll_merchant")]
         public RecruitEnrollMerchant EnrollMerchant { get; set; }

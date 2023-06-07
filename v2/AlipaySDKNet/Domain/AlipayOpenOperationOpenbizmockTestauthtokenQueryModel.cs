@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("a")]
         public string A { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("a_open_id")]
+        public string AOpenId { get; set; }
     }
 }

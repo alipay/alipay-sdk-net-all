@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -24,7 +25,8 @@ namespace Aop.Api.Response
         /// <summary>
         /// 用印子任务受理流水
         /// </summary>
-        [XmlElement("sub_ant_sign_result_list")]
-        public SubAntSignResult SubAntSignResultList { get; set; }
+        [XmlArray("sub_ant_sign_result_list")]
+        [XmlArrayItem("sub_ant_sign_result")]
+        public List<SubAntSignResult> SubAntSignResultList { get; set; }
     }
 }

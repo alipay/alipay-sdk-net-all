@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ContributeDetailInfo : AopObject
     {
         /// <summary>
-        /// 其他出资方金额
+        /// 其他出资方金额，单位为元
         /// </summary>
         [XmlElement("contribute_amount")]
         public string ContributeAmount { get; set; }

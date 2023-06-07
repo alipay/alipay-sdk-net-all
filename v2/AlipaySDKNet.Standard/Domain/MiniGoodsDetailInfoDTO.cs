@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string OutSkuId { get; set; }
 
         /// <summary>
+        /// 平台商品版本号，用于查询商品快照
+        /// </summary>
+        [XmlElement("platform_item_version_id")]
+        public string PlatformItemVersionId { get; set; }
+
+        /// <summary>
         /// 商品单价，单位：元
         /// </summary>
         [XmlElement("sale_price")]

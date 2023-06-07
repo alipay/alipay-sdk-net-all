@@ -10,7 +10,13 @@ namespace Aop.Api.Domain
     public class CertificateQueryInfo : AopObject
     {
         /// <summary>
-        /// 凭证码
+        /// 用户凭证id
+        /// </summary>
+        [XmlElement("certificate_id")]
+        public string CertificateId { get; set; }
+
+        /// <summary>
+        /// 三方码凭证券码。
         /// </summary>
         [XmlElement("code")]
         public string Code { get; set; }

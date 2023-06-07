@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -16,7 +17,7 @@ namespace Aop.Api.Domain
         public string BizDt { get; set; }
 
         /// <summary>
-        /// 已核销待冲正的三方码。取值为支付宝调用三方凭证发放spi时商户返回的三方码
+        /// 已核销待冲正的三方码。取值为支付宝调用三方凭证发放spi时商户返回的三方码 当前字段已废弃(指定凭证id做单次核销撤回)
         /// </summary>
         [XmlElement("code")]
         public string Code { get; set; }
@@ -28,7 +29,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 购买商品的订单id。通过下单接口获取订单id
+        /// 购买商品的订单id。通过下单接口获取订单id，新接口不再支持，请勿使用 当前字段已废弃(指定凭证id做单次核销撤回)
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
@@ -38,6 +39,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 核销接口返回的核销操作单号，撤销orderNo对应的核销操作
+        /// </summary>
+        [XmlArray("use_order_no_list")]
+        [XmlArrayItem("string")]
+        public List<string> UseOrderNoList { get; set; }
 
         /// <summary>
         /// 凭证归属支付宝用户id

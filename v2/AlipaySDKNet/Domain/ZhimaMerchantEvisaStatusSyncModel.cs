@@ -36,6 +36,13 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 退款处理结果列表。 RefundedInfo list, if action type equals "REFUND", this field should not be empty.
+        /// </summary>
+        [XmlArray("refunded_infos")]
+        [XmlArrayItem("refunded_info")]
+        public List<RefundedInfo> RefundedInfos { get; set; }
+
+        /// <summary>
         /// 场景类型：THA_EVOA。  API scene type, ex. THA_EVOA.
         /// </summary>
         [XmlElement("scene_type")]

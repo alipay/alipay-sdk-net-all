@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -16,7 +17,14 @@ namespace Aop.Api.Domain
         public string BizDt { get; set; }
 
         /// <summary>
-        /// 待核销的三方码。取值为支付宝调用三方凭证发放spi时商户返回的三方码
+        /// 凭证核销详情
+        /// </summary>
+        [XmlArray("certificate_use_info_list")]
+        [XmlArrayItem("certificate_use_info")]
+        public List<CertificateUseInfo> CertificateUseInfoList { get; set; }
+
+        /// <summary>
+        /// 待核销的三方码。取值为支付宝调用三方凭证发放spi时商户返回的三方码 当前字段已废弃(核销接口允许批量传入)
         /// </summary>
         [XmlElement("code")]
         public string Code { get; set; }
@@ -38,6 +46,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 11111
+        /// </summary>
+        [XmlElement("shop_id")]
+        public string ShopId { get; set; }
 
         /// <summary>
         /// 凭证归属支付宝用户id

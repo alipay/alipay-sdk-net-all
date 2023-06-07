@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppLocalitemDirectModifyModel : AopObject
     {
         /// <summary>
-        /// 商品属性列表
+        /// 商品属性列表，具体的属性值可以参考本地生活商品模板文档：https://opendocs.alipay.com/pre-open/07pywg?pathHash=1c499cb5
         /// </summary>
         [XmlArray("attrs")]
         [XmlArrayItem("app_item_attr_v_o")]
@@ -35,5 +35,11 @@ namespace Aop.Api.Domain
         [XmlArray("skus")]
         [XmlArrayItem("local_item_direct_modify_sku")]
         public List<LocalItemDirectModifySku> Skus { get; set; }
+
+        /// <summary>
+        /// start_time描述售卖开始时间，end_time描述售卖结束时间，时间格式均为yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [XmlElement("sold_time")]
+        public TimeRangeStructVO SoldTime { get; set; }
     }
 }
