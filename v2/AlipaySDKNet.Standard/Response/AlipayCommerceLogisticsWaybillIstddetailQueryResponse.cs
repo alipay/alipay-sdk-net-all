@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string RiderName { get; set; }
 
         /// <summary>
+        /// 骑手实时定位H5链接字段，在骑手已接单后，将可展示骑手实时位置的H5页面链接同步商户
+        /// </summary>
+        [XmlElement("rider_poi_link")]
+        public string RiderPoiLink { get; set; }
+
+        /// <summary>
         /// 即时配送运单状态
         /// </summary>
         [XmlElement("status")]

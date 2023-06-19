@@ -112,6 +112,12 @@ namespace Aop.Api.Domain
         public string OutPlanStartTime { get; set; }
 
         /// <summary>
+        /// 设备扫描情况。如果设备同时支持主扫被扫，则这个字段为必填
+        /// </summary>
+        [XmlElement("scan_type")]
+        public string ScanType { get; set; }
+
+        /// <summary>
         /// 设备关联的间连商户smid
         /// </summary>
         [XmlElement("smid")]
@@ -122,6 +128,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("speech_content")]
         public string SpeechContent { get; set; }
+
+        /// <summary>
+        /// 语音播报发生的时机，根据播报触发的事件传入
+        /// </summary>
+        [XmlElement("speech_event")]
+        public string SpeechEvent { get; set; }
 
         /// <summary>
         /// 区分播报记录的唯一标识

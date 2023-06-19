@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("permit")]
         public string Permit { get; set; }
+
+        /// <summary>
+        /// 核身平台提供的用户vid
+        /// </summary>
+        [XmlElement("vid")]
+        public string Vid { get; set; }
     }
 }

@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string Role { get; set; }
 
         /// <summary>
-        /// 用户购买或使用服务时产生的具体金额。如参数无法提供，请填写“null”
+        /// 用户购买或使用服务时产生的具体金额(单位:元)。如参数无法提供，请填写“null”
         /// </summary>
         [XmlElement("sales_amount")]
         public string SalesAmount { get; set; }

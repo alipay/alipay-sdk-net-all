@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayTradeOrderSettleQueryModel : AopObject
     {
         /// <summary>
-        /// 外部请求号，需要和支付宝交易号一起传入
+        /// 调用分账接口时指定的外部请求号。分账查询时需要和支付宝交易号一起传入
         /// </summary>
         [XmlElement("out_request_no")]
         public string OutRequestNo { get; set; }

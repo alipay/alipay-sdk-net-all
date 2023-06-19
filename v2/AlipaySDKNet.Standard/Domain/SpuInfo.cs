@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string Icon { get; set; }
 
         /// <summary>
-        /// 商品单价
+        /// 商品单价(单位:元)
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }

@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string CrowdName { get; set; }
 
         /// <summary>
+        /// 由于法务合规要求，仅能展示人群规模的范围。
+        /// </summary>
+        [XmlElement("crowd_size")]
+        public string CrowdSize { get; set; }
+
+        /// <summary>
         /// 商户外部用户人群code 用于标识商家人群，需保证同一商户下crowd_code唯一
         /// </summary>
         [XmlElement("external_crowd_code")]

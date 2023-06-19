@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string TicketService { get; set; }
 
         /// <summary>
+        /// 亚运PASS
+        /// </summary>
+        [XmlElement("use_pass")]
+        public long UsePass { get; set; }
+
+        /// <summary>
         /// 用户分布城市TOP5
         /// </summary>
         [XmlElement("user_distribution")]

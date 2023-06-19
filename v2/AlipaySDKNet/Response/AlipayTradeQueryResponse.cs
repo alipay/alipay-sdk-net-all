@@ -181,6 +181,12 @@ namespace Aop.Api.Response
         public string MdiscountAmount { get; set; }
 
         /// <summary>
+        /// 医保信息。入参的query_options中指定时才返回该字段信息。medicareCardType：医保卡类型，"1":"亲情支付","0":"本人支付"，为空默认为本人支付；medicareCardHolderHiddenName：医保卡持卡人姓名。
+        /// </summary>
+        [XmlElement("medical_insurance_info")]
+        public string MedicalInsuranceInfo { get; set; }
+
+        /// <summary>
         /// 买家支付宝用户号，该字段将废弃，不要使用
         /// </summary>
         [XmlElement("open_id")]

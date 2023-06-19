@@ -56,5 +56,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sum_insured")]
         public long SumInsured { get; set; }
+
+        /// <summary>
+        /// 退保金额 ;单位分
+        /// </summary>
+        [XmlElement("surrender_amount")]
+        public long SurrenderAmount { get; set; }
+
+        /// <summary>
+        /// 退保时间
+        /// </summary>
+        [XmlElement("surrender_time")]
+        public string SurrenderTime { get; set; }
     }
 }

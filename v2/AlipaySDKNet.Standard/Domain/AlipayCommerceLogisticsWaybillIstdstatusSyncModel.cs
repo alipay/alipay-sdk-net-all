@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -16,6 +17,13 @@ namespace Aop.Api.Domain
         public string ActionTime { get; set; }
 
         /// <summary>
+        /// 骑手和消费者联系记录
+        /// </summary>
+        [XmlArray("contact_records")]
+        [XmlArrayItem("contact_record")]
+        public List<ContactRecord> ContactRecords { get; set; }
+
+        /// <summary>
         /// 描述
         /// </summary>
         [XmlElement("desc")]
@@ -26,6 +34,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("logistics_code")]
         public string LogisticsCode { get; set; }
+
+        /// <summary>
+        /// 运单状态变更扩展信息
+        /// </summary>
+        [XmlElement("order_ext_istd")]
+        public OrderChangeInfoExtIstd OrderExtIstd { get; set; }
 
         /// <summary>
         /// 支付宝订单流水号

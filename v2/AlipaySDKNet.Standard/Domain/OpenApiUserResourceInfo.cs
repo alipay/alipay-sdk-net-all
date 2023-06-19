@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AlipayUid { get; set; }
 
         /// <summary>
+        /// buservice星云id
+        /// </summary>
+        [XmlElement("busvc_cloud_id")]
+        public string BusvcCloudId { get; set; }
+
+        /// <summary>
         /// antbuservice域账号
         /// </summary>
         [XmlElement("busvc_domain")]

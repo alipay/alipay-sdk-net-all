@@ -44,6 +44,12 @@ namespace Aop.Api.Response
         public List<AvatarVO> InitAvatarVOs { get; set; }
 
         /// <summary>
+        /// 返回的形象模型层级
+        /// </summary>
+        [XmlElement("model_level")]
+        public string ModelLevel { get; set; }
+
+        /// <summary>
         /// 场景中可以选择的动画信息
         /// </summary>
         [XmlArray("optional_animation_v_os")]

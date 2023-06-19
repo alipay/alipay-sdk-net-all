@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string IdentityOpenId { get; set; }
 
         /// <summary>
-        /// 身份类型,目前支持传参如下： ALIPAY_LOGON_ID(企业支付宝登录账号) ALIPAY_USER_ID(企业支付宝会员id)
+        /// 身份类型
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }

@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 1
         /// </summary>
+        [XmlElement("b")]
+        public string B { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
         [XmlElement("keykey")]
         public string Keykey { get; set; }
     }

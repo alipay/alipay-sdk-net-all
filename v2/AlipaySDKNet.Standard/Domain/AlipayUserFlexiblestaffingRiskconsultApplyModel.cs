@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 风险场景，CONSULT_BY_RISK_SCENE场景时，必填 User Account Risk：账户安全咨询 Enterprise Access Risk：社保风险咨询 Enterprise Manager Risk：董监高风险咨询
+        /// </summary>
+        [XmlElement("risk_scene")]
+        public string RiskScene { get; set; }
     }
 }

@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string RoyaltyMode { get; set; }
 
         /// <summary>
-        /// 分账明细信息。 注意：商家分账场景下分账收入方 trans_in 只支持支付宝账户，不支持使用 cardAliasNo 卡编号。
+        /// 分账明细信息。单独调用分账完结时，可以不传此参数。其他场景必传。 注意：商家分账场景下分账收入方 trans_in 只支持支付宝账户，不支持使用 cardAliasNo 卡编号。
         /// </summary>
         [XmlArray("royalty_parameters")]
         [XmlArrayItem("open_api_royalty_detail_info_pojo")]

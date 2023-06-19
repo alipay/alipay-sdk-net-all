@@ -56,5 +56,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("quota_id")]
         public string QuotaId { get; set; }
+
+        /// <summary>
+        /// 是否可转赠，1表示可转赠，0表示不可转赠
+        /// </summary>
+        [XmlElement("share_mode")]
+        public string ShareMode { get; set; }
     }
 }

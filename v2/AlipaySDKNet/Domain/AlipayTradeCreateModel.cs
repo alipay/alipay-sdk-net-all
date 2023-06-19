@@ -102,6 +102,12 @@ namespace Aop.Api.Domain
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
+        /// 小程序支付中，商户实际经营主体的小程序应用的appid
+        /// </summary>
+        [XmlElement("op_app_id")]
+        public string OpAppId { get; set; }
+
+        /// <summary>
         /// 商户操作员编号。
         /// </summary>
         [XmlElement("operator_id")]

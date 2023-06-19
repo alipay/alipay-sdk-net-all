@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ExternUpload { get; set; }
 
         /// <summary>
-        /// 文件加密类型，可选值：NO_ENCRYPT（不加密），CLIENT_DECRYPT（afts服务器加密，客户端解密），AFTS_SERVER（afts服务器端自动加解密），OSS_DECRYPT（使用oss存储加解密），AFTS_SERVER_STANDRAD（afts服务器自动加解密标准版，与AFTS_SERVER的差别在于秘钥使用方式不同）
+        /// 文件加密类型
         /// </summary>
         [XmlElement("file_encrypt_type")]
         public string FileEncryptType { get; set; }

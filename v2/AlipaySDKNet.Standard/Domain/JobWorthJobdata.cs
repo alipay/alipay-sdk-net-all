@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string IntentionCity { get; set; }
 
         /// <summary>
+        /// 意向城市名，例如北京市，传入北京即可，大理白族自治州，传入大理即可
+        /// </summary>
+        [XmlElement("intention_city_name")]
+        public string IntentionCityName { get; set; }
+
+        /// <summary>
         /// 发证日期，ms时间戳
         /// </summary>
         [XmlElement("issue_date")]
@@ -236,6 +242,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("work_end_time")]
         public string WorkEndTime { get; set; }
+
+        /// <summary>
+        /// 工作经历工作地
+        /// </summary>
+        [XmlElement("work_place")]
+        public string WorkPlace { get; set; }
 
         /// <summary>
         /// 岗位属性：全职(FULL_TIME)或者兼职(PART_TIME)

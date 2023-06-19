@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenIotvspBusinessNotifyModel : AopObject
     {
         /// <summary>
+        /// 用于幂等操作，不存则平台自动生成，幂等失效。
+        /// </summary>
+        [XmlElement("biz_id")]
+        public string BizId { get; set; }
+
+        /// <summary>
         /// 业务信息列表
         /// </summary>
         [XmlArray("business_list")]
@@ -28,6 +34,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("label_out_no")]
         public string LabelOutNo { get; set; }
+
+        /// <summary>
+        /// 对象类型，详见对象定义
+        /// </summary>
+        [XmlElement("notify_event_param")]
+        public NotifyEventParam NotifyEventParam { get; set; }
 
         /// <summary>
         /// 机构编码

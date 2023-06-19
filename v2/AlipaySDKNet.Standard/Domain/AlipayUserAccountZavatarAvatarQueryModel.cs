@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AvatarAppVersion { get; set; }
 
         /// <summary>
+        /// 设备等级
+        /// </summary>
+        [XmlElement("device_level")]
+        public string DeviceLevel { get; set; }
+
+        /// <summary>
         /// 场景节点，联系数字人平台分配
         /// </summary>
         [XmlElement("node_code")]

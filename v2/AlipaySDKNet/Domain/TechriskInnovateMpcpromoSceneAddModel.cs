@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<string> DataList { get; set; }
 
         /// <summary>
+        /// 入参格式为数字或者英文字母
+        /// </summary>
+        [XmlElement("position_code")]
+        public string PositionCode { get; set; }
+
+        /// <summary>
         /// 场景id
         /// </summary>
         [XmlElement("scene_id")]

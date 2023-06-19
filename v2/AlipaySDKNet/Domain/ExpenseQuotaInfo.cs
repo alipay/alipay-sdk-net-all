@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string OwnerOpenId { get; set; }
 
         /// <summary>
-        /// 额度所属者id类型 EMPLOYEE 员工
+        /// 额度所属者id类型
         /// </summary>
         [XmlElement("owner_type")]
         public string OwnerType { get; set; }
@@ -94,7 +94,7 @@ namespace Aop.Api.Domain
         public string TargetId { get; set; }
 
         /// <summary>
-        /// 额度维度 枚举值： EXPENSE_TYPE（费用类型维度）， RULE_GROUP_AGGREGATION（规则聚合维度）, INSTITUTION（制度）
+        /// 额度维度
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }

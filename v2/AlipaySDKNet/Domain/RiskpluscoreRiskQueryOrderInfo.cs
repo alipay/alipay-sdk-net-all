@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string OrderItemsName { get; set; }
 
         /// <summary>
-        /// 订单商品价格
+        /// 订单商品价格(单位:元)
         /// </summary>
         [XmlElement("order_items_price")]
         public string OrderItemsPrice { get; set; }

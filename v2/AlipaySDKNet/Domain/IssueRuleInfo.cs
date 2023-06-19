@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string EffectivePeriod { get; set; }
 
         /// <summary>
-        /// 累计类型，默认为0 枚举：0（不可累计）、1（可累计）、2（累计天数）、3（累计到指定日期）
+        /// 累计类型，默认为0 可选值：0（不可累计）、1（可累计）、2（累计天数）、3（累计到指定日期）
         /// </summary>
         [XmlElement("invalid_mode")]
         public long InvalidMode { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string InvalidModeValue { get; set; }
 
         /// <summary>
-        /// 发放金额
+        /// 发放金额，单位元
         /// </summary>
         [XmlElement("issue_amount_value")]
         public string IssueAmountValue { get; set; }

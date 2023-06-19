@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string EmployeeId { get; set; }
 
         /// <summary>
+        /// 员工手机号
+        /// </summary>
+        [XmlElement("employee_mobile")]
+        public string EmployeeMobile { get; set; }
+
+        /// <summary>
         /// 员工姓名
         /// </summary>
         [XmlElement("employee_name")]
@@ -48,7 +54,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 角色列表，目前只支持填一种角色 USER 普通员工 ADMIN 管理员
+        /// 角色列表，目前只支持填一种角色
         /// </summary>
         [XmlArray("role_list")]
         [XmlArrayItem("string")]

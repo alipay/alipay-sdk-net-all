@@ -46,6 +46,18 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
+        /// 商家侧小程序商品ID，具体使用方式请参考：https://opendocs.alipay.com/pre-open/06uila?pathHash=87297d0a
+        /// </summary>
+        [XmlElement("out_item_id")]
+        public string OutItemId { get; set; }
+
+        /// <summary>
+        /// 商家侧小程序商品sku ID，具体使用方式请参考：https://opendocs.alipay.com/pre-open/06uila?pathHash=87297d0a
+        /// </summary>
+        [XmlElement("out_sku_id")]
+        public string OutSkuId { get; set; }
+
+        /// <summary>
         /// 商品单价，单位为元
         /// </summary>
         [XmlElement("price")]

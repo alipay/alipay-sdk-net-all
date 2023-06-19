@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -12,8 +13,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 商家自定义人群列表
         /// </summary>
-        [XmlElement("crowd_list")]
-        public QipanMerchantCrowd CrowdList { get; set; }
+        [XmlArray("crowd_list")]
+        [XmlArrayItem("qipan_merchant_crowd")]
+        public List<QipanMerchantCrowd> CrowdList { get; set; }
 
         /// <summary>
         /// 返回查询结果的总条数

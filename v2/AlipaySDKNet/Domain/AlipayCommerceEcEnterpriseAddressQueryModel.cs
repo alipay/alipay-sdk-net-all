@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcEnterpriseAddressQueryModel : AopObject
     {
         /// <summary>
-        /// 共同账户id和enterprise_id二选一
+        /// 共同账户id，和enterprise_id二选一
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string CityCode { get; set; }
 
         /// <summary>
-        /// 企业id和account_id二选一
+        /// 企业id，和account_id二选一
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }

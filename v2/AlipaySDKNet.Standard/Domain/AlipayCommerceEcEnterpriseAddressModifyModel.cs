@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcEnterpriseAddressModifyModel : AopObject
     {
         /// <summary>
-        /// 共同账户id和enterprise_id二选一
+        /// 共同账户id，和enterprise_id二选一
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string Community { get; set; }
 
         /// <summary>
-        /// 企业id和account_id二选一
+        /// 企业id，和account_id二选一
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string PoiId { get; set; }
 
         /// <summary>
-        /// 状态(生效/失效) NORMAL INVALID
+        /// 状态(生效/失效)
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

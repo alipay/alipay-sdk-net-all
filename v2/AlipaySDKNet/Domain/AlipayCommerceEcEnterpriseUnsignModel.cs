@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcEnterpriseUnsignModel : AopObject
     {
         /// <summary>
-        /// 共同账户id和企业id二选一必填
+        /// 共同账户id，和企业id二选一
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 企业id
+        /// 企业id，和共同账户id二选一
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }

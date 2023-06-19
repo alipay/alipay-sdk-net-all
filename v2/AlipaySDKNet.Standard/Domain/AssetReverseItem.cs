@@ -76,6 +76,12 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
+        /// 物流信息
+        /// </summary>
+        [XmlElement("logistics_info")]
+        public LogisticsInfo LogisticsInfo { get; set; }
+
+        /// <summary>
         /// 原申请单ID
         /// </summary>
         [XmlElement("original_apply_order_id")]
@@ -134,6 +140,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reverse_apply_order_item_id")]
         public string ReverseApplyOrderItemId { get; set; }
+
+        /// <summary>
+        /// 逆向业务场景，用于区分不同场景： DEFAULT_SCENE-兼容原淘宝天猫场景 USER_WITHOUT_GOODS_EXPRESS_RETURN用户未收到货-快递退回，供应商需进行拦截 USER_WITH_GOODS_SELF_MAIL_BACK-用户已收到货-用户直接寄回，供应商需等待商品回到仓库
+        /// </summary>
+        [XmlElement("reverse_biz_scene")]
+        public string ReverseBizScene { get; set; }
 
         /// <summary>
         /// 逆向类型

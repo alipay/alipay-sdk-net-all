@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string IssueQuota { get; set; }
 
         /// <summary>
-        /// 发放状态枚举描述 0: "未发放" 1: "发放成功" 2: "待作废" 3: "已作废" 4: "作废失败，有消费记录" 5: "发放中"
+        /// 发放状态描述 0: "未发放" 1: "发放成功" 2: "待作废" 3: "已作废" 4: "作废失败，有消费记录" 5: "发放中"
         /// </summary>
         [XmlElement("issue_status")]
         public long IssueStatus { get; set; }

@@ -21,16 +21,22 @@ namespace Aop.Api.Response
         public long CbTotalUv { get; set; }
 
         /// <summary>
+        /// 打通国外钱包数
+        /// </summary>
+        [XmlElement("cb_wallet_cnt")]
+        public long CbWalletCnt { get; set; }
+
+        /// <summary>
         /// 数字支付商户TOP5
         /// </summary>
         [XmlElement("top_5_merchant")]
         public string Top5Merchant { get; set; }
 
         /// <summary>
-        /// 数字支付累计金额
+        /// 数字支付累计金额(元)
         /// </summary>
         [XmlElement("total_amount")]
-        public long TotalAmount { get; set; }
+        public string TotalAmount { get; set; }
 
         /// <summary>
         /// 数字支付商户覆盖数

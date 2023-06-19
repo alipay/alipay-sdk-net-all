@@ -62,7 +62,7 @@ namespace Aop.Api.Domain
         public List<ExpenseCtrRuleInfo> ExpenseCtrlRuleInfoList { get; set; }
 
         /// <summary>
-        /// 费用类型 枚举值：MEAL（餐饮），METRO（地铁）
+        /// 费用类型
         /// </summary>
         [XmlElement("expense_type")]
         public string ExpenseType { get; set; }
@@ -74,7 +74,7 @@ namespace Aop.Api.Domain
         public string PaymentPolicy { get; set; }
 
         /// <summary>
-        /// 因公场景 枚举值：OVERTIME（加班），SUBSIDY（补贴福利），TRAVEL（差旅）
+        /// 因公场景
         /// </summary>
         [XmlElement("scene_type")]
         public string SceneType { get; set; }

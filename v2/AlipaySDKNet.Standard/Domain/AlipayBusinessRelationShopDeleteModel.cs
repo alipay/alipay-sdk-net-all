@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("real_shop_id")]
         public string RealShopId { get; set; }
+
+        /// <summary>
+        /// 外部门店编号，此字段与real_shop_id至少传参一个，优先使用real_shop_id。
+        /// </summary>
+        [XmlElement("real_shop_no")]
+        public string RealShopNo { get; set; }
     }
 }

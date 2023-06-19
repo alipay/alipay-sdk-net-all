@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 入驻平台的时间点，格式是yyyy-MM-dd HH:mm，biz_scene是CONSULT_BY_RISK_SCENE时必填
+        /// </summary>
+        [XmlElement("settle_in_time")]
+        public string SettleInTime { get; set; }
     }
 }

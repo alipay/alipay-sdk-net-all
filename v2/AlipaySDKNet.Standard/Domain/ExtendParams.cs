@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sys_service_provider_id")]
         public string SysServiceProviderId { get; set; }
+
+        /// <summary>
+        /// 公域商品交易业务订单ID
+        /// </summary>
+        [XmlElement("trade_component_order_id")]
+        public string TradeComponentOrderId { get; set; }
     }
 }

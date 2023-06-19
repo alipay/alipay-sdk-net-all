@@ -98,7 +98,7 @@ namespace Aop.Api.Domain
         public string RealShopLogo { get; set; }
 
         /// <summary>
-        /// 外部门店编号，用于ISV系统内部门店标识等
+        /// 外部门店编号，用于ISV系统内部门店标识等。此字段与real_shop_id至少传参一个，优先使用real_shop_id
         /// </summary>
         [XmlElement("real_shop_no")]
         public string RealShopNo { get; set; }
