@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ApplyTime { get; set; }
 
         /// <summary>
-        /// 企业认证审核状态 AUDITING：审核中 REJECTED：已驳回 PASSED：已通过
+        /// 企业认证审核状态
         /// </summary>
         [XmlElement("audit_status")]
         public string AuditStatus { get; set; }

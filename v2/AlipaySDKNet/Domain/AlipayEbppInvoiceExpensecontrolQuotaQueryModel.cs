@@ -66,6 +66,12 @@ namespace Aop.Api.Domain
         public List<string> QuotaIdList { get; set; }
 
         /// <summary>
+        /// 额度类型
+        /// </summary>
+        [XmlElement("quota_type")]
+        public string QuotaType { get; set; }
+
+        /// <summary>
         /// 额度维度ID
         /// </summary>
         [XmlElement("target_id")]

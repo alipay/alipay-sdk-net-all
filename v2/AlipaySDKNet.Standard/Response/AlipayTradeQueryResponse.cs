@@ -29,6 +29,12 @@ namespace Aop.Api.Response
         public string AuthTradePayMode { get; set; }
 
         /// <summary>
+        /// CPS订单的业务结算标识 PERIOD：账期模式
+        /// </summary>
+        [XmlElement("biz_settle_mode")]
+        public string BizSettleMode { get; set; }
+
+        /// <summary>
         /// 间联交易下，返回给机构的信 息
         /// </summary>
         [XmlElement("bkagent_resp_info")]

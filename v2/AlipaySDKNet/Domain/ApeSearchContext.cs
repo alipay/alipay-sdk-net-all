@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public long Size { get; set; }
 
         /// <summary>
+        /// 排序类型，price_asc；price_desc;sales_asc；sales_desc；discount_asc;discount_desc;有这几种可供选择不传即使用搜索侧默认排序
+        /// </summary>
+        [XmlElement("sort_type")]
+        public string SortType { get; set; }
+
+        /// <summary>
         /// 召回起始位置
         /// </summary>
         [XmlElement("start_index")]

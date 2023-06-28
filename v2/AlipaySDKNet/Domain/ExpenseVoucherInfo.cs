@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string ParentType { get; set; }
 
         /// <summary>
-        /// 交易金额
+        /// 交易金额（元）
         /// </summary>
         [XmlElement("voucher_amount")]
         public string VoucherAmount { get; set; }

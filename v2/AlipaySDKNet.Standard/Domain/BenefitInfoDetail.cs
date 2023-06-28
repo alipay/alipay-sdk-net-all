@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
-        /// 权益类型  PRE_FUND（卡面额）  DISCOUNT：折扣金额  COUPON：券
+        /// 权益类型
         /// </summary>
         [XmlElement("benefit_type")]
         public string BenefitType { get; set; }

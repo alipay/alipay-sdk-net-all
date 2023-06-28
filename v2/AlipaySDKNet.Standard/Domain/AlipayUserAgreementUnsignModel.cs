@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ExternalAgreementNo { get; set; }
 
         /// <summary>
-        /// 操作类型：confirm（解约确认）；invalid（解约作废）。 注意：仅异步解约需传入，其余情况无需传递本参数。
+        /// 注意：仅异步解约需传入，其余情况无需传递本参数。
         /// </summary>
         [XmlElement("operate_type")]
         public string OperateType { get; set; }

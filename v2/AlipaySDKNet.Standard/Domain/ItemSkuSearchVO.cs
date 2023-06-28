@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string OutSkuId { get; set; }
 
         /// <summary>
+        /// sku价格单位
+        /// </summary>
+        [XmlElement("price_unit")]
+        public string PriceUnit { get; set; }
+
+        /// <summary>
         /// sku售价，分为单位
         /// </summary>
         [XmlElement("sale_price")]

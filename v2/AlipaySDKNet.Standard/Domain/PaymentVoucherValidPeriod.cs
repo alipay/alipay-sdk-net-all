@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class PaymentVoucherValidPeriod : AopObject
     {
         /// <summary>
-        /// 券有效期。 枚举值： ABSOLUTE：绝对时间 RELATIVE：相对时间
+        /// 券有效期。
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

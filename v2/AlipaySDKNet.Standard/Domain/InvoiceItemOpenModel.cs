@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class InvoiceItemOpenModel : AopObject
     {
         /// <summary>
-        /// 明细行不含税金额，保留两位小数
+        /// 明细行不含税金额，单位元，保留两位小数
         /// </summary>
         [XmlElement("item_ex_tax_amount")]
         public string ItemExTaxAmount { get; set; }
@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string ItemSpec { get; set; }
 
         /// <summary>
-        /// 明细行价税合计，必须保证item_sum_amount=item_ex_tax_amount+item_tax_amount。
+        /// 明细行价税合计，单位元，必须保证item_sum_amount=item_ex_tax_amount+item_tax_amount。
         /// </summary>
         [XmlElement("item_sum_amount")]
         public string ItemSumAmount { get; set; }
 
         /// <summary>
-        /// 明细行税额，保留两位小数，无税或者免税情况下输入：0.00。
+        /// 明细行税额，单位元，保留两位小数，无税或者免税情况下输入：0.00。
         /// </summary>
         [XmlElement("item_tax_amount")]
         public string ItemTaxAmount { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string ItemUnit { get; set; }
 
         /// <summary>
-        /// 不含税单价; 1.当row_type=0或2且item_quantity为空，可空 2.可精确到小数点后8位；
+        /// 不含税单价（元）; 1.当row_type=0或2且item_quantity为空，可空 2.可精确到小数点后8位；
         /// </summary>
         [XmlElement("item_unit_price")]
         public string ItemUnitPrice { get; set; }

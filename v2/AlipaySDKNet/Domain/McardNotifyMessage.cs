@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 消息类型，每种消息都定义了固定消息模板，  POINT_UPDATE：积分变更消息  BALANCE_UPDATE：余额变更消息  LEVEL_UPDATE：等级变更消息
+        /// 消息类型，每种消息都定义了固定消息模板
         /// </summary>
         [XmlElement("message_type")]
         public string MessageType { get; set; }

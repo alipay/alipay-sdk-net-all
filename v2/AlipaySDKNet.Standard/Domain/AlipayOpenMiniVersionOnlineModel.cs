@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bundle_id")]
         public string BundleId { get; set; }
+
+        /// <summary>
+        /// true - 性能优先； false - 覆盖优先（默认）
+        /// </summary>
+        [XmlElement("downgrade")]
+        public bool Downgrade { get; set; }
     }
 }

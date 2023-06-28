@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string DeliveryId { get; set; }
 
         /// <summary>
-        /// 活动投放操作类型。枚举值：恢复-RESUME,暂停-PAUSE,终止-STOP
+        /// 活动投放操作类型
         /// </summary>
         [XmlElement("operate_type")]
         public string OperateType { get; set; }

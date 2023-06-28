@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CertificateUseResult : AopObject
     {
         /// <summary>
+        /// 凭证实例的金额信息，在异常场景下可能为空，需要判断是否有值才可进行使用。
+        /// </summary>
+        [XmlElement("amount_info")]
+        public CertificateInstanceAmountInfo AmountInfo { get; set; }
+
+        /// <summary>
         /// 三方码
         /// </summary>
         [XmlElement("code")]

@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string PrincipalOpenId { get; set; }
 
         /// <summary>
-        /// 枚举值 alipay_user_id, mechant_user_id
+        /// alipay_user_id, mechant_user_id
         /// </summary>
         [XmlElement("principal_type")]
         public string PrincipalType { get; set; }
@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 用户钱包id
+        /// </summary>
+        [XmlElement("user_wallet_id")]
+        public string UserWalletId { get; set; }
     }
 }

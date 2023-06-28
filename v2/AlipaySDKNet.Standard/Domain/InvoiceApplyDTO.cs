@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class InvoiceApplyDTO : AopObject
     {
         /// <summary>
-        /// 合计金额
+        /// 合计金额（元）
         /// </summary>
         [XmlElement("apply_amount")]
         public string ApplyAmount { get; set; }

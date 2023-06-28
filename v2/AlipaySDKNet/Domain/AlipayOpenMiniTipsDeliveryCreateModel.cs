@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 匹配类型：GLOBAL为全局生效，TARGETURL为目标页面生效，需配置相应页面地址match_url。
+        /// 匹配类型
         /// </summary>
         [XmlElement("match_type")]
         public string MatchType { get; set; }

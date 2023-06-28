@@ -9,13 +9,13 @@ namespace Aop.Api.Response
     public class AlipayFundWalletDestroyResponse : AopResponse
     {
         /// <summary>
-        /// 实际退款金额
+        /// 单位元，实际退款金额
         /// </summary>
         [XmlElement("actual_amount")]
         public string ActualAmount { get; set; }
 
         /// <summary>
-        /// 金额
+        /// 单位元，金额
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

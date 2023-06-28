@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string CycleSellingUrl { get; set; }
 
         /// <summary>
-        /// 周期购买类型。枚举如下： YEAR 年 QUARTER 季度 MONTH 月
+        /// 周期购买类型。
         /// </summary>
         [XmlArray("cycle_type")]
         [XmlArrayItem("string")]

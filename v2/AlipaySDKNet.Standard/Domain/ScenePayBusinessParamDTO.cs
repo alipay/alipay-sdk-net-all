@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ScenePayBusinessParamDTO : AopObject
     {
         /// <summary>
+        /// 业务自定义参数，交易异步通知和业务单同步查询时会返回
+        /// </summary>
+        [XmlElement("custom_params")]
+        public string CustomParams { get; set; }
+
+        /// <summary>
         /// 商圈中本次交易发生的商铺的识别号，在同一商铺类型下唯一
         /// </summary>
         [XmlElement("mall_cell_id")]
@@ -34,9 +40,21 @@ namespace Aop.Api.Domain
         public string MallPid { get; set; }
 
         /// <summary>
+        /// 业务单关联的计划id
+        /// </summary>
+        [XmlElement("plan_id")]
+        public string PlanId { get; set; }
+
+        /// <summary>
         /// 场景支付创建业务单接口中 当bizScene=MALL_PAY时，必填
         /// </summary>
         [XmlElement("real_store_id")]
         public string RealStoreId { get; set; }
+
+        /// <summary>
+        /// 业务单关联的券id信息
+        /// </summary>
+        [XmlElement("voucher_id")]
+        public string VoucherId { get; set; }
     }
 }

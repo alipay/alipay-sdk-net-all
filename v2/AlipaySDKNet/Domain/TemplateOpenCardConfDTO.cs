@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string Conf { get; set; }
 
         /// <summary>
-        /// ISV：外部系统  MER：直连商户
+        /// 开卡渠道类型
         /// </summary>
         [XmlElement("open_card_source_type")]
         public string OpenCardSourceType { get; set; }

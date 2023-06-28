@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 是否可累计（不传则不修改），枚举：0（不可累计）、1（可累计），2（累计天数），3（累计到固定时间）
+        /// 是否可累计（不传则不修改）可选值：0（不可累计）、1（可累计），2（累计天数），3（累计到固定时间）
         /// </summary>
         [XmlElement("invalid_mode")]
         public long InvalidMode { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string InvalidModeValue { get; set; }
 
         /// <summary>
-        /// 发放金额（不传则不修改）
+        /// 发放金额（不传则不修改），单位（元）
         /// </summary>
         [XmlElement("issue_amount_value")]
         public string IssueAmountValue { get; set; }
@@ -100,7 +100,7 @@ namespace Aop.Api.Domain
         public string QuotaType { get; set; }
 
         /// <summary>
-        /// 是否可转赠（不传则不修改），枚举：0（不可转赠）、1（可转赠），默认为0，余额不支持可转赠，按城市发放不支持可转赠
+        /// 是否可转赠（不传则不修改），可选值：0（不可转赠）、1（可转赠），默认为0，按城市发放不支持可转赠
         /// </summary>
         [XmlElement("share_mode")]
         public long ShareMode { get; set; }
@@ -112,7 +112,7 @@ namespace Aop.Api.Domain
         public string TargetId { get; set; }
 
         /// <summary>
-        /// 发放规则关联的目标类型，枚举值：INSTITUTION(制度)
+        /// 发放规则关联的目标类型
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }

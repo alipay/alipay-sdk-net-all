@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public List<GoodsDetailDTO> GoodsDetail { get; set; }
 
         /// <summary>
-        /// 商户接入模式  枚举值 SELF_MODE 商户自接入模式 AGENCY_MODE 服务商代接入模式
+        /// 商户接入模式
         /// </summary>
         [XmlElement("merchant_access_mode")]
         public string MerchantAccessMode { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string TotalFee { get; set; }
 
         /// <summary>
-        /// 交易渠道。    枚举值：  ZHIFUBAO_TRADE_CHANNEL：  支付宝交易渠道    WX_TRADE_CHANNEL：  微信交易渠道    OTHER_TRADE_CHANNEL：  其他交易渠道
+        /// 交易渠道。
         /// </summary>
         [XmlElement("trade_channel")]
         public string TradeChannel { get; set; }

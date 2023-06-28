@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class SubscribeRelation : AopObject
     {
         /// <summary>
-        /// 订阅保持状态，下次静默订阅的时的状态。0:保持订阅，1:保持拒绝订阅
+        /// 订阅保持状态，下次静默订阅的时的状态。1:保持订阅，0:保持拒绝订阅
         /// </summary>
         [XmlElement("keep_state")]
         public string KeepState { get; set; }

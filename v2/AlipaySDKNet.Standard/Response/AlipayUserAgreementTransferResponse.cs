@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayUserAgreementTransferResponse : AopResponse
     {
         /// <summary>
-        /// 单次金额限制
+        /// 单次金额限制，单位为元
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public string PeriodType { get; set; }
 
         /// <summary>
-        /// 总金额限制
+        /// 总金额限制，单位为元
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

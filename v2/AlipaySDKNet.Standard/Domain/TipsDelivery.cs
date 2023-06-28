@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string FailReason { get; set; }
 
         /// <summary>
-        /// 匹配类型：GLOBAL为全局生效，TARGETURL为目标页面生效，需配置相应页面地址match_url。
+        /// 匹配类型
         /// </summary>
         [XmlElement("match_type")]
         public string MatchType { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 活动状态。 枚举值： INIT: 初始化；AUDITING: 审核中；AUDIT_REJECTED:审核驳回；WORKING: 生效中；PUASE: 暂停；FINISHED 已结束；
+        /// 活动状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

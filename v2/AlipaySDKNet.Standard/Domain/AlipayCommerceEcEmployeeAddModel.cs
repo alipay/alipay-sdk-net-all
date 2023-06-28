@@ -30,13 +30,13 @@ namespace Aop.Api.Domain
         public string EmployeeCertType { get; set; }
 
         /// <summary>
-        /// 员工邮箱；手机号、邮箱、identity_type三个属性至少传入一个
+        /// 员工邮箱
         /// </summary>
         [XmlElement("employee_email")]
         public string EmployeeEmail { get; set; }
 
         /// <summary>
-        /// 员工手机号；手机号、邮箱、identity_type三个属性至少传入一个
+        /// 员工手机号
         /// </summary>
         [XmlElement("employee_mobile")]
         public string EmployeeMobile { get; set; }
@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string EmployeeName { get; set; }
 
         /// <summary>
-        /// 员工编号
+        /// 员工工号
         /// </summary>
         [XmlElement("employee_no")]
         public string EmployeeNo { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 根据identity_type指定的身份类型，传入对应的身份标识，企业支付宝登录账号(支持手机号或者邮箱)或企业支付宝会员id(对应2088开头的支付宝会员id)
+        /// 员工身份标识
         /// </summary>
         [XmlElement("identity")]
         public string Identity { get; set; }
@@ -72,13 +72,13 @@ namespace Aop.Api.Domain
         public string IdentityOpenId { get; set; }
 
         /// <summary>
-        /// 身份类型；手机号、邮箱、identity_type三个属性至少传入一个
+        /// 身份类型
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// 员工刷脸加入企业人脸库时的核验方式，如果设置为business_facepay_checkall，则employee_name、employee_cert_type、employee_cert_no必传，如果不传则默认不核验。
+        /// 员工刷脸加入企业人脸库时的核验方式
         /// </summary>
         [XmlElement("iot_check_type")]
         public string IotCheckType { get; set; }
@@ -95,5 +95,11 @@ namespace Aop.Api.Domain
         [XmlArray("role_list")]
         [XmlArrayItem("string")]
         public List<string> RoleList { get; set; }
+
+        /// <summary>
+        /// 员工签约后回跳地址
+        /// </summary>
+        [XmlElement("sign_return_url")]
+        public string SignReturnUrl { get; set; }
     }
 }

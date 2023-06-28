@@ -40,10 +40,22 @@ namespace Aop.Api.Domain
         public string OrgId { get; set; }
 
         /// <summary>
+        /// 商家在蚂蚁推荐引擎创建的项目id，当project_id为空时表示新建项目，否则为修改项目。
+        /// </summary>
+        [XmlElement("project_id")]
+        public string ProjectId { get; set; }
+
+        /// <summary>
         /// 将要创建project的项目名字（中英文都可以）
         /// </summary>
         [XmlElement("project_name")]
         public string ProjectName { get; set; }
+
+        /// <summary>
+        /// 推荐策略，包括优先推荐倾向、疲劳度、多样性等策略
+        /// </summary>
+        [XmlElement("recommend_strategy")]
+        public ApeRecommendStrategy RecommendStrategy { get; set; }
 
         /// <summary>
         /// 创建project的模版，如果是测试项目，填test，如果是正式项目，填normal，如果有特殊需要，和apemng系统人员确认

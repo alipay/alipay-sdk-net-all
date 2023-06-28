@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Id { get; set; }
 
         /// <summary>
-        /// 物品类型
+        /// 数据类型，请从枚举值中选一个最适合自己数据类型传，如果不传，则会默认GOODS
         /// </summary>
         [XmlElement("row_type")]
         public string RowType { get; set; }

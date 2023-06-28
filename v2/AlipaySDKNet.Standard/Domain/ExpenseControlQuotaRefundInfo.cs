@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ExpenseControlQuotaRefundInfo : AopObject
     {
         /// <summary>
-        /// 退款金额
+        /// 退款金额（分）
         /// </summary>
         [XmlElement("refund_amount")]
         public long RefundAmount { get; set; }

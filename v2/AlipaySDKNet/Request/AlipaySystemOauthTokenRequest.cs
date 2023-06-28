@@ -15,7 +15,7 @@ namespace Aop.Api.Request
         public string Code { get; set; }
 
         /// <summary>
-        /// 授权方式。支持： 1.authorization_code，表示换取使用用户授权码code换取授权令牌access_token。 2.refresh_token，表示使用refresh_token刷新获取新授权令牌。
+        /// 授权方式
         /// </summary>
         public string GrantType { get; set; }
 

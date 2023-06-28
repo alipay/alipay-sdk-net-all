@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string AlipayLogonId { get; set; }
 
         /// <summary>
-        /// 授信模式，取值：DEDUCT_HUAZHI-花芝GO。目前只在花芝代扣（即花芝go）协议时才会返回
+        /// 授信模式，目前只在花芝代扣（即花芝go）协议时才会返回
         /// </summary>
         [XmlElement("credit_auth_mode")]
         public string CreditAuthMode { get; set; }
@@ -33,13 +33,13 @@ namespace Aop.Api.Response
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// 代扣协议中标示用户的唯一签约号(确保在商户系统中唯一)
+        /// 代扣协议中标示用户的唯一签约号(确保在商户系统中唯一)。当入参中传了此参数时返回。
         /// </summary>
         [XmlElement("external_agreement_no")]
         public string ExternalAgreementNo { get; set; }
 
         /// <summary>
-        /// 外部登录Id
+        /// 外部登录Id。当入参中传了此参数时返回。
         /// </summary>
         [XmlElement("external_logon_id")]
         public string ExternalLogonId { get; set; }

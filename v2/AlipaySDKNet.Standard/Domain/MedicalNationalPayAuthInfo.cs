@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string AuthUrl { get; set; }
 
         /// <summary>
-        /// 用户卡信息中机构内卡号,授权成功时返回
+        /// 就诊用户卡信息中机构内卡号,授权成功时返回
         /// </summary>
         [XmlElement("medical_card_id")]
         public string MedicalCardId { get; set; }
 
         /// <summary>
-        /// 用户卡信息中机构编码,授权成功时返回
+        /// 就诊用户卡信息中机构编码,授权成功时返回
         /// </summary>
         [XmlElement("medical_card_inst_id")]
         public string MedicalCardInstId { get; set; }
@@ -56,6 +56,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pay_auth_no")]
         public string PayAuthNo { get; set; }
+
+        /// <summary>
+        /// 授权类型 本人授权-0 亲情账户授权-1
+        /// </summary>
+        [XmlElement("rels_pay_flag")]
+        public string RelsPayFlag { get; set; }
+
+        /// <summary>
+        /// 如果授权人类型为亲情账户授权，该字段必填，返回主账户脱敏姓名
+        /// </summary>
+        [XmlElement("rels_pay_user_name")]
+        public string RelsPayUserName { get; set; }
 
         /// <summary>
         /// 商户请求流水号

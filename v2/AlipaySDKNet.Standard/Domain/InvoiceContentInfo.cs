@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class InvoiceContentInfo : AopObject
     {
         /// <summary>
-        /// 含税金额
+        /// 含税金额（元）
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ItemUnit { get; set; }
 
         /// <summary>
-        /// 单价
+        /// 单价（元）
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string Specification { get; set; }
 
         /// <summary>
-        /// 不含税金额
+        /// 不含税金额（元）
         /// </summary>
         [XmlElement("sum_price")]
         public string SumPrice { get; set; }

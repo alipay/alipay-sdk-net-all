@@ -1,6 +1,7 @@
 using System;
 using System.Xml.Serialization;
 using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -32,6 +33,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("blind_signature")]
         public string BlindSignature { get; set; }
+
+        /// <summary>
+        /// 例如：亲情卡支付渠道信息、银行卡渠道优惠信息等
+        /// </summary>
+        [XmlArray("channel_info_list")]
+        [XmlArrayItem("pay_channel_promo_info")]
+        public List<PayChannelPromoInfo> ChannelInfoList { get; set; }
 
         /// <summary>
         /// 仅当请求使用morse匿名技术时会返回此字段； morse匿名技术产出的混淆后的密文结果，需使用商户私钥及接口返回的盲签名对密文进行解密；解密后结果为json格式字符串，可以json反序列化后，获取对应的文案(key为text)；若无文案则解密后为空

@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string NationalMedicinePermissionNo { get; set; }
 
         /// <summary>
+        /// 药品不可购买原因，最大购买数量为0时，可参考该值返回的原因描述
+        /// </summary>
+        [XmlElement("not_purchase_reason_desc")]
+        public string NotPurchaseReasonDesc { get; set; }
+
+        /// <summary>
         /// 售价
         /// </summary>
         [XmlElement("price")]

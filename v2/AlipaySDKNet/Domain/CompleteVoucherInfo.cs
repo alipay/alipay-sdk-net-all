@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string FileType { get; set; }
 
         /// <summary>
-        /// 发票金额
+        /// 发票金额（元）
         /// </summary>
         [XmlElement("invoice_amount")]
         public long InvoiceAmount { get; set; }
@@ -192,13 +192,13 @@ namespace Aop.Api.Domain
         public string PayerRegisterNo { get; set; }
 
         /// <summary>
-        /// 不含税金额
+        /// 不含税金额（元）
         /// </summary>
         [XmlElement("sum_price")]
         public long SumPrice { get; set; }
 
         /// <summary>
-        /// 合计税额
+        /// 合计税额（元）
         /// </summary>
         [XmlElement("sum_tax")]
         public long SumTax { get; set; }

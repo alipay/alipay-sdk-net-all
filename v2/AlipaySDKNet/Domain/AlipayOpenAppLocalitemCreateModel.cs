@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<AppItemAttrVO> Attrs { get; set; }
 
         /// <summary>
-        /// 商品类目ID
+        /// 商品类目ID，可通过alipay.open.app.localitem.allcategory.query接口获取
         /// </summary>
         [XmlElement("category_id")]
         public string CategoryId { get; set; }

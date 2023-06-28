@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Passenger { get; set; }
 
         /// <summary>
-        /// 金额
+        /// 金额（元）
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }

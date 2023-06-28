@@ -24,7 +24,7 @@ namespace Aop.Api.Response
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 购买商品的订单id
+        /// 购买商品的订单id，核销接口使用
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }

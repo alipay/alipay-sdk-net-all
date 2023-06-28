@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// 费控制度id
+        /// 费控制度ID
         /// </summary>
         [XmlElement("standard_id")]
         public string StandardId { get; set; }

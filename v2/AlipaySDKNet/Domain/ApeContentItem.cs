@@ -160,7 +160,7 @@ namespace Aop.Api.Domain
         public string RelatedGoodsIds { get; set; }
 
         /// <summary>
-        /// 数据类型
+        /// 内容模型的数据类型，如果是用内容模型，请传CONTENT。如果不传，默认为GOODS
         /// </summary>
         [XmlElement("row_type")]
         public string RowType { get; set; }

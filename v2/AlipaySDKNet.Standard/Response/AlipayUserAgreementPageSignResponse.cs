@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public string AlipayUserId { get; set; }
 
         /// <summary>
-        /// 授信模式，取值：DEDUCT_HUAZHI-花芝GO。
+        /// 授信模式
         /// </summary>
         [XmlElement("credit_auth_mode")]
         public string CreditAuthMode { get; set; }

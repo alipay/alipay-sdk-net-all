@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class CertificateQueryInfo : AopObject
     {
         /// <summary>
+        /// 凭证实例的金额信息，在异常场景下可能为空，需要判断是否有值才可进行使用。
+        /// </summary>
+        [XmlElement("amount_info")]
+        public CertificateInstanceAmountInfo AmountInfo { get; set; }
+
+        /// <summary>
+        /// 当前凭证是否可用，如传入门店id，则会判断当前门店、当前时间是否可使用此凭证；如未传入门店id，仅返回当前时间是否可使用。
+        /// </summary>
+        [XmlElement("can_use")]
+        public string CanUse { get; set; }
+
+        /// <summary>
         /// 用户凭证id
         /// </summary>
         [XmlElement("certificate_id")]

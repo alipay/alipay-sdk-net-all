@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BusinessParams { get; set; }
 
         /// <summary>
+        /// 代扣信息
+        /// </summary>
+        [XmlElement("general_withhold_info")]
+        public GeneralWithholdInfoDTO GeneralWithholdInfo { get; set; }
+
+        /// <summary>
         /// 签约方账号。 当签约方类型是ALIPAY_USER_ID时，本参数为用户的支付宝账号对应的支付宝唯一用户号，以2088开头的纯16位数字； 当签约方类型是ALIPAY_LOGON_ID时，本参数为用户的支付宝登录号。
         /// </summary>
         [XmlElement("identity")]

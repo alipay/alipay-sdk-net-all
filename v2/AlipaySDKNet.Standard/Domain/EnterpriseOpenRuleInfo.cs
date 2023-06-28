@@ -55,7 +55,7 @@ namespace Aop.Api.Domain
         public string InvoiceRuleName { get; set; }
 
         /// <summary>
-        /// 原企业共同账户ID
+        /// 业共同账户ID
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }

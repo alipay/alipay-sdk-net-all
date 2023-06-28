@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFundWalletTokenCreateModel : AopObject
     {
         /// <summary>
+        /// alipay.user.agreement.page.sign返回的代扣签约串
+        /// </summary>
+        [XmlElement("agreement_pay_sign")]
+        public string AgreementPaySign { get; set; }
+
+        /// <summary>
         /// 业务场景
         /// </summary>
         [XmlElement("biz_scene")]

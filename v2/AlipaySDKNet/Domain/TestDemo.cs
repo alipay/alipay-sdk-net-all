@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class TestDemo : AopObject
     {
         /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("a_uid")]
+        public string AUid { get; set; }
+
+        /// <summary>
         /// test 当前字段已废弃(test废弃字段测试)
         /// </summary>
         [XmlElement("open_id")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public ManjiangTestLevelTwoData TestComplex { get; set; }
 
         /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("test_complex_1")]
+        public ManjiangTestLevelTwoData TestComplex1 { get; set; }
+
+        /// <summary>
         /// 3
         /// </summary>
         [XmlElement("test_level_three")]

@@ -28,19 +28,19 @@ namespace Aop.Api.Domain
         public string AlipayDeductScene { get; set; }
 
         /// <summary>
-        /// 关闭连续购买原因。枚举如下： MANUAL_CLOSE(手动关闭) EXPIRE_CLOSE(过期关闭) CLOSE(关闭)
+        /// 关闭连续购买原因。
         /// </summary>
         [XmlElement("close_reason")]
         public string CloseReason { get; set; }
 
         /// <summary>
-        /// 用户开通连续购买类型。枚举如下： YEAR(年) QUARTER(季度) MONTH(月)
+        /// 用户开通连续购买类型。
         /// </summary>
         [XmlElement("cycle_type")]
         public string CycleType { get; set; }
 
         /// <summary>
-        /// 开通连续购买状态。枚举如下： OPEN(打开) CLOSE(关闭)
+        /// 开通连续购买状态。
         /// </summary>
         [XmlElement("open_status")]
         public string OpenStatus { get; set; }

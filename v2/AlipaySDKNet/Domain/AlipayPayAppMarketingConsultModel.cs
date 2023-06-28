@@ -55,6 +55,12 @@ namespace Aop.Api.Domain
         public List<GoodsDetail> GoodsDetail { get; set; }
 
         /// <summary>
+        /// 历史支付宝订单号
+        /// </summary>
+        [XmlElement("history_alipay_trade_no")]
+        public string HistoryAlipayTradeNo { get; set; }
+
+        /// <summary>
         /// 商户用户id
         /// </summary>
         [XmlElement("merchant_user_id")]

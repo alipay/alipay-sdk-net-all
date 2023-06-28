@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string PackageName { get; set; }
 
         /// <summary>
-        /// 功能包开通方式，"APPLY", "申请开通"；"ORDER", "签约开通"；"DEFAULT", "默认开通"
+        /// 功能包开通方式
         /// </summary>
         [XmlElement("package_open_type")]
         public string PackageOpenType { get; set; }

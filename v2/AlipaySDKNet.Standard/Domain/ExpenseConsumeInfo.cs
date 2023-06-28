@@ -130,7 +130,7 @@ namespace Aop.Api.Domain
         public string ProjiectId { get; set; }
 
         /// <summary>
-        /// 消费账单的退款金额
+        /// 消费账单的退款金额（元）
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }

@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("mc_create_trade_ip")]
         public string McCreateTradeIp { get; set; }
+
+        /// <summary>
+        /// 当需要在 商家平台（b.alipay.com）—数据中心 中查看对应业务场景下的数据明细可以通过该参数传入 支持传入的值：<a target="_blank" href="https://opendocs.alipay.com/mini/08by8k?pathHash=96e03412">小程序细分业务场景</a>
+        /// </summary>
+        [XmlElement("tiny_app_merchant_biz_type")]
+        public string TinyAppMerchantBizType { get; set; }
     }
 }

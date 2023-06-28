@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniQrcodePatternCreateModel : AopObject
     {
         /// <summary>
-        /// 调用类型，目前支持三种调用类型：DELEGATE表示服务商代商家创建模式；ISV表示服务商使用三方应用自调用创建模式；MERCHANT表示商家自调用创建模式。注意，ISV调用类型下，模式会属于三方应用；DELEGATE和MERCHANT调用类型下，模式会属于商家小程序
+        /// 调用类型，目前支持三种调用类型：DELEGATE、MERCHANT和ISV，不同调用类型会导致模式归属者不同
         /// </summary>
         [XmlElement("invoke_type")]
         public string InvokeType { get; set; }

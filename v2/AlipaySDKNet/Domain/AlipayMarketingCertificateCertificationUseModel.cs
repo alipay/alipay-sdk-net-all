@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 11111
+        /// 核销门店id
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }

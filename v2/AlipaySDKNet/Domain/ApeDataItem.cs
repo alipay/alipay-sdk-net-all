@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<string> AvailableCityList { get; set; }
 
         /// <summary>
-        /// 商品品牌。可以传输品牌id，也可传输品牌明文。
+        /// 商品品牌。传输品牌明文。
         /// </summary>
         [XmlElement("brand")]
         public string Brand { get; set; }
@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("detail_pic_num")]
         public long DetailPicNum { get; set; }
+
+        /// <summary>
+        /// 折扣优惠
+        /// </summary>
+        [XmlElement("discount")]
+        public string Discount { get; set; }
 
         /// <summary>
         /// 商品是否包邮，如 1：包邮 2：不包邮 3：满足条件包邮
@@ -122,7 +128,7 @@ namespace Aop.Api.Domain
         public string Rating { get; set; }
 
         /// <summary>
-        /// 数据类型
+        /// 普通商品的数据类型，如果使用dataList 请使用GOODS，如果不传，默认会给你补全。
         /// </summary>
         [XmlElement("row_type")]
         public string RowType { get; set; }
@@ -140,7 +146,7 @@ namespace Aop.Api.Domain
         public long ShareCnt { get; set; }
 
         /// <summary>
-        /// 商品运费，单位分
+        /// 商品运费，单位元
         /// </summary>
         [XmlElement("shipping_money")]
         public string ShippingMoney { get; set; }

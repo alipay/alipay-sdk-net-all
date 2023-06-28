@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 用户的支付宝登录账号，支持邮箱或手机号码格式。本参数与alipay_open_id 或 alipay_user_id 同时填写，优先按照 alipay_open_id 或 alipay_user_id 处理。 
+        /// 用户的支付宝登录账号，支持邮箱或手机号码格式。本参数与alipay_open_id 或 alipay_user_id 同时填写，优先按照 alipay_open_id 或 alipay_user_id 处理。
         /// </summary>
         [XmlElement("alipay_logon_id")]
         public string AlipayLogonId { get; set; }

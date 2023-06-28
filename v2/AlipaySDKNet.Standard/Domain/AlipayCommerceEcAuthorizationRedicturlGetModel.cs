@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// CAR
+        /// 费用类型(制度新增/编辑时所用)
         /// </summary>
         [XmlElement("expense_type")]
         public string ExpenseType { get; set; }

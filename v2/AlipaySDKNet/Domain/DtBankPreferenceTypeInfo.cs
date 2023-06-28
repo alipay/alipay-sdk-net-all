@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public DtBankPreferenceIntelligentRule IntelligentRule { get; set; }
 
         /// <summary>
+        /// 多阶梯立减规则
+        /// </summary>
+        [XmlElement("multi_staged_rule")]
+        public DtBankPreferenceMultiStagedRule MultiStagedRule { get; set; }
+
+        /// <summary>
         /// 优惠类型
         /// </summary>
         [XmlElement("preference_type")]
