@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **Query**
-> AlipayOpenOperationOpenbizmockTestpathkeyQueryResponseModel Query (string keykey, string a, string b = null, string c = null, AlipayOpenOperationOpenbizmockTestpathkeyQueryModel alipayOpenOperationOpenbizmockTestpathkeyQueryModel = null)
+> AlipayOpenOperationOpenbizmockTestpathkeyQueryResponseModel Query (string keykey, string a, string b = null, string c = null, AlipayOpenOperationOpenbizmockTestpathkeyQueryModel data = null, System.IO.Stream f = null)
 
 测试网关协议3.0key和path
 
@@ -53,12 +53,13 @@ namespace Example
             var a = a;  // string | 测试
             var b = b;  // string | ceshi (optional) 
             var c = c;  // string | 测试 (optional) 
-            var alipayOpenOperationOpenbizmockTestpathkeyQueryModel = new AlipayOpenOperationOpenbizmockTestpathkeyQueryModel(); // AlipayOpenOperationOpenbizmockTestpathkeyQueryModel |  (optional) 
+            var data = new AlipayOpenOperationOpenbizmockTestpathkeyQueryModel(); // AlipayOpenOperationOpenbizmockTestpathkeyQueryModel |  (optional) 
+            var f = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
 
             try
             {
                 // 测试网关协议3.0key和path
-                AlipayOpenOperationOpenbizmockTestpathkeyQueryResponseModel result = apiInstance.Query(keykey, a, b, c, alipayOpenOperationOpenbizmockTestpathkeyQueryModel);
+                AlipayOpenOperationOpenbizmockTestpathkeyQueryResponseModel result = apiInstance.Query(keykey, a, b, c, data, f);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -80,7 +81,8 @@ Name | Type | Description  | Notes
  **a** | **string**| 测试 | 
  **b** | **string**| ceshi | [optional] 
  **c** | **string**| 测试 | [optional] 
- **alipayOpenOperationOpenbizmockTestpathkeyQueryModel** | **AlipayOpenOperationOpenbizmockTestpathkeyQueryModel**|  | [optional] 
+ **data** | **AlipayOpenOperationOpenbizmockTestpathkeyQueryModel**|  | [optional] 
+ **f** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
 
 ### Return type
 
@@ -92,7 +94,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 

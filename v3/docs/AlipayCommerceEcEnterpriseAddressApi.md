@@ -229,10 +229,10 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var enterpriseId = 208890399440;  // string | 企业id和account_id二选一 (optional) 
-            var accountId = 2088483784949;  // string | 共同账户id和enterprise_id二选一 (optional) 
-            var agreementNo = 23893293203;  // string | 协议号，如果填共同账户id，则该字段必填 (optional) 
-            var addressId = 190309300303;  // string | 地址id (optional) 
+            var enterpriseId = 2088501312695783;  // string | 通过企业码2.0签约接口签约，只填写企业id，无需填写共同账户id和授权签约协议号。 (optional) 
+            var accountId = 2088501312612345;  // string | 通过企业码1.0接口签约的共同账户，和agreement_no搭配使用。 (optional) 
+            var agreementNo = 20215425001181407500;  // string | 可通过签约消息获取。配合共同账户id使用，当填写企业共同账户id时，此字段必填。 (optional) 
+            var addressId = 1903501312695783;  // string | 地址id (optional) 
             var cityCode = 310023;  // string | 市 (optional) 
             var pageNum = 1;  // int? | 页码从1开始 (optional) 
             var pageSize = 20;  // int? | 每页数据 (optional) 
@@ -258,9 +258,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **enterpriseId** | **string**| 企业id和account_id二选一 | [optional] 
- **accountId** | **string**| 共同账户id和enterprise_id二选一 | [optional] 
- **agreementNo** | **string**| 协议号，如果填共同账户id，则该字段必填 | [optional] 
+ **enterpriseId** | **string**| 通过企业码2.0签约接口签约，只填写企业id，无需填写共同账户id和授权签约协议号。 | [optional] 
+ **accountId** | **string**| 通过企业码1.0接口签约的共同账户，和agreement_no搭配使用。 | [optional] 
+ **agreementNo** | **string**| 可通过签约消息获取。配合共同账户id使用，当填写企业共同账户id时，此字段必填。 | [optional] 
  **addressId** | **string**| 地址id | [optional] 
  **cityCode** | **string**| 市 | [optional] 
  **pageNum** | **int?**| 页码从1开始 | [optional] 

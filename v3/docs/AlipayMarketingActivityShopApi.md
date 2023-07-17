@@ -54,7 +54,7 @@ namespace Example
             var pageNum = 1;  // int? | 分页查询页码。  限制:  必须为大于0的整数 (optional) 
             var pageSize = 20;  // int? | 分页查询单页数据条数。  限制:  1.必须为大于0的整数  2.每页最大值为20 (optional) 
             var productVersion = 2.0.0;  // string | 版本号  枚举值: 2.0.0 (optional) 
-            var merchantAccessMode = AGENCY_MODE;  // string | 商户接入模式  枚举值 SELF_MODE 商户自接入模式 AGENCY_MODE 服务商代接入模式 (optional) 
+            var merchantAccessMode = AGENCY_MODE;  // string | 商户接入模式 (optional) 
 
             try
             {
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
  **pageNum** | **int?**| 分页查询页码。  限制:  必须为大于0的整数 | [optional] 
  **pageSize** | **int?**| 分页查询单页数据条数。  限制:  1.必须为大于0的整数  2.每页最大值为20 | [optional] 
  **productVersion** | **string**| 版本号  枚举值: 2.0.0 | [optional] 
- **merchantAccessMode** | **string**| 商户接入模式  枚举值 SELF_MODE 商户自接入模式 AGENCY_MODE 服务商代接入模式 | [optional] 
+ **merchantAccessMode** | **string**| 商户接入模式 | [optional] 
 
 ### Return type
 

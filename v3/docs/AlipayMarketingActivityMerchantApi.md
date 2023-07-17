@@ -53,7 +53,7 @@ namespace Example
             var merchantId = 2088202967380463;  // string | 商户PID,默认为当前接口调用商户  限制:  接口调用者必须有商户代运营权限。   代运营授权流程https://opendocs.alipay.com/mini/01hm6i#%E4%BB%A3%E8%BF%90%E8%90%A5%E6%8E%88%E6%9D%83 (optional) 
             var pageNum = 1;  // int? | 分页查询页码。  限制:  必须为大于0的整数 (optional) 
             var pageSize = 20;  // int? | 分页查询单页数据条数。  限制:  1.必须为大于0的整数  2.每页最大值为20 (optional) 
-            var merchantAccessMode = AGENCY_MODE;  // string | 商户接入模式  枚举值 SELF_MODE 商户自接入模式 AGENCY_MODE 服务商代接入模式 (optional) 
+            var merchantAccessMode = AGENCY_MODE;  // string | 商户接入模式 (optional) 
 
             try
             {
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
  **merchantId** | **string**| 商户PID,默认为当前接口调用商户  限制:  接口调用者必须有商户代运营权限。   代运营授权流程https://opendocs.alipay.com/mini/01hm6i#%E4%BB%A3%E8%BF%90%E8%90%A5%E6%8E%88%E6%9D%83 | [optional] 
  **pageNum** | **int?**| 分页查询页码。  限制:  必须为大于0的整数 | [optional] 
  **pageSize** | **int?**| 分页查询单页数据条数。  限制:  1.必须为大于0的整数  2.每页最大值为20 | [optional] 
- **merchantAccessMode** | **string**| 商户接入模式  枚举值 SELF_MODE 商户自接入模式 AGENCY_MODE 服务商代接入模式 | [optional] 
+ **merchantAccessMode** | **string**| 商户接入模式 | [optional] 
 
 ### Return type
 
