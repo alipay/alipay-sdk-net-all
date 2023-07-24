@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }
+
+        /// <summary>
+        /// 解决方案的唯一标识
+        /// </summary>
+        [XmlElement("solution")]
+        public string Solution { get; set; }
     }
 }

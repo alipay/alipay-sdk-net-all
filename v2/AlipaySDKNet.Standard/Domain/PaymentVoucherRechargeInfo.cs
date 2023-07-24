@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public PaymentVoucherAlipayBalanceRechargeInfo AlipayBalanceRechargeInfo { get; set; }
 
         /// <summary>
-        /// 预充值方式。  枚举值 ALIPAY_BALANCE 支付宝余额预充值
+        /// 预充值方式。
         /// </summary>
         [XmlElement("recharge_type")]
         public string RechargeType { get; set; }

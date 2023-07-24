@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayDigitalopUcdpApeitemsearchQueryResponse : AopResponse
     {
         /// <summary>
+        /// 可推荐的商品总数
+        /// </summary>
+        [XmlElement("item_total_count")]
+        public long ItemTotalCount { get; set; }
+
+        /// <summary>
         /// 推荐的item结果列表
         /// </summary>
         [XmlArray("items")]

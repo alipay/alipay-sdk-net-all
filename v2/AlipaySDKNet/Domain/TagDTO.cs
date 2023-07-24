@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string DataType { get; set; }
 
         /// <summary>
+        /// 日期格式
+        /// </summary>
+        [XmlElement("date_format")]
+        public string DateFormat { get; set; }
+
+        /// <summary>
         /// 场景CODE+不唯一
         /// </summary>
         [XmlElement("scene_code")]
@@ -74,5 +80,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("tag_type")]
         public string TagType { get; set; }
+
+        /// <summary>
+        /// 标签版本
+        /// </summary>
+        [XmlElement("tag_version")]
+        public long TagVersion { get; set; }
     }
 }

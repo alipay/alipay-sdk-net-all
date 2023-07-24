@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 任务模板id
         /// </summary>
-        [XmlElement("task_templete_id")]
-        public string TaskTempleteId { get; set; }
+        [XmlElement("task_template_id")]
+        public string TaskTemplateId { get; set; }
     }
 }

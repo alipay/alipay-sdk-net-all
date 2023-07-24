@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public PaymentVoucherSendRule VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 优惠类型  枚举值： FIX_VOUCHER：固定面额满减券
+        /// 优惠类型
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

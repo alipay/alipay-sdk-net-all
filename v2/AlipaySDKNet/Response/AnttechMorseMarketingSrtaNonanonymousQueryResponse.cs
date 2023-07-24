@@ -39,6 +39,12 @@ namespace Aop.Api.Response
         public string Channel { get; set; }
 
         /// <summary>
+        /// 命中后返回的跳转链接，配置跳转链接时必选
+        /// </summary>
+        [XmlElement("link")]
+        public string Link { get; set; }
+
+        /// <summary>
         /// 最大优惠金额
         /// </summary>
         [XmlElement("max_amount")]

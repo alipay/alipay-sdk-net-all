@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string SaleAmount { get; set; }
 
         /// <summary>
-        /// 1.账期模式:走默认结算账号 2.分账模式:门店分账 3.分账模式:合作商户
+        /// 解决类型。
         /// </summary>
         [XmlElement("settle_type")]
         public string SettleType { get; set; }

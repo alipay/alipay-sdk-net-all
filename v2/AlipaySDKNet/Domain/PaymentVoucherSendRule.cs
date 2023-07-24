@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public long VoucherQuantityLimitPerUser { get; set; }
 
         /// <summary>
-        /// 周期限领配置,限制每人在固定周期内领取张数(voucher_quantity_limit_per_user),默认LIFE_CYCLE  枚举值为  DAY:每天 WEEK:每周 MONTH:每月 LIFE_CYCLE:整个活动周期
+        /// 周期限领配置,限制每人在固定周期内领取张数(voucher_quantity_limit_per_user),默认LIFE_CYCLE
         /// </summary>
         [XmlElement("voucher_quantity_limit_per_user_period_type")]
         public string VoucherQuantityLimitPerUserPeriodType { get; set; }

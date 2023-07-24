@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public PaymentFixVoucher FixVoucher { get; set; }
 
         /// <summary>
-        /// 核销跳转方式,默认CAN_USE(详情页展示可使用按钮) 枚举值:  SCAN_CODE 跳转到支付宝付钱码  SELF_LINK 跳转至商家指定页面  CAN_USE 卡包券详情页显示可使用按钮
+        /// 核销跳转方式,默认CAN_USE(详情页展示可使用按钮)
         /// </summary>
         [XmlElement("use_mode")]
         public string UseMode { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public long VoucherQuantityLimitPerUser { get; set; }
 
         /// <summary>
-        /// 核销次数限制周期配置。默认值LIFE_CYCLE表示限制每个支付宝账号在整个活动期间核销次数。 枚举值: DAY:每天 WEEK:每周 MONTH:每月 LIFE_CYCLE:整个活动
+        /// 核销次数限制周期配置。默认值LIFE_CYCLE表示限制每个支付宝账号在整个活动期间核销次数。
         /// </summary>
         [XmlElement("voucher_quantity_limit_per_user_period_type")]
         public string VoucherQuantityLimitPerUserPeriodType { get; set; }

@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class IotVspOrgUserAddNotifyUserInfoRequest : AopObject
     {
         /// <summary>
+        /// 授权码
+        /// </summary>
+        [XmlElement("auth_code")]
+        public string AuthCode { get; set; }
+
+        /// <summary>
+        /// 扩展信息，ISV自定义，如无可为空
+        /// </summary>
+        [XmlElement("ext")]
+        public string Ext { get; set; }
+
+        /// <summary>
         /// 返回状态描述
         /// </summary>
         [XmlElement("msg")]

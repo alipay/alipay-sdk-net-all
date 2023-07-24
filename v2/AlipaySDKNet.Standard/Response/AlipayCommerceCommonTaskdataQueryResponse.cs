@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceCommonTaskdataQueryResponse : AopResponse
     {
         /// <summary>
+        /// 去重后的扫码量
+        /// </summary>
+        [XmlElement("deduplicate_scan_num")]
+        public string DeduplicateScanNum { get; set; }
+
+        /// <summary>
         /// 任务的激励信息
         /// </summary>
         [XmlArray("reward_info")]
@@ -32,8 +38,8 @@ namespace Aop.Api.Response
         /// <summary>
         /// 任务模板id
         /// </summary>
-        [XmlElement("task_templete_id")]
-        public string TaskTempleteId { get; set; }
+        [XmlElement("task_template_id")]
+        public string TaskTemplateId { get; set; }
 
         /// <summary>
         /// 任务交易下单量

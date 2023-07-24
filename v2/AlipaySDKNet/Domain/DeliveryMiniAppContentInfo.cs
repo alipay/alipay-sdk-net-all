@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class DeliveryMiniAppContentInfo : AopObject
     {
         /// <summary>
-        /// 仅小程序推广可用。枚举值：服务直达
+        /// 仅小程序推广可用。
         /// </summary>
         [XmlElement("mini_app_delivery_type")]
         public string MiniAppDeliveryType { get; set; }

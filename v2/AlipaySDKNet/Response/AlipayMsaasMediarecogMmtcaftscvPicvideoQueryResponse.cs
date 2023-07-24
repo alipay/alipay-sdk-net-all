@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string Result { get; set; }
 
         /// <summary>
+        /// 可以重复查询,no_retry 不能重复查询
+        /// </summary>
+        [XmlElement("retry")]
+        public string Retry { get; set; }
+
+        /// <summary>
         /// 交易ID
         /// </summary>
         [XmlElement("transaction_id")]

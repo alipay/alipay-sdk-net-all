@@ -94,7 +94,7 @@ namespace Aop.Api.Domain
         public string Rate { get; set; }
 
         /// <summary>
-        /// 行为场景，枚举值：home（首页）、goods_detail（商详页）、search（搜索）、order_detail（订单详情）
+        /// 行为场景，枚举值：home（首页）、goods_detail（商详页）、search（搜索）、order_detail（订单详情页）
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string AbcpAppId { get; set; }
 
         /// <summary>
-        /// 交易实付金额，单位“分”
+        /// 交易实付金额，单位“分”；result_type非business_pay类型时必填
         /// </summary>
         [XmlElement("actual_pay_amount")]
         public long ActualPayAmount { get; set; }
@@ -27,6 +27,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("actual_pay_time")]
         public string ActualPayTime { get; set; }
+
+        /// <summary>
+        /// 复杂场景适配信息，result_type为business_pay类型时必填
+        /// </summary>
+        [XmlElement("business_infos")]
+        public PaymentBusinessInfo BusinessInfos { get; set; }
 
         /// <summary>
         /// 找零金额，单位“分”

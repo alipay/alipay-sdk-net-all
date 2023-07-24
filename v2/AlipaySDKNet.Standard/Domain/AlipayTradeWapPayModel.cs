@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public List<GoodsDetail> GoodsDetail { get; set; }
 
         /// <summary>
-        /// 商品主类型，取值如下： 0：虚拟类商品； 1：实物类商品。
+        /// 商品主类型
         /// </summary>
         [XmlElement("goods_type")]
         public string GoodsType { get; set; }

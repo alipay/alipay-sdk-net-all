@@ -90,6 +90,13 @@ namespace Aop.Api.Response
         public string Path { get; set; }
 
         /// <summary>
+        /// 商品有冻结、驳回时，展示对应的具体问题
+        /// </summary>
+        [XmlArray("risk_info")]
+        [XmlArrayItem("item_risk_info")]
+        public List<ItemRiskInfo> RiskInfo { get; set; }
+
+        /// <summary>
         /// sku数组
         /// </summary>
         [XmlArray("skus")]

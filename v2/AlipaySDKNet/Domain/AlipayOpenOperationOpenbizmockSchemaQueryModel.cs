@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string C { get; set; }
 
         /// <summary>
+        /// 111
+        /// </summary>
+        [XmlElement("complex_a")]
+        public TestDemo ComplexA { get; set; }
+
+        /// <summary>
         /// test
         /// </summary>
         [XmlElement("fuza")]
@@ -46,9 +52,15 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// test
+        /// {"test":"test"}
         /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
+        [XmlElement("uid_a")]
+        public string UidA { get; set; }
     }
 }

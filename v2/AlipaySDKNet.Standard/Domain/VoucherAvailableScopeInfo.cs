@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("voucher_available_goods_info")]
         public VoucherAvailableGoodsInfo VoucherAvailableGoodsInfo { get; set; }
+
+        /// <summary>
+        /// 券可用商品信息
+        /// </summary>
+        [XmlElement("voucher_available_item_info")]
+        public VoucherAvailableItemInfo VoucherAvailableItemInfo { get; set; }
     }
 }

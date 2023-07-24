@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppItemModifyModel : AopObject
     {
         /// <summary>
-        /// 商品参数，部分类目有平台定义的类目属性
+        /// 商品属性
         /// </summary>
         [XmlArray("attrs")]
         [XmlArrayItem("app_item_attr_v_o")]
@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string Barcode { get; set; }
 
         /// <summary>
-        /// 平台类目，填写的类目必须在类目表列出，多级类目只填最后一级。商品类目 ID 及信息可通过<a href="https://opendocs.alipay.com/b/07847b">商品类目表</a>获取。
+        /// 平台类目，填写的类目必须在类目表列出，多级类目只填最后一级。商品类目 ID 及信息可通过<a href="https://opendocs.alipay.com/b/07847b">商品类目表</a>获取。仅叶子类目支持创建商品。
         /// </summary>
         [XmlElement("category_id")]
         public string CategoryId { get; set; }
@@ -67,7 +67,7 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 商品原价，分为单位。若填写了skus[]数组，此字段不用填写。若未填写skus[]数组，此字段必填。
+        /// 商品原价，分为单位。若填写了skus[]数组，此字段不用填写。若未填写skus[]数组，此字段必填。如果填写，值必须大于0，且原价不能小于售价。
         /// </summary>
         [XmlElement("original_price")]
         public long OriginalPrice { get; set; }
@@ -91,7 +91,7 @@ namespace Aop.Api.Domain
         public string PriceUnit { get; set; }
 
         /// <summary>
-        /// 商品售价，分为单位。若填写了skus[]数组，此字段不用填写。若未填写skus[]数组，此字段必填。
+        /// 商品售价，分为单位。若填写了skus[]数组，此字段不用填写。若未填写skus[]数组，此字段必填。如果填写，值必须要大于0。
         /// </summary>
         [XmlElement("sale_price")]
         public long SalePrice { get; set; }
@@ -110,7 +110,7 @@ namespace Aop.Api.Domain
         public List<ItemSkuVO> Skus { get; set; }
 
         /// <summary>
-        /// 若填写了skus[]数组，此字段不用填写。 若未填写skus[]数组，此字段选填。
+        /// 若填写了skus[]数组，此字段不用填写。 若未填写skus[]数组，此字段选填。目前支持库存区间为0-99999999。
         /// </summary>
         [XmlElement("stock_num")]
         public long StockNum { get; set; }

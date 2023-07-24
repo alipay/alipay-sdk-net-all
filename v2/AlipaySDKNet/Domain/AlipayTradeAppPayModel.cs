@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public List<GoodsDetail> GoodsDetail { get; set; }
 
         /// <summary>
-        /// 商品主类型，取值如下： 0：虚拟类商品； 1：实物类商品。
+        /// 商品主类型
         /// </summary>
         [XmlElement("goods_type")]
         public string GoodsType { get; set; }
@@ -102,7 +102,7 @@ namespace Aop.Api.Domain
         public string PromoParams { get; set; }
 
         /// <summary>
-        /// 通知参数选项。 商户通过传递该参数来定制需要异步通知的额外字段，数组格式。包括但不限于：["hyb_amount","enterprise_pay_info","medical_insurance_info"]
+        /// 通知参数选项。 商户通过传递该参数来定制需要异步通知的额外字段，数组格式。包括但不限于：["hyb_amount","enterprise_pay_info","medical_insurance_info","credit_pay_mode"]
         /// </summary>
         [XmlArray("query_options")]
         [XmlArrayItem("string")]

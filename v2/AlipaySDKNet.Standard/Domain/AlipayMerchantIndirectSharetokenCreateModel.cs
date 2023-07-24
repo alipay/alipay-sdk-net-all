@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 业务跟踪参数，用于串联用户业务行为的关系
+        /// </summary>
+        [XmlElement("biz_tracker")]
+        public string BizTracker { get; set; }
+
+        /// <summary>
+        /// 渠道信息摘要标识，在APP内吱口令跳转时用到，用来标识吱口令关联的服务信息，比如红包、花呗工具。有两种方式获得：1.在于支付宝进行业务合作时，由平台侧分配；2.在咨询前置服务时由接口返回。
+        /// </summary>
+        [XmlElement("channel_info")]
+        public string ChannelInfo { get; set; }
+
+        /// <summary>
         /// 吱口令有效期，单位秒。例如:3600*24 (代表一天)
         /// </summary>
         [XmlElement("expire_time")]

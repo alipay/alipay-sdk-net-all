@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayOpenMiniOrderCreateResponse : AopResponse
     {
         /// <summary>
-        /// 交易组件订单号
+        /// 交易组件订单号。可以把获取到的order_id作为alipay.trade.create（统一收单交易创建接口）extend_params.trade_component_order_id的入参进行关联。
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }

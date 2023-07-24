@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZhimaCreditEpCreditlinkCollectCreateModel : AopObject
     {
         /// <summary>
+        /// 查询任务创建信息
+        /// </summary>
+        [XmlElement("create_info")]
+        public string CreateInfo { get; set; }
+
+        /// <summary>
         /// 请求数据类型
         /// </summary>
         [XmlElement("data_type")]
@@ -34,9 +40,15 @@ namespace Aop.Api.Domain
         public CreateExtInfo ExtInfo { get; set; }
 
         /// <summary>
-        /// 商户单号，请与授权申请时的单号保持一致
+        /// 商户单号，商户需保证其唯一性
         /// </summary>
         [XmlElement("merchant_request_id")]
         public string MerchantRequestId { get; set; }
+
+        /// <summary>
+        /// 产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
     }
 }

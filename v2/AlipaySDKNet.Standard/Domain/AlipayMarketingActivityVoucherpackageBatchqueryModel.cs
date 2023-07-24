@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string VoucherPackagePurchaseStartTime { get; set; }
 
         /// <summary>
-        /// 券包状态：不指定可查全部状态，指定时只支持查单个状态 枚举值： CREATED：已创建, ENABLE：已发布（包含过期）, PAUSED：已暂停, DISABLE：已停止;
+        /// 券包状态：不指定可查全部状态，指定时只支持查单个状态
         /// </summary>
         [XmlElement("voucher_package_status")]
         public string VoucherPackageStatus { get; set; }

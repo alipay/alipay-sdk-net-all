@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AccountNo { get; set; }
 
         /// <summary>
+        /// 银行机构代码，如工商银行为ICBC
+        /// </summary>
+        [XmlElement("inst_id")]
+        public string InstId { get; set; }
+
+        /// <summary>
         /// 开户网点
         /// </summary>
         [XmlElement("offical_name")]

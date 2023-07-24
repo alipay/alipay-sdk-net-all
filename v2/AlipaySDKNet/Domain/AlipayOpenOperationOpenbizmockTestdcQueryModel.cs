@@ -19,6 +19,61 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 1
         /// </summary>
+        [XmlElement("a_open_id")]
+        public string AOpenId { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("a_uid")]
+        public string AUid { get; set; }
+
+        /// <summary>
+        /// lalala
+        /// </summary>
+        [XmlArray("aa")]
+        [XmlArrayItem("string")]
+        public List<string> Aa { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("aaaaa")]
+        public string Aaaaa { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("aaaaa_open_id")]
+        public string AaaaaOpenId { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("ab")]
+        public string Ab { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("ac")]
+        public string Ac { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("ad")]
+        public long Ad { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("ae")]
+        public bool Ae { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
         [XmlElement("b")]
         public string B { get; set; }
 
@@ -33,6 +88,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("d")]
         public string D { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("data")]
+        public string Data { get; set; }
 
         /// <summary>
         /// 1 当前字段已废弃(1234567891011121314151617182)
@@ -52,5 +113,35 @@ namespace Aop.Api.Domain
         [XmlArray("i")]
         [XmlArrayItem("string")]
         public List<string> I { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("mn")]
+        public AAAAAtest Mn { get; set; }
+
+        /// <summary>
+        /// 详细地址
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("uid")]
+        public string Uid { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("uid_2_open_id")]
+        public string Uid2OpenId { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("uid_open_id")]
+        public string UidOpenId { get; set; }
     }
 }

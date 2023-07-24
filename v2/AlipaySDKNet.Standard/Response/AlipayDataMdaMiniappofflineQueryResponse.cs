@@ -27,6 +27,30 @@ namespace Aop.Api.Response
         public string MatchFocus { get; set; }
 
         /// <summary>
+        /// 亚运PASS领码人数
+        /// </summary>
+        [XmlElement("obtain_pass")]
+        public long ObtainPass { get; set; }
+
+        /// <summary>
+        /// 亚运PASS持票出行人数
+        /// </summary>
+        [XmlElement("pass_travel_user_cnt")]
+        public long PassTravelUserCnt { get; set; }
+
+        /// <summary>
+        /// 亚运PASS持票出行人数分时图
+        /// </summary>
+        [XmlElement("pass_travel_user_trend")]
+        public string PassTravelUserTrend { get; set; }
+
+        /// <summary>
+        /// 亚运PASS使用场景
+        /// </summary>
+        [XmlElement("pass_use_scene")]
+        public string PassUseScene { get; set; }
+
+        /// <summary>
         /// 票+服务
         /// </summary>
         [XmlElement("ticket_service")]

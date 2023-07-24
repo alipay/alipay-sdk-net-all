@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 支付金额
+        /// 支付金额，单位为该币种基础计价单位，如人民币为：元
         /// </summary>
         [XmlElement("payment_amount")]
         public string PaymentAmount { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string PaymentCurrency { get; set; }
 
         /// <summary>
-        /// 清算金额
+        /// 清算金额，单位为该币种基础计价单位，如人民币为：元
         /// </summary>
         [XmlElement("settlement_amount")]
         public string SettlementAmount { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string SettlementCurrency { get; set; }
 
         /// <summary>
-        /// 转账金额
+        /// 转账金额，单位为该币种基础计价单位，如人民币为：元
         /// </summary>
         [XmlElement("trans_amount")]
         public string TransAmount { get; set; }

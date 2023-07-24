@@ -76,5 +76,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_request_id")]
         public string MerchantRequestId { get; set; }
+
+        /// <summary>
+        /// 产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
     }
 }

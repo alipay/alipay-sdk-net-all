@@ -37,7 +37,7 @@ namespace Aop.Api.Domain
         public List<DeliveryMerchantInfo> DeliveryMerchantInfos { get; set; }
 
         /// <summary>
-        /// 指定支付成功页模式。 枚举值： MANUAL_INPUT_MERCHANT：指定收款账号 IN_SERVICE_VOUCHER_MERCHANT：优惠券可核收款账号（仅支持支付券） 收款账号相关规则:接入指南
+        /// 指定支付成功页模式。
         /// </summary>
         [XmlElement("delivery_merchant_mode")]
         public string DeliveryMerchantMode { get; set; }
@@ -55,7 +55,7 @@ namespace Aop.Api.Domain
         public string DeliveryPromoTags { get; set; }
 
         /// <summary>
-        /// 投放召回模式，现在支持CITY_RECALL（城市召回)和SHOP_RECALL（门店召回)两种模式。城市召回即当前城市投放，用户当前城市可领取；门店模式即门店附近投放，用户距离门店附近可领取。
+        /// 投放召回模式，现在支持CITY_RECALL（城市召回)和SHOP_RECALL（门店召回)两种模式。
         /// </summary>
         [XmlElement("delivery_recall_mode")]
         public string DeliveryRecallMode { get; set; }
@@ -67,7 +67,7 @@ namespace Aop.Api.Domain
         public DeliverySearchBoxRule DeliverySearchBoxRule { get; set; }
 
         /// <summary>
-        /// 小程序推广可用。枚举值：SERVICE_DIRECT
+        /// 小程序推广可用。
         /// </summary>
         [XmlElement("delivery_type")]
         public string DeliveryType { get; set; }

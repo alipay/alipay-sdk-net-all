@@ -54,19 +54,19 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
-        /// 召回个数
+        /// 召回个数 当前字段已废弃(接口有另外定义，不在需要此处定义)
         /// </summary>
         [XmlElement("size")]
         public long Size { get; set; }
 
         /// <summary>
-        /// 排序类型，price_asc；price_desc;sales_asc；sales_desc；discount_asc;discount_desc;有这几种可供选择不传即使用搜索侧默认排序
+        /// 排序类型，传的结构为字段+"#"+顺序，比如需要价格倒叙 current_price#desc,价格顺序 current_price#asc,销量倒叙 sale_number#desc
         /// </summary>
         [XmlElement("sort_type")]
         public string SortType { get; set; }
 
         /// <summary>
-        /// 召回起始位置
+        /// 召回起始位置( 当前字段已废弃(接口有另外定义，不在需要此处定义)
         /// </summary>
         [XmlElement("start_index")]
         public long StartIndex { get; set; }

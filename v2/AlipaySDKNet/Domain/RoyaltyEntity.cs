@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 分账接收方方类型。 userId：表示是支付宝账号对应的支付宝唯一用户号；loginName：表示是支付宝登录号；openId：表示支付宝openId。
+        /// 分账接收方方类型。
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

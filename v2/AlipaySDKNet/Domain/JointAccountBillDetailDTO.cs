@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
+        /// 付款方资产信息
+        /// </summary>
+        [XmlElement("payer_asset_info")]
+        public UserAssetInfoVO PayerAssetInfo { get; set; }
+
+        /// <summary>
         /// 间连商户显示二级商户全名，直连、直付通则显示一级商户全名。企业商户该字段不脱敏，非企业商户该字段会脱敏
         /// </summary>
         [XmlElement("seller_full_name")]

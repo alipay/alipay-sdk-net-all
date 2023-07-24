@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Geo { get; set; }
 
         /// <summary>
-        /// 6位行政区域编码，具体到区(县)，如: 浙江省杭州市西湖区=330106。区域编码可参考：http://www.mca.gov.cn/article/sj/xzqh/1980/
+        /// 6位行政区域编码，具体到区(县)，如: 浙江省杭州市西湖区=330106。区域编码可参考：https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html
         /// </summary>
         [XmlElement("region_code")]
         public string RegionCode { get; set; }

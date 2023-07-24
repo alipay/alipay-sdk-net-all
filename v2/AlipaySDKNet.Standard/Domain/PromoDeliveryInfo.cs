@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ChannelName { get; set; }
 
         /// <summary>
-        /// 投放状态.  枚举值： ACTIVE: 生效的投放。 INACTIVE: 失效的投放。
+        /// 投放状态。
         /// </summary>
         [XmlElement("delivery_status")]
         public string DeliveryStatus { get; set; }

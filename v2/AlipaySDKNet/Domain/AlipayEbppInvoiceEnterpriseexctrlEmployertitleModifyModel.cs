@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceEnterpriseexctrlEmployertitleModifyModel : AopObject
     {
         /// <summary>
-        /// 共同账户id，与enterprise_id两者必填其一
+        /// 企业共同账户id
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string BankName { get; set; }
 
         /// <summary>
-        /// 企业id，与account_id两者必填其一
+        /// 企业id
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }

@@ -25,7 +25,7 @@ namespace Aop.Api.Domain
         public List<DeliveryMerchantInfo> DeliveryMerchantInfos { get; set; }
 
         /// <summary>
-        /// 指定支付成功页模式。 枚举值： MANUAL_INPUT_MERCHANT：指定收款账号 IN_SERVICE_VOUCHER_MERCHANT：优惠券可核收款账号（仅支持支付券） 收款账号相关规则:接入指南
+        /// 指定支付成功页模式。
         /// </summary>
         [XmlElement("delivery_merchant_mode")]
         public string DeliveryMerchantMode { get; set; }

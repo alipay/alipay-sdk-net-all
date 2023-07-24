@@ -17,6 +17,13 @@ namespace Aop.Api.Response
         public string ActivityId { get; set; }
 
         /// <summary>
+        /// 小程序商品信息
+        /// </summary>
+        [XmlArray("app_item_infos")]
+        [XmlArrayItem("app_item_info")]
+        public List<AppItemInfo> AppItemInfos { get; set; }
+
+        /// <summary>
         /// 商品编码列表
         /// </summary>
         [XmlArray("goods_infos")]

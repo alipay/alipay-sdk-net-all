@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public EpCreditLinkCreateQueryDataInfo Content { get; set; }
 
         /// <summary>
+        /// 查询任务创建结果
+        /// </summary>
+        [XmlElement("data_result")]
+        public string DataResult { get; set; }
+
+        /// <summary>
         /// INIT表示任务还在初始化状态，COLLECT表示任务在进行中，END表示任务处理完成，FAIL表示任务处理失败。
         /// </summary>
         [XmlElement("data_status")]
@@ -32,5 +38,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("merchant_request_id")]
         public string MerchantRequestId { get; set; }
+
+        /// <summary>
+        /// 产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
     }
 }

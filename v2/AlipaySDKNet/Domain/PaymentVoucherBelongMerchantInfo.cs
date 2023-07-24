@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
-        /// 商户id类型。  若传入的类型为直连商户则必须签约当面付且当前接口调用者与商户存在代运营关系 当类型为SMID时表示为某个间连商户配券，但是券的归属者属于当前接口调用人。 枚举值 SMID 间连商户 PID 直连商户
+        /// 商户id类型。
         /// </summary>
         [XmlElement("merchant_id_type")]
         public string MerchantIdType { get; set; }

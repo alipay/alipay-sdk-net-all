@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 奖品ID, 当需要指定奖品抽奖的时候传入
+        /// </summary>
+        [XmlElement("prize_id")]
+        public string PrizeId { get; set; }
+
+        /// <summary>
         /// 终端id
         /// </summary>
         [XmlElement("term_id")]

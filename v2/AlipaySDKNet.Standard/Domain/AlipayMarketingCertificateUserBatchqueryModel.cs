@@ -34,7 +34,13 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 出资的支付宝用户id 限制: 1、登录账号和用户ID必须且只能二选一
+        /// 支付宝的门店id，用于判断凭证是否可在此门店进行核销。
+        /// </summary>
+        [XmlElement("shop_id")]
+        public string ShopId { get; set; }
+
+        /// <summary>
+        /// 出资的支付宝用户id
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

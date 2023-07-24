@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string GoodsId { get; set; }
 
         /// <summary>
-        /// 活动单品类型。 枚举值: AVAILABLE可用单品 UNAVAILABLE不可用单品
+        /// 活动单品类型。
         /// </summary>
         [XmlElement("goods_use_type")]
         public string GoodsUseType { get; set; }

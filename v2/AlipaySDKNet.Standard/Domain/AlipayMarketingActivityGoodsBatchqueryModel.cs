@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string ActivityId { get; set; }
 
         /// <summary>
-        /// 活动单品类型。 枚举值: AVAILABLE 可用商品 UNAVAILABLE 不可用商品
+        /// 活动单品类型。
         /// </summary>
         [XmlElement("goods_use_type")]
         public string GoodsUseType { get; set; }
 
         /// <summary>
-        /// 商户接入模式  枚举值 SELF_MODE 商户自接入模式 AGENCY_MODE 服务商代接入模式
+        /// 商户接入模式
         /// </summary>
         [XmlElement("merchant_access_mode")]
         public string MerchantAccessMode { get; set; }

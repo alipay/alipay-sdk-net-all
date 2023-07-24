@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class ParticipantBizParam : AopObject
     {
         /// <summary>
+        /// 代发专户ID
+        /// </summary>
+        [XmlElement("account_book_id")]
+        public string AccountBookId { get; set; }
+
+        /// <summary>
+        /// 协议号
+        /// </summary>
+        [XmlElement("agreement_no")]
+        public string AgreementNo { get; set; }
+
+        /// <summary>
         /// 出资比例
         /// </summary>
         [XmlElement("fund_ratio")]

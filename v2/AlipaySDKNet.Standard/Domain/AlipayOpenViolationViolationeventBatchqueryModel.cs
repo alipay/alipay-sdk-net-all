@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 违规工单状态枚举： PUNISH_DONE：处罚生效中 PUNISH_APPEAL_REVOKED：处罚已撤销 PUNISH_INVALID_REVOKED：处罚已到期 WAITING_RECTIFY：待整改  RECTIFY_AUDITOR_PROCESSING：整改审核中 RECTIFY_REJECTED：整改不通过 RECTIFY_PASSED：整改通过 RECTIFY_TIMEOUT ：整改已超时
+        /// 违规工单状态枚举
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

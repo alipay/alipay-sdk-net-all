@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public DeliveryMiniAppContentInfo DeliveryAppContent { get; set; }
 
         /// <summary>
-        /// 枚举值： ACTIVITY：活动枚举类型， MINI_APP：小程序枚举类型
+        /// 运营内容类型。
         /// </summary>
         [XmlElement("delivery_content_type")]
         public string DeliveryContentType { get; set; }
@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("delivery_display_info")]
         public DeliveryDisplayInfo DeliveryDisplayInfo { get; set; }
+
+        /// <summary>
+        /// 商品对象
+        /// </summary>
+        [XmlElement("delivery_item_content")]
+        public DeliveryItemContentInfo DeliveryItemContent { get; set; }
     }
 }

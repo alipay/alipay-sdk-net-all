@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
-        /// 商户支付宝id类型。 枚举值 PID 直连pid SMID 间连SMID
+        /// 商户支付宝id类型。
         /// </summary>
         [XmlElement("merchant_id_type")]
         public string MerchantIdType { get; set; }

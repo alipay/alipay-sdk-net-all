@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string EncryptIdentityId { get; set; }
 
         /// <summary>
-        /// 用身份信息类型-加密手机号，枚举如下：  SHA256_MOBILE-sha256加密的手机号码 OPEN_ID-支付宝openId SHA256_IDFA-sha256加密的idfa SHA256_OAID-sha256加密的oaid
+        /// 本字段用于标识上传用户信息的数据类型，具体取值请参照枚举值说明
         /// </summary>
         [XmlElement("encrypt_identity_type")]
         public string EncryptIdentityType { get; set; }

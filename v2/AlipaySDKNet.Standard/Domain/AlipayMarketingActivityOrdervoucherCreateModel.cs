@@ -112,7 +112,7 @@ namespace Aop.Api.Domain
         public VoucherSendRuleDetail VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 券类型。商家券支持三类券类型： FIX_VOUCHER：满减券； DISCOUNT_VOUCHER：折扣券； SPECIAL_VOUCHER：特价券； 兑换券仅支持一类券类型：EXCHANGE_VOUCHER: 兑换券；
+        /// 券类型。 兑换券仅支持一类券类型：EXCHANGE_VOUCHER: 兑换券；
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

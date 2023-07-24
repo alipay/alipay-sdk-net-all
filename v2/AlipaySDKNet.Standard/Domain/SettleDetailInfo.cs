@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string SettleEntityId { get; set; }
 
         /// <summary>
-        /// 结算主体类型。  二级商户:SecondMerchant;商户或者直连商户门店:Store
+        /// 结算主体类型。
         /// </summary>
         [XmlElement("settle_entity_type")]
         public string SettleEntityType { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string TransIn { get; set; }
 
         /// <summary>
-        /// 结算收款方的账户类型。  cardAliasNo：结算收款方的银行卡编号; userId：表示是支付宝账号对应的支付宝唯一用户号; loginName：表示是支付宝登录号； defaultSettle：表示结算到商户进件时设置的默认结算账号，结算主体为门店时不支持传defaultSettle；
+        /// 结算收款方的账户类型。
         /// </summary>
         [XmlElement("trans_in_type")]
         public string TransInType { get; set; }

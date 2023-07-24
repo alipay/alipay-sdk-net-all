@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public bool QuerySceneInstance { get; set; }
 
         /// <summary>
+        /// 是否查询转接技能组
+        /// </summary>
+        [XmlElement("query_transfer_skill_groups")]
+        public bool QueryTransferSkillGroups { get; set; }
+
+        /// <summary>
         /// 租户id
         /// </summary>
         [XmlElement("tnt_inst_id")]

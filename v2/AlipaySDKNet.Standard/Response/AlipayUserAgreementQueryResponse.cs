@@ -69,19 +69,19 @@ namespace Aop.Api.Response
         public string PersonalProductCode { get; set; }
 
         /// <summary>
-        /// 签约主体类型。  CARD:支付宝账号  CUSTOMER:支付宝用户
+        /// 签约主体类型。
         /// </summary>
         [XmlElement("pricipal_type")]
         public string PricipalType { get; set; }
 
         /// <summary>
-        /// 签约主体标识。  当principal_type为CARD 时，该字段为支付宝用户号;  当principal_type为 CUSTOMER 时，该字段为支付宝用户标识。一个用户 可能有多个支付宝账号，即多个支付宝用户号，但只有一个是支付宝用户标识。  一个支付宝账号对应一个支付宝唯一用户号(以2088开头的16位纯数字组成)。
+        /// 签约主体标识。 当principal_type为CARD 时，该字段为支付宝用户号;
         /// </summary>
         [XmlElement("principal_id")]
         public string PrincipalId { get; set; }
 
         /// <summary>
-        /// 签约主体标识。 当principal_type为CARD 时，该字段为支付宝用户号; 当principal_type为 CUSTOMER 时，该字段为支付宝用户标识。一个用户 可能有多个支付宝账号，即多个支付宝用户号，但只有一个是支付宝用户标识。
+        /// 签约主体标识。 当principal_type为CARD 时，该字段为支付宝用户号;
         /// </summary>
         [XmlElement("principal_open_id")]
         public string PrincipalOpenId { get; set; }
@@ -111,7 +111,7 @@ namespace Aop.Api.Response
         public string Status { get; set; }
 
         /// <summary>
-        /// 签约第三方主体类型。对于三方协议，表示当前用户和哪一类的第三方主体进行签约。  取值范围：  1. PARTNER（平台商户）;  2. MERCHANT（集团商户），集团下子商户可共享用户签约内容;  默认为PARTNER。
+        /// 签约第三方主体类型。对于三方协议，表示当前用户和哪一类的第三方主体进行签约。 默认为PARTNER。
         /// </summary>
         [XmlElement("third_party_type")]
         public string ThirdPartyType { get; set; }

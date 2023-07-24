@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AcqCode { get; set; }
 
         /// <summary>
-        /// 终端设备类型，受理方可参考终端 注册时的设备类型填写，取值如下: 01:自动柜员机(含 ATM 和 CDM) 和多媒体自助终端  02:传统 POS 03:mPOS 04:智能 POS 05:II 型固定电话 06:云闪付终端; 07:保留使用; 08:手机 POS; 09:刷脸付终端; 10:条码支付受理终端; 11:条码支付辅助受理终端; 12:行业终端(公交、地铁用于指 定行业的终端); 13:MIS 终端;
+        /// 终端设备类型，受理方可参考终端注册时的设备类型填写。
         /// </summary>
         [XmlElement("device_type")]
         public string DeviceType { get; set; }

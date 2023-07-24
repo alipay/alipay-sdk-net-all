@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string TransIn { get; set; }
 
         /// <summary>
-        /// 接受分账金额的账户类型：  &#61548; userId：支付宝账号对应的支付宝唯一用户号。  &#61548; bankIndex：分账到银行账户的银行编号。目前暂时只支持分账到一个银行编号。  storeId：分账到门店对应的银行卡编号。  默认值为userId。
+        /// 接受分账金额的账户类型
         /// </summary>
         [XmlElement("trans_in_type")]
         public string TransInType { get; set; }

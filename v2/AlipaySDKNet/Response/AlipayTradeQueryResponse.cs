@@ -29,7 +29,7 @@ namespace Aop.Api.Response
         public string AuthTradePayMode { get; set; }
 
         /// <summary>
-        /// CPS订单的业务结算标识 PERIOD：账期模式
+        /// CPS订单的业务结算标识
         /// </summary>
         [XmlElement("biz_settle_mode")]
         public string BizSettleMode { get; set; }
@@ -175,6 +175,13 @@ namespace Aop.Api.Response
         public string IndustrySepcDetailGov { get; set; }
 
         /// <summary>
+        /// 完整的收费信息
+        /// </summary>
+        [XmlArray("intact_charge_info_list")]
+        [XmlArrayItem("intact_charge_info")]
+        public List<IntactChargeInfo> IntactChargeInfoList { get; set; }
+
+        /// <summary>
         /// 交易中用户支付的可开具发票的金额，单位为元，两位小数。该金额代表该笔交易中可以给用户开具发票的金额
         /// </summary>
         [XmlElement("invoice_amount")]
@@ -221,6 +228,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("pay_currency")]
         public string PayCurrency { get; set; }
+
+        /// <summary>
+        /// 带支付宝支付id的信息，暂不对外开放
+        /// </summary>
+        [XmlArray("payment_info_with_id_list")]
+        [XmlArrayItem("payment_info_with_id")]
+        public List<PaymentInfoWithId> PaymentInfoWithIdList { get; set; }
 
         /// <summary>
         /// 积分支付的金额，单位为元，两位小数。该金额代表该笔交易中用户使用积分支付的金额，比如集分宝或者支付宝实时优惠等

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ManjiangTestThreeData : AopObject
     {
         /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("new_field")]
+        public string NewField { get; set; }
+
+        /// <summary>
         /// 2
         /// </summary>
         [XmlElement("test_complex")]

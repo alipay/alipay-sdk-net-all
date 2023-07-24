@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using Aop.Api.Response;
+using Aop.Api.Util;
 
 namespace Aop.Api.Request
 {
     /// <summary>
     /// AOP API: alipay.open.operation.openbizmock.testpathkey.query
     /// </summary>
-    public class AlipayOpenOperationOpenbizmockTestpathkeyQueryRequest : IAopRequest<AlipayOpenOperationOpenbizmockTestpathkeyQueryResponse>
+    public class AlipayOpenOperationOpenbizmockTestpathkeyQueryRequest : IAopUploadRequest<AlipayOpenOperationOpenbizmockTestpathkeyQueryResponse>
     {
         /// <summary>
         /// 测试
@@ -30,22 +31,32 @@ namespace Aop.Api.Request
         public string D { get; set; }
 
         /// <summary>
+        /// 1
+        /// </summary>
+        public string E { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        public FileItem F { get; set; }
+
+        /// <summary>
         /// ceshi
         /// </summary>
         public string Keykey { get; set; }
 
         #region IAopRequest Members
-        private bool  needEncrypt=false;
-        private string apiVersion = "1.0";
-	    private string terminalType;
-	    private string terminalInfo;
+		private bool needEncrypt=false;
+		private string apiVersion = "1.0";
+		private string terminalType;
+		private string terminalInfo;
         private string prodCode;
-	    private string notifyUrl;
+		private string notifyUrl;
         private string returnUrl;
-	    private AopObject bizModel;
+		private AopObject bizModel;
         private Dictionary<string, string> udfParams; //add user-defined text parameters
 
-		public void SetNeedEncrypt(bool needEncrypt){
+    	 public void SetNeedEncrypt(bool needEncrypt){
              this.needEncrypt=needEncrypt;
         }
 
@@ -70,7 +81,7 @@ namespace Aop.Api.Request
             return this.returnUrl;
         }
 
-        public void SetTerminalType(String terminalType){
+		public void SetTerminalType(String terminalType){
 			this.terminalType=terminalType;
 		}
 
@@ -94,17 +105,17 @@ namespace Aop.Api.Request
             return this.prodCode;
         }
 
-        public string GetApiName()
-        {
-            return "alipay.open.operation.openbizmock.testpathkey.query";
-        }
-
-        public void SetApiVersion(string apiVersion){
+		public void SetApiVersion(string apiVersion){
             this.apiVersion=apiVersion;
         }
 
         public string GetApiVersion(){
             return this.apiVersion;
+        }
+
+        public string GetApiName()
+        {
+            return "alipay.open.operation.openbizmock.testpathkey.query";
         }
 
         public void PutOtherTextParam(string key, string value) 
@@ -123,6 +134,7 @@ namespace Aop.Api.Request
             parameters.Add("b", this.B);
             parameters.Add("c", this.C);
             parameters.Add("d", this.D);
+            parameters.Add("e", this.E);
             parameters.Add("keykey", this.Keykey);
             if(udfParams != null) 
             {
@@ -130,7 +142,7 @@ namespace Aop.Api.Request
             }
             return parameters;
         }
-
+		
 		public AopObject GetBizModel()
         {
             return this.bizModel;
@@ -139,6 +151,17 @@ namespace Aop.Api.Request
         public void SetBizModel(AopObject bizModel)
         {
             this.bizModel = bizModel;
+        }
+
+        #endregion
+
+        #region IAopUploadRequest Members
+
+        public IDictionary<string, FileItem> GetFileParameters()
+        {
+            IDictionary<string, FileItem> parameters = new Dictionary<string, FileItem>();
+            parameters.Add("f", this.F);
+            return parameters;
         }
 
         #endregion

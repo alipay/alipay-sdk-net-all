@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ResultCode { get; set; }
 
         /// <summary>
-        /// 分账类型.  普通分账为：transfer;  补差为：replenish;  为空默认为分账transfer;
+        /// 分账类型. 字段为空默认为普通分账类型transfer
         /// </summary>
         [XmlElement("royalty_type")]
         public string RoyaltyType { get; set; }

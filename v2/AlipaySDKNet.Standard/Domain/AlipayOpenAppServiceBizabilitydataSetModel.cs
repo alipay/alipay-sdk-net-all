@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public List<BizAbilityData> DataList { get; set; }
 
         /// <summary>
+        /// 服务id
+        /// </summary>
+        [XmlElement("service_code")]
+        public string ServiceCode { get; set; }
+
+        /// <summary>
         /// 服务业务能力数据类型，支持：ITEM_SUMMARY(商品摘要)、USER_INTENSION(用户意图数据)、FUNCTION(服务功能)
         /// </summary>
         [XmlElement("type")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BenefitContentType { get; set; }
 
         /// <summary>
+        /// 满返使用限制
+        /// </summary>
+        [XmlElement("cash_back_info")]
+        public CashBackInfoDTO CashBackInfo { get; set; }
+
+        /// <summary>
         /// 使用规则条款描述
         /// </summary>
         [XmlElement("description")]

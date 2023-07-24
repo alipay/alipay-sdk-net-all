@@ -31,6 +31,11 @@ namespace Aop.Api.Request
         public FileItem FileContent { get; set; }
 
         /// <summary>
+        /// 活体检测类型，当前枚举支持： OFF：关闭活体检测； CHECK：正常活体检测。 不传默认CHECK。
+        /// </summary>
+        public string LivenessStrategy { get; set; }
+
+        /// <summary>
         /// 客户业务单据号
         /// </summary>
         public string OuterBizNo { get; set; }
@@ -133,6 +138,7 @@ namespace Aop.Api.Request
             parameters.Add("cert_name", this.CertName);
             parameters.Add("cert_no", this.CertNo);
             parameters.Add("cert_type", this.CertType);
+            parameters.Add("liveness_strategy", this.LivenessStrategy);
             parameters.Add("outer_biz_no", this.OuterBizNo);
             parameters.Add("phone", this.Phone);
             parameters.Add("reserved", this.Reserved);

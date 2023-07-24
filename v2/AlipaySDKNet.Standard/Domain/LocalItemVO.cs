@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -68,6 +69,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("path")]
         public string Path { get; set; }
+
+        /// <summary>
+        /// sku数组
+        /// </summary>
+        [XmlArray("skus")]
+        [XmlArrayItem("local_item_sku_query_v_o")]
+        public List<LocalItemSkuQueryVO> Skus { get; set; }
 
         /// <summary>
         /// start_time描述售卖开始时间，end_time描述售卖结束时间，时间格式均为YYYY-MM-DD hh:mm:ss

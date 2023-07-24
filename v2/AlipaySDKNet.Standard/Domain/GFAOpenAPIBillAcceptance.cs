@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class GFAOpenAPIBillAcceptance : AopObject
     {
         /// <summary>
+        /// 受理幂等字段，唯一标识一笔报帐单据。当收到两笔相同的acceptUniqueNo时，第二笔会被当作是重复报送不作处理。因此对于同一笔交易在不同阶段（比如订单创建、确认收货、退款等）触发的不同财务事件，也应该采用不同的acceptUniqueNo
+        /// </summary>
+        [XmlElement("accept_uniq_no")]
+        public string AcceptUniqNo { get; set; }
+
+        /// <summary>
         /// 摊销扩展信息
         /// </summary>
         [XmlElement("amortize_ext_info")]
@@ -80,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("gmt_service")]
         public string GmtService { get; set; }
+
+        /// <summary>
+        /// 高精度账单金额（单位：各币种的“元”单位）
+        /// </summary>
+        [XmlElement("high_precision_bill_amount")]
+        public string HighPrecisionBillAmount { get; set; }
 
         /// <summary>
         /// 业务系统未收付金额（单位：各币种的“元”单位，精确到小数点后两位）

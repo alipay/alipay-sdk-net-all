@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 页码
+        /// </summary>
+        [XmlElement("page_num")]
+        public long PageNum { get; set; }
+
+        /// <summary>
+        /// 每页的大小，取值范围是1~500。分页参数为空时默认返回最多500个item
+        /// </summary>
+        [XmlElement("page_size")]
+        public long PageSize { get; set; }
+
+        /// <summary>
         /// 商家在蚂蚁推荐引擎创建的项目id，调用前需要找蚂蚁技术获取。
         /// </summary>
         [XmlElement("project_id")]

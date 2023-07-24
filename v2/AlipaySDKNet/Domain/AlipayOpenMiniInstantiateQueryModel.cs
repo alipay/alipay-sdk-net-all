@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
+        /// 是否查询详细信息
+        /// </summary>
+        [XmlElement("query_full")]
+        public string QueryFull { get; set; }
+
+        /// <summary>
         /// 小程序模板应用id
         /// </summary>
         [XmlElement("template_id")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DeliveryAgencyMerchantInfo : AopObject
     {
         /// <summary>
-        /// 合作业务类型。 其中针对ISV_FOR_MERCHANT模式，merchant_id与merchant_id_type是必须填写的
+        /// 合作业务类型。
         /// </summary>
         [XmlElement("business_type")]
         public string BusinessType { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
-        /// 商户id类型。 限制: 服务商代运营模式必传   特别说明： 如果merchant_id_type选择SMID。则表明当前商家券活动的归属者是该SMID所绑定的支付宝PID。 因此要求该SMID必须绑定相应的支付宝PID。
+        /// 商户id类型。 限制: 服务商代运营模式必传
         /// </summary>
         [XmlElement("merchant_id_type")]
         public string MerchantIdType { get; set; }

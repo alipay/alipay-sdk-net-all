@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("cr_partial_auth")]
         public CreditRatePartialAuth CrPartialAuth { get; set; }
+
+        /// <summary>
+        /// 豆沙包信息
+        /// </summary>
+        [XmlElement("dowsure")]
+        public Dowsure Dowsure { get; set; }
     }
 }

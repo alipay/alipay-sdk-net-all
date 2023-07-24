@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string SettleAccountId { get; set; }
 
         /// <summary>
-        /// 结算账户id类型。  当settle_account_type 为bankCard时，本参数为cardSerialNo，表示结算账户id是银行卡编号; 当settle_account_type 为alipayBalance时，本参数为userId或者loginName，其中userId表示结算账户id是支付宝唯一用户号，loginName表示结算账户id是支付宝登录号; 当 settle_account_type 为 defaultSettle 时，本参数必须为空
+        /// 结算账户id类型。当 settle_account_type 为 defaultSettle 时，本参数必须为空。  当settle_account_type 为bankCard时，本参数为cardSerialNo，表示结算账户id是银行卡编号; 当settle_account_type 为alipayBalance时，本参数为userId或者loginName，其中userId表示结算账户id是支付宝唯一用户号，loginName表示结算账户id是支付宝登录号。
         /// </summary>
         [XmlElement("settle_account_id_type")]
         public string SettleAccountIdType { get; set; }
@@ -46,13 +46,13 @@ namespace Aop.Api.Domain
         public string SettleAccountType { get; set; }
 
         /// <summary>
-        /// 结算主体账号。  当结算主体类型为SecondMerchant，本参数为二级商户的SecondMerchantID
+        /// 结算主体账号。 当结算主体类型为SecondMerchant，传二级商户ID(smid)；结算主体类型为Store时，传门店ID
         /// </summary>
         [XmlElement("settle_entity_id")]
         public string SettleEntityId { get; set; }
 
         /// <summary>
-        /// 结算主体类型。  SecondMerchant：结算主体为二级商户
+        /// 结算主体类型。 SecondMerchant：结算主体为二级商户 Store：结算主体为门店
         /// </summary>
         [XmlElement("settle_entity_type")]
         public string SettleEntityType { get; set; }

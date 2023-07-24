@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string RoyaltyScene { get; set; }
 
         /// <summary>
-        /// 分账类型.  普通分账为：transfer;  补差为：replenish;  为空默认为分账transfer;
+        /// 分账类型.
         /// </summary>
         [XmlElement("royalty_type")]
         public string RoyaltyType { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string TransInName { get; set; }
 
         /// <summary>
-        /// 收入方账户类型。userId表示是支付宝账号对应的支付宝唯一用户号;cardAliasNo表示是卡编号;loginName表示是支付宝登录号；
+        /// 收入方账户类型。
         /// </summary>
         [XmlElement("trans_in_type")]
         public string TransInType { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string TransOut { get; set; }
 
         /// <summary>
-        /// 支出方账户类型。userId表示是支付宝账号对应的支付宝唯一用户号;loginName表示是支付宝登录号； 泛金融类商户分账时，该字段不要上送。
+        /// 支出方账户类型。
         /// </summary>
         [XmlElement("trans_out_type")]
         public string TransOutType { get; set; }

@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<AssetBomAttribute> Attributes { get; set; }
 
         /// <summary>
+        /// 业务类型
+        /// </summary>
+        [XmlElement("biz_type")]
+        public string BizType { get; set; }
+
+        /// <summary>
         /// 子物料清单
         /// </summary>
         [XmlArray("bom_items")]
@@ -67,10 +73,22 @@ namespace Aop.Api.Domain
         public string ItemType { get; set; }
 
         /// <summary>
+        /// 物料发布状态
+        /// </summary>
+        [XmlElement("release_status")]
+        public string ReleaseStatus { get; set; }
+
+        /// <summary>
         /// 物料信息查询的版本
         /// </summary>
         [XmlElement("request_id")]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 状态
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
 
         /// <summary>
         /// 供应商履约标准

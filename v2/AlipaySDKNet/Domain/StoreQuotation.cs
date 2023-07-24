@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public long Distance { get; set; }
 
         /// <summary>
+        /// isv优惠金额，单位分
+        /// </summary>
+        [XmlElement("isv_discount_amount")]
+        public long IsvDiscountAmount { get; set; }
+
+        /// <summary>
         /// 门店坐标纬度，高德坐标系
         /// </summary>
         [XmlElement("latitude")]

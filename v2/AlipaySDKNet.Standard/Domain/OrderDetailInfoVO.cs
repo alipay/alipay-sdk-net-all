@@ -28,5 +28,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("price_info")]
         public PriceInfoVO PriceInfo { get; set; }
+
+        /// <summary>
+        /// 优惠申领信息
+        /// </summary>
+        [XmlElement("promo_apply_info")]
+        public PromoApplyInfoVO PromoApplyInfo { get; set; }
     }
 }

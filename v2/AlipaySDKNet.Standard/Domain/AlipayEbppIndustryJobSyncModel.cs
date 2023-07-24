@@ -104,7 +104,7 @@ namespace Aop.Api.Domain
         public List<string> JobTags { get; set; }
 
         /// <summary>
-        /// 岗位类型，用于岗位筛选、岗位匹配等场景，具体枚举值在集成阶段提供
+        /// 岗位类型，用于岗位筛选、岗位匹配等场景，具体枚举值在集成阶段提供（传最后一级岗位类型节点编码）
         /// </summary>
         [XmlElement("job_type")]
         public string JobType { get; set; }

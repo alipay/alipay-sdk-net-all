@@ -48,7 +48,7 @@ namespace Aop.Api.Response
         public DeliveryPlayConfig DeliveryPlayConfig { get; set; }
 
         /// <summary>
-        /// 投放计划状态。  枚举值： ACTIVE：生效中 INACTIVE：失效状态 AUDITING：审核中 AUDIT_NO_PASS：审核不通过。
+        /// 投放计划状态。
         /// </summary>
         [XmlElement("delivery_status")]
         public string DeliveryStatus { get; set; }

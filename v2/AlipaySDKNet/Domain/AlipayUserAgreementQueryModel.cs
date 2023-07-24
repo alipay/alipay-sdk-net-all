@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string SignScene { get; set; }
 
         /// <summary>
-        /// 签约第三方主体类型。对于三方协议，表示当前用户和哪一类的第三方主体进行签约。  取值范围:  取值范围：  1. PARTNER（平台商户）;  2. MERCHANT（集团商户），集团下子商户可共享用户签约内容;  默认为PARTNER。
+        /// 签约第三方主体类型。对于三方协议，表示当前用户和哪一类的第三方主体进行签约。 默认为PARTNER。
         /// </summary>
         [XmlElement("third_party_type")]
         public string ThirdPartyType { get; set; }

@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 1
         /// </summary>
+        [XmlElement("test_open_id")]
+        public string TestOpenId { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
         [XmlElement("tets_level_2")]
         public string TetsLevel2 { get; set; }
     }

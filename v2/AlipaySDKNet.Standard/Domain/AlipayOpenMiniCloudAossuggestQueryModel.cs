@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
+        /// 用户唯一标识id，可以是支付宝userid、商家自定义的userid等
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 商家在蚂蚁搜索引擎创建的项目id，调用前需要找蚂蚁技术获取。
         /// </summary>
         [XmlElement("project_id")]

@@ -40,7 +40,13 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
-        /// 开票年月 yyyyMM
+        /// 外部指定的展示在票面的开票时间 格式为yyyyMMdd
+        /// </summary>
+        [XmlElement("inv_dt")]
+        public string InvDt { get; set; }
+
+        /// <summary>
+        /// 开票时间、账单月 格式为yyyyMM
         /// </summary>
         [XmlElement("invoice_date")]
         public string InvoiceDate { get; set; }
@@ -62,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_specification")]
         public string InvoiceSpecification { get; set; }
+
+        /// <summary>
+        /// 开票类型
+        /// </summary>
+        [XmlElement("invoice_type")]
+        public string InvoiceType { get; set; }
 
         /// <summary>
         /// 商户MID

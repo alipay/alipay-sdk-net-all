@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string TransInEntityId { get; set; }
 
         /// <summary>
-        /// 分账转入主体类型。 SecondMerchant：分账转入主体为二级商户    Store: 结算门店
+        /// 分账转入主体类型。 SecondMerchant：分账转入主体为二级商户 Store: 分账转入主体为门店
         /// </summary>
         [XmlElement("trans_in_entity_type")]
         public string TransInEntityType { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string TransOutEntityId { get; set; }
 
         /// <summary>
-        /// 分账转出主体类型。 SecondMerchant：结算主体为二级商户    Store: 结算门店
+        /// 分账转出主体类型。 SecondMerchant：结算主体为二级商户 Store: 结算主体为门店
         /// </summary>
         [XmlElement("trans_out_entity_type")]
         public string TransOutEntityType { get; set; }

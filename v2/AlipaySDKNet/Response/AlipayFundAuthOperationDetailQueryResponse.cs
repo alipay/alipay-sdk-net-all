@@ -76,7 +76,7 @@ namespace Aop.Api.Response
         public string OperationId { get; set; }
 
         /// <summary>
-        /// 支付宝资金操作类型，表示当前查询到的这笔明细的操作类型。 目前支持：  FREEZE：冻结 UNFREEZE：解冻 PAY：支付
+        /// 支付宝资金操作类型，表示当前查询到的这笔明细的操作类型。
         /// </summary>
         [XmlElement("operation_type")]
         public string OperationType { get; set; }

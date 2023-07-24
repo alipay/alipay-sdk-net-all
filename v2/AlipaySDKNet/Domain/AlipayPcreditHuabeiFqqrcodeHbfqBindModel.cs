@@ -10,10 +10,28 @@ namespace Aop.Api.Domain
     public class AlipayPcreditHuabeiFqqrcodeHbfqBindModel : AopObject
     {
         /// <summary>
+        /// 根据业务场景填写对应的绑定类型.
+        /// </summary>
+        [XmlElement("bind_type")]
+        public string BindType { get; set; }
+
+        /// <summary>
+        /// 绑定的码类型名称
+        /// </summary>
+        [XmlElement("code_type")]
+        public string CodeType { get; set; }
+
+        /// <summary>
         /// 扩展字段,用于满足一些定制化的绑定需求.
         /// </summary>
         [XmlElement("fqqr_code_ext_info")]
         public FqQrCodeExtendParams FqqrCodeExtInfo { get; set; }
+
+        /// <summary>
+        /// 直连场景下为商户pid,间联场景下为商户smid.
+        /// </summary>
+        [XmlElement("merchant_id")]
+        public string MerchantId { get; set; }
 
         /// <summary>
         /// 外部请求号,用于唯一标识一次请求.仅可以由英文字母和数字组成.需要保证在服务商端不重复.
@@ -28,7 +46,7 @@ namespace Aop.Api.Domain
         public string QrCodeToken { get; set; }
 
         /// <summary>
-        /// 二级商户唯一标识
+        /// 二级商户唯一标识 当前字段已废弃(更换为merchant_id)
         /// </summary>
         [XmlElement("smid")]
         public string Smid { get; set; }

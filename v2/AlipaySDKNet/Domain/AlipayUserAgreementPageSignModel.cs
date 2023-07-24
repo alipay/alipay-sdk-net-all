@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public AccessParams AccessParams { get; set; }
 
         /// <summary>
-        /// 协议生效类型, 用于指定协议是立即生效还是等待商户通知再生效. 可空, 不填默认为立即生效.   DIRECT: 立即生效.  NOTICE: 商户通知生效, 需要再次调用alipay.user.agreement.sign.effect （支付宝个人协议签约生效接口）接口推进协议生效.   默认为DIRECT
+        /// 协议生效类型, 用于指定协议是立即生效还是等待商户通知再生效. 可空, 不填默认为立即生效.
         /// </summary>
         [XmlElement("agreement_effect_type")]
         public string AgreementEffectType { get; set; }
@@ -130,7 +130,7 @@ namespace Aop.Api.Domain
         public SubMerchantParams SubMerchant { get; set; }
 
         /// <summary>
-        /// 签约第三方主体类型。对于三方协议，表示当前用户和哪一类的第三方主体进行签约。  取值范围：  1. PARTNER（平台商户）  2. MERCHANT（集团商户），集团下子商户可共享用户签约内容  默认为PARTNER。
+        /// 签约第三方主体类型。对于三方协议，表示当前用户和哪一类的第三方主体进行签约。 默认为PARTNER。
         /// </summary>
         [XmlElement("third_party_type")]
         public string ThirdPartyType { get; set; }

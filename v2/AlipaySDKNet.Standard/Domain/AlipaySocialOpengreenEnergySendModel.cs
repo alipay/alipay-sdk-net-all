@@ -31,8 +31,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 能量扩展信息，仅特殊能量场景需要传入，对接时可咨询森林技术同学
         /// </summary>
-        [XmlElement("ext_info")]
-        public EnergyExtRequest ExtInfo { get; set; }
+        [XmlArray("ext_info")]
+        [XmlArrayItem("energy_ext_request")]
+        public List<EnergyExtRequest> ExtInfo { get; set; }
 
         /// <summary>
         /// 绿色行为描述

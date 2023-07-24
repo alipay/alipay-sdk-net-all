@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string Range { get; set; }
 
         /// <summary>
-        /// 属性组件类型,文本输入框:input,单选框:select_one,数值输入框:number_picker
+        /// 属性组件类型
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

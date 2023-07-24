@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string HunterId { get; set; }
 
         /// <summary>
+        /// 导购员openId
+        /// </summary>
+        [XmlElement("hunter_open_id")]
+        public string HunterOpenId { get; set; }
+
+        /// <summary>
         /// 任务已发放激励金额，单位元
         /// </summary>
         [XmlElement("published_amount")]

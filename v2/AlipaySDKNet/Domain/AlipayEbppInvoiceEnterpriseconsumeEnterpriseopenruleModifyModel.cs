@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceEnterpriseconsumeEnterpriseopenruleModifyModel : AopObject
     {
         /// <summary>
-        /// 共同账户ID
+        /// 企业共同账户ID
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }

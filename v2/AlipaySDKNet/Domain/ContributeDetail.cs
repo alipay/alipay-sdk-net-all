@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ContributeAmount { get; set; }
 
         /// <summary>
-        /// 出资方类型，如品牌商出资、支付宝平台出资等
+        /// 出资方类型
         /// </summary>
         [XmlElement("contribute_type")]
         public string ContributeType { get; set; }

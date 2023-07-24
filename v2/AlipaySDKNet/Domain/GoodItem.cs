@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string CurrentPrice { get; set; }
 
         /// <summary>
-        /// 非负数。保留两位小数。币种默认CNY。
+        /// 非负数。保留两位小数。币种默认CNY。单位：元
         /// </summary>
         [XmlElement("deposit_amount")]
         public string DepositAmount { get; set; }

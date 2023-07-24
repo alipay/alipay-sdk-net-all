@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string NotDistributeReason { get; set; }
 
         /// <summary>
-        /// 分发场景code。 具体枚举值如下：SERVICE_MSG-订单消息
+        /// 分发场景code。
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

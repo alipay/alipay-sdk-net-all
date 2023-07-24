@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string OperationId { get; set; }
 
         /// <summary>
-        /// 需要查询的授权资金操作类型。 可选值FREEZE/UNFREEZE/PAY，分别对应冻结、解冻、支付明细类型； 未传入本参数时，如果仅查询出单笔明细则直接返回，如果查询出多笔则优先返回冻结明细、无冻结明细时返回解冻明细； 当传入本参数时，则严格按照该操作类型返回对应明细
+        /// 需要查询的授权资金操作类型。 未传入本参数时，如果仅查询出单笔明细则直接返回，如果查询出多笔则优先返回冻结明细、无冻结明细时返回解冻明细； 当传入本参数时，则严格按照该操作类型返回对应明细
         /// </summary>
         [XmlElement("operation_type")]
         public string OperationType { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniCloudAosbehaviorSyncModel : AopObject
     {
         /// <summary>
-        /// 行为类型：click（点击）、expose（曝光）、order（下单）、pay（支付）、collect（收藏）、like（点赞）、comment（评论）、share（分享）、hot_expose（热搜曝光）、hot_click（热搜点击）suggest_expose（推荐词曝光）、suggest_click（推荐词点击）、 comp_expose（补全词曝光）、comp_click（补全词点击）、hint_expose（底纹曝光）、hint_click（底纹点击）、search_click（搜索点击）、search_expose（搜索曝光）
+        /// 行为类型
         /// </summary>
         [XmlElement("action_type")]
         public string ActionType { get; set; }

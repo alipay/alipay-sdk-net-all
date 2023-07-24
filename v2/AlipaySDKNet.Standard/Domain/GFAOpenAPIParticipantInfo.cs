@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string IpRoleIdType { get; set; }
 
         /// <summary>
+        /// 参与者名称
+        /// </summary>
+        [XmlElement("name")]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 参与者角色id（如支付宝中的uid）
         /// </summary>
         [XmlElement("open_id")]
