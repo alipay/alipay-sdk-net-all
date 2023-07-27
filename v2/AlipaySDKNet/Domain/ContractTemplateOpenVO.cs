@@ -44,6 +44,13 @@ namespace Aop.Api.Domain
         public string PreviewUrl { get; set; }
 
         /// <summary>
+        /// 单行文本组件框列表
+        /// </summary>
+        [XmlArray("singleline_text_rects")]
+        [XmlArrayItem("multiline_text_rect_open_v_o")]
+        public List<MultilineTextRectOpenVO> SinglelineTextRects { get; set; }
+
+        /// <summary>
         /// 合同模板ID，如果存在则为唯一值，由系统生成，在保存成功后会返回该值。
         /// </summary>
         [XmlElement("template_id")]

@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string PackageOpenType { get; set; }
 
         /// <summary>
-        /// 功能包签约状态，"valid", "已生效"；"audit", "签约中"；"invalid", "已失效"；"none", "未签约"
+        /// 功能包签约状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Location { get; set; }
 
         /// <summary>
+        /// 上学专业
+        /// </summary>
+        [XmlElement("major")]
+        public string Major { get; set; }
+
+        /// <summary>
         /// 月
         /// </summary>
         [XmlElement("month")]

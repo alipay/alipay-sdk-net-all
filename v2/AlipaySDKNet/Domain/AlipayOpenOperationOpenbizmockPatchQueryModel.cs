@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenOperationOpenbizmockPatchQueryModel : AopObject
     {
         /// <summary>
-        /// test2222
+        /// test2222zazaz
         /// </summary>
         [XmlElement("b_query")]
         public string BQuery { get; set; }

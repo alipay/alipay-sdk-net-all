@@ -32,6 +32,13 @@ namespace Aop.Api.Domain
         public List<PersonalSealRectOpenVO> PersonalSealRects { get; set; }
 
         /// <summary>
+        /// 单行文本组件框列表
+        /// </summary>
+        [XmlArray("singleline_text_rects")]
+        [XmlArrayItem("multiline_text_rect_open_v_o")]
+        public List<MultilineTextRectOpenVO> SinglelineTextRects { get; set; }
+
+        /// <summary>
         /// 模板文件ID，唯一值，由文件上传接口返回。
         /// </summary>
         [XmlElement("template_file_id")]

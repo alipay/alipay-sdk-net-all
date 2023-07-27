@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// 文件ID
+        /// 文件ID(唯一)，文件的唯一索引ID，上传文件后系统会创建返回该文件的文件ID
         /// </summary>
         [XmlElement("file_id")]
         public string FileId { get; set; }

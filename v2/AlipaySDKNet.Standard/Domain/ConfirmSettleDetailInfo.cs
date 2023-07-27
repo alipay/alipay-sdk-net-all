@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string SettleEntityId { get; set; }
 
         /// <summary>
-        /// 结算主体类型。  二级商户:SecondMerchant; 商户或者直连商户门店:Store
+        /// 结算主体类型。  二级商户:SecondMerchant; 商户门店:Store; 直连商户:Partner
         /// </summary>
         [XmlElement("settle_entity_type")]
         public string SettleEntityType { get; set; }

@@ -202,7 +202,7 @@ namespace Aop.Api.Domain
         public List<IndustryQualificationInfo> Qualifications { get; set; }
 
         /// <summary>
-        /// 商户使用服务，可选值有：当面付、app支付、wap支付、电脑支付、线上资金预授权、新当面资金授权、商户代扣、小程序支付。其值会影响其他字段必填性，详见其他字段描述
+        /// 商户使用服务，可选值有：当面付、jsapi支付、app支付、wap支付、电脑支付、线上资金预授权、新当面资金授权、预授权支付、商户代扣、小程序支付。其值会影响其他字段必填性，详见其他字段描述
         /// </summary>
         [XmlArray("service")]
         [XmlArrayItem("string")]
@@ -221,7 +221,7 @@ namespace Aop.Api.Domain
         public string SignTimeWithIsv { get; set; }
 
         /// <summary>
-        /// 商户站点信息，包括网站、app、小程序。商户使用服务包含电脑支付或wap支付时，必须填充一个类型为01(网站)的SiteInfo对象，site_type/site_url/site_name必填；当包含app支付时，必须至少填充类型为02(APP)或06(支付宝小程序)中一种类型的SiteInfo对象，site_type/site_name必填
+        /// sites：商户站点信息，包括网站、app、小程序。商户使用服务包含电脑支付、wap支付时，必须填充一个类型为01(网站)的SiteInfo对象，site_type/site_url/site_name必填；当包含app支付时，必须至少填充类型为02(APP)或06(支付宝小程序)中一种类型的SiteInfo对象，site_type/site_name必填；当包含jsapi支付时，必须填充一个类型为06(支付宝小程序)的SiteInfo对象；
         /// </summary>
         [XmlArray("sites")]
         [XmlArrayItem("site_info")]

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string EndDate { get; set; }
 
         /// <summary>
-        /// 查询类型，表示以当前维度进行数据聚合。 app：小程序维度；activity：活动维度；
+        /// 查询类型，表示以当前维度进行数据聚合。
         /// </summary>
         [XmlElement("query_type")]
         public string QueryType { get; set; }

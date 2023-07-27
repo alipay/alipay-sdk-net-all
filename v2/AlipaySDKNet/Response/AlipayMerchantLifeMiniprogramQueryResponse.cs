@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public MiniprogramExtra Extra { get; set; }
 
         /// <summary>
+        /// 操作员类型
+        /// </summary>
+        [XmlElement("ops_type")]
+        public string OpsType { get; set; }
+
+        /// <summary>
         /// 生活号ID
         /// </summary>
         [XmlElement("public_id")]

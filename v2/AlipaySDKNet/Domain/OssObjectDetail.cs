@@ -10,7 +10,13 @@ namespace Aop.Api.Domain
     public class OssObjectDetail : AopObject
     {
         /// <summary>
-        /// 文件id
+        /// 文件创建时间，格式为0时区iso8601格式
+        /// </summary>
+        [XmlElement("create_time")]
+        public string CreateTime { get; set; }
+
+        /// <summary>
+        /// 文件ID(唯一)，文件的唯一索引ID，上传文件后系统会创建返回该文件的文件ID
         /// </summary>
         [XmlElement("file_id")]
         public string FileId { get; set; }
@@ -22,7 +28,7 @@ namespace Aop.Api.Domain
         public string FileName { get; set; }
 
         /// <summary>
-        /// 文件大小
+        /// 文件大小，单位为Byte
         /// </summary>
         [XmlElement("size")]
         public long Size { get; set; }

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -54,6 +55,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// test
         /// </summary>
+        [XmlElement("test_number_2")]
+        public long TestNumber2 { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
         [XmlElement("test_price")]
         public string TestPrice { get; set; }
 
@@ -62,5 +69,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("test_string")]
         public string TestString { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
+        [XmlArray("test_string_open_ids")]
+        [XmlArrayItem("string")]
+        public List<string> TestStringOpenIds { get; set; }
     }
 }

@@ -29,6 +29,12 @@ namespace Aop.Api.Response
         /// <summary>
         /// test
         /// </summary>
+        [XmlElement("out_number_open_id")]
+        public string OutNumberOpenId { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
         [XmlElement("out_price")]
         public string OutPrice { get; set; }
 

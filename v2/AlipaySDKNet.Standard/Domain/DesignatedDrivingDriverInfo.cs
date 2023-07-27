@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
+        /// 代驾司机真实姓名
+        /// </summary>
+        [XmlElement("real_name")]
+        public string RealName { get; set; }
+
+        /// <summary>
         /// 司机代驾服务次数
         /// </summary>
         [XmlElement("service_times")]

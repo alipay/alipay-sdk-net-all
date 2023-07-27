@@ -11,7 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayCloudCloudrunObjectstorageDownloadurlGetModel : AopObject
     {
         /// <summary>
-        /// 环境ID
+        /// 内部使用，uiam角色扮演token
+        /// </summary>
+        [XmlElement("assume_token")]
+        public string AssumeToken { get; set; }
+
+        /// <summary>
+        /// 环境ID，唯一，开通小程序云系统会生成环境ID，请从开通页面获取
         /// </summary>
         [XmlElement("env")]
         public string Env { get; set; }

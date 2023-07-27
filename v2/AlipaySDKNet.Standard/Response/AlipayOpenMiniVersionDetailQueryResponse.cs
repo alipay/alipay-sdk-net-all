@@ -178,7 +178,7 @@ namespace Aop.Api.Response
         public List<RegionInfo> ServiceRegionInfo { get; set; }
 
         /// <summary>
-        /// 小程序服务区域类型，GLOBLE-全球，CHINA-中国，LOCATION-指定区域
+        /// 小程序服务区域类型
         /// </summary>
         [XmlElement("service_region_type")]
         public string ServiceRegionType { get; set; }

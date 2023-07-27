@@ -11,7 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayCloudCloudrunObjectstorageFilelistQueryModel : AopObject
     {
         /// <summary>
-        /// 云托管环境ID
+        /// 内部使用 uiam角色扮演token
+        /// </summary>
+        [XmlElement("assume_token")]
+        public string AssumeToken { get; set; }
+
+        /// <summary>
+        /// 环境ID，唯一，开通小程序云系统会生成环境ID，请从开通页面获取
         /// </summary>
         [XmlElement("env")]
         public string Env { get; set; }
@@ -24,7 +30,7 @@ namespace Aop.Api.Domain
         public List<string> FileIdList { get; set; }
 
         /// <summary>
-        /// 文件列表游标索引
+        /// 文件列表游标索引，next_token为文件分页参数，在本接口的响应中获取，传入next_token以获取下一页数据
         /// </summary>
         [XmlElement("next_token")]
         public string NextToken { get; set; }

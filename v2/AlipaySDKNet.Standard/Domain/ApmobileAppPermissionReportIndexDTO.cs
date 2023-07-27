@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 证书摘要
         /// </summary>
-        [XmlElement("cert_md5")]
+        [XmlElement("cert_md_5")]
         public string CertMd5 { get; set; }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 文件摘要
         /// </summary>
-        [XmlElement("md5")]
+        [XmlElement("md_5")]
         public string Md5 { get; set; }
 
         /// <summary>

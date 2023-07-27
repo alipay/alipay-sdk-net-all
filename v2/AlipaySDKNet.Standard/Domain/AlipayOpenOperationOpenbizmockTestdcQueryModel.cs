@@ -129,6 +129,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 1
         /// </summary>
+        [XmlElement("sss")]
+        public string Sss { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }
 
