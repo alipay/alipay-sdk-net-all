@@ -33,6 +33,6 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlArray("versions")]
         [XmlArrayItem("version")]
-        public List<Version> Versions { get; set; }
+        public List<Aop.Api.Domain.Version> Versions { get; set; }
     }
 }
