@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class UserDetail : AopObject
     {
         /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("appid_one")]
+        public string AppidOne { get; set; }
+
+        /// <summary>
         /// userid列表
         /// </summary>
         [XmlArray("list_open_id")]

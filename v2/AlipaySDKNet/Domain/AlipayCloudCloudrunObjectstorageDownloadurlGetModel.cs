@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string Env { get; set; }
 
         /// <summary>
-        /// 欲获取的文件列表
+        /// 欲获取的文件列表,最多支持同时获取20个文件的下载地址
         /// </summary>
         [XmlArray("file_list")]
         [XmlArrayItem("download_url_request")]

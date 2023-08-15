@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayTradePageMergePayModel : AopObject
     {
         /// <summary>
+        /// 外部指定买家
+        /// </summary>
+        [XmlElement("ext_user_info")]
+        public ExtUserInfo ExtUserInfo { get; set; }
+
+        /// <summary>
         /// 子订单详情
         /// </summary>
         [XmlArray("order_details")]

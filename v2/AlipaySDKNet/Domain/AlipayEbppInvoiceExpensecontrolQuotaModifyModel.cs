@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 变更的金额/余额，以（分）为单位
+        /// 变更的金额/余额，以（分）为单位，当变更的资产类型为次卡时，当前的单位为次
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

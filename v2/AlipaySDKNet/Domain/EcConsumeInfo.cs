@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ConsumeAmount { get; set; }
 
         /// <summary>
+        /// 账单业务类型 -因公支付：EC_PAY -因公收款：EC_CLLCT
+        /// </summary>
+        [XmlElement("consume_biz_type")]
+        public string ConsumeBizType { get; set; }
+
+        /// <summary>
         /// 员工消费记账分类
         /// </summary>
         [XmlElement("consume_category")]
@@ -170,6 +176,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pay_no")]
         public string PayNo { get; set; }
+
+        /// <summary>
+        /// 付款方卡号
+        /// </summary>
+        [XmlElement("payer_card_no")]
+        public string PayerCardNo { get; set; }
+
+        /// <summary>
+        /// 付款方登录账号
+        /// </summary>
+        [XmlElement("payer_logon_id")]
+        public string PayerLogonId { get; set; }
+
+        /// <summary>
+        /// 付款方名称
+        /// </summary>
+        [XmlElement("payer_name")]
+        public string PayerName { get; set; }
 
         /// <summary>
         /// 企业代付金额，单位：元

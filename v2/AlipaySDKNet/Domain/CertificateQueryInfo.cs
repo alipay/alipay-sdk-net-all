@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Code { get; set; }
 
         /// <summary>
+        /// 商家侧核销对应的交易订单id
+        /// </summary>
+        [XmlElement("out_order_id")]
+        public string OutOrderId { get; set; }
+
+        /// <summary>
         /// 商品信息
         /// </summary>
         [XmlElement("sku_info")]

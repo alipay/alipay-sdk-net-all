@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ChannelBalance { get; set; }
 
         /// <summary>
+        /// 渠道扩展信息
+        /// </summary>
+        [XmlElement("channel_detail_params")]
+        public ChannelDetailParams ChannelDetailParams { get; set; }
+
+        /// <summary>
         /// 渠道可用性标识
         /// </summary>
         [XmlElement("channel_enable")]

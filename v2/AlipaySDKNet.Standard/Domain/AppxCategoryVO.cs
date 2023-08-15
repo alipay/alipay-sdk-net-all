@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,5 +33,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("f_cat_id")]
         public string FCatId { get; set; }
+
+        /// <summary>
+        /// 商品类型
+        /// </summary>
+        [XmlArray("item_types")]
+        [XmlArrayItem("string")]
+        public List<string> ItemTypes { get; set; }
+
+        /// <summary>
+        /// 开通状态。只有叶子结点有开通状态
+        /// </summary>
+        [XmlElement("qualification_status")]
+        public string QualificationStatus { get; set; }
     }
 }

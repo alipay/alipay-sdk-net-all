@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -14,5 +15,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("creative_design_info_list")]
         public CreativeDesignInfo CreativeDesignInfoList { get; set; }
+
+        /// <summary>
+        /// 布局id对应的关联信息
+        /// </summary>
+        [XmlArray("select_design_info_list")]
+        [XmlArrayItem("creative_design_info")]
+        public List<CreativeDesignInfo> SelectDesignInfoList { get; set; }
     }
 }

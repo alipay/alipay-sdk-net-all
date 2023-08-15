@@ -17,7 +17,7 @@ namespace Aop.Api.Response
         public string DataContent { get; set; }
 
         /// <summary>
-        /// INIT表示任务还在初始化状态，COLLECT表示任务在进行中，END表示任务处理完成，FAIL表示任务处理失败。
+        /// INIT表示任务还在初始化状态，COLLECT表示任务在进行中，END表示任务处理完成，FAIL表示任务处理失败。AUTH_FAIL表示授权失败
         /// </summary>
         [XmlElement("data_status")]
         public string DataStatus { get; set; }
@@ -59,6 +59,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("merchant_request_id")]
         public string MerchantRequestId { get; set; }
+
+        /// <summary>
+        /// 产品码，和入参中的product_code一致
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
 
         /// <summary>
         /// 随机秘钥信封。可使用该密钥解密数据内容

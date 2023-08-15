@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string MedicalCardInstId { get; set; }
 
         /// <summary>
+        /// 本人凭证激活状态
+        /// </summary>
+        [XmlElement("medical_card_status")]
+        public string MedicalCardStatus { get; set; }
+
+        /// <summary>
         /// 开放平台应用Id
         /// </summary>
         [XmlElement("openapi_app_id")]
@@ -56,6 +62,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pay_auth_no")]
         public string PayAuthNo { get; set; }
+
+        /// <summary>
+        /// 亲情账户绑定状态，在rels_pay_flag=1时返回
+        /// </summary>
+        [XmlElement("rels_medical_card_status")]
+        public string RelsMedicalCardStatus { get; set; }
 
         /// <summary>
         /// 授权类型 本人授权-0 亲情账户授权-1

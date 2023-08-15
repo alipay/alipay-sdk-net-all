@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// 充退扩展参数
+        /// </summary>
+        [XmlElement("refund_business_extend")]
+        public RefundBusinessExtend RefundBusinessExtend { get; set; }
+
+        /// <summary>
         /// 提现策略
         /// </summary>
         [XmlElement("refund_strategy")]

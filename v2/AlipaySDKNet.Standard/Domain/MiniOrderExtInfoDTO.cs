@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("door_time")]
         public string DoorTime { get; set; }
+
+        /// <summary>
+        /// 完整的支付参数拼接成的字符串，从服务端获取
+        /// </summary>
+        [XmlElement("order_str")]
+        public string OrderStr { get; set; }
     }
 }

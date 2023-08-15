@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ApplyLinkType { get; set; }
 
         /// <summary>
+        /// 申请流程结束后的回跳URL。
+        /// </summary>
+        [XmlElement("back_url")]
+        public string BackUrl { get; set; }
+
+        /// <summary>
         /// 业务场景码
         /// </summary>
         [XmlElement("biz_scene")]
@@ -40,7 +46,7 @@ namespace Aop.Api.Domain
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// 主体信息
+        /// 主体信息。新开通零工卡时必须提供，基于已有零工卡开通服务时可选，如果传递则会按照实际情况校验。
         /// </summary>
         [XmlElement("principal_info")]
         public ParticipantInfoDTO PrincipalInfo { get; set; }

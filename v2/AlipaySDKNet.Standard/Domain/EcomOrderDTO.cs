@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public InsPeriodDTO ChargeDuration { get; set; }
 
         /// <summary>
+        /// 充电保障方案类型 (FREQUENCY/MONTH/YEAR)为空时默认为FREQUENCY
+        /// </summary>
+        [XmlElement("charge_guarantee_plan_type")]
+        public string ChargeGuaranteePlanType { get; set; }
+
+        /// <summary>
         /// 免押金额
         /// </summary>
         [XmlElement("credit_deposit_money")]

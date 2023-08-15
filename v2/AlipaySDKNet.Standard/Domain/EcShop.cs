@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Address { get; set; }
 
         /// <summary>
+        /// 门店品牌id
+        /// </summary>
+        [XmlElement("brand_id")]
+        public string BrandId { get; set; }
+
+        /// <summary>
         /// 城市编码
         /// </summary>
         [XmlElement("city_id")]

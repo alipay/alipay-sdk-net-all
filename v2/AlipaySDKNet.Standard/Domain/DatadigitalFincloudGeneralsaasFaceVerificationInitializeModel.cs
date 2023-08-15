@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类型，目前只支持身份证:IDENTITY_CARD
+        /// 证件类型，当前枚举支持： IDENTITY_CARD：身份证 RESIDENCE_HK_MC：港澳居民居住证 RESIDENCE_TAIWAN：台湾居民居住证
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }

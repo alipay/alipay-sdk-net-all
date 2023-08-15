@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("category_id")]
         public string CategoryId { get; set; }
+
+        /// <summary>
+        /// 商品类型，默认为实物商品
+        /// </summary>
+        [XmlElement("item_type")]
+        public string ItemType { get; set; }
     }
 }

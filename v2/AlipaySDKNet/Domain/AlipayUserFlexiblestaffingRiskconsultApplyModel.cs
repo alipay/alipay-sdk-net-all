@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 岗位
+        /// </summary>
+        [XmlElement("position")]
+        public string Position { get; set; }
+
+        /// <summary>
         /// 产品码
         /// </summary>
         [XmlElement("product_code")]

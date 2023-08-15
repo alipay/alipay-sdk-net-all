@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string JobName { get; set; }
 
         /// <summary>
+        /// 用户在求职意向页面自主录入
+        /// </summary>
+        [XmlElement("position_name")]
+        public string PositionName { get; set; }
+
+        /// <summary>
         /// 行业id
         /// </summary>
         [XmlElement("profession_id")]

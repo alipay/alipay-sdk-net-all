@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class PublicComplex : AopObject
     {
         /// <summary>
+        /// test
+        /// </summary>
+        [XmlElement("complex_testa")]
+        public PublicComplexWzw ComplexTesta { get; set; }
+
+        /// <summary>
         /// 1test
         /// </summary>
         [XmlArray("test_boolean")]

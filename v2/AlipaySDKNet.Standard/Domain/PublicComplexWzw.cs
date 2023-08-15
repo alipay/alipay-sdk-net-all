@@ -13,6 +13,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// test
         /// </summary>
+        [XmlElement("complex_a")]
+        public CorporateSealRectOpenVO ComplexA { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
         [XmlArray("test_boolean")]
         [XmlArrayItem("boolean")]
         public List<bool> TestBoolean { get; set; }

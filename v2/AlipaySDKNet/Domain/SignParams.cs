@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string PersonalProductCode { get; set; }
 
         /// <summary>
+        /// 商家和支付宝签约的产品码。 商家扣款产品传入固定值：GENERAL_WITHHOLDING
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
         /// 签约成功后商户用于接收异步通知的地址。如果不传入，签约与支付的异步通知都会发到外层notify_url参数传入的地址；如果外层也未传入，签约与支付的异步通知都会发到商户appid配置的网关地址。
         /// </summary>
         [XmlElement("sign_notify_url")]

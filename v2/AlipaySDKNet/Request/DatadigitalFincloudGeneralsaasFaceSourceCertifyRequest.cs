@@ -50,6 +50,11 @@ namespace Aop.Api.Request
         /// </summary>
         public Nullable<bool> Reserved { get; set; }
 
+        /// <summary>
+        /// ON：开启安全拦截。OFF：关闭安全拦截。建议开启，能够有效防御攻击，默认取值为ON。
+        /// </summary>
+        public string SecurityStrategy { get; set; }
+
         #region IAopRequest Members
 		private bool needEncrypt=true;
 		private string apiVersion = "1.0";
@@ -142,6 +147,7 @@ namespace Aop.Api.Request
             parameters.Add("outer_biz_no", this.OuterBizNo);
             parameters.Add("phone", this.Phone);
             parameters.Add("reserved", this.Reserved);
+            parameters.Add("security_strategy", this.SecurityStrategy);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);

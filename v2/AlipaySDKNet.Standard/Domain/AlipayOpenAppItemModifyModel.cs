@@ -61,10 +61,22 @@ namespace Aop.Api.Domain
         public List<string> ImageList { get; set; }
 
         /// <summary>
+        /// 1=官方插件版，商品详情页链接不传入 0=自定义详情页版，商品详情页链接必须传入
+        /// </summary>
+        [XmlElement("item_details_page_model")]
+        public string ItemDetailsPageModel { get; set; }
+
+        /// <summary>
         /// 支付宝平台侧商品ID，是支付宝平台侧商品的唯一标识，后续与平台交互，需要使用该 ID，建议持久化。
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
+
+        /// <summary>
+        /// 商品类型，默认为实物商品
+        /// </summary>
+        [XmlElement("item_type")]
+        public string ItemType { get; set; }
 
         /// <summary>
         /// 商品原价，分为单位。若填写了skus[]数组，此字段不用填写。若未填写skus[]数组，此字段必填。如果填写，值必须大于0，且原价不能小于售价。

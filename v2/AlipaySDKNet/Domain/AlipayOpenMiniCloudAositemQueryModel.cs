@@ -111,12 +111,6 @@ namespace Aop.Api.Domain
         public string Query { get; set; }
 
         /// <summary>
-        /// 可以关联到用户的标识信息，用于关联用户的特征。例如手机号、设备号、邮箱等。格式为：“类型#sha256(值）”，类型枚举有：PHONE（手机号）、DEVICE（设备号）、EMAIL（邮箱）等，具体的值是用sha256进行哈希之后的hex表示，多个标识信息用,分割
-        /// </summary>
-        [XmlElement("relevant_id")]
-        public string RelevantId { get; set; }
-
-        /// <summary>
         /// 标签列表，搜索结果只会包含该标签的商品，为空时代表返回所有的商品。多个条件是与的关系。
         /// </summary>
         [XmlArray("tags")]

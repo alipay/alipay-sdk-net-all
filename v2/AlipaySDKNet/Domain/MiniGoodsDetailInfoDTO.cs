@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string PlatformItemVersionId { get; set; }
 
         /// <summary>
+        /// 租金信息，租赁商品特有
+        /// </summary>
+        [XmlElement("rent_info")]
+        public RentInfoDTO RentInfo { get; set; }
+
+        /// <summary>
         /// 商品单价，单位：元
         /// </summary>
         [XmlElement("sale_price")]

@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string Channel { get; set; }
 
         /// <summary>
+        /// 商家自定义id
+        /// </summary>
+        [XmlElement("custom_id")]
+        public string CustomId { get; set; }
+
+        /// <summary>
+        /// 推荐item附属的商品id、商品名称，多个值用,分割
+        /// </summary>
+        [XmlElement("goods_id")]
+        public string GoodsId { get; set; }
+
+        /// <summary>
         /// 行为对应的itemId列表，多个商品用,分割，如曝光的itemid、转化的itemid等。
         /// </summary>
         [XmlElement("item_id_list")]
@@ -100,13 +112,13 @@ namespace Aop.Api.Domain
         public string TraceId { get; set; }
 
         /// <summary>
-        /// 用户唯一标识id，可以是支付宝userid、商家自定义的userid等
+        /// 支付宝userid
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
 
         /// <summary>
-        /// 用户id的类型，可选值：ALIPAY（支付宝userid）、CUSTOM（商家自定义的userid）
+        /// 废弃：user_id固定为支付宝uid，type无需商家显示传递。 当前字段已废弃(user_id固定位支付宝uid，无需商家显示传递。)
         /// </summary>
         [XmlElement("user_id_type")]
         public string UserIdType { get; set; }

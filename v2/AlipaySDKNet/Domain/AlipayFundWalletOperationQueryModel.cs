@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
+
+        /// <summary>
+        /// 业务类型
+        /// </summary>
+        [XmlArray("biz_types")]
+        [XmlArrayItem("string")]
+        public List<string> BizTypes { get; set; }
 
         /// <summary>
         /// 当前页

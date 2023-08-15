@@ -29,7 +29,7 @@ namespace Aop.Api.Response
         public string AuthTradePayMode { get; set; }
 
         /// <summary>
-        /// CPS订单的业务结算标识
+        /// 账期结算标识，指已完成支付的订单会进行账期管控，不会实时结算。该参数目前会在使用小程序交易组件场景下返回
         /// </summary>
         [XmlElement("biz_settle_mode")]
         public string BizSettleMode { get; set; }

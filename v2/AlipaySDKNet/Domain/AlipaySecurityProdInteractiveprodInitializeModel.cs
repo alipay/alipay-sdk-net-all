@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizRequestParams { get; set; }
 
         /// <summary>
+        /// isv方的客户的appId 当服务商自身是isv，代第三方客户调用风险咨询接口时，需要传入第三方客户的小程序appId
+        /// </summary>
+        [XmlElement("customer_app_id")]
+        public string CustomerAppId { get; set; }
+
+        /// <summary>
         /// 是否走策略推荐，若为true，则由策略动态决策，默认为false
         /// </summary>
         [XmlElement("need_consult")]

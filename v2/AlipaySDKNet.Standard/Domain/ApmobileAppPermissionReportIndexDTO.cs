@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CertMd5 { get; set; }
 
         /// <summary>
+        /// 检测报告pdfafts的下载url
+        /// </summary>
+        [XmlElement("detect_report_pdf_url")]
+        public string DetectReportPdfUrl { get; set; }
+
+        /// <summary>
         /// 检测时间
         /// </summary>
         [XmlElement("detect_time")]

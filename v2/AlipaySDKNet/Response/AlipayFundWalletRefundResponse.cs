@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayFundWalletRefundResponse : AopResponse
     {
         /// <summary>
-        /// 原路退实际退款金额
+        /// 原路退实际退款金额,单位元
         /// </summary>
         [XmlElement("actual_amount")]
         public string ActualAmount { get; set; }

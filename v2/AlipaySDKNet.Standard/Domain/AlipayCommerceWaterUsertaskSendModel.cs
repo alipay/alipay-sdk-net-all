@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 上报所属门店名称
+        /// </summary>
+        [XmlElement("send_shop_name")]
+        public string SendShopName { get; set; }
+
+        /// <summary>
         /// 商户创建任务后生成的任务id
         /// </summary>
         [XmlElement("task_id")]

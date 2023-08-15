@@ -72,12 +72,6 @@ namespace Aop.Api.Domain
         public string DetailUrl { get; set; }
 
         /// <summary>
-        /// 未定义在标准字段内的字段，可以通过扩展json字段进行同步
-        /// </summary>
-        [XmlElement("ext_json")]
-        public string ExtJson { get; set; }
-
-        /// <summary>
         /// 租赁商品的新日描述
         /// </summary>
         [XmlElement("fresh_degree")]

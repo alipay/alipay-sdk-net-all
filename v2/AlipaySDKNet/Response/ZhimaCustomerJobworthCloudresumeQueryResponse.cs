@@ -31,10 +31,28 @@ namespace Aop.Api.Response
         public List<CloudResumeEducationExperience> EducationExperiences { get; set; }
 
         /// <summary>
+        /// 用户在芝麻工作证填写的邮箱
+        /// </summary>
+        [XmlElement("email")]
+        public string Email { get; set; }
+
+        /// <summary>
         /// 性别
         /// </summary>
         [XmlElement("gender")]
         public string Gender { get; set; }
+
+        /// <summary>
+        /// ALWAYS_ON_JOB("ALWAYS_ON_JOB", "随时到岗") MONTH_ON_JOB("MONTH_ON_JOB", "月内到岗") SEEK_FOR_CHANCE("SEEK_FOR_CHANCE", "考虑机会") NO_MIND("NO_MIND", "暂不考虑机会")
+        /// </summary>
+        [XmlElement("intention_status")]
+        public string IntentionStatus { get; set; }
+
+        /// <summary>
+        /// 用户在芝麻工作证填写的自我介绍
+        /// </summary>
+        [XmlElement("person_desc")]
+        public string PersonDesc { get; set; }
 
         /// <summary>
         /// 手机号码
@@ -54,6 +72,18 @@ namespace Aop.Api.Response
         [XmlArray("position_intentions")]
         [XmlArrayItem("cloud_resume_position_intention")]
         public List<CloudResumePositionIntention> PositionIntentions { get; set; }
+
+        /// <summary>
+        /// IN_SCHOOL:在校 FINISH_SCHOOL:已毕业
+        /// </summary>
+        [XmlElement("position_type")]
+        public string PositionType { get; set; }
+
+        /// <summary>
+        /// 常驻地址
+        /// </summary>
+        [XmlElement("residential_area")]
+        public string ResidentialArea { get; set; }
 
         /// <summary>
         /// 技能信息

@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string ComplainContent { get; set; }
 
         /// <summary>
+        /// 投诉网址
+        /// </summary>
+        [XmlElement("complain_url")]
+        public string ComplainUrl { get; set; }
+
+        /// <summary>
         /// 投诉单涉及的交易信息
         /// </summary>
         [XmlArray("complaint_trade_info_list")]

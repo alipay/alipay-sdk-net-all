@@ -61,6 +61,18 @@ namespace Aop.Api.Domain
         public List<string> ImageList { get; set; }
 
         /// <summary>
+        /// 1=官方插件版，商品详情页链接不传入 0=自定义详情页版，商品详情页链接必须传入
+        /// </summary>
+        [XmlElement("item_details_page_model")]
+        public string ItemDetailsPageModel { get; set; }
+
+        /// <summary>
+        /// 商品类型，默认为实物商品
+        /// </summary>
+        [XmlElement("item_type")]
+        public string ItemType { get; set; }
+
+        /// <summary>
         /// 商品原价，分为单位。 可选。若未填写skus[]数组，此字段可选；若填写了skus[]数组，此字段不填写。 如果填写，值必须大于0，且原价不能小于售价。
         /// </summary>
         [XmlElement("original_price")]

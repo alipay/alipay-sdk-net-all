@@ -13,8 +13,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 商品属性
         /// </summary>
-        [XmlElement("attrs")]
-        public AppItemAttrVO Attrs { get; set; }
+        [XmlArray("attrs")]
+        [XmlArrayItem("app_item_attr_v_o")]
+        public List<AppItemAttrVO> Attrs { get; set; }
 
         /// <summary>
         /// 类目ID

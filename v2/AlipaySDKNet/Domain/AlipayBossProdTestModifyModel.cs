@@ -29,10 +29,31 @@ namespace Aop.Api.Domain
         public PublicComplex ComplexRef { get; set; }
 
         /// <summary>
+        /// 1
+        /// </summary>
+        [XmlArray("lisit_test")]
+        [XmlArrayItem("public_complex")]
+        public List<PublicComplex> LisitTest { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
+        [XmlArray("list_complex_copy")]
+        [XmlArrayItem("public_complex")]
+        public List<PublicComplex> ListComplexCopy { get; set; }
+
+        /// <summary>
         /// test
         /// </summary>
         [XmlElement("test_a")]
         public string TestA { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
+        [XmlArray("test_aaa")]
+        [XmlArrayItem("price")]
+        public List<string> TestAaa { get; set; }
 
         /// <summary>
         /// test

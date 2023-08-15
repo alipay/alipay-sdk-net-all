@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public ApeRecContext Context { get; set; }
 
         /// <summary>
+        /// 商家自定义id
+        /// </summary>
+        [XmlElement("custom_id")]
+        public string CustomId { get; set; }
+
+        /// <summary>
         /// 已经曝光的item列表，用于曝光去重，多个itemid用,分割，这部分item不会出现在推荐结果中。
         /// </summary>
         [XmlArray("exposed_item_list")]
@@ -67,13 +73,13 @@ namespace Aop.Api.Domain
         public string SessionId { get; set; }
 
         /// <summary>
-        /// 用户唯一标识id，可以是支付宝userid、商家自定义的userid等
+        /// 支付宝userid
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
 
         /// <summary>
-        /// 用户id的类型，可选值：ALIPAY（支付宝userid）、CUSTOM（商家自定义的userid）
+        /// 废弃：user_id固定为支付宝uid，type无需商家显示传递。 当前字段已废弃(user_id固定位支付宝uid，无需商家显示传递。)
         /// </summary>
         [XmlElement("user_id_type")]
         public string UserIdType { get; set; }

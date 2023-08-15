@@ -15,13 +15,13 @@ namespace Aop.Api.Response
         public string AvailableAmount { get; set; }
 
         /// <summary>
-        /// 冻结金额
+        /// 冻结金额。单位（元）
         /// </summary>
         [XmlElement("freeze_amount")]
         public string FreezeAmount { get; set; }
 
         /// <summary>
-        /// 待结算金额
+        /// 待结算金额，单位（元）
         /// </summary>
         [XmlElement("settle_amount")]
         public string SettleAmount { get; set; }

@@ -70,7 +70,7 @@ namespace Aop.Api.Response
         public string Path { get; set; }
 
         /// <summary>
-        /// 确认收货时间，秒级时间戳，fund_type = 1且确认收货之后存在
+        /// 确认收货时间，fund_type = 1且确认收货之后存在
         /// </summary>
         [XmlElement("receive_time")]
         public string ReceiveTime { get; set; }

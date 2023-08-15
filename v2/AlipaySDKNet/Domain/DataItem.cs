@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class DataItem : AopObject
     {
         /// <summary>
+        /// 业务链路id
+        /// </summary>
+        [XmlElement("biz_trace_id")]
+        public string BizTraceId { get; set; }
+
+        /// <summary>
         /// 根据搜索请求参数ext_res_field返回的指定字段
         /// </summary>
         [XmlArray("ext_res_field")]
@@ -73,7 +79,7 @@ namespace Aop.Api.Domain
         public string Title { get; set; }
 
         /// <summary>
-        /// 搜索结果item的trace_id用于关联搜索结果和用户行为
+        /// 搜索结果item的trace_id用于关联搜索结果和用户行为 当前字段已废弃(接口改造导致字段冲突)
         /// </summary>
         [XmlElement("trace_id")]
         public string TraceId { get; set; }

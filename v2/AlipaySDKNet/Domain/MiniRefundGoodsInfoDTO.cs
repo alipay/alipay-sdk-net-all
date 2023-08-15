@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class MiniRefundGoodsInfoDTO : AopObject
     {
         /// <summary>
+        /// 商品退款凭证信息，在本地生活等场景下，需要填入凭证号进行退款。
+        /// </summary>
+        [XmlElement("certificate_info")]
+        public MiniRefundCertificateDTO CertificateInfo { get; set; }
+
+        /// <summary>
         /// 与alipay.open.mini.order.create接口所传的商品goods_id保持一致
         /// </summary>
         [XmlElement("goods_id")]

@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<string> DataList { get; set; }
 
         /// <summary>
-        /// 推荐对象类型，目前仅支持商品，默认为GOODS。
+        /// 推荐对象类型，目前仅支持商品，默认为GOODS_INFO。
         /// </summary>
         [XmlElement("recommend_type")]
         public string RecommendType { get; set; }

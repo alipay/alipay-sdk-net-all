@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string GeneralName { get; set; }
 
         /// <summary>
+        /// 药品图片地址
+        /// </summary>
+        [XmlElement("image")]
+        public string Image { get; set; }
+
+        /// <summary>
         /// 库存
         /// </summary>
         [XmlElement("inventory")]
@@ -92,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }
+
+        /// <summary>
+        /// 价格级别，HIGH_PRICE-高价，SUPER_HIGH_PRICE-超高价
+        /// </summary>
+        [XmlElement("price_level")]
+        public string PriceLevel { get; set; }
 
         /// <summary>
         /// 规格
