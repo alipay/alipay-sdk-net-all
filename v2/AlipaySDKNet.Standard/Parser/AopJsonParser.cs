@@ -111,7 +111,11 @@ namespace Aop.Api.Parser
         private static Dictionary<string, AopAttribute> GetAopAttributes(Type type)
         {
             Dictionary<string, AopAttribute> tas = null;
-            bool inc = attrs.TryGetValue(type.FullName, out tas);
+            bool inc = false;
+            lock (attrs)
+            {
+                inc = attrs.TryGetValue(type.FullName, out tas);
+            }
 
             if (inc && tas != null) // 从缓存中获取类属性元数据
             {
@@ -143,11 +147,13 @@ namespace Aop.Api.Parser
                     {
                         ta.ItemName = xaias[0].ElementName;
                     }
+
                     XmlArrayAttribute[] xaas = pi.GetCustomAttributes(typeof(XmlArrayAttribute), true) as XmlArrayAttribute[];
                     if (xaas != null && xaas.Length > 0)
                     {
                         ta.ListName = xaas[0].ElementName;
                     }
+
                     if (ta.ListName == null)
                     {
                         continue;
@@ -168,7 +174,10 @@ namespace Aop.Api.Parser
                 tas.Add(pi.Name + ta.ItemType + ta.ListType, ta);
             }
 
-            attrs[type.FullName] = tas;
+            lock (attrs)
+            {
+                attrs[type.FullName] = tas;
+            }
             return tas;
         }
 

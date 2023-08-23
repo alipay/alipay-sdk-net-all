@@ -49,7 +49,7 @@ namespace Aop.Api.Domain
         public string ItemDetailsPageModel { get; set; }
 
         /// <summary>
-        /// 商品模版类型： 1. 团购套餐 2. 代金券
+        /// 商品模版类型：1. 团购 2. 代金
         /// </summary>
         [XmlElement("item_type")]
         public string ItemType { get; set; }

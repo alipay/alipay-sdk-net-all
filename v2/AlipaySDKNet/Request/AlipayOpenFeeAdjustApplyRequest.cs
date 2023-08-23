@@ -26,6 +26,11 @@ namespace Aop.Api.Request
         public FileItem Attachment { get; set; }
 
         /// <summary>
+        /// 证件有效期，格式：yyyy-MM-dd，长期有效传入：9999-12-31
+        /// </summary>
+        public Nullable<DateTime> CertDateLimitation { get; set; }
+
+        /// <summary>
         /// 对应证件类型（certType）的证件号，如营业执照为营业执照号
         /// </summary>
         public string CertNo { get; set; }
@@ -162,6 +167,7 @@ namespace Aop.Api.Request
             AopDictionary parameters = new AopDictionary();
             parameters.Add("account", this.Account);
             parameters.Add("application_fee", this.ApplicationFee);
+            parameters.Add("cert_date_limitation", this.CertDateLimitation);
             parameters.Add("cert_no", this.CertNo);
             parameters.Add("cert_type", this.CertType);
             parameters.Add("city_code", this.CityCode);

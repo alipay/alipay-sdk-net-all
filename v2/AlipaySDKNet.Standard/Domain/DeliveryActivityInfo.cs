@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string BankName { get; set; }
 
         /// <summary>
-        /// USER_VOUCHER   或者DISCOUNT
+        /// USER_VOUCHER
         /// </summary>
         [XmlElement("delivery_prefer_type")]
         public string DeliveryPreferType { get; set; }

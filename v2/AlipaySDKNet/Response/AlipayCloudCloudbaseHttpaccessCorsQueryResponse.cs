@@ -14,8 +14,8 @@ namespace Aop.Api.Response
         /// 跨域安全域名列表
         /// </summary>
         [XmlArray("cors")]
-        [XmlArrayItem("faas_cors")]
-        public List<FaasCors> Cors { get; set; }
+        [XmlArrayItem("cors_domain")]
+        public List<CorsDomain> Cors { get; set; }
 
         /// <summary>
         /// 页码

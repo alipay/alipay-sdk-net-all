@@ -22,17 +22,20 @@ namespace Aop.Api.Parser
             XmlSerializer serializer = null;
             string rootTagName = GetRootElement(body);
 
-            bool inc = parsers.TryGetValue(rootTagName, out serializer);
-            if (!inc || serializer == null)
+            lock (parsers)
             {
-                XmlAttributes rootAttrs = new XmlAttributes();
-                rootAttrs.XmlRoot = new XmlRootAttribute(rootTagName);
+                bool inc = parsers.TryGetValue(rootTagName, out serializer);
+                if (!inc || serializer == null)
+                {
+                    XmlAttributes rootAttrs = new XmlAttributes();
+                    rootAttrs.XmlRoot = new XmlRootAttribute(rootTagName);
 
-                XmlAttributeOverrides attrOvrs = new XmlAttributeOverrides();
-                attrOvrs.Add(typeof(T), rootAttrs);
+                    XmlAttributeOverrides attrOvrs = new XmlAttributeOverrides();
+                    attrOvrs.Add(typeof(T), rootAttrs);
 
-                serializer = new XmlSerializer(typeof(T), attrOvrs);
-                parsers[rootTagName] = serializer;
+                    serializer = new XmlSerializer(typeof(T), attrOvrs);
+                    parsers[rootTagName] = serializer;
+                }
             }
 
             object obj = null;

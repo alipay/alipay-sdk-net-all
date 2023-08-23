@@ -14,8 +14,8 @@ namespace Aop.Api.Response
         /// 域信息列表
         /// </summary>
         [XmlArray("cloud_domains")]
-        [XmlArrayItem("faas_cloud_domains")]
-        public List<FaasCloudDomains> CloudDomains { get; set; }
+        [XmlArrayItem("cloud_domain")]
+        public List<CloudDomain> CloudDomains { get; set; }
 
         /// <summary>
         /// 页码

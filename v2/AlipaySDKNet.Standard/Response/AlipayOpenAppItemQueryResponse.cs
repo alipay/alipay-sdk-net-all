@@ -128,6 +128,13 @@ namespace Aop.Api.Response
         public long SalePrice { get; set; }
 
         /// <summary>
+        /// 商品在对应场景屏蔽，展示对应的具体问题
+        /// </summary>
+        [XmlArray("scene_risk_info")]
+        [XmlArrayItem("item_scene_risk_info")]
+        public List<ItemSceneRiskInfo> SceneRiskInfo { get; set; }
+
+        /// <summary>
         /// 商品sku信息
         /// </summary>
         [XmlArray("skus")]

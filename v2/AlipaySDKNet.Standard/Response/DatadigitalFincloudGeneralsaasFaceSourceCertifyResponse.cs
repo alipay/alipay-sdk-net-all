@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class DatadigitalFincloudGeneralsaasFaceSourceCertifyResponse : AopResponse
     {
         /// <summary>
-        /// 人脸认证单据号，调用后续OpenAPI（datadigital.fincloud.generalsaas.face.source.query ）时传入，用来查询结果
+        /// 人脸认证单据号，用于认证问题排查
         /// </summary>
         [XmlElement("certify_no")]
         public string CertifyNo { get; set; }

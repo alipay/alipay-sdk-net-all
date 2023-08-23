@@ -26,11 +26,5 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("task_id")]
         public string TaskId { get; set; }
-
-        /// <summary>
-        /// 任务类型
-        /// </summary>
-        [XmlElement("task_type")]
-        public string TaskType { get; set; }
     }
 }

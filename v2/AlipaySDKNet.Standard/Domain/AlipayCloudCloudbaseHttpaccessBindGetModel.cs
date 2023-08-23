@@ -10,12 +10,6 @@ namespace Aop.Api.Domain
     public class AlipayCloudCloudbaseHttpaccessBindGetModel : AopObject
     {
         /// <summary>
-        /// 路由绑定ID
-        /// </summary>
-        [XmlElement("bind_id")]
-        public string BindId { get; set; }
-
-        /// <summary>
         /// 小程序id
         /// </summary>
         [XmlElement("biz_app_id")]
@@ -26,5 +20,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("biz_env_id")]
         public string BizEnvId { get; set; }
+
+        /// <summary>
+        /// 域名
+        /// </summary>
+        [XmlElement("domain_name")]
+        public string DomainName { get; set; }
+
+        /// <summary>
+        /// 触发路径
+        /// </summary>
+        [XmlElement("path")]
+        public string Path { get; set; }
     }
 }

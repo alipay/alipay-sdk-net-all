@@ -20,5 +20,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("account_name")]
         public string AccountName { get; set; }
+
+        /// <summary>
+        /// 实体名称
+        /// </summary>
+        [XmlElement("entity_name")]
+        public string EntityName { get; set; }
+
+        /// <summary>
+        /// 实体类型
+        /// </summary>
+        [XmlElement("entity_type")]
+        public string EntityType { get; set; }
     }
 }

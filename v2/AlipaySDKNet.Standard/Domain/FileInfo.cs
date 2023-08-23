@@ -10,7 +10,13 @@ namespace Aop.Api.Domain
     public class FileInfo : AopObject
     {
         /// <summary>
-        /// 文件类型，唯一值，枚举。  VIDEO=视频; VOICE=语音; PICTURE/JPG/JPEG/PNG=图片; TEXT=文本; DOC, DOCX, XLS, XLSX, PPT, PPTX=MS Office
+        /// 用于多类目审核，支持多个传入，最长1024字符
+        /// </summary>
+        [XmlElement("biz_label")]
+        public string BizLabel { get; set; }
+
+        /// <summary>
+        /// 文件类型，唯一值。 枚举值只做参考，实际情况做具体沟通 VIDEO=视频; VOICE=语音; PICTURE/JPG/JPEG/PNG=图片; TEXT=文本; DOC, DOCX, XLS, XLSX, PPT, PPTX=MS Office
         /// </summary>
         [XmlElement("data_type")]
         public string DataType { get; set; }

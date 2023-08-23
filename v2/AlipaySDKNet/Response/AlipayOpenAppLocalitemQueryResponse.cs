@@ -98,6 +98,13 @@ namespace Aop.Api.Response
         public List<ItemRiskInfo> RiskInfo { get; set; }
 
         /// <summary>
+        /// 商品在对应场景屏蔽，展示对应的具体问题
+        /// </summary>
+        [XmlArray("scene_risk_info")]
+        [XmlArrayItem("item_scene_risk_info")]
+        public List<ItemSceneRiskInfo> SceneRiskInfo { get; set; }
+
+        /// <summary>
         /// sku数组
         /// </summary>
         [XmlArray("skus")]

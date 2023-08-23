@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ActivityCode { get; set; }
 
         /// <summary>
+        /// 互斥传:EXCLUSION，叠加传:SUPERPOSE
+        /// </summary>
+        [XmlElement("activity_type")]
+        public string ActivityType { get; set; }
+
+        /// <summary>
         /// 支付宝出资部分的金额 单位分
         /// </summary>
         [XmlElement("alipay_amount")]

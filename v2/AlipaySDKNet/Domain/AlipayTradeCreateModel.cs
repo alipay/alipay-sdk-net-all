@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayTradeCreateModel : AopObject
     {
         /// <summary>
+        /// 签约参数。如果希望使用支付并签约，需要在这里传入签约信息。
+        /// </summary>
+        [XmlElement("agreement_sign_params")]
+        public SignParams AgreementSignParams { get; set; }
+
+        /// <summary>
         /// 支付宝店铺编号。 指商户创建门店后支付宝生成的门店ID。
         /// </summary>
         [XmlElement("alipay_store_id")]

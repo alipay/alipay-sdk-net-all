@@ -51,7 +51,7 @@ namespace Aop.Api.Request
         public Nullable<bool> Reserved { get; set; }
 
         /// <summary>
-        /// ON：开启安全拦截。OFF：关闭安全拦截。建议开启，能够有效防御攻击，默认取值为ON。
+        /// ON：开启安全拦截。OFF：关闭安全拦截。默认取值为ON。
         /// </summary>
         public string SecurityStrategy { get; set; }
 

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string RiskType { get; set; }
 
         /// <summary>
-        /// 风险咨询结果，匹配风险咨询类型
+        /// 风险咨询结果，匹配风险咨询类型，rank等级数字由小到大风险依次增大。最高风险等级为rank5
         /// </summary>
         [XmlElement("risk_value")]
         public string RiskValue { get; set; }

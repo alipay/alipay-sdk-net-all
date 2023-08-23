@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DeviceLevel { get; set; }
 
         /// <summary>
+        /// json扩展信息
+        /// </summary>
+        [XmlElement("ext_param")]
+        public string ExtParam { get; set; }
+
+        /// <summary>
         /// 场景节点，联系数字人平台分配
         /// </summary>
         [XmlElement("node_code")]

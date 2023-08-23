@@ -14,8 +14,8 @@ namespace Aop.Api.Response
         /// 路由绑定列表
         /// </summary>
         [XmlArray("domain_binds")]
-        [XmlArrayItem("faas_domain_binds")]
-        public List<FaasDomainBinds> DomainBinds { get; set; }
+        [XmlArrayItem("domain_bind")]
+        public List<DomainBind> DomainBinds { get; set; }
 
         /// <summary>
         /// 页码

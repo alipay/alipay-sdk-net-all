@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Industry { get; set; }
 
         /// <summary>
-        /// 开票商户pid，入驻支付即开票场景的时候，该字段必传
+        /// 开票商户pid，入驻支付即开票场景的时候，非登录账号入驻模式，则该字段必传
         /// </summary>
         [XmlElement("pid")]
         public string Pid { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string SubMName { get; set; }
 
         /// <summary>
-        /// 商户门店简称，只能由大写字母、下划线、数字组成，且必须以大写字母开头。
+        /// 商户门店简称
         /// </summary>
         [XmlElement("sub_m_short_name")]
         public string SubMShortName { get; set; }

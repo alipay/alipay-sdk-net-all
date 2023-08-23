@@ -11,37 +11,37 @@ namespace Aop.Api.Domain
     public class AlipayOpenOperationOpenbizmockOpenidtestingQueryModel : AopObject
     {
         /// <summary>
-        /// 详细地址
+        /// 详细地址 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("appid_one")]
         public string AppidOne { get; set; }
 
         /// <summary>
-        /// appid_out_one
+        /// appid_out_one 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("appid_out_one")]
         public string AppidOutOne { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("appid_out_three")]
         public string AppidOutThree { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("appid_out_two")]
         public string AppidOutTwo { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("appid_three")]
         public string AppidThree { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("appid_two")]
         public string AppidTwo { get; set; }
@@ -77,13 +77,13 @@ namespace Aop.Api.Domain
         public string Lalalala { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("one_open_id")]
         public string OneOpenId { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("one_uid")]
         public string OneUid { get; set; }
@@ -119,38 +119,38 @@ namespace Aop.Api.Domain
         public string TestWrong { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("three_open_id")]
         public string ThreeOpenId { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("three_uid")]
         public string ThreeUid { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("two_open_id")]
         public string TwoOpenId { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlElement("two_uid")]
         public string TwoUid { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此原来如此)
         /// </summary>
         [XmlArray("uid_list")]
         [XmlArrayItem("string")]
         public List<string> UidList { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(原来如此原来如此原来如此)
         /// </summary>
         [XmlArray("uid_list_open_id_list")]
         [XmlArrayItem("string")]

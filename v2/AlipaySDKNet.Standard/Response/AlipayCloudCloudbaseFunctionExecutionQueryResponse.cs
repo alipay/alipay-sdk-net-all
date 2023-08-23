@@ -28,5 +28,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
+
+        /// <summary>
+        /// 总数
+        /// </summary>
+        [XmlElement("total")]
+        public long Total { get; set; }
     }
 }

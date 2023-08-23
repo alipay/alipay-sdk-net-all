@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string MiniAppId { get; set; }
 
         /// <summary>
+        /// 订单状态，传入此参数可查询指定状态的订单
+        /// </summary>
+        [XmlElement("order_status")]
+        public string OrderStatus { get; set; }
+
+        /// <summary>
         /// 分页页码，从1开始
         /// </summary>
         [XmlElement("page_num")]
@@ -40,6 +46,12 @@ namespace Aop.Api.Domain
         [XmlArray("service_type_list")]
         [XmlArrayItem("string")]
         public List<string> ServiceTypeList { get; set; }
+
+        /// <summary>
+        /// 结算状态，传入此参数可查询指定结算状态的订单
+        /// </summary>
+        [XmlElement("settle_status")]
+        public string SettleStatus { get; set; }
 
         /// <summary>
         /// 小程序订单结算日期，格式为"yyyy-MM-dd"，如"2023-03-22"

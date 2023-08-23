@@ -1,0 +1,30 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayCloudCloudbaseResourcepackageOpenConsultModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayCloudCloudbaseResourcepackageOpenConsultModel : AopObject
+    {
+        /// <summary>
+        /// 小程序id
+        /// </summary>
+        [XmlElement("biz_app_id")]
+        public string BizAppId { get; set; }
+
+        /// <summary>
+        /// 购买时长(月)
+        /// </summary>
+        [XmlElement("purchase_month")]
+        public long PurchaseMonth { get; set; }
+
+        /// <summary>
+        /// 资源包规格编码  - public_cloudd_cd_cn_free_bag  - public_cloudd_cd_cn_basic_bag  - public_cloudd_cd_cn_standard_bag  - public_cloudd_cd_cn_pro_bag  - public_cloudd_cd_cn_enterprise_bag  - public_cloudd_cd_cn_flagship_bag
+        /// </summary>
+        [XmlElement("spec_code")]
+        public string SpecCode { get; set; }
+    }
+}

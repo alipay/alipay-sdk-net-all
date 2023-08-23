@@ -1,7 +1,5 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
-using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -11,28 +9,27 @@ namespace Aop.Api.Response
     public class AlipayCloudCloudbaseDatabaseTaskGetResponse : AopResponse
     {
         /// <summary>
-        /// 任务执行历史列表
+        /// 任务执行进度
         /// </summary>
-        [XmlArray("histories")]
-        [XmlArrayItem("faas_database_historie")]
-        public List<FaasDatabaseHistorie> Histories { get; set; }
+        [XmlElement("process")]
+        public string Process { get; set; }
 
         /// <summary>
-        /// 页码
+        /// 任务开始时间
         /// </summary>
-        [XmlElement("page_index")]
-        public long PageIndex { get; set; }
+        [XmlElement("start_time")]
+        public string StartTime { get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 任务执行状态  - SUBMIT  - SUCCESS  - FAILED  - CANCEL
         /// </summary>
-        [XmlElement("page_size")]
-        public long PageSize { get; set; }
+        [XmlElement("status")]
+        public string Status { get; set; }
 
         /// <summary>
-        /// 总数
+        /// 任务类型  - IMPORT  - EXPORT
         /// </summary>
-        [XmlElement("total")]
-        public long Total { get; set; }
+        [XmlElement("task_type")]
+        public string TaskType { get; set; }
     }
 }

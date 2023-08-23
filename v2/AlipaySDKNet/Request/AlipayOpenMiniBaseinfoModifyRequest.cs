@@ -16,7 +16,7 @@ namespace Aop.Api.Request
         public string AppCategoryIds { get; set; }
 
         /// <summary>
-        /// 小程序描述，长度限制 20~400 个字符。 如果前期已经设置过该信息，本次可不填，平台将会为你默认上传该信息。如果前期没有设置过该信息，则本次为必填。可通过https://opendocs.alipay.com/mini/03l21r查询当前小程序信息 
+        /// 小程序描述，长度限制 20~400 个字符。 如果前期已经设置过该信息，本次可不填，平台将会为你默认上传该信息。如果前期没有设置过该信息，则本次为必填。可通过https://opendocs.alipay.com/mini/03l21r查询当前小程序信息
         /// </summary>
         public string AppDesc { get; set; }
 

@@ -96,7 +96,7 @@ namespace Aop.Api.Domain
         public string VolumeId { get; set; }
 
         /// <summary>
-        /// 章节字数，有则必填
+        /// 章节字数
         /// </summary>
         [XmlElement("word_number")]
         public long WordNumber { get; set; }

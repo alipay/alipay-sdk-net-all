@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class PrePayOperationInfoViewData : AopObject
     {
         /// <summary>
+        /// 渠道或者优惠的图像表达url
+        /// </summary>
+        [XmlElement("logo")]
+        public string Logo { get; set; }
+
+        /// <summary>
         /// 运营主体
         /// </summary>
         [XmlElement("operation_desc")]

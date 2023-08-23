@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ActivityName { get; set; }
 
         /// <summary>
-        /// 活动类型
+        /// 活动类型，枚举：GMV\促活\促绑
         /// </summary>
         [XmlElement("activity_type")]
         public string ActivityType { get; set; }
@@ -58,13 +58,13 @@ namespace Aop.Api.Domain
         public string PayTime { get; set; }
 
         /// <summary>
-        /// 实际交易金额，提现金额，单位：元
+        /// 实际交易金额，提现金额
         /// </summary>
         [XmlElement("real_pay_amt")]
         public string RealPayAmt { get; set; }
 
         /// <summary>
-        /// 订单金额，单位：分
+        /// 订单金额
         /// </summary>
         [XmlElement("trade_total_amt")]
         public string TradeTotalAmt { get; set; }

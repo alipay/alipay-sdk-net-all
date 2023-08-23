@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string AttackFlag { get; set; }
 
         /// <summary>
-        /// 人脸检测单据状态。PROCESSING：初始化；SUCCESS：检测成功；FAIL：检测失败
+        /// 人脸认证状态。PROCESSING：初始化；SUCCESS：认证通过；FAIL：认证不通过。
         /// </summary>
         [XmlElement("certify_state")]
         public string CertifyState { get; set; }
