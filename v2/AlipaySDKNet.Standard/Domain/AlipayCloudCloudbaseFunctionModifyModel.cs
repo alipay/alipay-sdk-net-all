@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// 运行环境  - nodejs12  - nodejs18  - python39  - php74  - java17
+        /// 运行环境  - nodejs16  - nodejs18  - python39  - php74  - java17
         /// </summary>
         [XmlElement("image_name")]
         public string ImageName { get; set; }

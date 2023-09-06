@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<string> CycleType { get; set; }
 
         /// <summary>
-        /// 是否支持用户连续购买。true代表支持，false代表不支持。
+        /// 是否支持用户连续购买
         /// </summary>
         [XmlElement("support_cycle_sell")]
         public bool SupportCycleSell { get; set; }

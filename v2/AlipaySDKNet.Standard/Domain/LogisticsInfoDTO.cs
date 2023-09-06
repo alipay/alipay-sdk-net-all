@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class LogisticsInfoDTO : AopObject
     {
         /// <summary>
-        /// 配送时间
+        /// 配送时间,格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("delivery_time")]
         public string DeliveryTime { get; set; }

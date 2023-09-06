@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string CatName { get; set; }
 
         /// <summary>
+        /// 仅叶子节点有类目状态
+        /// </summary>
+        [XmlElement("cat_status")]
+        public string CatStatus { get; set; }
+
+        /// <summary>
         /// 父类目编号
         /// </summary>
         [XmlElement("f_cat_id")]

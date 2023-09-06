@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Cell { get; set; }
 
         /// <summary>
-        /// 性别（男：MALE；女：FEMALE）
+        /// 性别
         /// </summary>
         [XmlElement("gende")]
         public string Gende { get; set; }

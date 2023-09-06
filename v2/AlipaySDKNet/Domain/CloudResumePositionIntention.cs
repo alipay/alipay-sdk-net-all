@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class CloudResumePositionIntention : AopObject
     {
         /// <summary>
-        /// 意向城市
+        /// 意向城市Code
         /// </summary>
         [XmlElement("intention_city")]
         public string IntentionCity { get; set; }
 
         /// <summary>
-        /// 职业id
+        /// 职业id 当前字段已废弃(这个字段在目前版本不对外暴露)
         /// </summary>
         [XmlElement("job_id")]
         public string JobId { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string JobName { get; set; }
 
         /// <summary>
-        /// 行业id
+        /// 行业id 当前字段已废弃(这个字段在目前版本不对外暴露)
         /// </summary>
         [XmlElement("profession_id")]
         public string ProfessionId { get; set; }

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string GoodsCategory { get; set; }
 
         /// <summary>
-        /// 商品的编号，该参数传入支付券上绑定商品goods_id, 倘若无支付券需要消费，该字段传入商品最小粒度的商品ID（如：若商品有sku粒度，则传商户sku粒度的ID）
+        /// 商户侧商品的编号，应传入商品最小粒度的商品ID（例如商品有sku粒度，则传商户sku粒度的ID）。如果需要关联使用支付券，需要和支付券上绑定商品goods_id相同
         /// </summary>
         [XmlElement("goods_id")]
         public string GoodsId { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 商品未上报服务库时，需传入 上传商品文件 获取的 material_id。如果该商品已经上报服务库，可不传
+        /// 商品未上报商品库时，需传入 上传商品文件接口alipay.merchant.item.file.upload  获取的 material_id。如果该商品已经上报商品库，可不传
         /// </summary>
         [XmlElement("image_material_id")]
         public string ImageMaterialId { get; set; }
@@ -52,13 +52,13 @@ namespace Aop.Api.Domain
         public string ItemCnt { get; set; }
 
         /// <summary>
-        /// 提报商品库的商品，若有外部商品sku_id则必传
+        /// 商户商品ID
         /// </summary>
         [XmlElement("out_item_id")]
         public string OutItemId { get; set; }
 
         /// <summary>
-        /// 提报商品库的商品，sku维度的商品该字段必传
+        /// 商户商品sku_id，提报商品库的商品，该字段必传
         /// </summary>
         [XmlElement("out_sku_id")]
         public string OutSkuId { get; set; }
@@ -76,13 +76,13 @@ namespace Aop.Api.Domain
         public RentInfoDTO RentInfo { get; set; }
 
         /// <summary>
-        /// 商品单价，单位：元
+        /// 商品单价，单位：元,精确到小数点后两位
         /// </summary>
         [XmlElement("sale_price")]
         public string SalePrice { get; set; }
 
         /// <summary>
-        /// 商品真实单价，单位：元
+        /// 商品真实单价，单位：元,精确到小数点后两位
         /// </summary>
         [XmlElement("sale_real_price")]
         public string SaleRealPrice { get; set; }

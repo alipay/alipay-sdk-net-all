@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayMarketingActivityDeliveryStopModel : AopObject
     {
         /// <summary>
-        /// 服务商代运营商户信息。 限制: 服务商代运营模式必选
+        /// "服务商代运营商户信息。 限制: 服务商代运营模式必选"
         /// </summary>
         [XmlElement("belong_merchant_info")]
         public DeliveryAgencyMerchantInfo BelongMerchantInfo { get; set; }
 
         /// <summary>
-        /// [已废弃] 待停止的投放配置列表。 最大数量限制20个。
+        /// "[已废弃] 待停止的投放配置列表。 最大数量限制20个。"
         /// </summary>
         [XmlArray("delivery_config_list")]
         [XmlArrayItem("delivery_config")]

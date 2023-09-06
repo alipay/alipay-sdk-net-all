@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string TargetCardNo { get; set; }
 
         /// <summary>
-        /// 卡号ID类型。支持： BIZ_CARD：支付宝业务卡号（商户会员卡场景使用）。
+        /// 卡号ID类型
         /// </summary>
         [XmlElement("target_card_no_type")]
         public string TargetCardNoType { get; set; }

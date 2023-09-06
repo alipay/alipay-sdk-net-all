@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DesignatedDrivingDynamicPrice : AopObject
     {
         /// <summary>
-        /// 调价金额
+        /// 调价金额，元
         /// </summary>
         [XmlElement("dynamic_fee")]
         public string DynamicFee { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string DynamicTitle { get; set; }
 
         /// <summary>
-        /// 加价的最大值，部分isv给的数据是加价最大值，部分isv给的是加价后的总金额
+        /// 加价的最大值，部分isv给的数据是加价最大值，部分isv给的是加价后的总金额，单位元
         /// </summary>
         [XmlElement("fee_max")]
         public string FeeMax { get; set; }

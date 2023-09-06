@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string BizAppId { get; set; }
 
         /// <summary>
-        /// 环境id
+        /// 环境id 当前字段已废弃(改用env_id替代)
         /// </summary>
         [XmlElement("biz_env_id")]
         public string BizEnvId { get; set; }
@@ -50,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("discount_amount")]
         public string DiscountAmount { get; set; }
+
+        /// <summary>
+        /// 环境ID
+        /// </summary>
+        [XmlElement("env_id")]
+        public string EnvId { get; set; }
 
         /// <summary>
         /// 环境名称

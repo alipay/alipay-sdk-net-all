@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class MoreInfoDTO : AopObject
     {
         /// <summary>
-        /// 选择opennative的时候必须填写descs的内容
+        /// 描述，当operate_type为openNative必填
         /// </summary>
         [XmlArray("descs")]
         [XmlArrayItem("string")]

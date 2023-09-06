@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCardTemplateBatchqueryModel : AopObject
     {
         /// <summary>
-        ///  查询起始页码，第一页为 1。
+        /// 查询起始页码，第一页为 1。
         /// </summary>
         [XmlElement("page_no")]
         public long PageNo { get; set; }

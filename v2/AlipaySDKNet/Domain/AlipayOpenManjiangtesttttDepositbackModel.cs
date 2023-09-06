@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenManjiangtesttttDepositbackModel : AopObject
     {
         /// <summary>
-        /// 1
+        /// 5
         /// </summary>
         [XmlElement("sss")]
         public string Sss { get; set; }

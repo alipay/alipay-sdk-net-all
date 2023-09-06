@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
-        /// 商户id类型。
+        /// 商户支付宝id类型。
         /// </summary>
         [XmlElement("merchant_id_type")]
         public string MerchantIdType { get; set; }

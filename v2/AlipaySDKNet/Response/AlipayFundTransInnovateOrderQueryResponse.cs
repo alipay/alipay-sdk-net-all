@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string FailReason { get; set; }
 
         /// <summary>
+        /// 资金的单据号
+        /// </summary>
+        [XmlElement("fund_order_id")]
+        public string FundOrderId { get; set; }
+
+        /// <summary>
         /// 预计收费金额（元），转账到银行卡专用，数字格式，精确到小数点后2位，转账失败或转账受理失败不返回。
         /// </summary>
         [XmlElement("order_fee")]

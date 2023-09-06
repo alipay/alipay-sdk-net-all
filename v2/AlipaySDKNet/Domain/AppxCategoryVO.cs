@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string CatName { get; set; }
 
         /// <summary>
+        /// 仅叶子节点有类目状态
+        /// </summary>
+        [XmlElement("cat_status")]
+        public string CatStatus { get; set; }
+
+        /// <summary>
         /// 父类目编号
         /// </summary>
         [XmlElement("f_cat_id")]
@@ -42,7 +48,7 @@ namespace Aop.Api.Domain
         public List<string> ItemTypes { get; set; }
 
         /// <summary>
-        /// 开通状态。只有叶子结点有开通状态
+        /// 开通状态。只有叶子结点有开通状态 当前字段已废弃(请参考cat_status字段获取当前类目的资质状态以及邀约状态等)
         /// </summary>
         [XmlElement("qualification_status")]
         public string QualificationStatus { get; set; }

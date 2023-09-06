@@ -101,5 +101,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sign_return_url")]
         public string SignReturnUrl { get; set; }
+
+        /// <summary>
+        /// 签约链接是否需要携带员工身份信息(手机/邮箱)
+        /// </summary>
+        [XmlElement("sign_url_carry_info")]
+        public bool SignUrlCarryInfo { get; set; }
     }
 }

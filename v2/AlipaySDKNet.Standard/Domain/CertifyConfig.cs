@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CertifyBizCode { get; set; }
 
         /// <summary>
+        /// 组件编码,用于表示使用场景
+        /// </summary>
+        [XmlElement("component_out_id")]
+        public string ComponentOutId { get; set; }
+
+        /// <summary>
         /// 是否要地址，可选范围【0， 1】 0不需要，1需要，不填写或填错默认1
         /// </summary>
         [XmlElement("need_address")]
@@ -44,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("need_user_nation")]
         public string NeedUserNation { get; set; }
+
+        /// <summary>
+        /// 核验渠道， IOT核验-IOTMBS，会员中心验证-MEMBER
+        /// </summary>
+        [XmlElement("verify_channel")]
+        public string VerifyChannel { get; set; }
     }
 }

@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class PaymentVoucherRechargeInfo : AopObject
     {
         /// <summary>
-        /// 余额预充值详情 限制: 1、recharge_type为ALIPAY_BALANCE时必传
+        /// "余额预充值详情 限制: 1、recharge_type为ALIPAY_BALANCE时必传"
         /// </summary>
         [XmlElement("alipay_balance_recharge_info")]
         public PaymentVoucherAlipayBalanceRechargeInfo AlipayBalanceRechargeInfo { get; set; }
 
         /// <summary>
-        /// 预充值方式。
+        /// 预充值方式
         /// </summary>
         [XmlElement("recharge_type")]
         public string RechargeType { get; set; }

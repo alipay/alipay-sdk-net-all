@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayMarketingActivityDeliverychannelQueryResponse : AopResponse
     {
         /// <summary>
-        /// 可投放的渠道信息列表。 用于表达当前可以投放的渠道列表信息
+        /// "可投放的渠道信息列表。 用于表达当前可以投放的渠道列表信息"
         /// </summary>
         [XmlArray("delivery_channel_info_list")]
         [XmlArrayItem("delivery_channel_info")]

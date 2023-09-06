@@ -35,7 +35,7 @@ namespace Aop.Api.Response
         public string DeliveryId { get; set; }
 
         /// <summary>
-        /// [已废弃] 投放信息列表
+        /// "[已废弃] 投放信息列表"
         /// </summary>
         [XmlArray("delivery_info_list")]
         [XmlArrayItem("promo_delivery_info")]

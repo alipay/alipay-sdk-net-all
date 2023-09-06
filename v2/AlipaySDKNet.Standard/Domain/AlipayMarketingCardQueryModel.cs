@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string TargetCardNo { get; set; }
 
         /// <summary>
-        /// 卡号ID类型（会员卡查询，只能提供支付宝端的卡号）
+        /// 卡号ID类型
         /// </summary>
         [XmlElement("target_card_no_type")]
         public string TargetCardNoType { get; set; }

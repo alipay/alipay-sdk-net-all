@@ -16,25 +16,25 @@ namespace Aop.Api.Domain
         public MiniRefundCertificateDTO CertificateInfo { get; set; }
 
         /// <summary>
-        /// 与alipay.open.mini.order.create接口所传的商品goods_id保持一致
+        /// 商户侧商品的编号，应与alipay.open.mini.order.create接口所传的商品goods_id保持一致
         /// </summary>
         [XmlElement("goods_id")]
         public string GoodsId { get; set; }
 
         /// <summary>
-        /// 提报商品库的商品ID
+        /// 商户商品ID
         /// </summary>
         [XmlElement("out_item_id")]
         public string OutItemId { get; set; }
 
         /// <summary>
-        /// 提报商品库的商品，sku维度的商品该字段必传
+        /// 商户商品sku_id,提报商品库的商品，sku维度的商品该字段必传
         /// </summary>
         [XmlElement("out_sku_id")]
         public string OutSkuId { get; set; }
 
         /// <summary>
-        /// 商品退款金额
+        /// 商品退款金额，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }

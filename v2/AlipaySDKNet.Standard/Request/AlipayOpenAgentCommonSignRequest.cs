@@ -86,6 +86,26 @@ namespace Aop.Api.Request
         public string Rate { get; set; }
 
         /// <summary>
+        /// 门店所在城市
+        /// </summary>
+        public string ShopCityCode { get; set; }
+
+        /// <summary>
+        /// 门店详细地址
+        /// </summary>
+        public string ShopDetailAddress { get; set; }
+
+        /// <summary>
+        /// 门店所在区/县
+        /// </summary>
+        public string ShopDistrictCode { get; set; }
+
+        /// <summary>
+        /// 门店所在省份
+        /// </summary>
+        public string ShopProvinceCode { get; set; }
+
+        /// <summary>
         /// 店铺内景图片，最小5KB，最大5M，图片格式必须为：png、bmp、gif、jpg、jpeg。
         /// </summary>
         public FileItem ShopScenePic { get; set; }
@@ -246,6 +266,10 @@ namespace Aop.Api.Request
             parameters.Add("mini_app_id", this.MiniAppId);
             parameters.Add("product_code", this.ProductCode);
             parameters.Add("rate", this.Rate);
+            parameters.Add("shop_city_code", this.ShopCityCode);
+            parameters.Add("shop_detail_address", this.ShopDetailAddress);
+            parameters.Add("shop_district_code", this.ShopDistrictCode);
+            parameters.Add("shop_province_code", this.ShopProvinceCode);
             parameters.Add("special_license_type", this.SpecialLicenseType);
             parameters.Add("web_sites", this.WebSites);
             parameters.Add("web_status", this.WebStatus);

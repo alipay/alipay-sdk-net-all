@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -30,8 +31,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// returning goods info
         /// </summary>
-        [XmlElement("asset_reverse_goods_items")]
-        public AssetReverseGoodsItem AssetReverseGoodsItems { get; set; }
+        [XmlArray("asset_reverse_goods_items")]
+        [XmlArrayItem("asset_reverse_goods_item")]
+        public List<AssetReverseGoodsItem> AssetReverseGoodsItems { get; set; }
 
         /// <summary>
         /// 取消订单或退货唯一Id

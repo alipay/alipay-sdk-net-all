@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceRecycleSecurityQueryResponse : AopResponse
     {
         /// <summary>
-        /// 订单风险评估等级， LOW_RISK：风险较低 HIGH_RISK：风险较高
+        /// 订单风险评估等级， LOW_RISK：风险较低 MEDIUM_RISK：风险中等 HIGH_RISK：风险较高
         /// </summary>
         [XmlElement("risk_level")]
         public string RiskLevel { get; set; }

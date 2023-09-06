@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string Code { get; set; }
 
         /// <summary>
-        /// 若template_style_info.column_info_layout  的值为grid，此项为宫格项所属分组标题。可空。如果需要展示该项，还需支付宝内部进行特殊配置。
+        /// 若template_style_info.column_info_layout 的值为grid，此项为宫格项所属分组标题。可空。如果需要展示该项，还需支付宝内部进行特殊配置。
         /// </summary>
         [XmlElement("group_title")]
         public string GroupTitle { get; set; }
 
         /// <summary>
-        /// 若template_style_info.column_info_layout  的值为grid，此项为宫格项的展示icon。通过接口（alipay.offline.material.image.upload）上传图片。
+        /// 当template_style_info.column_info_layout 的值为grid时，此参数必填。此项为宫格项的展示icon。通过接口（alipay.offline.material.image.upload）上传图片。
         /// </summary>
         [XmlElement("icon_id")]
         public string IconId { get; set; }
@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string OperateType { get; set; }
 
         /// <summary>
-        /// 若template_style_info.column_info_layout  的值为grid，此项为宫格项标签。可空。
+        /// 只有当template_style_info.column_info_layout 的值为grid时，此参数有效。此项为宫格项标签，最多只会展示一个标签。
         /// </summary>
         [XmlElement("tag")]
         public string Tag { get; set; }
 
         /// <summary>
-        /// 栏目的标题
+        /// 栏目标题
         /// </summary>
         [XmlElement("title")]
         public string Title { get; set; }

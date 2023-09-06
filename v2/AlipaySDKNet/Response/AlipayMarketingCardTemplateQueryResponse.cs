@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayMarketingCardTemplateQueryResponse : AopResponse
     {
         /// <summary>
-        /// 业务卡号前缀，由商户指定  支付宝业务卡号生成规则：biz_no_prefix(商户指定)卡号前缀 + biz_no_suffix(实时生成）卡号后缀
+        /// 业务卡号前缀，由商户指定 支付宝业务卡号生成规则：biz_no_prefix(商户指定)卡号前缀 + biz_no_suffix(实时生成）卡号后缀
         /// </summary>
         [XmlElement("biz_no_prefix")]
         public string BizNoPrefix { get; set; }
@@ -23,7 +23,7 @@ namespace Aop.Api.Response
         public string BizNoSuffixLen { get; set; }
 
         /// <summary>
-        /// 卡行动点配置；  行动点，即用户可点击跳转的区块，类似按钮控件的交互；  单张卡最多4个行动点。
+        /// "卡行动点配置； 行动点，即用户可点击跳转的区块，类似按钮控件的交互； 单张卡最多4个行动点。"
         /// </summary>
         [XmlArray("card_action_list")]
         [XmlArrayItem("template_action_info_d_t_o")]
@@ -56,14 +56,14 @@ namespace Aop.Api.Response
         public List<TemplateColumnInfoDTO> ColumnInfoList { get; set; }
 
         /// <summary>
-        /// 字段规则列表，会员卡开卡过程中，会员卡信息的生成规则，  例如：卡有效期为开卡后两年内有效，则设置为：DATE_IN_FUTURE
+        /// "字段规则列表，会员卡开卡过程中，会员卡信息的生成规则， 例如：卡有效期为开卡后两年内有效，则设置为：DATE_IN_FUTURE"
         /// </summary>
         [XmlArray("field_rule_list")]
         [XmlArrayItem("template_field_rule_d_t_o")]
         public List<TemplateFieldRuleDTO> FieldRuleList { get; set; }
 
         /// <summary>
-        /// 商户动态码通知参数配置：  当write_off_type指定为商户动态码mdbarcode或mdqrcode时不为空；  在此字段配置用户打开会员卡时支付宝通知商户生成动态码（发码）的通知参数，如接收通知地址等。
+        /// "商户动态码通知参数配置： 当write_off_type指定为商户动态码mdbarcode或mdqrcode时不为空； 在此字段配置用户打开会员卡时支付宝通知商户生成动态码（发码）的通知参数，如接收通知地址等。"
         /// </summary>
         [XmlElement("mdcode_notify_conf")]
         public TemplateMdcodeNotifyConfDTO MdcodeNotifyConf { get; set; }
@@ -95,20 +95,20 @@ namespace Aop.Api.Response
         public List<string> ServiceLabelList { get; set; }
 
         /// <summary>
-        /// 门店ids
+        /// 支付宝门店id
         /// </summary>
         [XmlArray("shop_ids")]
         [XmlArrayItem("string")]
         public List<string> ShopIds { get; set; }
 
         /// <summary>
-        /// spi_app_id：若使用openspi模式开卡，该字段为创建模版时，设置的实现spi.alipay.user.opencard.get接口的app_id
+        /// spi应用id，若使用openspi模式开卡，该字段为创建模版时，设置的实现spi.alipay.user.opencard.get接口的app_id。
         /// </summary>
         [XmlElement("spi_app_id")]
         public string SpiAppId { get; set; }
 
         /// <summary>
-        /// 权益信息，  1、在卡包的卡详情页面会自动添加权益栏位，展现会员卡特权，  2、如果添加门店渠道，则可在门店页展现会员卡的权益
+        /// "权益信息， 1、在卡包的卡详情页面会自动添加权益栏位，展现会员卡特权， 2、如果添加门店渠道，则可在门店页展现会员卡的权益"
         /// </summary>
         [XmlArray("template_benefit_info")]
         [XmlArrayItem("template_benefit_info_d_t_o")]

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BackgroundId { get; set; }
 
         /// <summary>
-        /// banner图片地址。 通过接口（alipay.offline.material.image.upload）上传图片。
+        /// banner图片id。 通过接口（alipay.offline.material.image.upload）上传图片。
         /// </summary>
         [XmlElement("banner_img_id")]
         public string BannerImgId { get; set; }
@@ -41,19 +41,19 @@ namespace Aop.Api.Domain
         public string BrandName { get; set; }
 
         /// <summary>
-        /// 钱包端显示名称（字符串长度）
+        /// 钱包端显示名称
         /// </summary>
         [XmlElement("card_show_name")]
         public string CardShowName { get; set; }
 
         /// <summary>
-        /// 注意：此字段已废弃。  卡片颜色
+        /// 注意：此字段已废弃。
         /// </summary>
         [XmlElement("color")]
         public string Color { get; set; }
 
         /// <summary>
-        /// 栏位信息布局。目前只支持list（列表）或grid（宫格）形式。如果为空则默认为list。
+        /// 如果为空则默认为list。
         /// </summary>
         [XmlElement("column_info_layout")]
         public string ColumnInfoLayout { get; set; }
@@ -90,7 +90,7 @@ namespace Aop.Api.Domain
         public string Slogan { get; set; }
 
         /// <summary>
-        /// 标语图片， 通过接口（alipay.offline.material.image.upload）上传图片
+        /// 标语图片id， 通过接口（alipay.offline.material.image.upload）上传图片
         /// </summary>
         [XmlElement("slogan_img_id")]
         public string SloganImgId { get; set; }

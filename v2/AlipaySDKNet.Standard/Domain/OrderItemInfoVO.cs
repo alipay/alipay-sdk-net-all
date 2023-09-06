@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class OrderItemInfoVO : AopObject
     {
         /// <summary>
-        /// 商品个数
+        /// 商品数量
         /// </summary>
         [XmlElement("item_cnt")]
         public long ItemCnt { get; set; }
 
         /// <summary>
-        /// 商品itemId
+        /// 支付宝平台侧商品ID
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
@@ -36,25 +36,25 @@ namespace Aop.Api.Domain
         public List<OrderCertificateInfoVO> OrderCertificateInfos { get; set; }
 
         /// <summary>
-        /// 外部商品id
+        /// 商户商品ID
         /// </summary>
         [XmlElement("out_item_id")]
         public string OutItemId { get; set; }
 
         /// <summary>
-        /// 外部商品skuid
+        /// 商户商品sku_id
         /// </summary>
         [XmlElement("out_sku_id")]
         public string OutSkuId { get; set; }
 
         /// <summary>
-        /// 生成订单时商品的售卖价（单位：分），可以跟上传商品接口的价格不一致
+        /// 商品单价，单位：元,精确到小数点后两位，可以跟上传商品接口的价格不一致
         /// </summary>
         [XmlElement("sale_price")]
         public string SalePrice { get; set; }
 
         /// <summary>
-        /// 商品skuid
+        /// 支付宝侧商品skuid
         /// </summary>
         [XmlElement("sku_id")]
         public string SkuId { get; set; }

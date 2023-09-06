@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class PaidOuterCardExtraInfoDTO : AopObject
     {
         /// <summary>
-        /// 用户操作类型，枚举如下： OPEN 开通 UPGRADE 升级 DOWNGRADE 降级 RENEW 续费
+        /// 用户操作类型
         /// </summary>
         [XmlElement("action")]
         public string Action { get; set; }

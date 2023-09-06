@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
+        /// 父级目录过滤参数，传入此参数表示查询所传目录下的文件列表
+        /// </summary>
+        [XmlElement("parent_directory")]
+        public string ParentDirectory { get; set; }
+
+        /// <summary>
         /// 按前缀进行模糊搜索
         /// </summary>
         [XmlElement("prefix")]

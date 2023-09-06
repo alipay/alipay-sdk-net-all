@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -34,6 +35,24 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
+        /// 证件类型
+        /// </summary>
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
+
+        /// <summary>
+        /// 填写风险咨询对象所关联的账号的真实身份认证时间
+        /// </summary>
+        [XmlElement("certificate_date")]
+        public string CertificateDate { get; set; }
+
+        /// <summary>
+        /// 填入渠道信息，辅助判断该咨询的风险来源
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// 外部会员账号
         /// </summary>
         [XmlElement("customer_id")]
@@ -46,7 +65,7 @@ namespace Aop.Api.Domain
         public string EmailAddress { get; set; }
 
         /// <summary>
-        /// app所在环境信息
+        /// app所在环境信息 当前字段已废弃(能力升级之后环境字段不再需要)
         /// </summary>
         [XmlElement("env_id")]
         public string EnvId { get; set; }
@@ -64,7 +83,7 @@ namespace Aop.Api.Domain
         public string Imsi { get; set; }
 
         /// <summary>
-        /// 基础行业信息
+        /// 如果business_code无法涵盖您的行业，在此填写中文描述 当前字段已废弃(能力升级之后该字段不再需要)
         /// </summary>
         [XmlElement("industry")]
         public string Industry { get; set; }
@@ -94,6 +113,18 @@ namespace Aop.Api.Domain
         public string Lbs { get; set; }
 
         /// <summary>
+        /// 登陆账号的身份证号码
+        /// </summary>
+        [XmlElement("login_cert")]
+        public string LoginCert { get; set; }
+
+        /// <summary>
+        /// 填写风险咨询对象关联账号的登录手机号
+        /// </summary>
+        [XmlElement("login_phone")]
+        public string LoginPhone { get; set; }
+
+        /// <summary>
         /// mac地址或设备唯一标识，如无法提供，可填写为空值（null）
         /// </summary>
         [XmlElement("mac_address")]
@@ -118,7 +149,7 @@ namespace Aop.Api.Domain
         public string MerPid { get; set; }
 
         /// <summary>
-        /// 用于输入用户注册支付宝的手机号码。如参数无法提供，请填写“null”
+        /// 用于直接输入风险咨询对象的手机号码。如参数无法提供，请填写“null”
         /// </summary>
         [XmlElement("mobile_no")]
         public string MobileNo { get; set; }
@@ -130,13 +161,20 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 订单商品数量（json格式描述）
+        /// 订单所有商品信息（json格式描述） 当前字段已废弃(字段类型更新，新字段为： order_items_info_list)
         /// </summary>
         [XmlElement("order_items_info")]
         public RiskImagePlusQueryOrderInfo OrderItemsInfo { get; set; }
 
         /// <summary>
-        /// 支付宝内部交易号
+        /// 订单所有商品信息（json格式描述）
+        /// </summary>
+        [XmlArray("order_items_info_list")]
+        [XmlArrayItem("risk_image_plus_query_order_info")]
+        public List<RiskImagePlusQueryOrderInfo> OrderItemsInfoList { get; set; }
+
+        /// <summary>
+        /// 填入所咨询的唯一支付宝交易号
         /// </summary>
         [XmlElement("order_no")]
         public string OrderNo { get; set; }
@@ -146,6 +184,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }
+
+        /// <summary>
+        /// 填写风险咨询对象所关联账号的注册身份证信息
+        /// </summary>
+        [XmlElement("registration_cert")]
+        public string RegistrationCert { get; set; }
+
+        /// <summary>
+        /// 填写风险咨询对象所关联的账号的注册时间
+        /// </summary>
+        [XmlElement("registration_date")]
+        public string RegistrationDate { get; set; }
+
+        /// <summary>
+        /// 填写咨询对象所关联的注册手机号
+        /// </summary>
+        [XmlElement("registration_phone")]
+        public string RegistrationPhone { get; set; }
 
         /// <summary>
         /// 用于代表商户风险类型，请按示例值填写
@@ -160,7 +216,7 @@ namespace Aop.Api.Domain
         public string Role { get; set; }
 
         /// <summary>
-        /// 用户购买或使用服务时产生的具体金额。如参数无法提供，请填写“null”，人民币，单位：元
+        /// 用户购买或使用服务时产生的具体金额总数。如参数无法提供，请填写“null”，人民币，单位：元
         /// </summary>
         [XmlElement("sales_amount")]
         public string SalesAmount { get; set; }

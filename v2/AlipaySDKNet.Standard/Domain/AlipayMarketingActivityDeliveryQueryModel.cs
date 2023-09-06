@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayMarketingActivityDeliveryQueryModel : AopObject
     {
         /// <summary>
-        /// 服务商代商户创建投放必选。 bussinessType设置为ISV_FOR_MERCHANT。
+        /// "服务商代商户创建投放必选。 bussinessType设置为ISV_FOR_MERCHANT。"
         /// </summary>
         [XmlElement("belong_merchant_info")]
         public DeliveryAgencyMerchantInfo BelongMerchantInfo { get; set; }
 
         /// <summary>
-        /// [已废弃] 待查询的投放配置列表。 最大数量限制20个。
+        /// "[已废弃] 待查询的投放配置列表。 最大数量限制20个。"
         /// </summary>
         [XmlArray("delivery_config_list")]
         [XmlArrayItem("delivery_config")]

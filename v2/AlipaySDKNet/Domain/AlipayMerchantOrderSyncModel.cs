@@ -75,7 +75,7 @@ namespace Aop.Api.Domain
         public List<OrderJourneyInfo> JourneyOrderList { get; set; }
 
         /// <summary>
-        /// 物流信息  列表最多支持物流信息个数，请参考产品文档  注：若该值不为空，且物流信息同步至我的快递，则在查询订单时可返回具体物流信息
+        /// "物流信息 列表最多支持物流信息个数，请参考产品文档 注：若该值不为空，且物流信息同步至我的快递，则在查询订单时可返回具体物流信息"
         /// </summary>
         [XmlArray("logistics_info_list")]
         [XmlArrayItem("order_logistics_information_request")]

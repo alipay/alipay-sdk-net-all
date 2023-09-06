@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class ZhimaCustomerJobworthCloudresumeQueryResponse : AopResponse
     {
         /// <summary>
-        /// 出身日期
+        /// 出生日期
         /// </summary>
         [XmlElement("birthday")]
         public string Birthday { get; set; }
@@ -106,7 +106,7 @@ namespace Aop.Api.Response
         public List<CloudResumeWorkExperience> WorkExperiences { get; set; }
 
         /// <summary>
-        /// 工作开始日期
+        /// 工作开始日期（时间戳）
         /// </summary>
         [XmlElement("work_start_date")]
         public long WorkStartDate { get; set; }

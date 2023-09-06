@@ -16,13 +16,19 @@ namespace Aop.Api.Domain
         public string EncryptType { get; set; }
 
         /// <summary>
+        /// userId的映射字段，OpenId改造
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 设备标识信息，包括IMEI，IDFA，OAID。 注意：IMEI必须为MD5加密类型
         /// </summary>
         [XmlElement("principal")]
         public string Principal { get; set; }
 
         /// <summary>
-        /// 查询的设备类型（IMEI、IDFA、OAID）
+        /// 查询的设备类型（IMEI、IDFA、OAID、USERID、OPENID）
         /// </summary>
         [XmlElement("principal_type")]
         public string PrincipalType { get; set; }

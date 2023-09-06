@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public ActivityBaseInfo ActivityBaseInfo { get; set; }
 
         /// <summary>
-        /// 活动名称。 不对用户进行展示，仅供商家在后台管理活动使用。
+        /// 活动名称。
         /// </summary>
         [XmlElement("activity_name")]
         public string ActivityName { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string MerchantAccessMode { get; set; }
 
         /// <summary>
-        /// 用作幂等控制。  幂等作用： 参数不变的情况下，再次请求返回与上一次相同的结果。  外部接入方需保证业务单号唯一。
+        /// 用作幂等控制。    幂等作用：  参数不变的情况下，再次请求返回与上一次相同的结果。    外部接入方需保证业务单号唯一。
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public PaymentVoucherSendRule VoucherSendRule { get; set; }
 
         /// <summary>
-        /// 优惠类型
+        /// 券类型
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

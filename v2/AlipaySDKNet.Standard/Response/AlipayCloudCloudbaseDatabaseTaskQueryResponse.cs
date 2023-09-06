@@ -11,13 +11,6 @@ namespace Aop.Api.Response
     public class AlipayCloudCloudbaseDatabaseTaskQueryResponse : AopResponse
     {
         /// <summary>
-        /// 任务执行历史列表
-        /// </summary>
-        [XmlArray("histories")]
-        [XmlArrayItem("faas_database_historie")]
-        public List<FaasDatabaseHistorie> Histories { get; set; }
-
-        /// <summary>
         /// 页码
         /// </summary>
         [XmlElement("page_index")]
@@ -28,6 +21,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
+
+        /// <summary>
+        /// 任务执行历史列表
+        /// </summary>
+        [XmlArray("tasks")]
+        [XmlArrayItem("mongo_task_history")]
+        public List<MongoTaskHistory> Tasks { get; set; }
 
         /// <summary>
         /// 总数

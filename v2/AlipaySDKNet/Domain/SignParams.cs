@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -50,6 +51,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 商户指定优先渠道扣款参数
+        /// </summary>
+        [XmlArray("recommend_sort_channel_params")]
+        [XmlArrayItem("open_api_specified_channel_params_pojo")]
+        public List<OpenApiSpecifiedChannelParamsPojo> RecommendSortChannelParams { get; set; }
 
         /// <summary>
         /// 签约成功后商户用于接收异步通知的地址。如果不传入，签约与支付的异步通知都会发到外层notify_url参数传入的地址；如果外层也未传入，签约与支付的异步通知都会发到商户appid配置的网关地址。

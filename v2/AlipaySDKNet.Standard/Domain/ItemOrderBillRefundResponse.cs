@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ItemOrderBillRefundResponse : AopObject
     {
         /// <summary>
-        /// 退款金额（元）
+        /// 退款金额，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("refund_fee")]
         public string RefundFee { get; set; }

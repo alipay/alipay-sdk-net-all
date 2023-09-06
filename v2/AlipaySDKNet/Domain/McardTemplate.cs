@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class McardTemplate : AopObject
     {
         /// <summary>
-        /// 会员卡类型
+        /// 卡类型
         /// </summary>
         [XmlElement("card_type")]
         public string CardType { get; set; }

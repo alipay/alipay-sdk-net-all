@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderQueryModel : AopObject
     {
         /// <summary>
-        /// 用户open_id，和uid二选一
+        /// 买家open_id，和uid二选一
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 用户user_id
+        /// 买家支付宝用户ID；open_id和user_id二选一
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

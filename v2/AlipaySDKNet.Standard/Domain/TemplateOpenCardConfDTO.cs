@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public string OpenCardSourceType { get; set; }
 
         /// <summary>
-        /// 开卡连接，必须http、https开头
+        /// 开卡链接，必须http、https开头
         /// </summary>
         [XmlElement("open_card_url")]
         public string OpenCardUrl { get; set; }

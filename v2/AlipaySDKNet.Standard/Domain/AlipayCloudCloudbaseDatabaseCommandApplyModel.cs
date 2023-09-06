@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string BizEnvId { get; set; }
 
         /// <summary>
-        /// - listCollections - createCollection - dropCollection - statsCollection - listIndexes - createIndex - dropIndex - insertOneDocument - insertManyDocuments - replaceOneDocument - deleteOneDocument - deleteManyDocuments - deleteManyDocumentsByIds - updateOneDocument - updateManyDocuments - find - count
+        /// - listCollections - createCollection - dropCollection - renameCollection - statsCollection - listIndexes - createIndex - dropIndex - insertOneDocument - insertManyDocuments - replaceOneDocument - deleteOneDocument - deleteManyDocuments - deleteManyDocumentsByIds - updateOneDocument - updateManyDocuments - find - count
         /// </summary>
         [XmlElement("command")]
         public string Command { get; set; }

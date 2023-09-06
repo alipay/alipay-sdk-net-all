@@ -1,0 +1,30 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayFincoreComplianceTemplateInstanceDownloadModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayFincoreComplianceTemplateInstanceDownloadModel : AopObject
+    {
+        /// <summary>
+        /// 链接持续时间（分钟）
+        /// </summary>
+        [XmlElement("duration")]
+        public long Duration { get; set; }
+
+        /// <summary>
+        /// 下载类型
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
+
+        /// <summary>
+        /// 实例唯一标识
+        /// </summary>
+        [XmlElement("voucher_id")]
+        public string VoucherId { get; set; }
+    }
+}

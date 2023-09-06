@@ -45,6 +45,11 @@ namespace Aop.Api.Request
         /// </summary>
         public string Keykey { get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
+        public string TestPrice { get; set; }
+
         #region IAopRequest Members
 		private bool needEncrypt=false;
 		private string apiVersion = "1.0";
@@ -136,6 +141,7 @@ namespace Aop.Api.Request
             parameters.Add("d", this.D);
             parameters.Add("e", this.E);
             parameters.Add("keykey", this.Keykey);
+            parameters.Add("test_price", this.TestPrice);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);

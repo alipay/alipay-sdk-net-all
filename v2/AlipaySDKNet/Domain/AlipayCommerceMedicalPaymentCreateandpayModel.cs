@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -70,6 +71,12 @@ namespace Aop.Api.Domain
         public string OrgNo { get; set; }
 
         /// <summary>
+        /// 医保其他报销金额，单位是元
+        /// </summary>
+        [XmlElement("other_amount")]
+        public string OtherAmount { get; set; }
+
+        /// <summary>
         /// 第三方平台商单号
         /// </summary>
         [XmlElement("out_trade_no")]
@@ -98,6 +105,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("real_amount")]
         public string RealAmount { get; set; }
+
+        /// <summary>
+        /// 补充计算金额参数列表
+        /// </summary>
+        [XmlArray("subsidy_amount_params")]
+        [XmlArrayItem("subsidy_amount_param")]
+        public List<SubsidyAmountParam> SubsidyAmountParams { get; set; }
 
         /// <summary>
         /// 订单总金额

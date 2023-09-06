@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderItembillBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 小程序订单结算日期，格式为"yyyy-MM-dd"，如"2023-03-22"
+        /// 订单创建日期，格式为yyyy-MM-dd
         /// </summary>
         [XmlElement("create_time")]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// 小程序ID，必填
+        /// 小程序应用ID
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }
@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string SettleStatus { get; set; }
 
         /// <summary>
-        /// 小程序订单结算日期，格式为"yyyy-MM-dd"，如"2023-03-22"
+        /// 订单结算日期，格式为yyyy-MM-dd
         /// </summary>
         [XmlElement("settlement_date")]
         public string SettlementDate { get; set; }

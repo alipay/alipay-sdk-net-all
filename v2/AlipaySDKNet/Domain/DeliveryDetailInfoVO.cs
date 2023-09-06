@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<DeliveryInfoVO> DeliveryList { get; set; }
 
         /// <summary>
-        /// 是否发货完成
+        /// 发货完成标志位，false:未发完 ，true:已发完
         /// </summary>
         [XmlElement("finish_all_delivery")]
         public string FinishAllDelivery { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class PromoApplySummaryInfoVO : AopObject
     {
         /// <summary>
-        /// 优惠申领金额或者数量，金额时单位为分
+        /// 优惠申领金额或者数量，金额时单位：分。需要根据budget_type字段区分金额和数量
         /// </summary>
         [XmlElement("apply_amount")]
         public string ApplyAmount { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BudgetType { get; set; }
 
         /// <summary>
-        /// 会员等级
+        /// 支付宝会员等级
         /// </summary>
         [XmlElement("member_level")]
         public string MemberLevel { get; set; }

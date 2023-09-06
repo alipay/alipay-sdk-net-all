@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class PromoApplyItemInfoVO : AopObject
     {
         /// <summary>
-        /// 商品平台侧ID
+        /// 支付宝平台侧商品ID
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<PromoApplyItemDetailInfoVO> PromoApplyItemDetailInfos { get; set; }
 
         /// <summary>
-        /// 商品skuid
+        /// 支付宝侧商品skuid
         /// </summary>
         [XmlElement("sku_id")]
         public string SkuId { get; set; }

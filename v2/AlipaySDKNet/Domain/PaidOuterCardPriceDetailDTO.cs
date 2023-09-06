@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Price { get; set; }
 
         /// <summary>
-        /// 售卖金额类型。目前支持 FIXED：固定金额
+        /// 售卖金额类型
         /// </summary>
         [XmlElement("price_type")]
         public string PriceType { get; set; }

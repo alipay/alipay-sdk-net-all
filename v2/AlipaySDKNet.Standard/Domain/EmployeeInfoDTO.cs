@@ -30,6 +30,18 @@ namespace Aop.Api.Domain
         public string Email { get; set; }
 
         /// <summary>
+        /// 证件号，手机号，邮箱三个必填其一
+        /// </summary>
+        [XmlElement("employee_cert_no")]
+        public string EmployeeCertNo { get; set; }
+
+        /// <summary>
+        /// 证件类型，当证件号不为空时必填
+        /// </summary>
+        [XmlElement("employee_cert_type")]
+        public string EmployeeCertType { get; set; }
+
+        /// <summary>
         /// 员工id
         /// </summary>
         [XmlElement("employee_id")]
@@ -46,6 +58,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("employee_no")]
         public string EmployeeNo { get; set; }
+
+        /// <summary>
+        /// 加密身份证号，当加密类型不为空时必填
+        /// </summary>
+        [XmlElement("encrypt_cert_no")]
+        public string EncryptCertNo { get; set; }
+
+        /// <summary>
+        /// 加密手机号，当加密类型不为空时必填
+        /// </summary>
+        [XmlElement("encrypt_mobile")]
+        public string EncryptMobile { get; set; }
 
         /// <summary>
         /// 变更时间

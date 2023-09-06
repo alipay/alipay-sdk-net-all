@@ -16,13 +16,19 @@ namespace Aop.Api.Domain
         public string AlipayOpenId { get; set; }
 
         /// <summary>
+        /// 支付宝交易号
+        /// </summary>
+        [XmlElement("alipay_trade_no")]
+        public string AlipayTradeNo { get; set; }
+
+        /// <summary>
         /// 支付宝用户id
         /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }
 
         /// <summary>
-        /// 订单金额
+        /// 订单金额，精确到小数点后2位，单位为元
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -46,7 +52,7 @@ namespace Aop.Api.Domain
         public string HospitalName { get; set; }
 
         /// <summary>
-        /// 图文问诊/电话问诊/视频问诊 IMAGE_INQUIRY/PHONE_INQUIRY/VIDEO_INQUIRY
+        /// 图文问诊/电话问诊/视频问诊/快速图文/快速电话/快速视频 IMAGE_INQUIRY/PHONE_INQUIRY/VIDEO_INQUIRY/QUICK_IMAGE_INQUIRY/QUICK_PHONE_INQUIRY/QUICK_VIDEO_INQUIRY
         /// </summary>
         [XmlElement("inquiry_mode")]
         public string InquiryMode { get; set; }
@@ -70,7 +76,7 @@ namespace Aop.Api.Domain
         public string MerchantOrderLinkPage { get; set; }
 
         /// <summary>
-        /// 待支付/待接诊 / 待问诊 / 问诊中 / 已完成 / 已取消 / 已退款：WAIT_PAY/WAIT_RECEPTION/WAIT_INQUIRY/IN_INQUIRY/FINISHED/CANCELED/REFUNDED
+        /// 待支付/待接诊 / 待问诊 / 问诊中 / 已完成 / 已取消 / 已退款/退款中/取消中：WAIT_PAY/WAIT_RECEPTION/WAIT_INQUIRY/IN_INQUIRY/FINISHED/CANCELED/REFUNDED/REFUNDING/CANCELING
         /// </summary>
         [XmlElement("merchant_order_status")]
         public string MerchantOrderStatus { get; set; }
@@ -86,6 +92,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_create_time")]
         public string OrderCreateTime { get; set; }
+
+        /// <summary>
+        /// 订单隐藏标志，默认为N
+        /// </summary>
+        [XmlElement("order_hidden_flag")]
+        public string OrderHiddenFlag { get; set; }
 
         /// <summary>
         /// 订单修改时间
@@ -116,6 +128,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("platform_code")]
         public string PlatformCode { get; set; }
+
+        /// <summary>
+        /// 实际支付金额，精确到小数点后2位，单位为元
+        /// </summary>
+        [XmlElement("real_amount")]
+        public string RealAmount { get; set; }
+
+        /// <summary>
+        /// 退款金额，精确到小数点后2位，单位为元
+        /// </summary>
+        [XmlElement("refund_amount")]
+        public string RefundAmount { get; set; }
 
         /// <summary>
         /// 预约问诊时间

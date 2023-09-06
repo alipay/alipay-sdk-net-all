@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string LevelDesc { get; set; }
 
         /// <summary>
-        /// 会员级别对应icon， 通过接口（alipay.offline.material.image.upload）上传图片
+        /// 会员级别对应icon图片，  会员信息预留字段，暂不在用户端展示；  通过接口（alipay.offline.material.image.upload）上传图片
         /// </summary>
         [XmlElement("level_icon")]
         public string LevelIcon { get; set; }

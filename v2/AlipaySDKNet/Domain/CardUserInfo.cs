@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class CardUserInfo : AopObject
     {
         /// <summary>
-        /// 开放id
+        /// 用户open_id
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string UserUniId { get; set; }
 
         /// <summary>
-        /// 用户唯一标识user_uni_id类型
+        /// 用户唯一标识类型
         /// </summary>
         [XmlElement("user_uni_id_type")]
         public string UserUniIdType { get; set; }

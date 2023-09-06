@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AgreementStatus { get; set; }
 
         /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("alipay_user_id")]
+        public string AlipayUserId { get; set; }
+
+        /// <summary>
         /// 开通时间，agreement_status为VALID有效。
         /// </summary>
         [XmlElement("biz_time")]
@@ -31,6 +37,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("ext_info")]
         public string ExtInfo { get; set; }
+
+        /// <summary>
+        /// 开放ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 商户外部协议号

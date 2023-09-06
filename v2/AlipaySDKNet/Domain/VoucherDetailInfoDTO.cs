@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class VoucherDetailInfoDTO : AopObject
     {
         /// <summary>
-        /// 优惠券金额，单位为元
+        /// 优惠券金额，单位：元，精确到小数点后两位。
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 商户出资，单位为元
+        /// 商户出资，单位为元,精确到小数点后两位
         /// </summary>
         [XmlElement("merchant_contribute")]
         public string MerchantContribute { get; set; }
@@ -54,19 +54,19 @@ namespace Aop.Api.Domain
         public List<ContributeDetailInfo> OtherContributeDetail { get; set; }
 
         /// <summary>
-        /// 购买该张券时内部出资的部分（包含支付宝/口碑出资的部分）
+        /// 购买该张券时内部出资的部分（包含支付宝/口碑出资的部分），单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("purchase_ant_contribute")]
         public string PurchaseAntContribute { get; set; }
 
         /// <summary>
-        /// 购买该张券的资金中买家自己出资的部分
+        /// 购买该张券的资金中买家自己出资的部分，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("purchase_buyer_contribute")]
         public string PurchaseBuyerContribute { get; set; }
 
         /// <summary>
-        /// 购买该张券的资金中商户出资的部分
+        /// 购买该张券的资金中商户出资的部分，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("purchase_merchant_contribute")]
         public string PurchaseMerchantContribute { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCardFormtemplateSetModel : AopObject
     {
         /// <summary>
-        /// 会员卡开卡时的表单字段配置信息，即用户开卡时需填写内容。可定义多个通用表单字段，最大不超过20个。 注意：required和optional，不可以同时为空
+        /// "会员卡开卡时的表单字段配置信息，即用户开卡时需填写内容。可定义多个通用表单字段，最大不超过20个。 注意：required和optional，不可以同时为空"
         /// </summary>
         [XmlElement("fields")]
         public OpenFormFieldDO Fields { get; set; }

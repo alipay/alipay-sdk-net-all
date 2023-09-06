@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class DeliveryInfoVO : AopObject
     {
         /// <summary>
-        /// 快递公司ID，通过获取快递公司列表获取
+        /// 快递公司ID，物流公司ID列表请查看 https://opendocs.alipay.com/mini/00au7e
         /// </summary>
         [XmlElement("delivery_id")]
         public string DeliveryId { get; set; }

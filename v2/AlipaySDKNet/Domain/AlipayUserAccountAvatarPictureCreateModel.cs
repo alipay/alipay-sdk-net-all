@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayUserAccountAvatarPictureCreateModel : AopObject
     {
         /// <summary>
+        /// json扩展信息
+        /// </summary>
+        [XmlElement("ext_param")]
+        public string ExtParam { get; set; }
+
+        /// <summary>
         /// 调用场景节点信息
         /// </summary>
         [XmlElement("node_code")]

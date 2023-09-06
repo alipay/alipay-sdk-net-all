@@ -32,6 +32,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// test
         /// </summary>
+        [XmlElement("test_new")]
+        public string TestNew { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
         [XmlArray("test_number")]
         [XmlArrayItem("number")]
         public List<long> TestNumber { get; set; }

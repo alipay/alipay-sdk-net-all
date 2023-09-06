@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BizEnvId { get; set; }
 
         /// <summary>
+        /// 集合名称
+        /// </summary>
+        [XmlElement("collection_name")]
+        public string CollectionName { get; set; }
+
+        /// <summary>
         /// 是否逆序
         /// </summary>
         [XmlElement("desc")]

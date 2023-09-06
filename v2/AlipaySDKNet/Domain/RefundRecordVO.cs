@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class RefundRecordVO : AopObject
     {
         /// <summary>
-        /// 退款金额，单位为元
+        /// 退款金额，单位：元，精确到小数点后两位。
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

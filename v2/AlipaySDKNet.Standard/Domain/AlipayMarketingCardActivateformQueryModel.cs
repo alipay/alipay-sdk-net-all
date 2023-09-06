@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCardActivateformQueryModel : AopObject
     {
         /// <summary>
-        /// 开放表单信息查询业务类型，可选类型如下： MEMBER_CARD ：商家会员卡开卡
+        /// 开放表单信息查询业务类型
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }

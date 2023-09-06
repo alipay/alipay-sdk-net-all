@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string EndDate { get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 权益开始时间
         /// </summary>
         [XmlElement("start_date")]
         public string StartDate { get; set; }

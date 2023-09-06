@@ -10,25 +10,25 @@ namespace Aop.Api.Domain
     public class EnterpriseInfoDTO : AopObject
     {
         /// <summary>
-        /// 账户id
+        /// 共同账户id
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 因公签约状态 UNACTIVATED:未激活 ACTIVATED:已激活 说明：表示签约资金因公付
+        /// 因公签约状态
         /// </summary>
         [XmlElement("activate")]
         public string Activate { get; set; }
 
         /// <summary>
-        /// 企业认证等级 10初级认证  30 高级认证
+        /// 企业认证等级
         /// </summary>
         [XmlElement("auth_level")]
         public string AuthLevel { get; set; }
 
         /// <summary>
-        /// 认证状态  NO_AUTH：未认证 IN_AUTH：认证中 HAS_AUTH：已认证
+        /// 认证状态
         /// </summary>
         [XmlElement("auth_status")]
         public string AuthStatus { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string AuthTime { get; set; }
 
         /// <summary>
-        /// 企业名称
+        /// 企业简称
         /// </summary>
         [XmlElement("enterprise_alias")]
         public string EnterpriseAlias { get; set; }
@@ -106,13 +106,13 @@ namespace Aop.Api.Domain
         public string PlatformOutId { get; set; }
 
         /// <summary>
-        /// 企业服务协议状态 UNSIGNED:未签约 SIGNED:已签约 TERMINATED:已解约 说明：表示签约企业码服务协议
+        /// 企业码服务协议签约状态
         /// </summary>
         [XmlElement("sign_status")]
         public string SignStatus { get; set; }
 
         /// <summary>
-        /// 企业当前状态 SYNC：数据同步中 NORMAL：正常 WITHDRAW：注销
+        /// 企业当前状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

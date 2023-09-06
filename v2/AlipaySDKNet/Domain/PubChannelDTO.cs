@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 1、SHOP_DETAIL:店铺详情页   2、PAYMENT_RESULT: 支付成功页（支付成功页暂不支持）
+        /// 投放渠道类型
         /// </summary>
         [XmlElement("pub_channel")]
         public string PubChannel { get; set; }

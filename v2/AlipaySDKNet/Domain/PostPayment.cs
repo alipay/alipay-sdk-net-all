@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class PostPayment : AopObject
     {
         /// <summary>
-        /// 后付费金额
+        /// 后付费金额，单位为：元（人民币），精确到小数点后两位。
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

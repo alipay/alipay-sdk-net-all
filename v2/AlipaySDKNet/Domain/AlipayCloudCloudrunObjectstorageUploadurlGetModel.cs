@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("path")]
         public string Path { get; set; }
+
+        /// <summary>
+        /// 上传文件要使用的方法，支持PUT/POST。 默认PUT，可选值：POST/PUT ● POST：通过POST Form的方式上传 ● PUT：通过PUT方法上传
+        /// </summary>
+        [XmlElement("upload_method")]
+        public string UploadMethod { get; set; }
     }
 }

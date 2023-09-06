@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayFundWalletConsultResponse : AopResponse
     {
         /// <summary>
-        /// 实际可以提现/销户后退的金额
+        /// 实际可以提现/销户后退的金额，单位：元
         /// </summary>
         [XmlElement("actual_available_amount")]
         public string ActualAvailableAmount { get; set; }
@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string AmountDetails { get; set; }
 
         /// <summary>
-        /// 可用金额
+        /// 可用金额，单位：元
         /// </summary>
         [XmlElement("available_amount")]
         public string AvailableAmount { get; set; }

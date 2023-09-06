@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string TargetCardNo { get; set; }
 
         /// <summary>
-        /// 卡号ID类型  BIZ_CARD：支付宝卡号
+        /// 卡号ID类型
         /// </summary>
         [XmlElement("target_card_no_type")]
         public string TargetCardNoType { get; set; }

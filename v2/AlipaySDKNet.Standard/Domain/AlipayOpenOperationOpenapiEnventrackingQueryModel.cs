@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenOperationOpenapiEnventrackingQueryModel : AopObject
     {
         /// <summary>
-        /// test
+        /// 参数描述
         /// </summary>
         [XmlElement("u_tset")]
         public string UTset { get; set; }

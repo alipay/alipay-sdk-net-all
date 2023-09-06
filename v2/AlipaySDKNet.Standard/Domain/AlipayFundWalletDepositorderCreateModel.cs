@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
-        /// 订单 有效期
+        /// 订单失效时间。绝对超时时间，格式为yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("time_expire")]
         public string TimeExpire { get; set; }

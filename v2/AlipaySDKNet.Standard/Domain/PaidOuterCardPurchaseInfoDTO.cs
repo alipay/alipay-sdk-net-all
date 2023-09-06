@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string Price { get; set; }
 
         /// <summary>
-        /// 用户操作来源。枚举如下： ALIPAY_TINY_APP(支付宝小程序) SELF_APP(商家APP) OTHER(其他)
+        /// 用户操作来源
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }

@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public EcomBuyerDTO Buyer { get; set; }
 
         /// <summary>
+        /// 理赔支付模式
+        /// </summary>
+        [XmlElement("claim_pay_mode")]
+        public string ClaimPayMode { get; set; }
+
+        /// <summary>
         /// 商品
         /// </summary>
         [XmlElement("item")]

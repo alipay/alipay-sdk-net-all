@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AcceptanceId { get; set; }
 
         /// <summary>
+        /// 业财受理结果业务信息
+        /// </summary>
+        [XmlElement("data")]
+        public string Data { get; set; }
+
+        /// <summary>
         /// 接口调用失败是否需要重试
         /// </summary>
         [XmlElement("need_retry")]

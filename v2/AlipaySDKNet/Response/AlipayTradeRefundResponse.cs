@@ -139,7 +139,7 @@ namespace Aop.Api.Response
         public string StoreName { get; set; }
 
         /// <summary>
-        /// 2013112011001004330000121536
+        /// 支付宝交易号
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

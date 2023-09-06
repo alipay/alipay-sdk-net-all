@@ -11,25 +11,25 @@ namespace Aop.Api.Domain
     public class ItemOrderBillDetailResponse : AopObject
     {
         /// <summary>
-        /// 订单创建时间
+        /// 订单创建时间，格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("create_time")]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// 收费类目
+        /// 支付宝公域会根据商家的具体成交场景和成交的商品类目来收取一定的技术服务费，技术服务费=结算基数*技术服务费费率，其中费率的部分由商品的类目来计算出。具体详情请查阅：https://opendocs.alipay.com/b/07w1gp
         /// </summary>
         [XmlElement("fee_categories")]
         public string FeeCategories { get; set; }
 
         /// <summary>
-        /// 订单所属小程序id
+        /// 订单关联小程序应用ID
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }
 
         /// <summary>
-        /// 平台订单号
+        /// 交易组件订单号
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string OrderName { get; set; }
 
         /// <summary>
-        /// 订单总价（元）
+        /// 订单总价，单位：元,精确到小数点后两位
         /// </summary>
         [XmlElement("order_price")]
         public string OrderPrice { get; set; }
@@ -53,49 +53,49 @@ namespace Aop.Api.Domain
         public string OrderStatus { get; set; }
 
         /// <summary>
-        /// 商家订单号
+        /// 商户订单号
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 订单支付金额（元）
+        /// 订单支付金额，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }
 
         /// <summary>
-        /// 平台技术服务费（元）
+        /// 平台技术服务费，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("platform_service")]
         public string PlatformService { get; set; }
 
         /// <summary>
-        /// 退平台技术服务费（元）
+        /// 退平台技术服务费，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("platform_service_refund")]
         public string PlatformServiceRefund { get; set; }
 
         /// <summary>
-        /// 商家前置优惠金额（元）
+        /// 商家前置优惠金额，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("pre_promotion")]
         public string PrePromotion { get; set; }
 
         /// <summary>
-        /// 订单预计结算时间
+        /// 订单预计结算时间，用户支付后确认收货前告知账期的天数， 表述为确认收货后X天结算；用户确认收货后，表述为预计时间格式为yyyy-MM-dd
         /// </summary>
         [XmlElement("predict_settle_time")]
         public string PredictSettleTime { get; set; }
 
         /// <summary>
-        /// 订单实收金额（元）
+        /// 订单实收金额，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("receipt_amount")]
         public string ReceiptAmount { get; set; }
 
         /// <summary>
-        /// 订单退款金额（元）
+        /// 退款金额，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("refund_fee")]
         public string RefundFee { get; set; }
@@ -126,7 +126,7 @@ namespace Aop.Api.Domain
         public string SettleTime { get; set; }
 
         /// <summary>
-        /// 订单结算金额（元）
+        /// 订单结算金额，单位：元,精确到小数点后两位
         /// </summary>
         [XmlElement("settlement_amount")]
         public string SettlementAmount { get; set; }

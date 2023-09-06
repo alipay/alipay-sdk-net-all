@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BelongMerchantId { get; set; }
 
         /// <summary>
+        /// 凭证状态筛选
+        /// </summary>
+        [XmlElement("certificate_status")]
+        public string CertificateStatus { get; set; }
+
+        /// <summary>
         /// 支付宝用户openId
         /// </summary>
         [XmlElement("open_id")]

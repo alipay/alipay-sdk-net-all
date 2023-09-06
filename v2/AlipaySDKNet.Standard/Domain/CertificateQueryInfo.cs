@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
+        /// 核销规则
+        /// </summary>
+        [XmlElement("use_rule_info")]
+        public CertificateUseRuleInfo UseRuleInfo { get; set; }
+
+        /// <summary>
         /// 开始生效时间
         /// </summary>
         [XmlElement("valid_begin_time")]

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// 商户回传动态码的时间戳。    即商户调接口回传动态码时刻对应的long类型时间戳，用于区分不同的发码请求。
+        /// 商户回传动态码的时间戳 (单位秒)。    即商户调接口回传动态码时刻对应的long类型时间戳，用于区分不同的发码请求。
         /// </summary>
         [XmlElement("time_stamp")]
         public long TimeStamp { get; set; }
