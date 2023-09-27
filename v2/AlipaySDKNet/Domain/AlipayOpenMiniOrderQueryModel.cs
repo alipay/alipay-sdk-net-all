@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 交易组件订单号,和商家自定义交易号二选一
+        /// 交易组件订单号；order_id和out_order_id二选一
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 商家自定义订单号，和小程序交易组件交易号二选一
+        /// 商户订单号，创建订单请求由商户传入；order_id和out_order_id二选一
         /// </summary>
         [XmlElement("out_order_id")]
         public string OutOrderId { get; set; }

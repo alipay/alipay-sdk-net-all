@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public string ContactPhone { get; set; }
 
         /// <summary>
-        /// 新版门店类目标准二级类目code。类目标准及与原shop_category映射关系参见文档https://ur.alipay.com/3oJ26c0veETkLXgTbtQnYY
+        /// 新版门店类目标准二级类目code
         /// </summary>
         [XmlElement("new_shop_category")]
         public string NewShopCategory { get; set; }
@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
-        /// 当前名称、地址、经纬度信息准确一致，可用于数字化经营场景消费（01=已认证,02=待优化,99=未知）
+        /// 当前名称、地址、经纬度信息准确一致，可用于数字化经营场景消费
         /// </summary>
         [XmlElement("shop_info_status")]
         public string ShopInfoStatus { get; set; }
@@ -66,13 +66,13 @@ namespace Aop.Api.Domain
         public string ShopName { get; set; }
 
         /// <summary>
-        /// 门店状态，01正常，03冻结
+        /// 门店状态
         /// </summary>
         [XmlElement("shop_status")]
         public string ShopStatus { get; set; }
 
         /// <summary>
-        /// 店铺经营类型，01表示直营，02表示加盟
+        /// 店铺经营类型
         /// </summary>
         [XmlElement("shop_type")]
         public string ShopType { get; set; }

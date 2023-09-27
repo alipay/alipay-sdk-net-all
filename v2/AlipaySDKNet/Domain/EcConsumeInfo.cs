@@ -112,7 +112,7 @@ namespace Aop.Api.Domain
         public string ExpenseTypeSubCategory { get; set; }
 
         /// <summary>
-        /// 账单扩展信息，Json格式 汇总信息
+        /// 账单扩展信息，JsonMap格式, key值枚举 [{"value": "SUMMARY_INFO","name": "账单汇总信息"},{"value": "MERCHANT_EXTEND_INFO","name": "商户扩展信息"}, {"value": "TERMINAL_INFO","name": "终端设备信息"},{"value": "BENEFIT_INFO","name": "优惠扩展信息"}, {"value": "CONSUMPTION_LOCATION","name": "消费上报位置"},{"value": "THIRD_PARTY_PAYMENT_INFO","name": "代收款详情"}]
         /// </summary>
         [XmlElement("ext_infos")]
         public string ExtInfos { get; set; }
@@ -158,6 +158,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 收款方全称（如果是个人会显示脱敏后的名称）
+        /// </summary>
+        [XmlElement("opposite_full_name")]
+        public string OppositeFullName { get; set; }
 
         /// <summary>
         /// 订单完结标识 0：未完结 1：已完结

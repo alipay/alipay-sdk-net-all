@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class ZhimaCreditEpCertificationQueryResponse : AopResponse
     {
         /// <summary>
+        /// 代理人提交认证时的扫脸时间
+        /// </summary>
+        [XmlElement("attorney_face_time")]
+        public string AttorneyFaceTime { get; set; }
+
+        /// <summary>
         /// 代理函有效访问地址，有效时间1小时，接口返回后开始计时，auth_status为SUCCESS时返回，特定场景下返回
         /// </summary>
         [XmlElement("attorney_letter")]
@@ -89,6 +95,18 @@ namespace Aop.Api.Response
         public bool HasLiXinCertificate { get; set; }
 
         /// <summary>
+        /// 法代有效证件号码
+        /// </summary>
+        [XmlElement("legal_person_cert_no")]
+        public string LegalPersonCertNo { get; set; }
+
+        /// <summary>
+        /// 法代提交认证时的扫脸时间
+        /// </summary>
+        [XmlElement("legal_person_face_time")]
+        public string LegalPersonFaceTime { get; set; }
+
+        /// <summary>
         /// 法人身份证反面有效访问定制，有效时间1小时，接口返回后开始计时，auth_status为SUCCESS时返回，特定场景下返回
         /// </summary>
         [XmlElement("legal_person_id_card_back")]
@@ -99,6 +117,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("legal_person_id_card_front")]
         public string LegalPersonIdCardFront { get; set; }
+
+        /// <summary>
+        /// 法代姓名,代理人模式时返回
+        /// </summary>
+        [XmlElement("legal_person_name")]
+        public string LegalPersonName { get; set; }
 
         /// <summary>
         /// 是否是立信企业 true:是;false:否

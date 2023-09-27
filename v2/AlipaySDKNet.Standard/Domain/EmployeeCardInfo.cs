@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class EmployeeCardInfo : AopObject
     {
         /// <summary>
+        /// 零工扩展信息
+        /// </summary>
+        [XmlElement("card_extend_params")]
+        public CardExtendParamsDTO CardExtendParams { get; set; }
+
+        /// <summary>
         /// 零工卡工牌ID
         /// </summary>
         [XmlElement("employee_card_no")]

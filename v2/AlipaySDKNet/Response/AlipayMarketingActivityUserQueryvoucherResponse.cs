@@ -28,13 +28,13 @@ namespace Aop.Api.Response
         public string AssociateTradeNo { get; set; }
 
         /// <summary>
-        /// 券可用开始时间
+        /// 券可用开始时间。格式为：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("available_begin_time")]
         public string AvailableBeginTime { get; set; }
 
         /// <summary>
-        /// 券可用结束时间
+        /// 券可用结束时间。格式为：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("available_end_time")]
         public string AvailableEndTime { get; set; }
@@ -76,7 +76,7 @@ namespace Aop.Api.Response
         public VoucherDisplayPatternInfo VoucherDisplayPatternInfo { get; set; }
 
         /// <summary>
-        /// 券名称
+        /// 对消费者展示的券(商品)名称。
         /// </summary>
         [XmlElement("voucher_name")]
         public string VoucherName { get; set; }

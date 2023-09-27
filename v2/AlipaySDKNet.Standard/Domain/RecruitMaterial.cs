@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class RecruitMaterial : AopObject
     {
         /// <summary>
-        /// 提报的素材内容，json字符串，使用时需要把此字符串解析成json对象。 字段来源于“招商方案查询接口（https://opendocs.alipay.com/pre-open/02bhl7）”中返回的素材字段field。如：activityImage、contentId等。 字段类型mediaType包含：   IMAGE，图片类型   TEXT，文本类型   DATASOURCE，数据源类型， 如：内容ID（contentId）字段类型为DATASOURCE 字段取值：   图片（IMAGE）：     aftsFileId：“营销图片资源上传接口（https://opendocs.alipay.com/pre-open/02bhlj）”返回的图片唯一资源ID   文本（TEXT）：     text：文本内容   数据源（DATASOURCE）：     text：当前仅支持内容ID值，可通过“内容批量查询接口（https://opendocs.alipay.com/pre-apis/02lu12，仅供受邀用户使用）”查询内容ID。
+        /// 提报的素材内容，json字符串，使用时需要把此字符串解析成json对象。 字段来源于“招商方案查询接口（https://opendocs.alipay.com/pre-open/02bhl7）”中返回的素材字段field。如：activityImage、contentId等。 字段类型mediaType包含：  IMAGE，图片类型  TEXT，文本类型  DATASOURCE，数据源类型， 如：内容ID（contentId）字段类型为DATASOURCE 字段取值：  图片（IMAGE）：  aftsFileId：“营销图片资源上传接口（https://opendocs.alipay.com/pre-open/02bhlj）”返回的图片唯一资源ID  文本（TEXT）：  text：文本内容  数据源（DATASOURCE）：  text：当前仅支持内容ID值，可通过“内容批量查询接口（https://opendocs.alipay.com/pre-apis/02lu12，仅供受邀用户使用）”查询内容ID。
         /// </summary>
         [XmlElement("data")]
         public string Data { get; set; }

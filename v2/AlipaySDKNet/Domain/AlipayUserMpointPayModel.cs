@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
+        /// 积分扣减订单详情
+        /// </summary>
+        [XmlElement("deduct_order_detail")]
+        public DeductOrderDetail DeductOrderDetail { get; set; }
+
+        /// <summary>
         /// 业务流水号，会用于幂等性校验，所以请保证每次请求的业务流水号的唯一性
         /// </summary>
         [XmlElement("out_biz_no")]

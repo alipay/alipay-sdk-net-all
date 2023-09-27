@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<ItemExtInfo> ExtInfo { get; set; }
 
         /// <summary>
-        /// 商品ID，通过创建商品接口 https://opendocs.alipay.com/apis/api_4/ant.merchant.expand.item.open.create 获取。
+        /// 商品ID
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
@@ -57,13 +57,13 @@ namespace Aop.Api.Domain
         public List<SkuModifyInfo> SkuList { get; set; }
 
         /// <summary>
-        /// 商品所属标准类目ID，当 type 为STANDARD_GOODS（标品）时必填。  请填入 https://opendocs.alipay.com/mini/011lxt  小程序商品类目表中三级类目ID。
+        /// 商品所属标准类目ID，当 type 为STANDARD_GOODS（标品）时必填。 请填入 https://opendocs.alipay.com/mini/011lxt 小程序商品类目表中三级类目ID。
         /// </summary>
         [XmlElement("standard_category_id")]
         public string StandardCategoryId { get; set; }
 
         /// <summary>
-        /// 商品状态：EFFECT（有效）、INVALID（无效）
+        /// 商品状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

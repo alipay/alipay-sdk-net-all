@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string LatestVersion { get; set; }
 
         /// <summary>
-        /// 版本状态，可选值为：INIT: 开发中, AUDITING: 审核中, AUDIT_REJECT: 审核驳回, WAIT_RELEASE: 待上架, BASE_AUDIT_PASS: 准入不可营销, GRAY: 灰度中, RELEASE: 已上架, OFFLINE: 已下架, AUDIT_OFFLINE: 被强制下架;
+        /// 版本状态
         /// </summary>
         [XmlElement("latest_version_status")]
         public string LatestVersionStatus { get; set; }

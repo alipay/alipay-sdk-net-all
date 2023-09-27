@@ -114,6 +114,12 @@ namespace Aop.Api.Domain
         public string OpAppId { get; set; }
 
         /// <summary>
+        /// 买家支付宝用户唯一标识（商户实际经营主体的小程序应用关联的买家open_id）
+        /// </summary>
+        [XmlElement("op_buyer_open_id")]
+        public string OpBuyerOpenId { get; set; }
+
+        /// <summary>
         /// 商户操作员编号。
         /// </summary>
         [XmlElement("operator_id")]

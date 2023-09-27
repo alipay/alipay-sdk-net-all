@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_bill_info_dto")]
         public BizInvoiceBillInfoDTO InvoiceBillInfoDto { get; set; }
+
+        /// <summary>
+        /// 影子标记
+        /// </summary>
+        [XmlElement("test_mode")]
+        public bool TestMode { get; set; }
     }
 }

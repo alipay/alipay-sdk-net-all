@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string CategoryAttributeValue { get; set; }
 
         /// <summary>
-        /// 类目id
+        /// 类目编码
         /// </summary>
         [XmlElement("category_code")]
         public string CategoryCode { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// 描述
+        /// 描述信息
         /// </summary>
         [XmlElement("desc")]
         public string Desc { get; set; }

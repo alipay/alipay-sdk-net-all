@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public long EffectiveNum { get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 凭证结束时间
         /// </summary>
         [XmlElement("end_time")]
         public string EndTime { get; set; }
@@ -118,7 +118,7 @@ namespace Aop.Api.Domain
         public string TicketCreateTime { get; set; }
 
         /// <summary>
-        /// 凭证修改时间，精确到毫秒
+        /// 凭证修改时间
         /// </summary>
         [XmlElement("ticket_modify_time")]
         public string TicketModifyTime { get; set; }

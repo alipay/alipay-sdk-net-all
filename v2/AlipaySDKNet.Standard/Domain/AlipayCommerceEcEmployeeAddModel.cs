@@ -54,6 +54,18 @@ namespace Aop.Api.Domain
         public string EmployeeNo { get; set; }
 
         /// <summary>
+        /// 加密证件号（默认转大写后用SHA256加密）与证件类型搭配使用，不可与证件号同时存在
+        /// </summary>
+        [XmlElement("encrypt_cert_no")]
+        public string EncryptCertNo { get; set; }
+
+        /// <summary>
+        /// 加密手机号（默认使用SHA256加密，不可与手机号同时存在）
+        /// </summary>
+        [XmlElement("encrypt_mobile")]
+        public string EncryptMobile { get; set; }
+
+        /// <summary>
         /// 企业id
         /// </summary>
         [XmlElement("enterprise_id")]

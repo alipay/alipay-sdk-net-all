@@ -24,13 +24,13 @@ namespace Aop.Api.Domain
         public string CrowdCode { get; set; }
 
         /// <summary>
-        /// 人群描述
+        /// 支付宝人群描述
         /// </summary>
         [XmlElement("crowd_desc")]
         public string CrowdDesc { get; set; }
 
         /// <summary>
-        /// 人群名称
+        /// 人群名称 最大长度为15个字符
         /// </summary>
         [XmlElement("crowd_name")]
         public string CrowdName { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public bool Processable { get; set; }
 
         /// <summary>
-        /// INIT-初始化中 EFFECTIVE-生效 INEFFECTIVE-失效
+        /// 人群状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

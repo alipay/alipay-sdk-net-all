@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string AcademicRequire { get; set; }
 
         /// <summary>
-        /// 岗位详细地址 如果是线下岗位，则传具体岗位地址信息 如果是线上岗位，则传空
+        /// 岗位详细地址 如果是线下岗位，则传具体岗位地址信息 如果是线上岗位，也需要传具体的region_code
         /// </summary>
         [XmlElement("address")]
         public JobAddress Address { get; set; }

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ActivityId { get; set; }
 
         /// <summary>
-        /// 活动名称。 不对用户进行展示，仅供商家在后台管理活动使用。
+        /// 活动名称。
         /// </summary>
         [XmlElement("activity_name")]
         public string ActivityName { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ActivityProductType { get; set; }
 
         /// <summary>
-        /// 活动状态。 已激活状态表示活动正常运行。已终止状态表示商家终止活动，不可再发放。
+        /// 活动状态 。 ACTIVE:活动已激活，表示活动已经生效，等到活动开始(publish_start_time)之后用户就可以参与活动。  PAUSE:活动已暂停，表示商户临时暂停该活动，该状态下用户不能参与活动。
         /// </summary>
         [XmlElement("activity_status")]
         public string ActivityStatus { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public BelongMerchantInfo BelongMerchantInfo { get; set; }
 
         /// <summary>
-        /// 码模式。  MERCHANT_UPLOAD：商户上传自定义code，发券时系统随机选取上传的券code发放 MERCHANT_API：发奖时指定券码发奖，此模式无须提前上传券码。
+        /// 码模式。   MERCHANT_UPLOAD：商户上传自定义code，发券时系统随机选取上传的券code发放  MERCHANT_API：发奖时指定券码发奖，此模式无须提前上传券码。
         /// </summary>
         [XmlElement("code_mode")]
         public string CodeMode { get; set; }

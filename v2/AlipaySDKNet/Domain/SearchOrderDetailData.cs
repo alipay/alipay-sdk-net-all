@@ -190,7 +190,7 @@ namespace Aop.Api.Domain
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// 申请单状态  AGREE、REJECT、AUDIT
+        /// 申请单状态 AGREE、REJECT、AUDIT
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

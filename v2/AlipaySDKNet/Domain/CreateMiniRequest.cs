@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AppName { get; set; }
 
         /// <summary>
-        /// 营业执照企业名称
+        /// 营业执照企业名称，如果是“无主体名称个体工商户”则填“个体户+法人姓名”，例如“个体户张三”
         /// </summary>
         [XmlElement("cert_name")]
         public string CertName { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string LicensePic { get; set; }
 
         /// <summary>
-        /// 开发者外部订单号，通过开发者账号+outOrderNo做业务幂等
+        /// 开发者外部订单号，通过开发者账号+外部订单号做业务幂等
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }

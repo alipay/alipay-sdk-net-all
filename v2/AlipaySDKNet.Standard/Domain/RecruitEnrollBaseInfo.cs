@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string PlanId { get; set; }
 
         /// <summary>
-        /// 报名状态。
+        /// 活动报名状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

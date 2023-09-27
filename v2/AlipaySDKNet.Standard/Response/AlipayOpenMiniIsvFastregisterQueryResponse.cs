@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string AppName { get; set; }
 
         /// <summary>
-        /// appid
+        /// 服务商appid
         /// </summary>
         [XmlElement("isv_app_id")]
         public string IsvAppId { get; set; }

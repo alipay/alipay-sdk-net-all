@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCloudTraasRiskgoScalperQueryModel : AopObject
     {
         /// <summary>
+        /// 可填入活动id唯一值，或其他活动信息
+        /// </summary>
+        [XmlElement("activity_info")]
+        public string ActivityInfo { get; set; }
+
+        /// <summary>
         /// 设备唯一号码
         /// </summary>
         [XmlElement("apdid")]

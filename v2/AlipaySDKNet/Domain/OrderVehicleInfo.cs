@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string LicensePlateNo { get; set; }
 
         /// <summary>
-        /// 车辆信息备注
+        /// 备注信息
         /// </summary>
         [XmlElement("memo")]
         public string Memo { get; set; }

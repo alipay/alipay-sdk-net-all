@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AppMemberInfo : AopObject
     {
         /// <summary>
-        /// 邀请时间
+        /// 邀请时间，格式为yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("gmt_invite")]
         public string GmtInvite { get; set; }
 
         /// <summary>
-        /// 加入时间
+        /// 加入时间，格式为yyyy-MM-dd
         /// </summary>
         [XmlElement("gmt_join")]
         public string GmtJoin { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string Role { get; set; }
 
         /// <summary>
-        /// 成员的状态，VALID-有效，UNCONFIRMED-未确认，TIMEOUT-已经失效，REFUSED-用户拒绝
+        /// 成员的状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

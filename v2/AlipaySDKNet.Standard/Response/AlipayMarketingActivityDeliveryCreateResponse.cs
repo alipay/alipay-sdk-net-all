@@ -17,7 +17,7 @@ namespace Aop.Api.Response
         public string DeliveryGuidePreviewUrl { get; set; }
 
         /// <summary>
-        /// 投放计划id。
+        /// 推广计划id
         /// </summary>
         [XmlElement("delivery_id")]
         public string DeliveryId { get; set; }

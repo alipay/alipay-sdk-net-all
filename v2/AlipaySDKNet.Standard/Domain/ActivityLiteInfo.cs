@@ -22,19 +22,19 @@ namespace Aop.Api.Domain
         public string ActivityId { get; set; }
 
         /// <summary>
-        /// 活动名称。 不对支付宝用户进行展示，仅供商家在后台管理活动使用。
+        /// 活动名称
         /// </summary>
         [XmlElement("activity_name")]
         public string ActivityName { get; set; }
 
         /// <summary>
-        /// 活动状态。
+        /// 活动状态 。 ACTIVE:活动已激活，表示活动已经生效，等到活动开始(publish_start_time)之后用户就可以参与活动。  PAUSE:活动已暂停，表示商户临时暂停该活动，该状态下用户不能参与活动。
         /// </summary>
         [XmlElement("activity_status")]
         public string ActivityStatus { get; set; }
 
         /// <summary>
-        /// 归属商户 PID。
+        /// 归属商户PID
         /// </summary>
         [XmlElement("belong_merchant_id")]
         public string BelongMerchantId { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string PublishEndTime { get; set; }
 
         /// <summary>
-        /// 券发放开始时间。格式为：yyyy-MM-dd HH:mm:ss。
+        /// 券发放开始时间。 格式为：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("publish_start_time")]
         public string PublishStartTime { get; set; }

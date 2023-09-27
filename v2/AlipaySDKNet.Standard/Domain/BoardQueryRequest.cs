@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public bool ExcludeImport { get; set; }
 
         /// <summary>
-        /// 数据日期，格式yyyyMMdd，比如"20221230"
+        /// 数据日期，格式yyyyMMdd
         /// </summary>
         [XmlElement("report_date")]
         public string ReportDate { get; set; }

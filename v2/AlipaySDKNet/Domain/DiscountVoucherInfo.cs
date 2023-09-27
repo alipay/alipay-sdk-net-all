@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Discount { get; set; }
 
         /// <summary>
-        /// 门槛金额。
+        /// 门槛金额。说明：该字段可不填，认为无门槛;
         /// </summary>
         [XmlElement("floor_amount")]
         public string FloorAmount { get; set; }

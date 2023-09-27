@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayOpenMiniTipsDeliveryQueryResponse : AopResponse
     {
         /// <summary>
-        /// 收藏引导文案内容
+        /// 收藏引导文案内容，不得超过14个字
         /// </summary>
         [XmlElement("delivery_content")]
         public string DeliveryContent { get; set; }
@@ -45,7 +45,7 @@ namespace Aop.Api.Response
         public string MatchType { get; set; }
 
         /// <summary>
-        /// 目标页面地址
+        /// 目标页面地址，当匹配类型为TARGETURL时，投放文案仅在当前页面生效
         /// </summary>
         [XmlElement("match_url")]
         public string MatchUrl { get; set; }

@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public List<string> Keywords { get; set; }
 
         /// <summary>
-        /// 模块ID
+        /// 模块配置ID
         /// </summary>
         [XmlElement("module_id")]
         public string ModuleId { get; set; }

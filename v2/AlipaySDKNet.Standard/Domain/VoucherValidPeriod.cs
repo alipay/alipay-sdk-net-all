@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class VoucherValidPeriod : AopObject
     {
         /// <summary>
-        /// 券有效期。
+        /// 券有效期类型
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

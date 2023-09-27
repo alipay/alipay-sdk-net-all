@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniInstantiateQueryModel : AopObject
     {
         /// <summary>
-        /// 小程序appId
+        /// 小程序id
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }

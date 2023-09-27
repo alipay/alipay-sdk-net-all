@@ -36,13 +36,13 @@ namespace Aop.Api.Domain
         public List<InvoiceApplyOpenApi> InvoiceApplys { get; set; }
 
         /// <summary>
-        /// 发票备注
+        /// 发票票面备注、Remarks
         /// </summary>
         [XmlElement("invoice_note")]
         public string InvoiceNote { get; set; }
 
         /// <summary>
-        /// 备注
+        /// 申请原因、备注
         /// </summary>
         [XmlElement("memo")]
         public string Memo { get; set; }

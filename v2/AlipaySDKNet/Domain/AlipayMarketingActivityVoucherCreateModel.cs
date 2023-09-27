@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string MerchantAccessMode { get; set; }
 
         /// <summary>
-        /// 用作幂等控制。    幂等作用：  参数不变的情况下，再次请求返回与上一次相同的结果。    外部接入方需保证业务单号唯一。
+        /// 用作幂等控制。  幂等作用： 参数不变的情况下，再次请求返回与上一次相同的结果。  外部接入方需保证业务单号唯一。
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 券发放结束时间。 格式为：yyyy-MM-dd HH:mm:ss 限制： 券发放结束时间 publish_end_time 与 券发放开始时间 publish_start_time 间隔必须小于等于180天
+        /// 券发放结束时间。 格式为：yyyy-MM-dd HH:mm:ss 限制： 券发放结束时间 publish_end_time 与 券发放开始时间  publish_start_time 间隔必须小于等于180天
         /// </summary>
         [XmlElement("publish_end_time")]
         public string PublishEndTime { get; set; }

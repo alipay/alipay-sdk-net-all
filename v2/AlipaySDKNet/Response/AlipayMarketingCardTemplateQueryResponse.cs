@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayMarketingCardTemplateQueryResponse : AopResponse
     {
         /// <summary>
-        /// 业务卡号前缀，由商户指定 支付宝业务卡号生成规则：biz_no_prefix(商户指定)卡号前缀 + biz_no_suffix(实时生成）卡号后缀
+        /// 业务卡号前缀，由商户指定  支付宝业务卡号生成规则：biz_no_prefix(商户指定)卡号前缀 + biz_no_suffix(实时生成）卡号后缀
         /// </summary>
         [XmlElement("biz_no_prefix")]
         public string BizNoPrefix { get; set; }
@@ -102,7 +102,7 @@ namespace Aop.Api.Response
         public List<string> ShopIds { get; set; }
 
         /// <summary>
-        /// spi应用id，若使用openspi模式开卡，该字段为创建模版时，设置的实现spi.alipay.user.opencard.get接口的app_id。
+        /// spi应用id，若使用openspi模式开卡，该字段为创建模版时，设置的实现spi.alipay.user.opencard.get接口的app_id
         /// </summary>
         [XmlElement("spi_app_id")]
         public string SpiAppId { get; set; }

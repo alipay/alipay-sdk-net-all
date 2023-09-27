@@ -44,7 +44,7 @@ namespace Aop.Api.Domain
         public List<string> ShopIds { get; set; }
 
         /// <summary>
-        /// 后续废弃。券可使用的门店列表。列表中的门店id是通过调用接口ant.merchant.expand.shop.create创建门店返回的支付宝门店 id 接口参数是列表类型。 接口参数是列表类型。
+        /// 后续废弃。券可使用的门店列表。列表中的门店id是通过调用接口ant.merchant.expand.shop.create创建门店返回的支付宝门店  id 接口参数是列表类型。 接口参数是列表类型。
         /// </summary>
         [XmlArray("store_ids")]
         [XmlArrayItem("string")]

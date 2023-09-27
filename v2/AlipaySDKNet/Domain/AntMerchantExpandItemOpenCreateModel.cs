@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string Description { get; set; }
 
         /// <summary>
-        /// 商品扩展信息（具体KEY请参见产品文档）。 小程序订单中心场景接入参见  <a href="https://opendocs.alipay.com/mini/024hj4">接入指南</a>。
+        /// 商品扩展信息（具体KEY请参见产品文档）。 小程序订单中心场景接入参见 <a href="https://opendocs.alipay.com/mini/024hj4">接入指南</a>。
         /// </summary>
         [XmlArray("ext_info")]
         [XmlArrayItem("item_ext_info")]
@@ -44,7 +44,7 @@ namespace Aop.Api.Domain
         public List<ItemPropertyInfo> PropertyList { get; set; }
 
         /// <summary>
-        /// 业务场景码。 小程序订单中心场景固定为 APP_ORDER。
+        /// 业务场景码。
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }
@@ -57,7 +57,7 @@ namespace Aop.Api.Domain
         public List<SkuCreateInfo> SkuList { get; set; }
 
         /// <summary>
-        /// 商品所属标准类目ID，标品及非标品都需传入。  请填入 <a href="https://opendocs.alipay.com/mini/011lxt">小程序商品类目表</a> 中三级类目ID。
+        /// 商品所属标准类目ID，标品及非标品都需传入。 请填入 <a href="https://opendocs.alipay.com/mini/011lxt">小程序商品类目表</a> 中三级类目ID。
         /// </summary>
         [XmlElement("standard_category_id")]
         public string StandardCategoryId { get; set; }

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 违规工单状态枚举
+        /// 违规工单状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

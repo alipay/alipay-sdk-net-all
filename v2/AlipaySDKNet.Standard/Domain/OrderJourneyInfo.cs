@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class OrderJourneyInfo : AopObject
     {
         /// <summary>
-        /// 操作动作 -DELETE 删除，删除后的行程不再展示
+        /// 操作动作
         /// </summary>
         [XmlElement("action")]
         public string Action { get; set; }
@@ -55,13 +55,13 @@ namespace Aop.Api.Domain
         public string JourneyModifyTime { get; set; }
 
         /// <summary>
-        /// 商户行程单号 注：同一个pid下的行程单号需唯一。同一个pid下外部行程单号唯一
+        /// 商户行程单号
         /// </summary>
         [XmlElement("merchant_journey_no")]
         public string MerchantJourneyNo { get; set; }
 
         /// <summary>
-        /// 行程状态 注：行程状态必须与支付宝侧进行约定
+        /// 行程状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

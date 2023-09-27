@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEducateSchoolcardOrderSyncModel : AopObject
     {
         /// <summary>
-        /// 实际金额（总支付金额）
+        /// 实际金额（总支付金额），单位为【元】
         /// </summary>
         [XmlElement("actual_amount")]
         public string ActualAmount { get; set; }
@@ -28,19 +28,19 @@ namespace Aop.Api.Domain
         public string CardBalance { get; set; }
 
         /// <summary>
-        /// 卡号
+        /// 128
         /// </summary>
         [XmlElement("card_no")]
         public string CardNo { get; set; }
 
         /// <summary>
-        /// 卡类型
+        /// 校园卡类型
         /// </summary>
         [XmlElement("card_type")]
         public string CardType { get; set; }
 
         /// <summary>
-        /// 该笔订单真实的创建时间，需精确到毫秒。时间格式为 yyyy-MM-dd HH:mm:ss.SSS。同一笔订单保持不变
+        /// 该笔订单真实的创建时间，需精确到毫秒。
         /// </summary>
         [XmlElement("create_time")]
         public string CreateTime { get; set; }
@@ -64,13 +64,13 @@ namespace Aop.Api.Domain
         public string MerchantName { get; set; }
 
         /// <summary>
-        /// 订单修改时间，时间格式为 yyyy-MM-dd HH:mm:ss.SSS。用于订单状态或数据变化较快的顺序控制，防止乱序。order_modified_time较晚的同步会被最终存储，order_modified_time相同的两次同步会被幂等处理。
+        /// 订单修改时间
         /// </summary>
         [XmlElement("modified_time")]
         public string ModifiedTime { get; set; }
 
         /// <summary>
-        /// 蚂蚁统一会员ID
+        /// 用户open_id
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -88,13 +88,13 @@ namespace Aop.Api.Domain
         public string OrderDetailUrl { get; set; }
 
         /// <summary>
-        /// 订单状态 消费成功 CONSUME_S ；已退款：REFUNDED； 开卡成功 CARD_ACTIVED；消费失败：UN_CHARGE 充值成功 RECHARGE_S
+        /// 订单状态
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }
 
         /// <summary>
-        /// 外部业务号
+        /// 外部业务号，由商家自定义，128个字符以内，仅支持字母、数字、下划线且需保证在商户端不重复。
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
@@ -112,19 +112,19 @@ namespace Aop.Api.Domain
         public string PayMode { get; set; }
 
         /// <summary>
-        /// 返佣pid
+        /// 系统商编号。该参数作为系统商返佣数据提取的依据，请填写系统商签约协议的PID
         /// </summary>
         [XmlElement("rake_back_pid")]
         public string RakeBackPid { get; set; }
 
         /// <summary>
-        /// 学校内标
+        /// 学校内标，录入学校接口返回的参数
         /// </summary>
         [XmlElement("school_id")]
         public string SchoolId { get; set; }
 
         /// <summary>
-        /// 学校pid
+        /// 学校收款账号
         /// </summary>
         [XmlElement("school_pid")]
         public string SchoolPid { get; set; }
@@ -142,7 +142,7 @@ namespace Aop.Api.Domain
         public string Type { get; set; }
 
         /// <summary>
-        /// 蚂蚁统一会员ID
+        /// 买家支付宝用户ID。 2088开头的16位纯数字，小程序场景下获取用户ID请参考：用户授权; 其它场景下获取用户ID请参考：网页授权获取用户信息;
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

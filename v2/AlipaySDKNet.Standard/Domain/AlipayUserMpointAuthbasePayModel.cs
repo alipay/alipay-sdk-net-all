@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
+        /// 积分扣减订单详情
+        /// </summary>
+        [XmlElement("deduct_order_detail")]
+        public DeductOrderDetail DeductOrderDetail { get; set; }
+
+        /// <summary>
         /// 用户标识
         /// </summary>
         [XmlElement("open_id")]

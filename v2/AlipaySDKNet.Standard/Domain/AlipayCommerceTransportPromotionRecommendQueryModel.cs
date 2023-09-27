@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
+
+        /// <summary>
+        /// 在优惠券里配置的优惠标记
+        /// </summary>
+        [XmlElement("promo_tag")]
+        public string PromoTag { get; set; }
     }
 }

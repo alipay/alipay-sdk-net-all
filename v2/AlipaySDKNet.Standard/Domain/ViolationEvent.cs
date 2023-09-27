@@ -52,13 +52,13 @@ namespace Aop.Api.Domain
         public string TargetType { get; set; }
 
         /// <summary>
-        /// 违规记录ID
+        /// 支付宝侧生成的违规记录唯一标识
         /// </summary>
         [XmlElement("violation_record_id")]
         public string ViolationRecordId { get; set; }
 
         /// <summary>
-        /// 违规时间
+        /// 违规时间，格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("violation_time")]
         public string ViolationTime { get; set; }

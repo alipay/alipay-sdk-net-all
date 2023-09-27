@@ -28,5 +28,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("is_batch")]
         public bool IsBatch { get; set; }
+
+        /// <summary>
+        /// 影子标记
+        /// </summary>
+        [XmlElement("test_mode")]
+        public bool TestMode { get; set; }
     }
 }

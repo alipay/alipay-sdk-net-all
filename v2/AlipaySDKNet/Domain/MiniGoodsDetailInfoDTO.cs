@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 商品未上报商品库时，需传入 上传商品文件接口alipay.merchant.item.file.upload  获取的 material_id。如果该商品已经上报商品库，可不传
+        /// 商品未上报商品库时，需传入  上传商品文件接口alipay.merchant.item.file.upload  获取的 material_id。如果该商品已经上报商品库，可不传
         /// </summary>
         [XmlElement("image_material_id")]
         public string ImageMaterialId { get; set; }

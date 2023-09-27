@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string CrowdCode { get; set; }
 
         /// <summary>
-        /// 商家人群名称
+        /// 人群名称 最大长度为15个字符
         /// </summary>
         [XmlElement("crowd_name")]
         public string CrowdName { get; set; }

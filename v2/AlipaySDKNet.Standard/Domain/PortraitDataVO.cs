@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string PortraitName { get; set; }
 
         /// <summary>
-        /// 数据日期
+        /// 数据日期，格式为yyyyMMdd
         /// </summary>
         [XmlElement("report_date")]
         public string ReportDate { get; set; }

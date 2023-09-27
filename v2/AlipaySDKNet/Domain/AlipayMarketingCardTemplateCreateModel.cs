@@ -127,7 +127,7 @@ namespace Aop.Api.Domain
         public TemplateStyleInfoDTO TemplateStyleInfo { get; set; }
 
         /// <summary>
-        ///  卡包详情页面中展现出的卡码（可用于扫码核销）  (1) 静态码 qrcode: 二维码，扫码得商户开卡传入的external_card_no barcode: 条形码，扫码得商户开卡传入的external_card_no  (2) 动态码-支付宝生成码值(动态码会在2分钟左右后过期) dqrcode: 动态二维码，扫码得到的码值可配合会员卡查询接口使用 dbarcode: 动态条形码，扫码得到的码值可配合会员卡查询接口使用  (3) 动态码-商家自主生成码值（码值、时效性都由商户控制） mdqrcode: 商户动态二维码，扫码得商户自主传入的码值 mdbarcode: 商户动态条码，扫码得商户自主传入的码值 如需使用商户动态码，对接详情参见 <a href="https://opendocs.alipay.com/open/02y7gt">商户动态发码</a>。  (4)无码值-商家不需要核销码  none:商家无需核销码
+        /// 卡包详情页面中展现出的卡码（可用于扫码核销）  (1) 静态码 qrcode: 二维码，扫码得商户开卡传入的external_card_no barcode: 条形码，扫码得商户开卡传入的external_card_no  (2) 动态码-支付宝生成码值(动态码会在2分钟左右后过期) dqrcode: 动态二维码，扫码得到的码值可配合会员卡查询接口使用 dbarcode: 动态条形码，扫码得到的码值可配合会员卡查询接口使用  (3) 动态码-商家自主生成码值（码值、时效性都由商户控制） mdqrcode: 商户动态二维码，扫码得商户自主传入的码值 mdbarcode: 商户动态条码，扫码得商户自主传入的码值 如需使用商户动态码，对接详情参见 <a  href="https://opendocs.alipay.com/open/02y7gt">商户动态发码</a>。
         /// </summary>
         [XmlElement("write_off_type")]
         public string WriteOffType { get; set; }

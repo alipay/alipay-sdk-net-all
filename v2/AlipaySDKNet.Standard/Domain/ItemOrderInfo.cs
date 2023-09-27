@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<OrderExtInfo> ExtInfo { get; set; }
 
         /// <summary>
-        /// 商品 id
+        /// 商品ID
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
-        /// 商品数量（单位：自拟）。 小程序订单助手业务中，为必传；其他业务场景参见对应的产品文档。
+        /// 商品数量（单位：自拟）
         /// </summary>
         [XmlElement("quantity")]
         public long Quantity { get; set; }
@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string SkuId { get; set; }
 
         /// <summary>
-        /// 商品状态枚举，默认无需传入，如需使用请联系业务负责人
+        /// 商品状态枚举
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

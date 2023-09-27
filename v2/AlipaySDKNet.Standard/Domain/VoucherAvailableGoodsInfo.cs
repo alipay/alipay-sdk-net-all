@@ -25,7 +25,7 @@ namespace Aop.Api.Domain
         public List<string> ExcludeGoodsSkuIds { get; set; }
 
         /// <summary>
-        /// 商品描述
+        /// 商品描述信息。 用于券面展示，向用户介绍商品
         /// </summary>
         [XmlElement("goods_description")]
         public string GoodsDescription { get; set; }
@@ -56,7 +56,7 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 商品原价
+        /// 原价。说明：该字段可不填，填入商品名称goods_name则必填;
         /// </summary>
         [XmlElement("origin_amount")]
         public string OriginAmount { get; set; }

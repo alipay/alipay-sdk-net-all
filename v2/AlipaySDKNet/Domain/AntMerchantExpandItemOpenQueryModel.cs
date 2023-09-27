@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandItemOpenQueryModel : AopObject
     {
         /// <summary>
-        /// 场景码（具体值请参见产品文档）。 小程序订单中心场景固定为 APP_ORDER。
+        /// 场景码（具体值请参见产品文档）。
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }
 
         /// <summary>
-        /// 商品状态：EFFECT（有效）、INVALID（无效）
+        /// 商品状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayFundWalletOrderQueryResponse : AopResponse
     {
         /// <summary>
-        /// 实际交易金额
+        /// 实际交易金额，单位：元
         /// </summary>
         [XmlElement("actual_amount")]
         public string ActualAmount { get; set; }
@@ -30,7 +30,7 @@ namespace Aop.Api.Response
         public List<RefundPaymentAssetInfo> RefundPaymentAssetInfos { get; set; }
 
         /// <summary>
-        /// 交易总金额
+        /// 交易总金额，单位：元
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

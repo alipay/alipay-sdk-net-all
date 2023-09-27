@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCloudTraasRiskgoAwardingQueryModel : AopObject
     {
         /// <summary>
+        /// 可填入活动id的唯一值，或其他活动信息
+        /// </summary>
+        [XmlElement("activity_info")]
+        public string ActivityInfo { get; set; }
+
+        /// <summary>
         /// 银行卡号，如无法提供，可填写为空值“null”字符串
         /// </summary>
         [XmlElement("bank_card_no")]
@@ -34,7 +40,7 @@ namespace Aop.Api.Domain
         public string CustomerId { get; set; }
 
         /// <summary>
-        /// app所在环境名称
+        /// app所在环境名称 当前字段已废弃(环境信息不再需要，故废弃)
         /// </summary>
         [XmlElement("env_id")]
         public string EnvId { get; set; }
@@ -52,7 +58,7 @@ namespace Aop.Api.Domain
         public string Imsi { get; set; }
 
         /// <summary>
-        /// 行业信息
+        /// 行业信息 当前字段已废弃(行业信息统一至business_code字段，不再保存该字段)
         /// </summary>
         [XmlElement("industry")]
         public string Industry { get; set; }
@@ -106,6 +112,12 @@ namespace Aop.Api.Domain
         public string OpposingUserid { get; set; }
 
         /// <summary>
+        /// 填入想要咨询风控的二维码值，需为唯一值
+        /// </summary>
+        [XmlElement("qr_code")]
+        public string QrCode { get; set; }
+
+        /// <summary>
         /// 用户匹配服务类型, 请按照示例值填写
         /// </summary>
         [XmlElement("risk_type")]
@@ -134,6 +146,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service")]
         public string Service { get; set; }
+
+        /// <summary>
+        /// 服务二级分类，按照文档介绍填写，如无可不填
+        /// </summary>
+        [XmlElement("service_category")]
+        public string ServiceCategory { get; set; }
 
         /// <summary>
         /// 门店行业类目

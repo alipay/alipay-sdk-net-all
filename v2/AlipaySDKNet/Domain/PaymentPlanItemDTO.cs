@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class PaymentPlanItemDTO : AopObject
     {
         /// <summary>
-        /// ext
+        /// 废弃 当前字段已废弃(不支持json字段的信息透出)
         /// </summary>
         [XmlElement("ext")]
         public string Ext { get; set; }

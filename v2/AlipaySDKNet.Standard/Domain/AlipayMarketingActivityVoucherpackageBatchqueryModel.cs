@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string VoucherPackagePurchaseStartTime { get; set; }
 
         /// <summary>
-        /// 券包状态：不指定可查全部状态，指定时只支持查单个状态
+        /// 券包状态
         /// </summary>
         [XmlElement("voucher_package_status")]
         public string VoucherPackageStatus { get; set; }

@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("guided_code_img")]
         public string GuidedCodeImg { get; set; }
+
+        /// <summary>
+        /// 支付宝吱口令
+        /// </summary>
+        [XmlElement("guided_share_code")]
+        public string GuidedShareCode { get; set; }
     }
 }

@@ -230,7 +230,7 @@ namespace Aop.Api.Response
         public string IdentityCardProvince { get; set; }
 
         /// <summary>
-        /// 是否是金融机构或特殊单位，"I"表示金融机构, "C"表示无余额账户的单位账户, "V", 表示虚拟主体(类似机构仅内部户无余额户), "N"表示非金融机构且非无余额账户的单位账户,"?"表示匿名用户
+        /// 是否是金融机构或特殊单位，"I"表示金融机构, "C"表示无余额账户的单位账户,  "V", 表示虚拟主体(类似机构仅内部户无余额户),  "N"表示非金融机构且非无余额账户的单位账户,"?"表示匿名用户
         /// </summary>
         [XmlElement("inst_or_corp")]
         public string InstOrCorp { get; set; }

@@ -18,15 +18,22 @@ namespace Aop.Api.Domain
         public List<MpcpromoGoodsList> DataList { get; set; }
 
         /// <summary>
-        /// 数据类型 : USER（用户数据）、ITEM（商品数据）
+        /// 数据类型 : VOUCHER（商家券数据）、ITEM（商品数据）
         /// </summary>
         [XmlElement("data_type")]
         public string DataType { get; set; }
 
         /// <summary>
-        /// 行业类别:   goodsLease（常规/租赁 商品数据）
+        /// 行业类别:   goodsLease（常规/租赁 商品数据）,voucherNormal（常规商家券）
         /// </summary>
         [XmlElement("industry")]
         public string Industry { get; set; }
+
+        /// <summary>
+        /// mpcpromo商家券数据
+        /// </summary>
+        [XmlArray("voucher_list")]
+        [XmlArrayItem("mpcpromo_voucher_list")]
+        public List<MpcpromoVoucherList> VoucherList { get; set; }
     }
 }

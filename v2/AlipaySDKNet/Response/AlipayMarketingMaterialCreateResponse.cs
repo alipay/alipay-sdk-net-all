@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayMarketingMaterialCreateResponse : AopResponse
     {
         /// <summary>
-        /// 素材id
+        /// 素材ID。
         /// </summary>
         [XmlElement("material_id")]
         public string MaterialId { get; set; }

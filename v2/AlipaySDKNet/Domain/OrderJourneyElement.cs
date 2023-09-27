@@ -23,13 +23,13 @@ namespace Aop.Api.Domain
         public JourneyLocation Departure { get; set; }
 
         /// <summary>
-        /// 行程时长，单位为秒
+        /// 行程时长
         /// </summary>
         [XmlElement("duration")]
         public string Duration { get; set; }
 
         /// <summary>
-        /// 结束时间（格式化）
+        /// 结束时间
         /// </summary>
         [XmlElement("end_time")]
         public string EndTime { get; set; }
@@ -74,13 +74,13 @@ namespace Aop.Api.Domain
         public JourneyMerchantInfo ServiceProvider { get; set; }
 
         /// <summary>
-        /// 开始时间格式化
+        /// 开始时间
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 开始时间描述（非格式化）
+        /// 开始时间描述（非结构化）
         /// </summary>
         [XmlElement("start_time_desc")]
         public string StartTimeDesc { get; set; }

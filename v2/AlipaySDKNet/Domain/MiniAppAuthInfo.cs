@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AuthTime { get; set; }
 
         /// <summary>
-        /// 三方应用id
+        /// 服务商appid
         /// </summary>
         [XmlElement("isv_app_id")]
         public string IsvAppId { get; set; }

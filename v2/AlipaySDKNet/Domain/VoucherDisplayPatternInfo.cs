@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class VoucherDisplayPatternInfo : AopObject
     {
         /// <summary>
-        /// 商家logo 需要通过 alipay.marketing.material.image.upload接口上传图片，指定file_key为PROMO_BRAND_LOGO，返回的resource_id即为该参数的值。
+        /// 商家logo 需要通过  alipay.marketing.material.image.upload接口上传图片，指定file_key为PROMO_BRAND_LOGO，返回的resource_id即为该参数的值。
         /// </summary>
         [XmlElement("brand_logo")]
         public string BrandLogo { get; set; }
@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string BrandLogoUrl { get; set; }
 
         /// <summary>
-        /// 商户品牌名称。 如果不设置品牌名称，则默认使用支付宝商家系统中维护的商家别名。 如果没有维护商家别名，则使用默认名称： 商家优惠。 用户领取优惠券后，品牌名称会对用户进行展示。
+        /// 商户品牌名称。
         /// </summary>
         [XmlElement("brand_name")]
         public string BrandName { get; set; }
@@ -54,14 +54,14 @@ namespace Aop.Api.Domain
         public List<string> VoucherDetailImageUrls { get; set; }
 
         /// <summary>
-        /// 券详细图列表，会展示在用户支付宝卡包券详情页 需要通过 alipay.marketing.material.image.upload接口上传图片，指定file_key为PROMO_VOUCHER_DETAIL_IMAGE ,接口返回的resource_id即为该参数的值 上传图片尺寸600*600，支持格式：png、jpg、jpeg、bmp，大小不超过2MB。
+        /// 券详细图列表，会展示在用户支付宝卡包券详情页 需要通过  alipay.marketing.material.image.upload接口上传图片，指定file_key为PROMO_VOUCHER_DETAIL_IMAGE  ,接口返回的resource_id即为该参数的值 上传图片尺寸600*600，支持格式：png、jpg、jpeg、bmp，大小不超过2MB。
         /// </summary>
         [XmlArray("voucher_detail_images")]
         [XmlArrayItem("string")]
         public List<string> VoucherDetailImages { get; set; }
 
         /// <summary>
-        /// 券详情页封面图，会展示在用户支付宝卡包券详情页。 需要通过 alipay.marketing.material.image.upload接口上传图片，指定file_key为PROMO_VOUCHER_IMAGE，接口返回的resource_id即为该参数的值。
+        /// 券详情页封面图，会展示在用户支付宝卡包券详情页。 需要通过  alipay.marketing.material.image.upload接口上传图片，指定file_key为PROMO_VOUCHER_IMAGE，接口返回的resource_id即为该参数的值。
         /// </summary>
         [XmlElement("voucher_image")]
         public string VoucherImage { get; set; }

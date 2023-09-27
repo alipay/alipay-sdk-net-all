@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string OrganizerName { get; set; }
 
         /// <summary>
+        /// 生成吱口令的定制文案
+        /// </summary>
+        [XmlElement("pre_content")]
+        public string PreContent { get; set; }
+
+        /// <summary>
         /// 任务模板描述
         /// </summary>
         [XmlElement("task_desc")]

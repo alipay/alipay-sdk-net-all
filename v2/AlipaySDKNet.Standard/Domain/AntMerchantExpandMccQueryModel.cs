@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandMccQueryModel : AopObject
     {
         /// <summary>
-        /// 传入需要查询的code列表，以分号分隔；注：如果需要查询完整类目树，可以传入ROOT
+        /// 传入需要查询的code列表，以英文逗号分隔
         /// </summary>
         [XmlElement("mcc_code_list")]
         public string MccCodeList { get; set; }

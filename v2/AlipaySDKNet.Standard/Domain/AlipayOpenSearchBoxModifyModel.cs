@@ -49,7 +49,7 @@ namespace Aop.Api.Domain
         public List<string> BusinessDistrictIds { get; set; }
 
         /// <summary>
-        /// 自定义关键词，最多可配置6个，限1-8个中文字符。当修改触发词模块时(module_type=BOX_EXCLUSIVE_KEYWORD)传入。 小程序直达不支持设置
+        /// 1024
         /// </summary>
         [XmlElement("custom_keywords")]
         public string CustomKeywords { get; set; }
@@ -79,7 +79,7 @@ namespace Aop.Api.Domain
         public string ModuleId { get; set; }
 
         /// <summary>
-        /// 搜索直达模块类型，参考<a href="https://opendocs.alipay.com/mini/03fjba#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"> 搜索直达模块说明 </a>。取值范围：BOX_EXCLUSIVE_BASE-品牌介绍/BOX_EXCLUSIVE_KEYWORD-触发词/BOX_EXCLUSIVE_FUNCTIONS-常用服务/BOX_EXCLUSIVE_ACCOUNTS-官方账号/BOX_ATMOSPHERE_IMAGE-氛围图
+        /// 搜索直达模块类型，参考<a href="https://opendocs.alipay.com/mini/03fjba#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"> 搜索直达模块说明 </a>。
         /// </summary>
         [XmlElement("module_type")]
         public string ModuleType { get; set; }

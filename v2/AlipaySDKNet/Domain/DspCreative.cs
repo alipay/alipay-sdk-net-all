@@ -31,6 +31,13 @@ namespace Aop.Api.Domain
         public string CreativeId { get; set; }
 
         /// <summary>
+        /// 创意标签，包含创意来源等信息
+        /// </summary>
+        [XmlArray("creative_tags")]
+        [XmlArrayItem("string")]
+        public List<string> CreativeTags { get; set; }
+
+        /// <summary>
         /// 唤端链接
         /// </summary>
         [XmlElement("deeplink_url")]

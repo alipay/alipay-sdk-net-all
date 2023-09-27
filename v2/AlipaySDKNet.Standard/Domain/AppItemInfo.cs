@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string MiniAppId { get; set; }
 
         /// <summary>
-        /// 小程序商品外部id
+        /// 外部商品ID
         /// </summary>
         [XmlElement("out_item_id")]
         public string OutItemId { get; set; }

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCloudTraasRiskgoBaddebtQueryModel : AopObject
     {
         /// <summary>
+        /// 可填入活动id唯一值，或其他活动信息
+        /// </summary>
+        [XmlElement("activity_info")]
+        public string ActivityInfo { get; set; }
+
+        /// <summary>
         /// 终端唯一标识
         /// </summary>
         [XmlElement("apdid")]
@@ -28,13 +34,13 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// app所在环境id
+        /// app所在环境id 当前字段已废弃(环境信息不再需要，故废弃)
         /// </summary>
         [XmlElement("env_id")]
         public string EnvId { get; set; }
 
         /// <summary>
-        /// 所属行业信息
+        /// 所属行业信息 当前字段已废弃(行业信息统一至business_code 字段，不再保留该字段)
         /// </summary>
         [XmlElement("industry")]
         public string Industry { get; set; }
@@ -88,7 +94,7 @@ namespace Aop.Api.Domain
         public string Role { get; set; }
 
         /// <summary>
-        /// 风险咨询对应的自身业务场景/环节
+        /// 风险咨询对应的自身业务场景或事咨询环节，如有疑问可沟通
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }
@@ -98,6 +104,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service")]
         public string Service { get; set; }
+
+        /// <summary>
+        /// 服务二级分类，按照文档介绍填写，如无可不填
+        /// </summary>
+        [XmlElement("service_category")]
+        public string ServiceCategory { get; set; }
 
         /// <summary>
         /// 用户购买或使用服务时产生的具体金额。如参数无法提供，请填写“null”；单位:元

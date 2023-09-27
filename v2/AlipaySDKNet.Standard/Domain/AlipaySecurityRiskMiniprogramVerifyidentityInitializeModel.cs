@@ -41,14 +41,14 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 核验服务名称，同时请求多种服务用数组组合，人脸：MIC_FACEVERIFY_LV2_ACCOUNT
+        /// 核验服务名称，目前仅支持人脸，后续支持多因子核身产品
         /// </summary>
         [XmlArray("product_code")]
         [XmlArrayItem("string")]
         public List<string> ProductCode { get; set; }
 
         /// <summary>
-        /// 身份核验场景CODE，场景节点，如login, riskVerify, payment, changePassword.
+        /// 身份核验场景CODE，为接入场景的英文名称，比如登陆login, 风险校验riskVerify, 支付payment等，需保证同一商户下多种接入场景code的唯一性
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

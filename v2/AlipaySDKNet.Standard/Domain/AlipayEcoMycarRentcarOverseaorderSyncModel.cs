@@ -166,7 +166,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 订单状态，状态机： 待支付->已取消，待支付->已支付； 已支付->已取消，已支付->已确认； 已确认->已取消；
+        /// 订单状态，状态机： 待支付->已取消，待支付->已关闭，待支付->已支付； 已支付->已取消，已支付->已确认； 已确认->已取消；
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }

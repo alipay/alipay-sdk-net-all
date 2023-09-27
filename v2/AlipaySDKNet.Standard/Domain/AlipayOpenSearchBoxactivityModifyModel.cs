@@ -65,7 +65,7 @@ namespace Aop.Api.Domain
         public string TargetAppid { get; set; }
 
         /// <summary>
-        /// 跳转小程序名称
+        /// 目标小程序名称
         /// </summary>
         [XmlElement("target_appname")]
         public string TargetAppname { get; set; }

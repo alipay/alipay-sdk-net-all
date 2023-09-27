@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AlipayOpenId { get; set; }
 
         /// <summary>
+        /// 卖家应用信息
+        /// </summary>
+        [XmlElement("application_info")]
+        public InsOpenApplicationInfoDTO ApplicationInfo { get; set; }
+
+        /// <summary>
         /// 卖家标
         /// </summary>
         [XmlElement("attributes")]

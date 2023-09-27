@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class VoucherUseDetailInfo : AopObject
     {
         /// <summary>
-        /// 本次核销次数
+        /// 本次核销次数（不包含撤销核销的次数）
         /// </summary>
         [XmlElement("voucher_use_times")]
         public long VoucherUseTimes { get; set; }

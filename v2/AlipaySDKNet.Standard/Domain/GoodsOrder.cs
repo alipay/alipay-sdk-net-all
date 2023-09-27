@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 商品图片素材Id；商品文件上传接口返回material_id。不传则暂时默认约定图片，具体可以咨询支付宝行业小二
+        /// 商品图片素材Id
         /// </summary>
         [XmlElement("goods_picture_id")]
         public string GoodsPictureId { get; set; }

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AssumeToken { get; set; }
 
         /// <summary>
-        /// 环境ID
+        /// 环境ID，唯一，开通小程序云系统会生成环境ID，请从开通页面获取
         /// </summary>
         [XmlElement("env")]
         public string Env { get; set; }

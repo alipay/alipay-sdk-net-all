@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BrandName { get; set; }
 
         /// <summary>
-        /// 小程序提交品牌认证后的认证状态 AUDITING(审核中) AUDIT_PASS(审核通过) AUDIT_REJECT(驳回审核) INVALID(已失效) NEAR_INVALID(即将过期失效) CANCEL(取消认证) NO_BRAND(未认证)
+        /// 小程序提交品牌认证后的认证状态
         /// </summary>
         [XmlElement("brand_status")]
         public string BrandStatus { get; set; }

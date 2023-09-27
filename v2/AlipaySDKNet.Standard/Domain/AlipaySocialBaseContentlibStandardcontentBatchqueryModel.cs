@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipaySocialBaseContentlibStandardcontentBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 指示是否返回内容详情,  默认为false false: 仅返回内容ID列表 true:返回 content_details
+        /// 指示是否返回内容详情, 默认为false false: 仅返回内容ID列表 true:返回 content_details
         /// </summary>
         [XmlElement("need_detail")]
         public bool NeedDetail { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string PublicId { get; set; }
 
         /// <summary>
-        /// 内容状态，默认查询所有状态 0-审核中  1-发布成功  2-审核不通过  3-己删除
+        /// 内容状态，默认查询所有状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public long MaxQuantityByDay { get; set; }
 
         /// <summary>
-        /// 限制相同身份证号领取次数(voucher_quantity_limit_per_user)。默认false不限制。 枚举值 true：是 false：否
+        /// 限制相同身份证号领取次数(voucher_quantity_limit_per_user)。默认false不限制。 枚举值 true：是  false：否
         /// </summary>
         [XmlElement("natural_person_limit")]
         public bool NaturalPersonLimit { get; set; }

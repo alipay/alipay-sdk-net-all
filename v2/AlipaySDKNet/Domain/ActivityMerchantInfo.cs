@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ActivityMerchantInfo : AopObject
     {
         /// <summary>
-        /// 商户支付宝id
+        /// 商户PID,默认为当前接口调用商户。
         /// </summary>
         [XmlElement("merchant_id")]
         public string MerchantId { get; set; }

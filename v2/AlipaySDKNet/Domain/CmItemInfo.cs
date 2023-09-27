@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string StandardCategoryId { get; set; }
 
         /// <summary>
-        /// 商品状态：  EFFECT（有效）、INVALID（无效）
+        /// 商品状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

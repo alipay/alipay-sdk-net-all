@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<string> ApplyChannelList { get; set; }
 
         /// <summary>
-        /// 棋盘商家人群描述
+        /// 支付宝人群描述
         /// </summary>
         [XmlElement("crowd_desc")]
         public string CrowdDesc { get; set; }
@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public string CrowdId { get; set; }
 
         /// <summary>
-        /// 商家棋盘人群名称
+        /// 人群名称 最大长度为15个字符
         /// </summary>
         [XmlElement("crowd_name")]
         public string CrowdName { get; set; }

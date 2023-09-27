@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayMerchantQipanCrowdBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 人群名称
+        /// 人群名称 最大长度为15个字符
         /// </summary>
         [XmlElement("crowd_name")]
         public string CrowdName { get; set; }
 
         /// <summary>
-        /// 页数，本参数为空或小于1默认显示第一页；
+        /// 页码，本参数为空或小于1默认显示第一页；
         /// </summary>
         [XmlElement("page_number")]
         public string PageNumber { get; set; }

@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayDigitalopUcdpApecreativeMaterialSyncModel : AopObject
     {
         /// <summary>
+        /// 创建类型，1为只要根据风格合图，2为根据风格和布局合图
+        /// </summary>
+        [XmlElement("create_type")]
+        public long CreateType { get; set; }
+
+        /// <summary>
         /// 创意组id,如果不填，重新创建一个创意组，如果填了 在原有的创意组中更新信息
         /// </summary>
         [XmlElement("group_id")]

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMerchantOrderSyncModel : AopObject
     {
         /// <summary>
-        /// 订单金额，单位为【元】。SERVICE_ORDER且不涉及金额可不传入该字段，其他场景必传
+        /// 订单金额
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public UserInfomation BuyerInfo { get; set; }
 
         /// <summary>
-        /// OpenId是用户（buyer_id）在应用（AppId）下的唯一用户标识.
+        /// 用户open_id
         /// </summary>
         [XmlElement("buyer_open_id")]
         public string BuyerOpenId { get; set; }
@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// 优惠金额，单位为【元】
+        /// 优惠金额
         /// </summary>
         [XmlElement("discount_amount")]
         public string DiscountAmount { get; set; }
@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public List<DiscountInfoData> DiscountInfoList { get; set; }
 
         /// <summary>
-        /// 扩展信息，请参见 <a href="https://opendocs.alipay.com/mini/introduce/ordercenter">小程序订单中心</a>；<a href="https://opendocs.alipay.com/mini/00nnt3">扫码点餐</a>产品文档。
+        /// 扩展信息，请参见 <a href="https://opendocs.alipay.com/mini/introduce/ordercenter">小程序订单中心</a>
         /// </summary>
         [XmlArray("ext_info")]
         [XmlArrayItem("order_ext_info")]
@@ -88,25 +88,25 @@ namespace Aop.Api.Domain
         public string OrderAuthCode { get; set; }
 
         /// <summary>
-        /// 订单创建时间 当order_type为SERVICE_ORDER时必传
+        /// 订单创建时间
         /// </summary>
         [XmlElement("order_create_time")]
         public string OrderCreateTime { get; set; }
 
         /// <summary>
-        /// 订单修改时间。用于订单状态或数据变化较快的顺序控制，SERVICE_ORDER按照行业标准化接入场景必须传入该字段控制乱序。order_modified_time较晚的同步会被最终存储，order_modified_time相同的两次同步会被幂等处理
+        /// 订单修改时间
         /// </summary>
         [XmlElement("order_modified_time")]
         public string OrderModifiedTime { get; set; }
 
         /// <summary>
-        /// 订单支付时间 当pay_channel为非ALIPAY时，且订单状态已流转到“支付”或支付后时，需要将支付时间传入
+        /// 订单支付时间
         /// </summary>
         [XmlElement("order_pay_time")]
         public string OrderPayTime { get; set; }
 
         /// <summary>
-        /// 订单类型，新接入商户统一传入SERVICE_ORDER(服务订单)
+        /// 订单类型
         /// </summary>
         [XmlElement("order_type")]
         public string OrderType { get; set; }
@@ -118,7 +118,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 交易对应的签约商户userId 注意：该字段自2020-02-16日起，可以不传入
+        /// 交易对应的签约商户userId
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }
@@ -142,13 +142,13 @@ namespace Aop.Api.Domain
         public string RecordId { get; set; }
 
         /// <summary>
-        /// 卖家userId 注意：该字段自2020-02-16日起，可以不传入
+        /// 卖家userId
         /// </summary>
         [XmlElement("seller_id")]
         public string SellerId { get; set; }
 
         /// <summary>
-        /// 是否需要小程序订单代理发送模版消息，Y代表需要发送，N代表不需要发送，不传默认不发送
+        /// 是否需要小程序订单代理发送模版消息。不传默认不发送
         /// </summary>
         [XmlElement("send_msg")]
         public string SendMsg { get; set; }
@@ -166,13 +166,13 @@ namespace Aop.Api.Domain
         public OrderShopInfo ShopInfo { get; set; }
 
         /// <summary>
-        /// 用于区分用户下单的订单来源，如 Alipay-支付宝端内（默认） DingTalk-钉钉小程序
+        /// 用于区分用户下单的订单来源
         /// </summary>
         [XmlElement("source_app")]
         public string SourceApp { get; set; }
 
         /// <summary>
-        /// 同步内容 -JOURNEY_ONLY 仅行程信息 -ALL 全部(默认)
+        /// 同步内容
         /// </summary>
         [XmlElement("sync_content")]
         public string SyncContent { get; set; }
@@ -197,7 +197,7 @@ namespace Aop.Api.Domain
         public string TradeNo { get; set; }
 
         /// <summary>
-        /// 交易号类型 1. TRADE-交易，为空默认为TRADE 2. TRANSFER-转账 3. ENTRUST-受托
+        /// 交易号类型
         /// </summary>
         [XmlElement("trade_type")]
         public string TradeType { get; set; }

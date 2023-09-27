@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<string> FailReasons { get; set; }
 
         /// <summary>
-        /// 请求失败的支付门店 ID。
+        /// 支付宝侧蚂蚁店铺 id。
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }

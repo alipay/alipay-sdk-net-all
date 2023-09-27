@@ -58,6 +58,18 @@ namespace Aop.Api.Domain
         public string InvoiceNo { get; set; }
 
         /// <summary>
+        /// 发票类型
+        /// </summary>
+        [XmlElement("invoice_type")]
+        public string InvoiceType { get; set; }
+
+        /// <summary>
+        /// 平台code
+        /// </summary>
+        [XmlElement("platform_code")]
+        public string PlatformCode { get; set; }
+
+        /// <summary>
         /// 税额,单位元,两位小数
         /// </summary>
         [XmlElement("tax_amt")]

@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 完成发货时间，格式为yyyy-MM-dd HH:mm:ss；注：finish_all_delivery = 1的时候 必传
+        /// 完成发货时间，格式为yyyy-MM-dd  HH:mm:ss；注：finish_all_delivery = 1的时候 必传
         /// </summary>
         [XmlElement("ship_done_time")]
         public string ShipDoneTime { get; set; }

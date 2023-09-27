@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 交易组件订单号,和商家自定义交易号二选一
+        /// 交易组件订单号
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }

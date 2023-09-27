@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class MiniOrderExtInfoDTO : AopObject
     {
         /// <summary>
-        /// 预约上门取件的时间,格式为 yyyy-MM-dd HH:mm:ss
+        /// 预约上门取件的时间,格式为  yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("door_time")]
         public string DoorTime { get; set; }

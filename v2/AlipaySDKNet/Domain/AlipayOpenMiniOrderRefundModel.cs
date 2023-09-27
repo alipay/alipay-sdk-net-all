@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string OutRefundId { get; set; }
 
         /// <summary>
-        /// 退款金额,单位"元"
+        /// 退款金额,单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("refund")]
         public string Refund { get; set; }
@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string RefundReason { get; set; }
 
         /// <summary>
-        /// 用户UID
+        /// 买家支付宝用户ID；open_id和user_id二选一
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 券总预算值。  限制： 券总预算<= 999999  特别说明： 该字段的含义是追加到的数量。 不可减少，只能增加。  code_mode= MERCHANT_UPLOAD 的情况下，voucher_quantity 需要与导入码的总数量保持一致（即历史导入数量 + 追加导入数量）。
+        /// 发行券的数量。  限制： 券总预算<= 999999  特别说明： 该字段的含义是追加到的数量。 不可减少，只能增加。  code_mode= MERCHANT_UPLOAD 的情况下，voucher_quantity 需要与导入码的总数量保持一致（即历史导入数量 + 追加导入数量）。
         /// </summary>
         [XmlElement("voucher_quantity")]
         public long VoucherQuantity { get; set; }

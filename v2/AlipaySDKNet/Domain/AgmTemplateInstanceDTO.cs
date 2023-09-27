@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("preview_url")]
         public string PreviewUrl { get; set; }
+
+        /// <summary>
+        /// 模板编码
+        /// </summary>
+        [XmlElement("template_code")]
+        public string TemplateCode { get; set; }
     }
 }

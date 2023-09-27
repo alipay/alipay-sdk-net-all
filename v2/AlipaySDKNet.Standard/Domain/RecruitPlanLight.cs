@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string PlanName { get; set; }
 
         /// <summary>
-        /// 方案状态: 可用:ENABLED
+        /// 招商方案状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

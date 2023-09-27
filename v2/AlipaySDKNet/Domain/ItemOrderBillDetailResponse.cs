@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class ItemOrderBillDetailResponse : AopObject
     {
         /// <summary>
-        /// 订单创建时间，格式为 yyyy-MM-dd HH:mm:ss
+        /// 订单创建时间，格式为  yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("create_time")]
         public string CreateTime { get; set; }
@@ -83,7 +83,7 @@ namespace Aop.Api.Domain
         public string PrePromotion { get; set; }
 
         /// <summary>
-        /// 订单预计结算时间，用户支付后确认收货前告知账期的天数， 表述为确认收货后X天结算；用户确认收货后，表述为预计时间格式为yyyy-MM-dd
+        /// 订单预计结算时间，用户支付后确认收货前告知账期的天数，  表述为确认收货后X天结算；用户确认收货后，表述为预计时间格式为yyyy-MM-dd
         /// </summary>
         [XmlElement("predict_settle_time")]
         public string PredictSettleTime { get; set; }

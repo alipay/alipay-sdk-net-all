@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public bool BusinessLicenceRequired { get; set; }
 
         /// <summary>
-        /// 类目code（各级类目code下划线"_"拼接）
+        /// 类目code（各级类目code下划线"_"拼接）。类目信息参考alipay.open.mini.category.query
         /// </summary>
         [XmlElement("category_code")]
         public string CategoryCode { get; set; }

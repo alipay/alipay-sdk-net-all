@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayMarketingActivityOrdervoucherRefundModel : AopObject
     {
         /// <summary>
-        /// 优惠券活动id
+        /// 活动id
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }
 
         /// <summary>
-        /// 当前订单的退券时间。    格式为：yyyy-MM-dd HH:mm:ss    特别说明：  支付宝的退款时间按照外部退款的时间为准。
+        /// 当前订单的退券时间。    格式为：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("biz_dt")]
         public string BizDt { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 当前订单的退款总金额(包含优惠券金额)，单位为元。  限制：  该笔订单的资金总额，取值范围[0.01,100000000]，精确到小数点后2位。
+        /// 当前订单的退款总金额(包含优惠券金额)，单位为元。
         /// </summary>
         [XmlElement("total_fee")]
         public string TotalFee { get; set; }

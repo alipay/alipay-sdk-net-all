@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public DeliveryMaterial DeliveryMaterial { get; set; }
 
         /// <summary>
-        /// 投放计划名称。 投放计划名称不会对用户进行表达，只用于商户管理使用。长度需要大于等于3，小于64。
+        /// 投放计划名称。 投放计划名称不会对用户进行表达，只用于商户管理使用。长度需要大于等于3，小于20。
         /// </summary>
         [XmlElement("delivery_name")]
         public string DeliveryName { get; set; }

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingQipanCrowdwithtagQueryModel : AopObject
     {
         /// <summary>
-        /// 人群code，人群二次加工时必传
+        /// 人群id，人群二次加工时必传
         /// </summary>
         [XmlElement("crowd_id")]
         public string CrowdId { get; set; }

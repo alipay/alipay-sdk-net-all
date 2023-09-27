@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayUserInfoAuthModel : AopObject
     {
         /// <summary>
-        /// 接口权限值，枚举如下： * auth_base：以auth_base为scope发起的网页授权，用于获取进入页面的用户的 userId，并且是静默授权并自动跳转到回调页的。用户感知的就是直接进入了回调页（通常是业务页面）。  * auth_user：以auth_user为scope发起的网页授权，是用来获取用户的基本信息的（比如头像、昵称等）。但这种授权需要用户手动同意，用户同意后，就可在授权后获取到该用户的基本信息。
+        /// 接口权限值，枚举如下： * auth_base：以auth_base为scope发起的网页授权，用于获取进入页面的用户的  userId，并且是静默授权并自动跳转到回调页的。用户感知的就是直接进入了回调页（通常是业务页面）。  *  auth_user：以auth_user为scope发起的网页授权，是用来获取用户的基本信息的（比如头像、昵称等）。但这种授权需要用户手动同意，用户同意后，就可在授权后获取到该用户的基本信息。
         /// </summary>
         [XmlArray("scopes")]
         [XmlArrayItem("string")]

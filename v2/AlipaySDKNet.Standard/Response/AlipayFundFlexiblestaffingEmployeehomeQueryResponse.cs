@@ -22,6 +22,12 @@ namespace Aop.Api.Response
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 零工卡信息
+        /// </summary>
+        [XmlElement("employee_card_info")]
+        public EmployeeCardInfoResDTO EmployeeCardInfo { get; set; }
+
+        /// <summary>
         /// 商户端为以订单号
         /// </summary>
         [XmlElement("out_biz_no")]

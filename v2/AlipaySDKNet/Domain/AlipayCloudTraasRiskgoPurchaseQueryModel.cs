@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCloudTraasRiskgoPurchaseQueryModel : AopObject
     {
         /// <summary>
+        /// 可填入活动id唯一值，或其他活动信息
+        /// </summary>
+        [XmlElement("activity_info")]
+        public string ActivityInfo { get; set; }
+
+        /// <summary>
         /// 银行卡号，如无法提供，可填写为空值（null）
         /// </summary>
         [XmlElement("bank_card_no")]
@@ -34,13 +40,13 @@ namespace Aop.Api.Domain
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// app所在环境
+        /// app所在环境 当前字段已废弃(app环境信息不再需要,故废弃)
         /// </summary>
         [XmlElement("env_id")]
         public string EnvId { get; set; }
 
         /// <summary>
-        /// 所属行业信息
+        /// 所属行业信息 当前字段已废弃(行业信息统一至business_code字段，不再保留该字段)
         /// </summary>
         [XmlElement("industry")]
         public string Industry { get; set; }

@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string MiniAppSignUrl { get; set; }
 
         /// <summary>
+        /// 签约吱口令
+        /// </summary>
+        [XmlElement("share_code")]
+        public string ShareCode { get; set; }
+
+        /// <summary>
         /// 邀请链接
         /// </summary>
         [XmlElement("sign_url")]

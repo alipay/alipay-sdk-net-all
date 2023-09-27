@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string ReceiverLogonId { get; set; }
 
         /// <summary>
-        /// 单据退款金额
+        /// 单据退款金额，单位元
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }

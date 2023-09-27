@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class PaymentVoucherUseRule : AopObject
     {
         /// <summary>
-        /// 可核销的支付宝小程序id    限制：   1、必须是支付宝小程序  2、如果包含重复的小程序id会自动进行去重操作。
+        /// 可核销的支付宝小程序id  限制：  1、必须是支付宝小程序 2、如果包含重复的小程序id会自动进行去重操作。
         /// </summary>
         [XmlArray("available_app_ids")]
         [XmlArrayItem("string")]
@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public PaymentVoucherAvailableMerchant AvailableMerchant { get; set; }
 
         /// <summary>
-        /// 可核销支付门店id。  限制：   1、available_store_ids中的门店id必须是支付宝门店id。   2、available_store_ids如果包含重复的门店id会自动进行去重操作。
+        /// 可核销支付门店id。 限制：  1、available_store_ids中的门店id必须是支付宝门店id。  2、available_store_ids如果包含重复的门店id会自动进行去重操作。
         /// </summary>
         [XmlArray("available_store_ids")]
         [XmlArrayItem("string")]
@@ -43,7 +43,7 @@ namespace Aop.Api.Domain
         public PaymentFixVoucher FixVoucher { get; set; }
 
         /// <summary>
-        /// 不可核销商品编码，商家自定义商品编码。当用户支付时，交易中的商品编码和支付券配置的商品编码有任一匹配时，不可以使用优惠券。    限制:  1、available_goods与unavailable_goods_ids只能二选一或者同时为空
+        /// 不可核销商品编码，商家自定义商品编码。当用户支付时，交易中的商品编码和支付券配置的商品编码有任一匹配时，不可以使用优惠券。  限制: 1、available_goods与unavailable_goods_ids只能二选一或者同时为空
         /// </summary>
         [XmlArray("unavailable_goods_ids")]
         [XmlArrayItem("string")]
@@ -56,7 +56,7 @@ namespace Aop.Api.Domain
         public string UseMode { get; set; }
 
         /// <summary>
-        /// 核销跳转链接  限制:  1、只有use_mode为SELF_LINK时该值有效且必传。  2、核销跳转链接必须是支付宝小程序链接。
+        /// 核销跳转链接 限制: 1、只有use_mode为SELF_LINK时该值有效且必传。 2、核销跳转链接必须是支付宝小程序链接。
         /// </summary>
         [XmlElement("use_url")]
         public string UseUrl { get; set; }

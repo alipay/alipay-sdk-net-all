@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string LogonId { get; set; }
 
         /// <summary>
-        /// 为成员添加的角色类型，支持： DEVELOPER-开发者； EXPERIENCER-体验者。
+        /// 为成员添加的角色类型
         /// </summary>
         [XmlElement("role")]
         public string Role { get; set; }

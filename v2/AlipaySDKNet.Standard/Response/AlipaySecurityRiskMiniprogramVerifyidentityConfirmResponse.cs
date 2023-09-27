@@ -16,9 +16,9 @@ namespace Aop.Api.Response
         public CheckBizData BizData { get; set; }
 
         /// <summary>
-        /// 身份核验结果
+        /// 身份校验结果
         /// </summary>
         [XmlElement("verify_result")]
-        public string VerifyResult { get; set; }
+        public bool VerifyResult { get; set; }
     }
 }

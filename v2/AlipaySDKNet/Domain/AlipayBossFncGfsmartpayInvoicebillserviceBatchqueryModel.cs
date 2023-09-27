@@ -29,5 +29,11 @@ namespace Aop.Api.Domain
         [XmlArray("related_document_nos")]
         [XmlArrayItem("string")]
         public List<string> RelatedDocumentNos { get; set; }
+
+        /// <summary>
+        /// 影子标记
+        /// </summary>
+        [XmlElement("test_mode")]
+        public bool TestMode { get; set; }
     }
 }

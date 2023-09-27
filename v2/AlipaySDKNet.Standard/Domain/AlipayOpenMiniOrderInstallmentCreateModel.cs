@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderInstallmentCreateModel : AopObject
     {
         /// <summary>
+        /// 续租场景分期数，当分期类型为RELET时，该字段必填
+        /// </summary>
+        [XmlElement("addon_period_num")]
+        public long AddonPeriodNum { get; set; }
+
+        /// <summary>
         /// 分期是否已经完结。 false:未完结 true:已完结
         /// </summary>
         [XmlElement("is_finish_performance")]
@@ -28,13 +34,13 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 外部商户订单号，与order_id二者选一
+        /// 外部商户订单号
         /// </summary>
         [XmlElement("out_order_id")]
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 期数
+        /// 普通分期数，当分期类型为RENT或BUYOUT时，该字段必填
         /// </summary>
         [XmlElement("period_num")]
         public long PeriodNum { get; set; }

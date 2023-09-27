@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public long Id { get; set; }
 
         /// <summary>
+        /// 发票模型,如果process_result为PRE_CHECK时,会将发票验真后的数据填充到此模型中
+        /// </summary>
+        [XmlElement("input_invoice_dto")]
+        public InputInvoiceCheckResponse InputInvoiceDto { get; set; }
+
+        /// <summary>
         /// 发票代码
         /// </summary>
         [XmlElement("invoice_code")]
@@ -62,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("related_order")]
         public string RelatedOrder { get; set; }
+
+        /// <summary>
+        /// 从发起验真接口获取taskId
+        /// </summary>
+        [XmlElement("task_id")]
+        public string TaskId { get; set; }
     }
 }

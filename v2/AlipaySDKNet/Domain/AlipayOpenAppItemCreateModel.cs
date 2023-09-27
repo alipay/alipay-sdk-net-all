@@ -48,13 +48,13 @@ namespace Aop.Api.Domain
         public string DirectPath { get; set; }
 
         /// <summary>
-        /// 商品主图的文件id，图片宽高为750px*750px，宽高比1:1，500kb以内。 支持jpg、jpeg、png格式的图片。文件id通过alipay.open.file.upload上传资源获取
+        /// 商品主图的文件id，图片宽高为750px*750px，宽高比1:1，800kb以内。 支持jpg、jpeg、png格式的图片。文件id通过alipay.open.file.upload 上传资源获取file_id，或通过alipay.marketing.image.enhance.upload获取image_id均可上传成功
         /// </summary>
         [XmlElement("head_img")]
         public string HeadImg { get; set; }
 
         /// <summary>
-        /// 商品图片的文件id列表，不超过 3 个图片，用于商品主图的补充。图片支持jpg、jpeg、png格式，宽度及宽高比为 1:1 ，750px*750px。文件id通过alipay.open.file.upload上传资源获取
+        /// 商品子图，作为平台详情页组件的轮播图，图片宽高为750px*750px，宽高比1:1，800kb以内，不超过 3 个图片。 支持jpg、jpeg、png格式的图片。文件id通过alipay.open.file.upload 上传资源获取file_id，或通过alipay.marketing.image.enhance.upload获取image_id均可上传成功
         /// </summary>
         [XmlArray("image_list")]
         [XmlArrayItem("string")]

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public ActivityBaseInfo ActivityBaseInfo { get; set; }
 
         /// <summary>
-        /// 活动 id。
+        /// 活动id
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string AvailableEndTime { get; set; }
 
         /// <summary>
-        /// 券归属商户 pid。
+        /// 归属商户PID
         /// </summary>
         [XmlElement("belong_merchant_id")]
         public string BelongMerchantId { get; set; }
@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string VoucherId { get; set; }
 
         /// <summary>
-        /// 券名称。展示在支付宝卡包中的券名称。
+        /// 对消费者展示的券(商品)名称。
         /// </summary>
         [XmlElement("voucher_name")]
         public string VoucherName { get; set; }
@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public string VoucherStatus { get; set; }
 
         /// <summary>
-        /// 券类型。
+        /// 券类型
         /// </summary>
         [XmlElement("voucher_type")]
         public string VoucherType { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class PaymentVoucherValidPeriodModify : AopObject
     {
         /// <summary>
-        /// 券生效后N天内可以使用。 限制： type为RELATIVE时可修改。 valid_days_after_receive必须大于0。 修改该时间，只允许延长，不允许缩短。
+        /// 券生效后N天内可以使用。 限制： type为RELATIVE时可修改。 valid_days_after_receive必须大于0。  修改该时间，只允许延长，不允许缩短。
         /// </summary>
         [XmlElement("valid_days_after_receive")]
         public long ValidDaysAfterReceive { get; set; }

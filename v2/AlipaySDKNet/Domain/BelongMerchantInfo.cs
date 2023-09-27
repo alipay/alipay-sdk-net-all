@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BusinessType { get; set; }
 
         /// <summary>
-        /// 商户id
+        /// 商户PID,默认为当前接口调用商户。
         /// </summary>
         [XmlElement("merchant_id")]
         public string MerchantId { get; set; }

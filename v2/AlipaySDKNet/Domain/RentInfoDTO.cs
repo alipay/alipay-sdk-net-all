@@ -10,10 +10,28 @@ namespace Aop.Api.Domain
     public class RentInfoDTO : AopObject
     {
         /// <summary>
+        /// 续租总期数，仅续租且订单修改时传入，1-12的整数，包含边界值
+        /// </summary>
+        [XmlElement("addon_period_num")]
+        public string AddonPeriodNum { get; set; }
+
+        /// <summary>
+        /// 续租总金额，仅续租且订单修改时传入，单位元
+        /// </summary>
+        [XmlElement("addon_real_rent_price")]
+        public string AddonRealRentPrice { get; set; }
+
+        /// <summary>
         /// 买断价，单位元
         /// </summary>
         [XmlElement("buyout_price")]
         public string BuyoutPrice { get; set; }
+
+        /// <summary>
+        /// 尾期租金用在非每期分期租金一致场景，例如一笔订单总金额100，首期33.33，每期33.33，尾期33.34，，单位元
+        /// </summary>
+        [XmlElement("finish_real_rent_price")]
+        public string FinishRealRentPrice { get; set; }
 
         /// <summary>
         /// 首期租金,单位元

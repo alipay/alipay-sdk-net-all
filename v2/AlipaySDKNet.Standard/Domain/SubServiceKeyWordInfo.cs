@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<KeyWordInfo> KeywordInfo { get; set; }
 
         /// <summary>
-        /// 小程序id
+        /// 小程序ID
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }

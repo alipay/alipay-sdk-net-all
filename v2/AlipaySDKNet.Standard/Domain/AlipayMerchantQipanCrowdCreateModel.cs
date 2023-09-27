@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<string> ApplyChannelList { get; set; }
 
         /// <summary>
-        /// 人群描述
+        /// 支付宝人群描述
         /// </summary>
         [XmlElement("crowd_desc")]
         public string CrowdDesc { get; set; }

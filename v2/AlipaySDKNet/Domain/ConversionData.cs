@@ -71,6 +71,12 @@ namespace Aop.Api.Domain
         public string GroupId { get; set; }
 
         /// <summary>
+        /// XLIGHT - 灯火归因；MERCHANT-商家归因； 默认为XLIGHT
+        /// </summary>
+        [XmlElement("join_channel")]
+        public string JoinChannel { get; set; }
+
+        /// <summary>
         /// 计划ID
         /// </summary>
         [XmlElement("plan_id")]

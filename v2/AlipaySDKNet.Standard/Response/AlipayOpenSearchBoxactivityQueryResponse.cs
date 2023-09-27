@@ -89,7 +89,7 @@ namespace Aop.Api.Response
         public string TargetAppid { get; set; }
 
         /// <summary>
-        /// 目标小程序名
+        /// 模板名称
         /// </summary>
         [XmlElement("target_appname")]
         public string TargetAppname { get; set; }

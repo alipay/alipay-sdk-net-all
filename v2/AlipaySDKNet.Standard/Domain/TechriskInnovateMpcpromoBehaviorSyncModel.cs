@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class TechriskInnovateMpcpromoBehaviorSyncModel : AopObject
     {
         /// <summary>
-        /// 行为类型：click（点击）、expose（曝光）、order（下单）、pay（支付）、collect（收藏）、like（点赞）、comment（评论）、share（分享）、cart（加购物车）、drawback（退款）、consult（咨询）等
+        /// 行为类型：click（点击）、expose（曝光）、order（下单）、pay（支付）、collect（收藏）、like（点赞）、comment（评论）、share（分享）、cart（加购物车）、drawback（退款）、consult（咨询）、receive（券领取）、use（券核销）等
         /// </summary>
         [XmlElement("action_type")]
         public string ActionType { get; set; }
 
         /// <summary>
-        /// 商家在蚂蚁创建的项目id；(apeProject/aosproject/sceneId)
+        /// 商家在蚂蚁创建的项目id；(个性化推荐场景项目id/智能搜索项目id/)
         /// </summary>
         [XmlElement("biz_project_id")]
         public string BizProjectId { get; set; }

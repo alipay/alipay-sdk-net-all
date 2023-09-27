@@ -47,7 +47,7 @@ namespace Aop.Api.Response
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// 准入审核结果： PASS：通过 REJECT：驳回 （提审时 audit_rule 传 BASE_PROMOTE 时有该字段）
+        /// 准入审核结果 （提审时 audit_rule 传 BASE_PROMOTE 时有该字段）
         /// </summary>
         [XmlElement("base_audit")]
         public string BaseAudit { get; set; }
@@ -59,19 +59,19 @@ namespace Aop.Api.Response
         public MiniAppAuditReason BaseAuditRecord { get; set; }
 
         /// <summary>
-        /// 是否可上架-true/false （提审时 audit_rule 传 BASE_PROMOTE 时有该字段）
+        /// 是否可上架 true：可上架 false：不可上架 （version_status 为PROMOTE_AUDIT_REJECT有值） （提审时 audit_rule 传 BASE_PROMOTE 时有该字段）
         /// </summary>
         [XmlElement("can_release")]
         public string CanRelease { get; set; }
 
         /// <summary>
-        /// 小程序版本提交审核的时间
+        /// 小程序版本提交审核的时间，格式为yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("gmt_apply_audit")]
         public string GmtApplyAudit { get; set; }
 
         /// <summary>
-        /// 小程序版本审核结束时间
+        /// 小程序版本审核结束时间，格式为yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("gmt_audit_end")]
         public string GmtAuditEnd { get; set; }

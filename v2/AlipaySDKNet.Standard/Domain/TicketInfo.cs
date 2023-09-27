@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class TicketInfo : AopObject
     {
         /// <summary>
-        /// 地址 不同类型下的地址含义不同。若type为MEAL_NUM，address则代表取餐地点；若type为PICKUP_CODE，address则代表取件地点。其他类型查看小程序订单产品文档
+        /// 店铺地址
         /// </summary>
         [XmlElement("address")]
         public string Address { get; set; }
 
         /// <summary>
-        /// 截止时间，如果凭证自提/核销时间是一个时间段可传入该字段，time代表自提开始时间，end_time代表自提结束时间，结束时间必须晚于开始时间
+        /// 截止时间
         /// </summary>
         [XmlElement("end_time")]
         public string EndTime { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Time { get; set; }
 
         /// <summary>
-        /// 凭证类型 MEAL_NUM 取餐号 PICKUP_CODE 取件码 SELF_PICK_CODE 自提码 PASSWORD 口令 具体类型查看产品文档
+        /// 凭证类型 具体类型查看产品文档
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

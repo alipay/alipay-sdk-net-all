@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayPayAppChannelConsultModel : AopObject
     {
         /// <summary>
-        /// 订单金额
+        /// 订单金额，单位元
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<string> AvailablePids { get; set; }
 
         /// <summary>
-        /// 优惠券可以核销的间连商户SMID。默认不修改。  限制：  1、核销商户范围只能增大不能减小。
+        /// 优惠券可以核销的间连商户SMID。默认不修改。  限制：   1、核销商户范围只能增大不能减小。
         /// </summary>
         [XmlArray("available_smids")]
         [XmlArrayItem("string")]

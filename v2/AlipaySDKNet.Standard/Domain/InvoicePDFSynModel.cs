@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class InvoicePDFSynModel : AopObject
     {
         /// <summary>
-        /// 支付宝开票申请id。 当userId为空时，必填； 如果在开票过程中，是通过支付宝提交的申请到开票服务方，支付宝会带上开票申请在支付宝生成的申请id，开票服务方在回传发票的时候只需要回传这个申请id，不用获取用户的userId，支付宝可以根据申请id将发票归集到对应的用户名下
+        /// 支付宝开票申请id
         /// </summary>
         [XmlElement("apply_id")]
         public string ApplyId { get; set; }
@@ -22,22 +22,28 @@ namespace Aop.Api.Domain
         public string ExtendFields { get; set; }
 
         /// <summary>
-        /// base64化的字符串
+        /// base64化的字符串，与file_download_url不可同时为空。
         /// </summary>
         [XmlElement("file_base")]
         public string FileBase { get; set; }
 
         /// <summary>
-        /// PDF类型文件填写PDF， OFD类型文件填写ofd， JPG类型文件填写JPG(JPG文件请先询问对接人当前是否支持)
+        /// 文件类型，必填。 PDF类型文件填写PDF， OFD类型文件填写ofd， JPG类型文件填写JPG(JPG文件请先询问对接人当前是否支持)
         /// </summary>
         [XmlElement("file_download_type")]
         public string FileDownloadType { get; set; }
 
         /// <summary>
-        /// 发票文件下载地址。
+        /// 发票文件下载地址，和file_base不可同时为空。
         /// </summary>
         [XmlElement("file_download_url")]
         public string FileDownloadUrl { get; set; }
+
+        /// <summary>
+        /// 支付宝登录账号
+        /// </summary>
+        [XmlElement("login_id")]
+        public string LoginId { get; set; }
 
         /// <summary>
         /// 支付宝用户id，当apply_id为空时，open_id必填
@@ -52,7 +58,7 @@ namespace Aop.Api.Domain
         public string OutInvoiceId { get; set; }
 
         /// <summary>
-        /// 支付宝用户userId； 当apply_id为空时，userId必填
+        /// 支付宝用户userId
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

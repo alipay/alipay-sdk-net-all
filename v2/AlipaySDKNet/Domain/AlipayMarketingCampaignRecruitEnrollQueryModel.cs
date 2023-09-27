@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string EnrollId { get; set; }
 
         /// <summary>
-        /// 幂等ID。 创建报名时传入的 out_biz_no。
+        /// 外部操作流水号，创建活动报名时传入。由商家/ISV 自定义，仅支持字母、数字、下划线且需保证每次操作唯一。
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

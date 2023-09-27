@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 操作卡号。 若target_card_no_type为 BIZ_CARD，则该值为业务卡号，即alipay.marketing.card.open(会员卡开卡)返回结果中的card_info#biz_card_no。 若target_card_no_type为 D_QR_CODE 或D_BAR_CODE，则该值为动态码值。 若target_card_no_type为 EXTERNAL_CARD，则该值为外部卡号。
+        /// 操作卡号。 若target_card_no_type为  BIZ_CARD，则该值为业务卡号，即alipay.marketing.card.open(会员卡开卡)返回结果中的card_info#biz_card_no。 若target_card_no_type为 D_QR_CODE 或D_BAR_CODE，则该值为动态码值。 若target_card_no_type为 EXTERNAL_CARD，则该值为外部卡号。
         /// </summary>
         [XmlElement("target_card_no")]
         public string TargetCardNo { get; set; }

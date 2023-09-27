@@ -111,7 +111,7 @@ namespace Aop.Api.Response
         public string ViolationRecordId { get; set; }
 
         /// <summary>
-        /// 违规时间
+        /// 违规时间，格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("violation_time")]
         public string ViolationTime { get; set; }

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string MiniAppDeliveryType { get; set; }
 
         /// <summary>
-        /// 小程序appid
+        /// 小程序ID
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }

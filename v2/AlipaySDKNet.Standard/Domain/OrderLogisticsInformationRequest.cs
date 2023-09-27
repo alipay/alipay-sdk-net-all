@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class OrderLogisticsInformationRequest : AopObject
     {
         /// <summary>
-        /// 物流公司编号。  物流公司编号值请查看产品文档  注：该值为空时，有可能匹配不到物流信息。若有则必传
+        /// 物流公司编号。  物流公司编号值请查看产品文档
         /// </summary>
         [XmlElement("logistics_code")]
         public string LogisticsCode { get; set; }

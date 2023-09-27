@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public MdCodeInfoDTO MdcodeInfo { get; set; }
 
         /// <summary>
-        /// 会员卡开卡时间，格式为yyyy-MM-dd HH:mm:ss。会员卡更新时，该时间不支持修改，请传入调用开卡接口时传入的card_ext_info.open_date时间。
+        /// 会员卡开卡时间，格式为yyyy-MM-dd  HH:mm:ss。会员卡更新时，该时间不支持修改，请传入调用开卡接口时传入的card_ext_info.open_date时间。
         /// </summary>
         [XmlElement("open_date")]
         public string OpenDate { get; set; }
@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// 会员卡有效期，格式为yyyy-MM-dd HH:mm:ss。会员卡更新时，该时间不支持修改，请传入调用开卡接口时传入的card_ext_info.valid_date时间。
+        /// 会员卡有效期，格式为yyyy-MM-dd  HH:mm:ss。会员卡更新时，该时间不支持修改，请传入调用开卡接口时传入的card_ext_info.valid_date时间。
         /// </summary>
         [XmlElement("valid_date")]
         public string ValidDate { get; set; }

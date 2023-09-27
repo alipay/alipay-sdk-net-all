@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public string FloorAmount { get; set; }
 
         /// <summary>
-        /// 商品名称。说明：该字段可不填，填入则origin_amount必填。
+        /// 商品名称。
         /// </summary>
         [XmlElement("goods_name")]
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 原价。说明：该字段可不填，填入则商品名称goods_name必填;
+        /// 原价。说明：该字段可不填，填入商品名称goods_name则必填;
         /// </summary>
         [XmlElement("origin_amount")]
         public string OriginAmount { get; set; }

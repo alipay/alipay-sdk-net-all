@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 身份证：IDENTITY_CARD、护照：PASSPORT、军官证：OFFICER_CARD、士兵证：SOLDIER_CARD、户口本：HOKOU等。
+        /// 证件类型。
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 用户（user_id）在应用（appId）下的唯一用户标识
+        /// 用户open_id
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }

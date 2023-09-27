@@ -37,7 +37,7 @@ namespace Aop.Api.Domain
         public List<string> ServiceCodes { get; set; }
 
         /// <summary>
-        /// 券可使用的门店列表。列表中的门店id是通过调用接口ant.merchant.expand.shop.create创建门店返回的支付宝门店id 接口参数是列表类型。
+        /// 券可使用的门店列表。列表中的门店id是通过调用接口ant.merchant.expand.shop.create创建门店返回的支付宝门店id  接口参数是列表类型。
         /// </summary>
         [XmlArray("shop_ids")]
         [XmlArrayItem("string")]

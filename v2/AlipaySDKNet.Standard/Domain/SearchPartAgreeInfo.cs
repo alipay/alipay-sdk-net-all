@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string AuditInfo { get; set; }
 
         /// <summary>
-        /// 剔除数据的operator信息
+        /// 审核operator信息
         /// </summary>
         [XmlElement("audit_operator")]
         public string AuditOperator { get; set; }
 
         /// <summary>
-        /// 剔除原因
+        /// 审核原因
         /// </summary>
         [XmlElement("audit_reason")]
         public string AuditReason { get; set; }

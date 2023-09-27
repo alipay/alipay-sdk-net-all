@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayOpenSearchBoxModifyResponse : AopResponse
     {
         /// <summary>
-        /// 搜索直达模块配置id
+        /// 模块配置ID
         /// </summary>
         [XmlElement("module_id")]
         public string ModuleId { get; set; }

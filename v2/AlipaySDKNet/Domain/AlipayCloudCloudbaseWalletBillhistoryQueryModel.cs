@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCloudCloudbaseWalletBillhistoryQueryModel : AopObject
     {
         /// <summary>
+        /// 消费类型  - PREPAY(预付费)  - OFFLINE(后付费)
+        /// </summary>
+        [XmlElement("bill_type")]
+        public string BillType { get; set; }
+
+        /// <summary>
         /// 小程序id
         /// </summary>
         [XmlElement("biz_app_id")]

@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string AuthNotifyUrl { get; set; }
 
         /// <summary>
-        /// 外部订单号
+        /// 开发者外部订单号，通过开发者账号+外部订单号做业务幂等
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }
 
         /// <summary>
-        /// 商户2088
+        /// 商户uid
         /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }

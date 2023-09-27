@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("task_instance_id")]
         public string TaskInstanceId { get; set; }
+
+        /// <summary>
+        /// 商户侧判定的有效交易金额
+        /// </summary>
+        [XmlElement("valid_trade_amount")]
+        public string ValidTradeAmount { get; set; }
     }
 }

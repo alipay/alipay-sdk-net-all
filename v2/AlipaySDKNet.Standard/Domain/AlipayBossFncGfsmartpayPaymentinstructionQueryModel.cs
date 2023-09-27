@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("related_document_nos")]
         public string RelatedDocumentNos { get; set; }
+
+        /// <summary>
+        /// 影子标记
+        /// </summary>
+        [XmlElement("test_mode")]
+        public bool TestMode { get; set; }
     }
 }

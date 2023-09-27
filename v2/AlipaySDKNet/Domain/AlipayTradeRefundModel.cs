@@ -105,7 +105,7 @@ namespace Aop.Api.Domain
         public string TerminalId { get; set; }
 
         /// <summary>
-        /// 支付宝交易号。 和商户订单号 out_trade_no 不能同时为空。
+        /// 支付宝交易号。 和商户订单号 out_trade_no 不能同时为空，两者同时存在时，优先取值trade_no
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

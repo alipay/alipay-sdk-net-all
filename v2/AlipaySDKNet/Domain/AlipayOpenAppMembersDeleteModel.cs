@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 被删除成员的角色类型，枚举支持： DEVELOPER：开发者。 EXPERIENCER：体验者。
+        /// 被删除成员的角色类型
         /// </summary>
         [XmlElement("role")]
         public string Role { get; set; }

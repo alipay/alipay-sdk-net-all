@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string SwipeCertType { get; set; }
 
         /// <summary>
-        /// 支付宝业务卡号，即通过<a href="https://opendocs.alipay.com/apis/009zw3">alipay.marketing.card.open</a>(会员卡开卡)接口开卡后获取的 card_info.biz_card_no 值。
+        /// 支付宝业务卡号，即通过<a  href="https://opendocs.alipay.com/apis/009zw3">alipay.marketing.card.open</a>(会员卡开卡)接口开卡后获取的  card_info.biz_card_no 值。
         /// </summary>
         [XmlElement("target_card_no")]
         public string TargetCardNo { get; set; }

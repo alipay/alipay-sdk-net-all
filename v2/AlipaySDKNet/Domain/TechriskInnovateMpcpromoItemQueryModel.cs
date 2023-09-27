@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class TechriskInnovateMpcpromoItemQueryModel : AopObject
     {
         /// <summary>
+        /// 页码
+        /// </summary>
+        [XmlElement("page_no")]
+        public long PageNo { get; set; }
+
+        /// <summary>
+        /// 分页展示时，每页展示的数量
+        /// </summary>
+        [XmlElement("page_size")]
+        public long PageSize { get; set; }
+
+        /// <summary>
         /// 当前appid下的推荐场景id
         /// </summary>
         [XmlElement("scene_id")]

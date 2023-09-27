@@ -162,6 +162,12 @@ namespace Aop.Api.Domain
         public string SellerTaxNo { get; set; }
 
         /// <summary>
+        /// 异步验真时返回任务id,通过该id获取验真结果
+        /// </summary>
+        [XmlElement("task_id")]
+        public string TaskId { get; set; }
+
+        /// <summary>
         /// 税额,单位元,两位小数
         /// </summary>
         [XmlElement("tax_amount")]

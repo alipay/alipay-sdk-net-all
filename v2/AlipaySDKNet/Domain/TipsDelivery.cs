@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class TipsDelivery : AopObject
     {
         /// <summary>
-        /// 收藏引导文案内容
+        /// 收藏引导文案内容，不得超过14个字
         /// </summary>
         [XmlElement("delivery_content")]
         public string DeliveryContent { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string DeliveryId { get; set; }
 
         /// <summary>
-        /// 收藏引导投放活动的名称
+        /// 收藏引导活动名称
         /// </summary>
         [XmlElement("delivery_name")]
         public string DeliveryName { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 文案审核驳回理由，仅AUDIT_REJECTED生效
+        /// 文案审核驳回理由，仅状态为AUDIT_REJECTED时有效
         /// </summary>
         [XmlElement("fail_reason")]
         public string FailReason { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string MatchType { get; set; }
 
         /// <summary>
-        /// 目标页面地址
+        /// 目标页面地址，当匹配类型为TARGETURL时，投放文案仅在当前页面生效
         /// </summary>
         [XmlElement("match_url")]
         public string MatchUrl { get; set; }

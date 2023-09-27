@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizId { get; set; }
 
         /// <summary>
-        /// 身份核验场景CODE，与初始化时传入一致，如login, riskVerify, payment, changePassword.
+        /// 身份核验场景CODE，为接入场景的英文名称，比如登陆login, 风险校验riskVerify, 支付payment等，需保证同一商户下多种接入场景code的唯一性
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

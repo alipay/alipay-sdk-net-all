@@ -62,7 +62,7 @@ namespace Aop.Api.Domain
         public string TestStringOpenId { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1 当前字段已废弃(test废弃参数N选一分组)
         /// </summary>
         [XmlElement("update_test")]
         public string UpdateTest { get; set; }

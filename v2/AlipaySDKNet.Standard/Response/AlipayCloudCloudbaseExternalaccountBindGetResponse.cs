@@ -31,5 +31,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 哈希后的用户ID
+        /// </summary>
+        [XmlElement("user_hash_id")]
+        public string UserHashId { get; set; }
+
+        /// <summary>
+        /// 钱包签约状态
+        /// </summary>
+        [XmlElement("wallet_sign_status")]
+        public string WalletSignStatus { get; set; }
     }
 }

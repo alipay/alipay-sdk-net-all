@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
-        /// 商户侧门店编号。表示该门店在该商户角色id(直连pid，间连smid)下，由商户自己定义的外部门店编号。若未传入 shop_id  则本参数与与ip_role_id均必填。
+        /// 商户侧门店编号。表示该门店在该商户角色id(直连pid，间连smid)下，由商户自己定义的外部门店编号。若未传入 shop_id 则本参数与与ip_role_id均必填。
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }

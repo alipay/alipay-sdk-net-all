@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public string RelationType { get; set; }
 
         /// <summary>
-        /// 数据日期，格式yyyyMMdd，比如"20221230"
+        /// 数据日期，格式为yyyyMMdd
         /// </summary>
         [XmlElement("report_date")]
         public string ReportDate { get; set; }

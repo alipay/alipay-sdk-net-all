@@ -72,6 +72,18 @@ namespace Aop.Api.Domain
         public string DetailUrl { get; set; }
 
         /// <summary>
+        /// 折扣率 0.75（75折）
+        /// </summary>
+        [XmlElement("discount_rate")]
+        public string DiscountRate { get; set; }
+
+        /// <summary>
+        /// 商品是否包邮，如 1：包邮 2：不包邮 3：满足条件包邮
+        /// </summary>
+        [XmlElement("free_shipping_val")]
+        public string FreeShippingVal { get; set; }
+
+        /// <summary>
         /// 租赁商品的新日描述
         /// </summary>
         [XmlElement("fresh_degree")]
@@ -90,10 +102,28 @@ namespace Aop.Api.Domain
         public string Id { get; set; }
 
         /// <summary>
+        /// 行业类型   LEASE（租赁）
+        /// </summary>
+        [XmlElement("industry_type")]
+        public string IndustryType { get; set; }
+
+        /// <summary>
+        /// 租赁信息
+        /// </summary>
+        [XmlElement("lease_industry_info")]
+        public LeaseIndustryBean LeaseIndustryInfo { get; set; }
+
+        /// <summary>
         /// 商品归属的小程序ID
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }
+
+        /// <summary>
+        /// 时间戳（毫秒）
+        /// </summary>
+        [XmlElement("operate_time")]
+        public string OperateTime { get; set; }
 
         /// <summary>
         /// 商品原价/划线价
@@ -107,6 +137,12 @@ namespace Aop.Api.Domain
         [XmlArray("pic_url_list")]
         [XmlArrayItem("string")]
         public List<string> PicUrlList { get; set; }
+
+        /// <summary>
+        /// 商品累计点赞次数
+        /// </summary>
+        [XmlElement("praise_cnt")]
+        public long PraiseCnt { get; set; }
 
         /// <summary>
         /// 商品的logo图片列表，可用于用户展示的图片，建议600*600
@@ -152,6 +188,12 @@ namespace Aop.Api.Domain
         public string SelfPickup { get; set; }
 
         /// <summary>
+        /// 商品累计分享次数
+        /// </summary>
+        [XmlElement("share_cnt")]
+        public long ShareCnt { get; set; }
+
+        /// <summary>
         /// 百分比，值范国0.00%-100.00%，保留两位小数
         /// </summary>
         [XmlElement("shipment_rate")]
@@ -162,6 +204,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("shipments")]
         public string Shipments { get; set; }
+
+        /// <summary>
+        /// 商品运费，单位分
+        /// </summary>
+        [XmlElement("shipping_price")]
+        public string ShippingPrice { get; set; }
 
         /// <summary>
         /// 商品所属店铺id（如有）

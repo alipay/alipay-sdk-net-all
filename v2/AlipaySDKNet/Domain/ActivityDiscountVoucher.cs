@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Discount { get; set; }
 
         /// <summary>
-        /// 门槛金额。
+        /// 门槛金额。说明：该字段可不填，认为无门槛;
         /// </summary>
         [XmlElement("floor_amount")]
         public string FloorAmount { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 原价。
+        /// 原价。说明：该字段可不填，填入商品名称goods_name则必填;
         /// </summary>
         [XmlElement("origin_amount")]
         public string OriginAmount { get; set; }

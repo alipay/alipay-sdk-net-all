@@ -23,13 +23,13 @@ namespace Aop.Api.Domain
         public string DateCreate { get; set; }
 
         /// <summary>
-        /// 小程序应用logo图标
+        /// 小程序logo图标
         /// </summary>
         [XmlElement("logo_url")]
         public string LogoUrl { get; set; }
 
         /// <summary>
-        /// 小程序应用id
+        /// 小程序id
         /// </summary>
         [XmlElement("mini_app_id")]
         public string MiniAppId { get; set; }

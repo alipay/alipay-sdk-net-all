@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ValidEndTime { get; set; }
 
         /// <summary>
-        /// 支付宝券id
+        /// 用户券 id。支付宝为用户优惠券唯一分配的 id。
         /// </summary>
         [XmlElement("voucher_id")]
         public string VoucherId { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public long VoucherMaxUseTimes { get; set; }
 
         /// <summary>
-        /// 券名称
+        /// 对消费者展示的券(商品)名称。
         /// </summary>
         [XmlElement("voucher_name")]
         public string VoucherName { get; set; }

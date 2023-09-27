@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingRecruitEnrollCloseModel : AopObject
     {
         /// <summary>
-        /// 报名ID
+        /// 活动报名ID
         /// </summary>
         [XmlElement("enroll_id")]
         public string EnrollId { get; set; }

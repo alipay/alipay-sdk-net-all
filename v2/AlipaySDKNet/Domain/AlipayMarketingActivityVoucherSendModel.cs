@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingActivityVoucherSendModel : AopObject
     {
         /// <summary>
-        /// 优惠券活动id
+        /// 活动id
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }

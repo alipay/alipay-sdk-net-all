@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceDataJhjtestQueryModel : AopObject
     {
         /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("inner")]
+        public string Inner { get; set; }
+
+        /// <summary>
         /// aa
         /// </summary>
         [XmlElement("input_a")]
@@ -50,5 +56,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("input_e")]
         public string InputE { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 经度
+        /// </summary>
+        [XmlElement("uid")]
+        public string Uid { get; set; }
     }
 }

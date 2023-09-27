@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string CheckCode { get; set; }
 
         /// <summary>
-        /// 校验说明
+        /// 名称校验结果详细说明
         /// </summary>
         [XmlElement("check_memo")]
         public string CheckMemo { get; set; }

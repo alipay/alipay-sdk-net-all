@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// 1=官方插件版;0=自定义详情页版
+        /// </summary>
+        [XmlElement("detail_page_model")]
+        public string DetailPageModel { get; set; }
+
+        /// <summary>
         /// 副图
         /// </summary>
         [XmlElement("img_url")]
@@ -52,6 +58,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("path")]
         public string Path { get; set; }
+
+        /// <summary>
+        /// 价格
+        /// </summary>
+        [XmlElement("price")]
+        public string Price { get; set; }
 
         /// <summary>
         /// 商品标题

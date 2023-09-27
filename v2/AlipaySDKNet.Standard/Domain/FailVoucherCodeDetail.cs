@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// 券码
+        /// 导入失败的券码
         /// </summary>
         [XmlElement("voucher_code")]
         public string VoucherCode { get; set; }

@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string CertNo { get; set; }
 
         /// <summary>
+        /// 表示证件照片是否存在，目前只针对partner_type为个人【PRIVATE】生效
+        /// </summary>
+        [XmlElement("cert_pic_exist")]
+        public string CertPicExist { get; set; }
+
+        /// <summary>
         /// 企业主体证件类型，取值: BUSINESS_LICENSE: 营业执照 INST_RGST_CTF: 事业单位登记证书 COMM_RGST_CTF: 社会团体登记证书 NGO_CTF: 民办非企业单位证书 APRV_FILE: 党政机关批准设计文件 ORG_CERT: 全国组织机构代码证书
         /// </summary>
         [XmlElement("cert_type")]

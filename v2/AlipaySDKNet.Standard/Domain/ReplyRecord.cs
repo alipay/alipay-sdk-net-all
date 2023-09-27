@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public string ReplierRole { get; set; }
 
         /// <summary>
-        /// 状态。只在replier_role = ‘AUDITOR’时有值。 appealSuccess：申诉通过 appealFailed：申诉不通过 rectifyPass：整改通过 rectifyReject：整改不通过
+        /// 状态。只在replier_role = ‘AUDITOR’时有值
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
-        /// 出资的商户支付宝登录账号   限制:   logon_id和partner_id必须且只能二选一
+        /// 出资的商户支付宝登录账号  限制:  logon_id和partner_id必须且只能二选一
         /// </summary>
         [XmlElement("logon_id")]
         public string LogonId { get; set; }
 
         /// <summary>
-        /// 出资的商户支付宝ID   限制:   logon_id和partner_id必须且只能二选一
+        /// 出资的商户支付宝ID  限制:  logon_id和partner_id必须且只能二选一
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }

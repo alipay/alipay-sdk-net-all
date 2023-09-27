@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class RecruitVoucherRule : AopObject
     {
         /// <summary>
-        /// 券面额（每张代金券可以抵扣的金额）的的最大值。 币种为人民币，单位为元。小数点以后最多保留两位。 该字段为空时表示不限制。
+        /// 券面额（每张代金券可以抵扣的金额）的最大值。 币种为人民币，单位为元。小数点以后最多保留两位。 该字段为空时表示不限制。
         /// </summary>
         [XmlElement("amount_max")]
         public string AmountMax { get; set; }
@@ -115,7 +115,7 @@ namespace Aop.Api.Domain
         public long ValidDaysAfterReceiveMin { get; set; }
 
         /// <summary>
-        /// 券活动类型。支持七种商家券类型和两种支付券类型。  枚举值： 商家券类型：  ALL_FIX_ORDER_VOUCHER 全场满减券；  ITEM_FIX_ORDER_VOUCHER 单品满减券；  ALL_DISCOUNT_ORDER_VOUCHER 全场折扣券；  ITEM_DISCOUNT_ORDER_VOUCHER 单品折扣券；  ITEM_SPE_ORDER_VOUCHER 单品特价券；  EXCHANGE_GROUP_BUY_ORDER_VOUCHER 兑换团购券；  EXCHANGE_FIX_ORDER_VOUCHER 兑换代金券；  支付券类型：  ALL_FIX_VOUCHER 全场满减券；  ITEM_FIX_VOUCHER 单品满减券；  创建商家券参考https://opendocs.alipay.com/apis/01xm17 创建支付券参考https://opendocs.alipay.com/pre-apis/027185（仅供受邀用户使用） 不同的创建券的参数创建出不同类型的券：  1. 根据voucher_type区分满减券、折扣券、特价券、兑换券  2. 根据goods_name是否为空区分单品券、全场券（当voucher_type为满减券、折扣券、特价券）  3. 根据voucher_use_rule.exchange_voucher.biz_type区分团购券、代金券（当voucher_type为兑换券）
+        /// 券活动类型。支持七种商家券类型和两种支付券类型。  枚举值： 商家券类型： ALL_FIX_ORDER_VOUCHER 全场满减券； ITEM_FIX_ORDER_VOUCHER 单品满减券； ALL_DISCOUNT_ORDER_VOUCHER 全场折扣券； ITEM_DISCOUNT_ORDER_VOUCHER 单品折扣券； ITEM_SPE_ORDER_VOUCHER 单品特价券； EXCHANGE_GROUP_BUY_ORDER_VOUCHER 兑换团购券； EXCHANGE_FIX_ORDER_VOUCHER 兑换代金券；  支付券类型： ALL_FIX_VOUCHER 全场满减券； ITEM_FIX_VOUCHER 单品满减券；  创建商家券参考https://opendocs.alipay.com/apis/01xm17 创建支付券参考https://opendocs.alipay.com/pre-apis/027185（仅供受邀用户使用） 不同的创建券的参数创建出不同类型的券：  1. 根据voucher_type区分满减券、折扣券、特价券、兑换券  2. 根据goods_name是否为空区分单品券、全场券（当voucher_type为满减券、折扣券、特价券）  3. 根据voucher_use_rule.exchange_voucher.biz_type区分团购券、代金券（当voucher_type为兑换券）
         /// </summary>
         [XmlElement("voucher_activity_type")]
         public string VoucherActivityType { get; set; }

@@ -22,5 +22,12 @@ namespace Aop.Api.Domain
         [XmlArray("uid_list")]
         [XmlArrayItem("string")]
         public List<string> UidList { get; set; }
+
+        /// <summary>
+        /// 淘客用户openId集合
+        /// </summary>
+        [XmlArray("user_open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> UserOpenIdList { get; set; }
     }
 }

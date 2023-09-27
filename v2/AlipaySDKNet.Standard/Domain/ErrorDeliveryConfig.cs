@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public DeliveryConfig DeliveryConfig { get; set; }
 
         /// <summary>
-        /// 错误码。针对单个投放，具体的错误原因。  枚举值： UNKNOWN_EXCEPTION: 未知异常，可重试。 ACTIVITY_STATUS_NOT_ACTIVE:  活动状态未激活，不可重试。 ACTIVITY_OVERDUE:活动已过期，不可重试。 DELIVERY_VALIDATE_ERROR:投放校验不通过，不可重试。 DELIVERY_OPERATE_ERROR: 投放操作失败，不可重试。 BOOTH_CHANNEL_NOT_EXIST:渠道不存在，不可重试。
+        /// 错误码。针对单个投放，具体的错误原因。
         /// </summary>
         [XmlElement("error_code")]
         public string ErrorCode { get; set; }

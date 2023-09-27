@@ -73,7 +73,7 @@ namespace Aop.Api.Domain
         public List<ItemSkuPropertyInfo> SkuPropertyList { get; set; }
 
         /// <summary>
-        /// 商品SKU状态：  EFFECT(有效)、  INVALID（无效）
+        /// 商品SKU状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
