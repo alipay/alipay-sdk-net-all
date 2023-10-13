@@ -52,6 +52,30 @@ namespace Aop.Api.Domain
         public string InvoiceDate { get; set; }
 
         /// <summary>
+        /// 单位
+        /// </summary>
+        [XmlElement("invoice_line_measurement_unit")]
+        public string InvoiceLineMeasurementUnit { get; set; }
+
+        /// <summary>
+        /// 数量
+        /// </summary>
+        [XmlElement("invoice_line_quantity")]
+        public string InvoiceLineQuantity { get; set; }
+
+        /// <summary>
+        /// 单价
+        /// </summary>
+        [XmlElement("invoice_line_unit_amount")]
+        public string InvoiceLineUnitAmount { get; set; }
+
+        /// <summary>
+        /// 发票备注
+        /// </summary>
+        [XmlElement("invoice_note")]
+        public string InvoiceNote { get; set; }
+
+        /// <summary>
         /// 货物名称
         /// </summary>
         [XmlElement("invoice_product_name")]
@@ -68,6 +92,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_specification")]
         public string InvoiceSpecification { get; set; }
+
+        /// <summary>
+        /// 此属性可以用作发票的拆分KEY
+        /// </summary>
+        [XmlElement("invoice_split_key")]
+        public string InvoiceSplitKey { get; set; }
 
         /// <summary>
         /// 开票类型
@@ -128,6 +158,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }
+
+        /// <summary>
+        /// 税收分类编码，非必填
+        /// </summary>
+        [XmlElement("tax_classification_code")]
+        public string TaxClassificationCode { get; set; }
 
         /// <summary>
         /// 税率

@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string Operator { get; set; }
 
         /// <summary>
+        /// 默认:false（需要按照规则渲染）,为true时代表外部控制发票样式 不通过规则渲染
+        /// </summary>
+        [XmlElement("render_without_rule")]
+        public bool RenderWithoutRule { get; set; }
+
+        /// <summary>
         /// 调用来源系统
         /// </summary>
         [XmlElement("source")]

@@ -28,10 +28,22 @@ namespace Aop.Api.Domain
         public long Modulus { get; set; }
 
         /// <summary>
+        /// openid
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 奖品价格
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }
+
+        /// <summary>
+        /// 奖品对客信息
+        /// </summary>
+        [XmlElement("prize_custom_display_info")]
+        public PrizeCustomDisplayInfo PrizeCustomDisplayInfo { get; set; }
 
         /// <summary>
         /// 奖品id

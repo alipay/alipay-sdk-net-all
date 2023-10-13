@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 不同物联网平台接入渠道不同值，支付宝物联网平台传设备SN号，阿里云物联网平台传设备deviceName
+        /// 合约机和lite接入模式传设备SN号，千里传音接入模式传设备deviceName
         /// </summary>
         [XmlElement("device_id")]
         public string DeviceId { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string Smid { get; set; }
 
         /// <summary>
-        /// 不同物联网平台接入渠道不同值，支付宝物联网平台传设备sourceId号，阿里云物联网平台传设备productKey。
+        /// 合约机模式必传设备sourceId号，千里传音模式必传设备的productKey，lite模式必传分配给服务商的设备型号编码
         /// </summary>
         [XmlElement("supplier_id")]
         public string SupplierId { get; set; }

@@ -74,6 +74,12 @@ namespace Aop.Api.Domain
         public List<InvoiceApplyOpenApi> OutputInvoiceApplyOrders { get; set; }
 
         /// <summary>
+        /// 默认:false（需要按照规则渲染）,为true时代表外部控制发票样式 不通过规则渲染
+        /// </summary>
+        [XmlElement("render_without_rule")]
+        public bool RenderWithoutRule { get; set; }
+
+        /// <summary>
         /// 来源系统的名称
         /// </summary>
         [XmlElement("source")]

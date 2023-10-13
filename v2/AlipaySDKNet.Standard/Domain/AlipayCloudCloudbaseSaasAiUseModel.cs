@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string Param { get; set; }
 
         /// <summary>
-        /// 模型服务编码，具体值咨询模型服务提供者
+        /// 模型服务编码，具体值可查看<a href="https://opendocs.alipay.com/pre-open/09s5qm?pathHash=f2ec2bf8">接口参数说明</a>
         /// </summary>
         [XmlElement("service_code")]
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// 模型服务uri，具体值咨询模型服务提供者
+        /// 模型服务uri，具体值可查看<a href="https://opendocs.alipay.com/pre-open/09s5qm?pathHash=f2ec2bf8">接口参数说明</a>
         /// </summary>
         [XmlElement("uri")]
         public string Uri { get; set; }

@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayPcreditHuabeiFqqrcodeHbfqBindModel : AopObject
     {
         /// <summary>
-        /// 根据业务场景填写对应的绑定类型.
+        /// 根据业务场景填写对应的绑定类型;直联场景传'DIRECT',间联场景传'BANK_AGENT',直付通场景传'PLATFORM_BUSINESS_MODE'
         /// </summary>
         [XmlElement("bind_type")]
         public string BindType { get; set; }
 
         /// <summary>
-        /// 绑定的码类型名称
+        /// 绑定的码类型名称,分期码场景传'fqQrcode',店员码场景传'clerkQrcode'
         /// </summary>
         [XmlElement("code_type")]
         public string CodeType { get; set; }

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
+        /// 零工卡卡号
+        /// </summary>
+        [XmlElement("employee_card_no")]
+        public string EmployeeCardNo { get; set; }
+
+        /// <summary>
         /// 员工工种信息
         /// </summary>
         [XmlElement("job")]

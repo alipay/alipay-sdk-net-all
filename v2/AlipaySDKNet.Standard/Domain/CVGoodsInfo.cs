@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public bool StandardGoods { get; set; }
 
         /// <summary>
+        /// 1:是标准可售卖商品 0:非标准可售卖商品
+        /// </summary>
+        [XmlElement("standard_saleable_goods")]
+        public long StandardSaleableGoods { get; set; }
+
+        /// <summary>
         /// 样本重量[克]：多个,分割
         /// </summary>
         [XmlElement("weight_list")]

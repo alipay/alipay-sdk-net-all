@@ -34,12 +34,6 @@ namespace Aop.Api.Domain
         public string BizAppId { get; set; }
 
         /// <summary>
-        /// 环境id 当前字段已废弃(改用env_id替代)
-        /// </summary>
-        [XmlElement("biz_env_id")]
-        public string BizEnvId { get; set; }
-
-        /// <summary>
         /// 币种  - CNY  - USD  - EUR
         /// </summary>
         [XmlElement("currency")]

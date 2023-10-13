@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CustomParams { get; set; }
 
         /// <summary>
+        /// 命中门店信息
+        /// </summary>
+        [XmlElement("hit_store_info")]
+        public StoreInfoDTO HitStoreInfo { get; set; }
+
+        /// <summary>
         /// 商圈中本次交易发生的商铺的识别号，在同一商铺类型下唯一
         /// </summary>
         [XmlElement("mall_cell_id")]

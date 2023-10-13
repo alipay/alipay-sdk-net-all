@@ -10,16 +10,22 @@ namespace Aop.Api.Domain
     public class InsureCompany : AopObject
     {
         /// <summary>
-        /// 支付宝账号ID
+        /// 参与方唯一标识，当alipay_account_type为ALIPAY_USER_ID是表示支付宝2088uid,当alipay_account_type为ALIPAY_LOGON_ID时表示支付宝登录号
         /// </summary>
         [XmlElement("alipay_account_no")]
         public string AlipayAccountNo { get; set; }
 
         /// <summary>
-        /// 支付宝账号ID
+        /// 账号主体id
         /// </summary>
         [XmlElement("alipay_account_open_id")]
         public string AlipayAccountOpenId { get; set; }
+
+        /// <summary>
+        /// 账号主体类型，默认ALIPAY_USER_ID
+        /// </summary>
+        [XmlElement("alipay_account_type")]
+        public string AlipayAccountType { get; set; }
 
         /// <summary>
         /// 商户/企业名称

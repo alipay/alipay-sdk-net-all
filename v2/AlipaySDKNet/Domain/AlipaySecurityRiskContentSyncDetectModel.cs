@@ -30,7 +30,13 @@ namespace Aop.Api.Domain
         public List<string> DataList { get; set; }
 
         /// <summary>
-        /// 服务码列表
+        /// OPENID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 服务码列表，不同客户可能存在差异，请于蚂蚁内容安全客户经理联系获取具体传入值
         /// </summary>
         [XmlElement("products")]
         public string Products { get; set; }

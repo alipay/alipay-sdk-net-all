@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFinanceFinassistantcoreBotchatQueryModel : AopObject
     {
         /// <summary>
+        /// 会话中每一轮的标识
+        /// </summary>
+        [XmlElement("chat")]
+        public string Chat { get; set; }
+
+        /// <summary>
         /// 用户问询的问题
         /// </summary>
         [XmlElement("question")]

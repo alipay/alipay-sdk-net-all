@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public long ExpireTime { get; set; }
 
         /// <summary>
+        /// 商户的名称
+        /// </summary>
+        [XmlElement("merchant_name")]
+        public string MerchantName { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]

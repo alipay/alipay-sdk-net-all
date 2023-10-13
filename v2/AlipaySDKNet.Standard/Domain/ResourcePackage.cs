@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string OriginalPrice { get; set; }
 
         /// <summary>
-        /// 资源包规格CODE  - public_cloudd_cd_cn_free_bag  - public_cloudd_cd_cn_basic_bag  - public_cloudd_cd_cn_standard_bag  - public_cloudd_cd_cn_pro_bag  - public_cloudd_cd_cn_enterprise_bag  - public_cloudd_cd_cn_flagship_bag
+        /// 资源包规格CODE  - public_cloudd_cd_cn_free_bag  - public_cloudd_cd_cn_base_bag  - public_cloudd_cd_cn_standard_bag  - public_cloudd_cd_cn_pro_bag  - public_cloudd_cd_cn_ent_bag  - public_cloudd_cd_cn_flagship_bag
         /// </summary>
         [XmlElement("spec_code")]
         public string SpecCode { get; set; }

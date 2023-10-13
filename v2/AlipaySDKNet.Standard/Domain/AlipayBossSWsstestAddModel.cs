@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 1
         /// </summary>
+        [XmlElement("sssdsds")]
+        public long Sssdsds { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
         [XmlElement("test_2")]
         public ParamValidateTest Test2 { get; set; }
 

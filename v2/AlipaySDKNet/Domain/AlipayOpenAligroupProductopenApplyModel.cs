@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string ChannelCode { get; set; }
 
         /// <summary>
+        /// 业务透传给CTU的属性，接入CTU事件时需要用到，以kv格式透传
+        /// </summary>
+        [XmlElement("ctu_event_property")]
+        public string CtuEventProperty { get; set; }
+
+        /// <summary>
         /// 订单明细行
         /// </summary>
         [XmlArray("order_lines")]

@@ -84,6 +84,12 @@ namespace Aop.Api.Domain
         public string FreshDegree { get; set; }
 
         /// <summary>
+        /// 商品归属的宿主小程序appid
+        /// </summary>
+        [XmlElement("host_app_id")]
+        public string HostAppId { get; set; }
+
+        /// <summary>
         /// 物品的唯一id
         /// </summary>
         [XmlElement("id")]

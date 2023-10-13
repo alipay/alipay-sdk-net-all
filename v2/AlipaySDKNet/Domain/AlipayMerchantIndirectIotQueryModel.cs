@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayMerchantIndirectIotQueryModel : AopObject
     {
         /// <summary>
-        /// 不同物联网平台接入渠道不同值，支付宝物联网平台传设备SN号，阿里云物联网平台传设备deviceName
+        /// 合约机和lite接入模式传设备SN号，千里传音模式传设备deviceName
         /// </summary>
         [XmlElement("device_id")]
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// 固定枚举值,支付宝物联网平台传SN，阿里云物联网平台传ALIYUN
+        /// 可选字段，兼容可能的bizTid传入场景，可不填
         /// </summary>
         [XmlElement("device_id_type")]
         public string DeviceIdType { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string Occasion { get; set; }
 
         /// <summary>
-        /// 固定枚举值（阿里云物联网平台：ALIYUN，支付宝物联网平台：SDK）
+        /// 固定枚举值（千里传音：ALIYUN，合约机：SDK，lite模式：LITE）
         /// </summary>
         [XmlElement("play_mode")]
         public string PlayMode { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string Smid { get; set; }
 
         /// <summary>
-        /// 不同物联网平台接入渠道不同值，支付宝物联网平台传设备sourceId号，阿里云物联网平台传设备productKey
+        /// 合约机模式必传设备sourceId号，千里传音模式必传设备的productKey，lite模式必传分配给服务商的设备型号编码
         /// </summary>
         [XmlElement("suppler_id")]
         public string SupplerId { get; set; }

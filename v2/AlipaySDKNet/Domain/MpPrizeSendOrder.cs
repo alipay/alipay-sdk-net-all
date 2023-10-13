@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string OutPrizeId { get; set; }
 
         /// <summary>
+        /// 奖品对客信息
+        /// </summary>
+        [XmlElement("prize_custom_display_info")]
+        public PrizeCustomDisplayInfo PrizeCustomDisplayInfo { get; set; }
+
+        /// <summary>
         /// 奖品唯一标识
         /// </summary>
         [XmlElement("prize_flag")]

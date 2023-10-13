@@ -30,7 +30,14 @@ namespace Aop.Api.Domain
         public string Industry { get; set; }
 
         /// <summary>
-        /// mpcpromo商家券数据
+        /// 店铺数据
+        /// </summary>
+        [XmlArray("shop_list")]
+        [XmlArrayItem("mpcpromo_shop_list")]
+        public List<MpcpromoShopList> ShopList { get; set; }
+
+        /// <summary>
+        /// 商家券数据
         /// </summary>
         [XmlArray("voucher_list")]
         [XmlArrayItem("mpcpromo_voucher_list")]

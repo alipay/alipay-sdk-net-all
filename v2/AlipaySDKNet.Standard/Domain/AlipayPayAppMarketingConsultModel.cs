@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public List<string> ConfusedMobileList { get; set; }
 
         /// <summary>
-        /// 设备号密文，使用SHA256加密；设备号类型由device_type字段指定；（设备号或morse匿名查询，两种匹配方式至少有一种参数不能为空）
+        /// 设备号，设备号类型由device_type字段指定；（设备号或morse匿名查询，两种匹配方式至少有一种参数不能为空）
         /// </summary>
         [XmlElement("device_id")]
         public string DeviceId { get; set; }
@@ -101,6 +101,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
+
+        /// <summary>
+        /// 商户ID
+        /// </summary>
+        [XmlElement("partner_id")]
+        public string PartnerId { get; set; }
 
         /// <summary>
         /// 销售产品码，商家和支付宝签约的产品码

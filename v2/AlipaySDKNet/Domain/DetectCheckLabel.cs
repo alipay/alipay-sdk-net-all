@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class DetectCheckLabel : AopObject
     {
         /// <summary>
-        /// 分类信息： porn：色情，  terrorism：暴恐， politic：涉政， ad：广告， adlaw：广告法， contraband：违禁， abuse：谩骂， flood：灌水， negtive：涉价值观， other：其他
+        /// 分类信息： porn：色情，  terrorism：暴恐， politic：涉政， ad：广告， adlaw：广告法， contraband：违禁， abuse：谩骂， flood：灌水， negtive：涉价值观， other：其他，最新一级标签列表请于蚂蚁内容安全客户经理沟通获取
         /// </summary>
         [XmlElement("label")]
         public string Label { get; set; }

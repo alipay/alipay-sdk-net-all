@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string FinishTime { get; set; }
 
         /// <summary>
+        /// 提现错误信息
+        /// </summary>
+        [XmlElement("message")]
+        public string Message { get; set; }
+
+        /// <summary>
         /// 提现单号
         /// </summary>
         [XmlElement("refund_order_no")]

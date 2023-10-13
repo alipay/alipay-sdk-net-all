@@ -10,31 +10,31 @@ namespace Aop.Api.Domain
     public class SpeechRecordDetail : AopObject
     {
         /// <summary>
-        /// 播报关联的支付宝运营计划id
+        /// 播报关联的支付宝运营计划id，对接支付宝播报接口后，该字段可不传，其他场景必传
         /// </summary>
         [XmlElement("alipay_plan_id")]
         public string AlipayPlanId { get; set; }
 
         /// <summary>
-        /// 设备在线地址必传
+        /// 设备在线地址，ip字段和地址字段（device_address且device_province且device_city且device_district）必须至少传一个
         /// </summary>
         [XmlElement("device_address")]
         public string DeviceAddress { get; set; }
 
         /// <summary>
-        /// 设备所在城市中文名称
+        /// 设备所在城市中文名称，ip字段和地址字段（device_address且device_province且device_city且device_district）必须至少传一个
         /// </summary>
         [XmlElement("device_city")]
         public string DeviceCity { get; set; }
 
         /// <summary>
-        /// 设备所在区中文名称
+        /// 设备所在区中文名称，ip字段和地址字段（device_address且device_province且device_city且device_district）必须至少传一个
         /// </summary>
         [XmlElement("device_district")]
         public string DeviceDistrict { get; set; }
 
         /// <summary>
-        /// 设备ip地址需要传入公网有效ip
+        /// 设备ip地址需要传入公网有效ip，ip字段和地址字段（device_address且device_province且device_city且device_district）必须至少传一个
         /// </summary>
         [XmlElement("device_ip")]
         public string DeviceIp { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string DeviceOsVersion { get; set; }
 
         /// <summary>
-        /// 设备所在省中文名称
+        /// 设备所在省中文名称，ip字段和地址字段（device_address且device_province且device_city且device_district）必须至少传一个
         /// </summary>
         [XmlElement("device_province")]
         public string DeviceProvince { get; set; }

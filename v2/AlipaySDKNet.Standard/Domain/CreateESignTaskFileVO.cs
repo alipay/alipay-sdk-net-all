@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class CreateESignTaskFileVO : AopObject
     {
         /// <summary>
-        /// 文件唯一id 64 位  appName+
+        /// 文件唯一id 64 位
         /// </summary>
         [XmlElement("file_id")]
         public string FileId { get; set; }
