@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
+        /// 次卡详情，商品类型为次卡时该值必填
+        /// </summary>
+        [XmlElement("times_card_info")]
+        public CertificateTimesCardInfo TimesCardInfo { get; set; }
+
+        /// <summary>
         /// 核销规则
         /// </summary>
         [XmlElement("use_rule_info")]

@@ -65,6 +65,12 @@ namespace Aop.Api.Domain
         public string OpenRuleId { get; set; }
 
         /// <summary>
+        /// 外部唯一标识，填写该字段可用于创建幂等，防止重复创建
+        /// </summary>
+        [XmlElement("outer_source_id")]
+        public string OuterSourceId { get; set; }
+
+        /// <summary>
         /// 支付策略
         /// </summary>
         [XmlElement("payment_policy")]

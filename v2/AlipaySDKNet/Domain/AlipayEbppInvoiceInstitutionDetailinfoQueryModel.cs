@@ -32,5 +32,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("institution_id")]
         public string InstitutionId { get; set; }
+
+        /// <summary>
+        /// 外部唯一标识
+        /// </summary>
+        [XmlElement("outer_source_id")]
+        public string OuterSourceId { get; set; }
+
+        /// <summary>
+        /// 适配id类型
+        /// </summary>
+        [XmlElement("owner_type")]
+        public string OwnerType { get; set; }
     }
 }

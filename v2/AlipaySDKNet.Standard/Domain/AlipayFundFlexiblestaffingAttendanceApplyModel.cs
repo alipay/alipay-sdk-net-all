@@ -52,7 +52,13 @@ namespace Aop.Api.Domain
         public string InsureType { get; set; }
 
         /// <summary>
-        /// 合作商信息,本次为和蚂蚁签约的平台信息，固定值
+        /// 外部业务号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 合作商信息,本次场景和投保企业信息报错一致
         /// </summary>
         [XmlElement("partner_organization")]
         public InsurePartnerOrganization PartnerOrganization { get; set; }

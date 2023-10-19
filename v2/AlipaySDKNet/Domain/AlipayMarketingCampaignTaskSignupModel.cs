@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCampaignTaskSignupModel : AopObject
     {
         /// <summary>
+        /// 渠道
+        /// </summary>
+        [XmlElement("channel_info")]
+        public string ChannelInfo { get; set; }
+
+        /// <summary>
         /// open_id
         /// </summary>
         [XmlElement("open_id")]

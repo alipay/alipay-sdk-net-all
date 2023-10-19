@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string IssueType { get; set; }
 
         /// <summary>
+        /// 填写该字段可用于创建幂等，防止重复创建
+        /// </summary>
+        [XmlElement("outer_source_id")]
+        public string OuterSourceId { get; set; }
+
+        /// <summary>
         /// 额度类型，枚举：COUPON（点券）、CAP（余额）、ISV（外算额度）
         /// </summary>
         [XmlElement("quota_type")]

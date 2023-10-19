@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string DevName { get; set; }
 
         /// <summary>
+        /// 当前进行锁定的版本号
+        /// </summary>
+        [XmlElement("locked_version")]
+        public string LockedVersion { get; set; }
+
+        /// <summary>
         /// 小程序应用ID
         /// </summary>
         [XmlElement("mini_app_id")]
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("online")]
         public bool Online { get; set; }
+
+        /// <summary>
+        /// 当前小程序在AMPE最新的上架可用版本
+        /// </summary>
+        [XmlElement("online_version")]
+        public string OnlineVersion { get; set; }
 
         /// <summary>
         /// 当前小程序是否加入AMPE计划，小程序开发者可以自行进行AMPE的开通和关闭

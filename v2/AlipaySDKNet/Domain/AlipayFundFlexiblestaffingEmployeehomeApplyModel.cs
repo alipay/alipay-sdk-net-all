@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ExpireTime { get; set; }
 
         /// <summary>
+        /// 商户外部单号，用于开通场景下的幂等判断
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 主体信息。新开通零工卡时必须提供，基于已有零工卡开通服务时可选，如果传递则会按照实际情况校验。
         /// </summary>
         [XmlElement("principal_info")]

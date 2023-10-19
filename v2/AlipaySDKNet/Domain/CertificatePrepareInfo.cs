@@ -28,10 +28,22 @@ namespace Aop.Api.Domain
         public string EncryptedCode { get; set; }
 
         /// <summary>
+        /// 购买商品的订单id
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
         /// 商品信息
         /// </summary>
         [XmlElement("sku_info")]
         public CertificateSkuInfo SkuInfo { get; set; }
+
+        /// <summary>
+        /// 商品类型为次卡时该值必填
+        /// </summary>
+        [XmlElement("times_card_info")]
+        public CertificateTimesCardInfo TimesCardInfo { get; set; }
 
         /// <summary>
         /// 券的有效期开始时间

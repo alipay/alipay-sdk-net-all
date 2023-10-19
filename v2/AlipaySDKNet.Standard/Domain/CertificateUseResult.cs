@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public CertificateInstanceAmountInfo AmountInfo { get; set; }
 
         /// <summary>
+        /// 凭证id
+        /// </summary>
+        [XmlElement("certificate_id")]
+        public string CertificateId { get; set; }
+
+        /// <summary>
         /// 三方码
         /// </summary>
         [XmlElement("code")]
@@ -34,6 +40,12 @@ namespace Aop.Api.Domain
         public string Msg { get; set; }
 
         /// <summary>
+        /// 购买商品的订单id。
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
         /// 商家侧核销对应的交易订单id
         /// </summary>
         [XmlElement("out_order_id")]
@@ -44,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("result")]
         public string Result { get; set; }
+
+        /// <summary>
+        /// 本次核销的次序号信息
+        /// </summary>
+        [XmlElement("serial_info_list")]
+        public CertificateSerialInfo SerialInfoList { get; set; }
 
         /// <summary>
         /// 核销操作单号,核销成功必填,撤销核销使用

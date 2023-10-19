@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AgreementPaySign { get; set; }
 
         /// <summary>
+        /// 1. 格式必须为： https://开头域名链接地址 或者 alipays://开头的支付宝小程序链接。 2. 需要保证传入的 returnUrl 链接能够有效访问
+        /// </summary>
+        [XmlElement("back_url")]
+        public string BackUrl { get; set; }
+
+        /// <summary>
         /// 业务场景
         /// </summary>
         [XmlElement("biz_scene")]
@@ -50,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("real_name")]
         public string RealName { get; set; }
+
+        /// <summary>
+        /// 是否跳过结果页,true为跳过，false为不跳过。默认不跳过
+        /// </summary>
+        [XmlElement("skip_result")]
+        public bool SkipResult { get; set; }
 
         /// <summary>
         /// 场景钱包模版id

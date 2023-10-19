@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string PageSize { get; set; }
 
         /// <summary>
+        /// 布局图片的行业信息。通过行业信息来查询图片。
+        /// </summary>
+        [XmlElement("profession")]
+        public string Profession { get; set; }
+
+        /// <summary>
         /// projectId唯一用于鉴权使用
         /// </summary>
         [XmlElement("project_id")]

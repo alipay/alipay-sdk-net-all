@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("mock_img")]
         public string MockImg { get; set; }
+
+        /// <summary>
+        /// 合成图片所需要的模版id
+        /// </summary>
+        [XmlElement("pic_template_id")]
+        public string PicTemplateId { get; set; }
     }
 }

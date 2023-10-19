@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string AccountId { get; set; }
 
         /// <summary>
+        /// 制度适配范围
+        /// </summary>
+        [XmlElement("adapter_type")]
+        public string AdapterType { get; set; }
+
+        /// <summary>
         /// 授权签约协议号
         /// </summary>
         [XmlElement("agreement_no")]
@@ -70,6 +76,32 @@ namespace Aop.Api.Domain
         [XmlArray("issue_rule_info_list")]
         [XmlArrayItem("issue_rule_info")]
         public List<IssueRuleInfo> IssueRuleInfoList { get; set; }
+
+        /// <summary>
+        /// 外部唯一标识，可用于防止重复创建
+        /// </summary>
+        [XmlElement("outer_source_id")]
+        public string OuterSourceId { get; set; }
+
+        /// <summary>
+        /// 适配id列表
+        /// </summary>
+        [XmlArray("owner_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> OwnerIdList { get; set; }
+
+        /// <summary>
+        /// 适配开放id列表
+        /// </summary>
+        [XmlArray("owner_open_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> OwnerOpenIdList { get; set; }
+
+        /// <summary>
+        /// 适配id类型
+        /// </summary>
+        [XmlElement("owner_type")]
+        public string OwnerType { get; set; }
 
         /// <summary>
         /// 因公场景

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CertificateReverseResult : AopObject
     {
         /// <summary>
+        /// 凭证id
+        /// </summary>
+        [XmlElement("certificate_id")]
+        public string CertificateId { get; set; }
+
+        /// <summary>
         /// 结果说明
         /// </summary>
         [XmlElement("msg")]

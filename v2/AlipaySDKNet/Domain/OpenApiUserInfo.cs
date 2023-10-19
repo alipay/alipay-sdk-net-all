@@ -74,6 +74,12 @@ namespace Aop.Api.Domain
         public OpenApiUserResourceInfo UserResourceInfo { get; set; }
 
         /// <summary>
+        /// 用户服务信息
+        /// </summary>
+        [XmlElement("user_serve_info")]
+        public OpenApiUserServeInfo UserServeInfo { get; set; }
+
+        /// <summary>
         /// 工作状态
         /// </summary>
         [XmlElement("work_status")]

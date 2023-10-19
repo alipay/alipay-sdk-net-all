@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 商户确认开通场景钱包能力扩展参数
+        /// </summary>
+        [XmlElement("consume_extend")]
+        public ConsumeExtend ConsumeExtend { get; set; }
+
+        /// <summary>
         /// 礼品卡模版信息
         /// </summary>
         [XmlElement("gift_card_template")]

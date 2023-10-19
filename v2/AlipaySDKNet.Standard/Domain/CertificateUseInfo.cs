@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("encrypted_code")]
         public string EncryptedCode { get; set; }
+
+        /// <summary>
+        /// 凭证核销次数。不传默认为1
+        /// </summary>
+        [XmlElement("use_count")]
+        public long UseCount { get; set; }
     }
 }
