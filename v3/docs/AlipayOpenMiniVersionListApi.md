@@ -49,7 +49,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var bundleId = com.alipay.alipaywallet;  // string | 端参数，用于查询多端版本，不传默认为支付宝端。 高德端：com.amap.app (optional) 
+            var bundleId = com.alipay.alipaywallet;  // string | 端参数，用于查询多端版本，不传默认为支付宝端。。常见支持如下客户端： com.alipay.alipaywallet：支付宝端； com.alibaba.android.rimet：DINGDING端； com.amap.app：高德端； com.alibaba.ailabs.genie.webapps：天猫精灵端； com.alipay.iot.xpaas：支付宝IoT端。 如需更多端投放，请联系业务BD。 (optional) 
             var versionStatus = AUDITING;  // string | 版本状态列表，用英文逗号\",\"分割，可选；不填默认不返回。 (optional) 
 
             try
@@ -73,7 +73,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bundleId** | **string**| 端参数，用于查询多端版本，不传默认为支付宝端。 高德端：com.amap.app | [optional] 
+ **bundleId** | **string**| 端参数，用于查询多端版本，不传默认为支付宝端。。常见支持如下客户端： com.alipay.alipaywallet：支付宝端； com.alibaba.android.rimet：DINGDING端； com.amap.app：高德端； com.alibaba.ailabs.genie.webapps：天猫精灵端； com.alipay.iot.xpaas：支付宝IoT端。 如需更多端投放，请联系业务BD。 | [optional] 
  **versionStatus** | **string**| 版本状态列表，用英文逗号\&quot;,\&quot;分割，可选；不填默认不返回。 | [optional] 
 
 ### Return type

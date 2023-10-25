@@ -22,12 +22,7 @@ namespace AlipaySDKNet.OpenAPI.Util.Model
         public Dictionary<string, Object> QueryParams { get; set; }
         
         /// <summary>
-        /// body参数
-        /// </summary>
-        public Dictionary<string, Object> BodyParams { get; set; }
-        
-        /// <summary>
-        /// 业务参数（废弃，请使用 BodyParams）
+        /// 业务参数
         /// </summary>
         public Dictionary<string, Object> BizParams { get; set; }
         

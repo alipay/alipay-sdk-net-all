@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **Query**
-> AlipayEbppInvoiceInstitutionDetailinfoQueryResponseModel Query (string accountId = null, string agreementNo = null, string enterpriseId = null, string institutionId = null)
+> AlipayEbppInvoiceInstitutionDetailinfoQueryResponseModel Query (string accountId = null, string agreementNo = null, string enterpriseId = null, string institutionId = null, string outerSourceId = null, string ownerType = null)
 
 制度详情查询
 
@@ -53,11 +53,13 @@ namespace Example
             var agreementNo = 20215425001112341234;  // string | 授权签约协议号 (optional) 
             var enterpriseId = 2088000194958956;  // string | 企业ID (optional) 
             var institutionId = 2022071800152609780000004052;  // string | 制度id (optional) 
+            var outerSourceId = 0b249cd916969304726395528e002c;  // string | 外部唯一标识 (optional) 
+            var ownerType = PHONE;  // string | 适配id类型 (optional) 
 
             try
             {
                 // 制度详情查询
-                AlipayEbppInvoiceInstitutionDetailinfoQueryResponseModel result = apiInstance.Query(accountId, agreementNo, enterpriseId, institutionId);
+                AlipayEbppInvoiceInstitutionDetailinfoQueryResponseModel result = apiInstance.Query(accountId, agreementNo, enterpriseId, institutionId, outerSourceId, ownerType);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -79,6 +81,8 @@ Name | Type | Description  | Notes
  **agreementNo** | **string**| 授权签约协议号 | [optional] 
  **enterpriseId** | **string**| 企业ID | [optional] 
  **institutionId** | **string**| 制度id | [optional] 
+ **outerSourceId** | **string**| 外部唯一标识 | [optional] 
+ **ownerType** | **string**| 适配id类型 | [optional] 
 
 ### Return type
 

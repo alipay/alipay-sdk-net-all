@@ -54,7 +54,7 @@ namespace Example
 
             var outSerialNo = 2016062700001;  // string | 商户端删卡业务流水号，商户自定义且需确保流水号唯一性。 (optional) 
             var targetCardNo = 0000001;  // string | 支付宝业务卡号。即开卡接口返回结果中的card_info.biz_card_no。 (optional) 
-            var targetCardNoType = BIZ_CARD;  // string | 卡号ID类型  BIZ_CARD：支付宝卡号 (optional) 
+            var targetCardNoType = BIZ_CARD;  // string | 卡号ID类型 (optional) 
             var reasonCode = USER_UNBUND;  // string | 删卡原因  USER_UNBUND：用户解绑（可以重新绑定）  CANCEL：销户（完成销户后，就不能再重新绑定）  PRESENT：转赠（可以重新绑定） (optional) 
             var extInfo = {"new_card_no":"12345"," donee_user_id":"2088102130652460"};  // string | 删卡扩展参数，json格式。  用于商户的特定业务信息的传递，只有商户与支付宝约定了传递此参数且约定了参数含义，此参数才有效。  目前支持如下key：  new_card_no：新卡号  donee_user_id：受赠人userId (optional) 
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **outSerialNo** | **string**| 商户端删卡业务流水号，商户自定义且需确保流水号唯一性。 | [optional] 
  **targetCardNo** | **string**| 支付宝业务卡号。即开卡接口返回结果中的card_info.biz_card_no。 | [optional] 
- **targetCardNoType** | **string**| 卡号ID类型  BIZ_CARD：支付宝卡号 | [optional] 
+ **targetCardNoType** | **string**| 卡号ID类型 | [optional] 
  **reasonCode** | **string**| 删卡原因  USER_UNBUND：用户解绑（可以重新绑定）  CANCEL：销户（完成销户后，就不能再重新绑定）  PRESENT：转赠（可以重新绑定） | [optional] 
  **extInfo** | **string**| 删卡扩展参数，json格式。  用于商户的特定业务信息的传递，只有商户与支付宝约定了传递此参数且约定了参数含义，此参数才有效。  目前支持如下key：  new_card_no：新卡号  donee_user_id：受赠人userId | [optional] 
 

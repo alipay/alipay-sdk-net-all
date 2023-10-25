@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="sign"></a>
 # **Sign**
-> Object Sign (System.IO.Stream appAuthPic = null, System.IO.Stream appDemo = null, System.IO.Stream businessLicenseAuthPic = null, System.IO.Stream businessLicensePic = null, AlipayOpenAgentMobilepaySignModel data = null, System.IO.Stream homeScreenshot = null, System.IO.Stream inAppScreenshot = null, System.IO.Stream payScreenshot = null, System.IO.Stream specialLicensePic = null)
+> Object Sign (System.IO.Stream appAuthPic = null, System.IO.Stream appDemo = null, System.IO.Stream appHomeScreenshot = null, System.IO.Stream appItemScreenshot = null, System.IO.Stream appPayScreenshot = null, System.IO.Stream businessLicenseAuthPic = null, System.IO.Stream businessLicensePic = null, AlipayOpenAgentMobilepaySignModel data = null, System.IO.Stream homeScreenshot = null, System.IO.Stream inAppScreenshot = null, System.IO.Stream payScreenshot = null, System.IO.Stream specialLicensePic = null)
 
 代签约APP支付产品
 
@@ -51,6 +51,9 @@ namespace Example
 
             var appAuthPic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var appDemo = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
+            var appHomeScreenshot = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
+            var appItemScreenshot = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
+            var appPayScreenshot = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var businessLicenseAuthPic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var businessLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var data = new AlipayOpenAgentMobilepaySignModel(); // AlipayOpenAgentMobilepaySignModel |  (optional) 
@@ -62,7 +65,7 @@ namespace Example
             try
             {
                 // 代签约APP支付产品
-                Object result = apiInstance.Sign(appAuthPic, appDemo, businessLicenseAuthPic, businessLicensePic, data, homeScreenshot, inAppScreenshot, payScreenshot, specialLicensePic);
+                Object result = apiInstance.Sign(appAuthPic, appDemo, appHomeScreenshot, appItemScreenshot, appPayScreenshot, businessLicenseAuthPic, businessLicensePic, data, homeScreenshot, inAppScreenshot, payScreenshot, specialLicensePic);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -82,6 +85,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appAuthPic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **appDemo** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
+ **appHomeScreenshot** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
+ **appItemScreenshot** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
+ **appPayScreenshot** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **businessLicenseAuthPic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **businessLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **data** | **AlipayOpenAgentMobilepaySignModel**|  | [optional] 

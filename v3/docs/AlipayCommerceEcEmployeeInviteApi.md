@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **Query**
-> AlipayCommerceEcEmployeeInviteQueryResponseModel Query (string enterpriseId = null, string employeeId = null, string pageContentCode = null)
+> AlipayCommerceEcEmployeeInviteQueryResponseModel Query (string enterpriseId = null, string employeeId = null, string pageContentCode = null, string withholdingSignStr = null, string createShareCode = null)
 
 获取员工邀请链接
 
@@ -52,11 +52,13 @@ namespace Example
             var enterpriseId = 2088985758939;  // string | 企业id (optional) 
             var employeeId = 2288099887700000;  // string | 企业码员工ID (optional) 
             var pageContentCode = PCC_STANDARD;  // string | 页面内容code (optional) 
+            var withholdingSignStr = biz_content=%7B%22access_params%22%3A%7B%22personal_product_code%22%3A%22GENERAL_WITHHOLDING_P%22%2C%22sign_scene%22%3A%22INDUSTRY%7CMULTI_MEDIA%22%7D&sign=111&app_id=2017090501336035&method=alipay.user.agreement.page.sign&version=1.0;  // string | 代扣签约串 (optional) 
+            var createShareCode = Y;  // string | 是否生成签约吱口令，不传默认为N (optional) 
 
             try
             {
                 // 获取员工邀请链接
-                AlipayCommerceEcEmployeeInviteQueryResponseModel result = apiInstance.Query(enterpriseId, employeeId, pageContentCode);
+                AlipayCommerceEcEmployeeInviteQueryResponseModel result = apiInstance.Query(enterpriseId, employeeId, pageContentCode, withholdingSignStr, createShareCode);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -77,6 +79,8 @@ Name | Type | Description  | Notes
  **enterpriseId** | **string**| 企业id | [optional] 
  **employeeId** | **string**| 企业码员工ID | [optional] 
  **pageContentCode** | **string**| 页面内容code | [optional] 
+ **withholdingSignStr** | **string**| 代扣签约串 | [optional] 
+ **createShareCode** | **string**| 是否生成签约吱口令，不传默认为N | [optional] 
 
 ### Return type
 

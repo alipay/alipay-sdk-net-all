@@ -49,8 +49,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var openId = 021xxxx;  // string | 支付宝openId (optional) 
-            var userId = 2088xxxx;  // string | 蚂蚁统一会员ID (optional) 
+            var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 支付宝openId (optional) 
+            var userId = 208822294389xxxx;  // string | 蚂蚁统一会员ID (optional) 
 
             try
             {

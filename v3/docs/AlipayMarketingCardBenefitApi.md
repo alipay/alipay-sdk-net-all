@@ -141,8 +141,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var templateId = 20170322000000000068101000300041;  // string | 会员卡模板ID，通过 <a href=\"https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.template.create\">alipay.marketing.card.template.create</a>（会员卡模板创建)接口创建会员卡模板获取。 (optional) 
-            var benefitId = 20170322000000000068101000300041;  // string | 权益ID，通过 <a href=\"https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.benefit.create\">alipay.marketing.card.benefit.create</a>(会员卡模板外部权益创建)接口创建获取。 (optional) 
+            var templateId = 20170322000000000068101000300041;  // string | 会员卡模板ID，通过 <a  href=\"https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.template.create\">alipay.marketing.card.template.create</a>（会员卡模板创建)接口创建会员卡模板获取。 (optional) 
+            var benefitId = 20170322000000000068101000300041;  // string | 权益ID，通过 <a  href=\"https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.benefit.create\">alipay.marketing.card.benefit.create</a>(会员卡模板外部权益创建)接口创建获取。 (optional) 
 
             try
             {
@@ -165,8 +165,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateId** | **string**| 会员卡模板ID，通过 &lt;a href&#x3D;\&quot;https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.template.create\&quot;&gt;alipay.marketing.card.template.create&lt;/a&gt;（会员卡模板创建)接口创建会员卡模板获取。 | [optional] 
- **benefitId** | **string**| 权益ID，通过 &lt;a href&#x3D;\&quot;https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.benefit.create\&quot;&gt;alipay.marketing.card.benefit.create&lt;/a&gt;(会员卡模板外部权益创建)接口创建获取。 | [optional] 
+ **templateId** | **string**| 会员卡模板ID，通过 &lt;a  href&#x3D;\&quot;https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.template.create\&quot;&gt;alipay.marketing.card.template.create&lt;/a&gt;（会员卡模板创建)接口创建会员卡模板获取。 | [optional] 
+ **benefitId** | **string**| 权益ID，通过 &lt;a  href&#x3D;\&quot;https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.benefit.create\&quot;&gt;alipay.marketing.card.benefit.create&lt;/a&gt;(会员卡模板外部权益创建)接口创建获取。 | [optional] 
 
 ### Return type
 
@@ -321,8 +321,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var templateId = 20170322000000000068101000300041;  // string | 会员卡模板ID，通过 <a href=\"https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.template.create\">alipay.marketing.card.template.create</a>（会员卡模板创建)接口创建会员卡模板获取。 (optional) 
-            var benefitId = 20170322000000000068101000300041;  // string | 权益ID，通过 <a href=\"https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.benefit.create\">alipay.marketing.card.benefit.create</a>(会员卡模板外部权益创建)接口创建获取。 (optional) 
+            var templateId = 20170322000000000068101000300041;  // string | 会员卡模板ID，通过 <a  href=\"https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.template.create\">alipay.marketing.card.template.create</a>（会员卡模板创建)接口创建会员卡模板获取。 (optional) 
+            var benefitId = 20170322000000000068101000300041;  // string | 权益ID，通过 <a  href=\"https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.benefit.create\">alipay.marketing.card.benefit.create</a>(会员卡模板外部权益创建)接口创建获取。 (optional) 
 
             try
             {
@@ -345,8 +345,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateId** | **string**| 会员卡模板ID，通过 &lt;a href&#x3D;\&quot;https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.template.create\&quot;&gt;alipay.marketing.card.template.create&lt;/a&gt;（会员卡模板创建)接口创建会员卡模板获取。 | [optional] 
- **benefitId** | **string**| 权益ID，通过 &lt;a href&#x3D;\&quot;https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.benefit.create\&quot;&gt;alipay.marketing.card.benefit.create&lt;/a&gt;(会员卡模板外部权益创建)接口创建获取。 | [optional] 
+ **templateId** | **string**| 会员卡模板ID，通过 &lt;a  href&#x3D;\&quot;https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.template.create\&quot;&gt;alipay.marketing.card.template.create&lt;/a&gt;（会员卡模板创建)接口创建会员卡模板获取。 | [optional] 
+ **benefitId** | **string**| 权益ID，通过 &lt;a  href&#x3D;\&quot;https://opendocs.alipay.com/apis/api_5/alipay.marketing.card.benefit.create\&quot;&gt;alipay.marketing.card.benefit.create&lt;/a&gt;(会员卡模板外部权益创建)接口创建获取。 | [optional] 
 
 ### Return type
 

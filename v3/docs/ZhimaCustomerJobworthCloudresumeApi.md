@@ -49,8 +49,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var connKey = uuid;  // string | 长效的认证令牌 (optional) 
-            var onceToken = uuid;  // string | 交换云简历的单次token (optional) 
+            var connKey = uuid;  // string | 长效的认证令牌：zhima.credit.payafteruse.creditagreement.sign 的out_agreement_no (optional) 
+            var onceToken = uuid;  // string | 交换云简历的单次token：zhima.credit.payafteruse.creditagreement.sign 的  extra_param入参onceToken（授权后5分钟内，单次有效 (optional) 
 
             try
             {
@@ -73,8 +73,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **connKey** | **string**| 长效的认证令牌 | [optional] 
- **onceToken** | **string**| 交换云简历的单次token | [optional] 
+ **connKey** | **string**| 长效的认证令牌：zhima.credit.payafteruse.creditagreement.sign 的out_agreement_no | [optional] 
+ **onceToken** | **string**| 交换云简历的单次token：zhima.credit.payafteruse.creditagreement.sign 的  extra_param入参onceToken（授权后5分钟内，单次有效 | [optional] 
 
 ### Return type
 

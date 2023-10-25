@@ -240,7 +240,7 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var activityId = 2016042700826004508401111111;  // string | 活动id
-            var merchantAccessMode = SELF_MODE;  // string | 商户接入模式 (optional) 
+            var merchantAccessMode = AGENCY_MODE;  // string | 商户接入模式 (optional) 
 
             try
             {
@@ -330,7 +330,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var activityId = 2016042700826004508401111111;  // string | 活动id  限制 请在接收alipay.marketing.activity.message.created消息后，再进行调用。
+            var activityId = 2016042700826004508401111111;  // string | 活动id
             var alipayMarketingActivityOrdervoucherCodedepositModel = new AlipayMarketingActivityOrdervoucherCodedepositModel(); // AlipayMarketingActivityOrdervoucherCodedepositModel |  (optional) 
 
             try
@@ -354,7 +354,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityId** | **string**| 活动id  限制 请在接收alipay.marketing.activity.message.created消息后，再进行调用。 | 
+ **activityId** | **string**| 活动id | 
  **alipayMarketingActivityOrdervoucherCodedepositModel** | **AlipayMarketingActivityOrdervoucherCodedepositModel**|  | [optional] 
 
 ### Return type
@@ -781,7 +781,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var activityId = 2016042700826004508401111111;  // string | 优惠券活动id
+            var activityId = 2016042700826004508401111111;  // string | 活动id
             var voucherCode = ABE44;  // string | 已核销待退券的券码
             var alipayMarketingActivityOrdervoucherRefundModel = new AlipayMarketingActivityOrdervoucherRefundModel(); // AlipayMarketingActivityOrdervoucherRefundModel |  (optional) 
 
@@ -806,7 +806,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityId** | **string**| 优惠券活动id | 
+ **activityId** | **string**| 活动id | 
  **voucherCode** | **string**| 已核销待退券的券码 | 
  **alipayMarketingActivityOrdervoucherRefundModel** | **AlipayMarketingActivityOrdervoucherRefundModel**|  | [optional] 
 
@@ -965,7 +965,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var activityId = 2016042700826004508401111111;  // string | 优惠券活动id
+            var activityId = 2016042700826004508401111111;  // string | 活动id
             var voucherCode = ABE44;  // string | 待核销的券码。
             var alipayMarketingActivityOrdervoucherUseModel = new AlipayMarketingActivityOrdervoucherUseModel(); // AlipayMarketingActivityOrdervoucherUseModel |  (optional) 
 
@@ -990,7 +990,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityId** | **string**| 优惠券活动id | 
+ **activityId** | **string**| 活动id | 
  **voucherCode** | **string**| 待核销的券码。 | 
  **alipayMarketingActivityOrdervoucherUseModel** | **AlipayMarketingActivityOrdervoucherUseModel**|  | [optional] 
 

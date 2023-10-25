@@ -51,10 +51,10 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var authToken = "authToken_example";  // string | 用户授权令牌 (optional) 
-            var userId = 2088512417841101;  // string | 支付宝用户 id (optional) 
-            var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 支付宝用户openId (optional) 
-            var activityId = 2016042700826004508401111111;  // string | 活动 id (optional) 
-            var belongMerchantId = 2088202967380463;  // string | 券归属商户 (optional) 
+            var userId = 2088512417841101;  // string | 支付宝user_id账号 (optional) 
+            var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 领券的支付宝用户openId (optional) 
+            var activityId = 2016042700826004508401111111;  // string | 活动id (optional) 
+            var belongMerchantId = 2088202967380463;  // string | 归属商户PID (optional) 
             var senderMerchantId = 2088102161342862;  // string | 券发放商户 (optional) 
             var voucherStatus = SENDED;  // string | 券状态，其中已过期状态可查询6个月内的数据 (optional) 
             var pageNum = 1;  // int? | 分页查询页码 (optional) 
@@ -83,10 +83,10 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authToken** | **string**| 用户授权令牌 | [optional] 
- **userId** | **string**| 支付宝用户 id | [optional] 
- **openId** | **string**| 支付宝用户openId | [optional] 
- **activityId** | **string**| 活动 id | [optional] 
- **belongMerchantId** | **string**| 券归属商户 | [optional] 
+ **userId** | **string**| 支付宝user_id账号 | [optional] 
+ **openId** | **string**| 领券的支付宝用户openId | [optional] 
+ **activityId** | **string**| 活动id | [optional] 
+ **belongMerchantId** | **string**| 归属商户PID | [optional] 
  **senderMerchantId** | **string**| 券发放商户 | [optional] 
  **voucherStatus** | **string**| 券状态，其中已过期状态可查询6个月内的数据 | [optional] 
  **pageNum** | **int?**| 分页查询页码 | [optional] 
@@ -158,9 +158,9 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var merchantId = 2088202967380463;  // string | 商户 PID，默认为当前接口调用商户。 (optional) 
-            var userId = 2088512417841101;  // string | 支付宝用户id (optional) 
-            var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 支付宝用户openId (optional) 
-            var activityId = 2016042700826004508401111111;  // string | 活动 id。 (optional) 
+            var userId = 2088512417841101;  // string | 支付宝user_id账号 (optional) 
+            var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 领券的支付宝用户openId (optional) 
+            var activityId = 2016042700826004508401111111;  // string | 活动id (optional) 
             var voucherId = 2021072900073002214009F8QHR3;  // string | 用户券 id。支付宝为用户优惠券唯一分配的 id。 (optional) 
             var voucherCode = ABE44;  // string | 用户领取的商家券券码。 (optional) 
             var merchantAccessMode = AGENCY_MODE;  // string | 商户接入模式。 (optional) 
@@ -187,9 +187,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **merchantId** | **string**| 商户 PID，默认为当前接口调用商户。 | [optional] 
- **userId** | **string**| 支付宝用户id | [optional] 
- **openId** | **string**| 支付宝用户openId | [optional] 
- **activityId** | **string**| 活动 id。 | [optional] 
+ **userId** | **string**| 支付宝user_id账号 | [optional] 
+ **openId** | **string**| 领券的支付宝用户openId | [optional] 
+ **activityId** | **string**| 活动id | [optional] 
  **voucherId** | **string**| 用户券 id。支付宝为用户优惠券唯一分配的 id。 | [optional] 
  **voucherCode** | **string**| 用户领取的商家券券码。 | [optional] 
  **merchantAccessMode** | **string**| 商户接入模式。 | [optional] 

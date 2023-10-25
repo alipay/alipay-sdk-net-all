@@ -49,7 +49,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var mccCodeList = B0001,B0002;  // string | 传入需要查询的code列表，以分号分隔；注：如果需要查询完整类目树，可以传入ROOT (optional) 
+            var mccCodeList = B0001,B0002;  // string | 传入需要查询的code列表，以英文逗号分隔 (optional) 
 
             try
             {
@@ -72,7 +72,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mccCodeList** | **string**| 传入需要查询的code列表，以分号分隔；注：如果需要查询完整类目树，可以传入ROOT | [optional] 
+ **mccCodeList** | **string**| 传入需要查询的code列表，以英文逗号分隔 | [optional] 
 
 ### Return type
 

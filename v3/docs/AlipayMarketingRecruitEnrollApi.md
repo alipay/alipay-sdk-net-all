@@ -229,8 +229,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var outBizNo = 21ba1e1c16456985463242192e4d;  // string | 外部操作流水号。由商家/ISV 自定义，仅支持字母、数字、下划线且需保证每次操作唯一。 (optional) 
-            var enrollId = 2021041301000200000000000000;  // string | 报名ID，此参数和out_biz_no至少传一个，优先取enroll_id (optional) 
+            var outBizNo = 21ba1e1c16456985463242192e4d;  // string | 外部操作流水号，创建招商报名时传入。由商家/ISV 自定义，仅支持字母、数字、下划线且需保证每次操作唯一。 (optional) 
+            var enrollId = 2021041201000200000000999999;  // string | 报名ID，此参数和out_biz_no至少传一个，优先取enroll_id (optional) 
 
             try
             {
@@ -253,7 +253,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **outBizNo** | **string**| 外部操作流水号。由商家/ISV 自定义，仅支持字母、数字、下划线且需保证每次操作唯一。 | [optional] 
+ **outBizNo** | **string**| 外部操作流水号，创建招商报名时传入。由商家/ISV 自定义，仅支持字母、数字、下划线且需保证每次操作唯一。 | [optional] 
  **enrollId** | **string**| 报名ID，此参数和out_biz_no至少传一个，优先取enroll_id | [optional] 
 
 ### Return type

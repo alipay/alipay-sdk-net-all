@@ -197,7 +197,7 @@ No authorization required
 
 修改支付券基本信息
 
-商户可以通过该接口修改支付券基本信息。 接口同步返回修改请求受理结果，后续通过alipay.marketing.activity.message.modified消息接口异步发送修改活动成功事件消息。   特别注意：修改支付券接口返回结果并不代表活动修改成功，必须等待消息回调后才能确保成功。 如果成功消息长时间未送达，请联系相关技术人员。 
+商户可以通过该接口修改支付券基本信息。 接口同步返回修改请求受理结果，后续通过alipay.marketing.activity.message.modified消息接口异步发送修改活动成功事件消息。   特别注意：修改支付券接口返回结果并不代表活动修改成功，必须等待消息回调后才能确保成功。 如果成功消息长时间未送达，请联系相关技术人员。
 
 ### Example
 ```csharp
@@ -411,7 +411,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var activityId = 2016042700826004508401111111;  // string | 活动 id (optional) 
+            var activityId = 2016042700826004508401111111;  // string | 活动id (optional) 
             var merchantAccessMode = AGENCY_MODE;  // string | 商户接入模式。 (optional) 
 
             try
@@ -435,7 +435,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityId** | **string**| 活动 id | [optional] 
+ **activityId** | **string**| 活动id | [optional] 
  **merchantAccessMode** | **string**| 商户接入模式。 | [optional] 
 
 ### Return type
