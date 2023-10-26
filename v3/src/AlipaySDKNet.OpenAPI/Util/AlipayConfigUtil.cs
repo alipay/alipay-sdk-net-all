@@ -256,10 +256,10 @@ namespace AlipaySDKNet.OpenAPI.Util
         /// <exception cref="ApiException"></exception>
         public void Sign(string httpMethod, string httpRequestUri, string httpRequestBody, Multimap<string, string> headerParameters)
         {
-            if (string.IsNullOrEmpty(privateKeyPem))
+            /*if (string.IsNullOrEmpty(privateKeyPem))
             {
                 throw new ApiException(400,"私钥[PrivateKey]不可为空。");
-            }
+            }*/
             string appAuthToken = headerParameters.TryGetValue("alipay-app-auth-token", out var list) ? list[0] : null;
             string nonce = Guid.NewGuid().ToString();
             string timestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds().ToString();
@@ -272,8 +272,15 @@ namespace AlipaySDKNet.OpenAPI.Util
                                         + httpRequestUri + "\n"
                                         + (string.IsNullOrEmpty(httpRequestBody) ? "" : httpRequestBody) + "\n"
                                         + (string.IsNullOrEmpty(appAuthToken) ? "" : appAuthToken + "\n");
-            
-            headerParameters.Add("Authorization", ALIPAY_SHA_256_WITH_RSA + " " + authString + ",sign=" + GenerateSign(content));
+
+            if (string.IsNullOrEmpty(privateKeyPem))
+            {
+                headerParameters.Add("Authorization", ALIPAY_SHA_256_WITH_RSA + " " + authString);
+            }
+            else
+            {
+                headerParameters.Add("Authorization", ALIPAY_SHA_256_WITH_RSA + " " + authString + ",sign=" + GenerateSign(content));
+            }
             if(!string.IsNullOrEmpty(rootCertSN))
             {
                 headerParameters.Add("alipay-root-cert-sn", rootCertSN);
@@ -318,6 +325,10 @@ namespace AlipaySDKNet.OpenAPI.Util
                 publicKey = GetAlipayPublicKey(alipayCertSN);
             }
             if (string.IsNullOrEmpty(publicKey)) {
+                if (string.IsNullOrEmpty(privateKeyPem))
+                {
+                    return true;
+                }
                 throw new ApiException(400, "公钥不可为空");
             }
             content = timestamp + "\n"
