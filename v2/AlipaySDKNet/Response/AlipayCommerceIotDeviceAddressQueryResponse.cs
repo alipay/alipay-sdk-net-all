@@ -27,6 +27,18 @@ namespace Aop.Api.Response
         public string CountyName { get; set; }
 
         /// <summary>
+        /// 纬度
+        /// </summary>
+        [XmlElement("latitude")]
+        public string Latitude { get; set; }
+
+        /// <summary>
+        /// 经纬度信息
+        /// </summary>
+        [XmlElement("longitude")]
+        public string Longitude { get; set; }
+
+        /// <summary>
         /// 省份名称
         /// </summary>
         [XmlElement("province_name")]

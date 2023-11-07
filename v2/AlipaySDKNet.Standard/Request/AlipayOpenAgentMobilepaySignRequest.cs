@@ -21,7 +21,17 @@ namespace Aop.Api.Request
         public FileItem AppDemo { get; set; }
 
         /// <summary>
-        /// 应用在哪些市场上架，枚举值为：苹果,应用宝,豌豆荚,其他
+        /// 应用首页截图，最小5KB，图片格式必须为：png、bmp、gif、jpg、jpeg
+        /// </summary>
+        public FileItem AppHomeScreenshot { get; set; }
+
+        /// <summary>
+        /// 商品或服务页截图，最小5KB，图片格式必须为：png、bmp、gif、jpg、jpeg
+        /// </summary>
+        public FileItem AppItemScreenshot { get; set; }
+
+        /// <summary>
+        /// 应用在哪些市场上架，枚举值为：苹果,应用宝,华为,360,小米,豌豆荚,其他
         /// </summary>
         public List<string> AppMarket { get; set; }
 
@@ -31,7 +41,12 @@ namespace Aop.Api.Request
         public string AppName { get; set; }
 
         /// <summary>
-        /// 应用上架状态，枚举值为 已上架，未上架
+        /// 应用内支付页截图，最小5KB，图片格式必须为：png、bmp、gif、jpg、jpeg
+        /// </summary>
+        public FileItem AppPayScreenshot { get; set; }
+
+        /// <summary>
+        /// 应用上架状态，枚举值为 已上线，未上线
         /// </summary>
         public string AppStatus { get; set; }
 
@@ -106,6 +121,11 @@ namespace Aop.Api.Request
         public string MccCode { get; set; }
 
         /// <summary>
+        /// 传参：APP，代表设备类型是APP
+        /// </summary>
+        public string MobileType { get; set; }
+
+        /// <summary>
         /// 应用内支付页截图，最小5KB，图片格式必须为：png、bmp、gif、jpg、jpeg
         /// </summary>
         public FileItem PayScreenshot { get; set; }
@@ -114,6 +134,11 @@ namespace Aop.Api.Request
         /// 企业特殊资质图片，可参考 <a href="https://opendocs.alipay.com/open/01n22g#%E5%95%86%E5%AE%B6%E7%BB%8F%E8%90%A5%E7%B1%BB%E7%9B%AE">商家经营类目</a> 中的“需要的特殊资质证书”，最小5KB，图片格式必须为：png、bmp、gif、jpg、jpeg
         /// </summary>
         public FileItem SpecialLicensePic { get; set; }
+
+        /// <summary>
+        /// 传参：mobile，代表交易场景是移动设备
+        /// </summary>
+        public string TradeScene { get; set; }
 
         #region IAopRequest Members
 		private bool needEncrypt=false;
@@ -213,6 +238,8 @@ namespace Aop.Api.Request
             parameters.Add("download_link", this.DownloadLink);
             parameters.Add("long_term", this.LongTerm);
             parameters.Add("mcc_code", this.MccCode);
+            parameters.Add("mobile_type", this.MobileType);
+            parameters.Add("trade_scene", this.TradeScene);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);
@@ -239,6 +266,9 @@ namespace Aop.Api.Request
             IDictionary<string, FileItem> parameters = new Dictionary<string, FileItem>();
             parameters.Add("app_auth_pic", this.AppAuthPic);
             parameters.Add("app_demo", this.AppDemo);
+            parameters.Add("app_home_screenshot", this.AppHomeScreenshot);
+            parameters.Add("app_item_screenshot", this.AppItemScreenshot);
+            parameters.Add("app_pay_screenshot", this.AppPayScreenshot);
             parameters.Add("business_license_auth_pic", this.BusinessLicenseAuthPic);
             parameters.Add("business_license_pic", this.BusinessLicensePic);
             parameters.Add("home_screenshot", this.HomeScreenshot);

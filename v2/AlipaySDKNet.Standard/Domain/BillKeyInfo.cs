@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string Country { get; set; }
 
         /// <summary>
+        /// 支付宝分配的对于机构服务的唯一标识
+        /// </summary>
+        [XmlElement("inst_code")]
+        public string InstCode { get; set; }
+
+        /// <summary>
         /// 省份（6位code） 举例：浙江省：330000
         /// </summary>
         [XmlElement("province")]

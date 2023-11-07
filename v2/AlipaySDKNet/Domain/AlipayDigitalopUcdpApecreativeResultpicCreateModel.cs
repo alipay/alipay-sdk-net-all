@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string GroupId { get; set; }
 
         /// <summary>
+        /// 合成图片时所需的高
+        /// </summary>
+        [XmlElement("height")]
+        public long Height { get; set; }
+
+        /// <summary>
         /// 商家在蚂蚁推荐引擎创建的项目id，调用前需要找蚂蚁技术获取。
         /// </summary>
         [XmlElement("project_id")]
@@ -41,5 +47,11 @@ namespace Aop.Api.Domain
         [XmlArray("style_id_list")]
         [XmlArrayItem("string")]
         public List<string> StyleIdList { get; set; }
+
+        /// <summary>
+        /// 合成图片时所需的宽
+        /// </summary>
+        [XmlElement("width")]
+        public long Width { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string DoorTime { get; set; }
 
         /// <summary>
-        /// 完整的支付参数拼接成的字符串，从服务端获取
+        /// 芝麻免押冻结资金签名串，调用 <a href="https://opendocs.alipay.com/open/e2e70da4_alipay.fund.auth.order.app.freeze?pathHash=1002681c&ref=api">alipay.fund.auth.order.app.freeze</a>生成，用于租赁场景冻结授权资金
         /// </summary>
         [XmlElement("order_str")]
         public string OrderStr { get; set; }

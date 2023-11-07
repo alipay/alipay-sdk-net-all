@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class TuitionISVPoboPaymentInfo : AopObject
     {
         /// <summary>
+        /// 其他缴费信息，目前包含了academic_year（学年）以及payment_category（缴费类目）两个key，后续会根据业务扩展key
+        /// </summary>
+        [XmlElement("additional_payment_info")]
+        public string AdditionalPaymentInfo { get; set; }
+
+        /// <summary>
         /// amount+留学VCC场景
         /// </summary>
         [XmlElement("amount")]
@@ -56,5 +62,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("cvv")]
         public string Cvv { get; set; }
+
+        /// <summary>
+        /// 机构推单的单号
+        /// </summary>
+        [XmlElement("pre_order_id")]
+        public string PreOrderId { get; set; }
     }
 }

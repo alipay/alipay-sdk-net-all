@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class CardTemplateInfo : AopObject
     {
         /// <summary>
+        /// 卡模版ID
+        /// </summary>
+        [XmlElement("card_template_id")]
+        public string CardTemplateId { get; set; }
+
+        /// <summary>
         /// 卡模版名称
         /// </summary>
         [XmlElement("card_template_name")]

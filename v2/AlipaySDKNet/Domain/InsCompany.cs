@@ -68,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("phone")]
         public string Phone { get; set; }
+
+        /// <summary>
+        /// 平台身份标识。用于区分二级渠道
+        /// </summary>
+        [XmlElement("platform_identity")]
+        public string PlatformIdentity { get; set; }
     }
 }

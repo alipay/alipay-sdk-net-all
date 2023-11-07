@@ -148,7 +148,7 @@ namespace Aop.Api.Response
         public string ShopCategory { get; set; }
 
         /// <summary>
-        /// 支付宝侧蚂蚁店铺 id。传入本参数后可不填 store_id 及 ip_role_id。
+        /// 支付宝侧蚂蚁店铺 id
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }
@@ -172,7 +172,7 @@ namespace Aop.Api.Response
         public ShopRecommendInfo ShopRecommendInfo { get; set; }
 
         /// <summary>
-        /// 店铺经营类型，01表示直营，02表示加盟
+        /// 店铺经营类型
         /// </summary>
         [XmlElement("shop_type")]
         public string ShopType { get; set; }

@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string ImageName { get; set; }
 
         /// <summary>
-        /// 规格配置  - 0.25c0.5g  - 0.5c1g  - 1c2g
+        /// 规格配置  - 0.062c0.12g  - 0.125c0.25g  - 0.25c0.5g  - 0.5c1g  - 1c2g
         /// </summary>
         [XmlElement("quota_name")]
         public string QuotaName { get; set; }

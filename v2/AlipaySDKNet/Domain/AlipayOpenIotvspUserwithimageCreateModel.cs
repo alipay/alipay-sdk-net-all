@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string Ext { get; set; }
 
         /// <summary>
+        /// 刷脸的ftoken
+        /// </summary>
+        [XmlElement("ftoken")]
+        public string Ftoken { get; set; }
+
+        /// <summary>
         /// 人脸图片
         /// </summary>
         [XmlElement("image")]

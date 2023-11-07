@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public long Distance { get; set; }
 
         /// <summary>
+        /// 在当前随心租卡片、租期、门店、车型下，随心租可以使用的天数
+        /// </summary>
+        [XmlElement("easy_card_usable_day_count")]
+        public long EasyCardUsableDayCount { get; set; }
+
+        /// <summary>
         /// isv优惠金额，单位分。仅用于展示，不会参与到优惠计算中
         /// </summary>
         [XmlElement("isv_discount_amount")]
@@ -101,5 +107,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("unit_amount")]
         public long UnitAmount { get; set; }
+
+        /// <summary>
+        /// 使用随心租后用户需要支付的总价
+        /// </summary>
+        [XmlElement("use_easy_card_total_amount")]
+        public long UseEasyCardTotalAmount { get; set; }
     }
 }

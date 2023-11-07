@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 是否录制视频
+        /// </summary>
+        [XmlElement("record_video")]
+        public bool RecordVideo { get; set; }
+
+        /// <summary>
         /// 标识是什么场景下的视觉识别请求
         /// </summary>
         [XmlElement("scene")]

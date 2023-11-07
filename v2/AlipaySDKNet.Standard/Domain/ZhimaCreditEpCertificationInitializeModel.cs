@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CertifyReturnUrl { get; set; }
 
         /// <summary>
+        /// 仅针对有委托书需求的平台商户，后台沟通确定委托书模版后（包括参数key和值格式以及是否必填等业务校验），可通过该字段传入平台业务参数用于委托书渲染。
+        /// </summary>
+        [XmlElement("customize_content")]
+        public string CustomizeContent { get; set; }
+
+        /// <summary>
         /// 统一社会信用代码或营业执照注册号
         /// </summary>
         [XmlElement("ep_cert_no")]

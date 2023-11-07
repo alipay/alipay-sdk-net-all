@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string PathId { get; set; }
 
         /// <summary>
-        /// 路线距离文案(公里)，不影响实际计算
+        /// 路线距离文案(公里)，不影响实际计算 当前字段已废弃(不能表达浮点数路线长度)
         /// </summary>
         [XmlElement("path_length")]
         public long PathLength { get; set; }
@@ -32,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("path_step_count")]
         public long PathStepCount { get; set; }
+
+        /// <summary>
+        /// 路线距离文案(公里)，不影响实际计算
+        /// </summary>
+        [XmlElement("str_path_length")]
+        public string StrPathLength { get; set; }
 
         /// <summary>
         /// 路线名称

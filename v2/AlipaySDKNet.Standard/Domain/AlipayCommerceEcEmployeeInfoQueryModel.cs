@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
+        /// 员工手机号码
+        /// </summary>
+        [XmlElement("mobile")]
+        public string Mobile { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("open_id")]

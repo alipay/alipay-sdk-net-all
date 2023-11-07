@@ -36,7 +36,7 @@ namespace Aop.Api.Response
         public string TotalAmount { get; set; }
 
         /// <summary>
-        /// 交易状态
+        /// 充值：SUCCESS（成功）、PROCESSING （处理中）、FAIL （失败）、DISUSE  （超时关单） 充值退/提现：SUCCESS（成功）、PROCESSING（处理中）
         /// </summary>
         [XmlElement("trans_status")]
         public string TransStatus { get; set; }

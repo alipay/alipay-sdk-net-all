@@ -18,6 +18,13 @@ namespace Aop.Api.Domain
         public List<BusinessRelationShopAddresss> BusinessAddress { get; set; }
 
         /// <summary>
+        /// 经营时间
+        /// </summary>
+        [XmlArray("business_times")]
+        [XmlArrayItem("business_relation_business_time")]
+        public List<BusinessRelationBusinessTime> BusinessTimes { get; set; }
+
+        /// <summary>
         /// 营业执照图片，需传入<a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id
         /// </summary>
         [XmlElement("cert_image")]

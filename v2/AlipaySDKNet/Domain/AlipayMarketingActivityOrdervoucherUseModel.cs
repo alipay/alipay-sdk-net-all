@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string BizDt { get; set; }
 
         /// <summary>
-        /// "商品明细信息。 限制： 当前交易中存在商品信息，则建议传入商品明细信息。"
+        /// 商品明细信息
         /// </summary>
         [XmlArray("goods_detail")]
         [XmlArrayItem("goods_detail_d_t_o")]
@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string StoreId { get; set; }
 
         /// <summary>
-        /// 订单优惠前的总金额
+        /// 订单总金额
         /// </summary>
         [XmlElement("total_fee")]
         public string TotalFee { get; set; }

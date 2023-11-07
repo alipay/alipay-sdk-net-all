@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("mall_assign_store")]
         public bool MallAssignStore { get; set; }
+
+        /// <summary>
+        /// 余额户钱包是否展示明细，且只在余额户钱包生效
+        /// </summary>
+        [XmlElement("show_wallet_info_balance")]
+        public bool ShowWalletInfoBalance { get; set; }
     }
 }

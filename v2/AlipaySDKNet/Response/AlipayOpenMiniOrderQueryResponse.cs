@@ -16,7 +16,7 @@ namespace Aop.Api.Response
         public AddressInfoVO AddressInfo { get; set; }
 
         /// <summary>
-        /// 本地生活商品的联系人信息
+        /// 买家联系人信息，本地生活商品使用
         /// </summary>
         [XmlElement("contact_info")]
         public ContactInfoVO ContactInfo { get; set; }
@@ -64,13 +64,13 @@ namespace Aop.Api.Response
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 订单详情页路径
+        /// 商家小程序对应的订单详情页路径地址
         /// </summary>
         [XmlElement("path")]
         public string Path { get; set; }
 
         /// <summary>
-        /// 确认收货时间，fund_type = 1且确认收货之后存在
+        /// 确认收货时间
         /// </summary>
         [XmlElement("receive_time")]
         public string ReceiveTime { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Response
         public RefundInfoVO RefundInfo { get; set; }
 
         /// <summary>
-        /// normal：即时到账  extended：账期结算
+        /// 结算方式
         /// </summary>
         [XmlElement("settle_type")]
         public string SettleType { get; set; }

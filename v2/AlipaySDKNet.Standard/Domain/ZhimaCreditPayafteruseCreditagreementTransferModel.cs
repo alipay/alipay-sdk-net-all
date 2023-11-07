@@ -22,10 +22,22 @@ namespace Aop.Api.Domain
         public string DeductAgreementNo { get; set; }
 
         /// <summary>
+        /// 业务扩展参数，Json格式
+        /// </summary>
+        [XmlElement("extend_params")]
+        public string ExtendParams { get; set; }
+
+        /// <summary>
         /// 商户外部协议号，不同的支付宝用户需要传递不同的外部单号
         /// </summary>
         [XmlElement("out_agreement_no")]
         public string OutAgreementNo { get; set; }
+
+        /// <summary>
+        /// 商户签约的芝麻产品的产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
 
         /// <summary>
         /// 芝麻信用服务ID

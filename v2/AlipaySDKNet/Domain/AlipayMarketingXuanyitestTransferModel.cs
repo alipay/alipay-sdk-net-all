@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMarketingXuanyitestTransferModel : AopObject
     {
         /// <summary>
-        /// 测试的基础描述
+        /// 测试的基础描述，描述中有test，不会被aku匹配
         /// </summary>
         [XmlArray("test")]
         [XmlArrayItem("string")]

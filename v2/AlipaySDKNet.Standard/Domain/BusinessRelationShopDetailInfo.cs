@@ -18,6 +18,13 @@ namespace Aop.Api.Domain
         public List<BusinessRelationShopAddresss> BusinessAddress { get; set; }
 
         /// <summary>
+        /// 经营时间
+        /// </summary>
+        [XmlArray("business_times")]
+        [XmlArrayItem("business_relation_business_time")]
+        public List<BusinessRelationBusinessTime> BusinessTimes { get; set; }
+
+        /// <summary>
         /// 营业执照图片地址
         /// </summary>
         [XmlElement("cert_image")]

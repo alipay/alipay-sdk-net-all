@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public CardCycleInfo CycleInfo { get; set; }
 
         /// <summary>
+        /// 优惠追回规则
+        /// </summary>
+        [XmlElement("discount_recover_rule_info")]
+        public CardDiscountRecoverRuleInfo DiscountRecoverRuleInfo { get; set; }
+
+        /// <summary>
         /// 有效期
         /// </summary>
         [XmlElement("expire_period")]

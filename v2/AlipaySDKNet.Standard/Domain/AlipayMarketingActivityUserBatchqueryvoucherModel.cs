@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayMarketingActivityUserBatchqueryvoucherModel : AopObject
     {
         /// <summary>
-        /// 活动id
+        /// 活动 id
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }
 
         /// <summary>
-        /// 归属商户PID
+        /// 券归属商户
         /// </summary>
         [XmlElement("belong_merchant_id")]
         public string BelongMerchantId { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string MerchantAccessMode { get; set; }
 
         /// <summary>
-        /// 领券的支付宝用户openId
+        /// 支付宝用户openId
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string SenderMerchantId { get; set; }
 
         /// <summary>
-        /// 支付宝user_id账号
+        /// 支付宝用户 id
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

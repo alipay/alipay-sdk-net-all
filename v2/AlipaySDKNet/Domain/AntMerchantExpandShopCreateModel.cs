@@ -61,20 +61,20 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
-        /// 联系人信息。如果填写，其中名称必填，手机、固话、email 三选一必填。
+        /// 联系人信息
         /// </summary>
         [XmlArray("contact_infos")]
         [XmlArrayItem("contact_info")]
         public List<ContactInfo> ContactInfos { get; set; }
 
         /// <summary>
-        /// 店铺联系手机，与店铺联系固话二选一必填
+        /// 店铺联系手机号
         /// </summary>
         [XmlElement("contact_mobile")]
         public string ContactMobile { get; set; }
 
         /// <summary>
-        /// 店铺的联系固话，和店铺联系手机二选一必填
+        /// 店铺的联系固定电话
         /// </summary>
         [XmlElement("contact_phone")]
         public string ContactPhone { get; set; }
@@ -87,25 +87,25 @@ namespace Aop.Api.Domain
         public List<ShopExtInfo> ExtInfos { get; set; }
 
         /// <summary>
-        /// 商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid。特别说明：IoT设备三绑定场景统一填写商户pid
+        /// 当前门店归属的商户角色 ID，表示当前进件的店铺的归属商户。对于直连开店场景，填写商户 PID。对于间连开店场景（线上、线下、直付通），商户SMID
         /// </summary>
         [XmlElement("ip_role_id")]
         public string IpRoleId { get; set; }
 
         /// <summary>
-        /// 法人身份证号。通过蚂蚁门店管理能力创建门店时可选。
+        /// 法人身份证号
         /// </summary>
         [XmlElement("legal_cert_no")]
         public string LegalCertNo { get; set; }
 
         /// <summary>
-        /// 法人名称。通过蚂蚁门店管理能力创建门店时可选。
+        /// 法人名称
         /// </summary>
         [XmlElement("legal_name")]
         public string LegalName { get; set; }
 
         /// <summary>
-        /// 营业执照授权函。需传入<a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。 通过蚂蚁门店管理能力创建门店时可选。
+        /// 营业执照授权函图片id，通过 ant.merchant.expand.indirect.image.upload 接口上传图片后得到的 image_id
         /// </summary>
         [XmlElement("license_auth_letter_image")]
         public string LicenseAuthLetterImage { get; set; }
@@ -137,7 +137,7 @@ namespace Aop.Api.Domain
         public string Scene { get; set; }
 
         /// <summary>
-        /// 结算支付宝账号的登录号。
+        /// 门店结算收款的支付宝账号
         /// </summary>
         [XmlElement("settle_alipay_logon_id")]
         public string SettleAlipayLogonId { get; set; }
@@ -149,7 +149,7 @@ namespace Aop.Api.Domain
         public string ShopCategory { get; set; }
 
         /// <summary>
-        /// 店铺名称。直连开店要保证全局店铺名称+地址唯一，间连开店要保证服务商pid下店铺名称+地址唯一
+        /// 店铺名称, 由商户定义在支付宝内的店铺名称
         /// </summary>
         [XmlElement("shop_name")]
         public string ShopName { get; set; }

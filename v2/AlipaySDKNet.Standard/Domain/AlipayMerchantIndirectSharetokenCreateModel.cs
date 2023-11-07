@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string OutOpenId { get; set; }
 
         /// <summary>
+        /// 商户ID
+        /// </summary>
+        [XmlElement("partner_id")]
+        public string PartnerId { get; set; }
+
+        /// <summary>
         /// 订单需要支付的金额，单位为元(人民币)，精确到小数点后两位，取值范围：[0.01,100000000] 。
         /// </summary>
         [XmlElement("pay_amount")]

@@ -16,19 +16,19 @@ namespace Aop.Api.Domain
         public string Body { get; set; }
 
         /// <summary>
-        /// 商品类目树
+        /// 商品类目树 当前字段已废弃(暂时未使用)
         /// </summary>
         [XmlElement("categories_tree")]
         public string CategoriesTree { get; set; }
 
         /// <summary>
-        /// 商品类目
+        /// 商品类目 当前字段已废弃(暂时未使用)
         /// </summary>
         [XmlElement("goods_category")]
         public string GoodsCategory { get; set; }
 
         /// <summary>
-        /// 商户侧商品的编号，应传入商品最小粒度的商品ID（例如商品有sku粒度，则传商户sku粒度的ID）。如果需要关联使用支付券，需要和支付券上绑定商品goods_id相同
+        /// 商户侧商品编号，提报优惠时的商品id，用于关联使用支付券，需要和支付券上绑定商品goods_id相同
         /// </summary>
         [XmlElement("goods_id")]
         public string GoodsId { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 商品未上报商品库时，需传入  上传商品文件接口alipay.merchant.item.file.upload  获取的 material_id。如果该商品已经上报商品库，可不传
+        /// 商品图片，用于小程序订单中心展示，可通过 alipay.merchant.item.file.upload接口上传素材获取素材id。默认使用已上报的商品库素材信息，已上报的商品可不传入，未上报商品库需传入。为空会导致订单展示异常
         /// </summary>
         [XmlElement("image_material_id")]
         public string ImageMaterialId { get; set; }
@@ -52,13 +52,13 @@ namespace Aop.Api.Domain
         public string ItemCnt { get; set; }
 
         /// <summary>
-        /// 商户商品ID
+        /// 商户侧商品id，用于公域场景结算，会影响主播归因。私域场景无需传入，公域场景未传入会影响后续结算
         /// </summary>
         [XmlElement("out_item_id")]
         public string OutItemId { get; set; }
 
         /// <summary>
-        /// 商户商品sku_id，提报商品库的商品，该字段必传
+        /// 商户侧商品sku_id，用于公域场景结算，如果商品有多个sku，需要传入准确的sku_id，无sku时不需要传入
         /// </summary>
         [XmlElement("out_sku_id")]
         public string OutSkuId { get; set; }

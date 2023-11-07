@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public MiniBusinessParamsDTO BusinessParams { get; set; }
 
         /// <summary>
-        /// 2088开头的16位纯数字，小程序场景下获取用户ID请参考：用户授权; 其它场景下获取用户ID请参考：网页授权获取用户信息;  注：交易的买家与卖家不能相同。
+        /// 买家支付宝用户id，小程序场景下获取用户ID请参考：<a href="https://opendocs.alipay.com/mini/05dxgc?pathHash=1a3ecb13">用户授权</a>; 其它场景下获取用户ID请参考：<a href="https://opendocs.alipay.com/open/284/web">网页授权获取用户信息</a>。
         /// </summary>
         [XmlElement("buyer_id")]
         public string BuyerId { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
-        /// 联系人信息
+        /// 买家联系人信息
         /// </summary>
         [XmlElement("contact_info")]
         public ContactInfoDTO ContactInfo { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 商家小程序对应的订单详情页路径地址  value。仅需传入小程序页面路径即可。同一笔订单的链接必须与第一次传入的地址相同，且需是小程序内部页面路径，例如：/pages/index/index?orderId=10190608609185。
+        /// 商家小程序对应的订单详情页路径地址 value。仅需传入小程序页面路径即可。同一笔订单的链接必须与第一次传入的地址相同，且需是小程序内部页面路径
         /// </summary>
         [XmlElement("path")]
         public string Path { get; set; }

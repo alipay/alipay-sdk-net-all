@@ -1,0 +1,48 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AnttechMorseMarketingPayinstEquitySendModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AnttechMorseMarketingPayinstEquitySendModel : AopObject
+    {
+        /// <summary>
+        /// 命中的活动id
+        /// </summary>
+        [XmlElement("campaign_id")]
+        public string CampaignId { get; set; }
+
+        /// <summary>
+        /// 权益类型，微信立减金，支付宝红包
+        /// </summary>
+        [XmlElement("equity_type")]
+        public string EquityType { get; set; }
+
+        /// <summary>
+        /// mobile_sha_256标识用户唯一信息，通过用户手机号SHA256 哈希后获得
+        /// </summary>
+        [XmlElement("mobile_sha_256")]
+        public string MobileSha256 { get; set; }
+
+        /// <summary>
+        /// 外部请求号，由业务方自己生成，需保持唯一性，建议格式：日期+流水号
+        /// </summary>
+        [XmlElement("out_request_id")]
+        public string OutRequestId { get; set; }
+
+        /// <summary>
+        /// 资源位编号，接口请求标识商户资源位信息，由摩斯侧分配
+        /// </summary>
+        [XmlElement("resource_id")]
+        public string ResourceId { get; set; }
+
+        /// <summary>
+        /// 发放对象编号，比如appid#openid
+        /// </summary>
+        [XmlElement("send_target_id")]
+        public string SendTargetId { get; set; }
+    }
+}

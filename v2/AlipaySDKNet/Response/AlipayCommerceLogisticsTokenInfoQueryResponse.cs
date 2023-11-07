@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public UserAddressInfoObj ReceiveInfo { get; set; }
 
         /// <summary>
+        /// 选择站点信息
+        /// </summary>
+        [XmlElement("selected_station_info")]
+        public SelectedStationInfoDTO SelectedStationInfo { get; set; }
+
+        /// <summary>
         /// 寄件信息
         /// </summary>
         [XmlElement("send_info")]

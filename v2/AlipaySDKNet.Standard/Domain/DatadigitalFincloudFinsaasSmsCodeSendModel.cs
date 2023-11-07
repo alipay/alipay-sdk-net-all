@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("phone_num_encrypt")]
         public string PhoneNumEncrypt { get; set; }
+
+        /// <summary>
+        /// 短信发送场景
+        /// </summary>
+        [XmlElement("scene")]
+        public string Scene { get; set; }
     }
 }

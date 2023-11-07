@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayIserviceCcmRobotAvatarbaseQueryModel : AopObject
     {
         /// <summary>
+        /// 开通的数字人的商品码
+        /// </summary>
+        [XmlElement("commodity_code")]
+        public string CommodityCode { get; set; }
+
+        /// <summary>
         /// method_params:对应target_method请求方法的具体传参值k-v map
         /// </summary>
         [XmlElement("method_params")]

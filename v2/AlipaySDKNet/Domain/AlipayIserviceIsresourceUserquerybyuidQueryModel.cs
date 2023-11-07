@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public bool QueryRole { get; set; }
 
         /// <summary>
+        /// 是否查询服务
+        /// </summary>
+        [XmlElement("query_serve")]
+        public bool QueryServe { get; set; }
+
+        /// <summary>
         /// 租户id
         /// </summary>
         [XmlElement("tnt_inst_id")]

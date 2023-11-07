@@ -62,5 +62,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("encrypt_mobile")]
         public string EncryptMobile { get; set; }
+
+        /// <summary>
+        /// IOT开通刷脸支持唯一操作流水号，此处透出用于外部服务商通过该unique_id便捷调用IOT侧接口
+        /// </summary>
+        [XmlElement("iot_unique_id")]
+        public string IotUniqueId { get; set; }
     }
 }

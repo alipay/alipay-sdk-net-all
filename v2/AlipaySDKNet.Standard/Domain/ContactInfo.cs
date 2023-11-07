@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string IdCardNo { get; set; }
 
         /// <summary>
-        /// 手机号。必填与否参见外层对象描述，无特别说明认为是非必填
+        /// 手机号
         /// </summary>
         [XmlElement("mobile")]
         public string Mobile { get; set; }
@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string Phone { get; set; }
 
         /// <summary>
-        /// 商户联系人业务标识枚举，表示商户联系人的职责。异议处理接口人:02;商户关键联系人:06;数据反馈接口人:11;服务联动接口人:08
+        /// 商户联系人业务标识枚举，表示商户联系人的职责
         /// </summary>
         [XmlArray("tag")]
         [XmlArrayItem("string")]

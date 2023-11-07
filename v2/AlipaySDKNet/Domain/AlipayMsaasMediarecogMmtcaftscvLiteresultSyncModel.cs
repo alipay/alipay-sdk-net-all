@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<ContrastResult> ContrastResult { get; set; }
 
         /// <summary>
+        /// 1-内部人工，2-外部人工
+        /// </summary>
+        [XmlElement("result_type")]
+        public string ResultType { get; set; }
+
+        /// <summary>
         /// 货柜交易号
         /// </summary>
         [XmlElement("transaction_id")]

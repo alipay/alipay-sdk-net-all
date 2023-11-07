@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public string TransactionId { get; set; }
 
         /// <summary>
-        /// 券明细
+        /// 券明细 当前字段已废弃(支付券优惠根据alipay.trade.query查询)
         /// </summary>
         [XmlArray("voucher_detail_list")]
         [XmlArrayItem("voucher_detail_info_d_t_o")]

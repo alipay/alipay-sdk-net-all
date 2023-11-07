@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string OrderTitle { get; set; }
 
         /// <summary>
-        /// 外部业务号
+        /// 充值外部订单号，用于幂等
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

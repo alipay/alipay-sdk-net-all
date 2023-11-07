@@ -23,6 +23,18 @@ namespace Aop.Api.Response
         public List<string> Images { get; set; }
 
         /// <summary>
+        /// 支付宝内部订单id，唯一
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
+        /// 外部业务号
+        /// </summary>
+        [XmlElement("out_biz_id")]
+        public string OutBizId { get; set; }
+
+        /// <summary>
         /// 当前订单状态
         /// </summary>
         [XmlElement("status")]
