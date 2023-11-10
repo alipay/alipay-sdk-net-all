@@ -61,7 +61,7 @@ namespace Aop.Api.Domain
         /// 合约履约周期，以天为单位。
         /// </summary>
         [XmlElement("fulfillment_days")]
-        public long FulfillmentDays { get; set; }
+        public long? FulfillmentDays { get; set; }
 
         /// <summary>
         /// 商户客服电话，为必填字段，需为合法电话号码。
