@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string Country { get; set; }
 
         /// <summary>
+        /// 收款类型
+        /// </summary>
+        [XmlElement("receipt_method")]
+        public string ReceiptMethod { get; set; }
+
+        /// <summary>
         /// 场景类型: TUITION 留学缴费 HOUSE_RENTAL 留学租房
         /// </summary>
         [XmlElement("scene_type")]

@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public string RequestId { get; set; }
 
         /// <summary>
-        /// 文本类型
+        /// 文本类型 注：当前版本只支持短文本检测
         /// </summary>
         [XmlElement("text_type")]
         public string TextType { get; set; }

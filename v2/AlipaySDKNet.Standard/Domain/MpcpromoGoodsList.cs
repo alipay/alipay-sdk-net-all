@@ -128,7 +128,7 @@ namespace Aop.Api.Domain
         public string PriceUnit { get; set; }
 
         /// <summary>
-        /// 商品的logo图片列表，可用于公域推广对用户展示的图片，建议600*600
+        /// 商品的logo图片列表，可用于公域推广对用户展示的图片，建议600*600；若使用个性化推荐，则必填
         /// </summary>
         [XmlArray("promo_pic_url_list")]
         [XmlArrayItem("string")]

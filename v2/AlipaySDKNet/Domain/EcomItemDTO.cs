@@ -10,7 +10,13 @@ namespace Aop.Api.Domain
     public class EcomItemDTO : AopObject
     {
         /// <summary>
-        /// 买断金额
+        /// 支付宝商品id
+        /// </summary>
+        [XmlElement("alipay_item_id")]
+        public string AlipayItemId { get; set; }
+
+        /// <summary>
+        /// 买断金额，单位：分
         /// </summary>
         [XmlElement("buyout_money")]
         public long BuyoutMoney { get; set; }
@@ -58,7 +64,7 @@ namespace Aop.Api.Domain
         public string ItemPictUrl { get; set; }
 
         /// <summary>
-        /// 商品单价
+        /// 商品单价，单位：分
         /// </summary>
         [XmlElement("item_price")]
         public long ItemPrice { get; set; }
@@ -70,7 +76,7 @@ namespace Aop.Api.Domain
         public string ItemTitle { get; set; }
 
         /// <summary>
-        /// 商品自身价值
+        /// 商品自身价值，单位：分
         /// </summary>
         [XmlElement("item_value")]
         public long ItemValue { get; set; }
@@ -106,13 +112,13 @@ namespace Aop.Api.Domain
         public string SkuAmount { get; set; }
 
         /// <summary>
-        /// sku最大价格
+        /// sku最大价格，单位：分
         /// </summary>
         [XmlElement("sku_max_price")]
         public long SkuMaxPrice { get; set; }
 
         /// <summary>
-        /// sku最小价格
+        /// sku最小价格，单位：分
         /// </summary>
         [XmlElement("sku_min_price")]
         public long SkuMinPrice { get; set; }

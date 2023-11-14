@@ -117,7 +117,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 门头照 id，需传入<a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。 通过蚂蚁门店管理能力创建门店时可选。
+        /// 需传入<a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。
         /// </summary>
         [XmlArray("out_door_images")]
         [XmlArrayItem("string")]

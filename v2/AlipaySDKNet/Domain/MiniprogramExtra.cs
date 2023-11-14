@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("commission_type")]
         public string CommissionType { get; set; }
+
+        /// <summary>
+        /// 小程序绑定的账号的管理员ID
+        /// </summary>
+        [XmlElement("pid")]
+        public string Pid { get; set; }
     }
 }

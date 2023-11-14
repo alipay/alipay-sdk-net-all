@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniAppauthQueryModel : AopObject
     {
         /// <summary>
+        /// 商家小程序APPID
+        /// </summary>
+        [XmlElement("auth_app_id")]
+        public string AuthAppId { get; set; }
+
+        /// <summary>
         /// 请求分页页面
         /// </summary>
         [XmlElement("page_no")]

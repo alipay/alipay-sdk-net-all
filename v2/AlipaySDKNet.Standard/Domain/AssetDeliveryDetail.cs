@@ -40,5 +40,11 @@ namespace Aop.Api.Domain
         [XmlArray("logistics_infos")]
         [XmlArrayItem("logistics_info")]
         public List<LogisticsInfo> LogisticsInfos { get; set; }
+
+        /// <summary>
+        /// 供应商传入库存动销明细对应的凭证日期
+        /// </summary>
+        [XmlElement("voucher_time")]
+        public string VoucherTime { get; set; }
     }
 }

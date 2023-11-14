@@ -37,5 +37,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("template_type")]
         public string TemplateType { get; set; }
+
+        /// <summary>
+        /// 服务履约类型
+        /// </summary>
+        [XmlElement("user_service_delivery_type")]
+        public string UserServiceDeliveryType { get; set; }
     }
 }
