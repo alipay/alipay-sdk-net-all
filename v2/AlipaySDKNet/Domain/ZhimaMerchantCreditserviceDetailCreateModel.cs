@@ -56,5 +56,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("solution_id")]
         public string SolutionId { get; set; }
+
+        /// <summary>
+        /// 二级商户pid。 注意： * create_type = indirect（间连模式创建）时，，用于查询二级商户底线风险。 * create_type = direct（直连模式创建）时，请勿传入。
+        /// </summary>
+        [XmlElement("sub_pid")]
+        public string SubPid { get; set; }
     }
 }

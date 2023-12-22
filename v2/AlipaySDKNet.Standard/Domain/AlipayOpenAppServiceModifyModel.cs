@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("template_type")]
         public string TemplateType { get; set; }
+
+        /// <summary>
+        /// 服务履约类型的枚举值为 访问类型：SCANE_SERVICE_DELIVERY 交易类型：TRADE_SERVICE_DELIVERY
+        /// </summary>
+        [XmlElement("user_service_delivery_type")]
+        public string UserServiceDeliveryType { get; set; }
     }
 }

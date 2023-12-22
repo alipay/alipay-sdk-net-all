@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string Assignee { get; set; }
 
         /// <summary>
+        /// 表示加签人的工号, 也可以指定子账户, 如123456-1
+        /// </summary>
+        [XmlElement("assignee_work_no")]
+        public string AssigneeWorkNo { get; set; }
+
+        /// <summary>
         /// 自定义操作
         /// </summary>
         [XmlElement("deal_actions")]

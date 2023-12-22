@@ -11,6 +11,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceIndirectmerchantModifyModel : AopObject
     {
         /// <summary>
+        /// 行业模版code，默认不用传，当是水奶行业是需要传shui或者nai
+        /// </summary>
+        [XmlElement("industry_template_code")]
+        public string IndustryTemplateCode { get; set; }
+
+        /// <summary>
+        /// 商家logo图片id，来源于上传接口的返回值，上传接口文档：https://opendocs.alipay.com/apis/069sh7
+        /// </summary>
+        [XmlElement("logo_image_id")]
+        public string LogoImageId { get; set; }
+
+        /// <summary>
         /// 商家logo图片地址
         /// </summary>
         [XmlElement("logo_url")]

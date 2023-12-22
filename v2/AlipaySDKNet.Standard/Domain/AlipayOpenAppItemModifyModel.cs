@@ -109,7 +109,7 @@ namespace Aop.Api.Domain
         public long SalePrice { get; set; }
 
         /// <summary>
-        /// 商品的售卖状态，包含以下两种状态 已下架(DELISTING) 可售卖(AVAILABLE) 若填写了skus[]数组，此字段不用填写。 若未填写skus[]数组，此字段必填。
+        /// 商品的售卖状态，包含以下两种状态 已下架(DELISTING), 可售卖(AVAILABLE),和冻结(FREEZE) 若填写了skus[]数组，此字段不用填写。 若未填写skus[]数组，此字段必填。
         /// </summary>
         [XmlElement("sale_status")]
         public string SaleStatus { get; set; }
