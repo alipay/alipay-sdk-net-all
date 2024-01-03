@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppItemCategoryPreconsultModel : AopObject
     {
         /// <summary>
+        /// 商品详情图的图片ID。文件id通过alipay.open.file.upload 上传资源获取file_id，或通过alipay.marketing.image.enhance.upload获取image_id均可上传成功
+        /// </summary>
+        [XmlElement("img_id")]
+        public string ImgId { get; set; }
+
+        /// <summary>
         /// 商品详情页URL
         /// </summary>
         [XmlElement("path")]

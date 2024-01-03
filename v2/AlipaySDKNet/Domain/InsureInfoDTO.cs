@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string EventType { get; set; }
 
         /// <summary>
-        /// 员工工种信息（直接投模式必选）
+        /// 员工工种信息（直接投模式必选） 当前字段已废弃(该字段废弃，详情看员工职业信息字段)
         /// </summary>
         [XmlElement("job")]
         public string Job { get; set; }
 
         /// <summary>
-        /// 职业级别。 第一级：1 第二级：2 ... （直接投模式必选）
+        /// 职业级别。 第一级：1 第二级：2 ... （直接投模式必选） 当前字段已废弃(该字段废弃，详情看员工职业信息字段)
         /// </summary>
         [XmlElement("job_level")]
         public string JobLevel { get; set; }

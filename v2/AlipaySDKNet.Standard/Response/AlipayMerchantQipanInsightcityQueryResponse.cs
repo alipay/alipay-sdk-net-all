@@ -17,7 +17,7 @@ namespace Aop.Api.Response
         public string Coverage { get; set; }
 
         /// <summary>
-        /// 省级数据列表，如果某省无数据，将返回0而非null
+        /// 省级数据列表
         /// </summary>
         [XmlArray("data_list")]
         [XmlArrayItem("portrait_province_value")]

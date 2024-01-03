@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class MiniReceiverAddressInfoDTO : AopObject
     {
         /// <summary>
-        /// 详细收货地址信息
+        /// 收货地址信息
         /// </summary>
         [XmlElement("detailed_address")]
         public string DetailedAddress { get; set; }

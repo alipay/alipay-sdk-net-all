@@ -76,10 +76,34 @@ namespace Aop.Api.Domain
         public string PreContent { get; set; }
 
         /// <summary>
+        /// 任务公域投放展示名称
+        /// </summary>
+        [XmlElement("show_name")]
+        public string ShowName { get; set; }
+
+        /// <summary>
+        /// 公域任务展示图片，需要商户预先调用alipay.open.file.upload接口获得图片fileId
+        /// </summary>
+        [XmlElement("show_picture")]
+        public string ShowPicture { get; set; }
+
+        /// <summary>
+        /// 表明此任务是否在公域展示，若此值为true，则需要填入对应的公域展示字段内容
+        /// </summary>
+        [XmlElement("show_public")]
+        public bool ShowPublic { get; set; }
+
+        /// <summary>
         /// 任务模板描述
         /// </summary>
         [XmlElement("task_desc")]
         public string TaskDesc { get; set; }
+
+        /// <summary>
+        /// 公域投放任务跳转商家小程序链接
+        /// </summary>
+        [XmlElement("task_detail_url")]
+        public string TaskDetailUrl { get; set; }
 
         /// <summary>
         /// 任务结束时间

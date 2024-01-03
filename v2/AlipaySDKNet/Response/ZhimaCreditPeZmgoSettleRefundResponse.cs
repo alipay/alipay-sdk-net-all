@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string OutRequestNo { get; set; }
 
         /// <summary>
-        /// 本次请求退款金额
+        /// 本次请求退款金额，单位为：元（人民币），精确到小数点后两位
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }

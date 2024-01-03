@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string SellerId { get; set; }
 
         /// <summary>
+        /// 门店信息
+        /// </summary>
+        [XmlElement("shop_info")]
+        public ShopInfoDTO ShopInfo { get; set; }
+
+        /// <summary>
         /// 追踪ID,公域分发场景必传,会影响主播归因、分享员归因等；通过调用  my.checkBeforeAddOrder 接口返回
         /// </summary>
         [XmlElement("source_id")]

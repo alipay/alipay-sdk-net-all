@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public long ExpireTime { get; set; }
 
         /// <summary>
+        /// 吱口令生成扩展参数
+        /// </summary>
+        [XmlElement("extend_params")]
+        public ShareCodeCreateExtendParam ExtendParams { get; set; }
+
+        /// <summary>
         /// 商户的名称
         /// </summary>
         [XmlElement("merchant_name")]

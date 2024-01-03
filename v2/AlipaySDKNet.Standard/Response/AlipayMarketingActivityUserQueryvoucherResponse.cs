@@ -58,6 +58,12 @@ namespace Aop.Api.Response
         public UserVoucherBaseInfo UserVoucherBaseInfo { get; set; }
 
         /// <summary>
+        /// 引导详情
+        /// </summary>
+        [XmlElement("voucher_customer_guide_info")]
+        public VoucherCustomerGuideInfo VoucherCustomerGuideInfo { get; set; }
+
+        /// <summary>
         /// 券优惠信息
         /// </summary>
         [XmlElement("voucher_deduct_info")]

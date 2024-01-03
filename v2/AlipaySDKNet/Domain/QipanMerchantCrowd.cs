@@ -48,10 +48,10 @@ namespace Aop.Api.Domain
         public string ExternalCrowdCode { get; set; }
 
         /// <summary>
-        /// 人群是否可见,取值如下： <li>0-人群可见，默认为0</li> <li>1-人群不可见</li>
+        /// true -人群在棋盘站点隐藏 false - 人群在棋盘站点显示透出
         /// </summary>
         [XmlElement("hidden")]
-        public string Hidden { get; set; }
+        public bool Hidden { get; set; }
 
         /// <summary>
         /// true - 人群支持标签二次加工 false - 人群不支持标签二次加工

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string QueryParam { get; set; }
 
         /// <summary>
-        /// 合成后图片的大小 (s -- 8cm, m -- 12cm, l -- 30cm)
+        /// 合成后图片的大小规格，有s、m、l三档可选。
         /// </summary>
         [XmlElement("size")]
         public string Size { get; set; }

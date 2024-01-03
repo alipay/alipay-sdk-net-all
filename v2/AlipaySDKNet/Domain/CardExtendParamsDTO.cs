@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,20 @@ namespace Aop.Api.Domain
     [Serializable]
     public class CardExtendParamsDTO : AopObject
     {
+        /// <summary>
+        /// 银行机构id
+        /// </summary>
+        [XmlArray("inst_id")]
+        [XmlArrayItem("string")]
+        public List<string> InstId { get; set; }
+
+        /// <summary>
+        /// 银行机构名称
+        /// </summary>
+        [XmlArray("inst_name")]
+        [XmlArrayItem("string")]
+        public List<string> InstName { get; set; }
+
         /// <summary>
         /// 是否需要开通钱包
         /// </summary>

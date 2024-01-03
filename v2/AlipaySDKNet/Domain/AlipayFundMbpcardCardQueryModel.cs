@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AlipayIdentityType { get; set; }
 
         /// <summary>
-        /// 卡片绑定人姓名
+        /// 卡片绑定人姓名，账号类型为登录号时必填
         /// </summary>
         [XmlElement("bind_user_name")]
         public string BindUserName { get; set; }

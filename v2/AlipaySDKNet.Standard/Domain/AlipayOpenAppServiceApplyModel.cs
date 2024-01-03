@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppServiceApplyModel : AopObject
     {
         /// <summary>
-        /// 行业类目id
+        /// 行业类目id,获取请参考<a href="https://opendocs.alipay.com/mini/03ci0w?pathHash=ed3c875c">各个行业场景服务接入资料</a>
         /// </summary>
         [XmlElement("category_id")]
         public string CategoryId { get; set; }
@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// 服务xml
+        /// 服务xml,格式请参考<a href="https://opendocs.alipay.com/mini/03cj40?pathHash=a5de4bd9">Schema 规则介绍</a>
         /// </summary>
         [XmlElement("service_xml")]
         public string ServiceXml { get; set; }
 
         /// <summary>
-        /// 服务模版。若当前服务类目只有一个服务模版，可不填。
+        /// 默认值:DEFAULT。
         /// </summary>
         [XmlElement("template_type")]
         public string TemplateType { get; set; }

@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceCommonGuidedcodeReceiveResponse : AopResponse
     {
         /// <summary>
-        /// 二维码地址
+        /// 具体跳转的端内链接，为创建模板时的appletId
         /// </summary>
         [XmlElement("guided_code")]
         public string GuidedCode { get; set; }
@@ -25,5 +25,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("guided_share_code")]
         public string GuidedShareCode { get; set; }
+
+        /// <summary>
+        /// 推广短链接
+        /// </summary>
+        [XmlElement("guided_short_url")]
+        public string GuidedShortUrl { get; set; }
     }
 }

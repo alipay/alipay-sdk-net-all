@@ -43,7 +43,7 @@ namespace Aop.Api.Response
         public string Gender { get; set; }
 
         /// <summary>
-        /// ALWAYS_ON_JOB("ALWAYS_ON_JOB", "随时到岗") MONTH_ON_JOB("MONTH_ON_JOB", "月内到岗") SEEK_FOR_CHANCE("SEEK_FOR_CHANCE", "考虑机会") NO_MIND("NO_MIND", "暂不考虑机会")
+        /// 用户的求职状态
         /// </summary>
         [XmlElement("intention_status")]
         public string IntentionStatus { get; set; }
@@ -74,7 +74,7 @@ namespace Aop.Api.Response
         public List<CloudResumePositionIntention> PositionIntentions { get; set; }
 
         /// <summary>
-        /// IN_SCHOOL:在校 FINISH_SCHOOL:已毕业
+        /// 职业身份
         /// </summary>
         [XmlElement("position_type")]
         public string PositionType { get; set; }

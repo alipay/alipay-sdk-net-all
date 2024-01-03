@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ApplyTime { get; set; }
 
         /// <summary>
-        /// 本申请单的请求类型。一般可选值包括ZHIFUTONG_CONSULT（直付通商户预校验）/ZHIFUTONG_CREATE（直付通商户创建）/ZHIFUTONG_MODIFY（直付通商户修改）
+        /// 本申请单的请求类型。
         /// </summary>
         [XmlElement("apply_type")]
         public string ApplyType { get; set; }

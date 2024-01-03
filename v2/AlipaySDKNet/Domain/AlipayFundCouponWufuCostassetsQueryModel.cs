@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public long CostCount { get; set; }
 
         /// <summary>
+        /// 是否消耗商家x福卡类型
+        /// </summary>
+        [XmlElement("cost_merchant_card")]
+        public string CostMerchantCard { get; set; }
+
+        /// <summary>
+        /// 拓展参数
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("open_id")]

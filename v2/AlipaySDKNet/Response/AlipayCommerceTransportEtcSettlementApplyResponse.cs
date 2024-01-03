@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public string TotalAmount { get; set; }
 
         /// <summary>
-        /// 行程扣款阶段性错误信息：用户协议不存在
+        /// 行程扣款阶段性错误信息
         /// </summary>
         [XmlElement("trade_biz_code")]
         public string TradeBizCode { get; set; }
@@ -51,7 +51,7 @@ namespace Aop.Api.Response
         public string TradeNo { get; set; }
 
         /// <summary>
-        /// 行程扣款状态： "I":"待支付"; "PI":"支付中（请重试）"; "S":"支付成功"; "F":"支付失败"; "RI":"退款中（请重试）"; "R":"已退款"
+        /// 行程交易处理状态
         /// </summary>
         [XmlElement("trade_status")]
         public string TradeStatus { get; set; }

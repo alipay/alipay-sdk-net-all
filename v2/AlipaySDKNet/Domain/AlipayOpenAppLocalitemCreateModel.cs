@@ -49,7 +49,7 @@ namespace Aop.Api.Domain
         public string ItemDetailsPageModel { get; set; }
 
         /// <summary>
-        /// 商品模版类型：1. 团购 2. 代金
+        /// 商品模版类型：1. 团购 2. 代金券 3. 日历房
         /// </summary>
         [XmlElement("item_type")]
         public string ItemType { get; set; }
@@ -84,6 +84,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sold_time")]
         public TimeRangeStructVO SoldTime { get; set; }
+
+        /// <summary>
+        /// 标品id
+        /// </summary>
+        [XmlElement("spu_id")]
+        public string SpuId { get; set; }
 
         /// <summary>
         /// 商品名称。 商品名称，字符类型，最少不低于3，最长不超过60个字。注：1.商品名称只允许汉字、数字、英文字母、特殊字符集；2.商品名称不得仅为数字、字母、特殊字符集或上述三种的组合。

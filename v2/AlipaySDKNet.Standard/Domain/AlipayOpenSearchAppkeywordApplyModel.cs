@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenSearchAppkeywordApplyModel : AopObject
     {
         /// <summary>
-        /// 关键词id，（仅修改时传入，修改时仅能传一个关键词）
+        /// 关键词配置id，由支付宝生成，关键词申请通过后会通知接口返回，也可以申请单状态获取
         /// </summary>
         [XmlElement("config_id")]
         public string ConfigId { get; set; }

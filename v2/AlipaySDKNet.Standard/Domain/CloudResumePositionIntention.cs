@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class CloudResumePositionIntention : AopObject
     {
         /// <summary>
-        /// 意向城市Code
+        /// 意向城市Code。具体地区编码参见https://lbs.amap.com/api/webservice/download 里面城市编码表
         /// </summary>
         [XmlElement("intention_city")]
         public string IntentionCity { get; set; }

@@ -226,5 +226,18 @@ namespace Aop.Api.Domain
         [XmlArray("sites")]
         [XmlArrayItem("site_info")]
         public List<SiteInfo> Sites { get; set; }
+
+        /// <summary>
+        /// 交易场景；
+        /// </summary>
+        [XmlArray("trade_scene")]
+        [XmlArrayItem("string")]
+        public List<string> TradeScene { get; set; }
+
+        /// <summary>
+        /// 代扣产品信息
+        /// </summary>
+        [XmlElement("zft_withholding_info")]
+        public ZFTWithholdingInfo ZftWithholdingInfo { get; set; }
     }
 }

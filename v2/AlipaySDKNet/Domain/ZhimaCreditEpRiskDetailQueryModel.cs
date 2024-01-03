@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 风险场景策略id
+        /// 风险场景策略id(zhima.credit.ep.risk.info.identify接口返回结果中的strategy_id字段)
         /// </summary>
         [XmlElement("risk_strategy_id")]
         public string RiskStrategyId { get; set; }
 
         /// <summary>
-        /// 业务场景码
+        /// 业务场景码(请联系业务获取)
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

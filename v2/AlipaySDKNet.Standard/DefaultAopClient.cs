@@ -31,7 +31,7 @@ namespace Aop.Api
         /// <summary>
         /// 当前SDK版本号，SDK打包发布时会自动修改该值
         /// </summary>
-        public const string SDK_VERSION = "alipay-sdk-net-4.8.76.ALL";
+        public const string SDK_VERSION = "alipay-sdk-net-4.9.20.ALL";
 
         private CertEnvironment certEnvironment;
 
@@ -39,6 +39,8 @@ namespace Aop.Api
         private string encyptType = "AES";
 
         private WebUtils webUtils;
+
+        private bool skipSign = false;
 
         public string Version
         {
@@ -96,6 +98,8 @@ namespace Aop.Api
             {
                 this.webUtils.Proxy = new WebProxy(config.ProxyHost, config.ProxyPort);
             }
+
+            this.skipSign = config.SkipSign;
         }
 
 
@@ -279,8 +283,11 @@ namespace Aop.Api
                 txtParams.Add(AlipayConstants.ENCRYPT_TYPE, this.encyptType);
             }
 
-            // 添加签名参数
-            txtParams.Add(AlipayConstants.SIGN, AopUtils.SignAopRequest(txtParams, privateKeyPem, charset, this.keyFromFile, signType));
+            if (!skipSign)
+            {
+                // 添加签名参数
+                txtParams.Add(AlipayConstants.SIGN, AopUtils.SignAopRequest(txtParams, privateKeyPem, charset, this.keyFromFile, signType));
+            }
 
             // 是否需要上传文件
             string body;
@@ -417,8 +424,11 @@ namespace Aop.Api
                 txtParams.Add(AlipayConstants.ENCRYPT_TYPE, this.encyptType);
             }
 
-            // 添加签名参数
-            txtParams.Add(AlipayConstants.SIGN, AopUtils.SignAopRequest(txtParams, privateKeyPem, charset, this.keyFromFile, signType));
+            if (!skipSign)
+            {
+                // 添加签名参数
+                txtParams.Add(AlipayConstants.SIGN, AopUtils.SignAopRequest(txtParams, privateKeyPem, charset, this.keyFromFile, signType));
+            }
 
             // 是否需要上传文件
             string body;
@@ -517,8 +527,11 @@ namespace Aop.Api
             IDictionary<string, string> sortedTxtParams = new SortedDictionary<string, string>(txtParams, StringComparer.Ordinal);
             txtParams = new AopDictionary(sortedTxtParams);
 
-            // 排序返回字典类型添加签名参数
-            txtParams.Add(AlipayConstants.SIGN, AopUtils.SignAopRequest(sortedTxtParams, privateKeyPem, this.charset, this.keyFromFile, this.signType));
+            if (!skipSign)
+            {
+                // 排序返回字典类型添加签名参数
+                txtParams.Add(AlipayConstants.SIGN, AopUtils.SignAopRequest(sortedTxtParams, privateKeyPem, this.charset, this.keyFromFile, this.signType));
+            }
 
             // 是否需要上传文件
             string body;
@@ -596,6 +609,10 @@ namespace Aop.Api
 
         private void CheckResponseCertSign<T>(IAopRequest<T> request, string responseBody, bool isError, IAopParser<T> parser) where T : AopResponse
         {
+            if (skipSign)
+            {
+                return;
+            }
             if (request.GetApiName().Equals("alipay.open.app.alipaycert.download"))
             {
                 return;
@@ -668,7 +685,7 @@ namespace Aop.Api
 
         private void CheckResponseSign<T>(IAopRequest<T> request, string responseBody, bool isError, IAopParser<T> parser) where T : AopResponse
         {
-            if (string.IsNullOrEmpty(alipayPublicKey) || string.IsNullOrEmpty(charset))
+            if (string.IsNullOrEmpty(alipayPublicKey) || string.IsNullOrEmpty(charset) || skipSign)
             {
                 return;
             }
@@ -779,10 +796,13 @@ namespace Aop.Api
 
             // 参数签名
             String charset = String.IsNullOrEmpty(this.charset) ? "utf-8" : this.charset;
-            String signResult = AopUtils.SignAopRequest(sortedAopDic, privateKeyPem, charset, this.keyFromFile, this.signType);
 
-            // 添加签名结果参数
-            sortedAopDic.Add(AlipayConstants.SIGN, signResult);
+            if (!skipSign)
+            {
+                String signResult = AopUtils.SignAopRequest(sortedAopDic, privateKeyPem, charset, this.keyFromFile, this.signType);
+                // 添加签名结果参数
+                sortedAopDic.Add(AlipayConstants.SIGN, signResult);
+            }
 
             // 参数拼接
             String signedResult = WebUtils.BuildQuery(sortedAopDic, charset);

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 指定买家证件类型。 枚举值： IDENTITY_CARD：身份证； PASSPORT：护照； OFFICER_CARD：军官证； SOLDIER_CARD：士兵证； HOKOU：户口本。如有其它类型需要支持，请与蚂蚁金服工作人员联系。 注： need_check_info=T或fix_buyer=T时该参数才有效，支付宝会比较买家在支付宝留存的证件类型与该参数传入的值是否匹配。
+        /// 指定买家证件类型。 枚举值： IDENTITY_CARD：身份证； PASSPORT：护照； OFFICER_CARD：军官证； SOLDIER_CARD：士兵证； HOKOU：户口本； PERMANENT_RESIDENCE_FOREIGNER：外国人永久居留身份证。 如有其它类型需要支持，请与蚂蚁金服工作人员联系。 注： need_check_info=T或fix_buyer=T时该参数才有效，支付宝会比较买家在支付宝留存的证件类型与该参数传入的值是否匹配。
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }

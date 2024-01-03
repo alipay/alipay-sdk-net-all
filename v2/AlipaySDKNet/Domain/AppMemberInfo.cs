@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 头像地址
+        /// 头像地址fileId(完整地址需自行拼接)
         /// </summary>
         [XmlElement("portrait")]
         public string Portrait { get; set; }

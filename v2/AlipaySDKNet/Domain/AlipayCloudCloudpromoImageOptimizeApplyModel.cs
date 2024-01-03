@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string OutBizId { get; set; }
 
         /// <summary>
-        /// 模板ID，针对于特殊商户的优化方案，非必传
+        /// 模板ID用于指定优化方案（非必传） 人像漫改可用模板id：portrait_STYLE_makotoshinkai-single（新海诚）、portrait_STYLE_coloredPencil-single（彩铅）、portrait_STYLE_miyazakihayao-single（宫崎骏）、portrait_STYLE_cyberpunk（赛博朋克）
         /// </summary>
         [XmlElement("template_id")]
         public string TemplateId { get; set; }

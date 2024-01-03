@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("principal_open_id")]
         public string PrincipalOpenId { get; set; }
+
+        /// <summary>
+        /// 真实姓名,当登录号类型为ALIPAY_LOGON_ID，需传真实姓名，用于校验
+        /// </summary>
+        [XmlElement("real_name")]
+        public string RealName { get; set; }
     }
 }

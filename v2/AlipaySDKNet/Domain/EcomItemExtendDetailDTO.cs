@@ -34,6 +34,24 @@ namespace Aop.Api.Domain
         public long CardUsePeriod { get; set; }
 
         /// <summary>
+        /// 充电桩编号
+        /// </summary>
+        [XmlElement("charge_box_no")]
+        public string ChargeBoxNo { get; set; }
+
+        /// <summary>
+        /// 充电桩插座总数
+        /// </summary>
+        [XmlElement("charge_box_plug_total")]
+        public long ChargeBoxPlugTotal { get; set; }
+
+        /// <summary>
+        /// 充电桩设备类型
+        /// </summary>
+        [XmlElement("charge_box_type")]
+        public string ChargeBoxType { get; set; }
+
+        /// <summary>
         /// 充电站点详细地址
         /// </summary>
         [XmlElement("charge_station_address")]

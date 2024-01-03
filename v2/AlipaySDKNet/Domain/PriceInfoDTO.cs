@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Freight { get; set; }
 
         /// <summary>
+        /// 商家侧储蓄卡金额，单位为元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("merchant_value_price")]
+        public string MerchantValuePrice { get; set; }
+
+        /// <summary>
         /// 订单总价，单位：元,精确到小数点后两位
         /// </summary>
         [XmlElement("order_price")]

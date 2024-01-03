@@ -51,6 +51,11 @@ namespace Aop.Api.Request
         public string FileType { get; set; }
 
         /// <summary>
+        /// 文件的公网链接，机构可通过此链接向蚂蚁上传文件
+        /// </summary>
+        public string FileUrl { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         public string OutBizNo { get; set; }
@@ -162,6 +167,7 @@ namespace Aop.Api.Request
             parameters.Add("file_path", this.FilePath);
             parameters.Add("file_size", this.FileSize);
             parameters.Add("file_type", this.FileType);
+            parameters.Add("file_url", this.FileUrl);
             parameters.Add("out_biz_no", this.OutBizNo);
             parameters.Add("ser_biz_no", this.SerBizNo);
             parameters.Add("ser_biz_type", this.SerBizType);

@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class ConversionData : AopObject
     {
         /// <summary>
+        /// 广告id
+        /// </summary>
+        [XmlElement("ad_id")]
+        public string AdId { get; set; }
+
+        /// <summary>
         /// 转化流水号，用于幂等  对于source=XLIGHT，转化流水号来自灯火的留资明细 对于source=DATASET/OTHER，转化流水号由调用方自定义
         /// </summary>
         [XmlElement("biz_no")]
@@ -124,6 +130,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("uuid")]
         public string Uuid { get; set; }
+
+        /// <summary>
+        /// 支付宝用户在应用维度下的唯一标识
+        /// </summary>
+        [XmlElement("uuid_open_id")]
+        public string UuidOpenId { get; set; }
 
         /// <summary>
         /// 当source=DATASET或者OTHER时使用：  转化客户唯一标志类型： PID - 2088pid

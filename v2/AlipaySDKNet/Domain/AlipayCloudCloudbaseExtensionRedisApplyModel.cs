@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCloudCloudbaseExtensionRedisApplyModel : AopObject
     {
         /// <summary>
-        /// 架构类型。集群版：分片集群架构，支持扩缩容、规格调整; 标准版：标准的 master-slave 架构，支持规格调整  - CLUSTER(集群版)  - STANDARD(标准版)
+        /// 架构类型。集群版：分片集群架构，支持扩缩容、规格调整; 标准版：标准的 master-slave 架构，支持规格调整; 极简版：第一年免费;
         /// </summary>
         [XmlElement("architecture_type")]
         public string ArchitectureType { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// 实例规格，每个数据节点的内存大小  - 1GB  - 4GB
+        /// 实例规格，每个数据节点的内存大小  - 1GB  - 4GB  - 128MB
         /// </summary>
         [XmlElement("instance_spec")]
         public string InstanceSpec { get; set; }

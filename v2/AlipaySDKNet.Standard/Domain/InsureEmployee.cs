@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string EmployeeCardNo { get; set; }
 
         /// <summary>
-        /// 员工工种信息
+        /// 员工工种code信息,按照文档附件规则传值
         /// </summary>
         [XmlElement("job")]
         public string Job { get; set; }
 
         /// <summary>
-        /// 职业级别。 第一级：1 第二级：2...
+        /// 职业级别该字段废弃，只需要传工种job 当前字段已废弃(职业级别该字段废弃，只需要传工种job)
         /// </summary>
         [XmlElement("job_level")]
         public string JobLevel { get; set; }

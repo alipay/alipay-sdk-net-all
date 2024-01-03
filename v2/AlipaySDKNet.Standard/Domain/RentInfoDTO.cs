@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BuyoutPrice { get; set; }
 
         /// <summary>
+        /// 押金金额，单位元
+        /// </summary>
+        [XmlElement("deposit_price")]
+        public string DepositPrice { get; set; }
+
+        /// <summary>
         /// 尾期租金用在非每期分期租金一致场景，例如一笔订单总金额100，首期33.33，每期33.33，尾期33.34，，单位元
         /// </summary>
         [XmlElement("finish_real_rent_price")]
@@ -50,5 +56,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("period_real_rent_price")]
         public string PeriodRealRentPrice { get; set; }
+
+        /// <summary>
+        /// 租期结束时间
+        /// </summary>
+        [XmlElement("rent_end_time")]
+        public string RentEndTime { get; set; }
+
+        /// <summary>
+        /// 租期开始时间
+        /// </summary>
+        [XmlElement("rent_start_time")]
+        public string RentStartTime { get; set; }
     }
 }

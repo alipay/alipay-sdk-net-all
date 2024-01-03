@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string SettleAccountType { get; set; }
 
         /// <summary>
+        /// 已结算资产
+        /// </summary>
+        [XmlElement("settle_entity_biz_type")]
+        public string SettleEntityBizType { get; set; }
+
+        /// <summary>
         /// 结算主体账号。 当结算主体类型为SecondMerchant，传二级商户ID(smid)；结算主体类型为Store时，传门店ID
         /// </summary>
         [XmlElement("settle_entity_id")]

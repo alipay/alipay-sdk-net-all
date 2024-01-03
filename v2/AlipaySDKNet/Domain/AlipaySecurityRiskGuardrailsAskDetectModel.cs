@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string RequestId { get; set; }
 
         /// <summary>
+        /// 场景码，非必填，可联系蚂蚁运营同学获取
+        /// </summary>
+        [XmlElement("scene_code")]
+        public string SceneCode { get; set; }
+
+        /// <summary>
         /// 大模型提问护栏服务, 用于区分提供的服务类别，当前支持：TJ_QUESTION_BASIC、TJ_ANSWER_BASIC 两种
         /// </summary>
         [XmlElement("service_name")]

@@ -108,5 +108,10 @@ namespace Aop.Api
         /// 注：C#中读取超时将设置为HttpWebRequest的ReadWriteTimeout参数，表示服务端首次返回数据后，等待后续数据的超时时长，单位毫秒
         /// </summary>
         public int ReadTimeout { get; set; } = 15000;
+
+        /// <summary>
+        /// 是否跳过加验签（小程序云免鉴权）
+        /// </summary>
+        public bool SkipSign { get; set; } = false;
     }
 }

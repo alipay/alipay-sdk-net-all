@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public DeliveryCityCodeRule DeliveryCityCodeRule { get; set; }
 
         /// <summary>
+        /// 指定人群
+        /// </summary>
+        [XmlElement("delivery_crowd_rule")]
+        public DeliveryCrowdRule DeliveryCrowdRule { get; set; }
+
+        /// <summary>
         /// "曝光商户选取列表。 说明：需要传入您期望曝光的商户的商户号，传入为空时默认使用投放优惠券活动的适用范围。 限制：曝光商户号需与投放归属商户号相同，或传入有跨主体授权关系的商户号或有弱绑定关系的M3账号"
         /// </summary>
         [XmlArray("delivery_merchant_infos")]
@@ -65,6 +71,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("delivery_search_box_rule")]
         public DeliverySearchBoxRule DeliverySearchBoxRule { get; set; }
+
+        /// <summary>
+        /// 推广消息模版规则
+        /// </summary>
+        [XmlElement("delivery_template_rule")]
+        public DeliveryTemplateRule DeliveryTemplateRule { get; set; }
 
         /// <summary>
         /// 小程序推广可用。

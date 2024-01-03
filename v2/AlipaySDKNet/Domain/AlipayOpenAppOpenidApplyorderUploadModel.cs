@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 用户ID列表
+        /// userid列表
         /// </summary>
         [XmlArray("user_id_list")]
         [XmlArrayItem("string")]

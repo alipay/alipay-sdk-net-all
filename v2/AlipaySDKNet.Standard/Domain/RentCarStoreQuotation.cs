@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public long Distance { get; set; }
 
         /// <summary>
-        /// 在当前随心租卡片、租期、门店、车型下，随心租可以使用的天数
+        /// 在当前随心租卡片、租期、门店、车型下，随心租可以使用的天数。仅随心租场景可用，其他车型报价场景不需要传
         /// </summary>
         [XmlElement("easy_card_usable_day_count")]
         public long EasyCardUsableDayCount { get; set; }
@@ -90,7 +90,7 @@ namespace Aop.Api.Domain
         public string SupplierName { get; set; }
 
         /// <summary>
-        /// 在请求参数中如果传了用户购买随心租的订单id，则服务商需要判断哪些车型、门店可以使用哪些随心租
+        /// 在请求参数中如果传了用户购买随心租的订单id，则服务商需要判断哪些车型、门店可以使用哪些随心租 当前字段已废弃(无用字段，废弃不再使用)
         /// </summary>
         [XmlArray("support_easy_card_order_ids")]
         [XmlArrayItem("string")]
@@ -109,7 +109,7 @@ namespace Aop.Api.Domain
         public long UnitAmount { get; set; }
 
         /// <summary>
-        /// 使用随心租后用户需要支付的总价
+        /// 使用随心租后用户需要支付的总价。仅随心租场景使用，其余车辆报价场景不需要传
         /// </summary>
         [XmlElement("use_easy_card_total_amount")]
         public long UseEasyCardTotalAmount { get; set; }

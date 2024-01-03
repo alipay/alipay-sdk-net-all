@@ -10,19 +10,19 @@ namespace Aop.Api.Domain
     public class OpenIdValue : AopObject
     {
         /// <summary>
-        /// 用户OpenID
+        /// 用户openid
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 用户UnionID
+        /// 用户unionid
         /// </summary>
         [XmlElement("union_id")]
         public string UnionId { get; set; }
 
         /// <summary>
-        /// 支付宝用户ID
+        /// 支付宝用户userid
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string SchemaXml { get; set; }
 
         /// <summary>
-        /// 服务模版类型
+        /// 服务模版类型，默认值: DEFAULT
         /// </summary>
         [XmlElement("template_type")]
         public string TemplateType { get; set; }

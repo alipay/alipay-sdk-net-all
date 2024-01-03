@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string CustomAssets { get; set; }
 
         /// <summary>
-        /// 商户外部会员卡卡号  说明：  1、会员卡开卡接口，如果卡类型为外部会员卡，请求中则必须提供该参数；  2、更新、查询、删除等接口，请求中则不需要提供该参数值；
+        /// 用户在商户crm系统中的会员卡卡号，该参数必填。
         /// </summary>
         [XmlElement("external_card_no")]
         public string ExternalCardNo { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public MdCodeInfoDTO MdcodeInfo { get; set; }
 
         /// <summary>
-        /// 会员卡开卡时间，格式为yyyy-MM-dd  HH:mm:ss。会员卡更新时，该时间不支持修改，请传入调用开卡接口时传入的card_ext_info.open_date时间。
+        /// 会员卡开卡时间，格式为yyyy-MM-dd HH:mm:ss。会员卡更新时，该时间不支持修改。
         /// </summary>
         [XmlElement("open_date")]
         public string OpenDate { get; set; }
@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// 会员卡有效期，格式为yyyy-MM-dd  HH:mm:ss。会员卡更新时，该时间不支持修改，请传入调用开卡接口时传入的card_ext_info.valid_date时间。
+        /// 会员卡有效期结束时间，格式为yyyy-MM-dd HH:mm:ss。会员卡更新时，该时间不支持修改。
         /// </summary>
         [XmlElement("valid_date")]
         public string ValidDate { get; set; }

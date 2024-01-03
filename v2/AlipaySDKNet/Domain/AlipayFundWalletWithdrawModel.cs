@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 定制化的提现策略
+        /// </summary>
+        [XmlElement("extend_strategy")]
+        public ExtendStrategy ExtendStrategy { get; set; }
+
+        /// <summary>
         /// 提现标题
         /// </summary>
         [XmlElement("order_title")]

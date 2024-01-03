@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMerchantOrderSyncModel : AopObject
     {
         /// <summary>
-        /// 订单金额
+        /// 订单总金额：某笔交易订单优惠前的总金额，单位为【元】</br> <a href="https://mdn.alipayobjects.com/portal_ykdvdu/afts/img/A*UuuWRpmekegAAAAAAAAAAAAAAQAAAQ/original" target="_blank">实际案例一</a> <br><a href="https://mdn.alipayobjects.com/portal_ykdvdu/afts/img/A*kBkOTZpqP40AAAAAAAAAAAAAAQAAAQ/original" target="_blank">实际案例二</a> <br><a href="https://mdn.alipayobjects.com/portal_ykdvdu/afts/img/A*ZpkjTJQlFVAAAAAAAAAAAAAAAQAAAQ/original" target="_blank">实际案例三</a>
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
-        /// buyer_info与buyer_id必选其一
+        /// 买家信息
         /// </summary>
         [XmlElement("buyer_info")]
         public UserInfomation BuyerInfo { get; set; }
@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// 优惠金额
+        /// 商户总计优惠金额：代表商户侧给予用户的总计优惠金额 （不包含选择支付宝付款时，支付宝给予的优惠减免金额），单位为【元】。</br> <a href="https://mdn.alipayobjects.com/portal_ykdvdu/afts/img/A*UuuWRpmekegAAAAAAAAAAAAAAQAAAQ/original" target="_blank">实际案例一</a> <br><a href="https://mdn.alipayobjects.com/portal_ykdvdu/afts/img/A*kBkOTZpqP40AAAAAAAAAAAAAAQAAAQ/original" target="_blank">实际案例二</a> <br><a href="https://mdn.alipayobjects.com/portal_ykdvdu/afts/img/A*ZpkjTJQlFVAAAAAAAAAAAAAAAQAAAQ/original" target="_blank">实际案例三</a>
         /// </summary>
         [XmlElement("discount_amount")]
         public string DiscountAmount { get; set; }
@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public List<DiscountInfoData> DiscountInfoList { get; set; }
 
         /// <summary>
-        /// 扩展信息，请参见 <a href="https://opendocs.alipay.com/mini/introduce/ordercenter">小程序订单中心</a>
+        /// 扩展信息，请参见 <a href="https://opendocs.alipay.com/mini/04zsxt?pathHash=654d4f10">小程序订单中心模板</a>
         /// </summary>
         [XmlArray("ext_info")]
         [XmlArrayItem("order_ext_info")]
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public List<OrderLogisticsInformationRequest> LogisticsInfoList { get; set; }
 
         /// <summary>
-        /// 本字段已废弃，无需填写！
+        /// 本字段已废弃，无需填写！ 当前字段已废弃(本字段已废弃 不再使用)
         /// </summary>
         [XmlElement("order_auth_code")]
         public string OrderAuthCode { get; set; }
@@ -118,13 +118,13 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 交易对应的签约商户userId
+        /// 交易对应的签约商户userId 当前字段已废弃(注意：该字段自2020-02-16日起，可以不传入)
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }
 
         /// <summary>
-        /// 支付金额，单位为【元】，需要实际支付的金额。SERVICE_ORDER且不涉及金额可不传入该字段，其他场景必传
+        /// 用户应付金额 ：用户最终结算时需要支付金额（不包含选择支付宝付款时，支付宝给予的优惠减免金额），单位为【元】</br> <a href="https://mdn.alipayobjects.com/portal_ykdvdu/afts/img/A*UuuWRpmekegAAAAAAAAAAAAAAQAAAQ/original" target="_blank">实际案例一</a> <br><a href="https://mdn.alipayobjects.com/portal_ykdvdu/afts/img/A*kBkOTZpqP40AAAAAAAAAAAAAAQAAAQ/original" target="_blank">实际案例二</a> <br><a href="https://mdn.alipayobjects.com/portal_ykdvdu/afts/img/A*ZpkjTJQlFVAAAAAAAAAAAAAAAQAAAQ/original" target="_blank">实际案例三</a>
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }
@@ -136,13 +136,13 @@ namespace Aop.Api.Domain
         public string PayTimeoutExpress { get; set; }
 
         /// <summary>
-        /// 商户订单同步记录id
+        /// 商户订单同步记录id 当前字段已废弃(仅部分存量接入和行业模板需要外，其他情况可以不传入)
         /// </summary>
         [XmlElement("record_id")]
         public string RecordId { get; set; }
 
         /// <summary>
-        /// 卖家userId
+        /// 卖家userId 当前字段已废弃(注意：该字段自2020-02-16日起，可以不传入)
         /// </summary>
         [XmlElement("seller_id")]
         public string SellerId { get; set; }
@@ -178,7 +178,7 @@ namespace Aop.Api.Domain
         public string SyncContent { get; set; }
 
         /// <summary>
-        /// 凭证信息（废弃，凭证信息参考ticket_order_list）
+        /// 凭证信息（废弃，凭证信息参考ticket_order_list） 当前字段已废弃(可使用 ticket_order_list 替代)
         /// </summary>
         [XmlElement("ticket_info")]
         public TicketInfo TicketInfo { get; set; }

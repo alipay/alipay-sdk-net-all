@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AssociateTradeNo { get; set; }
 
         /// <summary>
+        /// 券归属商户
+        /// </summary>
+        [XmlElement("belong_merchant_id")]
+        public string BelongMerchantId { get; set; }
+
+        /// <summary>
         /// 领券时间
         /// </summary>
         [XmlElement("create_time")]

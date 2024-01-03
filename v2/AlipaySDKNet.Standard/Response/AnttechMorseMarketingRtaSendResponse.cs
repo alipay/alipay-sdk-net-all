@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -20,6 +21,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("campaign_id")]
         public string CampaignId { get; set; }
+
+        /// <summary>
+        /// 发奖权益结果列表
+        /// </summary>
+        [XmlArray("send_equity_order_list")]
+        [XmlArrayItem("send_equity_order_result")]
+        public List<SendEquityOrderResult> SendEquityOrderList { get; set; }
 
         /// <summary>
         /// 发奖权益订单结果列表

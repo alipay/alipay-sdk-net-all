@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CreditBizOrderId { get; set; }
 
         /// <summary>
-        /// 用户此订单是否守约。 传true时，用户在芝麻信用-守约记录中，该笔订单是已守约状态； 传false时，用户在芝麻信用-守约记录中，该笔订单是已取消状态。
+        /// 字符串类型，用户此订单是否守约。 传"true"时，用户在芝麻信用-守约记录中，该笔订单是已守约状态； 传"false"时，用户在芝麻信用-守约记录中，该笔订单是已取消状态。
         /// </summary>
         [XmlElement("is_fulfilled")]
         public string IsFulfilled { get; set; }

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class StarUidAmountRatioDTO : AopObject
     {
         /// <summary>
-        /// 分佣比率
+        /// 分佣比率，格式:xx%
         /// </summary>
         [XmlElement("ratio")]
         public string Ratio { get; set; }

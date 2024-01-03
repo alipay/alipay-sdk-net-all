@@ -33,6 +33,12 @@ namespace Aop.Api.Response
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
+        /// 获取签名后的业务数据
+        /// </summary>
+        [XmlElement("orderStr")]
+        public string OrderStr { get; set; }
+
+        /// <summary>
         /// 商户订单号，由商家自定义。
         /// </summary>
         [XmlElement("out_trade_no")]

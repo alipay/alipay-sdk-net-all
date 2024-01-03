@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string DoctorName { get; set; }
 
         /// <summary>
+        /// 扩展信息
+        /// </summary>
+        [XmlElement("ext_info")]
+        public MedicalInquiryOrderExtInfo ExtInfo { get; set; }
+
+        /// <summary>
         /// 医生执业医院
         /// </summary>
         [XmlElement("hospital_name")]
@@ -76,7 +82,7 @@ namespace Aop.Api.Domain
         public string MerchantOrderLinkPage { get; set; }
 
         /// <summary>
-        /// 待支付/待接诊 / 待问诊 / 问诊中 / 已完成 / 已取消 / 已退款/退款中/取消中：WAIT_PAY/WAIT_RECEPTION/WAIT_INQUIRY/IN_INQUIRY/FINISHED/CANCELED/REFUNDED/REFUNDING/CANCELING
+        /// 待支付 / 待接诊 / 待问诊 / 问诊中 / 已完成 / 已取消 / 已退款 / 退款中 / 取消中 / 审核失败 / 系统取消 / 用户取消 对应的枚举值 WAIT_PAY/WAIT_RECEPTION/WAIT_INQUIRY/IN_INQUIRY/FINISHED/CANCELED/REFUNDED/REFUNDING/CANCELING/APPROVE_FAIL/SYSTEM_CANCELED/USER_CANCELED
         /// </summary>
         [XmlElement("merchant_order_status")]
         public string MerchantOrderStatus { get; set; }
@@ -118,7 +124,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 固定值：INQUIRY_ORDER
+        /// 外部订单类型
         /// </summary>
         [XmlElement("out_biz_type")]
         public string OutBizType { get; set; }

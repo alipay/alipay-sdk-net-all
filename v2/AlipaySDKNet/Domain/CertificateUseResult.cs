@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public CertificateSerialInfo SerialInfoList { get; set; }
 
         /// <summary>
+        /// 商品信息
+        /// </summary>
+        [XmlElement("sku_info")]
+        public CertificateSkuInfo SkuInfo { get; set; }
+
+        /// <summary>
         /// 核销操作单号,核销成功必填,撤销核销使用
         /// </summary>
         [XmlElement("use_order_no")]

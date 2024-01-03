@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 单位为人民币分，task_reward_amount=2代表2分钱。这个字段与广告检索接口返回的taskRewardAmount字段值一致
+        /// </summary>
+        [XmlElement("task_reward_amount")]
+        public string TaskRewardAmount { get; set; }
     }
 }

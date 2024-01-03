@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -38,5 +39,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("promotion_type")]
         public string PromotionType { get; set; }
+
+        /// <summary>
+        /// 子营销申领明细，包含子营销申领消耗的名称和数量
+        /// </summary>
+        [XmlArray("sub_promo_infos")]
+        [XmlArrayItem("sub_promo_info_v_o")]
+        public List<SubPromoInfoVO> SubPromoInfos { get; set; }
     }
 }

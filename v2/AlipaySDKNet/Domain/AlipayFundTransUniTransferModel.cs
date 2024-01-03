@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OrderTitle { get; set; }
 
         /// <summary>
-        /// 原支付宝业务单号。C2C现金红包-红包领取时，传红包支付时返回的支付宝单号；B2C现金红包、单笔无密转账到支付宝不需要该参数。
+        /// 原支付宝业务单号。
         /// </summary>
         [XmlElement("original_order_id")]
         public string OriginalOrderId { get; set; }

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class SettleEntity : AopObject
     {
         /// <summary>
+        /// 结算主体资产业务类型，settled 表示已结算资产
+        /// </summary>
+        [XmlElement("settle_entity_biz_type")]
+        public string SettleEntityBizType { get; set; }
+
+        /// <summary>
         /// 结算主体账号 当结算主体类型为SecondMerchant，本参数为二级商户的SecondMerchantID；当结算主体类型为MerchantStore，本参数为商户门店ID。
         /// </summary>
         [XmlElement("settle_entity_id")]

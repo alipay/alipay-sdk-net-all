@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
+        /// 国家地区代码，当证件类型为外国人永久居留证时必填。
+        /// </summary>
+        [XmlElement("nation")]
+        public string Nation { get; set; }
+
+        /// <summary>
         /// 商户请求的唯一标识，商户要保证其唯一性，值为64位长度的字母数字组合。建议：前面几位字符是商户自定义的简称，中间可以使用一段时间，后段可以使用一个随机或递增序列
         /// </summary>
         [XmlElement("outer_order_no")]

@@ -130,7 +130,7 @@ namespace Aop.Api.Domain
         public string PayerFundTypeDesc { get; set; }
 
         /// <summary>
-        /// 退款金额
+        /// 退款金额（元）
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }
@@ -166,7 +166,7 @@ namespace Aop.Api.Domain
         public string StatusDesc { get; set; }
 
         /// <summary>
-        /// 业务子类型
+        /// 普通转账
         /// </summary>
         [XmlElement("sub_biz_type")]
         public string SubBizType { get; set; }

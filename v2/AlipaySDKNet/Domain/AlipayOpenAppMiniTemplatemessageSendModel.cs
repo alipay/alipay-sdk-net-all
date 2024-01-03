@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppMiniTemplatemessageSendModel : AopObject
     {
         /// <summary>
-        /// 模板消息内容。商家/开发者将模板占位符替换为自定义内容。  注意： * 选用模板时配置的关键字顺序与keyword_ X相互对应，填写时需注意。  * 自定义消息内容仅需替换 value 后内容即可，其余内容请勿修改。如 {"keyword1": {"value" : "2021年01月"}。表示第一个关键字数据为"2021年01月" 。  * value 最长为 50 个字符。
+        /// 模板消息内容。商家/开发者将模板占位符替换为自定义内容
         /// </summary>
         [XmlElement("data")]
         public string Data { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ToOpenId { get; set; }
 
         /// <summary>
-        /// 接收模板消息的用户 user_id，一般为2088开头的16为数字。 注意：需为实际支付/提交表单/刷脸/订阅消息的用户。
+        /// 接收模板消息用户支付宝 user_id，可通过 <a href="https://opendocs.alipay.com/mini/api/openapi-authorize">用户授权</a> 获取
         /// </summary>
         [XmlElement("to_user_id")]
         public string ToUserId { get; set; }

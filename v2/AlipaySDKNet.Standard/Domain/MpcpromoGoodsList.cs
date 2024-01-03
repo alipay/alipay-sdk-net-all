@@ -177,7 +177,7 @@ namespace Aop.Api.Domain
         public string ShareCnt { get; set; }
 
         /// <summary>
-        /// 百分比，值范围0.00%-100.00%，保留两位小数
+        /// 发货率，值范围0.00-1.00，最多保留2位小数；
         /// </summary>
         [XmlElement("shipment_rate")]
         public string ShipmentRate { get; set; }
