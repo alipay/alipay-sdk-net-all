@@ -63,6 +63,12 @@ namespace Aop.Api.Response
         public string InvalidTime { get; set; }
 
         /// <summary>
+        /// 用于跳转支付宝页面的信息，POST和GET方法生成内容不同：使用POST方法执行，结果为html form表单，在浏览器渲染即可；使用GET方法会得到支付宝URL，需要打开或重定向到该URL。建议使用POST方式。
+        /// </summary>
+        [XmlElement("pageRedirectionData")]
+        public string PageRedirectionData { get; set; }
+
+        /// <summary>
         /// 协议产品码，商户和支付宝签约时确定，不同业务场景对应不同的签约产品码。
         /// </summary>
         [XmlElement("personal_product_code")]

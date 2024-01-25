@@ -9,13 +9,13 @@ namespace Aop.Api.Response
     public class AlipayFundWalletRefundResponse : AopResponse
     {
         /// <summary>
-        /// 原路退实际退款金额,单位元
+        /// 实际退回给用户的金额。当钱包账户存在膨胀金等特殊情况时，实际退回给用户的金额等于发起金额扣减膨胀金额。单位为元
         /// </summary>
         [XmlElement("actual_amount")]
         public string ActualAmount { get; set; }
 
         /// <summary>
-        /// 原路退金额
+        /// 用户发起原路退的金额
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

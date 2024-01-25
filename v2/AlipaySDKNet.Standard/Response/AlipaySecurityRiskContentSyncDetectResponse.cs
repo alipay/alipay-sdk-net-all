@@ -52,7 +52,7 @@ namespace Aop.Api.Response
         public string ResultMsg { get; set; }
 
         /// <summary>
-        /// 处置建议
+        /// 处置建议： pass:通过 block:拦截 review:复核
         /// </summary>
         [XmlElement("suggestion")]
         public string Suggestion { get; set; }

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ChannelBalance { get; set; }
 
         /// <summary>
+        /// 前置咨询渠道的渠道编码，从支付决策获取，可对外输出
+        /// </summary>
+        [XmlElement("channel_code")]
+        public string ChannelCode { get; set; }
+
+        /// <summary>
         /// 渠道扩展信息
         /// </summary>
         [XmlElement("channel_detail_params")]

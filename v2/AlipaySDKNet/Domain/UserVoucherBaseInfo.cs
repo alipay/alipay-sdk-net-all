@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ValidEndTime { get; set; }
 
         /// <summary>
+        /// 用户领取的券码code,支付宝商家券活动才会返回券码，其他优惠券活动该值为空
+        /// </summary>
+        [XmlElement("voucher_code")]
+        public string VoucherCode { get; set; }
+
+        /// <summary>
         /// 用户券 id。支付宝为用户优惠券唯一分配的 id。
         /// </summary>
         [XmlElement("voucher_id")]

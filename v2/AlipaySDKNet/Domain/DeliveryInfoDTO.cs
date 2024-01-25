@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class DeliveryInfoDTO : AopObject
     {
         /// <summary>
-        /// 快递公司ID,物流公司ID列表请查看 https://opendocs.alipay.com/mini/00au7e
+        /// 快递公司ID列表请查看：https://opendocs.alipay.com/mini/07hva0?pathHash=5de3c48d，请确认传入的值在此列表内，若发货的快递公司不在此列表内，可以传入值other
         /// </summary>
         [XmlElement("delivery_id")]
         public string DeliveryId { get; set; }
@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         [XmlArray("item_info_list")]
         [XmlArrayItem("goods_item_d_t_o")]
         public List<GoodsItemDTO> ItemInfoList { get; set; }
+
+        /// <summary>
+        /// 发货期数
+        /// </summary>
+        [XmlElement("period")]
+        public string Period { get; set; }
 
         /// <summary>
         /// 快递单号

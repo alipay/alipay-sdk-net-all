@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class LocalItemDirectModifySku : AopObject
     {
         /// <summary>
-        /// 支持限制库存和不限库存的相互转换
+        /// 支持限制库存和不限库存的相互转换 当前字段已废弃(由新字段stock_limit_type代替)
         /// </summary>
         [XmlElement("limit_type")]
         public string LimitType { get; set; }
@@ -32,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sale_status")]
         public string SaleStatus { get; set; }
+
+        /// <summary>
+        /// 支持限制库存和不限库存的相互转换
+        /// </summary>
+        [XmlElement("stock_limit_type")]
+        public string StockLimitType { get; set; }
 
         /// <summary>
         /// 商品sku库存

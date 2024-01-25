@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string StockNum { get; set; }
 
         /// <summary>
-        /// sku小图。图片宽高为400px*400px，宽高比1:1。文件id通过alipay.open.file.upload上传资源获取。
+        /// sku小图。图片宽高为400px*400px，宽高比1:1。
         /// </summary>
         [XmlElement("thumb_img")]
         public string ThumbImg { get; set; }

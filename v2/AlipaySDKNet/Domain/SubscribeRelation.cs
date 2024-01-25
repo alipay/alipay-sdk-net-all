@@ -10,25 +10,25 @@ namespace Aop.Api.Domain
     public class SubscribeRelation : AopObject
     {
         /// <summary>
-        /// 订阅保持状态，下次静默订阅的时的状态。1:保持订阅，0:保持拒绝订阅
+        /// 订阅保持状态，即用户勾选“总是保持以上选择，不再询问”选项时勾选的订阅状态。说明：若用户“总是保持以上选择，不再询问”选项，且选择订阅消息。下次触发消息订阅组件时，支付宝将自动发起一次静默订阅（不再拉起订阅组件，无需用户手动订阅）。
         /// </summary>
         [XmlElement("keep_state")]
         public string KeepState { get; set; }
 
         /// <summary>
-        /// 模板是否展示在订阅组件中。ture:订阅组件中展示查询的模板，false:订阅组件中不展示模板
+        /// 模板是否展示在订阅组件中
         /// </summary>
         [XmlElement("show")]
         public bool Show { get; set; }
 
         /// <summary>
-        /// 订阅状态。0:拒绝订阅，1:订阅
+        /// 订阅状态
         /// </summary>
         [XmlElement("subscribe_state")]
         public string SubscribeState { get; set; }
 
         /// <summary>
-        /// 消息模板的订阅类型。longterm:长期性订阅，onetime:一次性订阅
+        /// 消息模板的订阅类型
         /// </summary>
         [XmlElement("subscribe_type")]
         public string SubscribeType { get; set; }

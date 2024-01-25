@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public KeyValueMap BusinessProperties { get; set; }
 
         /// <summary>
-        /// 大模型ID，表示大模型类型和版本等
+        /// 大模型ID，表示大模型版本
         /// </summary>
         [XmlElement("model_code")]
         public string ModelCode { get; set; }
 
         /// <summary>
-        /// 当前提问内容，最大长度800个字符。
+        /// 当前提问内容，最大长度10000个字符。
         /// </summary>
         [XmlElement("question")]
         public string Question { get; set; }

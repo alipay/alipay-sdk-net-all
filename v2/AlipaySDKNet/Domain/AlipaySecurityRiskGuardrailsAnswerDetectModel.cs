@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AnswerFormat { get; set; }
 
         /// <summary>
+        /// 当前回答流式次序
+        /// </summary>
+        [XmlElement("answer_index")]
+        public long AnswerIndex { get; set; }
+
+        /// <summary>
         /// 正常回答: NORMAL 流式回答: FLOW
         /// </summary>
         [XmlElement("answer_type")]
@@ -40,7 +46,7 @@ namespace Aop.Api.Domain
         public KeyValueMap BusinessProperties { get; set; }
 
         /// <summary>
-        /// 大模型ID，表示大模型类型和版本等
+        /// 大模型ID，表示大模型版本等
         /// </summary>
         [XmlElement("model_code")]
         public string ModelCode { get; set; }

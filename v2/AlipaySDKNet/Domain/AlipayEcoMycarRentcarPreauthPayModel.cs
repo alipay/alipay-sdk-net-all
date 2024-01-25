@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public long DeductAmount { get; set; }
 
         /// <summary>
+        /// 商户告知车生活押金扣款原因
+        /// </summary>
+        [XmlElement("deduct_reason")]
+        public string DeductReason { get; set; }
+
+        /// <summary>
         /// 费用类型
         /// </summary>
         [XmlElement("fund_type")]

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 是否查询编辑版本，0查询在线版本，1查询编辑版本。默认为0
+        /// 是否查询编辑版本。默认为0
         /// </summary>
         [XmlElement("need_edit_spu")]
         public string NeedEditSpu { get; set; }

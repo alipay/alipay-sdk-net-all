@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,6 +33,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_sku_id")]
         public string OutSkuId { get; set; }
+
+        /// <summary>
+        /// 分期数
+        /// </summary>
+        [XmlArray("period_list")]
+        [XmlArrayItem("string")]
+        public List<string> PeriodList { get; set; }
 
         /// <summary>
         /// 商品退款金额，单位：元，精确到小数点后两位

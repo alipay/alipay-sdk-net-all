@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string SiteName { get; set; }
 
         /// <summary>
-        /// 网站：01  APP  : 02  服务窗:03  公众号:04  其他:05  支付宝小程序:06
+        /// 网站类型
         /// </summary>
         [XmlElement("site_type")]
         public string SiteType { get; set; }

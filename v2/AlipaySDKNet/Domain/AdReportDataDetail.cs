@@ -42,9 +42,51 @@ namespace Aop.Api.Domain
         public string DataId { get; set; }
 
         /// <summary>
+        /// 单元名称
+        /// </summary>
+        [XmlElement("group_name")]
+        public string GroupName { get; set; }
+
+        /// <summary>
         /// 展现量，当无投放未产生展现数据时，查询数据为空
         /// </summary>
         [XmlElement("impression")]
         public long Impression { get; set; }
+
+        /// <summary>
+        /// 营销目标名称
+        /// </summary>
+        [XmlElement("market_target_name")]
+        public string MarketTargetName { get; set; }
+
+        /// <summary>
+        /// 订单id
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
+        /// 订单名称
+        /// </summary>
+        [XmlElement("order_name")]
+        public string OrderName { get; set; }
+
+        /// <summary>
+        /// 计划id
+        /// </summary>
+        [XmlElement("plan_id")]
+        public string PlanId { get; set; }
+
+        /// <summary>
+        /// 计划名称
+        /// </summary>
+        [XmlElement("plan_name")]
+        public string PlanName { get; set; }
+
+        /// <summary>
+        /// 投放产品名称
+        /// </summary>
+        [XmlElement("scene_name")]
+        public string SceneName { get; set; }
     }
 }

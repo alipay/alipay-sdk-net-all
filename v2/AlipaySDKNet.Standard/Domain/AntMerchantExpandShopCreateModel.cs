@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandShopCreateModel : AopObject
     {
         /// <summary>
-        /// "门店结算卡信息。本业务当前只允许传入一张结算卡。 说明：本参数仅直付通业务使用，其余业务无需关注。"
+        /// 门店结算卡信息。本业务当前只允许传入一张结算卡。 说明：本参数仅直付通业务使用，其余业务无需关注。
         /// </summary>
         [XmlArray("biz_cards")]
         [XmlArrayItem("settle_card_info")]
@@ -78,6 +78,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("contact_phone")]
         public string ContactPhone { get; set; }
+
+        /// <summary>
+        /// 需传入<a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。
+        /// </summary>
+        [XmlElement("cover")]
+        public string Cover { get; set; }
 
         /// <summary>
         /// 扩展信息列表。key值需要向对应行业的bd进行申请。

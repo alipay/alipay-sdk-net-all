@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class IcpAppletsPrincipalInfo : AopObject
     {
         /// <summary>
+        /// 小程序负责人授权书
+        /// </summary>
+        [XmlArray("authorization_materials")]
+        [XmlArrayItem("string")]
+        public List<string> AuthorizationMaterials { get; set; }
+
+        /// <summary>
         /// 小程序负责人证件号码
         /// </summary>
         [XmlElement("certificate_number")]

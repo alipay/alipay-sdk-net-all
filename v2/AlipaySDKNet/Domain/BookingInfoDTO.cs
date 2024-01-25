@@ -10,37 +10,37 @@ namespace Aop.Api.Domain
     public class BookingInfoDTO : AopObject
     {
         /// <summary>
-        /// 预约入住时间，订单创建、已确认、待入住 状态下必传
+        /// 预约入住时间
         /// </summary>
         [XmlElement("booking_time")]
         public string BookingTime { get; set; }
 
         /// <summary>
-        /// 入住日期，已入住、已续住、待退房、已退房 状态下必选；
+        /// 入住日期
         /// </summary>
         [XmlElement("check_in_date")]
         public string CheckInDate { get; set; }
 
         /// <summary>
-        /// 入住时间，已入住、已续住、待退房、已退房 状态下必选；
+        /// 入住时间
         /// </summary>
         [XmlElement("check_in_time")]
         public string CheckInTime { get; set; }
 
         /// <summary>
-        /// 离店日期，已入住、已续住、待退房、已退房 状态下必选；
+        /// 离店日期
         /// </summary>
         [XmlElement("check_out_date")]
         public string CheckOutDate { get; set; }
 
         /// <summary>
-        /// 离店时间， 已入住、已续住、待退房、已退房状态下必选；
+        /// 离店时间
         /// </summary>
         [XmlElement("check_out_time")]
         public string CheckOutTime { get; set; }
 
         /// <summary>
-        /// 商户确认买家的预约，已确认 状态下必选；
+        /// 商户确认买家的预约
         /// </summary>
         [XmlElement("confirm_booking_time")]
         public string ConfirmBookingTime { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string Deadline { get; set; }
 
         /// <summary>
-        /// 商户为买家办理续住的时间，已续住  状态下必选；
+        /// 商户为买家办理续住的时间
         /// </summary>
         [XmlElement("have_stay_time")]
         public string HaveStayTime { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string RefundRule { get; set; }
 
         /// <summary>
-        /// 入住酒店房间号 酒店日历房商品 已入住、待退房、已续住、已退房状态下必选
+        /// 入住酒店房间号
         /// </summary>
         [XmlElement("room_num")]
         public string RoomNum { get; set; }

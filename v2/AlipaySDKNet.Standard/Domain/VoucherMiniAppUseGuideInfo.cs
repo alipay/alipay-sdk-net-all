@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class VoucherMiniAppUseGuideInfo : AopObject
     {
         /// <summary>
-        /// 小程序服务编码，通过 alipay.open.app.appcontent.function.create(小程序服务创建)接口创建服务后获取。
+        /// 小程序服务编码。取值来源：通过<a href="https://opendocs.alipay.com/mini/03cgoq?pathHash=49cde24b&scene=common&highlight_field=service_code" target="_blank">alipay.open.app.service.apply(小程序服务创建)</a>接口创建服务后获取。
         /// </summary>
         [XmlArray("mini_app_service_codes")]
         [XmlArrayItem("string")]

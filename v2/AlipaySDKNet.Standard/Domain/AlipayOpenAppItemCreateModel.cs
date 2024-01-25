@@ -48,20 +48,20 @@ namespace Aop.Api.Domain
         public string DirectPath { get; set; }
 
         /// <summary>
-        /// 商品主图的文件id，图片宽高为750px*750px，宽高比1:1，800kb以内。 支持jpg、jpeg、png格式的图片。文件id通过alipay.open.file.upload 上传资源获取file_id，或通过alipay.marketing.image.enhance.upload获取image_id均可上传成功
+        /// 商品主图，图片宽高为750px*750px，宽高比1:1，800kb以内。支持jpg、jpeg、png格式的图片。
         /// </summary>
         [XmlElement("head_img")]
         public string HeadImg { get; set; }
 
         /// <summary>
-        /// 商品子图，作为平台详情页组件的轮播图，图片宽高为750px*750px，宽高比1:1，800kb以内，不超过 3 个图片。 支持jpg、jpeg、png格式的图片。文件id通过alipay.open.file.upload 上传资源获取file_id，或通过alipay.marketing.image.enhance.upload获取image_id均可上传成功
+        /// 商品子图，作为平台详情页组件的轮播图，图片宽高为750px*750px，宽高比1:1，800kb以内，不超过 3 个图片。支持jpg、jpeg、png格式的图片。
         /// </summary>
         [XmlArray("image_list")]
         [XmlArrayItem("string")]
         public List<string> ImageList { get; set; }
 
         /// <summary>
-        /// 1=官方插件版，商品详情页链接不传入 0=自定义详情页版，商品详情页链接必须传入
+        /// 1=官方插件版，商品详情页链接不传入 0=自定义详情页版，商品详情页链接必须传入 当前字段已废弃(该字段下线展示，无需传递，默认填写自定义详情页版商品详情页链接)
         /// </summary>
         [XmlElement("item_details_page_model")]
         public string ItemDetailsPageModel { get; set; }
@@ -122,7 +122,7 @@ namespace Aop.Api.Domain
         public long StockNum { get; set; }
 
         /// <summary>
-        /// 商品名称，字符类型，最少不低于3，最长不超过60个字。注：1.商品标题只允许汉字、数字、英文字母、特殊字符集；2.商品标题不得仅为数字、字母、特殊字符集或上述三种的组合。
+        /// 商品名称，字符类型，最少不低于3，最长不超过60个字。
         /// </summary>
         [XmlElement("title")]
         public string Title { get; set; }

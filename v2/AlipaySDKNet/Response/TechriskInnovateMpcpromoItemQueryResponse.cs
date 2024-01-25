@@ -16,5 +16,11 @@ namespace Aop.Api.Response
         [XmlArray("item_list")]
         [XmlArrayItem("item_query_info")]
         public List<ItemQueryInfo> ItemList { get; set; }
+
+        /// <summary>
+        /// 推荐请求的标识id，用于关联推荐结果和用户行为
+        /// </summary>
+        [XmlElement("recommend_id")]
+        public string RecommendId { get; set; }
     }
 }

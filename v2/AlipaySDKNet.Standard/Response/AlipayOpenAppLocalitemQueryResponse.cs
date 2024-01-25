@@ -36,13 +36,20 @@ namespace Aop.Api.Response
         public PhoneStructVO CustomerServiceMobile { get; set; }
 
         /// <summary>
-        /// 商品主图，图片文件id，图片宽高为750px*750px，宽高比1:1。文件id通过alipay.open.file.upload上传资源获取。
+        /// 导购信息
+        /// </summary>
+        [XmlArray("guide_info")]
+        [XmlArrayItem("guide_info_v_o")]
+        public List<GuideInfoVO> GuideInfo { get; set; }
+
+        /// <summary>
+        /// 商品主图，图片宽高为750px*750px，宽高比1:1，800kb以内。支持jpg、jpeg、png格式的图片。
         /// </summary>
         [XmlElement("head_img")]
         public string HeadImg { get; set; }
 
         /// <summary>
-        /// 商品子图文件id列表，不超过 3 个图片，图片宽高为750px*750px，宽高比1:1。文件id通过alipay.open.file.upload上传资源获取。
+        /// 商品子图，作为平台详情页组件的轮播图，图片宽高为750px*750px，宽高比1:1，800kb以内，不超过 3 个图片。支持jpg、jpeg、png格式的图片。
         /// </summary>
         [XmlArray("image_list")]
         [XmlArrayItem("string")]

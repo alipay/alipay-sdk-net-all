@@ -61,6 +61,18 @@ namespace Aop.Api.Domain
         public string CreativeOuterId { get; set; }
 
         /// <summary>
+        /// 交易ID（灯火平台生成，请联系灯火运营获取）
+        /// </summary>
+        [XmlElement("deal_id")]
+        public string DealId { get; set; }
+
+        /// <summary>
+        /// 交易类型，如果是ReachMax公司，固定传字符串"ReachMax"
+        /// </summary>
+        [XmlElement("deal_type")]
+        public string DealType { get; set; }
+
+        /// <summary>
         /// 创意业务扩展参数字段，根据第三方需要使用，投放端只做存储并向检索端透传
         /// </summary>
         [XmlElement("extend_info")]
@@ -105,6 +117,12 @@ namespace Aop.Api.Domain
         public string OrderOuterId { get; set; }
 
         /// <summary>
+        /// 套餐ID（灯火平台生成，请联系灯火运营获取）
+        /// </summary>
+        [XmlElement("profile_id")]
+        public long ProfileId { get; set; }
+
+        /// <summary>
         /// 门店创意关联的城市ID列表，目前仅口碑使用
         /// </summary>
         [XmlArray("region_list")]
@@ -146,5 +164,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("template_id")]
         public long TemplateId { get; set; }
+
+        /// <summary>
+        /// 三方监控链接
+        /// </summary>
+        [XmlArray("third_track_url_list")]
+        [XmlArrayItem("third_track_url_unit")]
+        public List<ThirdTrackUrlUnit> ThirdTrackUrlList { get; set; }
     }
 }

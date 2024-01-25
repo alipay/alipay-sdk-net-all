@@ -75,7 +75,7 @@ namespace Aop.Api.Domain
         public List<OrderJourneyInfo> JourneyOrderList { get; set; }
 
         /// <summary>
-        /// "物流信息 列表最多支持物流信息个数，请参考产品文档 注：若该值不为空，且物流信息同步至我的快递，则在查询订单时可返回具体物流信息"
+        /// 物流信息列表
         /// </summary>
         [XmlArray("logistics_info_list")]
         [XmlArrayItem("order_logistics_information_request")]
@@ -154,7 +154,7 @@ namespace Aop.Api.Domain
         public string SendMsg { get; set; }
 
         /// <summary>
-        /// 服务code：传入小程序后台提报的服务id，将订单与服务关联，有利于提高服务曝光机会；入参服务id的类目须与订单类型相符，若不相符将会报错；如订单类型为“外卖”，则入参的服务ID所对应的服务类目也必须得是”外卖“；service_code 通过 alipay.open.app.service.apply，(服务提报申请)接口创建服务后获取。
+        /// 服务code：传入小程序后台提报的服务id，将订单与服务关联，有利于提高服务曝光机会；入参服务id的类目须与订单类型相符，若不相符将会报错；如订单类型为“外卖”，则入参的服务ID所对应的服务类目也必须得是”外卖“；service_code 通过 <a href="https://opendocs.alipay.com/mini/e1c835a1_alipay.open.app.service.apply" target="_blank">alipay.open.app.service.apply</a> ，(服务提报申请)接口创建服务后获取。
         /// </summary>
         [XmlElement("service_code")]
         public string ServiceCode { get; set; }

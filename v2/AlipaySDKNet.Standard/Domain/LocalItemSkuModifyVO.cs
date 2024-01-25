@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public long SalePrice { get; set; }
 
         /// <summary>
-        /// sku售卖状态，包含以下两种状态： 已下架(DELISTING) 可售卖(AVAILABLE)
+        /// sku售卖状态
         /// </summary>
         [XmlElement("sale_status")]
         public string SaleStatus { get; set; }

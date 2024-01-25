@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string SceneCode { get; set; }
 
         /// <summary>
+        /// 大模型问答时是否以消息流的方式推送
+        /// </summary>
+        [XmlElement("stream_output")]
+        public bool StreamOutput { get; set; }
+
+        /// <summary>
         /// 访客ID，由调用方提供，比如：微信用户id等
         /// </summary>
         [XmlElement("visitor_id")]
