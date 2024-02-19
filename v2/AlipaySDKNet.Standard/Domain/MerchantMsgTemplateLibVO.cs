@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string IndustryScenario { get; set; }
 
         /// <summary>
-        /// 关键词描述
+        /// 关键词列表，关键词之间用逗号隔开。申领消息模板时，选择需要的关键词传入
         /// </summary>
         [XmlElement("keyword_desc")]
         public string KeywordDesc { get; set; }

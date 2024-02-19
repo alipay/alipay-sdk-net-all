@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayOpenAppMessagetemplateSubscribeQueryResponse : AopResponse
     {
         /// <summary>
-        /// 是否显示订阅组件。枚举值： true：显示订阅组件。 false：不显示订阅组件
+        /// 是否显示订阅组件
         /// </summary>
         [XmlElement("show_component")]
         public bool ShowComponent { get; set; }

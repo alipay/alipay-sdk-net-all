@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public long Duration { get; set; }
 
         /// <summary>
+        /// 是否需要效验实例必填项，默认为否
+        /// </summary>
+        [XmlElement("required_validate")]
+        public bool RequiredValidate { get; set; }
+
+        /// <summary>
         /// 下载类型
         /// </summary>
         [XmlElement("type")]

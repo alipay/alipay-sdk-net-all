@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string CustomOpenTips { get; set; }
 
         /// <summary>
-        /// 担保金额额度
+        /// 担保金额额度，单位:元
         /// </summary>
         [XmlElement("freeze_amount")]
         public string FreezeAmount { get; set; }

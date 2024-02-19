@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Body { get; set; }
 
         /// <summary>
-        /// 芝麻外部类目
+        /// 芝麻外部类目，芝麻先享接入无差异化风控诉求可不传
         /// </summary>
         [XmlElement("category_id")]
         public string CategoryId { get; set; }

@@ -1,4 +1,5 @@
 using System;
+using Aop.Api.Domain;
 using System.Collections.Generic;
 using Aop.Api.Response;
 using Aop.Api.Util;
@@ -16,9 +17,19 @@ namespace Aop.Api.Request
         public string BizCode { get; set; }
 
         /// <summary>
+        /// 业务具体配置
+        /// </summary>
+        public string BizConfig { get; set; }
+
+        /// <summary>
         /// 上传的图片，最大10M
         /// </summary>
         public FileItem ImageContent { get; set; }
+
+        /// <summary>
+        /// 用户隐私相关信息
+        /// </summary>
+        public PrivateInfo PrivateInfo { get; set; }
 
         #region IAopRequest Members
 		private bool needEncrypt=false;
@@ -106,6 +117,8 @@ namespace Aop.Api.Request
         {
             AopDictionary parameters = new AopDictionary();
             parameters.Add("biz_code", this.BizCode);
+            parameters.Add("biz_config", this.BizConfig);
+            parameters.Add("private_info", this.PrivateInfo);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);

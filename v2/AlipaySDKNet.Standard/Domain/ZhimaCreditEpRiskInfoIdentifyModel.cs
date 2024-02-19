@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string EpName { get; set; }
 
         /// <summary>
-        /// 业务场景码
+        /// 业务场景码(请联系业务获取)
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

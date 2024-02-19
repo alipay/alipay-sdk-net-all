@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceAdReportdataQueryModel : AopObject
     {
         /// <summary>
-        /// 数据维度： ORDER-订单； PLAN-计划； GROUP-单元； CREATIVE-创意 【不同数据维度决定了出参data_id代表的数据类型不一样分别为plan_id,group_id,order_id,creative_id】
+        /// 数据维度： ORDER-订单； PLAN-计划； GROUP-单元； CREATIVE-创意； MARKET_TARGET-营销目标； 【不同数据维度决定了出参data_id代表的数据类型不一样分别为plan_id,group_id,order_id,creative_id，营销目标时data_id为空】
         /// </summary>
         [XmlElement("ad_level")]
         public string AdLevel { get; set; }
 
         /// <summary>
-        /// 登录用户支付宝统一ID,2088开头字符串。登录校验和可反查出user_id。 【alipay_pid和principal_tag使用方法： 只传alipay_pid：获取的代理商下所有商家或直客的数据合计。 alipay_pid和principal_tag都传：若为代理商会获取代理商下指定委托人数据。若是直客会获取自身的合计数据。】
+        /// 登录用户支付宝统一ID,2088开头字符串。登录校验和可反查出user_id。 【alipay_pid和principal_tag使用方法：若为代理商会获取代理商下指定委托人数据。若是直客会获取自身的合计数据。】
         /// </summary>
         [XmlElement("alipay_pid")]
         public string AlipayPid { get; set; }
@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("current")]
         public long Current { get; set; }
+
+        /// <summary>
+        /// 投放模式（订单/计划/单元/创意id_list都为空时此参数有效）： STANDARD_TOUFANG-标准三段式； TRUST_TOUFANG-托管式；
+        /// </summary>
+        [XmlElement("delivery_mode")]
+        public string DeliveryMode { get; set; }
 
         /// <summary>
         /// 数据查询结束时间，查询时间不能大于最近7天，时间格式：yyyyMMdd【最大时间-最小时间<=7时间左闭右闭】

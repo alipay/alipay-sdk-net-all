@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class EpDossierLiteDetail : AopObject
     {
         /// <summary>
+        /// 法人/负责人姓名
+        /// </summary>
+        [XmlElement("charge_person_name")]
+        public string ChargePersonName { get; set; }
+
+        /// <summary>
         /// 统一社会信用代码或营业执照注册号
         /// </summary>
         [XmlElement("ep_cert_no")]

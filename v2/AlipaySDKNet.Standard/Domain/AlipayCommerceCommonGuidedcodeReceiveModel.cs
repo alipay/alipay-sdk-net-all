@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string MerchantPid { get; set; }
 
         /// <summary>
-        /// 任务模板id
+        /// 淘客领取任务实例id,等于taskInstanceId
         /// </summary>
         [XmlElement("task_id")]
         public string TaskId { get; set; }

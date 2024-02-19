@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string CensorInfo { get; set; }
 
         /// <summary>
+        /// 企业订单对应支付宝企业id，当order_type为ALIPAY_CORP时必选
+        /// </summary>
+        [XmlElement("corp_id")]
+        public string CorpId { get; set; }
+
+        /// <summary>
         /// 已发货状态必传，物流公司编码，需要与菜鸟映射
         /// </summary>
         [XmlElement("delivery_code")]
@@ -92,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }
+
+        /// <summary>
+        /// ALIPAY_ONLINE:支付宝线上 ALIPAY_CORP:企业ETC
+        /// </summary>
+        [XmlElement("order_type")]
+        public string OrderType { get; set; }
 
         /// <summary>
         /// 外部业务号，对应用户该笔ETC申请单号

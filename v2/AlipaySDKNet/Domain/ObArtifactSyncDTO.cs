@@ -115,6 +115,12 @@ namespace Aop.Api.Domain
         public string Size { get; set; }
 
         /// <summary>
+        /// 标签
+        /// </summary>
+        [XmlElement("tag")]
+        public string Tag { get; set; }
+
+        /// <summary>
         /// 制品触发打包人
         /// </summary>
         [XmlElement("trigger")]

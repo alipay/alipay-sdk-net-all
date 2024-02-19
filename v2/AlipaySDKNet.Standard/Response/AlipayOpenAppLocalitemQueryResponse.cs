@@ -36,13 +36,20 @@ namespace Aop.Api.Response
         public PhoneStructVO CustomerServiceMobile { get; set; }
 
         /// <summary>
-        /// 商品主图，图片文件id，图片宽高为750px*750px，宽高比1:1。文件id通过alipay.open.file.upload上传资源获取。
+        /// 导购信息
+        /// </summary>
+        [XmlArray("guide_info")]
+        [XmlArrayItem("guide_info_v_o")]
+        public List<GuideInfoVO> GuideInfo { get; set; }
+
+        /// <summary>
+        /// 商品主图，图片宽高为750px*750px，宽高比1:1，800kb以内。支持jpg、jpeg、png格式的图片。
         /// </summary>
         [XmlElement("head_img")]
         public string HeadImg { get; set; }
 
         /// <summary>
-        /// 商品子图文件id列表，不超过 3 个图片，图片宽高为750px*750px，宽高比1:1。文件id通过alipay.open.file.upload上传资源获取。
+        /// 商品子图，作为平台详情页组件的轮播图，图片宽高为750px*750px，宽高比1:1，800kb以内，不超过 3 个图片。支持jpg、jpeg、png格式的图片。
         /// </summary>
         [XmlArray("image_list")]
         [XmlArrayItem("string")]
@@ -67,7 +74,7 @@ namespace Aop.Api.Response
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 商品模版类型： 1. 团购套餐 2. 代金券
+        /// 商品模版类型： 1. 团购 2. 代金券 3. 日历房
         /// </summary>
         [XmlElement("item_type")]
         public string ItemType { get; set; }
@@ -116,6 +123,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("sold_time")]
         public TimeRangeStructVO SoldTime { get; set; }
+
+        /// <summary>
+        /// 标品ID
+        /// </summary>
+        [XmlElement("spu_id")]
+        public string SpuId { get; set; }
 
         /// <summary>
         /// 审核驳回：商品审核失败时，商品状态为审核驳回。 审核中：商品处于审核流程中时，商品状态为审核中。 已下架：商家可以通过调用接口下架商品，也可以通过商家后台下架商品。 可售卖：商家可以通过调用接口上架商品，也可以通过商家后台上架商品。 冻结：当商家出现违规操作时，支付宝侧将发起冻结，商品无法对外透出。 当商品包含多个规格时，只要有一个规格的商品状态为“可售卖”，商品状态则为“可售卖”。

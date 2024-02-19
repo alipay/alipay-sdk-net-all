@@ -66,7 +66,7 @@ namespace Aop.Api.Domain
         public long StockNum { get; set; }
 
         /// <summary>
-        /// 图片url，宽高为400px*400px，宽高比1:1。
+        /// 图片url，图片宽高为400px*400px，宽高比1:1。
         /// </summary>
         [XmlElement("thumb_img")]
         public string ThumbImg { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayOpenAppOpenidApplyorderUploadResponse : AopResponse
     {
         /// <summary>
-        /// 非法的用户ID参数，说明部分参数不是有效的用户ID
+        /// 非法的userid参数，说明部分参数不是有效的用户userid
         /// </summary>
         [XmlArray("illegal_user_id_list")]
         [XmlArrayItem("string")]

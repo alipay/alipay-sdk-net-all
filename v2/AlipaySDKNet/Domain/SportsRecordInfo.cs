@@ -34,6 +34,18 @@ namespace Aop.Api.Domain
         public string FinishTime { get; set; }
 
         /// <summary>
+        /// 最高海拔，单位米
+        /// </summary>
+        [XmlElement("max_altitude")]
+        public string MaxAltitude { get; set; }
+
+        /// <summary>
+        /// 最低海拔，单位米
+        /// </summary>
+        [XmlElement("min_altitude")]
+        public string MinAltitude { get; set; }
+
+        /// <summary>
         /// 运动流水的发生日期
         /// </summary>
         [XmlElement("record_date")]
@@ -68,5 +80,23 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
+
+        /// <summary>
+        /// 步数
+        /// </summary>
+        [XmlElement("step_count")]
+        public string StepCount { get; set; }
+
+        /// <summary>
+        /// 步频，一分钟多少步
+        /// </summary>
+        [XmlElement("step_frequency")]
+        public string StepFrequency { get; set; }
+
+        /// <summary>
+        /// 步幅，一步多少米
+        /// </summary>
+        [XmlElement("step_stride")]
+        public string StepStride { get; set; }
     }
 }

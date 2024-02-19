@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string SysServiceProviderId { get; set; }
 
         /// <summary>
+        /// 公域商品交易分期单ID，小程序交易组件订单特殊场景使用，请传入 订单分期接口(alipay.open.mini.order.installment.create)中返回的installment_order_id
+        /// </summary>
+        [XmlElement("tc_installment_order_id")]
+        public string TcInstallmentOrderId { get; set; }
+
+        /// <summary>
         /// 公域商品交易业务订单ID
         /// </summary>
         [XmlElement("trade_component_order_id")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string IdentityHash { get; set; }
 
         /// <summary>
+        /// 签约指定用户的openid
+        /// </summary>
+        [XmlElement("sign_open_id")]
+        public string SignOpenId { get; set; }
+
+        /// <summary>
         /// 签约指定用户的uid，如用户登录的uid和指定的用户uid不一致则报错
         /// </summary>
         [XmlElement("sign_user_id")]

@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string TaskEnd { get; set; }
 
         /// <summary>
+        /// 任务条件
+        /// </summary>
+        [XmlElement("task_free")]
+        public string TaskFree { get; set; }
+
+        /// <summary>
         /// 任务id
         /// </summary>
         [XmlElement("task_id")]
@@ -92,5 +98,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("task_title")]
         public string TaskTitle { get; set; }
+
+        /// <summary>
+        /// 任务类型
+        /// </summary>
+        [XmlElement("task_type")]
+        public string TaskType { get; set; }
     }
 }

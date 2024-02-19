@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -50,5 +51,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_time")]
         public string OrderTime { get; set; }
+
+        /// <summary>
+        /// 子订单详细信息列表信息
+        /// </summary>
+        [XmlArray("send_sub_order_result")]
+        [XmlArrayItem("send_sub_order_result")]
+        public List<SendSubOrderResult> SendSubOrderResult { get; set; }
     }
 }

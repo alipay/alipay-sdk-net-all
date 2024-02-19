@@ -11,14 +11,29 @@ namespace Aop.Api.Request
     public class AlipayFundMbpcardFileUploadRequest : IAopUploadRequest<AlipayFundMbpcardFileUploadResponse>
     {
         /// <summary>
+        /// 业务场景，对应不同配置
+        /// </summary>
+        public string BizScene { get; set; }
+
+        /// <summary>
         /// 二进制字节流，最大为10M
         /// </summary>
         public FileItem ImageContent { get; set; }
 
         /// <summary>
+        /// 待识别的图片标签，不传不做OCR识别 ELEC_ADD_TAX_SIMPLE : 增值税普票-电子版 PAPER_ADD_TAX_SIMPLE：增值税普票-纸质版 PAPER_QUOTA：手撕定额发票
+        /// </summary>
+        public string ImageOcrTag { get; set; }
+
+        /// <summary>
         /// 文件格式，支持格式：bmp、jpg、jpeg、png、gif、pdf
         /// </summary>
         public string ImageType { get; set; }
+
+        /// <summary>
+        /// 产品码，业务特征属性
+        /// </summary>
+        public string ProductCode { get; set; }
 
         #region IAopRequest Members
 		private bool needEncrypt=false;
@@ -105,7 +120,10 @@ namespace Aop.Api.Request
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
+            parameters.Add("biz_scene", this.BizScene);
+            parameters.Add("image_ocr_tag", this.ImageOcrTag);
             parameters.Add("image_type", this.ImageType);
+            parameters.Add("product_code", this.ProductCode);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);

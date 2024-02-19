@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,5 +21,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("cn_owner_id")]
         public string CnOwnerId { get; set; }
+
+        /// <summary>
+        /// 主账ownerId列表
+        /// </summary>
+        [XmlArray("cn_owner_ids")]
+        [XmlArrayItem("string")]
+        public List<string> CnOwnerIds { get; set; }
     }
 }

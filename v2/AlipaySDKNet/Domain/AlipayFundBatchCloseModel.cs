@@ -1,6 +1,5 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -25,8 +24,7 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 业务产品码。不同产品值不同，具体值联系支付宝确认。
         /// </summary>
-        [XmlArray("product_code")]
-        [XmlArrayItem("string")]
-        public List<string> ProductCode { get; set; }
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// 支付宝公域会根据商家的具体成交场景和成交的商品类目来收取一定的技术服务费，技术服务费=结算基数*技术服务费费率，其中费率的部分由商品的类目来计算出。具体详情请查阅：https://opendocs.alipay.com/b/07w1gp
+        /// 支付宝公域会根据商家的具体成交场景和成交的商品类目来收取一定的技术服务费，技术服务费=结算基数*技术服务费费率，其中费率的部分由商品的类目来计算出。具体详情请查阅：<a href="https://opendocs.alipay.com/b/07w1gp">文档</a>
         /// </summary>
         [XmlElement("fee_categories")]
         public string FeeCategories { get; set; }

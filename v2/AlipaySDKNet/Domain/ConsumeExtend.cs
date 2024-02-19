@@ -16,9 +16,9 @@ namespace Aop.Api.Domain
         public bool MallAssignStore { get; set; }
 
         /// <summary>
-        /// 余额户钱包是否展示明细，且只在余额户钱包生效
+        /// 用于回收行业特定业务诉求，其他行业不开放
         /// </summary>
-        [XmlElement("show_wallet_info_balance")]
-        public bool ShowWalletInfoBalance { get; set; }
+        [XmlElement("recycle_industry")]
+        public bool RecycleIndustry { get; set; }
     }
 }

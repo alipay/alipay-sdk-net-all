@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayIserviceCliveConnectCloseModel : AopObject
     {
         /// <summary>
+        /// 会话关闭原因 SELF_CLOSE:主动关闭 OVERTIME_CLOSE:超时关闭 NO_HEARTBEAT_CLOSE:心跳断开关闭
+        /// </summary>
+        [XmlElement("close_type")]
+        public string CloseType { get; set; }
+
+        /// <summary>
         /// 若是会话已经建立，关闭时必须传该conversation_id来请求关闭。若未建立，传visitor_token来请求关闭。 visitor_token 和 conversation_id 不能同时为空。
         /// </summary>
         [XmlElement("conversation_id")]

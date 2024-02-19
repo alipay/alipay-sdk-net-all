@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CityCode { get; set; }
 
         /// <summary>
+        /// 企业ID
+        /// </summary>
+        [XmlElement("corp_id")]
+        public string CorpId { get; set; }
+
+        /// <summary>
         /// 唯一标识一次请求，由调用方自行确保唯一性
         /// </summary>
         [XmlElement("request_id")]

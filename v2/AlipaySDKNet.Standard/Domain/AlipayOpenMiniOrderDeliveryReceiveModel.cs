@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,7 +11,14 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderDeliveryReceiveModel : AopObject
     {
         /// <summary>
-        /// 买家open_id；open_id和user_id二选一
+        /// 确认收货的物流单列表，当有多个物流单时，可以指定物流单确认收货，不传入时，默认进行全部确认收货。
+        /// </summary>
+        [XmlArray("delivery_receive_list")]
+        [XmlArrayItem("delivery_receive_d_t_o")]
+        public List<DeliveryReceiveDTO> DeliveryReceiveList { get; set; }
+
+        /// <summary>
+        /// 买家open_id
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }

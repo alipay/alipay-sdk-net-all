@@ -16,7 +16,13 @@ namespace Aop.Api.Domain
         public string CycleChargeType { get; set; }
 
         /// <summary>
-        /// 周期类型，月或周
+        /// 周期类型为CycleTypeEnum.DAY时使用、代表几天为一个周期
+        /// </summary>
+        [XmlElement("cycle_range")]
+        public long CycleRange { get; set; }
+
+        /// <summary>
+        /// 周期类型，日、月或周
         /// </summary>
         [XmlElement("cycle_type")]
         public string CycleType { get; set; }

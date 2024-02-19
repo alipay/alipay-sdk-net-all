@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public List<SourceMediaInfo> SourceMediaInfos { get; set; }
 
         /// <summary>
-        /// 内容关联服务，1个内容最多关联1个服务；offerId为关联的服务ID，支持小程序/小程序服务/优惠券活动
+        /// 内容关联服务，1个内容最多关联1个服务；offerId为关联的服务ID，支持小程序/小程序服务/优惠券活动/商品/小游戏
         /// </summary>
         [XmlArray("source_offers")]
         [XmlArrayItem("source_offer")]

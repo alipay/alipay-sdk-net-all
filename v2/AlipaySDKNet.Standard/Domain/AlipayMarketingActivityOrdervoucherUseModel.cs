@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string RealShopId { get; set; }
 
         /// <summary>
-        /// 用户核销优惠券的支付门店id,调用接口ant.merchant.expand.shop.create创建门店返回的门店id。 限制: 传入的门店id必须是创建商家券voucher_use_rule. voucher_available_scope.  order_voucher_available_shop对象中shop_ids中的门店id
+        /// 用户核销优惠券的支付门店id,调用接口<a href="https://opendocs.alipay.com/open/03s3jk?pathHash=04312530&scene=common" target="_blank">ant.merchant.expand.shop.create</a>创建门店返回的门店id。 限制: 传入的门店id必须是创建商家券voucher_use_rule. voucher_available_scope.  order_voucher_available_shop对象中shop_ids中的门店id
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }

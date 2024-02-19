@@ -154,7 +154,7 @@ namespace Aop.Api.Response
         public string ShopId { get; set; }
 
         /// <summary>
-        /// 当前名称、地址、经纬度信息准确一致，可用于数字化经营场景消费
+        /// 当前名称、地址、经纬度信息准确一致，可用于数字化经营场景消费(如商品、券、消费圈等场域的分发)，不影响门店支付结算
         /// </summary>
         [XmlElement("shop_info_status")]
         public string ShopInfoStatus { get; set; }

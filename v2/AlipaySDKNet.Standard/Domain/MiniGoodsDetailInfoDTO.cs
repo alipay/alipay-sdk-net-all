@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -22,13 +23,20 @@ namespace Aop.Api.Domain
         public string CategoriesTree { get; set; }
 
         /// <summary>
+        /// 价格日历
+        /// </summary>
+        [XmlArray("effective_dates")]
+        [XmlArrayItem("effective_dates_d_t_o")]
+        public List<EffectiveDatesDTO> EffectiveDates { get; set; }
+
+        /// <summary>
         /// 商品类目 当前字段已废弃(暂时未使用)
         /// </summary>
         [XmlElement("goods_category")]
         public string GoodsCategory { get; set; }
 
         /// <summary>
-        /// 商户侧商品编号，提报优惠时的商品id，用于关联使用支付券，需要和支付券上绑定商品goods_id相同
+        /// 提报支付券优惠时的商品id，用于关联使用支付券，需要和支付券上绑定商品goods_id相同。如果不使用支付券，该字段传入商品最小粒度的商品id（如：若商品有 sku 粒度，则传商品 sku 粒度的id）
         /// </summary>
         [XmlElement("goods_id")]
         public string GoodsId { get; set; }
@@ -40,7 +48,7 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 商品图片，用于小程序订单中心展示，可通过 alipay.merchant.item.file.upload接口上传素材获取素材id。默认使用已上报的商品库素材信息，已上报的商品可不传入，未上报商品库需传入。为空会导致订单展示异常
+        /// 商品图片，用于小程序订单中心展示，可通过 <a href="https://opendocs.alipay.com/mini/03l4lq?pathHash=c08922b1&scene=common">alipay.merchant.item.file.upload </a>接口上传素材获取素材id。默认使用已上报的商品库素材信息。
         /// </summary>
         [XmlElement("image_material_id")]
         public string ImageMaterialId { get; set; }
@@ -50,6 +58,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_cnt")]
         public string ItemCnt { get; set; }
+
+        /// <summary>
+        /// 单位元有优惠信息时需要传入，优惠方式sale_real_price与item_discount二选一sale_real_price使用场景：商品有单价优惠，传入商品实际成交单价item_discount使用场景：同时购买多件商品时存在优惠，传入优惠总额优惠计算参考：<a href="https://opendocs.alipay.com/mini/0ag2e1?pathHash=20b9a409">文档</a> 中资金平衡校验
+        /// </summary>
+        [XmlElement("item_discount")]
+        public string ItemDiscount { get; set; }
+
+        /// <summary>
+        /// 商品分期信息，分期代扣商品必填
+        /// </summary>
+        [XmlElement("item_installment_info")]
+        public ItemInstallmentInfoDTO ItemInstallmentInfo { get; set; }
 
         /// <summary>
         /// 商户侧商品id，用于公域场景结算，会影响主播归因。私域场景无需传入，公域场景未传入会影响后续结算
@@ -82,7 +102,7 @@ namespace Aop.Api.Domain
         public string SalePrice { get; set; }
 
         /// <summary>
-        /// 商品真实单价，单位：元,精确到小数点后两位
+        /// 商品真实单价，单位：元,精确到小数点后两位, 有优惠信息时需要传入，优惠方式sale_real_price与item_discount二选一 sale_real_price使用场景：商品有单价优惠，传入商品实际成交单价 item_discount使用场景：同时购买多件商品时存在优惠，传入优惠总额 优惠计算参考：https://opendocs.alipay.com/mini/0ag2e1?pathHash=20b9a409 中资金平衡校验 sale_real_price使用场景：商品有单价优惠，传入商品实际成交单价 item_discount使用场景：同时购买多件商品时存在优惠，传入优惠总额 优惠计算参考：https://opendocs.alipay.com/mini/0ag2e1?pathHash=20b9a409 中资金平衡校验
         /// </summary>
         [XmlElement("sale_real_price")]
         public string SaleRealPrice { get; set; }

@@ -158,6 +158,12 @@ namespace Aop.Api.Domain
         public string Mcc { get; set; }
 
         /// <summary>
+        /// 商家性质
+        /// </summary>
+        [XmlElement("merchant_nature")]
+        public string MerchantNature { get; set; }
+
+        /// <summary>
         /// 商户类型： 01：企业；cert_type填写201（营业执照）；cert_no填写营业执照号； 02：事业单位：cert_type填写218（事业单位法人证书）；cert_no填写事业单位法人证书编号； 03：民办非企业组织：cert_type填写204（民办非企业登记证书）；cert_no填写民办非企业登记证书编号； 04：社会团体：cert_type填写206（社会团体法人登记证书）；cert_no填写社会团体法人登记证书编号； 05：党政及国家机关：cert_type填写219（党政机关批准设立文件/行政执法主体资格证）；cert_no填写党政机关批准设立文件/行政执法主体资格证编号； 06：个人商户：cert_type填写100（个人身份证）；cert_no填写个人身份证号码； 07：个体工商户：cert_type填写201（营业执照）；cert_no填写营业执照编号；
         /// </summary>
         [XmlElement("merchant_type")]

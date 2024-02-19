@@ -232,5 +232,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("smid")]
         public string Smid { get; set; }
+
+        /// <summary>
+        /// 交易场景；
+        /// </summary>
+        [XmlArray("trade_scene")]
+        [XmlArrayItem("string")]
+        public List<string> TradeScene { get; set; }
     }
 }

@@ -16,10 +16,22 @@ namespace Aop.Api.Domain
         public string Logo { get; set; }
 
         /// <summary>
+        /// 卡类型
+        /// </summary>
+        [XmlElement("operation_bankcard_type")]
+        public string OperationBankcardType { get; set; }
+
+        /// <summary>
         /// 运营主体
         /// </summary>
         [XmlElement("operation_desc")]
         public string OperationDesc { get; set; }
+
+        /// <summary>
+        /// 卡机构id
+        /// </summary>
+        [XmlElement("operation_inst_id")]
+        public string OperationInstId { get; set; }
 
         /// <summary>
         /// 运营文案描述

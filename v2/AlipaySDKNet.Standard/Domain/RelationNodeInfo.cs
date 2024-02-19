@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RelationNodeInfo : AopObject
     {
         /// <summary>
+        /// 当前节点的层数
+        /// </summary>
+        [XmlElement("layer")]
+        public long Layer { get; set; }
+
+        /// <summary>
         /// 节点名称，根据不同的关联关系类型，可能为企业名或者人名
         /// </summary>
         [XmlElement("node_name")]

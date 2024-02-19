@@ -50,6 +50,13 @@ namespace Aop.Api.Domain
         public long Limit { get; set; }
 
         /// <summary>
+        /// 商家pid列表
+        /// </summary>
+        [XmlArray("pid_set")]
+        [XmlArrayItem("string")]
+        public List<string> PidSet { get; set; }
+
+        /// <summary>
         /// 来源，查询来源，初次接入，需要联系分配source
         /// </summary>
         [XmlElement("source")]

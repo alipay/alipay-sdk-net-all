@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 外部单号
+        /// </summary>
+        [XmlElement("biz_out_no")]
+        public string BizOutNo { get; set; }
+
+        /// <summary>
         /// 企业ID
         /// </summary>
         [XmlElement("enterprise_id")]

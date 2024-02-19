@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string Count { get; set; }
 
         /// <summary>
+        /// 扩展字段
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 出货地址
         /// </summary>
         [XmlElement("from_address")]

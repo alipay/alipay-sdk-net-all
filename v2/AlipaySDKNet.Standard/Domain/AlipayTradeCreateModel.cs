@@ -47,7 +47,7 @@ namespace Aop.Api.Domain
         public string BuyerId { get; set; }
 
         /// <summary>
-        /// 买家支付宝登录账号。 buyer_logon_id和buyer_id两者传其一，和buyer_id不能同时为空，建议通过buyer_id来传递买家信息。
+        /// 买家支付宝登录账号。 建议通过open_id来传递买家信息。
         /// </summary>
         [XmlElement("buyer_logon_id")]
         public string BuyerLogonId { get; set; }

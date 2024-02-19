@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string TestNumber { get; set; }
 
         /// <summary>
+        /// test
+        /// </summary>
+        [XmlElement("test_other")]
+        public string TestOther { get; set; }
+
+        /// <summary>
         /// 1
         /// </summary>
         [XmlElement("test_price")]

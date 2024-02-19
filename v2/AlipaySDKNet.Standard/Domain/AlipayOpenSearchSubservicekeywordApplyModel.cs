@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenSearchSubservicekeywordApplyModel : AopObject
     {
         /// <summary>
-        /// 关键词id，（仅修改时传入，修改时仅能传一个关键词）
+        /// 关键词配置id，由支付宝生成，关键词申请通过后会通知接口返回，也可以申请单状态获取
         /// </summary>
         [XmlElement("config_id")]
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// 关键词，提报服务关键词，人工录入
+        /// 服务关键词列表，每批最多传入30个，关键词长度小于12个汉字。 超过数量限制会申请失败，剩余关键词可通过 <a href="https://opendocs.alipay.com/mini/062ndt?pathHash=e3e78b68&ref=api&scene=common">alipay.open.search.appkeywordquota.query</a>查询
         /// </summary>
         [XmlArray("key_words")]
         [XmlArrayItem("string")]

@@ -20,5 +20,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("creative_outer_id")]
         public string CreativeOuterId { get; set; }
+
+        /// <summary>
+        /// 交易ID（灯火平台生成，请联系灯火运营获取）
+        /// </summary>
+        [XmlElement("deal_id")]
+        public string DealId { get; set; }
+
+        /// <summary>
+        /// 交易类型，如果是ReachMax公司，固定传字符串"ReachMax"
+        /// </summary>
+        [XmlElement("deal_type")]
+        public string DealType { get; set; }
     }
 }

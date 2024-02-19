@@ -84,7 +84,7 @@ namespace Aop.Api.Domain
         public string MiniAppId { get; set; }
 
         /// <summary>
-        /// 需要公域推广，默认情况下为false
+        /// 需要公域推广，默认情况下为false 当前字段已废弃(产品升级，暂不支持商品数据进公域)
         /// </summary>
         [XmlElement("need_public_promo")]
         public bool NeedPublicPromo { get; set; }
@@ -109,7 +109,7 @@ namespace Aop.Api.Domain
         public long PraiseCnt { get; set; }
 
         /// <summary>
-        /// 商品的logo图片列表，可用于公域推广对用户展示的图片，建议600*600
+        /// 商品的logo图片列表，建议600*600
         /// </summary>
         [XmlArray("promo_pic_url_list")]
         [XmlArrayItem("string")]

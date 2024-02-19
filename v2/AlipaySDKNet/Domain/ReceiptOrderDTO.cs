@@ -11,7 +11,13 @@ namespace Aop.Api.Domain
     public class ReceiptOrderDTO : AopObject
     {
         /// <summary>
-        /// 支付宝用户uid; 是支付宝支付时，必填
+        /// 支付宝用户openid
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
+        /// 支付宝用户uid
         /// </summary>
         [XmlElement("alipay_uid")]
         public string AlipayUid { get; set; }

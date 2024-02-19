@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("success")]
         public bool Success { get; set; }
+
+        /// <summary>
+        /// 过账日期
+        /// </summary>
+        [XmlElement("voucher_time")]
+        public string VoucherTime { get; set; }
     }
 }

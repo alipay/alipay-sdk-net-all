@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class MiniOrderExtInfoDTO : AopObject
     {
         /// <summary>
+        /// 二方接入交易组件用于返佣计算的特殊参数，单位为元
+        /// </summary>
+        [XmlElement("addition_rebate_base_price")]
+        public string AdditionRebateBasePrice { get; set; }
+
+        /// <summary>
         /// 预约上门取件的时间,格式为  yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("door_time")]
@@ -20,5 +26,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_str")]
         public string OrderStr { get; set; }
+
+        /// <summary>
+        /// 订单的交易类型用于区分担保交易或者普通JSAPI支付，创支付单会对该类型进行校验，如果参入错误，创支付单会失败
+        /// </summary>
+        [XmlElement("order_trade_type")]
+        public string OrderTradeType { get; set; }
+
+        /// <summary>
+        /// 支付单交易号，用于信用下单不成功转普通支付。间联实物代扣场景该字段必填
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
     }
 }

@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string CertNo { get; set; }
 
         /// <summary>
+        /// 用户支付宝注册使用的手机号码
+        /// </summary>
+        [XmlElement("phone")]
+        public string Phone { get; set; }
+
+        /// <summary>
         /// 姓名
         /// </summary>
         [XmlElement("user_name")]

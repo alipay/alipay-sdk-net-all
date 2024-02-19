@@ -126,7 +126,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 赛事中的子业务类型
+        /// 赛事中的子业务类型(该字段目前为预留字段,供接入方需要输入额外时使用)
         /// </summary>
         [XmlElement("sub_biz_type")]
         public string SubBizType { get; set; }

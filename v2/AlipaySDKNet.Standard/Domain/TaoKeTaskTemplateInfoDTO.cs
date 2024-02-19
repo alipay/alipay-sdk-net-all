@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public RealAmountRatioIncentiveRule IncentiveRule { get; set; }
 
         /// <summary>
+        /// 任务可以被领取的最大次数
+        /// </summary>
+        [XmlElement("max_receive_num")]
+        public string MaxReceiveNum { get; set; }
+
+        /// <summary>
         /// 活动方id
         /// </summary>
         [XmlElement("organizer_id")]
@@ -74,6 +80,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 任务描述
+        /// </summary>
+        [XmlElement("task_desc")]
+        public string TaskDesc { get; set; }
 
         /// <summary>
         /// 任务失效时间

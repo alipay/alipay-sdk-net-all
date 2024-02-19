@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string AccountType { get; set; }
 
         /// <summary>
-        /// 联行号，详细需调用<a href="https://opendocs.alipay.com/apis/0859rj">‘联行号关联分支行查询’</a>API查看查询结果
+        /// 联行号
         /// </summary>
         [XmlElement("bank_code")]
         public string BankCode { get; set; }

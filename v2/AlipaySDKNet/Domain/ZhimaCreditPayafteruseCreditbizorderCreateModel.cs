@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CancelBackLink { get; set; }
 
         /// <summary>
-        /// 芝麻外部类目
+        /// 芝麻外部类目，无差异化风控诉求可不传
         /// </summary>
         [XmlElement("category_id")]
         public string CategoryId { get; set; }

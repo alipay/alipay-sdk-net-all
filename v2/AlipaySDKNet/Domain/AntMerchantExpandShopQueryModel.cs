@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public string NeedRecommend { get; set; }
 
         /// <summary>
-        /// 蚂蚁店铺id。
+        /// 蚂蚁店铺id
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }
 
         /// <summary>
-        /// 门店编号，表示该门店在该商户角色id(直连pid，间连smid)下，由商户自己定义的外部门店编号。
+        /// 门店编号，表示该门店在该商户角色id(直连pid，间连smid)下，由商户自己定义的外部门店编号
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }

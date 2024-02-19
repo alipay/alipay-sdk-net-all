@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<BusinessHoursDesc> BusinessHoursDesc { get; set; }
 
         /// <summary>
-        /// 点位类型，可取值如下：  vending(自助售卖机),  water_dispenser(饮水机),  washing(洗衣机）
+        /// 点位类型，可取值如下：  vending(自助售卖机),  water_dispenser(饮水机),  washing(洗衣机）, physical_testing_equipment（体测仪）
         /// </summary>
         [XmlElement("category_code")]
         public string CategoryCode { get; set; }

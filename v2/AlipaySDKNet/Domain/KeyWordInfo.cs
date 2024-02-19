@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string AuditReason { get; set; }
 
         /// <summary>
-        /// 审核时间
+        /// 审核时间，格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("audit_time")]
         public string AuditTime { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，格式为 yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("gmt_create")]
         public string GmtCreate { get; set; }

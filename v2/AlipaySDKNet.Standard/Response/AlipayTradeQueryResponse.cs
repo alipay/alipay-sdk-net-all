@@ -255,6 +255,13 @@ namespace Aop.Api.Response
         public string ReceiptCurrencyType { get; set; }
 
         /// <summary>
+        /// 支付请求的商品明细列表
+        /// </summary>
+        [XmlArray("req_goods_detail")]
+        [XmlArrayItem("goods_detail")]
+        public List<GoodsDetail> ReqGoodsDetail { get; set; }
+
+        /// <summary>
         /// 本次交易打款给卖家的时间
         /// </summary>
         [XmlElement("send_pay_date")]

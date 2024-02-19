@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string CreditAgreementId { get; set; }
 
         /// <summary>
+        /// 获取签名后的业务数据
+        /// </summary>
+        [XmlElement("orderStr")]
+        public string OrderStr { get; set; }
+
+        /// <summary>
         /// 商户外部协议号
         /// </summary>
         [XmlElement("out_agreement_no")]

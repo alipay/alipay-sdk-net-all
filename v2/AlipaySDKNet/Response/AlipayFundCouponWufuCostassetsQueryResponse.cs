@@ -30,6 +30,12 @@ namespace Aop.Api.Response
         public bool HaveEnoughCards { get; set; }
 
         /// <summary>
+        /// 福卡不足时的跳转链接
+        /// </summary>
+        [XmlElement("not_enough_jump_url")]
+        public string NotEnoughJumpUrl { get; set; }
+
+        /// <summary>
         /// 结果码
         /// </summary>
         [XmlElement("result_code")]

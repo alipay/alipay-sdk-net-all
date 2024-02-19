@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -34,10 +35,16 @@ namespace Aop.Api.Domain
         public EmployeeCardInfoDTO EmployeeCardInfo { get; set; }
 
         /// <summary>
-        /// 超时时间
+        /// 链接有效时间，最大值一年有效期
         /// </summary>
         [XmlElement("expire_time")]
         public string ExpireTime { get; set; }
+
+        /// <summary>
+        /// 打卡的配置信息
+        /// </summary>
+        [XmlElement("insure_attend")]
+        public InsureAttendDTO InsureAttend { get; set; }
 
         /// <summary>
         /// 当投保模式为直接投保，投保主体信息必选
@@ -50,6 +57,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("insure_type")]
         public string InsureType { get; set; }
+
+        /// <summary>
+        /// 员工工种code列表信息，替代原job,job_level字段，该字段必填
+        /// </summary>
+        [XmlArray("job_list")]
+        [XmlArrayItem("string")]
+        public List<string> JobList { get; set; }
 
         /// <summary>
         /// 外部业务号

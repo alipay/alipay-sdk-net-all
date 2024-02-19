@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string TaskInstanceId { get; set; }
 
         /// <summary>
+        /// 货款分账模式下，标识对用户发放激励的时间
+        /// </summary>
+        [XmlElement("unfreeze_time")]
+        public string UnfreezeTime { get; set; }
+
+        /// <summary>
         /// 商户侧判定的有效交易金额
         /// </summary>
         [XmlElement("valid_trade_amount")]

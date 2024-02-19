@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -70,6 +71,25 @@ namespace Aop.Api.Domain
         public string City { get; set; }
 
         /// <summary>
+        /// 合单批次号
+        /// </summary>
+        [XmlElement("combination_batch_no")]
+        public string CombinationBatchNo { get; set; }
+
+        /// <summary>
+        /// 合单单据数量
+        /// </summary>
+        [XmlElement("combination_count")]
+        public long CombinationCount { get; set; }
+
+        /// <summary>
+        /// 合单单据列表
+        /// </summary>
+        [XmlArray("combination_orders")]
+        [XmlArrayItem("string")]
+        public List<string> CombinationOrders { get; set; }
+
+        /// <summary>
         /// 数量
         /// </summary>
         [XmlElement("count")]
@@ -92,6 +112,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("district")]
         public string District { get; set; }
+
+        /// <summary>
+        /// Y 需要合单 N 不需要合单
+        /// </summary>
+        [XmlElement("is_combination_order")]
+        public string IsCombinationOrder { get; set; }
 
         /// <summary>
         /// 物流公司代码
@@ -146,6 +172,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("print_data")]
         public string PrintData { get; set; }
+
+        /// <summary>
+        /// 标识指令优先级别 100 正常优先级  200 高优先级
+        /// </summary>
+        [XmlElement("priority")]
+        public string Priority { get; set; }
 
         /// <summary>
         /// 生产单号

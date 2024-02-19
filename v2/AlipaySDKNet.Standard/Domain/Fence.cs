@@ -23,6 +23,13 @@ namespace Aop.Api.Domain
         public string HexId { get; set; }
 
         /// <summary>
+        /// 历史订单列表
+        /// </summary>
+        [XmlArray("his_order")]
+        [XmlArrayItem("order_point")]
+        public List<OrderPoint> HisOrder { get; set; }
+
+        /// <summary>
         /// 订单数
         /// </summary>
         [XmlElement("order_count")]

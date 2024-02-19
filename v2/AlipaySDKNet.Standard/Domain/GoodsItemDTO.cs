@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string OutItemId { get; set; }
 
         /// <summary>
-        /// 商户商品sku_id，提报商品库的商品，该字段必传
+        /// 商户商品sku_id
         /// </summary>
         [XmlElement("out_sku_id")]
         public string OutSkuId { get; set; }

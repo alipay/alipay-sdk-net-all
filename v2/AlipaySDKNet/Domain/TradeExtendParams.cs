@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string MedicalInsCardId { get; set; }
 
         /// <summary>
+        /// 用于标记平台购药场景中的订单来源
+        /// </summary>
+        [XmlElement("platform_source")]
+        public string PlatformSource { get; set; }
+
+        /// <summary>
         /// 医保数据结构体,各地透传参数详见"医保透传参数说明"
         /// </summary>
         [XmlElement("request_content")]

@@ -42,13 +42,13 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 用户open_id
+        /// 支付宝用户openId
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 支付宝uid
+        /// 支付宝用户ID，可以通过支付结果通知、用户授权等渠道获取
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

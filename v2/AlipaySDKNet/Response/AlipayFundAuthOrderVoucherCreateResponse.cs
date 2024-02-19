@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string CodeType { get; set; }
 
         /// <summary>
-        /// 生成的带有支付宝logo的二维码地址，如：http://mobilecodec.alipay.com/show.htm?code=aeparsv2dknkqf3018556a；商户端通过在末尾追加picSize来指定要显示的图片大小，如  显示1280大小的URL:http://mobilecodec.alipay.com/show.htm?code=aeparsv2dknkqf3018556a&picSize=1280；目前支持的大小有：256, 227, 270, 344, 430, 512, 570, 860, 1280, 1546；
+        /// 生成的带有支付宝logo的二维码地址，如：<a href="http://mobilecodec.alipay.com/show.htm?code=aeparsv2dknkqf3018556a">http://mobilecodec.alipay.com/show.htm?code=aeparsv2dknkqf3018556a</a>；商户端通过在末尾追加picSize来指定要显示的图片大小，如 显示1280大小的URL:<a href="http://mobilecodec.alipay.com/show.htm?code=aeparsv2dknkqf3018556a&picSize=1280">http://mobilecodec.alipay.com/show.htm?code=aeparsv2dknkqf3018556a&picSize=1280</a>；目前支持的大小有：256, 227, 270, 344, 430, 512, 570, 860, 1280, 1546；
         /// </summary>
         [XmlElement("code_url")]
         public string CodeUrl { get; set; }

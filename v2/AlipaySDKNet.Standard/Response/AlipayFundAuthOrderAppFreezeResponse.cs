@@ -45,6 +45,12 @@ namespace Aop.Api.Response
         public string OperationId { get; set; }
 
         /// <summary>
+        /// 获取签名后的业务数据
+        /// </summary>
+        [XmlElement("orderStr")]
+        public string OrderStr { get; set; }
+
+        /// <summary>
         /// 商户的授权资金订单号
         /// </summary>
         [XmlElement("out_order_no")]

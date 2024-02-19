@@ -16,5 +16,11 @@ namespace Aop.Api.Response
         [XmlArray("task_list")]
         [XmlArrayItem("tao_ke_task_template_info_d_t_o")]
         public List<TaoKeTaskTemplateInfoDTO> TaskList { get; set; }
+
+        /// <summary>
+        /// 总数量
+        /// </summary>
+        [XmlElement("total_num")]
+        public long TotalNum { get; set; }
     }
 }

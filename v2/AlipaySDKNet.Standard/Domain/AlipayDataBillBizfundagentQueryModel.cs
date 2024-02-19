@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayDataBillBizfundagentQueryModel : AopObject
     {
         /// <summary>
+        /// 记账本id，服务商在帮助商户开通时候获取的唯一身份号
+        /// </summary>
+        [XmlElement("account_book_id")]
+        public string AccountBookId { get; set; }
+
+        /// <summary>
         /// ISV与商户授权协议号
         /// </summary>
         [XmlElement("agreement_no")]

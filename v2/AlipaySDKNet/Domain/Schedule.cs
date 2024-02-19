@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class Schedule : AopObject
     {
         /// <summary>
+        /// 指定在调度时是否异步执行
+        /// </summary>
+        [XmlElement("async")]
+        public bool Async { get; set; }
+
+        /// <summary>
         /// 是否开启
         /// </summary>
         [XmlElement("open")]

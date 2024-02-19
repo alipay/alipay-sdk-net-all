@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -70,6 +71,25 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
+        /// 合单批次号
+        /// </summary>
+        [XmlElement("combination_batch_no")]
+        public string CombinationBatchNo { get; set; }
+
+        /// <summary>
+        /// 合单单据数量
+        /// </summary>
+        [XmlElement("combination_count")]
+        public long CombinationCount { get; set; }
+
+        /// <summary>
+        /// 合单单据列表
+        /// </summary>
+        [XmlArray("combination_orders")]
+        [XmlArrayItem("string")]
+        public List<string> CombinationOrders { get; set; }
+
+        /// <summary>
         /// 提供给物流商清关所用信息
         /// </summary>
         [XmlElement("custom_clearance")]
@@ -118,6 +138,12 @@ namespace Aop.Api.Domain
         public string DeliverySupplierName { get; set; }
 
         /// <summary>
+        /// 配送类型
+        /// </summary>
+        [XmlElement("delivery_type")]
+        public string DeliveryType { get; set; }
+
+        /// <summary>
         /// 扩展信息
         /// </summary>
         [XmlElement("ext_info")]
@@ -134,6 +160,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("gmt_assign")]
         public string GmtAssign { get; set; }
+
+        /// <summary>
+        /// Y 需要合单 N 不需要合单
+        /// </summary>
+        [XmlElement("is_combination_order")]
+        public string IsCombinationOrder { get; set; }
 
         /// <summary>
         /// 物料id
@@ -196,7 +228,7 @@ namespace Aop.Api.Domain
         public string PrintData { get; set; }
 
         /// <summary>
-        /// 指令排产优先级
+        /// 指令排产优先级，100 正常优先级  200 高优先级
         /// </summary>
         [XmlElement("priority")]
         public string Priority { get; set; }

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AssociateTradeNo { get; set; }
 
         /// <summary>
+        /// 券归属商户
+        /// </summary>
+        [XmlElement("belong_merchant_id")]
+        public string BelongMerchantId { get; set; }
+
+        /// <summary>
         /// 领券时间
         /// </summary>
         [XmlElement("create_time")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("valid_end_time")]
         public string ValidEndTime { get; set; }
+
+        /// <summary>
+        /// 用户领取的券码code,支付宝商家券活动才会返回券码，其他优惠券活动该值为空
+        /// </summary>
+        [XmlElement("voucher_code")]
+        public string VoucherCode { get; set; }
 
         /// <summary>
         /// 用户券 id。支付宝为用户优惠券唯一分配的 id。

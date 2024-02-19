@@ -11,6 +11,13 @@ namespace Aop.Api.Response
     public class AlipaySecurityRiskComplaintInfoQueryResponse : AopResponse
     {
         /// <summary>
+        /// 投诉凭证图片信息，afts可访问url形式
+        /// </summary>
+        [XmlArray("certify_info")]
+        [XmlArrayItem("string")]
+        public List<string> CertifyInfo { get; set; }
+
+        /// <summary>
         /// 投诉单涉及交易总金额（单位：人民币元）
         /// </summary>
         [XmlElement("complain_amount")]

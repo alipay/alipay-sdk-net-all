@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ConnKey { get; set; }
 
         /// <summary>
-        /// 01:医生，02:教师，具体参考文档
+        /// 04:教师，其它身份类型联系芝麻技术支持确认
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }

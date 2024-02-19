@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AnswerFormat { get; set; }
 
         /// <summary>
+        /// 当前回答流式次序
+        /// </summary>
+        [XmlElement("answer_index")]
+        public long AnswerIndex { get; set; }
+
+        /// <summary>
         /// 正常回答: NORMAL 流式回答: FLOW
         /// </summary>
         [XmlElement("answer_type")]
@@ -40,7 +46,7 @@ namespace Aop.Api.Domain
         public KeyValueMap BusinessProperties { get; set; }
 
         /// <summary>
-        /// 大模型ID，表示大模型类型和版本等
+        /// 大模型ID，表示大模型版本等
         /// </summary>
         [XmlElement("model_code")]
         public string ModelCode { get; set; }
@@ -62,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("request_id")]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 场景码
+        /// </summary>
+        [XmlElement("scene_code")]
+        public string SceneCode { get; set; }
 
         /// <summary>
         /// 大模型提问护栏服务, 用于区分提供的服务类别，当前支持：TJ_QUESTION_BASIC、TJ_ANSWER_BASIC 两种

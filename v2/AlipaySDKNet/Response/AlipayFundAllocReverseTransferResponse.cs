@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayFundAllocReverseTransferResponse : AopResponse
     {
         /// <summary>
-        /// 退款金额
+        /// 退款金额（元）
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

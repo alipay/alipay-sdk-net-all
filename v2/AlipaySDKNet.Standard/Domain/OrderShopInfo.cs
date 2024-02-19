@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 联系电话-支持固话或手机号 仅支持数字、+、-
+        /// 联系电话-支持固话或手机号 仅支持数字、+、- 。例如 手机：1380***1111、固话：021-888**888
         /// </summary>
         [XmlElement("phone_num")]
         public string PhoneNum { get; set; }

@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public ContactInfoDTO ContactInfo { get; set; }
 
         /// <summary>
+        /// 芝麻信息，使用芝麻先享能力时传入
+        /// </summary>
+        [XmlElement("credit_info")]
+        public CreditInfoDTO CreditInfo { get; set; }
+
+        /// <summary>
         /// 默认退货地址
         /// </summary>
         [XmlElement("default_receiving_address")]
@@ -94,16 +100,28 @@ namespace Aop.Api.Domain
         public PromoDetailInfoDTO PromoDetailInfo { get; set; }
 
         /// <summary>
-        /// 当需要指定收款账号时，通过该参数传入，如果该值为空，则默认为商户签约账号对应的支付宝用户ID。  收款账号优先级规则：门店绑定的收款账户>请求传入的seller_id>商户签约账号对应的支付宝用户ID；  注：直付通和机构间联场景下seller_id无需传入或者保持跟pid一致；  如果传入的seller_id与pid不一致，需要联系支付宝小二配置收款关系；本地商品无需填写
+        /// 卖家支付宝用户ID。收款账号优先级规则：门店绑定的收款账户>请求传入的seller_id>商户签约账号对应的支付宝用户ID；  注：直付通和机构间联场景下seller_id无需传入或者保持跟pid一致；  如果传入的seller_id与pid不一致，需要联系支付宝小二配置收款关系；本地商品无需填写
         /// </summary>
         [XmlElement("seller_id")]
         public string SellerId { get; set; }
 
         /// <summary>
-        /// 追踪ID,公域分发场景必传,会影响主播归因、分享员归因等；通过调用  my.checkBeforeAddOrder 接口返回
+        /// 门店信息
+        /// </summary>
+        [XmlElement("shop_info")]
+        public ShopInfoDTO ShopInfo { get; set; }
+
+        /// <summary>
+        /// 追踪ID，公域分发场景必传，会影响主播归因、分享员归因等；通过调用 <a href="https://opendocs.alipay.com/mini/512c3ce1_my.checkBeforeAddOrder?pathHash=4b9d23c5">my.checkBeforeAddOrder</a> 接口返回
         /// </summary>
         [XmlElement("source_id")]
         public string SourceId { get; set; }
+
+        /// <summary>
+        /// 二级商户信息。 直付通模式和机构间连模式下必传，其它场景下不需要传入
+        /// </summary>
+        [XmlElement("sub_merchant")]
+        public SubMerchantDTO SubMerchant { get; set; }
 
         /// <summary>
         /// 订单相对超时时间。从交易创建时间开始计算。 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天。 该参数数值不接受小数点， 如 1.5h，可转换为  90m。 默认值为3h。

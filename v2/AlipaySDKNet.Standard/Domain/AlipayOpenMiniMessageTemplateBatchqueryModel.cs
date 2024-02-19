@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniMessageTemplateBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 消息类型，目前仅支持查询订阅消息，biz_type:sub_msg
+        /// 消息类型
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }

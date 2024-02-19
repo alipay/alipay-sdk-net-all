@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public AddressInfoVO AddressInfo { get; set; }
 
         /// <summary>
+        /// 酒店预订信息
+        /// </summary>
+        [XmlElement("booking_info")]
+        public BookingInfoDTO BookingInfo { get; set; }
+
+        /// <summary>
         /// 买家联系人信息，本地生活商品使用
         /// </summary>
         [XmlElement("contact_info")]
@@ -88,13 +94,19 @@ namespace Aop.Api.Response
         public string SettleType { get; set; }
 
         /// <summary>
+        /// 门店信息
+        /// </summary>
+        [XmlElement("shop_info")]
+        public ShopInfoDTO ShopInfo { get; set; }
+
+        /// <summary>
         /// 订单状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
 
         /// <summary>
-        /// 支付单号
+        /// 支付单号，支付成功后会该字段会有值
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

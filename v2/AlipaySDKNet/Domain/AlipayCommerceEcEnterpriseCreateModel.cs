@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string EnterpriseName { get; set; }
 
         /// <summary>
+        /// 订购【一脸通行开通插件】的小程序appId
+        /// </summary>
+        [XmlElement("group_app_id")]
+        public string GroupAppId { get; set; }
+
+        /// <summary>
         /// 管理员身份标识
         /// </summary>
         [XmlElement("identity")]

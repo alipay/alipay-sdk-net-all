@@ -35,6 +35,12 @@ namespace Aop.Api.Response
         public string Content { get; set; }
 
         /// <summary>
+        /// 用户确认超时时间，仅当状态为"商家已反馈"时返回
+        /// </summary>
+        [XmlElement("gmt_confirm_deadline")]
+        public string GmtConfirmDeadline { get; set; }
+
+        /// <summary>
         /// 线下交易投诉创建时间
         /// </summary>
         [XmlElement("gmt_create")]
@@ -45,6 +51,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("gmt_finished")]
         public string GmtFinished { get; set; }
+
+        /// <summary>
+        /// 商户处理超时时间，仅当状态为"商家处理中"时返回
+        /// </summary>
+        [XmlElement("gmt_handle_deadline")]
+        public string GmtHandleDeadline { get; set; }
 
         /// <summary>
         /// 投诉者申请平台接入（12315）的时间
@@ -97,7 +109,7 @@ namespace Aop.Api.Response
         public string Status { get; set; }
 
         /// <summary>
-        /// 交易订单金额
+        /// 交易订单金额，单位"元"
         /// </summary>
         [XmlElement("trade_amount")]
         public string TradeAmount { get; set; }

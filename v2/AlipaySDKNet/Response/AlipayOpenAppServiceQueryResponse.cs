@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string ServiceXml { get; set; }
 
         /// <summary>
-        /// 服务状态，EDITING(编辑中)/AUDITING(审核中)/AUDIT_REJECT(审核驳回)/PROMOTION(可推广)/STOP_PROMOTION(停止推广)/INVALID(失效)/PUNISHED(处罚)
+        /// 服务状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
