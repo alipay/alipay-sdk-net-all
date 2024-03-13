@@ -26,7 +26,7 @@ namespace Aop.Api.Request
         public string ImageOcrTag { get; set; }
 
         /// <summary>
-        /// 文件格式，支持格式：bmp、jpg、jpeg、png、gif、pdf
+        /// 文件类型，支持格式：bmp、jpg、jpeg、png、gif、pdf
         /// </summary>
         public string ImageType { get; set; }
 

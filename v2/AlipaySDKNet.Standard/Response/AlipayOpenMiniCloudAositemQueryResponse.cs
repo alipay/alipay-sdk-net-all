@@ -30,6 +30,12 @@ namespace Aop.Api.Response
         public List<DataItem> Result { get; set; }
 
         /// <summary>
+        /// 请求链路唯一id，用于问题排查
+        /// </summary>
+        [XmlElement("sequence")]
+        public string Sequence { get; set; }
+
+        /// <summary>
         /// 搜索请求的traceid，用于排查问题及关联s搜索结果和用户行为
         /// </summary>
         [XmlElement("trace_id")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 企业码员工id
+        /// </summary>
+        [XmlElement("employee_id")]
+        public string EmployeeId { get; set; }
+
+        /// <summary>
         /// 截止时间
         /// </summary>
         [XmlElement("end_date")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
+
+        /// <summary>
+        /// 费控规则组id（非制度id)
+        /// </summary>
+        [XmlElement("expense_rule_group_id")]
+        public string ExpenseRuleGroupId { get; set; }
 
         /// <summary>
         /// 页码

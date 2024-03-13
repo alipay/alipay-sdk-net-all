@@ -148,6 +148,24 @@ namespace Aop.Api.Domain
         public bool LockableDevice { get; set; }
 
         /// <summary>
+        /// 宠物档案id
+        /// </summary>
+        [XmlElement("pet_id")]
+        public string PetId { get; set; }
+
+        /// <summary>
+        /// 宠物档案类型
+        /// </summary>
+        [XmlElement("pet_type")]
+        public string PetType { get; set; }
+
+        /// <summary>
+        /// 宠物档案版本号
+        /// </summary>
+        [XmlElement("pet_version")]
+        public string PetVersion { get; set; }
+
+        /// <summary>
         /// 插座编号
         /// </summary>
         [XmlElement("plug_no")]

@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string HotelId { get; set; }
 
         /// <summary>
+        /// 是否为增量更新, 默认为false全量更新
+        /// </summary>
+        [XmlElement("increment")]
+        public bool Increment { get; set; }
+
+        /// <summary>
         /// 价格计划列表
         /// </summary>
         [XmlArray("rate_plans")]

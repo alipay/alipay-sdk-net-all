@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AnswerFlowId { get; set; }
 
         /// <summary>
-        /// 目前只支持纯文本：PLAINTEXT
+        /// 回答内容格式
         /// </summary>
         [XmlElement("answer_format")]
         public string AnswerFormat { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string Question { get; set; }
 
         /// <summary>
-        /// 当前只支持纯文本：PLAINTEXT
+        /// 提问内容格式
         /// </summary>
         [XmlElement("question_format")]
         public string QuestionFormat { get; set; }

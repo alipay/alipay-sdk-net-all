@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AsyncPaymentMode { get; set; }
 
         /// <summary>
+        /// 实际履约金额，单位（元）。仅履约场景才会返回
+        /// </summary>
+        [XmlElement("fulfillment_amount")]
+        public string FulfillmentAmount { get; set; }
+
+        /// <summary>
         /// 交易支付时间
         /// </summary>
         [XmlElement("gmt_payment")]

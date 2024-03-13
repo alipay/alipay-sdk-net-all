@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppinfoModifyModel : AopObject
     {
         /// <summary>
-        /// 应用openid配置
+        /// 修改应用openid配置
         /// </summary>
         [XmlElement("open_id_config")]
         public string OpenIdConfig { get; set; }

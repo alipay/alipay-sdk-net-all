@@ -72,6 +72,12 @@ namespace Aop.Api.Domain
         public string HireStatus { get; set; }
 
         /// <summary>
+        /// IoT专属岗位=1，非IoT专属岗位=0。该字段向IoT服务商定向开放，非IoT专属岗位可以无需传值，如果是IoT专属岗位，不会在支付宝就业小程序内展示
+        /// </summary>
+        [XmlElement("iot_status")]
+        public long IotStatus { get; set; }
+
+        /// <summary>
         /// 岗位详情内容
         /// </summary>
         [XmlElement("job_detail")]

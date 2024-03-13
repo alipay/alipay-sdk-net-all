@@ -20,6 +20,18 @@ namespace Aop.Api.Domain
         /// <summary>
         /// test
         /// </summary>
+        [XmlElement("longitude")]
+        public string Longitude { get; set; }
+
+        /// <summary>
+        /// TEST
+        /// </summary>
+        [XmlElement("mobile_number")]
+        public string MobileNumber { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
         [XmlArray("test_boolean")]
         [XmlArrayItem("boolean")]
         public List<bool> TestBoolean { get; set; }

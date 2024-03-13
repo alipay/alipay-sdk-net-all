@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string OperationDesc { get; set; }
 
         /// <summary>
+        /// 间连场景下为运营商提供完整营销文案
+        /// </summary>
+        [XmlElement("operation_display")]
+        public string OperationDisplay { get; set; }
+
+        /// <summary>
         /// 卡机构id
         /// </summary>
         [XmlElement("operation_inst_id")]

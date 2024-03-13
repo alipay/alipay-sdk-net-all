@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string PayeeName { get; set; }
 
         /// <summary>
-        /// 支付金额  对应账单中的交易金额
+        /// 支付金额，单位（元）， 对应账单中的交易金额
         /// </summary>
         [XmlElement("payment_amount")]
         public string PaymentAmount { get; set; }

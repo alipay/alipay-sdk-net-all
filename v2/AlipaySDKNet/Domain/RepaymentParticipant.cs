@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RepaymentParticipant : AopObject
     {
         /// <summary>
+        /// 零工卡专用金还款到卡银行卡扩展参数
+        /// </summary>
+        [XmlElement("bankcard_ext_info")]
+        public RepaymentBankcardExtInfo BankcardExtInfo { get; set; }
+
+        /// <summary>
         /// 参与方关联的扩展信息
         /// </summary>
         [XmlElement("ext_info")]
@@ -22,7 +28,7 @@ namespace Aop.Api.Domain
         public string Identity { get; set; }
 
         /// <summary>
-        /// 参与方账号标识类型，支持： 1. ALIPAY_LOGON_ID 2. ALIPAY_USER_ID 3. ALIPAY_OPEN_ID
+        /// 参与方账号标识类型，支持： 1. ALIPAY_LOGON_ID 2. ALIPAY_USER_ID 3. ALIPAY_OPEN_ID 4. BANK_CARD_NO
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }

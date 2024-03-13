@@ -122,7 +122,7 @@ namespace Aop.Api.Response
         public List<ItemRiskInfo> RiskInfo { get; set; }
 
         /// <summary>
-        /// 商品售价，分为单位。若填写了skus[]数组，此字段不返回值
+        /// 商品售价，分为单位。
         /// </summary>
         [XmlElement("sale_price")]
         public long SalePrice { get; set; }
@@ -148,7 +148,7 @@ namespace Aop.Api.Response
         public string SpuStatus { get; set; }
 
         /// <summary>
-        /// 若填写了skus[]数组，此字段不用填写。 若未填写skus[]数组，此字段必填。 目前支持库存区间0~99999
+        /// 目前支持库存区间0~99999
         /// </summary>
         [XmlElement("stock_num")]
         public long StockNum { get; set; }

@@ -10,10 +10,16 @@ namespace Aop.Api.Domain
     public class AnttechMorseMarketingPayinstEquitySendModel : AopObject
     {
         /// <summary>
-        /// 命中的活动id
+        /// 命中的活动ID。废弃，用campaign_ids代替 当前字段已废弃(使用camapign_ids代替)
         /// </summary>
         [XmlElement("campaign_id")]
         public string CampaignId { get; set; }
+
+        /// <summary>
+        /// 发放权益活动ID列表，多个ID用英文逗号隔开。替换campaign_id，若campaign_id和campaign_ids同时存在，campaign_ids优先
+        /// </summary>
+        [XmlElement("campaign_ids")]
+        public string CampaignIds { get; set; }
 
         /// <summary>
         /// 权益类型，微信立减金，支付宝红包
@@ -34,7 +40,7 @@ namespace Aop.Api.Domain
         public string OutRequestId { get; set; }
 
         /// <summary>
-        /// 资源位编号，接口请求标识商户资源位信息，由摩斯侧分配
+        /// 资源位ID，接口请求标识商户资源位信息，由摩斯侧分配
         /// </summary>
         [XmlElement("resource_id")]
         public string ResourceId { get; set; }

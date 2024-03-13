@@ -31,7 +31,7 @@ namespace Aop.Api.Request
         public Nullable<bool> NeedEnhance { get; set; }
 
         /// <summary>
-        /// 图片上传场景，分为默认素材规范场景和介质图片场景。若选择默认素材规范场景，则素材规范id和素材字段必传；若选择其他具体场景，比如商品主图场景，则不需要传。
+        /// 图片上传场景，分为默认素材规范场景和介质图片场景。
         /// </summary>
         public string UploadScene { get; set; }
 

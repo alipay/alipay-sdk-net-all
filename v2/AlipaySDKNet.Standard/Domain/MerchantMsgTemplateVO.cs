@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string DeliverySettings { get; set; }
 
         /// <summary>
-        /// 消息子板疲劳度
+        /// 消息模板疲劳度
         /// </summary>
         [XmlElement("fatigue")]
         public MsgFatigueVO Fatigue { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string KeywordDesc { get; set; }
 
         /// <summary>
-        /// 消息子板名称
+        /// 消息模板名称
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string SceneRule { get; set; }
 
         /// <summary>
-        /// 消息子板状态
+        /// 消息模板状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
 
         /// <summary>
-        /// 消息子板id
+        /// 消息模板id
         /// </summary>
         [XmlElement("template_id")]
         public string TemplateId { get; set; }

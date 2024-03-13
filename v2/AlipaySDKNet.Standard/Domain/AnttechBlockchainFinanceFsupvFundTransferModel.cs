@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string RequestNo { get; set; }
 
         /// <summary>
-        /// 资金管控划拨金额，单位: 分
+        /// 资金管控划拨金额，单位: 元
         /// </summary>
         [XmlElement("transfer_amount")]
         public string TransferAmount { get; set; }

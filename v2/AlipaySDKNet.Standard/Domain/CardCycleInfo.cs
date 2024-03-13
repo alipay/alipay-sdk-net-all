@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CardCycleInfo : AopObject
     {
         /// <summary>
+        /// 用户可以选择的周期付首次扣款日的开始时间
+        /// </summary>
+        [XmlElement("cycle_charge_start_time")]
+        public string CycleChargeStartTime { get; set; }
+
+        /// <summary>
         /// 周期计费类型
         /// </summary>
         [XmlElement("cycle_charge_type")]

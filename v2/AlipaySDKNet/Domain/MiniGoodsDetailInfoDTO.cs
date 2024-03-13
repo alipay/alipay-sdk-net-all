@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class MiniGoodsDetailInfoDTO : AopObject
     {
         /// <summary>
+        /// 活动信息
+        /// </summary>
+        [XmlElement("activity_info")]
+        public ActivityInfoDTO ActivityInfo { get; set; }
+
+        /// <summary>
         /// 商品描述信息
         /// </summary>
         [XmlElement("body")]
@@ -66,7 +72,7 @@ namespace Aop.Api.Domain
         public string ItemDiscount { get; set; }
 
         /// <summary>
-        /// 商品分期信息，分期代扣商品必填
+        /// 商品分期信息
         /// </summary>
         [XmlElement("item_installment_info")]
         public ItemInstallmentInfoDTO ItemInstallmentInfo { get; set; }
@@ -102,7 +108,7 @@ namespace Aop.Api.Domain
         public string SalePrice { get; set; }
 
         /// <summary>
-        /// 商品真实单价，单位：元,精确到小数点后两位, 有优惠信息时需要传入，优惠方式sale_real_price与item_discount二选一 sale_real_price使用场景：商品有单价优惠，传入商品实际成交单价 item_discount使用场景：同时购买多件商品时存在优惠，传入优惠总额 优惠计算参考：https://opendocs.alipay.com/mini/0ag2e1?pathHash=20b9a409 中资金平衡校验 sale_real_price使用场景：商品有单价优惠，传入商品实际成交单价 item_discount使用场景：同时购买多件商品时存在优惠，传入优惠总额 优惠计算参考：https://opendocs.alipay.com/mini/0ag2e1?pathHash=20b9a409 中资金平衡校验
+        /// 商品真实单价，单位：元,精确到小数点后两位, 有优惠信息时需要传入，优惠方式sale_real_price与item_discount二选一 sale_real_price使用场景：商品有单价优惠，传入商品实际成交单价 item_discount使用场景：同时购买多件商品时存在优惠，传入优惠总额 优惠计算参考：<a href="https://opendocs.alipay.com/mini/0ag2e1?pathHash=20b9a409">资金平衡校验</a> sale_real_price使用场景：商品有单价优惠，传入商品实际成交单价 item_discount使用场景：同时购买多件商品时存在优惠，传入优惠总额 优惠计算参考：<a href="https://opendocs.alipay.com/mini/0ag2e1?pathHash=20b9a409">资金平衡校验</a>
         /// </summary>
         [XmlElement("sale_real_price")]
         public string SaleRealPrice { get; set; }
@@ -112,5 +118,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("show_url")]
         public string ShowUrl { get; set; }
+
+        /// <summary>
+        /// 演出票务信息
+        /// </summary>
+        [XmlElement("ticket_info")]
+        public TicketInfoDTO TicketInfo { get; set; }
     }
 }

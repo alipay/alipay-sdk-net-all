@@ -142,10 +142,16 @@ namespace Aop.Api.Domain
         public string Picture { get; set; }
 
         /// <summary>
-        /// 平台id 1为支付宝钱包
+        /// 反馈来源平台： 安卓系为1  苹果系为2  其他为3
         /// </summary>
         [XmlElement("platform_id")]
         public string PlatformId { get; set; }
+
+        /// <summary>
+        /// replays日志平台id
+        /// </summary>
+        [XmlElement("replays_id")]
+        public string ReplaysId { get; set; }
 
         /// <summary>
         /// 舆情连接（anteye）

@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<MsgApplyKeyword> KeywordList { get; set; }
 
         /// <summary>
-        /// 消息母板code
+        /// 消息模板库code
         /// </summary>
         [XmlElement("lib_code")]
         public string LibCode { get; set; }

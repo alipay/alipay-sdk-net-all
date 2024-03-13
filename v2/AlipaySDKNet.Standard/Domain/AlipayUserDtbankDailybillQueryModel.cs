@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bill_id")]
         public string BillId { get; set; }
+
+        /// <summary>
+        /// 账单类型
+        /// </summary>
+        [XmlElement("bill_type")]
+        public string BillType { get; set; }
     }
 }

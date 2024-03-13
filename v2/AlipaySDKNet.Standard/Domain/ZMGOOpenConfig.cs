@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string FreezeAmount { get; set; }
 
         /// <summary>
-        /// 用户签约间隔时间
+        /// 用户签约间隔时间，单位天
         /// </summary>
         [XmlElement("min_sign_interval")]
         public string MinSignInterval { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string SignSuccessTaskButtonDesc { get; set; }
 
         /// <summary>
-        /// 是否支持延期特权
+        /// 是否支持延期特权，开启后用户可以在任务到期前进行延期。 当前字段已废弃(该功能已停用，不建议开启使用。)
         /// </summary>
         [XmlElement("support_expire_deferral")]
         public bool SupportExpireDeferral { get; set; }

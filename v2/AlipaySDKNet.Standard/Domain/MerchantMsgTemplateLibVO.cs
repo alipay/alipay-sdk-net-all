@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class MerchantMsgTemplateLibVO : AopObject
     {
         /// <summary>
-        /// 消息母板code
+        /// 消息模板库code
         /// </summary>
         [XmlElement("code")]
         public string Code { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string KeywordDesc { get; set; }
 
         /// <summary>
-        /// 消息母板名称
+        /// 消息模板库名称
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string SceneRule { get; set; }
 
         /// <summary>
-        /// 母板是否可选，若为false，则不可申领
+        /// 模板库是否可选，若为false，则不可申领
         /// </summary>
         [XmlElement("selectable")]
         public bool Selectable { get; set; }

@@ -28,10 +28,22 @@ namespace Aop.Api.Domain
         public string Duration { get; set; }
 
         /// <summary>
+        /// 结束时人脸比对是否通过，没有值表示没有发起过刷脸
+        /// </summary>
+        [XmlElement("finish_face_verify_pass")]
+        public bool FinishFaceVerifyPass { get; set; }
+
+        /// <summary>
         /// 运动结束时间
         /// </summary>
         [XmlElement("finish_time")]
         public string FinishTime { get; set; }
+
+        /// <summary>
+        /// 来源应用ID
+        /// </summary>
+        [XmlElement("from_app_id")]
+        public string FromAppId { get; set; }
 
         /// <summary>
         /// 最高海拔，单位米
@@ -44,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("min_altitude")]
         public string MinAltitude { get; set; }
+
+        /// <summary>
+        /// 外部业务编码，标识一个appId下面的一个特定的业务
+        /// </summary>
+        [XmlElement("out_biz_code")]
+        public string OutBizCode { get; set; }
 
         /// <summary>
         /// 运动流水的发生日期
@@ -74,6 +92,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sport_type")]
         public string SportType { get; set; }
+
+        /// <summary>
+        /// 开始时刷脸是否通过，没有值表示没有发起过刷脸
+        /// </summary>
+        [XmlElement("start_face_verify_pass")]
+        public bool StartFaceVerifyPass { get; set; }
 
         /// <summary>
         /// 开始时间

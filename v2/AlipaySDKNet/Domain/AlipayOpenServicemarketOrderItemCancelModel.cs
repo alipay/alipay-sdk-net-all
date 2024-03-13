@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CancelReason { get; set; }
 
         /// <summary>
-        /// 订购服务订单ID，通过支付宝发送的 https://opendocs.alipay.com/apis/api_3/alipay.open.servicemarket.order.notify(服务市场商户确认订购通知) 通知获取。
+        /// 订购服务订单ID，通过支付宝发送的 <a href="https://opendocs.alipay.com/apis/api_3/alipay.open.servicemarket.order.notify">服务市场商户确认订购通知</a> 通知获取。
         /// </summary>
         [XmlElement("commodity_order_id")]
         public string CommodityOrderId { get; set; }

@@ -46,6 +46,24 @@ namespace Aop.Api.Domain
         public string InvoiceTitleId { get; set; }
 
         /// <summary>
+        /// 收件人地址
+        /// </summary>
+        [XmlElement("receive_address")]
+        public string ReceiveAddress { get; set; }
+
+        /// <summary>
+        /// 收件人姓名
+        /// </summary>
+        [XmlElement("receive_name")]
+        public string ReceiveName { get; set; }
+
+        /// <summary>
+        /// 收件人手机号
+        /// </summary>
+        [XmlElement("receive_phone")]
+        public string ReceivePhone { get; set; }
+
+        /// <summary>
         /// 销方类型
         /// </summary>
         [XmlElement("seller_type")]

@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string Question { get; set; }
 
         /// <summary>
-        /// 当前只支持纯文本：PLAINTEXT
+        /// 提问内容类型
         /// </summary>
         [XmlElement("question_format")]
         public string QuestionFormat { get; set; }

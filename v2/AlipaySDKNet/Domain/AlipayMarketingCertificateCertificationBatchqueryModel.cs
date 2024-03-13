@@ -31,7 +31,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 购买商品的订单id
+        /// 购买商品的订单id，可以通过下单接口获取订单id
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }

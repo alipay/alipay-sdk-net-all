@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string CateCnt { get; set; }
 
         /// <summary>
-        /// 正整数
+        /// 商品累计评论次数 ；正整数
         /// </summary>
         [XmlElement("comment_cnt")]
         public string CommentCnt { get; set; }
@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string Content { get; set; }
 
         /// <summary>
-        /// 必填，非负数且保留两位小数，免费商品填写0.00
+        /// 商品现价；必填；非负数且保留两位小数，免费商品填写0.00
         /// </summary>
         [XmlElement("current_price")]
         public string CurrentPrice { get; set; }
@@ -141,7 +141,7 @@ namespace Aop.Api.Domain
         public string PubTime { get; set; }
 
         /// <summary>
-        /// 满分5分
+        /// 商品评分；满分5分
         /// </summary>
         [XmlElement("rating")]
         public string Rating { get; set; }
@@ -165,13 +165,13 @@ namespace Aop.Api.Domain
         public string SaleNumber { get; set; }
 
         /// <summary>
-        /// 1：支持 2：不支持 3：满足条件支持
+        /// 商品是否支持自提 。1：支持 2：不支持 3：满足条件支持
         /// </summary>
         [XmlElement("self_pickup")]
         public string SelfPickup { get; set; }
 
         /// <summary>
-        /// 非负整数
+        /// 商品累计分享次数 ；非负整数
         /// </summary>
         [XmlElement("share_cnt")]
         public string ShareCnt { get; set; }
@@ -226,7 +226,7 @@ namespace Aop.Api.Domain
         public string StockNum { get; set; }
 
         /// <summary>
-        /// 非负数，保留两位小数，值范围0.00-5.00分
+        /// 店铺评分；非负数，保留两位小数，值范围0.00-5.00分
         /// </summary>
         [XmlElement("store_rating")]
         public string StoreRating { get; set; }

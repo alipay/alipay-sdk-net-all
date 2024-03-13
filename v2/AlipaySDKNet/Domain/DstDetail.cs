@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("intent")]
         public string Intent { get; set; }
+
+        /// <summary>
+        /// 是否以流的形式输出
+        /// </summary>
+        [XmlElement("stream_output")]
+        public bool StreamOutput { get; set; }
     }
 }

@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayMarketingCardTemplateCreateModel : AopObject
     {
         /// <summary>
+        /// 接入版本
+        /// </summary>
+        [XmlElement("access_version")]
+        public string AccessVersion { get; set; }
+
+        /// <summary>
         /// 业务卡号前缀，由商户指定  支付宝业务卡号生成规则：biz_no_prefix(商户指定)卡号前缀 + biz_no_suffix(实时生成）卡号后缀
         /// </summary>
         [XmlElement("biz_no_prefix")]
@@ -108,7 +114,7 @@ namespace Aop.Api.Domain
         public List<string> ShopIds { get; set; }
 
         /// <summary>
-        /// spi应用id，若使用openspi模式开卡，该字段必填，为实现spi.alipay.user.opencard.get接口的app_id。若是第三方代理模式，可以设置成服务商的 APPID 或者是商家自己的 APPID； 若不是第三方代理模式，只能设置商家自己的 APPID。
+        /// spi应用id，为实现spi.alipay.user.opencard.get接口的app_id。若是第三方代理模式，可以设置成服务商的 APPID 或者是商家自己的 APPID； 若不是第三方代理模式，只能设置商家自己的 APPID。
         /// </summary>
         [XmlElement("spi_app_id")]
         public string SpiAppId { get; set; }
@@ -119,6 +125,12 @@ namespace Aop.Api.Domain
         [XmlArray("template_benefit_info")]
         [XmlArrayItem("template_benefit_info_d_t_o")]
         public List<TemplateBenefitInfoDTO> TemplateBenefitInfo { get; set; }
+
+        /// <summary>
+        /// 入会表单配置，包括入会表单的字段，入会弹层承接小程序appId等
+        /// </summary>
+        [XmlElement("template_form_config")]
+        public TemplateFormConfig TemplateFormConfig { get; set; }
 
         /// <summary>
         /// 模板样式信息

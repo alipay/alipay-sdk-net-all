@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<string> ItemIdList { get; set; }
 
         /// <summary>
-        /// 商家侧商品id 列表，最多20个。 与item_id_list二选一。如果都传，优先使用商家侧商品id。
+        /// 商家侧商品id 列表，最多20个。
         /// </summary>
         [XmlArray("out_item_id_list")]
         [XmlArrayItem("string")]

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ApplyTime { get; set; }
 
         /// <summary>
+        /// IoT设备SN号，该字段向IoT服务商定向开放，非IoT服务商无需传值
+        /// </summary>
+        [XmlElement("iot_sn")]
+        public string IotSn { get; set; }
+
+        /// <summary>
         /// 服务商侧该应聘信息的唯一标识，用于做幂等判断。
         /// </summary>
         [XmlElement("out_apply_id")]

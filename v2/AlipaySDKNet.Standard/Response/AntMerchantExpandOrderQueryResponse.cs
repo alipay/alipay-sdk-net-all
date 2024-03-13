@@ -22,7 +22,7 @@ namespace Aop.Api.Response
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 商户角色id。间连商户或平台商二级商户业务中，本字段表示smid。审核通过后生成。
+        /// 商户角色id。间连商户或平台商二级商户业务中，本字段表示smid。
         /// </summary>
         [XmlArray("ip_role_id")]
         [XmlArrayItem("string")]

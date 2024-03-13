@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class OpenApiSpecifiedChannelParamsPojo : AopObject
     {
         /// <summary>
-        /// 资产类型编码
+        /// 资产类型编码，具体传参值请联系技术进行分配。
         /// </summary>
         [XmlElement("asset_type_code")]
         public string AssetTypeCode { get; set; }

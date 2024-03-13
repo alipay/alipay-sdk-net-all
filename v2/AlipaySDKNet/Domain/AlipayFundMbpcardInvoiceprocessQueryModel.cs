@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayFundMbpcardInvoiceprocessQueryModel : AopObject
     {
         /// <summary>
-        /// 产品码
+        /// 场景码
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ChannelIndex { get; set; }
 
         /// <summary>
+        /// 渠道logo的url
+        /// </summary>
+        [XmlElement("channel_logo")]
+        public string ChannelLogo { get; set; }
+
+        /// <summary>
         /// 渠道名称
         /// </summary>
         [XmlElement("channel_name")]

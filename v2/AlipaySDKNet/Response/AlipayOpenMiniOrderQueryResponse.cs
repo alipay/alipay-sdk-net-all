@@ -64,6 +64,12 @@ namespace Aop.Api.Response
         public OrderDetailInfoVO OrderDetail { get; set; }
 
         /// <summary>
+        /// 平台订单号
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
         /// 商家自定义订单ID(字符仅支持下划线字母数字，长度小于128个字符）
         /// </summary>
         [XmlElement("out_order_id")]

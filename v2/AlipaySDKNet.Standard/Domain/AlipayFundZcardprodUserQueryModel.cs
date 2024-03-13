@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 蚂蚁统一会员ID
+        /// </summary>
+        [XmlElement("user_open_id")]
+        public string UserOpenId { get; set; }
     }
 }

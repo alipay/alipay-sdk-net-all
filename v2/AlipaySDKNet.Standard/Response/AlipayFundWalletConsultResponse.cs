@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string AmountDetails { get; set; }
 
         /// <summary>
+        /// 2023122000392001363140394362
+        /// </summary>
+        [XmlElement("asset_no")]
+        public string AssetNo { get; set; }
+
+        /// <summary>
         /// 可用金额，单位：元
         /// </summary>
         [XmlElement("available_amount")]

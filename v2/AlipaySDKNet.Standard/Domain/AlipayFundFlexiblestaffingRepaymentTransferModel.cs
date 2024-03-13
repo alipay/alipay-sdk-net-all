@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 零工卡专用金还款到卡扩展参数
+        /// </summary>
+        [XmlElement("business_params")]
+        public RepaymentBusinessParams BusinessParams { get; set; }
+
+        /// <summary>
         /// 借款协议号
         /// </summary>
         [XmlElement("loan_agreement_no")]
@@ -52,7 +58,7 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
-        /// 转账金额
+        /// 转账金额（元）
         /// </summary>
         [XmlElement("trans_amount")]
         public string TransAmount { get; set; }

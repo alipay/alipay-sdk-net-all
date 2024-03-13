@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string SellerId { get; set; }
 
         /// <summary>
+        /// 支付宝ETC办理套餐code。 仅在创建订单时消费，更新订单时不消费。 创建订单：alipay_order_id为空；更新订单：alipay_order_id不为空。
+        /// </summary>
+        [XmlElement("spu_code")]
+        public string SpuCode { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

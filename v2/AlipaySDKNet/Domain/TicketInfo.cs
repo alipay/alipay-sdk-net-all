@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string TicketNo { get; set; }
 
         /// <summary>
-        /// 时间，如果传入了end_time则该字段必传 不同类型下的地址含义不同。若type为MEAL_NUM，time则代表取餐时间；若type为PICKUP_CODE，address则代表取件时间。其他类型查看小程序订单产品文档
+        /// 时间
         /// </summary>
         [XmlElement("time")]
         public string Time { get; set; }

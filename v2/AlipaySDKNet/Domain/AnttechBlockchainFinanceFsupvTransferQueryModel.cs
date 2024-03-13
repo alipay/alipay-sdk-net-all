@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("accepted_no")]
         public string AcceptedNo { get; set; }
+
+        /// <summary>
+        /// 申请资金划拨时上传的流水号
+        /// </summary>
+        [XmlElement("request_no")]
+        public string RequestNo { get; set; }
     }
 }

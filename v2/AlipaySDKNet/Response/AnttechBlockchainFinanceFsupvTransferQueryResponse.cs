@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AnttechBlockchainFinanceFsupvTransferQueryResponse : AopResponse
     {
         /// <summary>
+        /// 资金划拨受理后生产的流水
+        /// </summary>
+        [XmlElement("accepted_no")]
+        public string AcceptedNo { get; set; }
+
+        /// <summary>
         /// 资金管控任务编号
         /// </summary>
         [XmlElement("fund_supv_task_id")]

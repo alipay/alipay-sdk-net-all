@@ -67,13 +67,13 @@ namespace Aop.Api.Domain
         public string ItemDetailsPageModel { get; set; }
 
         /// <summary>
-        /// 商品类型，默认为实物商品
+        /// 商品类型；若类目涉及多个商品类型，则需传此参数，以调用准确的商品模板。
         /// </summary>
         [XmlElement("item_type")]
         public string ItemType { get; set; }
 
         /// <summary>
-        /// 商品原价，分为单位。 可选。若未填写skus[]数组，此字段可选；若填写了skus[]数组，此字段不填写。 如果填写，值必须大于0，且原价不能小于售价。
+        /// 商品原价，分为单位。
         /// </summary>
         [XmlElement("original_price")]
         public long OriginalPrice { get; set; }
@@ -97,19 +97,19 @@ namespace Aop.Api.Domain
         public string PriceUnit { get; set; }
 
         /// <summary>
-        /// 商品售价，分为单位。 特殊可选：若未填写skus[]数组，此字段必填；若填写了skus[]数组，此字段不填写。 如果填写，值必须要大于0。
+        /// 商品售价，分为单位。
         /// </summary>
         [XmlElement("sale_price")]
         public long SalePrice { get; set; }
 
         /// <summary>
-        /// 商品的售卖状态，包含以下两种状态 已下架(DELISTING) 可售卖(AVAILABLE) 若填写了skus[]数组，此字段不用填写。 若未填写skus[]数组，此字段必填。
+        /// 商品的售卖状态
         /// </summary>
         [XmlElement("sale_status")]
         public string SaleStatus { get; set; }
 
         /// <summary>
-        /// sku数组，sku数量上限为25
+        /// sku数组，sku数量上限为50
         /// </summary>
         [XmlArray("skus")]
         [XmlArrayItem("item_sku_create_v_o")]

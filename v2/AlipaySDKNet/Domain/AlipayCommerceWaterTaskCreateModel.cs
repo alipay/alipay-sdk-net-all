@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string SecondMerchantAppid { get; set; }
 
         /// <summary>
+        /// smid，二级商户进件id
+        /// </summary>
+        [XmlElement("smid")]
+        public string Smid { get; set; }
+
+        /// <summary>
         /// 这里的任务条件是一个map，本期仅支持月的维护
         /// </summary>
         [XmlElement("task_condition")]

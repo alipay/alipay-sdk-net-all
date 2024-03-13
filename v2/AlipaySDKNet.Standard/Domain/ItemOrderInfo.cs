@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string Unit { get; set; }
 
         /// <summary>
-        /// 商品单价（单位：元）。 小程序订单助手业务中，为必传；其他业务场景参见对应的产品文档。
+        /// 商品单价（单位：元）
         /// </summary>
         [XmlElement("unit_price")]
         public string UnitPrice { get; set; }

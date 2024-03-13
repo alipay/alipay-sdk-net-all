@@ -29,13 +29,13 @@ namespace Aop.Api.Domain
         public string OutItemId { get; set; }
 
         /// <summary>
-        /// 商品售价，分为单位。若填写了skus[]数组，此字段不填写。若未填写skus[]数组，此字段必填。
+        /// 商品售价，分为单位。
         /// </summary>
         [XmlElement("sale_price")]
         public long SalePrice { get; set; }
 
         /// <summary>
-        /// 商品的售卖状态状态，包含以下两种状态 已下架(DELISTING) 可售卖(AVAILABLE) 若填写了skus[]数组，此字段不填写。 若未填写skus[]数组，此字段必填。
+        /// 商品的售卖状态状态，包含以下两种状态已下架(DELISTING)可售卖(AVAILABLE)
         /// </summary>
         [XmlElement("sale_status")]
         public string SaleStatus { get; set; }

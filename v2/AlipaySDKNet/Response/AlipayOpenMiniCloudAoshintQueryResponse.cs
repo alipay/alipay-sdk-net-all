@@ -24,6 +24,12 @@ namespace Aop.Api.Response
         public List<AosHintItem> Result { get; set; }
 
         /// <summary>
+        /// 请求链路唯一id，用于问题排查
+        /// </summary>
+        [XmlElement("sequence")]
+        public string Sequence { get; set; }
+
+        /// <summary>
         /// 请求的traceid，用于排查问题
         /// </summary>
         [XmlElement("trace_id")]

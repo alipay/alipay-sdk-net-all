@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string InvoiceTaskStatus { get; set; }
 
         /// <summary>
-        /// 商户pid
+        /// 商户id
         /// </summary>
         [XmlElement("merchant_id")]
         public string MerchantId { get; set; }

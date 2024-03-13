@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AdditionRebateBasePrice { get; set; }
 
         /// <summary>
+        /// 代扣协议签约场景值，商户可根据代扣产品常见场景值选择符合自身的行业场景，必须和合约中配置的一致。
+        /// </summary>
+        [XmlElement("deduct_sign_scene")]
+        public string DeductSignScene { get; set; }
+
+        /// <summary>
         /// 预约上门取件的时间,格式为  yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("door_time")]
@@ -34,7 +40,7 @@ namespace Aop.Api.Domain
         public string OrderTradeType { get; set; }
 
         /// <summary>
-        /// 支付单交易号，用于信用下单不成功转普通支付。间联实物代扣场景该字段必填
+        /// 支付单交易号，用于信用下单不成功转普通支付。
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

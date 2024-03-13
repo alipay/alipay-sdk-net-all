@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CampaignPrize : AopObject
     {
         /// <summary>
+        /// 用于标识活动可以享受的实际优惠的金额
+        /// </summary>
+        [XmlElement("actual_amount")]
+        public string ActualAmount { get; set; }
+
+        /// <summary>
         /// 优惠渠道描述优惠来源信息
         /// </summary>
         [XmlElement("campaign_channel")]

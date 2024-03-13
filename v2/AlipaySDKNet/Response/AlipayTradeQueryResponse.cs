@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayTradeQueryResponse : AopResponse
     {
         /// <summary>
+        /// 交易附加状态： SELLER_NOT_RECEIVED（买家已付款，卖家未收款）；
+        /// </summary>
+        [XmlElement("additional_status")]
+        public string AdditionalStatus { get; set; }
+
+        /// <summary>
         /// 支付宝店铺编号
         /// </summary>
         [XmlElement("alipay_store_id")]

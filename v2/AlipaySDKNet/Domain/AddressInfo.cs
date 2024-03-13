@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public string DistrictCode { get; set; }
 
         /// <summary>
-        /// 纬度，浮点型,小数点后最多保留6位  如需要录入经纬度，请以高德坐标系为准，录入时请确保经纬度参数准确。高德经纬度查询：http://lbs.amap.com/console/show/picker
+        /// 纬度，浮点型,小数点后最多保留6位  如需要录入经纬度，请以高德坐标系为准，录入时请确保经纬度参数准确。<a href="http://lbs.amap.com/console/show/picker">高德经纬度查询</a>
         /// </summary>
         [XmlElement("latitude")]
         public string Latitude { get; set; }
 
         /// <summary>
-        /// 经度，浮点型, 小数点后最多保留6位。  如需要录入经纬度，请以高德坐标系为准，录入时请确保经纬度参数准确。高德经纬度查询：http://lbs.amap.com/console/show/picker
+        /// 经度，浮点型, 小数点后最多保留6位。  如需要录入经纬度，请以高德坐标系为准，录入时请确保经纬度参数准确。<a href="http://lbs.amap.com/console/show/picker">高德经纬度查询</a>
         /// </summary>
         [XmlElement("longitude")]
         public string Longitude { get; set; }

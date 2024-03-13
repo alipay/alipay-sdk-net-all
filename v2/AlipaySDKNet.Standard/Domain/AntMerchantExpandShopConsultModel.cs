@@ -37,7 +37,7 @@ namespace Aop.Api.Domain
         public List<ShopBusinessTime> BusinessTime { get; set; }
 
         /// <summary>
-        /// 营业执照图片KEY
+        /// 营业执照图片KEY。通过<a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id
         /// </summary>
         [XmlElement("cert_image")]
         public string CertImage { get; set; }
@@ -93,13 +93,13 @@ namespace Aop.Api.Domain
         public string IpRoleId { get; set; }
 
         /// <summary>
-        /// 法人身份证号。蚂蚁门店管理场景可选。
+        /// 法人身份证号
         /// </summary>
         [XmlElement("legal_cert_no")]
         public string LegalCertNo { get; set; }
 
         /// <summary>
-        /// 法人名称。蚂蚁门店管理场景可选。
+        /// 法人名称。
         /// </summary>
         [XmlElement("legal_name")]
         public string LegalName { get; set; }
@@ -117,7 +117,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 门头照 id，需传入 <a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。 蚂蚁门店管理场景可选。
+        /// 门头照 id，需传入 <a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id
         /// </summary>
         [XmlElement("out_door_images")]
         public string OutDoorImages { get; set; }

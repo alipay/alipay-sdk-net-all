@@ -37,10 +37,16 @@ namespace Aop.Api.Domain
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// 短信模板变量对应的实际值。该数组中每个对象需和phone_number中的手机号一一对应。模板中的多个变量用 "#" 区分；"="左边为变量名，"="右边为变量值。
+        /// 短信模板变量对应的实际值。该数组中每个对象需和phone_number中的手机号一一对应。模板中的多个变量用 "#" 区分；"="左边为变量名，"="右边为变量值。 当前字段已废弃(拼接有缺陷，调整为json string 参数)
         /// </summary>
         [XmlArray("template_param")]
         [XmlArrayItem("string")]
         public List<string> TemplateParam { get; set; }
+
+        /// <summary>
+        /// 短信模板变量对应的实际值。
+        /// </summary>
+        [XmlElement("template_param_json")]
+        public string TemplateParamJson { get; set; }
     }
 }

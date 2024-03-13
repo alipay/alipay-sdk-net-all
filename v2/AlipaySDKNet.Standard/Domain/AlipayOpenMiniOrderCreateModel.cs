@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public ContactInfoDTO ContactInfo { get; set; }
 
         /// <summary>
-        /// 芝麻信息，使用芝麻先享能力时传入
+        /// 芝麻信息
         /// </summary>
         [XmlElement("credit_info")]
         public CreditInfoDTO CreditInfo { get; set; }
@@ -118,7 +118,7 @@ namespace Aop.Api.Domain
         public string SourceId { get; set; }
 
         /// <summary>
-        /// 二级商户信息。 直付通模式和机构间连模式下必传，其它场景下不需要传入
+        /// 二级商户信息。 
         /// </summary>
         [XmlElement("sub_merchant")]
         public SubMerchantDTO SubMerchant { get; set; }

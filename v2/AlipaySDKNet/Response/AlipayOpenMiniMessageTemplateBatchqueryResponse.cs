@@ -23,7 +23,7 @@ namespace Aop.Api.Response
         public string PageSize { get; set; }
 
         /// <summary>
-        /// 消息子板查询列表
+        /// 消息模板查询列表
         /// </summary>
         [XmlArray("template_list")]
         [XmlArrayItem("merchant_msg_template_v_o")]

@@ -129,6 +129,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 1
         /// </summary>
+        [XmlElement("s")]
+        public ManjiangTestComplexOneData S { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
         [XmlElement("sss")]
         public string Sss { get; set; }
 

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// 1-手机号，2-座机
+        /// 电话类型
         /// </summary>
         [XmlElement("phone_type")]
         public string PhoneType { get; set; }

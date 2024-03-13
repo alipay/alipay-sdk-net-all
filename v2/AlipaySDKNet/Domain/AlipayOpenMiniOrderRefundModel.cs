@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderRefundModel : AopObject
     {
         /// <summary>
+        /// 分期单号,指定分期退款的时候需要传入
+        /// </summary>
+        [XmlElement("installment_order_id")]
+        public string InstallmentOrderId { get; set; }
+
+        /// <summary>
         /// 部分商品退款信息
         /// </summary>
         [XmlArray("item_infos")]

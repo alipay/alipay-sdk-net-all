@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("target_card_no_type")]
         public string TargetCardNoType { get; set; }
+
+        /// <summary>
+        /// 会员卡模板id。调用<a href="https://opendocs.alipay.com/open/03sx80?scene=common&pathHash=04270a28" target="_blank">alipay.marketing.card.template.create</a>（会员卡模板创建接口）创建模板后同步返回。
+        /// </summary>
+        [XmlElement("template_id")]
+        public string TemplateId { get; set; }
     }
 }

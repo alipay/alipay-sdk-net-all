@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AlipayOrderDetailUrl { get; set; }
 
         /// <summary>
+        /// 支付宝订单号
+        /// </summary>
+        [XmlElement("alipay_order_no")]
+        public string AlipayOrderNo { get; set; }
+
+        /// <summary>
         /// 冻资单订单状态
         /// </summary>
         [XmlElement("order_status")]

@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public CertificateSkuInfo SkuInfo { get; set; }
 
         /// <summary>
-        /// 核销操作单号,核销成功必填,撤销核销使用
+        /// 核销操作单号
         /// </summary>
         [XmlElement("use_order_no")]
         public string UseOrderNo { get; set; }

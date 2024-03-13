@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 加密uid，用于深转数据回传
+        /// </summary>
+        [XmlElement("encrypt_uid")]
+        public string EncryptUid { get; set; }
+
+        /// <summary>
         /// 留资属性实例数据列表
         /// </summary>
         [XmlArray("property_list")]

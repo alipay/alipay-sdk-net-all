@@ -80,7 +80,7 @@ namespace Aop.Api.Domain
         public string OutItemId { get; set; }
 
         /// <summary>
-        /// 商品详情页URL，当C端详细页模式item_details_page_model为0（自定义详情页版）时，该字段必填
+        /// 商品详情页URL
         /// </summary>
         [XmlElement("path")]
         public string Path { get; set; }

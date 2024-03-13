@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("available_amount")]
         public string AvailableAmount { get; set; }
+
+        /// <summary>
+        /// 服务编号
+        /// </summary>
+        [XmlElement("service_no")]
+        public string ServiceNo { get; set; }
     }
 }

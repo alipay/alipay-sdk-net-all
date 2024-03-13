@@ -101,7 +101,7 @@ namespace Aop.Api.Domain
         public MerchantInvoiceInfo InvoiceInfo { get; set; }
 
         /// <summary>
-        /// 授权函。当商户名与结算卡户名不一致。《说明函》模板参考https://opendocs.alipay.com/open/direct-payment/cg5mkp#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99。涉及外籍法人（这种情况上传任意能证明身份的图片）时必填，其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。（<b>商户类型为个体工商户时，本字段仅需上传营业执照非授权函</b>）
+        /// 授权函。当商户名与结算卡户名不一致。<a href="https://opendocs.alipay.com/open/direct-payment/cg5mkp#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99">《说明函》模板参考</a>。涉及外籍法人（这种情况上传任意能证明身份的图片）时必填，其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。（<b>商户类型为个体工商户时，本字段仅需上传营业执照非授权函</b>）
         /// </summary>
         [XmlElement("license_auth_letter_image")]
         public string LicenseAuthLetterImage { get; set; }

@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string SpuStatus { get; set; }
 
         /// <summary>
-        /// 10 库存 若填写了skus[]数组，此字段不用填写。 若未填写skus[]数组，此字段必填。 目前支持库存区间0~99999
+        /// 库存。 目前支持库存区间0~99999
         /// </summary>
         [XmlElement("stock_num")]
         public long StockNum { get; set; }

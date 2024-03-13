@@ -47,7 +47,7 @@ namespace Aop.Api.Domain
         public string ExtendFields { get; set; }
 
         /// <summary>
-        /// 下载版式文件类型，需要回传文件下载链接的情况下必传， 取值范围：PDF，JPG，OFD
+        /// 下载版式文件类型，需要回传文件下载链接的情况下必传
         /// </summary>
         [XmlElement("file_download_type")]
         public string FileDownloadType { get; set; }
@@ -59,7 +59,7 @@ namespace Aop.Api.Domain
         public string FileDownloadUrl { get; set; }
 
         /// <summary>
-        /// 财政电子票据子类型，当tax_type=FINANCIAL_ELECTRONIC_BILL时要求必填 可选值如下： 01:非税收入通用票据 02:非税收入专用票据 03:非税收入一般缴款书 04:资金往来结算票据 05:公益事业捐赠票据 06:医疗收费票据 07:社会团体会费票据 08:社会保险基金票据 09:工会经费收入票据 99:其他财政票据
+        /// 财政电子票据子类型
         /// </summary>
         [XmlElement("financial_electronic_type")]
         public string FinancialElectronicType { get; set; }

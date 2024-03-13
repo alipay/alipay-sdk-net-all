@@ -22,16 +22,40 @@ namespace Aop.Api.Domain
         public string ApproveComment { get; set; }
 
         /// <summary>
+        /// 链接格式
+        /// </summary>
+        [XmlElement("chat_url")]
+        public string ChatUrl { get; set; }
+
+        /// <summary>
         /// 联系医生问诊链接
         /// </summary>
         [XmlElement("doctor_inquiry_link_page")]
         public string DoctorInquiryLinkPage { get; set; }
 
         /// <summary>
+        /// 链接格式
+        /// </summary>
+        [XmlElement("invoice_url")]
+        public string InvoiceUrl { get; set; }
+
+        /// <summary>
+        /// 问诊订单评价信息
+        /// </summary>
+        [XmlElement("medical_inquiry_order_evaluate_info")]
+        public MedicalInquiryOrderEvaluateInfo MedicalInquiryOrderEvaluateInfo { get; set; }
+
+        /// <summary>
         /// 订单所属pid
         /// </summary>
         [XmlElement("order_pid")]
         public string OrderPid { get; set; }
+
+        /// <summary>
+        /// 链接格式
+        /// </summary>
+        [XmlElement("refund_url")]
+        public string RefundUrl { get; set; }
 
         /// <summary>
         /// 订单来源
