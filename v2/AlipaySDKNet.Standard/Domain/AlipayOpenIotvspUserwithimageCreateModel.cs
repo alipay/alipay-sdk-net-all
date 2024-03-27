@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenIotvspUserwithimageCreateModel : AopObject
     {
         /// <summary>
+        /// false-不下发本地库 true-下发本地库
+        /// </summary>
+        [XmlElement("bio_in_client")]
+        public bool BioInClient { get; set; }
+
+        /// <summary>
         /// 姓名
         /// </summary>
         [XmlElement("cert_name")]

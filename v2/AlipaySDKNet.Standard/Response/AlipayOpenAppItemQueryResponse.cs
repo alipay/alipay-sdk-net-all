@@ -54,6 +54,13 @@ namespace Aop.Api.Response
         public string DirectPath { get; set; }
 
         /// <summary>
+        /// 导购信息
+        /// </summary>
+        [XmlArray("guide_info")]
+        [XmlArrayItem("guide_info_v_o")]
+        public List<GuideInfoVO> GuideInfo { get; set; }
+
+        /// <summary>
         /// 商品主图，图片宽高为750px*750px，宽高比1:1，800kb以内。支持jpg、jpeg、png格式的图片。 
         /// </summary>
         [XmlElement("head_img")]

@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string Query { get; set; }
 
         /// <summary>
+        /// 用于区分query类型
+        /// </summary>
+        [XmlElement("query_type")]
+        public string QueryType { get; set; }
+
+        /// <summary>
         /// 区分当前对话场景意图 卫健委通用助理——WJWCOMASS
         /// </summary>
         [XmlElement("scene_code")]

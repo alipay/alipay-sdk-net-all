@@ -1,6 +1,7 @@
 using System;
 using System.Xml.Serialization;
 using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -9,6 +10,19 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayFundMbpcardGencardQueryResponse : AopResponse
     {
+        /// <summary>
+        /// 预付卡卡密信息集合
+        /// </summary>
+        [XmlArray("asset_cert_info_list")]
+        [XmlArrayItem("asset_cert_info")]
+        public List<AssetCertInfo> AssetCertInfoList { get; set; }
+
+        /// <summary>
+        /// 卡密信息查询备注
+        /// </summary>
+        [XmlElement("asset_cert_remark")]
+        public string AssetCertRemark { get; set; }
+
         /// <summary>
         /// 制卡结果文件路径；支持多个； 已生成和已激活时返回；
         /// </summary>

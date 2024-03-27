@@ -62,6 +62,12 @@ namespace Aop.Api.Domain
         public List<NightlyRate> NightlyRates { get; set; }
 
         /// <summary>
+        /// 对应ota小程序的跳转链接
+        /// </summary>
+        [XmlElement("ota_url")]
+        public string OtaUrl { get; set; }
+
+        /// <summary>
         /// 付款类型 SELFPAY-前台现付, PREPAY-预付
         /// </summary>
         [XmlElement("pay_type")]
@@ -84,6 +90,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_rule_id")]
         public string RefundRuleId { get; set; }
+
+        /// <summary>
+        /// 退款规则列表
+        /// </summary>
+        [XmlArray("refund_rule_ids")]
+        [XmlArrayItem("string")]
+        public List<string> RefundRuleIds { get; set; }
 
         /// <summary>
         /// ratePlan对应的房间id

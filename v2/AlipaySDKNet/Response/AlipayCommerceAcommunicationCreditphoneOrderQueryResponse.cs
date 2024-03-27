@@ -15,6 +15,24 @@ namespace Aop.Api.Response
         public string AlipayOrderNo { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        [XmlElement("alipay_user_id")]
+        public string AlipayUserId { get; set; }
+
+        /// <summary>
+        /// 单位为元。用户实际的冻结金额。
+        /// </summary>
+        [XmlElement("freeze_amount")]
+        public string FreezeAmount { get; set; }
+
+        /// <summary>
+        /// 用户签约生效时间。未签约时返回为空。
+        /// </summary>
+        [XmlElement("sign_time")]
+        public string SignTime { get; set; }
+
+        /// <summary>
         /// 已支付
         /// </summary>
         [XmlElement("status")]

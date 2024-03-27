@@ -22,5 +22,11 @@ namespace Aop.Api.Domain
         [XmlArray("related_document_fragments")]
         [XmlArrayItem("related_document_fragments")]
         public List<RelatedDocumentFragments> RelatedDocumentFragments { get; set; }
+
+        /// <summary>
+        /// 是否以流形式输出
+        /// </summary>
+        [XmlElement("stream_output")]
+        public bool StreamOutput { get; set; }
     }
 }

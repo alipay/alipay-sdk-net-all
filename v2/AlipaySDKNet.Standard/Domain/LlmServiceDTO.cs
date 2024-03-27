@@ -54,10 +54,23 @@ namespace Aop.Api.Domain
         public bool IsWithDraw { get; set; }
 
         /// <summary>
+        /// query_type
+        /// </summary>
+        [XmlElement("query_type")]
+        public string QueryType { get; set; }
+
+        /// <summary>
         /// 卫健委通用助理——WJWCOMASS
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }
+
+        /// <summary>
+        /// 服务结果列表页
+        /// </summary>
+        [XmlArray("service_result")]
+        [XmlArrayItem("external_service_d_t_o")]
+        public List<ExternalServiceDTO> ServiceResult { get; set; }
 
         /// <summary>
         /// 目前只有文字模板

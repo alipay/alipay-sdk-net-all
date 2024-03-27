@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string OtA { get; set; }
 
         /// <summary>
-        /// aa
+        /// aa1
         /// </summary>
         [XmlElement("output_a")]
         public string OutputA { get; set; }

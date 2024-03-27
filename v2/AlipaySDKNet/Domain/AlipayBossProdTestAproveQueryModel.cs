@@ -24,6 +24,18 @@ namespace Aop.Api.Domain
         /// <summary>
         /// test
         /// </summary>
+        [XmlElement("platform_a")]
+        public string PlatformA { get; set; }
+
+        /// <summary>
+        /// 秒速
+        /// </summary>
+        [XmlElement("platform_complex_a")]
+        public Apitestjhj PlatformComplexA { get; set; }
+
+        /// <summary>
+        /// test
+        /// </summary>
         [XmlElement("test_open_id")]
         public string TestOpenId { get; set; }
 

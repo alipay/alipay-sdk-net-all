@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string LogisticsStatus { get; set; }
 
         /// <summary>
-        /// 物流费用
+        /// 物流费用，单位：分
         /// </summary>
         [XmlElement("post_fee")]
         public long PostFee { get; set; }

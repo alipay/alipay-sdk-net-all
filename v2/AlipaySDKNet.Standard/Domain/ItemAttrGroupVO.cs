@@ -37,5 +37,12 @@ namespace Aop.Api.Domain
         [XmlArray("sku_attr_list")]
         [XmlArrayItem("attribute_v_o")]
         public List<AttributeVO> SkuAttrList { get; set; }
+
+        /// <summary>
+        /// 标品属性列表
+        /// </summary>
+        [XmlArray("spu_attr_list")]
+        [XmlArrayItem("attribute_v_o")]
+        public List<AttributeVO> SpuAttrList { get; set; }
     }
 }

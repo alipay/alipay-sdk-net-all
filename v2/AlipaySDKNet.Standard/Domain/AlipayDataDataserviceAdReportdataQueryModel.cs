@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceAdReportdataQueryModel : AopObject
     {
         /// <summary>
-        /// 数据维度： ORDER-订单； PLAN-计划； GROUP-单元； CREATIVE-创意； MARKET_TARGET-营销目标； 【不同数据维度决定了出参data_id代表的数据类型不一样分别为plan_id,group_id,order_id,creative_id，营销目标时data_id为空】
+        /// 数据维度： ORDER-订单； PLAN-计划； GROUP-单元； CREATIVE-创意； MARKET_TARGET-营销目标； PRINCIPAL-商家; 【不同数据维度决定了出参data_id代表的数据类型不一样分别为plan_id,group_id,order_id,creative_id，营销目标和商家维度时data_id为空且不返回conversion_data_list数据】
         /// </summary>
         [XmlElement("ad_level")]
         public string AdLevel { get; set; }

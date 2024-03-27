@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public EcomItemDTO Item { get; set; }
 
         /// <summary>
-        /// 订单金额
+        /// 订单金额，单位：分
         /// </summary>
         [XmlElement("order_fee")]
         public long OrderFee { get; set; }

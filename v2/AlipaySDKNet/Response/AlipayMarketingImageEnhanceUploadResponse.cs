@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string ImageId { get; set; }
 
         /// <summary>
+        /// 图索引id。图片在相册中的索引id。
+        /// </summary>
+        [XmlElement("image_index_id")]
+        public string ImageIndexId { get; set; }
+
+        /// <summary>
         /// 图片上传后返回的链接
         /// </summary>
         [XmlElement("image_url")]

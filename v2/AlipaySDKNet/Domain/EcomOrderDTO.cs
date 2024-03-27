@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class EcomOrderDTO : AopObject
     {
         /// <summary>
-        /// 实际支付金额
+        /// 实际支付金额，单位：分
         /// </summary>
         [XmlElement("actual_pay_fee")]
         public long ActualPayFee { get; set; }
@@ -53,13 +53,13 @@ namespace Aop.Api.Domain
         public string ChargeGuaranteePlanType { get; set; }
 
         /// <summary>
-        /// 免押金额
+        /// 免押金额，单位：分
         /// </summary>
         [XmlElement("credit_deposit_money")]
         public long CreditDepositMoney { get; set; }
 
         /// <summary>
-        /// 优惠金额
+        /// 优惠金额，单位：分
         /// </summary>
         [XmlElement("discount_fee")]
         public long DiscountFee { get; set; }
@@ -101,7 +101,7 @@ namespace Aop.Api.Domain
         public string ItemTitle { get; set; }
 
         /// <summary>
-        /// 商品总价值
+        /// 商品总价值，单位：分
         /// </summary>
         [XmlElement("item_total_value")]
         public long ItemTotalValue { get; set; }
@@ -119,7 +119,7 @@ namespace Aop.Api.Domain
         public string MainOrderId { get; set; }
 
         /// <summary>
-        /// 订单金额
+        /// 订单金额,单位：分
         /// </summary>
         [XmlElement("order_fee")]
         public long OrderFee { get; set; }
@@ -143,7 +143,7 @@ namespace Aop.Api.Domain
         public PayOrderDTO PayOrder { get; set; }
 
         /// <summary>
-        /// 邮费
+        /// 邮费,单位：分
         /// </summary>
         [XmlElement("post_fee")]
         public long PostFee { get; set; }

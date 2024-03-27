@@ -10,7 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayDataDdtJhjtestCreateModel : AopObject
     {
         /// <summary>
-        /// 123456
+        /// 描述
+        /// </summary>
+        [XmlElement("com_a")]
+        public PubNestPub ComA { get; set; }
+
+        /// <summary>
+        /// 123456222
         /// </summary>
         [XmlElement("id")]
         public string Id { get; set; }
@@ -28,7 +34,7 @@ namespace Aop.Api.Domain
         public string InputA { get; set; }
 
         /// <summary>
-        /// aa
+        /// 描述很长描述很长描述很长描述很长描述很长描述很长描述很长
         /// </summary>
         [XmlElement("input_b")]
         public string InputB { get; set; }
@@ -52,7 +58,7 @@ namespace Aop.Api.Domain
         public string InputEe { get; set; }
 
         /// <summary>
-        /// aa
+        /// jhj测试子场景（修改）jhj测试子场景（修改）jhj测试子场景（修改）jhj测试子场景（修改）jhj测试子场景（修改）
         /// </summary>
         [XmlElement("map_a_openid")]
         public string MapAOpenid { get; set; }

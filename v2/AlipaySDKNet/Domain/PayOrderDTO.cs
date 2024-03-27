@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class PayOrderDTO : AopObject
     {
         /// <summary>
-        /// 买家实际支付金额
+        /// 买家实际支付金额，单位：分
         /// </summary>
         [XmlElement("actual_total_fee")]
         public long ActualTotalFee { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string PayType { get; set; }
 
         /// <summary>
-        /// 订单总金额，单价×数量
+        /// 订单总金额，单价×数量，单位：分
         /// </summary>
         [XmlElement("total_fee")]
         public long TotalFee { get; set; }

@@ -84,6 +84,18 @@ namespace Aop.Api.Domain
         public string PlanName { get; set; }
 
         /// <summary>
+        /// 商家账户
+        /// </summary>
+        [XmlElement("principal_alipay_account")]
+        public string PrincipalAlipayAccount { get; set; }
+
+        /// <summary>
+        /// 商家名称
+        /// </summary>
+        [XmlElement("principal_name")]
+        public string PrincipalName { get; set; }
+
+        /// <summary>
         /// 投放产品名称
         /// </summary>
         [XmlElement("scene_name")]

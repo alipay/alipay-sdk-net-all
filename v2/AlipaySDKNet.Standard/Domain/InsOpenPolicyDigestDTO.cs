@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
+        /// 保司保单号
+        /// </summary>
+        [XmlElement("inst_policy_no")]
+        public string InstPolicyNo { get; set; }
+
+        /// <summary>
         /// 保单生效时间
         /// </summary>
         [XmlElement("policy_effect_time")]

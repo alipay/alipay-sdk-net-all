@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string OutEmailId { get; set; }
 
         /// <summary>
+        /// 邮件解析失败原因，解析失败且有明确失败原因时可回传
+        /// </summary>
+        [XmlElement("parse_fail_reason")]
+        public string ParseFailReason { get; set; }
+
+        /// <summary>
         /// 解析结果
         /// </summary>
         [XmlElement("parse_tag")]
