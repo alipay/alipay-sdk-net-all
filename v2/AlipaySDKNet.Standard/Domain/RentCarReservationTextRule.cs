@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class RentCarReservationTextRule : AopObject
     {
         /// <summary>
-        /// 规则文案列表
+        /// 规则的具体文案
         /// </summary>
         [XmlArray("rule_text_list")]
         [XmlArrayItem("string")]

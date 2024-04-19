@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string CallbackExtInfo { get; set; }
 
         /// <summary>
+        /// 监测链接配置的__CID__宏参发生用户点击替换后的id值
+        /// </summary>
+        [XmlElement("cid")]
+        public string Cid { get; set; }
+
+        /// <summary>
         /// 当source=DATASET或者OTHER时使用：  转化金额，单位分
         /// </summary>
         [XmlElement("conversion_amount")]

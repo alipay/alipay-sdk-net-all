@@ -62,7 +62,7 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 商品模版类型：1. 团购 2. 代金券 3. 日历房
+        /// 商品模版类型：1. 团购 2. 代金券 3. 次卡 4. 日历房
         /// </summary>
         [XmlElement("item_type")]
         public string ItemType { get; set; }

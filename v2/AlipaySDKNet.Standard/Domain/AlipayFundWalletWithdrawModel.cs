@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string UserWalletId { get; set; }
 
         /// <summary>
+        /// 钱包营销规则
+        /// </summary>
+        [XmlElement("wallet_marketing_rule")]
+        public WalletMarketingRule WalletMarketingRule { get; set; }
+
+        /// <summary>
         /// 提现扩展参数
         /// </summary>
         [XmlElement("withdraw_extend")]

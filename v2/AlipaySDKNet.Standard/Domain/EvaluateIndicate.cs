@@ -25,6 +25,12 @@ namespace Aop.Api.Domain
         public List<EvaluateIndicateGrade> GradeIndicates { get; set; }
 
         /// <summary>
+        /// 商户指标描述
+        /// </summary>
+        [XmlElement("isv_indicate_desc")]
+        public string IsvIndicateDesc { get; set; }
+
+        /// <summary>
         /// 商户指标id
         /// </summary>
         [XmlElement("isv_indicate_id")]

@@ -56,5 +56,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_wallet_id")]
         public string UserWalletId { get; set; }
+
+        /// <summary>
+        /// 该字段适合用于外部商户不知道用户钱包ID的情况下，通过钱包模板ID+用户user_id反查用户钱包ID。因此，钱包模板ID不为空的情况下，principal_id和principal_type一定不能为空。
+        /// </summary>
+        [XmlElement("wallet_template_id")]
+        public string WalletTemplateId { get; set; }
     }
 }

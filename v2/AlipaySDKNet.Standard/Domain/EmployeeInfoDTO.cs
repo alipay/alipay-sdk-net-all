@@ -24,19 +24,19 @@ namespace Aop.Api.Domain
         public List<EmployeeDepartmentDTO> DepartmentList { get; set; }
 
         /// <summary>
-        /// 邮箱
+        /// 员工邮箱
         /// </summary>
         [XmlElement("email")]
         public string Email { get; set; }
 
         /// <summary>
-        /// 证件号，手机号，邮箱三个必填其一
+        /// 证件号
         /// </summary>
         [XmlElement("employee_cert_no")]
         public string EmployeeCertNo { get; set; }
 
         /// <summary>
-        /// 证件类型，当证件号不为空时必填
+        /// 证件类型
         /// </summary>
         [XmlElement("employee_cert_type")]
         public string EmployeeCertType { get; set; }
@@ -54,25 +54,25 @@ namespace Aop.Api.Domain
         public string EmployeeName { get; set; }
 
         /// <summary>
-        /// 员工工号
+        /// 员工编号/工号
         /// </summary>
         [XmlElement("employee_no")]
         public string EmployeeNo { get; set; }
 
         /// <summary>
-        /// 加密身份证号，当加密类型不为空时必填
+        /// 加密证件号（证件号转大写后使用SHA256加密），搭配证件号使用
         /// </summary>
         [XmlElement("encrypt_cert_no")]
         public string EncryptCertNo { get; set; }
 
         /// <summary>
-        /// 加密手机号，当加密类型不为空时必填
+        /// 加密手机号（使用SHA256进行加密）
         /// </summary>
         [XmlElement("encrypt_mobile")]
         public string EncryptMobile { get; set; }
 
         /// <summary>
-        /// 变更时间
+        /// 创建时间
         /// </summary>
         [XmlElement("gmt_create")]
         public string GmtCreate { get; set; }
@@ -90,6 +90,12 @@ namespace Aop.Api.Domain
         public string IotFaceStatus { get; set; }
 
         /// <summary>
+        /// IOT开通刷脸支持唯一操作流水号，此处透出用于外部服务商通过该unique_id便捷调用IOT侧接口
+        /// </summary>
+        [XmlElement("iot_unique_id")]
+        public string IotUniqueId { get; set; }
+
+        /// <summary>
         /// 员工在企业人脸库的人脸唯一标识
         /// </summary>
         [XmlElement("iot_vid")]
@@ -102,10 +108,16 @@ namespace Aop.Api.Domain
         public string Mobile { get; set; }
 
         /// <summary>
-        /// 用户id
+        /// 用户ID（绑定支付宝账号的uid）
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 个性化信息
+        /// </summary>
+        [XmlElement("profiles")]
+        public string Profiles { get; set; }
 
         /// <summary>
         /// 角色列表
@@ -115,7 +127,7 @@ namespace Aop.Api.Domain
         public List<string> RoleList { get; set; }
 
         /// <summary>
-        /// 用户id
+        /// 用户ID（绑定支付宝账号的uid）
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

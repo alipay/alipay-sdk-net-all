@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("wallet_template_name")]
         public string WalletTemplateName { get; set; }
+
+        /// <summary>
+        /// 钱包使用规则
+        /// </summary>
+        [XmlElement("wallet_use_rule")]
+        public WalletUseRule WalletUseRule { get; set; }
     }
 }

@@ -88,6 +88,12 @@ namespace Aop.Api.Domain
         public string SignCodeType { get; set; }
 
         /// <summary>
+        /// 方案模板编码，企业邀请C端用户和多家税筹服务商同时签约（1对N）时需要传入该参数
+        /// </summary>
+        [XmlElement("solution_code")]
+        public string SolutionCode { get; set; }
+
+        /// <summary>
         /// 税优模式，有限枚举，实际传递的值依赖具体业务情况。1.TEMPORARY_TAX_REGISTRATION（临时税务登记 ）2. NATURAL_PERSON_LEVIED（自然人代征）
         /// </summary>
         [XmlElement("tax_optimization_mode")]

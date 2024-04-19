@@ -118,7 +118,7 @@ namespace Aop.Api.Domain
         public string RealName { get; set; }
 
         /// <summary>
-        /// 用户类型
+        /// 买家用户类型: OTHER 其他第三方账号 ALIPAY 支付宝账号 TAOBAO 淘宝账户
         /// </summary>
         [XmlElement("user_type")]
         public string UserType { get; set; }

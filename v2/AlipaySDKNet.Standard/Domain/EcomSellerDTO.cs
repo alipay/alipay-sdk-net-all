@@ -130,7 +130,7 @@ namespace Aop.Api.Domain
         public string SellerOrderRefundExchangeRate { get; set; }
 
         /// <summary>
-        /// 卖家用户类型:OTHER 其他第三方账号
+        /// 卖家用户类型: OTHER 其他第三方账号 ALIPAY 支付宝账号 TAOBAO 淘宝账户
         /// </summary>
         [XmlElement("seller_user_type")]
         public string SellerUserType { get; set; }

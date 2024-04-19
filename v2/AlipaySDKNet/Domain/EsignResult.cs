@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string SignTime { get; set; }
 
         /// <summary>
-        /// 三方协议状态 1.SIGNED（已签约 2.TERMINATING(解约中) 3.TERMINATED(已解约)
+        /// 三方协议状态 1.SIGNED（已签约) 2.TERMINATING(解约中) 3.TERMINATED(已解约)
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

@@ -52,6 +52,18 @@ namespace Aop.Api.Domain
         public string CancelTime { get; set; }
 
         /// <summary>
+        /// 物流承运公司编码
+        /// </summary>
+        [XmlElement("carrier_company_code")]
+        public string CarrierCompanyCode { get; set; }
+
+        /// <summary>
+        /// 物流承运公司名称
+        /// </summary>
+        [XmlElement("carrier_company_name")]
+        public string CarrierCompanyName { get; set; }
+
+        /// <summary>
         /// 快递员姓名
         /// </summary>
         [XmlElement("courier_name")]
@@ -86,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("insured_weight_amount")]
         public string InsuredWeightAmount { get; set; }
+
+        /// <summary>
+        /// 承运物流单号
+        /// </summary>
+        [XmlElement("logistics_mail_no")]
+        public string LogisticsMailNo { get; set; }
 
         /// <summary>
         /// 物流单号
@@ -128,6 +146,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("package_amount")]
         public string PackageAmount { get; set; }
+
+        /// <summary>
+        /// 支付状态
+        /// </summary>
+        [XmlElement("pay_status")]
+        public long PayStatus { get; set; }
+
+        /// <summary>
+        /// 支付时间
+        /// </summary>
+        [XmlElement("pay_time")]
+        public string PayTime { get; set; }
 
         /// <summary>
         /// 用户支付链接

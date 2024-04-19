@@ -118,6 +118,12 @@ namespace Aop.Api.Domain
         public string StepFrequency { get; set; }
 
         /// <summary>
+        /// 步数信息是否有效； true有效，false无效
+        /// </summary>
+        [XmlElement("step_info_valid")]
+        public bool StepInfoValid { get; set; }
+
+        /// <summary>
         /// 步幅，一步多少米
         /// </summary>
         [XmlElement("step_stride")]

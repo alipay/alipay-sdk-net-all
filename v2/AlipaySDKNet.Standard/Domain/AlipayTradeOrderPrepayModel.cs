@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public List<GoodsDetail> GoodsDetail { get; set; }
 
         /// <summary>
+        /// 支付成功回跳商家APP地址。
+        /// </summary>
+        [XmlElement("merchant_return_url")]
+        public string MerchantReturnUrl { get; set; }
+
+        /// <summary>
         /// 预支付场景。枚举值： openpay_apmodel
         /// </summary>
         [XmlElement("order_scene")]
@@ -46,6 +52,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
+
+        /// <summary>
+        /// 指定支付机构。如： alipay_hk 支付宝香港钱包
+        /// </summary>
+        [XmlElement("payment_inst")]
+        public string PaymentInst { get; set; }
+
+        /// <summary>
+        /// 指定支付方式。app_pay-APP跳转支付方式。
+        /// </summary>
+        [XmlElement("payment_type")]
+        public string PaymentType { get; set; }
 
         /// <summary>
         /// 产品码。 商家和支付宝签约的产品码。 枚举值（点击查看签约情况）

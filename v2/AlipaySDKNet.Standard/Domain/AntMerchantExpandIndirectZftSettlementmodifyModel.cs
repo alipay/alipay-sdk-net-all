@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public DefaultSettleRule DefaultSettleRule { get; set; }
 
         /// <summary>
-        /// 授权函。当商户名与结算卡户名不一致（模板参考https://gw.alipayobjects.com/os/skylark-tools/public/files/d5fcbe7463d7159a0d362da417d157ed.docx），或涉及外籍法人（这种情况上传任意能证明身份的图片）时必填。其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。
+        /// 授权函。当商户名与结算卡户名不一致（<a href="https://gw.alipayobjects.com/os/skylark-tools/public/files/d5fcbe7463d7159a0d362da417d157ed.docx">模板参考</a>），或涉及外籍法人（这种情况上传任意能证明身份的图片）时必填。其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的image_id。
         /// </summary>
         [XmlElement("license_auth_letter_image")]
         public string LicenseAuthLetterImage { get; set; }

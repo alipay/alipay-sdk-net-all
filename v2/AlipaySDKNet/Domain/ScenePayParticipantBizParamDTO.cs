@@ -16,22 +16,22 @@ namespace Aop.Api.Domain
         public string AuthorizationId { get; set; }
 
         /// <summary>
-        /// 配合外部身份证件类型
+        /// 外部用户的证件号码，若证件类型为身份证，那么填入身份证号码即可
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 外部签约号
+        /// 外部用户的证件类型，例如身份证
         /// </summary>
-        [XmlElement("external_agreement_no")]
-        public string ExternalAgreementNo { get; set; }
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
 
         /// <summary>
-        /// 外部身份证件类型
+        /// 国家局医保一码付场景使用，用于标识签约渠道id
         /// </summary>
-        [XmlElement("external_cert_type")]
-        public string ExternalCertType { get; set; }
+        [XmlElement("channel_id")]
+        public string ChannelId { get; set; }
 
         /// <summary>
         /// 外部卡号
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string OutCardNo { get; set; }
 
         /// <summary>
-        /// 申请用户姓名
+        /// 外部用户的姓名
         /// </summary>
         [XmlElement("user_name")]
         public string UserName { get; set; }

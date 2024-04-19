@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
+        /// 联系方式
+        /// </summary>
+        [XmlElement("phone")]
+        public string Phone { get; set; }
+
+        /// <summary>
         /// poi地点名称
         /// </summary>
         [XmlElement("poi_name")]

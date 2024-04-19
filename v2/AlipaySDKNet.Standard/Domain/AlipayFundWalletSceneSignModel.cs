@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string UserId { get; set; }
 
         /// <summary>
+        /// 钱包营销规则
+        /// </summary>
+        [XmlElement("wallet_marketing_rule")]
+        public WalletMarketingRule WalletMarketingRule { get; set; }
+
+        /// <summary>
         /// 钱包模版id
         /// </summary>
         [XmlElement("wallet_template_id")]

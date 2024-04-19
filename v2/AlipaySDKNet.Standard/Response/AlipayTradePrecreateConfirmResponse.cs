@@ -34,6 +34,12 @@ namespace Aop.Api.Response
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
+        /// 线上SKA支持A+钱包支付定制url 主站无处理，仅转发
+        /// </summary>
+        [XmlElement("merchant_return_url")]
+        public string MerchantReturnUrl { get; set; }
+
+        /// <summary>
         /// 订单创建时间
         /// </summary>
         [XmlElement("order_create_time")]
@@ -62,6 +68,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("precreate_code_info")]
         public TradePrecreateConfirmPrecreateCodeInfo PrecreateCodeInfo { get; set; }
+
+        /// <summary>
+        /// 销售产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
 
         /// <summary>
         /// 清算机构流水号（如网联流水号）

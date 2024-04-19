@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string ChannelCommodityName { get; set; }
 
         /// <summary>
+        /// 多云传过来的供应商
+        /// </summary>
+        [XmlElement("cloud_provider")]
+        public string CloudProvider { get; set; }
+
+        /// <summary>
         /// 用户名称，可能是公司，也可能是个人客户
         /// </summary>
         [XmlElement("customer_name")]

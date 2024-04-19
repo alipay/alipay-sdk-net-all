@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public ScenePayParticipantInfoDTO BusinessPrincipalInfo { get; set; }
 
         /// <summary>
+        /// 外部签约号
+        /// </summary>
+        [XmlElement("out_agreement_no")]
+        public string OutAgreementNo { get; set; }
+
+        /// <summary>
+        /// 外部业务号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 授权主体信息
         /// </summary>
         [XmlElement("principal_info")]

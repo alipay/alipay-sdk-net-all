@@ -52,13 +52,13 @@ namespace Aop.Api.Domain
         public string EmployeeNo { get; set; }
 
         /// <summary>
-        /// 加密证件号
+        /// 加密证件号（证件号转大写后使用SHA256加密）
         /// </summary>
         [XmlElement("encrypt_cert_no")]
         public string EncryptCertNo { get; set; }
 
         /// <summary>
-        /// 加密手机号
+        /// 加密手机号（使用SHA256进行加密）
         /// </summary>
         [XmlElement("encrypt_mobile")]
         public string EncryptMobile { get; set; }
@@ -68,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("iot_unique_id")]
         public string IotUniqueId { get; set; }
+
+        /// <summary>
+        /// 个性化信息
+        /// </summary>
+        [XmlElement("profiles")]
+        public string Profiles { get; set; }
     }
 }

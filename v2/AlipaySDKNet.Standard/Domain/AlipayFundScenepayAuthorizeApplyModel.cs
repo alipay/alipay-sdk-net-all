@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayFundScenepayAuthorizeApplyModel : AopObject
     {
         /// <summary>
-        /// 商户授权
+        /// 授权类型 商户授权：MERCHANT_AUTHORIZATION 用户授权：USER_AUTHORIZATION 具体传参请与对接同学确认获取
         /// </summary>
         [XmlElement("authorization_type")]
         public string AuthorizationType { get; set; }

@@ -24,7 +24,7 @@ namespace Aop.Api.Response
         public string IsVerified { get; set; }
 
         /// <summary>
-        /// 实行被执行人信息列表
+        /// 失信被执行人信息列表
         /// </summary>
         [XmlArray("punish_break_list")]
         [XmlArrayItem("punish_break_info")]

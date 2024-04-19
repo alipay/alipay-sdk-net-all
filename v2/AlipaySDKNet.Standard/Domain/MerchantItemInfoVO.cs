@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class MerchantItemInfoVO : AopObject
     {
         /// <summary>
+        /// 商家侧商品维度的属性信息
+        /// </summary>
+        [XmlArray("item_attrs")]
+        [XmlArrayItem("merchant_item_attr_v_o")]
+        public List<MerchantItemAttrVO> ItemAttrs { get; set; }
+
+        /// <summary>
         /// 商家侧商品ID，要求 APPID 下全局唯一。
         /// </summary>
         [XmlElement("out_item_id")]

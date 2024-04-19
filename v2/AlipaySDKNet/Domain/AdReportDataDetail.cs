@@ -36,10 +36,22 @@ namespace Aop.Api.Domain
         public long Cost { get; set; }
 
         /// <summary>
+        /// 创意名称
+        /// </summary>
+        [XmlElement("creative_name")]
+        public string CreativeName { get; set; }
+
+        /// <summary>
         /// 根据ad_level不同会透出汇总数据的plan_id/group_id/creative_id/order_id
         /// </summary>
         [XmlElement("data_id")]
         public string DataId { get; set; }
+
+        /// <summary>
+        /// 单元ID
+        /// </summary>
+        [XmlElement("group_id")]
+        public string GroupId { get; set; }
 
         /// <summary>
         /// 单元名称

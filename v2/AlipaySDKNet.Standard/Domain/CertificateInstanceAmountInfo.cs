@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class CertificateInstanceAmountInfo : AopObject
     {
         /// <summary>
-        /// 商家优惠金额，单位为元
+        /// 核销后商家减收部分，单位为元
         /// </summary>
         [XmlElement("merchant_discount_amount")]
         public string MerchantDiscountAmount { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string PayAmount { get; set; }
 
         /// <summary>
-        /// 平台补贴金额，单位为元
+        /// 核销生效后平台、商家等出资的优惠部分，单位为元
         /// </summary>
         [XmlElement("platform_discount_amount")]
         public string PlatformDiscountAmount { get; set; }

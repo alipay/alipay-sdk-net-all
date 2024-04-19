@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BusinessPartner { get; set; }
 
         /// <summary>
+        /// 机构上架类型，包含了“全量上架”与“灰度上架”，用于区分是否灰度上架，避免机构直接全量上架导致的客诉与万求
+        /// </summary>
+        [XmlElement("grayscale_type")]
+        public string GrayscaleType { get; set; }
+
+        /// <summary>
         /// 机构类型
         /// </summary>
         [XmlElement("partner_type")]

@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string EmployeeName { get; set; }
 
         /// <summary>
-        /// 员工工号
+        /// 员工编号/工号
         /// </summary>
         [XmlElement("employee_no")]
         public string EmployeeNo { get; set; }
@@ -102,6 +102,12 @@ namespace Aop.Api.Domain
         public string IotVid { get; set; }
 
         /// <summary>
+        /// 员工个性化信息
+        /// </summary>
+        [XmlElement("profiles")]
+        public string Profiles { get; set; }
+
+        /// <summary>
         /// 角色列表，目前只支持填一种角色，默认为USER
         /// </summary>
         [XmlArray("role_list")]
@@ -119,5 +125,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sign_url_carry_info")]
         public bool SignUrlCarryInfo { get; set; }
+
+        /// <summary>
+        /// 代扣签约串，需调代扣接口获取签约串 <a href='https://opendocs.alipay.com/pre-open/20170601105911096277new/moiixx?pathHash=10b1fa66'>参考文档</a>
+        /// </summary>
+        [XmlElement("withholding_sign_str")]
+        public string WithholdingSignStr { get; set; }
     }
 }

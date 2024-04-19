@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }
+
+        /// <summary>
+        /// 外部分期单号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -60,8 +61,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 本次核销的次序号信息
         /// </summary>
-        [XmlElement("serial_info_list")]
-        public CertificateSerialInfo SerialInfoList { get; set; }
+        [XmlArray("serial_info_list")]
+        [XmlArrayItem("certificate_serial_info")]
+        public List<CertificateSerialInfo> SerialInfoList { get; set; }
 
         /// <summary>
         /// 商品信息

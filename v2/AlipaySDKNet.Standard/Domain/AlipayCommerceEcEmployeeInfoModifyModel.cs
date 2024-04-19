@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
+        /// 个性化信息
+        /// </summary>
+        [XmlElement("profiles")]
+        public string Profiles { get; set; }
+
+        /// <summary>
         /// 角色列表，目前只支持填一种角色
         /// </summary>
         [XmlArray("role_list")]

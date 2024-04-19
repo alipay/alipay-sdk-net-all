@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AnttechOceanbasePassportHuaweimpCreateModel : AopObject
     {
         /// <summary>
+        /// 非必传，取值为加密后的登录凭证
+        /// </summary>
+        [XmlElement("credential")]
+        public string Credential { get; set; }
+
+        /// <summary>
         /// 客户在华为云注册账号的唯一标识。
         /// </summary>
         [XmlElement("customer_id")]

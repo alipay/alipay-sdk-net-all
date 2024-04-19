@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AntMerchantExpandShopQueryResponse : AopResponse
     {
         /// <summary>
+        /// 门店地址库 ID，按照一定的平台规则识别出的线下真实存在、真实经营的蚂蚁门店地址库 ID，将作用于服务商的返佣激励、商品/券等权益的公域分发。如平台未返回alipay_poiid，请在确认门店信息真实有效后，稍后再进行查询。
+        /// </summary>
+        [XmlElement("alipay_poiid")]
+        public string AlipayPoiid { get; set; }
+
+        /// <summary>
         /// 品牌id
         /// </summary>
         [XmlElement("brand_id")]
@@ -142,7 +148,7 @@ namespace Aop.Api.Response
         public string SettleAlipayLogonId { get; set; }
 
         /// <summary>
-        /// 店铺类目，取值参见文件https://mif-pub.alipayobjects.com/ShopCategory.xlsx 中的三级门店类目
+        /// 店铺类目，取值参见文件中的三级门店类目<a herf="https://mif-pub.alipayobjects.com/ShopCategory.xlsx"></a>
         /// </summary>
         [XmlElement("shop_category")]
         public string ShopCategory { get; set; }

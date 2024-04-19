@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,12 @@ namespace Aop.Api.Domain
     [Serializable]
     public class AlipayOpenMiniOrderAftersaleSyncModel : AopObject
     {
+        /// <summary>
+        /// 操作code
+        /// </summary>
+        [XmlElement("action_code")]
+        public string ActionCode { get; set; }
+
         /// <summary>
         /// 交易组件售后单id
         /// </summary>
@@ -26,6 +33,25 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("audit_status")]
         public string AuditStatus { get; set; }
+
+        /// <summary>
+        /// 物流信息，action_code为203时必填
+        /// </summary>
+        [XmlArray("logistics_list")]
+        [XmlArrayItem("aftersale_logistics_info_d_t_o")]
+        public List<AftersaleLogisticsInfoDTO> LogisticsList { get; set; }
+
+        /// <summary>
+        /// 商家地址
+        /// </summary>
+        [XmlElement("merchant_address_info")]
+        public AftersaleAddressInfoDTO MerchantAddressInfo { get; set; }
+
+        /// <summary>
+        /// 商家实际同意退款的金额（元）
+        /// </summary>
+        [XmlElement("merchant_agree_refund_amount")]
+        public string MerchantAgreeRefundAmount { get; set; }
 
         /// <summary>
         /// 买家open_id；open_id和user_id二选一

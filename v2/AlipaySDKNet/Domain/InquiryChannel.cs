@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string InquiryMode { get; set; }
 
         /// <summary>
-        /// 问诊价格（中间必须有小数点，后面两位小数）
+        /// 问诊价格（中间必须有小数点，后面两位小数），单位元
         /// </summary>
         [XmlElement("inquiry_price")]
         public string InquiryPrice { get; set; }

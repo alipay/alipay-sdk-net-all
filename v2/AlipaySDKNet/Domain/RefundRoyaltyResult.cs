@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class RefundRoyaltyResult : AopObject
     {
         /// <summary>
+        /// 商户请求的转入账号
+        /// </summary>
+        [XmlElement("ori_trans_in")]
+        public string OriTransIn { get; set; }
+
+        /// <summary>
+        /// 商户请求的转出账号
+        /// </summary>
+        [XmlElement("ori_trans_out")]
+        public string OriTransOut { get; set; }
+
+        /// <summary>
         /// 退分账金额
         /// </summary>
         [XmlElement("refund_amount")]

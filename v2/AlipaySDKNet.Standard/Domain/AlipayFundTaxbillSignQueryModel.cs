@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 方案模板编码，企业邀请C端用户和多家税筹服务商同时签约（1对N）后，批量查询签约结果时需要提供该参数
+        /// </summary>
+        [XmlElement("solution_code")]
+        public string SolutionCode { get; set; }
     }
 }
