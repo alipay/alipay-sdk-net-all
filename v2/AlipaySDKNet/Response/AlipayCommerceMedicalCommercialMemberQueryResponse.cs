@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string BizOrderId { get; set; }
 
         /// <summary>
+        /// 权益总次数，-1代表不限次
+        /// </summary>
+        [XmlElement("count")]
+        public string Count { get; set; }
+
+        /// <summary>
         /// 用户权益的结束过期时间
         /// </summary>
         [XmlElement("end_time")]
@@ -49,6 +55,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
+
+        /// <summary>
+        /// 权益已核销次数
+        /// </summary>
+        [XmlElement("usage_count")]
+        public string UsageCount { get; set; }
 
         /// <summary>
         /// 蚂蚁统一会员ID

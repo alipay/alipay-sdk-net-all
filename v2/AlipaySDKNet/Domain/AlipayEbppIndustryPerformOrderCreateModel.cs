@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string CreateType { get; set; }
 
         /// <summary>
+        /// 透传二级商户smid 例如2088**********33
+        /// </summary>
+        [XmlElement("inst_smid")]
+        public string InstSmid { get; set; }
+
+        /// <summary>
         /// 商户app_id维度下的用户标识，目前为47位字符串。ser_id和open_id必传其一，建议商户传递open_id。
         /// </summary>
         [XmlElement("open_id")]

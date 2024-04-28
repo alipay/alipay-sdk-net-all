@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string City { get; set; }
 
         /// <summary>
+        /// 用户姓名
+        /// </summary>
+        [XmlElement("full_name")]
+        public string FullName { get; set; }
+
+        /// <summary>
         /// 门牌号
         /// </summary>
         [XmlElement("house_number")]

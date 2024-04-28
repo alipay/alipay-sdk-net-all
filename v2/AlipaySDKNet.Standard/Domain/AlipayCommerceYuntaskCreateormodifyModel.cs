@@ -118,6 +118,12 @@ namespace Aop.Api.Domain
         public string TaskName { get; set; }
 
         /// <summary>
+        /// 任务规则图片
+        /// </summary>
+        [XmlElement("task_rule_pic")]
+        public string TaskRulePic { get; set; }
+
+        /// <summary>
         /// 任务开始时间
         /// </summary>
         [XmlElement("task_start_time")]

@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public long TargetIndicator { get; set; }
 
         /// <summary>
+        /// 新人任务
+        /// </summary>
+        [XmlElement("task_desc")]
+        public string TaskDesc { get; set; }
+
+        /// <summary>
         /// 任务结束时间
         /// </summary>
         [XmlElement("task_end_time")]
@@ -80,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("task_name")]
         public string TaskName { get; set; }
+
+        /// <summary>
+        /// 任务规则图片
+        /// </summary>
+        [XmlElement("task_rule_pic")]
+        public string TaskRulePic { get; set; }
 
         /// <summary>
         /// 任务开始时间

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppLocalitemCalendarpriceSaveModel : AopObject
     {
         /// <summary>
-        /// 日历价格列表，价格设置的总天数不得大于60天
+        /// 日历价格列表（商品维度），价格设置的总天数不得大于60天
         /// </summary>
         [XmlArray("calendar_prices")]
         [XmlArrayItem("item_calendar_price_v_o")]
@@ -28,5 +28,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_item_id")]
         public string OutItemId { get; set; }
+
+        /// <summary>
+        /// 日历价格列表（sku维度），价格设置的总天数不得大于60天。
+        /// </summary>
+        [XmlArray("sku_calendar_prices")]
+        [XmlArrayItem("sku_calendar_price_list_v_o")]
+        public List<SkuCalendarPriceListVO> SkuCalendarPrices { get; set; }
     }
 }

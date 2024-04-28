@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public DeliveryTargetRule DeliveryTargetRule { get; set; }
 
         /// <summary>
+        /// 商品卖货推广创建幂等号，用作幂等控制。 幂等作用：请求返回与上一次相同的结果。 外部接入方需保证幂等号唯一。
+        /// </summary>
+        [XmlElement("idem_no")]
+        public string IdemNo { get; set; }
+
+        /// <summary>
         /// 商户接入模式
         /// </summary>
         [XmlElement("merchant_access_mode")]

@@ -15,13 +15,13 @@ namespace Aop.Api.Response
         public string OtA { get; set; }
 
         /// <summary>
-        /// aa1
+        /// 文档测试
         /// </summary>
         [XmlElement("output_a")]
         public string OutputA { get; set; }
 
         /// <summary>
-        /// B下主键
+        /// 文档测试
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

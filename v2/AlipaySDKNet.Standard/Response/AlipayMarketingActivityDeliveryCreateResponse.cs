@@ -30,6 +30,12 @@ namespace Aop.Api.Response
         public List<ErrorDeliveryConfig> ErrorDeliveryConfigList { get; set; }
 
         /// <summary>
+        /// 外部业务单号，用作该请求唯一标识。  创建推广计划的结果，会通过异步消息方式通知，消息体包含外部业务单号，来判断该请求创建结果。
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// [已废弃] 创建成功的投放信息列表  成功的投放配置列表中，会返回对应的deliveryConfig对象。
         /// </summary>
         [XmlArray("success_delivery_config_list")]

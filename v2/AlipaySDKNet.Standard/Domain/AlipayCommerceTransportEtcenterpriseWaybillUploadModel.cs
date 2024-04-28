@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string HighwayFee { get; set; }
 
         /// <summary>
-        /// 0：蓝； 1：黄； 2：黑； 3：白； 4：渐变绿
+        /// 车牌颜色
         /// </summary>
         [XmlElement("plate_color")]
         public string PlateColor { get; set; }

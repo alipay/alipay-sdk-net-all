@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,10 +11,23 @@ namespace Aop.Api.Domain
     public class LocalItemSkuQueryVO : AopObject
     {
         /// <summary>
+        /// 用于需要透出sku属性的场景。如线路游需要透出sku销售属性
+        /// </summary>
+        [XmlArray("attrs")]
+        [XmlArrayItem("item_sku_attr_v_o")]
+        public List<ItemSkuAttrVO> Attrs { get; set; }
+
+        /// <summary>
         /// sku原价，分为单位
         /// </summary>
         [XmlElement("original_price")]
         public long OriginalPrice { get; set; }
+
+        /// <summary>
+        /// 商家侧sku ID，要求 APPID 下全局唯一。
+        /// </summary>
+        [XmlElement("out_sku_id")]
+        public string OutSkuId { get; set; }
 
         /// <summary>
         /// sku售价，分为单位

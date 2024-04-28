@@ -18,6 +18,13 @@ namespace Aop.Api.Domain
         public List<string> CdnDomainNames { get; set; }
 
         /// <summary>
+        /// 数据库集合列表
+        /// </summary>
+        [XmlArray("collections")]
+        [XmlArrayItem("string")]
+        public List<string> Collections { get; set; }
+
+        /// <summary>
         /// 按照函数名称过滤
         /// </summary>
         [XmlElement("function_name")]

@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string InputC { get; set; }
 
         /// <summary>
-        /// 111
+        /// 文档修改测试，主场景input_c_yincang添加展示
         /// </summary>
         [XmlElement("input_c_yincang")]
         public string InputCYincang { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 经度
+        /// 文档变更审核通过
         /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }

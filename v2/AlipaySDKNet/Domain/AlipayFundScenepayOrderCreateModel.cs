@@ -41,6 +41,13 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 支付渠道列表
+        /// </summary>
+        [XmlArray("pay_channel_info_list")]
+        [XmlArrayItem("pay_channel_info_d_t_o")]
+        public List<PayChannelInfoDTO> PayChannelInfoList { get; set; }
+
+        /// <summary>
         /// 固定值，场景支付
         /// </summary>
         [XmlElement("product_code")]

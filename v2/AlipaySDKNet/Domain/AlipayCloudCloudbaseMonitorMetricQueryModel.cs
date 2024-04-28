@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string FilterType { get; set; }
 
         /// <summary>
-        /// 指标  - total  - success  - fail  - successPercent  - cost  - get_qps_count_60  - put_qps_count_60  - get_latency_avg_60  - put_latency_avg_60  - keys  - used_memory  - instance_input_bytes  - instance_output_bytes  - cmd_qps_count_60  - cmd_latency_avg_60  - request_package_size_sum_60  - response_package_size_sum_60
+        /// 指标  - total  - success  - fail  - successPercent  - cost  - get_qps_count_60  - put_qps_count_60  - get_latency_avg_60  - put_latency_avg_60  - keys  - used_memory  - instance_input_bytes  - instance_output_bytes  - cmd_qps_count_60  - cmd_latency_avg_60  - request_package_size_sum_60  - response_package_size_sum_60  - statread  - statwrite  - readreqcount  - writereqcount
         /// </summary>
         [XmlElement("metric")]
         public string Metric { get; set; }

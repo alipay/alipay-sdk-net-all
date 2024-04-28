@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ProfitSharingRequest : AopObject
     {
         /// <summary>
-        /// 参与分账的目标支付宝账号
+        /// 参与分账的目标支付宝账号 2088**********34
         /// </summary>
         [XmlElement("alloc_account")]
         public string AllocAccount { get; set; }

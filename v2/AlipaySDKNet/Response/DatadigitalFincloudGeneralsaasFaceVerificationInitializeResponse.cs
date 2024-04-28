@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("page_url")]
         public string PageUrl { get; set; }
+
+        /// <summary>
+        /// H5人脸核身地址
+        /// </summary>
+        [XmlElement("web_url")]
+        public string WebUrl { get; set; }
     }
 }

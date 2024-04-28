@@ -9,13 +9,13 @@ namespace Aop.Api.Response
     public class AlipaySecurityRiskJhjtestComplexddBatchqueryResponse : AopResponse
     {
         /// <summary>
-        /// 11
+        /// 修改文档
         /// </summary>
         [XmlElement("out_p")]
         public string OutP { get; set; }
 
         /// <summary>
-        /// 11
+        /// 修改文档
         /// </summary>
         [XmlElement("regress")]
         public string Regress { get; set; }

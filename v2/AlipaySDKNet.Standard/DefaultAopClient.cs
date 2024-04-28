@@ -31,7 +31,7 @@ namespace Aop.Api
         /// <summary>
         /// 当前SDK版本号，SDK打包发布时会自动修改该值
         /// </summary>
-        public const string SDK_VERSION = "alipay-sdk-net-4.9.103.ALL";
+        public const string SDK_VERSION = "alipay-sdk-net-4.9.119.ALL";
 
         private CertEnvironment certEnvironment;
 

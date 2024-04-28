@@ -42,6 +42,13 @@ namespace Aop.Api.Domain
         public PriceInfoModifyDTO PriceInfo { get; set; }
 
         /// <summary>
+        /// 阶段付款计划列表，请在修改付款计划时传入
+        /// </summary>
+        [XmlArray("stage_pay_plans")]
+        [XmlArrayItem("stage_pay_plan_d_t_o")]
+        public List<StagePayPlanDTO> StagePayPlans { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

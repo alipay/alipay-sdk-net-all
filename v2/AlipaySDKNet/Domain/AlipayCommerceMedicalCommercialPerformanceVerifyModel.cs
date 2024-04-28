@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string OutProductId { get; set; }
 
         /// <summary>
-        /// status核销场景使用，枚举值为S\A\C，用户正常核销权益时传S，表示可使用状态。核销权益次数完结传C，用户核销已买会员卡新增的权益时传递A状态
+        /// status核销场景使用，枚举值为S\A\C\R，用户正常核销权益时传S，表示可使用状态。核销权益次数完结传C，用户核销已买会员卡新增的权益时传递A状态，用户逆向核销回补使用次数时传递R状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

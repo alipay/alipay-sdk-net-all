@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BOpenId { get; set; }
 
         /// <summary>
-        /// test
+        /// test修改文档
         /// </summary>
         [XmlElement("test_a")]
         public string TestA { get; set; }

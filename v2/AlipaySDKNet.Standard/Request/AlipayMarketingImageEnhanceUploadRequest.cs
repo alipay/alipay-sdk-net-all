@@ -11,7 +11,7 @@ namespace Aop.Api.Request
     public class AlipayMarketingImageEnhanceUploadRequest : IAopUploadRequest<AlipayMarketingImageEnhanceUploadResponse>
     {
         /// <summary>
-        /// 图片的byte字节数组。图片大小限制为2M。支持格式如下：png、jpg、jpeg、bmp、webp。
+        /// 图片的byte字节数组。图片大小限制为5M。支持格式如下：png、jpg、jpeg、bmp、webp。
         /// </summary>
         public FileItem ImageContent { get; set; }
 

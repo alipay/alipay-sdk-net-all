@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 会员卡订单id
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
         /// out_product_id为商户侧唯一权益id，和用户的业务子单一一对应
         /// </summary>
         [XmlElement("out_product_id")]

@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string ServiceAcceptTime { get; set; }
 
         /// <summary>
+        /// 子机构支付宝登录号
+        /// </summary>
+        [XmlElement("sub_alipay_account")]
+        public string SubAlipayAccount { get; set; }
+
+        /// <summary>
         /// 门店支付宝账号
         /// </summary>
         [XmlElement("sub_pid")]

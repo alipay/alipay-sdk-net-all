@@ -10,19 +10,19 @@ namespace Aop.Api.Domain
     public class AlipayOpenOperationOpenbizmockTestQueryModel : AopObject
     {
         /// <summary>
-        /// test
+        /// 哈哈
         /// </summary>
         [XmlElement("fuza")]
         public TestDemoWzw Fuza { get; set; }
 
         /// <summary>
-        /// test
+        /// 哈哈
         /// </summary>
         [XmlElement("out_open_id")]
         public string OutOpenId { get; set; }
 
         /// <summary>
-        /// test
+        /// 哈哈
         /// </summary>
         [XmlElement("u_test")]
         public string UTest { get; set; }

@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string Path { get; set; }
 
         /// <summary>
+        /// 售后单退款金额，单位：元，精确到小数点后两位。发起实物商品的售后时需要传入
+        /// </summary>
+        [XmlElement("refund_amount")]
+        public string RefundAmount { get; set; }
+
+        /// <summary>
         /// 退款原因
         /// </summary>
         [XmlElement("refund_reason")]

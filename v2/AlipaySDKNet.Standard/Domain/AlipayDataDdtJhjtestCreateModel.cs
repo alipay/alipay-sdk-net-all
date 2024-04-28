@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string IdOpenid { get; set; }
 
         /// <summary>
-        /// aa
+        /// 老链路修改a_test_a老链路修改a_test_a老链路修改a_test_a 当前字段已废弃(废弃了的)
         /// </summary>
         [XmlElement("input_a")]
         public string InputA { get; set; }

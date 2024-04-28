@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public long OriginalPremium { get; set; }
 
         /// <summary>
+        /// 折扣前原保费费率
+        /// </summary>
+        [XmlElement("original_premium_rate")]
+        public string OriginalPremiumRate { get; set; }
+
+        /// <summary>
         /// 保费
         /// </summary>
         [XmlElement("premium")]

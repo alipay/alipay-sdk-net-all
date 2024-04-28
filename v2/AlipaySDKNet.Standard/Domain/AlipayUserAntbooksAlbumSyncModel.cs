@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string AlbumId { get; set; }
 
         /// <summary>
+        /// 专辑是否可对用户展示商业化广告，默认不可展示。 true：允许展示；false：不允许展示；
+        /// </summary>
+        [XmlElement("album_show_ad")]
+        public bool AlbumShowAd { get; set; }
+
+        /// <summary>
         /// 专辑主播人，有则必填。
         /// </summary>
         [XmlElement("announcer")]

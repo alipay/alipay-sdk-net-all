@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
-        /// 转账金额
+        /// 转账金额，单位：元
         /// </summary>
         [XmlElement("trans_amount")]
         public string TransAmount { get; set; }

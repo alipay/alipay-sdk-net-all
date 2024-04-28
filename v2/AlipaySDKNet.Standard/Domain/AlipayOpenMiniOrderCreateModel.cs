@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -116,6 +117,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("source_id")]
         public string SourceId { get; set; }
+
+        /// <summary>
+        /// 阶段付款计划，租赁场景或分期代扣场景，该字段必填
+        /// </summary>
+        [XmlArray("stage_pay_plans")]
+        [XmlArrayItem("stage_pay_plan_d_t_o")]
+        public List<StagePayPlanDTO> StagePayPlans { get; set; }
 
         /// <summary>
         /// 二级商户信息。 

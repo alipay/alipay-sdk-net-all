@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string OnSettleAmount { get; set; }
 
         /// <summary>
+        /// 已结算金额，人民币，单位为元
+        /// </summary>
+        [XmlElement("settled_amount")]
+        public string SettledAmount { get; set; }
+
+        /// <summary>
         /// 待结算金额，人民币，单位为元
         /// </summary>
         [XmlElement("unsettled_amount")]

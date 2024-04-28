@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -104,6 +105,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("shop_info")]
         public ShopInfoDTO ShopInfo { get; set; }
+
+        /// <summary>
+        /// 阶段付款计划列表
+        /// </summary>
+        [XmlArray("stage_pay_plans")]
+        [XmlArrayItem("stage_pay_plan_v_o")]
+        public List<StagePayPlanVO> StagePayPlans { get; set; }
 
         /// <summary>
         /// 订单状态

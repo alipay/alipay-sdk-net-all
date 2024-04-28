@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string OrderScene { get; set; }
 
         /// <summary>
+        /// 支付手续费，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("pay_commission")]
+        public string PayCommission { get; set; }
+
+        /// <summary>
         /// 当前订单支付时优惠的金额，单位分
         /// </summary>
         [XmlElement("pay_discounted_price")]
@@ -92,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_fee")]
         public string RefundFee { get; set; }
+
+        /// <summary>
+        /// 退支付手续费，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("refund_pay_commission")]
+        public string RefundPayCommission { get; set; }
 
         /// <summary>
         /// 商家自有门店名称

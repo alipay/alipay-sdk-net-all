@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipaySecurityRiskJhjtestComplexddBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 1111
+        /// 修改文档
         /// </summary>
         [XmlElement("comple_a")]
         public JhjTestNew CompleA { get; set; }
 
         /// <summary>
-        /// 11
+        /// 修改文档
         /// </summary>
         [XmlElement("regress")]
         public string Regress { get; set; }

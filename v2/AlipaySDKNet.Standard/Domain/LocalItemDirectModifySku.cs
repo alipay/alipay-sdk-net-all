@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public long OriginalPrice { get; set; }
 
         /// <summary>
+        /// 商家侧sku ID，要求 APPID 下全局唯一。
+        /// </summary>
+        [XmlElement("out_sku_id")]
+        public string OutSkuId { get; set; }
+
+        /// <summary>
         /// sku售价，分为单位。（代金券对应代金券价格）
         /// </summary>
         [XmlElement("sale_price")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sale_status")]
         public string SaleStatus { get; set; }
+
+        /// <summary>
+        /// 支付宝平台侧sku ID
+        /// </summary>
+        [XmlElement("sku_id")]
+        public string SkuId { get; set; }
 
         /// <summary>
         /// 支持限制库存和不限库存的相互转换

@@ -17,6 +17,13 @@ namespace Aop.Api.Response
         public DepositBackInfo DepositBackInfo { get; set; }
 
         /// <summary>
+        /// 银行卡冲退信息列表。 默认不返回该信息，需要在入参的query_options中指定"deposit_back_info_list"值时才返回该字段信息。
+        /// </summary>
+        [XmlArray("deposit_back_info_list")]
+        [XmlArrayItem("deposit_back_info")]
+        public List<DepositBackInfo> DepositBackInfoList { get; set; }
+
+        /// <summary>
         /// 因公付退款信息，只有入参的query_options中指定enterprise_pay_info时才返回该字段信息
         /// </summary>
         [XmlElement("enterprise_pay_info")]

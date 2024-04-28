@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayPcreditCreditriskJhjtestProdCreateResponse : AopResponse
     {
         /// <summary>
-        /// 1
+        /// 1111
         /// </summary>
         [XmlElement("out_a")]
         public string OutA { get; set; }

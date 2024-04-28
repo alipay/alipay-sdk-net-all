@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class SsdataDataserviceTestaaaSendModel : AopObject
     {
         /// <summary>
+        /// desc111
+        /// </summary>
+        [XmlElement("body_a")]
+        public DumTestFFAA BodyA { get; set; }
+
+        /// <summary>
         /// 座机号码
         /// </summary>
         [XmlElement("tes_1")]

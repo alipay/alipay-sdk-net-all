@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string Body { get; set; }
 
         /// <summary>
+        /// 业务信息，由商户传入
+        /// </summary>
+        [XmlElement("business_params")]
+        public BusinessParams BusinessParams { get; set; }
+
+        /// <summary>
         /// 业务扩展参数
         /// </summary>
         [XmlElement("extend_params")]
@@ -52,6 +58,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 分账信息
+        /// </summary>
+        [XmlElement("royalty_info")]
+        public RoyaltyInfo RoyaltyInfo { get; set; }
 
         /// <summary>
         /// 卖家支付宝用户ID。 如果该值与seller_logon_id同时为空，则卖家默认为app_id对应的支付宝用户ID

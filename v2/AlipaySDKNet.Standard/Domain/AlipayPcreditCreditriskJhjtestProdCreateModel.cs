@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BOpenid { get; set; }
 
         /// <summary>
-        /// 1
+        /// 1111
         /// </summary>
         [XmlElement("complex")]
         public PublicTestProd Complex { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string TestA { get; set; }
 
         /// <summary>
-        /// 1
+        /// 11111 当前字段已废弃(1111)
         /// </summary>
         [XmlElement("test_b")]
         public string TestB { get; set; }

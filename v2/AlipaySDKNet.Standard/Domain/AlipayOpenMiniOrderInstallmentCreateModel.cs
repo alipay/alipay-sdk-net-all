@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public long AddonPeriodNum { get; set; }
 
         /// <summary>
-        /// 当installment_no_type为PERIOD时，填写分期数
+        /// 当前分期数
         /// </summary>
         [XmlElement("installment_no")]
         public string InstallmentNo { get; set; }
@@ -38,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("is_finish_performance")]
         public bool IsFinishPerformance { get; set; }
+
+        /// <summary>
+        /// 分期单同步模式请传入true，该模式会直接推进分期单进入结算阶段
+        /// </summary>
+        [XmlElement("is_sync_pay")]
+        public bool IsSyncPay { get; set; }
 
         /// <summary>
         /// 支付宝用户唯一标识
@@ -64,10 +70,22 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// 用户分期扣款的支付方式
+        /// </summary>
+        [XmlElement("pay_channel")]
+        public string PayChannel { get; set; }
+
+        /// <summary>
         /// 普通分期数，当分期类型为RENT或BUYOUT时，该字段必填
         /// </summary>
         [XmlElement("period_num")]
         public long PeriodNum { get; set; }
+
+        /// <summary>
+        /// 分期的阶段编码，与创建时的阶段付款计划里的阶段编码对应。
+        /// </summary>
+        [XmlElement("stage_no")]
+        public long StageNo { get; set; }
 
         /// <summary>
         /// 支付宝收单交易号
