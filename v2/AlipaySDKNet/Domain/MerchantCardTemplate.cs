@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string CardTemplateAppId { get; set; }
 
         /// <summary>
-        /// 支付宝侧商品ID
+        /// 支付宝侧商品ID，创建接口不需要传
         /// </summary>
         [XmlElement("card_template_id")]
         public string CardTemplateId { get; set; }
@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string CardTemplateName { get; set; }
 
         /// <summary>
-        /// 商品状态
+        /// 商品状态，创建接口不需要传
         /// </summary>
         [XmlElement("card_template_status")]
         public string CardTemplateStatus { get; set; }
@@ -47,14 +47,14 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// 商品封面图ID
+        /// （1）创建时，和image_url_list字段二选一，image_id_list优先级更高 （2）查询返回时该字段为空，返回image_url_list
         /// </summary>
         [XmlArray("image_id_list")]
         [XmlArrayItem("string")]
         public List<string> ImageIdList { get; set; }
 
         /// <summary>
-        /// 商品封面图Url
+        /// （1）创建时，和image_url_list字段二选一，image_id_list优先级更高 （2）查询返回时该字段为空，返回image_url_list
         /// </summary>
         [XmlArray("image_url_list")]
         [XmlArrayItem("string")]
@@ -65,6 +65,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_card_id")]
         public string OutCardId { get; set; }
+
+        /// <summary>
+        /// 驳回原因
+        /// </summary>
+        [XmlArray("reject_reasons")]
+        [XmlArrayItem("card_reject_reason_info")]
+        public List<CardRejectReasonInfo> RejectReasons { get; set; }
 
         /// <summary>
         /// 售卖信息

@@ -11,7 +11,7 @@ namespace Aop.Api.Request
     public class ZhimaMerchantCreditserviceLogoUploadRequest : IAopUploadRequest<ZhimaMerchantCreditserviceLogoUploadResponse>
     {
         /// <summary>
-        /// 商户logo图片的二进制字节流，文件大小不超过 60KB，图片尺寸大小需保证 80*80。
+        /// 商户logo图片的二进制字节流，文件大小不超过 60KB，图片尺寸大小需保证 160*160。
         /// </summary>
         public FileItem File { get; set; }
 

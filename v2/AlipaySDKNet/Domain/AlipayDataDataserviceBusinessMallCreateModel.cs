@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceBusinessMallCreateModel : AopObject
     {
         /// <summary>
+        /// 商户授权码
+        /// </summary>
+        [XmlElement("business_code")]
+        public string BusinessCode { get; set; }
+
+        /// <summary>
         /// LBS距离范围，值小于等于5000
         /// </summary>
         [XmlElement("mall_distance")]

@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }
+
+        /// <summary>
+        /// 是否用于前端展示标识（true标识用于展示，false标识不用于展示，不传代表false不用于展示）
+        /// </summary>
+        [XmlElement("show_flag")]
+        public bool ShowFlag { get; set; }
     }
 }

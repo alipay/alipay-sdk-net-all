@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string DeductionStatus { get; set; }
 
         /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订购结束时间
         /// </summary>
         [XmlElement("order_end_date")]
@@ -56,5 +62,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
+
+        /// <summary>
+        /// 门店ID
+        /// </summary>
+        [XmlElement("shop_id")]
+        public string ShopId { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的userId。
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

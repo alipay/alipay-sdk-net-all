@@ -72,6 +72,12 @@ namespace Aop.Api.Domain
         public long RemainCount { get; set; }
 
         /// <summary>
+        /// 门店ID
+        /// </summary>
+        [XmlElement("shop_id")]
+        public string ShopId { get; set; }
+
+        /// <summary>
         /// 总期数(次数)
         /// </summary>
         [XmlElement("total_count")]

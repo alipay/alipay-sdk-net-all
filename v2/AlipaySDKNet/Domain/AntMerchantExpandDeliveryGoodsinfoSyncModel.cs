@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string LogisticsNo { get; set; }
 
         /// <summary>
+        /// 码值信息
+        /// </summary>
+        [XmlElement("qrcodes")]
+        public string Qrcodes { get; set; }
+
+        /// <summary>
         /// 发货标签，全局唯一
         /// </summary>
         [XmlElement("send_goods_tag")]

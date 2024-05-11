@@ -1,0 +1,81 @@
+using System;
+using System.Xml.Serialization;
+using System.Collections.Generic;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// SimpleRentInfo Data Structure.
+    /// </summary>
+    [Serializable]
+    public class SimpleRentInfo : AopObject
+    {
+        /// <summary>
+        /// 交易组件的订单Id
+        /// </summary>
+        [XmlElement("biz_order_id")]
+        public string BizOrderId { get; set; }
+
+        /// <summary>
+        /// 买家支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("buyer_id")]
+        public string BuyerId { get; set; }
+
+        /// <summary>
+        /// 买家支付宝用户唯一标识
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
+        /// 租赁订单的结束时间
+        /// </summary>
+        [XmlElement("end_time")]
+        public string EndTime { get; set; }
+
+        /// <summary>
+        /// 租赁分期计划
+        /// </summary>
+        [XmlArray("plan_list")]
+        [XmlArrayItem("rent_plan")]
+        public List<RentPlan> PlanList { get; set; }
+
+        /// <summary>
+        /// 租赁订单价格，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("price_info")]
+        public string PriceInfo { get; set; }
+
+        /// <summary>
+        /// 租赁订单id
+        /// </summary>
+        [XmlElement("rent_id")]
+        public string RentId { get; set; }
+
+        /// <summary>
+        /// 租赁单状态
+        /// </summary>
+        [XmlElement("rent_status")]
+        public string RentStatus { get; set; }
+
+        /// <summary>
+        /// 分账计划详情
+        /// </summary>
+        [XmlArray("royalty_list")]
+        [XmlArrayItem("rent_royalty")]
+        public List<RentRoyalty> RoyaltyList { get; set; }
+
+        /// <summary>
+        /// 租赁商用户Id
+        /// </summary>
+        [XmlElement("seller_id")]
+        public string SellerId { get; set; }
+
+        /// <summary>
+        /// 租赁订单的开始时间
+        /// </summary>
+        [XmlElement("start_time")]
+        public string StartTime { get; set; }
+    }
+}

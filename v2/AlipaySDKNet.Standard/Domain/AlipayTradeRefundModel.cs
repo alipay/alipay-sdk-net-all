@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 查询选项。 商户通过上送该参数来定制同步需要额外返回的信息字段，数组格式。支持：refund_detail_item_list：退款使用的资金渠道；deposit_back_info：触发银行卡冲退信息通知；
+        /// 查询选项。 商户通过上送该参数来定制同步需要额外返回的信息字段，数组格式。
         /// </summary>
         [XmlArray("query_options")]
         [XmlArrayItem("string")]
@@ -91,6 +91,12 @@ namespace Aop.Api.Domain
         [XmlArray("refund_royalty_parameters")]
         [XmlArrayItem("open_api_royalty_detail_info_pojo")]
         public List<OpenApiRoyaltyDetailInfoPojo> RefundRoyaltyParameters { get; set; }
+
+        /// <summary>
+        /// 针对账期交易，在确认结算后退款的话，需要指定确认结算时的结算单号。
+        /// </summary>
+        [XmlElement("related_settle_confirm_no")]
+        public string RelatedSettleConfirmNo { get; set; }
 
         /// <summary>
         /// 商户门店编号，由商家自定义。需保证当前商户下唯一。

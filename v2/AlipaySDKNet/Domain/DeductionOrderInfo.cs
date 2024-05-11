@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string PlanDeductionTime { get; set; }
 
         /// <summary>
+        /// 门店ID
+        /// </summary>
+        [XmlElement("shop_id")]
+        public string ShopId { get; set; }
+
+        /// <summary>
         /// 分期单ID
         /// </summary>
         [XmlElement("sub_order_id")]

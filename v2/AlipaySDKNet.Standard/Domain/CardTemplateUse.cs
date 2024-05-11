@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public long UsableCount { get; set; }
 
         /// <summary>
-        /// 传入指定商品的可用门店ID，不传代表所有门店可用
+        /// 传入指定商品的可用门店ID
         /// </summary>
         [XmlArray("usable_shop_list")]
         [XmlArrayItem("string")]

@@ -29,6 +29,13 @@ namespace Aop.Api.Response
         public string BizTag { get; set; }
 
         /// <summary>
+        /// 返回前置咨询用户命中的人群标签，如用户在花呗设首人群中，则透出ALICREDIT_PRIORITY，命中多个标签时以列表形式返回
+        /// </summary>
+        [XmlArray("biz_tag_list")]
+        [XmlArrayItem("string")]
+        public List<string> BizTagList { get; set; }
+
+        /// <summary>
         /// 仅当请求使用morse匿名技术时会返回此字段； morse匿名技术使用的盲签名，商户使用此值与私钥一起对混淆后的密文结果进行解密；解密后结果为json格式字符串，可以json反序列化后，获取对应的文案(key为text)；若无文案则解密后为空
         /// </summary>
         [XmlElement("blind_signature")]
@@ -65,6 +72,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("pay_operation_info")]
         public string PayOperationInfo { get; set; }
+
+        /// <summary>
+        /// 前置咨询ID,用来标识本次请求
+        /// </summary>
+        [XmlElement("pre_consult_id")]
+        public string PreConsultId { get; set; }
 
         /// <summary>
         /// 已废弃不再使用

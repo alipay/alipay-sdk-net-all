@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string IndustryQualificationImage { get; set; }
 
         /// <summary>
-        /// 商户行业资质类型，具体选值参见<a href="https://gw.alipayobjects.com/os/bmw-prod/7aa3a36b-2bc2-4d57-815f-08edd55ef67e.xlsx">文档</a>
+        /// <a href="https://gw.alipayobjects.com/os/bmw-prod/7aa3a36b-2bc2-4d57-815f-08edd55ef67e.xlsx">商户行业资质类型，具体选值参见文档</a>
         /// </summary>
         [XmlElement("industry_qualification_type")]
         public string IndustryQualificationType { get; set; }

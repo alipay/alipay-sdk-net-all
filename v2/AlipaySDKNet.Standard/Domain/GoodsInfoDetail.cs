@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string GoodsDesc { get; set; }
 
         /// <summary>
-        /// 商品名
+        /// 商品名称，由isv传入
         /// </summary>
         [XmlElement("goods_name")]
         public string GoodsName { get; set; }

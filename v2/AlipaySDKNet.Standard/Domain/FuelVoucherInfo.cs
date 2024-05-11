@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public long MerchantAmount { get; set; }
 
         /// <summary>
+        /// 服务费折扣标识，当前仅支持 free
+        /// </summary>
+        [XmlElement("service_fee_discount")]
+        public string ServiceFeeDiscount { get; set; }
+
+        /// <summary>
         /// 订单使用的券id
         /// </summary>
         [XmlElement("voucher_id")]

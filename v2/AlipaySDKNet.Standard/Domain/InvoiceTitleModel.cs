@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string TitleName { get; set; }
 
         /// <summary>
-        /// 抬头类型  字段值有两种情况抬:  PERSONAL（个人）   CORPORATION（单位）
+        /// 抬头类型 字段值有两种情况抬: PERSONAL（个人）  CORPORATION（企业）
         /// </summary>
         [XmlElement("title_type")]
         public string TitleType { get; set; }

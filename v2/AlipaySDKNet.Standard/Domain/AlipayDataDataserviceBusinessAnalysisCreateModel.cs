@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceBusinessAnalysisCreateModel : AopObject
     {
         /// <summary>
+        /// 商户授权码
+        /// </summary>
+        [XmlElement("business_code")]
+        public string BusinessCode { get; set; }
+
+        /// <summary>
         /// 商圈ID
         /// </summary>
         [XmlElement("mall_id")]

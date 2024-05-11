@@ -250,6 +250,12 @@ namespace Aop.Api.Response
         public List<PaymentInfoWithId> PaymentInfoWithIdList { get; set; }
 
         /// <summary>
+        /// 该字段用于描述当前账期交易的场景。
+        /// </summary>
+        [XmlElement("period_scene")]
+        public string PeriodScene { get; set; }
+
+        /// <summary>
         /// 积分支付的金额，单位为元，两位小数。该金额代表该笔交易中用户使用积分支付的金额，比如集分宝或者支付宝实时优惠等
         /// </summary>
         [XmlElement("point_amount")]

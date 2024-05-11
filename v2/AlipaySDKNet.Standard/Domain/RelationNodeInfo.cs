@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RelationNodeInfo : AopObject
     {
         /// <summary>
+        /// 股权穿透持股比：当关联关系类型为 ubo 时，该值代表最终受益人到被查公司各路径的股权穿透持股比
+        /// </summary>
+        [XmlElement("equity_penetration_ratio")]
+        public string EquityPenetrationRatio { get; set; }
+
+        /// <summary>
         /// 当前节点的层数
         /// </summary>
         [XmlElement("layer")]
@@ -40,7 +46,7 @@ namespace Aop.Api.Domain
         public string RelationCode { get; set; }
 
         /// <summary>
-        /// 持股比例
+        /// 持股比例：当关联关系类型为 ubo 时，该值为最终受益人相对于被查公司的受益持股比例（基于银发235号文、164号文的定义计算所得）
         /// </summary>
         [XmlElement("ultimate_ratio")]
         public string UltimateRatio { get; set; }

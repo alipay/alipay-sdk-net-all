@@ -127,6 +127,13 @@ namespace Aop.Api.Response
         public string RefundSettlementId { get; set; }
 
         /// <summary>
+        /// 本交易支付时使用的所有优惠券信息。 只有在query_options中指定了refund_voucher_detail_list时才返回该字段信息。
+        /// </summary>
+        [XmlArray("refund_voucher_detail_list")]
+        [XmlArrayItem("voucher_detail")]
+        public List<VoucherDetail> RefundVoucherDetailList { get; set; }
+
+        /// <summary>
         /// 本次商户实际退回金额。单位：元。 说明：如需获取该值，需在入参query_options中传入 refund_detail_item_list。
         /// </summary>
         [XmlElement("send_back_fee")]

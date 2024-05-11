@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<BusinessIndustryDTO> BrandRankIndustryDto { get; set; }
 
         /// <summary>
+        /// 商户授权码
+        /// </summary>
+        [XmlElement("business_code")]
+        public string BusinessCode { get; set; }
+
+        /// <summary>
         /// 需要查询的商圈概况的指标的集合
         /// </summary>
         [XmlArray("metric_keys")]

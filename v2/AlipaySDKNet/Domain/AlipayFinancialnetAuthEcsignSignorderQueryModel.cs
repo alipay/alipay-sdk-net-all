@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFinancialnetAuthEcsignSignorderQueryModel : AopObject
     {
         /// <summary>
+        /// 签约请求代理模式，说明被代理的对象，其中proxiedPid是被代理的商户的PID，非UID
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 外部订单号
         /// </summary>
         [XmlElement("out_order_no")]

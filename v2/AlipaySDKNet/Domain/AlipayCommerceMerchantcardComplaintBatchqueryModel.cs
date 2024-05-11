@@ -31,6 +31,6 @@ namespace Aop.Api.Domain
         /// 页大小
         /// </summary>
         [XmlElement("page_size")]
-        public string PageSize { get; set; }
+        public long PageSize { get; set; }
     }
 }
