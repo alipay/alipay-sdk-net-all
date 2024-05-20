@@ -107,11 +107,11 @@ No authorization required
 
 <a name="download"></a>
 # **Download**
-> AlipayDataDataserviceAdPromotepageDownloadResponseModel Download (string bizToken = null, string principalTag = null, int? promotePageId = null, string startDate = null, string endDate = null, int? pageNo = null, int? pageSize = null)
+> AlipayDataDataserviceAdPromotepageDownloadResponseModel Download (string startDate = null, string endDate = null, int? pageNo = null, int? pageSize = null, string bizToken = null, string principalTag = null, int? promotePageId = null)
 
 自建推广页留资数据查询
 
-用于获取指定商家指定推广页的留资数据
+用于获取指定商家指定推广页的留资数据，注意调用频次小于20qps
 
 ### Example
 ```csharp
@@ -147,18 +147,18 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var bizToken = HYjofejnnlp89730202bcklHH;  // string | 代理商访问灯火平台的token (optional) 
-            var principalTag = yfvbv133498;  // string | 商家标志 (optional) 
-            var promotePageId = 2018374;  // int? | 推广页id (optional) 
-            var startDate = "2020-12-12";  // string | 留资开始日期，格式：yyyy-mm-dd，不能早于30天前 (optional) 
-            var endDate = “2020-12-13”;  // string | 留资结束日期，格式：yyyy-mm-dd；不能晚于当天 (optional) 
+            var startDate = 2020-12-12;  // string | 留资开始日期，格式：yyyy-mm-dd，不能早于30天前 (optional) 
+            var endDate = 2020-12-13;  // string | 留资结束日期，格式：yyyy-mm-dd；不能晚于当天 (optional) 
             var pageNo = 1;  // int? | 分页参数之页数，从1开始 (optional) 
             var pageSize = 100;  // int? | 分页参数之每页大小，最大1000 (optional) 
+            var bizToken = HYjofejnnlp89730202bcklHH;  // string | 代理商访问灯火平台的token (optional) 
+            var principalTag = yfvbv133498;  // string | 商家标志 (optional) 
+            var promotePageId = 79900056;  // int? | 推广页id (optional) 
 
             try
             {
                 // 自建推广页留资数据查询
-                AlipayDataDataserviceAdPromotepageDownloadResponseModel result = apiInstance.Download(bizToken, principalTag, promotePageId, startDate, endDate, pageNo, pageSize);
+                AlipayDataDataserviceAdPromotepageDownloadResponseModel result = apiInstance.Download(startDate, endDate, pageNo, pageSize, bizToken, principalTag, promotePageId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -176,13 +176,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bizToken** | **string**| 代理商访问灯火平台的token | [optional] 
- **principalTag** | **string**| 商家标志 | [optional] 
- **promotePageId** | **int?**| 推广页id | [optional] 
  **startDate** | **string**| 留资开始日期，格式：yyyy-mm-dd，不能早于30天前 | [optional] 
  **endDate** | **string**| 留资结束日期，格式：yyyy-mm-dd；不能晚于当天 | [optional] 
  **pageNo** | **int?**| 分页参数之页数，从1开始 | [optional] 
  **pageSize** | **int?**| 分页参数之每页大小，最大1000 | [optional] 
+ **bizToken** | **string**| 代理商访问灯火平台的token | [optional] 
+ **principalTag** | **string**| 商家标志 | [optional] 
+ **promotePageId** | **int?**| 推广页id | [optional] 
 
 ### Return type
 

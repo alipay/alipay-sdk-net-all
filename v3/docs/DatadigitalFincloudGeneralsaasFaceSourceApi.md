@@ -4,14 +4,14 @@ All URIs are relative to *https://openapi.alipay.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Certify**](DatadigitalFincloudGeneralsaasFaceSourceApi.md#certify) | **POST** /v3/datadigital/fincloud/generalsaas/face/source/certify | 权威核验源的核验接口
+[**Certify**](DatadigitalFincloudGeneralsaasFaceSourceApi.md#certify) | **POST** /v3/datadigital/fincloud/generalsaas/face/source/certify | 纯服务端人脸核身
 
 
 <a name="certify"></a>
 # **Certify**
 > DatadigitalFincloudGeneralsaasFaceSourceCertifyResponseModel Certify (DatadigitalFincloudGeneralsaasFaceSourceCertifyModel data = null, System.IO.Stream fileContent = null)
 
-权威核验源的核验接口
+纯服务端人脸核身
 
 上传人脸照片，调用权威核验源进行验证
 
@@ -54,7 +54,7 @@ namespace Example
 
             try
             {
-                // 权威核验源的核验接口
+                // 纯服务端人脸核身
                 DatadigitalFincloudGeneralsaasFaceSourceCertifyResponseModel result = apiInstance.Certify(data, fileContent);
                 Debug.WriteLine(result);
             }

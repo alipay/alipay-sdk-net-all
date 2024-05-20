@@ -141,7 +141,7 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var appNo = 2021000155639069;  // string | 待解绑小程序的app_id (optional) 
-            var accNo = 2088001969784501;  // string | 待解绑账号PID (optional) 
+            var accNo = 20880019****4501;  // string | 待解绑账号PID (optional) 
 
             try
             {
@@ -231,7 +231,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var appNo = 2021000155639069;  // string | 已关联小程序的app_id (optional) 
+            var appNo = 20210001****9069;  // string | 已关联小程序的app_id (optional) 
             var pageSize = 10;  // int? | 单页行数，不能超过100行 (optional) 
             var pageNumber = 1;  // int? | 页码 (optional) 
 

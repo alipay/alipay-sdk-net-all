@@ -99,7 +99,7 @@ No authorization required
 
 <a name="query"></a>
 # **Query**
-> AlipayCommerceEcEmployeeInfoQueryResponseModel Query (string enterpriseId = null, string employeeId = null, string openId = null, string userId = null)
+> AlipayCommerceEcEmployeeInfoQueryResponseModel Query (string enterpriseId = null, string employeeId = null, string openId = null, string userId = null, string mobile = null)
 
 查询员工详情
 
@@ -143,11 +143,12 @@ namespace Example
             var employeeId = 228420000000057942506;  // string | 员工id (optional) 
             var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 蚂蚁统一会员ID (optional) 
             var userId = 2088501304519332;  // string | 蚂蚁统一会员ID (optional) 
+            var mobile = 134XXXX2526;  // string | 员工手机号码 (optional) 
 
             try
             {
                 // 查询员工详情
-                AlipayCommerceEcEmployeeInfoQueryResponseModel result = apiInstance.Query(enterpriseId, employeeId, openId, userId);
+                AlipayCommerceEcEmployeeInfoQueryResponseModel result = apiInstance.Query(enterpriseId, employeeId, openId, userId, mobile);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -169,6 +170,7 @@ Name | Type | Description  | Notes
  **employeeId** | **string**| 员工id | [optional] 
  **openId** | **string**| 蚂蚁统一会员ID | [optional] 
  **userId** | **string**| 蚂蚁统一会员ID | [optional] 
+ **mobile** | **string**| 员工手机号码 | [optional] 
 
 ### Return type
 

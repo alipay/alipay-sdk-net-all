@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**Accept**](AlipayOpenServicemarketOrderApi.md#accept) | **POST** /v3/alipay/open/servicemarket/order/accept | 服务商接单操作
 [**Create**](AlipayOpenServicemarketOrderApi.md#create) | **POST** /v3/alipay/open/servicemarket/order/create | 服务市场代订购小程序
 [**Notify**](AlipayOpenServicemarketOrderApi.md#notify) | **POST** /v3/alipay/open/servicemarket/order/notify | 服务市场商户确认订购通知
-[**Query**](AlipayOpenServicemarketOrderApi.md#query) | **GET** /v3/alipay/open/servicemarket/order/query | 订购插件订单明细查询
+[**Query**](AlipayOpenServicemarketOrderApi.md#query) | **GET** /v3/alipay/open/servicemarket/order/query | 服务市场订单明细查询
 [**Reject**](AlipayOpenServicemarketOrderApi.md#reject) | **POST** /v3/alipay/open/servicemarket/order/reject | 服务商拒绝接单
 
 
@@ -284,7 +284,7 @@ No authorization required
 # **Query**
 > AlipayOpenServicemarketOrderQueryResponseModel Query (string commodityOrderId = null, string startPage = null)
 
-订购插件订单明细查询
+服务市场订单明细查询
 
 第三方服务商提供服务产品被商户订购后，服务市场会推送订单信息给服务商，服务商根据订单号回查该订单明细信息。
 
@@ -327,7 +327,7 @@ namespace Example
 
             try
             {
-                // 订购插件订单明细查询
+                // 服务市场订单明细查询
                 AlipayOpenServicemarketOrderQueryResponseModel result = apiInstance.Query(commodityOrderId, startPage);
                 Debug.WriteLine(result);
             }

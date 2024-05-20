@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **Query**
-> AlipayDataBillBizfundagentQueryResponseModel Query (string startTime = null, string endTime = null, string pageNo = null, string pageSize = null, string agreementNo = null)
+> AlipayDataBillBizfundagentQueryResponseModel Query (string startTime = null, string endTime = null, string pageNo = null, string pageSize = null, string agreementNo = null, string accountBookId = null)
 
 ISV代理商户资金业务账单查询
 
@@ -54,11 +54,12 @@ namespace Example
             var pageNo = 1;  // string | 页码，从1开始 (optional) 
             var pageSize = 2000;  // string | 分页大小1000-2000，默认2000 (optional) 
             var agreementNo = 20205215001418078112;  // string | ISV与商户授权协议号 (optional) 
+            var accountBookId = 20880123456789012;  // string | 记账本id，服务商在帮助商户开通时候获取的唯一身份号 (optional) 
 
             try
             {
                 // ISV代理商户资金业务账单查询
-                AlipayDataBillBizfundagentQueryResponseModel result = apiInstance.Query(startTime, endTime, pageNo, pageSize, agreementNo);
+                AlipayDataBillBizfundagentQueryResponseModel result = apiInstance.Query(startTime, endTime, pageNo, pageSize, agreementNo, accountBookId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -81,6 +82,7 @@ Name | Type | Description  | Notes
  **pageNo** | **string**| 页码，从1开始 | [optional] 
  **pageSize** | **string**| 分页大小1000-2000，默认2000 | [optional] 
  **agreementNo** | **string**| ISV与商户授权协议号 | [optional] 
+ **accountBookId** | **string**| 记账本id，服务商在帮助商户开通时候获取的唯一身份号 | [optional] 
 
 ### Return type
 

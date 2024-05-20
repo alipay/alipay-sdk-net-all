@@ -52,7 +52,7 @@ namespace Example
             var connKey = uuid;  // string | 调用第一步创建接口的out_agreement_no，由外部传入 (optional) 
             var onceToken = uuid;  // string | 查询身份认证结果的凭证，在认证结果到达终态后只允许查询成功一次，若需要再次查询，则需要调用第一个接口再拉起受理台 (optional) 
             var queryType = exact\dim;  // string | exact:精确查询,dim:模糊查询 (optional) 
-            var identityType = 01，02，03;  // string | 01:医生，02:教师，具体参考文档 (optional) 
+            var identityType = 04;  // string | 04:教师，其它身份类型联系芝麻技术支持确认 (optional) 
             var serviceId = 2019120400000000000004450100;  // string | 信用服务id，商家接入产品功能包时有运营同学分配 (optional) 
             var userId = 20881029102921;  // string | 蚂蚁统一会员ID 和身份证任选一个传入 (optional) 
             var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 蚂蚁统一会员ID 和身份证任选一个传入 (optional) 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
  **connKey** | **string**| 调用第一步创建接口的out_agreement_no，由外部传入 | [optional] 
  **onceToken** | **string**| 查询身份认证结果的凭证，在认证结果到达终态后只允许查询成功一次，若需要再次查询，则需要调用第一个接口再拉起受理台 | [optional] 
  **queryType** | **string**| exact:精确查询,dim:模糊查询 | [optional] 
- **identityType** | **string**| 01:医生，02:教师，具体参考文档 | [optional] 
+ **identityType** | **string**| 04:教师，其它身份类型联系芝麻技术支持确认 | [optional] 
  **serviceId** | **string**| 信用服务id，商家接入产品功能包时有运营同学分配 | [optional] 
  **userId** | **string**| 蚂蚁统一会员ID 和身份证任选一个传入 | [optional] 
  **openId** | **string**| 蚂蚁统一会员ID 和身份证任选一个传入 | [optional] 

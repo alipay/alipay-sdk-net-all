@@ -4,15 +4,15 @@ All URIs are relative to *https://openapi.alipay.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Initialize**](DatadigitalFincloudGeneralsaasFaceCheckApi.md#initialize) | **POST** /v3/datadigital/fincloud/generalsaas/face/check/initialize | 人脸检测初始化
-[**Query**](DatadigitalFincloudGeneralsaasFaceCheckApi.md#query) | **GET** /v3/datadigital/fincloud/generalsaas/face/check/query | 人脸检测结果数据查询
+[**Initialize**](DatadigitalFincloudGeneralsaasFaceCheckApi.md#initialize) | **POST** /v3/datadigital/fincloud/generalsaas/face/check/initialize | 活体检测初始化
+[**Query**](DatadigitalFincloudGeneralsaasFaceCheckApi.md#query) | **GET** /v3/datadigital/fincloud/generalsaas/face/check/query | 活体检测结果查询
 
 
 <a name="initialize"></a>
 # **Initialize**
 > DatadigitalFincloudGeneralsaasFaceCheckInitializeResponseModel Initialize (DatadigitalFincloudGeneralsaasFaceCheckInitializeModel datadigitalFincloudGeneralsaasFaceCheckInitializeModel = null)
 
-人脸检测初始化
+活体检测初始化
 
 人脸检测业务单据初始化
 
@@ -54,7 +54,7 @@ namespace Example
 
             try
             {
-                // 人脸检测初始化
+                // 活体检测初始化
                 DatadigitalFincloudGeneralsaasFaceCheckInitializeResponseModel result = apiInstance.Initialize(datadigitalFincloudGeneralsaasFaceCheckInitializeModel);
                 Debug.WriteLine(result);
             }
@@ -101,9 +101,9 @@ No authorization required
 # **Query**
 > DatadigitalFincloudGeneralsaasFaceCheckQueryResponseModel Query (string certifyId = null, string needAlivePhoto = null, string needScore = null, string needQualityScore = null, string needAttackResult = null)
 
-人脸检测结果数据查询
+活体检测结果查询
 
-用于查询人脸检测结果的数据。
+用于查询活体检测结果。
 
 ### Example
 ```csharp
@@ -147,7 +147,7 @@ namespace Example
 
             try
             {
-                // 人脸检测结果数据查询
+                // 活体检测结果查询
                 DatadigitalFincloudGeneralsaasFaceCheckQueryResponseModel result = apiInstance.Query(certifyId, needAlivePhoto, needScore, needQualityScore, needAttackResult);
                 Debug.WriteLine(result);
             }

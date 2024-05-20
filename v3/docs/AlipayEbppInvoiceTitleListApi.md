@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="get"></a>
 # **Get**
-> AlipayEbppInvoiceTitleListGetResponseModel Get (string authToken = null, string userId = null)
+> AlipayEbppInvoiceTitleListGetResponseModel Get (string authToken = null, string userId = null, string openId = null)
 
 获取指定用户所有的有效抬头列表
 
@@ -51,11 +51,12 @@ namespace Example
 
             var authToken = "authToken_example";  // string | 用户授权令牌 (optional) 
             var userId = 2088000000000000;  // string | 支付宝用户id (optional) 
+            var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 支付宝用户id (optional) 
 
             try
             {
                 // 获取指定用户所有的有效抬头列表
-                AlipayEbppInvoiceTitleListGetResponseModel result = apiInstance.Get(authToken, userId);
+                AlipayEbppInvoiceTitleListGetResponseModel result = apiInstance.Get(authToken, userId, openId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -75,6 +76,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authToken** | **string**| 用户授权令牌 | [optional] 
  **userId** | **string**| 支付宝用户id | [optional] 
+ **openId** | **string**| 支付宝用户id | [optional] 
 
 ### Return type
 

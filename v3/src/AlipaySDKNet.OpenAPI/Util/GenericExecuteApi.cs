@@ -12,11 +12,6 @@ namespace AlipaySDKNet.OpenAPI.Util
         private AlipaySDKNet.OpenAPI.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         private bool _loadTest = false;
-        
-        /// <summary>
-        /// The client for accessing this underlying API asynchronously.
-        /// </summary>
-        public AlipaySDKNet.OpenAPI.Client.IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
@@ -56,7 +51,6 @@ namespace AlipaySDKNet.OpenAPI.Util
                 new Configuration()
             );
             this.Client = new ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             this.ExceptionFactory = AlipaySDKNet.OpenAPI.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -75,8 +69,23 @@ namespace AlipaySDKNet.OpenAPI.Util
                 configuration
             );
             this.Client = new ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new ApiClient(this.Configuration.BasePath);
             ExceptionFactory = AlipaySDKNet.OpenAPI.Client.Configuration.DefaultExceptionFactory;
+        }
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GenericExecuteApi"/> class
+        /// using a Configuration object and client instance.
+        /// </summary>
+        /// <param name="client">The client interface for synchronous API access.</param>
+        /// <param name="configuration">The configuration object.</param>
+        public GenericExecuteApi(ISynchronousClient client, IReadableConfiguration configuration)
+        {
+            if (client == null) throw new ArgumentNullException("client");
+            if (configuration == null) throw new ArgumentNullException("configuration");
+
+            this.Client = client;
+            this.Configuration = configuration;
+            this.ExceptionFactory = AlipaySDKNet.OpenAPI.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -86,16 +95,20 @@ namespace AlipaySDKNet.OpenAPI.Util
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public GenericExecuteApi(ISynchronousClient client, IAsynchronousClient asyncClient, IReadableConfiguration configuration)
+        [Obsolete]
+        public GenericExecuteApi(ISynchronousClient client, ISynchronousClient asyncClient, IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
-            if (asyncClient == null) throw new ArgumentNullException("asyncClient");
             if (configuration == null) throw new ArgumentNullException("configuration");
 
             this.Client = client;
-            this.AsynchronousClient = asyncClient;
             this.Configuration = configuration;
             this.ExceptionFactory = AlipaySDKNet.OpenAPI.Client.Configuration.DefaultExceptionFactory;
+        }
+
+        public ApiResponse<Object> Execute(string path, HttpMethod method, OpenApiGenericRequest openApiGenericRequest)
+        {
+            return Execute<Object>(path, method, openApiGenericRequest);
         }
 
         /// <summary>
@@ -105,7 +118,7 @@ namespace AlipaySDKNet.OpenAPI.Util
         /// <param name="method">The request method, one of "GET", "HEAD", "OPTIONS", "POST", "PUT", "PATCH" and "DELETE"</param>
         /// <param name="openApiGenericRequest">openApiGenericRequest</param>
         /// <returns></returns>
-        public ApiResponse<Object> Execute(string path, HttpMethod method, OpenApiGenericRequest openApiGenericRequest)
+        public ApiResponse<T> Execute<T>(string path, HttpMethod method, OpenApiGenericRequest openApiGenericRequest)
         {
             if (openApiGenericRequest.BodyParams == null)
             {
@@ -187,30 +200,30 @@ namespace AlipaySDKNet.OpenAPI.Util
             localVarRequestOptions.OperationIndex = 0;
 
             // make the HTTP request
-            ApiResponse<Object> localVarResponse;
+            ApiResponse<T> localVarResponse;
             
             switch (method)
             {
                 case HttpMethod.Get:
-                    localVarResponse = this.Client.Get<Object>(path, localVarRequestOptions, this.Configuration);
+                    localVarResponse = this.Client.Get<T>(path, localVarRequestOptions, this.Configuration);
                     break;
                 case HttpMethod.Post:
-                    localVarResponse = this.Client.Post<Object>(path, localVarRequestOptions, this.Configuration);
+                    localVarResponse = this.Client.Post<T>(path, localVarRequestOptions, this.Configuration);
                     break;
                 case HttpMethod.Put:
-                    localVarResponse = this.Client.Put<Object>(path, localVarRequestOptions, this.Configuration);
+                    localVarResponse = this.Client.Put<T>(path, localVarRequestOptions, this.Configuration);
                     break;
                 case HttpMethod.Delete:
-                    localVarResponse = this.Client.Delete<Object>(path, localVarRequestOptions, this.Configuration);
+                    localVarResponse = this.Client.Delete<T>(path, localVarRequestOptions, this.Configuration);
                     break;
                 case HttpMethod.Head:
-                    localVarResponse = this.Client.Head<Object>(path, localVarRequestOptions, this.Configuration);
+                    localVarResponse = this.Client.Head<T>(path, localVarRequestOptions, this.Configuration);
                     break;
                 case HttpMethod.Options:
-                    localVarResponse = this.Client.Options<Object>(path, localVarRequestOptions, this.Configuration);
+                    localVarResponse = this.Client.Options<T>(path, localVarRequestOptions, this.Configuration);
                     break;
                 case HttpMethod.Patch:
-                    localVarResponse = this.Client.Patch<Object>(path, localVarRequestOptions, this.Configuration);
+                    localVarResponse = this.Client.Patch<T>(path, localVarRequestOptions, this.Configuration);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException("method", method, null);

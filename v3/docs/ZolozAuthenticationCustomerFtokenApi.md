@@ -4,16 +4,16 @@ All URIs are relative to *https://openapi.alipay.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Query**](ZolozAuthenticationCustomerFtokenApi.md#query) | **POST** /v3/zoloz/authentication/customer/ftoken/query | 人脸ftoken查询消费接口
+[**Query**](ZolozAuthenticationCustomerFtokenApi.md#query) | **POST** /v3/zoloz/authentication/customer/ftoken/query | 查询刷脸结果信息接口
 
 
 <a name="query"></a>
 # **Query**
 > ZolozAuthenticationCustomerFtokenQueryResponseModel Query (ZolozAuthenticationCustomerFtokenQueryModel zolozAuthenticationCustomerFtokenQueryModel = null)
 
-人脸ftoken查询消费接口
+查询刷脸结果信息接口
 
-人脸ftoken查询消费接口
+查询刷脸结果信息接口
 
 ### Example
 ```csharp
@@ -53,7 +53,7 @@ namespace Example
 
             try
             {
-                // 人脸ftoken查询消费接口
+                // 查询刷脸结果信息接口
                 ZolozAuthenticationCustomerFtokenQueryResponseModel result = apiInstance.Query(zolozAuthenticationCustomerFtokenQueryModel);
                 Debug.WriteLine(result);
             }

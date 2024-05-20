@@ -49,8 +49,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var categoryId = c11111;  // string | 类目id (optional) 
-            var templateType = DEFAULT;  // string | 服务模版类型。若当前服务类目只有一个服务模版，可不填。 (optional) 
+            var categoryId = c11111;  // string | 类目id, 获取请参考<a href=\"https://opendocs.alipay.com/mini/03ci0w?pathHash=ed3c875c\">各个行业场景服务接入资料</a> (optional) 
+            var templateType = DEFAULT;  // string | 服务模版类型，默认值:DEFAULT (optional) 
 
             try
             {
@@ -73,8 +73,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryId** | **string**| 类目id | [optional] 
- **templateType** | **string**| 服务模版类型。若当前服务类目只有一个服务模版，可不填。 | [optional] 
+ **categoryId** | **string**| 类目id, 获取请参考&lt;a href&#x3D;\&quot;https://opendocs.alipay.com/mini/03ci0w?pathHash&#x3D;ed3c875c\&quot;&gt;各个行业场景服务接入资料&lt;/a&gt; | [optional] 
+ **templateType** | **string**| 服务模版类型，默认值:DEFAULT | [optional] 
 
 ### Return type
 

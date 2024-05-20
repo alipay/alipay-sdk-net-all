@@ -4,14 +4,14 @@ All URIs are relative to *https://openapi.alipay.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Initialize**](DatadigitalFincloudGeneralsaasOcrMobileApi.md#initialize) | **POST** /v3/datadigital/fincloud/generalsaas/ocr/mobile/initialize | OCR端云一体化识别初始化
+[**Initialize**](DatadigitalFincloudGeneralsaasOcrMobileApi.md#initialize) | **POST** /v3/datadigital/fincloud/generalsaas/ocr/mobile/initialize | App端OCR初始化
 
 
 <a name="initialize"></a>
 # **Initialize**
 > DatadigitalFincloudGeneralsaasOcrMobileInitializeResponseModel Initialize (DatadigitalFincloudGeneralsaasOcrMobileInitializeModel datadigitalFincloudGeneralsaasOcrMobileInitializeModel = null)
 
-OCR端云一体化识别初始化
+App端OCR初始化
 
 OCR端云一体化识别
 
@@ -53,7 +53,7 @@ namespace Example
 
             try
             {
-                // OCR端云一体化识别初始化
+                // App端OCR初始化
                 DatadigitalFincloudGeneralsaasOcrMobileInitializeResponseModel result = apiInstance.Initialize(datadigitalFincloudGeneralsaasOcrMobileInitializeModel);
                 Debug.WriteLine(result);
             }
