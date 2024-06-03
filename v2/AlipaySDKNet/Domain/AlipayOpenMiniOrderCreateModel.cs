@@ -17,7 +17,13 @@ namespace Aop.Api.Domain
         public MiniReceiverAddressInfoDTO AddressInfo { get; set; }
 
         /// <summary>
-        /// 商户传入业务信息，具体值要和支付宝约定，应用于安全，营销等参数直传场景，格式为json格式
+        /// 分账条款
+        /// </summary>
+        [XmlElement("alloc_amount_info")]
+        public AllocAmountInfoDTO AllocAmountInfo { get; set; }
+
+        /// <summary>
+        /// 商户传入业务信息，具体值要和支付宝约定，应用于安全，营销等参数直传场景，格式为json格式 当前字段已废弃(历史收单接口兼容，收单分离后由收单维护)
         /// </summary>
         [XmlElement("business_params")]
         public MiniBusinessParamsDTO BusinessParams { get; set; }

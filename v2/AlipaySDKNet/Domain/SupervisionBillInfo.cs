@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class SupervisionBillInfo : AopObject
     {
         /// <summary>
-        /// 来账金额
+        /// 来账金额，整数，单位: 分
         /// </summary>
         [XmlElement("amount")]
         public long Amount { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
-        /// 来账时间
+        /// 来账时间：结构yyyyMMddHHmmss
         /// </summary>
         [XmlElement("vostro_time")]
         public string VostroTime { get; set; }

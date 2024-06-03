@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("biz_env_id")]
         public string BizEnvId { get; set; }
+
+        /// <summary>
+        /// 优惠券code列表
+        /// </summary>
+        [XmlArray("coupon_codes")]
+        [XmlArrayItem("string")]
+        public List<string> CouponCodes { get; set; }
 
         /// <summary>
         /// 续费周期数(月)

@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 代表第几阶段的还款计划，要配合royalty_stage锁定第几期还款计划
+        /// 代表第几阶段的还款计划，要配合royalty_stage锁定第几期还款计划，royalty_type=BUYOUT的情况下，可不填
         /// </summary>
         [XmlElement("royalty_period")]
         public long RoyaltyPeriod { get; set; }
 
         /// <summary>
-        /// 代表某一个阶段的第几期的还款计划，要结合royalty_period进行锁定某一期计划
+        /// 代表某一个阶段的第几期的还款计划，要结合royalty_period进行锁定某一期计划，royalty_type=BUYOUT的情况下，可不填
         /// </summary>
         [XmlElement("royalty_stage")]
         public long RoyaltyStage { get; set; }

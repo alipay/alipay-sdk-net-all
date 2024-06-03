@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizLabel { get; set; }
 
         /// <summary>
+        /// 用于定位文件传输方式
+        /// </summary>
+        [XmlElement("data_transmission_method")]
+        public string DataTransmissionMethod { get; set; }
+
+        /// <summary>
         /// 文件类型，唯一值。 枚举值只做参考，实际情况做具体沟通 VIDEO=视频; VOICE=语音; PICTURE/JPG/JPEG/PNG=图片; TEXT=文本; DOC, DOCX, XLS, XLSX, PPT, PPTX=MS Office
         /// </summary>
         [XmlElement("data_type")]

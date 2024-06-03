@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public MonitorFilter MonitorFilter { get; set; }
 
         /// <summary>
-        /// 产品  - FUNCTION  - MONGODB  - OSS  - REDIS
+        /// 产品  - FUNCTION  - MONGODB  - OSS  - REDIS  - CDN
         /// </summary>
         [XmlElement("product")]
         public string Product { get; set; }

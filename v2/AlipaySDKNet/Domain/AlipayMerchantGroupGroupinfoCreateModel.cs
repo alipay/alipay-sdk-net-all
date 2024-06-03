@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public GroupBaseInfoVO GroupBaseInfo { get; set; }
 
         /// <summary>
-        /// 群信息。包含群id、群名称、群介绍、欢迎语等群配置信息。
+        /// 群信息。包含群id、群名称、群介绍等群配置信息。
         /// </summary>
         [XmlElement("group_instance_info")]
         public GroupInstanceInfoVO GroupInstanceInfo { get; set; }

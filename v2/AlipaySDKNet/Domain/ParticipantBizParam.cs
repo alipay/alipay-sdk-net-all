@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_merchant_id")]
         public string SubMerchantId { get; set; }
+
+        /// <summary>
+        /// 间连商户类型
+        /// </summary>
+        [XmlElement("sub_merchant_id_type")]
+        public string SubMerchantIdType { get; set; }
     }
 }

@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderModifyModel : AopObject
     {
         /// <summary>
+        /// 分账条款
+        /// </summary>
+        [XmlElement("alloc_amount_info")]
+        public AllocAmountInfoDTO AllocAmountInfo { get; set; }
+
+        /// <summary>
         /// 商品修改信息
         /// </summary>
         [XmlArray("item_infos")]

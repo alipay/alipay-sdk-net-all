@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ReductionAmount { get; set; }
 
         /// <summary>
-        /// 门槛金额
+        /// 门槛金额，金额单位：元
         /// </summary>
         [XmlElement("threshold_amount")]
         public string ThresholdAmount { get; set; }

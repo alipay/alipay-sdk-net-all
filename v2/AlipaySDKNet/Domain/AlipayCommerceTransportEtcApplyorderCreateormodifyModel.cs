@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ApplySubScene { get; set; }
 
         /// <summary>
+        /// 参数需要咨询业务同学，需预先分配后才可上送，否则会导致传入失败
+        /// </summary>
+        [XmlElement("bank_rule_id")]
+        public string BankRuleId { get; set; }
+
+        /// <summary>
         /// 办理人所在地城市编码
         /// </summary>
         [XmlElement("city_code")]
@@ -92,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 参数需要咨询业务同学，需预先分配后才可上送，否则会导致传入失败
+        /// </summary>
+        [XmlElement("veh_biz_scene")]
+        public string VehBizScene { get; set; }
 
         /// <summary>
         /// 行驶证信息-核定载人数

@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceDataQueryModel : AopObject
     {
         /// <summary>
-        /// 测试复杂类型审批
+        /// helle
         /// </summary>
         [XmlElement("hello_hq")]
         public HelloHq HelloHq { get; set; }
 
         /// <summary>
-        /// 1
+        /// 3
         /// </summary>
         [XmlElement("order_no")]
         public string OrderNo { get; set; }

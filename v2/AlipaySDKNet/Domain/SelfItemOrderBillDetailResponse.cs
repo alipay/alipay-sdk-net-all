@@ -118,10 +118,28 @@ namespace Aop.Api.Domain
         public string SerialNo { get; set; }
 
         /// <summary>
+        /// 结算到的银行卡号或支付宝账户
+        /// </summary>
+        [XmlElement("settle_account_no")]
+        public string SettleAccountNo { get; set; }
+
+        /// <summary>
+        /// 结算账户类型，支付宝或银行卡
+        /// </summary>
+        [XmlElement("settle_account_type")]
+        public string SettleAccountType { get; set; }
+
+        /// <summary>
         /// 结算金额，单位分
         /// </summary>
         [XmlElement("settle_amount")]
         public string SettleAmount { get; set; }
+
+        /// <summary>
+        /// 结算时的批次号
+        /// </summary>
+        [XmlElement("settle_batch_id")]
+        public string SettleBatchId { get; set; }
 
         /// <summary>
         /// 当前凭证的结算状态，下钻到次序号维度

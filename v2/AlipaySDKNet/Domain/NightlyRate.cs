@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -50,6 +51,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("price_discount_value")]
         public string PriceDiscountValue { get; set; }
+
+        /// <summary>
+        /// 酒店价格优惠详细列表
+        /// </summary>
+        [XmlArray("promotion_list")]
+        [XmlArrayItem("hotel_promotion_detail")]
+        public List<HotelPromotionDetail> PromotionList { get; set; }
 
         /// <summary>
         /// 促销活动名

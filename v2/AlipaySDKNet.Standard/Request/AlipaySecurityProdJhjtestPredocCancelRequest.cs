@@ -16,7 +16,7 @@ namespace Aop.Api.Request
         public string BizContent { get; set; }
 
         #region IAopRequest Members
-        private bool  needEncrypt=false;
+        private bool  needEncrypt=true;
         private string apiVersion = "1.0";
 	    private string terminalType;
 	    private string terminalInfo;

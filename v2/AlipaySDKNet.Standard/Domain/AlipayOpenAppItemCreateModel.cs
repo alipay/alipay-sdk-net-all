@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<AppItemAttrVO> Attrs { get; set; }
 
         /// <summary>
+        /// 商品提报，如果需要自动推广则传此参数true，如没有这需求传false
+        /// </summary>
+        [XmlElement("auto_marketing_delivery")]
+        public bool AutoMarketingDelivery { get; set; }
+
+        /// <summary>
         /// 条形码
         /// </summary>
         [XmlElement("barcode")]
@@ -42,7 +48,7 @@ namespace Aop.Api.Domain
         public ItemDescInfoVO DescInfo { get; set; }
 
         /// <summary>
-        /// 商品直接购买链接地址
+        /// 商品直接购买链接地址 当前字段已废弃(商品直接购买链接，无使用场景，接口文档屏蔽该字段)
         /// </summary>
         [XmlElement("direct_path")]
         public string DirectPath { get; set; }
@@ -114,6 +120,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sale_status")]
         public string SaleStatus { get; set; }
+
+        /// <summary>
+        /// 创建商品跳过算法检测
+        /// </summary>
+        [XmlElement("skip_algorithm_check")]
+        public string SkipAlgorithmCheck { get; set; }
 
         /// <summary>
         /// sku数组，sku数量上限为50

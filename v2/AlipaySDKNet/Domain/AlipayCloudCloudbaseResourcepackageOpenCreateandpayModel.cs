@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,12 @@ namespace Aop.Api.Domain
     [Serializable]
     public class AlipayCloudCloudbaseResourcepackageOpenCreateandpayModel : AopObject
     {
+        /// <summary>
+        /// 支付宝用户ID
+        /// </summary>
+        [XmlElement("alipay_user_id")]
+        public string AlipayUserId { get; set; }
+
         /// <summary>
         /// 是否自动续费
         /// </summary>
@@ -22,6 +29,13 @@ namespace Aop.Api.Domain
         public string BizAppId { get; set; }
 
         /// <summary>
+        /// 优惠券code列表，目前只使用第一张
+        /// </summary>
+        [XmlArray("coupon_codes")]
+        [XmlArrayItem("string")]
+        public List<string> CouponCodes { get; set; }
+
+        /// <summary>
         /// 环境描述
         /// </summary>
         [XmlElement("env_description")]
@@ -32,6 +46,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("env_name")]
         public string EnvName { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 购买时长(月)

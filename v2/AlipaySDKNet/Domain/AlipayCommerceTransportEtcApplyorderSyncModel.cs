@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public bool NeedRefund { get; set; }
 
         /// <summary>
-        /// 蚂蚁会员统一ID
+        /// 蚂蚁会员统一ID，当order_type非ALIPAY_CORP时必选
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -124,7 +124,7 @@ namespace Aop.Api.Domain
         public string PlateNo { get; set; }
 
         /// <summary>
-        /// 蚂蚁统一会员ID
+        /// 蚂蚁统一会员ID，当order_type非ALIPAY_CORP时必选
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

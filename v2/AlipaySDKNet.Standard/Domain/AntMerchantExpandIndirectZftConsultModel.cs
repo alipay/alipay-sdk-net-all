@@ -11,6 +11,24 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandIndirectZftConsultModel : AopObject
     {
         /// <summary>
+        /// 补充证件图片，与additional_cert_type+additional_cert_image搭配使用。当商户类型为个人时，使用当面付收款有限额，补充这组证件信息可提额。目前仅允许个人类型商户传入。其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key
+        /// </summary>
+        [XmlElement("additional_cert_image")]
+        public string AdditionalCertImage { get; set; }
+
+        /// <summary>
+        /// 补充证件号，与additional_cert_type+additional_cert_image搭配使用。当商户类型为个人时，使用当面付收款有限额，补充这组证件信息可提额。目前仅允许个人类型商户传入本字段。
+        /// </summary>
+        [XmlElement("additional_cert_no")]
+        public string AdditionalCertNo { get; set; }
+
+        /// <summary>
+        /// 补充证件类型，与additional_cert_no+additional_cert_image搭配使用。可选值有201（营业执照号）、204（民办非企业登记证书）、206（社会团体法人登记证书）、218（事业单位法人证书）、219（党政机关批准设立文件/行政执法主体资格证）。当商户类型为个人时，使用当面付收款有限额，补充这组证件信息可提额。目前仅允许个人类型商户传入本字段。 【枚举值】 营业执照: 201 事业单位法人证书: 218 民办非企业登记证书: 204 社会团体法人登记证书: 206 党政机关批准设立文件/行政执法主体资格证: 219
+        /// </summary>
+        [XmlElement("additional_cert_type")]
+        public string AdditionalCertType { get; set; }
+
+        /// <summary>
         /// 商户别名。支付宝账单中的商户名称会展示此处设置的别名，如果涉及支付宝APP内的支付，支付结果页也会展示该别名。如果涉及当面付场景，请填写线下店铺名称
         /// </summary>
         [XmlElement("alias_name")]
@@ -202,7 +220,7 @@ namespace Aop.Api.Domain
         public List<IndustryQualificationInfo> Qualifications { get; set; }
 
         /// <summary>
-        /// 商户使用服务，可选值有：当面付、jsapi支付、app支付、wap支付、电脑支付、线上资金预授权、新当面资金授权、预授权支付、商户代扣、小程序支付。其值会影响其他字段必填性，详见其他字段描述
+        /// 商户使用服务，可选值有：当面付、jsapi支付、app支付、wap支付、电脑支付、预授权支付、商户代扣、小程序支付、订单码支付。其值会影响其他字段必填性，详见其他字段描述
         /// </summary>
         [XmlArray("service")]
         [XmlArrayItem("string")]

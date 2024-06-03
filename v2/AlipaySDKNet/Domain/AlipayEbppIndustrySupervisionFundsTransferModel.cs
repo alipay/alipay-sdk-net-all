@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 保证金退款场景下，填收方账户类型，本次写02，代表对公户
+        /// 保证金退款场景下，填收方账户类型： 02 代表对公户。 01 代表对私户 监管资金转出场景必填
         /// </summary>
         [XmlElement("payee_account_type")]
         public string PayeeAccountType { get; set; }
 
         /// <summary>
-        /// 保证金退款场景下，填收方账户所在行的联行号，本次为支付宝联行号
+        /// 保证金退款场景下，填收方账户所在行的联行号，本次为支付宝联行号。 监管资金转出，且payee_account_type 为02时
         /// </summary>
         [XmlElement("payee_contact_line")]
         public string PayeeContactLine { get; set; }

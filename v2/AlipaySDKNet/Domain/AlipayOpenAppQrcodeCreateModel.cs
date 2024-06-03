@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Describe { get; set; }
 
         /// <summary>
-        /// 小程序的启动参数，打开小程序的query ，在小程序 onLaunch的方法中获取。可查看 <a href= "https://opendocs.alipay.com/support/01rb2a">如何获取各种场景的启动参数</a>。
+        /// 小程序启动参数，内容按照格式为参数名=参数值&参数名=参数值。打开小程序的query ，在小程序 onLaunch的方法中获取。可查看 <a href="https://opendocs.alipay.com/support/01rb2a">如何获取各种场景的启动参数</a>。
         /// </summary>
         [XmlElement("query_param")]
         public string QueryParam { get; set; }

@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 行业信息
+        /// </summary>
+        [XmlElement("biz_industry")]
+        public string BizIndustry { get; set; }
+
+        /// <summary>
         /// 用户在平台的userID，若来源是支付宝，就填支付宝的uid，否则传对应平台的uid
         /// </summary>
         [XmlElement("buyer_id")]
@@ -72,6 +78,12 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
+        /// 在支付宝侧的支付单号
+        /// </summary>
+        [XmlElement("pay_order_id")]
+        public string PayOrderId { get; set; }
+
+        /// <summary>
         /// 支付状态：等待支付、支付中、支付完成、支付失败
         /// </summary>
         [XmlElement("pay_status")]
@@ -94,6 +106,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("seller_open_id")]
         public string SellerOpenId { get; set; }
+
+        /// <summary>
+        /// 订单服务类型
+        /// </summary>
+        [XmlElement("service_type")]
+        public string ServiceType { get; set; }
 
         /// <summary>
         /// 订单来源平台

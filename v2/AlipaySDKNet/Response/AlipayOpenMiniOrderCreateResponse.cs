@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -25,5 +26,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_order_id")]
         public string OutOrderId { get; set; }
+
+        /// <summary>
+        /// 创单扩展信息
+        /// </summary>
+        [XmlElement("pay_info_response")]
+        public PayInfoResponse PayInfoResponse { get; set; }
     }
 }

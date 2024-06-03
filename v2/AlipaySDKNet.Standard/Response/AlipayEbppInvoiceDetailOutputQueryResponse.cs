@@ -17,7 +17,7 @@ namespace Aop.Api.Response
         public string AntiFakeCode { get; set; }
 
         /// <summary>
-        /// 不含税金额（废弃）
+        /// 不含税金额（废弃），单位元
         /// </summary>
         [XmlElement("ex_tax_amount")]
         public string ExTaxAmount { get; set; }
@@ -41,7 +41,7 @@ namespace Aop.Api.Response
         public string HasUploadPdf { get; set; }
 
         /// <summary>
-        /// 发票金额（价税合计金额）
+        /// 发票金额（价税合计金额），单位元
         /// </summary>
         [XmlElement("invoice_amount")]
         public string InvoiceAmount { get; set; }

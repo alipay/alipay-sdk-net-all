@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Country { get; set; }
 
         /// <summary>
+        /// 收款类型，用于标识本次账号校验的收款类型，用于区分银行卡收款，还是虚拟卡收款
+        /// </summary>
+        [XmlElement("receipt_method")]
+        public string ReceiptMethod { get; set; }
+
+        /// <summary>
         /// 学校id
         /// </summary>
         [XmlElement("school_id")]

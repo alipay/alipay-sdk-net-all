@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("image_type")]
         public string ImageType { get; set; }
+
+        /// <summary>
+        /// 图片URL
+        /// </summary>
+        [XmlElement("image_url")]
+        public string ImageUrl { get; set; }
     }
 }

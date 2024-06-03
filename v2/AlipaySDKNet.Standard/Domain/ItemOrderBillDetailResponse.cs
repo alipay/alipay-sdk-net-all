@@ -108,6 +108,12 @@ namespace Aop.Api.Domain
         public List<ItemOrderBillRefundResponse> RefundFeeList { get; set; }
 
         /// <summary>
+        /// 资金提供方，为租赁商提供货品采购资金，帮助租赁商扩大经营规模，资方收取部分佣金
+        /// </summary>
+        [XmlElement("rent_funder_commission_amount")]
+        public string RentFunderCommissionAmount { get; set; }
+
+        /// <summary>
         /// 订单二级场景类型
         /// </summary>
         [XmlElement("service_type")]

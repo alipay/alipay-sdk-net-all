@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CardType { get; set; }
 
         /// <summary>
-        /// 因公付金额
+        /// 因公付金额。单位：元
         /// </summary>
         [XmlElement("enterprise_pay_amount")]
         public string EnterprisePayAmount { get; set; }

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Material { get; set; }
 
         /// <summary>
+        /// 广告投放平台生成的物料实例ID
+        /// </summary>
+        [XmlElement("material_instance_id")]
+        public long MaterialInstanceId { get; set; }
+
+        /// <summary>
         /// 播放次数
         /// </summary>
         [XmlElement("play_frequency")]

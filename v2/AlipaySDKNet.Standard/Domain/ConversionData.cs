@@ -19,6 +19,13 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 转化事件属性信息，用于转化事件类型相关属性规则上传。 可支持上传属性的转化事件类型及属性规则请参考该文档：<a href='https://adpub.alipay.com/adrlark/ivdktpyh511x9r6i'>转化事件类型属性规则</a>
         /// </summary>
+        [XmlArray("attribute_list")]
+        [XmlArrayItem("conversion_property")]
+        public List<ConversionProperty> AttributeList { get; set; }
+
+        /// <summary>
+        /// 转化事件属性信息，用于转化事件类型相关属性规则上传。 可支持上传属性的转化事件类型及属性规则请参考该文档：<a href='https://adpub.alipay.com/adrlark/ivdktpyh511x9r6i'>转化事件类型属性规则</a> 当前字段已废弃(attributes命名不符合规范，需改名)
+        /// </summary>
         [XmlElement("attributes")]
         public ConversionProperty Attributes { get; set; }
 

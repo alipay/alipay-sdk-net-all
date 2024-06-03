@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class LabelFeedbackDetailModel : AopObject
     {
         /// <summary>
-        /// 曝光实力标内容
+        /// 曝光实力标内容代码列表
         /// </summary>
         [XmlArray("action_content")]
         [XmlArrayItem("string")]

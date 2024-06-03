@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Key { get; set; }
 
         /// <summary>
+        /// 广告投放平台生成的物料实例ID
+        /// </summary>
+        [XmlElement("material_instance_id")]
+        public long MaterialInstanceId { get; set; }
+
+        /// <summary>
         /// 交互动作属性元素类型，IMG-图片；TEXT-普通文本
         /// </summary>
         [XmlElement("type")]

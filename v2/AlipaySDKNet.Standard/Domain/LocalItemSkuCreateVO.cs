@@ -46,5 +46,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("stock_num")]
         public long StockNum { get; set; }
+
+        /// <summary>
+        /// 图片afts文件ID，可以通过 <a href="https://opendocs.alipay.com/mini/3fade898_alipay.marketing.image.enhance.upload?scene=a07c8e4fcf3e490f97d959445f393b01&pathHash=a941a783" target="_blank">alipay.marketing.image.enhance.upload</a> 获取图片文件id
+        /// </summary>
+        [XmlElement("thumb_img_id")]
+        public string ThumbImgId { get; set; }
     }
 }

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BackUrl { get; set; }
 
         /// <summary>
+        /// 钱包场景码
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
+        /// <summary>
         /// 待邀请用户的支付宝账号： identity_type是ALIPAY_USER_ID填支付宝会员账号； 是ALIPAY_LOGON_ID 填支付宝登录号（支持邮箱和手机号格式）
         /// </summary>
         [XmlElement("identity")]
@@ -38,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 钱包产品code一般为FUND_TRUSTSHIP
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
 
         /// <summary>
         /// 如果账号类型是ALIPAY_LOGIN_ID，则必传用户真实姓名，进行信息校验

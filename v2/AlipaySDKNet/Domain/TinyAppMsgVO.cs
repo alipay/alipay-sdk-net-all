@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string Image { get; set; }
 
         /// <summary>
+        /// 图片id
+        /// </summary>
+        [XmlElement("image_id")]
+        public string ImageId { get; set; }
+
+        /// <summary>
+        /// 建议选择有吸引力的图片，引导用户点击链接（支持的图片 jpg、png，限制1M以内)
+        /// </summary>
+        [XmlElement("image_url")]
+        public string ImageUrl { get; set; }
+
+        /// <summary>
         /// 应用id。用于入群欢迎语在群里展示。
         /// </summary>
         [XmlElement("tiny_app_id")]
@@ -46,7 +58,7 @@ namespace Aop.Api.Domain
         public string Title { get; set; }
 
         /// <summary>
-        /// 自定义链接或小程序页面链接（自定义链接请输入http,https或alipays开头的链接；小程序链接获取方式---获取小程序链接）
+        /// 自定义链接或小程序页面链接（自定义链接请输入http,https或alipays开头的链接）
         /// </summary>
         [XmlElement("url")]
         public string Url { get; set; }

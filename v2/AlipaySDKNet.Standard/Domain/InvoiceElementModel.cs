@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public bool HasRisk { get; set; }
 
         /// <summary>
-        /// 发票金额，含税
+        /// 发票金额，含税，单位元
         /// </summary>
         [XmlElement("invoice_amount")]
         public string InvoiceAmount { get; set; }
@@ -107,7 +107,7 @@ namespace Aop.Api.Domain
         public string MName { get; set; }
 
         /// <summary>
-        /// 发票金额，不含税
+        /// 发票金额，不含税，单位元
         /// </summary>
         [XmlElement("out_tax_amount")]
         public string OutTaxAmount { get; set; }

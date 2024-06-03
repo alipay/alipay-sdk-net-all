@@ -18,6 +18,12 @@ namespace Aop.Api.Response
         public List<AppItemAttrVO> Attrs { get; set; }
 
         /// <summary>
+        /// 透出商品是否自动推广：自动推广：true；不自动推广：false
+        /// </summary>
+        [XmlElement("auto_marketing_delivery")]
+        public bool AutoMarketingDelivery { get; set; }
+
+        /// <summary>
         /// 商品条形码
         /// </summary>
         [XmlElement("barcode")]
@@ -84,6 +90,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("item_details_page_model")]
         public string ItemDetailsPageModel { get; set; }
+
+        /// <summary>
+        /// 报名活动状态及文案
+        /// </summary>
+        [XmlElement("item_enroll_freeze_content")]
+        public ItemEnrollFreezeContent ItemEnrollFreezeContent { get; set; }
 
         /// <summary>
         /// 支付宝平台侧商品ID，是支付宝平台侧商品的唯一标识，后续与平台交互，需要使用该 ID，建议持久化。

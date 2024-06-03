@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string AuthorizeLinkType { get; set; }
 
         /// <summary>
+        /// 回跳地址
+        /// </summary>
+        [XmlElement("back_url")]
+        public string BackUrl { get; set; }
+
+        /// <summary>
         /// 业务场景码，固定值
         /// </summary>
         [XmlElement("biz_scene")]

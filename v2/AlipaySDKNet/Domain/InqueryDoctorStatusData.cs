@@ -58,5 +58,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("practicing_doctor_certificate_no")]
         public string PracticingDoctorCertificateNo { get; set; }
+
+        /// <summary>
+        /// 公益时长
+        /// </summary>
+        [XmlElement("public_time")]
+        public string PublicTime { get; set; }
     }
 }

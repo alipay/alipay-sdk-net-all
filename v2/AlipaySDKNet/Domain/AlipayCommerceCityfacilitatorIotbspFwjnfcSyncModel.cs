@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceCityfacilitatorIotbspFwjnfcSyncModel : AopObject
     {
         /// <summary>
+        /// 贴一贴后需要跳转的小程序appId
+        /// </summary>
+        [XmlElement("merchant_app_id")]
+        public string MerchantAppId { get; set; }
+
+        /// <summary>
         /// nfc设备BizTid
         /// </summary>
         [XmlElement("nfc_biz_tid")]
@@ -28,10 +34,28 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 小程序跳转地址参数，非必填，无参数可不配置
+        /// </summary>
+        [XmlElement("params")]
+        public string Params { get; set; }
+
+        /// <summary>
         /// pid
         /// </summary>
         [XmlElement("pid")]
         public string Pid { get; set; }
+
+        /// <summary>
+        /// 小程序跳转时，需要额外传递的页面参数
+        /// </summary>
+        [XmlElement("query_params")]
+        public string QueryParams { get; set; }
+
+        /// <summary>
+        /// 贴一贴小程序跳转的页面地址
+        /// </summary>
+        [XmlElement("route_page")]
+        public string RoutePage { get; set; }
 
         /// <summary>
         /// 上位机biztid

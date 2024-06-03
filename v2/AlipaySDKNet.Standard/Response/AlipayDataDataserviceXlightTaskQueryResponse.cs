@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayDataDataserviceXlightTaskQueryResponse : AopResponse
     {
         /// <summary>
-        /// 任务完成时间
+        /// 任务完成时间，任务已完成则会返回该字段
         /// </summary>
         [XmlElement("finish_time")]
         public string FinishTime { get; set; }

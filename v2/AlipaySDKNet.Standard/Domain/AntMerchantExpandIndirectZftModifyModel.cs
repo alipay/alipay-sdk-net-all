@@ -202,7 +202,7 @@ namespace Aop.Api.Domain
         public List<IndustryQualificationInfo> Qualifications { get; set; }
 
         /// <summary>
-        /// 商户使用服务，可选值有：当面付、jsapi支付、app支付、wap支付、电脑支付、线上资金预授权、新当面资金授权、预授权支付、商户代扣、小程序支付。其值会影响其他字段必填性，详见其他字段描述
+        /// 商户使用服务，可选值有：当面付、jsapi支付、app支付、wap支付、电脑支付、预授权支付、商户代扣、小程序支付、订单码支付。其值会影响其他字段必填性，详见其他字段描述
         /// </summary>
         [XmlArray("service")]
         [XmlArrayItem("string")]

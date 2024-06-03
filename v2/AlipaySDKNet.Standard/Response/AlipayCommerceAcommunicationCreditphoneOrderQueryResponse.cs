@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string FreezeAmount { get; set; }
 
         /// <summary>
+        /// 用户页面订单id，一般用户客诉
+        /// </summary>
+        [XmlElement("page_order_no")]
+        public string PageOrderNo { get; set; }
+
+        /// <summary>
         /// 用户签约生效时间。未签约时返回为空。
         /// </summary>
         [XmlElement("sign_time")]

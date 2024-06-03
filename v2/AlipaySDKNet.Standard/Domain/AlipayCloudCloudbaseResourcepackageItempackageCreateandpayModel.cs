@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -26,6 +27,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("commodity_code")]
         public string CommodityCode { get; set; }
+
+        /// <summary>
+        /// 优惠券code列表
+        /// </summary>
+        [XmlArray("coupon_codes")]
+        [XmlArrayItem("string")]
+        public List<string> CouponCodes { get; set; }
 
         /// <summary>
         /// 商品可购买周期数量

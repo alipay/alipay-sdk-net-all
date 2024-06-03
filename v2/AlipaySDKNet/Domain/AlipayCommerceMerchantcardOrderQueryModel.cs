@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 商户自定义外部单号
+        /// </summary>
+        [XmlElement("out_order_no")]
+        public string OutOrderNo { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

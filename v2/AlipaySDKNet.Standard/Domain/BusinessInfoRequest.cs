@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 小程序的服务页面url链接
+        /// 小程序的服务页面url链接 当前字段已废弃(程序中一直未曾使用过)
         /// </summary>
         [XmlElement("url")]
         public string Url { get; set; }

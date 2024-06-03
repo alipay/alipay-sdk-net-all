@@ -68,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pre_order_id")]
         public string PreOrderId { get; set; }
+
+        /// <summary>
+        /// 用户支付时的汇率
+        /// </summary>
+        [XmlElement("quote_price")]
+        public string QuotePrice { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
-        /// 商户指定的设备类型，不填则前端根据实际设备类型自动路由
+        /// 商家设备类型，非必填
         /// </summary>
         [XmlElement("device_type")]
         public string DeviceType { get; set; }

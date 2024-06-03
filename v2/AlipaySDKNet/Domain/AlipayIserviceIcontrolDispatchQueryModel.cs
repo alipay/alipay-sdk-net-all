@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayIserviceIcontrolDispatchQueryModel : AopObject
     {
         /// <summary>
-        /// 业务类型
+        /// 业务标签
         /// </summary>
         [XmlElement("business_type")]
         public string BusinessType { get; set; }
@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("question_level")]
         public string QuestionLevel { get; set; }
+
+        /// <summary>
+        /// 会话标签
+        /// </summary>
+        [XmlElement("session_label")]
+        public string SessionLabel { get; set; }
     }
 }

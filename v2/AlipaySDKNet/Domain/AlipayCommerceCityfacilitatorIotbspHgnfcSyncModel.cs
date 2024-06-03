@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizInfo { get; set; }
 
         /// <summary>
-        /// req_id
+        /// 0b446a3f17168015507584370e03f4
         /// </summary>
         [XmlElement("req_id")]
         public string ReqId { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// serviceId
+        /// 业务标识处理id
         /// </summary>
         [XmlElement("service_id")]
         public string ServiceId { get; set; }

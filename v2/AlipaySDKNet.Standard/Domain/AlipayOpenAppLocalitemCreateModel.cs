@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<AppItemAttrVO> Attrs { get; set; }
 
         /// <summary>
+        /// 商品提报，如果需要自动推广则传此参数true，如没有这需求传false
+        /// </summary>
+        [XmlElement("auto_marketing_delivery")]
+        public bool AutoMarketingDelivery { get; set; }
+
+        /// <summary>
         /// 商品类目ID，可通过alipay.open.app.localitem.allcategory.query接口获取
         /// </summary>
         [XmlElement("category_id")]

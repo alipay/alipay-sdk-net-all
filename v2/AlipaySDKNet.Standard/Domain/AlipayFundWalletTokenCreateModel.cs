@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Identity { get; set; }
 
         /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("identity_open_id")]
+        public string IdentityOpenId { get; set; }
+
+        /// <summary>
         /// 登陆类型
         /// </summary>
         [XmlElement("identity_type")]

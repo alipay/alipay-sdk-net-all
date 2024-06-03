@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string ChrgBchNo { get; set; }
 
         /// <summary>
+        /// 默认值normal
+        /// </summary>
+        [XmlElement("display_mode")]
+        public string DisplayMode { get; set; }
+
+        /// <summary>
         /// 医保支付扩展参数
         /// </summary>
         [XmlElement("extend_params")]

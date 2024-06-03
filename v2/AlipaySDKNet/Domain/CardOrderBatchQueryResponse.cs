@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CardOrderBatchQueryResponse : AopObject
     {
         /// <summary>
+        /// 用于区分订购单的取消类型
+        /// </summary>
+        [XmlElement("cancel_type")]
+        public string CancelType { get; set; }
+
+        /// <summary>
         /// 订购单ID
         /// </summary>
         [XmlElement("card_id")]
@@ -58,10 +64,28 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
+        /// 购买商品时的原价，单位分
+        /// </summary>
+        [XmlElement("origin_price_total")]
+        public long OriginPriceTotal { get; set; }
+
+        /// <summary>
+        /// 用于商户/服务商在插件商品详情页的自定义参数
+        /// </summary>
+        [XmlElement("out_order_no")]
+        public string OutOrderNo { get; set; }
+
+        /// <summary>
         /// 剩余期数(次数)
         /// </summary>
         [XmlElement("remain_count")]
         public long RemainCount { get; set; }
+
+        /// <summary>
+        /// 用户购买商品时的实际价格，单位分
+        /// </summary>
+        [XmlElement("sale_price_total")]
+        public long SalePriceTotal { get; set; }
 
         /// <summary>
         /// 门店ID
@@ -80,5 +104,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 脱敏后的用户名称
+        /// </summary>
+        [XmlElement("user_name")]
+        public string UserName { get; set; }
     }
 }

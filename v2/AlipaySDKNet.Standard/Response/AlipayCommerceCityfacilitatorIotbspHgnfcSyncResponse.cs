@@ -9,31 +9,31 @@ namespace Aop.Api.Response
     public class AlipayCommerceCityfacilitatorIotbspHgnfcSyncResponse : AopResponse
     {
         /// <summary>
-        /// result
+        /// 返回结果信息
         /// </summary>
         [XmlElement("result")]
         public string Result { get; set; }
 
         /// <summary>
-        /// retCode
+        /// 错误码
         /// </summary>
         [XmlElement("ret_code")]
         public string RetCode { get; set; }
 
         /// <summary>
-        /// ret_code_sub
+        /// 二级错误码
         /// </summary>
         [XmlElement("ret_code_sub")]
         public string RetCodeSub { get; set; }
 
         /// <summary>
-        /// retMessage
+        /// 错误原因
         /// </summary>
         [XmlElement("ret_message")]
         public string RetMessage { get; set; }
 
         /// <summary>
-        /// retMessageSub
+        /// 二级错误信息
         /// </summary>
         [XmlElement("ret_message_sub")]
         public string RetMessageSub { get; set; }

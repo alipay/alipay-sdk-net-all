@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class BillSendExtInfo : AopObject
     {
         /// <summary>
+        /// 学校外标编号
+        /// </summary>
+        [XmlElement("ext_school_id")]
+        public string ExtSchoolId { get; set; }
+
+        /// <summary>
         /// 账单唤起收银台的方式： 1-手机wap;2-当面付。默认值为1（不传值或传非数字值）
         /// </summary>
         [XmlElement("order_pay_type")]
@@ -20,6 +26,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("royalty_amount")]
         public string RoyaltyAmount { get; set; }
+
+        /// <summary>
+        /// 学校名称
+        /// </summary>
+        [XmlElement("school_name")]
+        public string SchoolName { get; set; }
 
         /// <summary>
         /// 2088xxx

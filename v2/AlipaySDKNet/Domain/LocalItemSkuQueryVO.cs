@@ -52,5 +52,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("stock_num")]
         public long StockNum { get; set; }
+
+        /// <summary>
+        /// sku图片afts文件链接，素材中心根据提报时的图片afts文件ID自动生成
+        /// </summary>
+        [XmlElement("thumb_img_url")]
+        public string ThumbImgUrl { get; set; }
     }
 }

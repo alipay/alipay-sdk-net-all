@@ -120,6 +120,48 @@ namespace Aop.Api.Domain
         public string LeadsCode { get; set; }
 
         /// <summary>
+        /// 部署资源云底座，多个用逗号隔开
+        /// </summary>
+        [XmlElement("leads_deploy_resource_pedestals")]
+        public string LeadsDeployResourcePedestals { get; set; }
+
+        /// <summary>
+        /// 商机收费模式
+        /// </summary>
+        [XmlElement("leads_fee_model")]
+        public string LeadsFeeModel { get; set; }
+
+        /// <summary>
+        /// 诺曼底商机
+        /// </summary>
+        [XmlElement("leads_normandy")]
+        public string LeadsNormandy { get; set; }
+
+        /// <summary>
+        /// 其他云底座文本值
+        /// </summary>
+        [XmlElement("leads_other_cloud_pedestal")]
+        public string LeadsOtherCloudPedestal { get; set; }
+
+        /// <summary>
+        /// 商机产品类别
+        /// </summary>
+        [XmlElement("leads_product_type")]
+        public string LeadsProductType { get; set; }
+
+        /// <summary>
+        /// 商机售卖渠道
+        /// </summary>
+        [XmlElement("leads_sale_channel")]
+        public string LeadsSaleChannel { get; set; }
+
+        /// <summary>
+        /// 商机售卖地域
+        /// </summary>
+        [XmlElement("leads_sale_territory")]
+        public string LeadsSaleTerritory { get; set; }
+
+        /// <summary>
         /// 商机来源伙伴pid
         /// </summary>
         [XmlElement("leads_source_partner_id")]

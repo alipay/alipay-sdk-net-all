@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string CardType { get; set; }
 
         /// <summary>
-        /// 商品类目ID
+        /// <a href="https://opendocs.alipay.com/mini/e265db10_alipay.open.app.localitem.allcategory.query?pathHash=186a810a">获取类目接口文档</a>
         /// </summary>
         [XmlElement("category_id")]
         public string CategoryId { get; set; }

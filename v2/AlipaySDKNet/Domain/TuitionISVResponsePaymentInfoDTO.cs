@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,6 +33,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bank_code")]
         public string BankCode { get; set; }
+
+        /// <summary>
+        /// 缴费凭证大字段，用于给合作ISV传输凭证，供ISV端展示
+        /// </summary>
+        [XmlArray("certificate_list")]
+        [XmlArrayItem("string")]
+        public List<string> CertificateList { get; set; }
 
         /// <summary>
         /// 国家码

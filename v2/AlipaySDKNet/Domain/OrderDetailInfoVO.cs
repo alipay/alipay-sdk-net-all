@@ -11,11 +11,23 @@ namespace Aop.Api.Domain
     public class OrderDetailInfoVO : AopObject
     {
         /// <summary>
+        /// 拼团信息
+        /// </summary>
+        [XmlElement("group_buy_info")]
+        public GroupBuyInfo GroupBuyInfo { get; set; }
+
+        /// <summary>
         /// 商品列表
         /// </summary>
         [XmlArray("item_infos")]
         [XmlArrayItem("order_item_info_v_o")]
         public List<OrderItemInfoVO> ItemInfos { get; set; }
+
+        /// <summary>
+        /// 订单标签对象
+        /// </summary>
+        [XmlElement("order_tag_info")]
+        public OrderTagInfo OrderTagInfo { get; set; }
 
         /// <summary>
         /// 支付信息

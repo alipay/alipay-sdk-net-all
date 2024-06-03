@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -31,6 +32,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("refused")]
         public string Refused { get; set; }
+
+        /// <summary>
+        /// 门店网商银行卡号
+        /// </summary>
+        [XmlArray("seller_mybank_card_no_list")]
+        [XmlArrayItem("string")]
+        public List<string> SellerMybankCardNoList { get; set; }
 
         /// <summary>
         /// 是否加白成功

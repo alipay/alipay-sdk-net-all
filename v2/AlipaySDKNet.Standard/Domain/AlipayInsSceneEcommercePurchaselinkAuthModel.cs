@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public long AtLeastDays { get; set; }
 
         /// <summary>
+        /// 买家
+        /// </summary>
+        [XmlElement("buyer")]
+        public EcomBuyerDTO Buyer { get; set; }
+
+        /// <summary>
         /// 订购主体为商品维度时必传
         /// </summary>
         [XmlElement("ecom_item")]
@@ -54,6 +60,19 @@ namespace Aop.Api.Domain
         public List<string> ProductCode { get; set; }
 
         /// <summary>
+        /// 指定订购产品方案ID列表
+        /// </summary>
+        [XmlArray("product_plan_ids")]
+        [XmlArrayItem("string")]
+        public List<string> ProductPlanIds { get; set; }
+
+        /// <summary>
+        /// 订购人类型 SELLER 卖家 BUYER  买家
+        /// </summary>
+        [XmlElement("purchase_user_type")]
+        public string PurchaseUserType { get; set; }
+
+        /// <summary>
         /// 订购主体维度:PURCHASE_USER 订购人（卖家维度）,ECOM_ITEM  商品维度
         /// </summary>
         [XmlElement("related_subject_type")]
@@ -66,7 +85,7 @@ namespace Aop.Api.Domain
         public EcomSellerDTO Seller { get; set; }
 
         /// <summary>
-        /// 客户端渠道：ios / android / pc / wx_applet(微信小程序)
+        /// 客户端渠道：ios / android / pc / wx_applet / alipay_applet
         /// </summary>
         [XmlElement("user_client")]
         public string UserClient { get; set; }

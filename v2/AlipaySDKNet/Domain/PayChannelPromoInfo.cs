@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -60,13 +61,15 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 分期模型
         /// </summary>
-        [XmlElement("installment_info_list")]
-        public InstallmentInfo InstallmentInfoList { get; set; }
+        [XmlArray("installment_info_list")]
+        [XmlArrayItem("installment_info")]
+        public List<InstallmentInfo> InstallmentInfoList { get; set; }
 
         /// <summary>
         /// 营销模型
         /// </summary>
-        [XmlElement("operation_list")]
-        public PrePayOperationInfo OperationList { get; set; }
+        [XmlArray("operation_list")]
+        [XmlArrayItem("pre_pay_operation_info")]
+        public List<PrePayOperationInfo> OperationList { get; set; }
     }
 }

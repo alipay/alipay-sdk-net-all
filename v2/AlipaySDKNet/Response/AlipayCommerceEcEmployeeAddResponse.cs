@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string IotUniqueId { get; set; }
 
         /// <summary>
+        /// 签约吱口令
+        /// </summary>
+        [XmlElement("share_code")]
+        public string ShareCode { get; set; }
+
+        /// <summary>
         /// 资金代付签约链接 1.员工未绑支付宝，拉起员工绑定页面 2.员工已绑支付宝，拉起资金签约页面
         /// </summary>
         [XmlElement("sign_url")]

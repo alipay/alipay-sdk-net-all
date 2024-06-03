@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public IndrISVAmountInfoDTO PaymentAmount { get; set; }
 
         /// <summary>
+        /// 缴费信息
+        /// </summary>
+        [XmlElement("payment_info")]
+        public IndrISVPaymentInfoDTO PaymentInfo { get; set; }
+
+        /// <summary>
         /// 预下单订单号
         /// </summary>
         [XmlElement("pre_order_id")]

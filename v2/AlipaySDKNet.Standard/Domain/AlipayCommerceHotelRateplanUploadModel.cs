@@ -30,6 +30,13 @@ namespace Aop.Api.Domain
         public bool Increment { get; set; }
 
         /// <summary>
+        /// 酒店价格优惠活动静态信息列表
+        /// </summary>
+        [XmlArray("promotion_static_info_list")]
+        [XmlArrayItem("hotel_promotion_static_info")]
+        public List<HotelPromotionStaticInfo> PromotionStaticInfoList { get; set; }
+
+        /// <summary>
         /// 价格计划列表
         /// </summary>
         [XmlArray("rate_plans")]

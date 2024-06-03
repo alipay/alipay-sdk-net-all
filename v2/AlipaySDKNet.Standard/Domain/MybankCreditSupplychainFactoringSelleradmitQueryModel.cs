@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BuyerAlipayId { get; set; }
 
         /// <summary>
+        /// isv支付宝id
+        /// </summary>
+        [XmlElement("buyer_open_id")]
+        public string BuyerOpenId { get; set; }
+
+        /// <summary>
         /// 门店名单类型,该值由网商提供
         /// </summary>
         [XmlElement("list_type")]

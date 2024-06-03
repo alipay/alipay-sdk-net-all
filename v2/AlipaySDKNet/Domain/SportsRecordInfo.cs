@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string OutBizCode { get; set; }
 
         /// <summary>
+        /// 运动计划ID，标识运动记录属于哪个运动计划
+        /// </summary>
+        [XmlElement("plan_id")]
+        public string PlanId { get; set; }
+
+        /// <summary>
         /// 运动流水的发生日期
         /// </summary>
         [XmlElement("record_date")]

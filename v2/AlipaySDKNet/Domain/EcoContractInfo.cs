@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public long SignDeadlineTime { get; set; }
 
         /// <summary>
-        /// 双方完成签署的时间，时间戳格式，单位为毫秒
+        /// 双方完成签署的时间，时间戳格式，单位为毫秒，如果不传默认为0
         /// </summary>
         [XmlElement("sign_end_time")]
         public long SignEndTime { get; set; }

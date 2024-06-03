@@ -56,5 +56,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("request_no")]
         public string RequestNo { get; set; }
+
+        /// <summary>
+        /// 套餐id
+        /// </summary>
+        [XmlElement("spu_id")]
+        public string SpuId { get; set; }
     }
 }

@@ -22,7 +22,25 @@ namespace Aop.Api.Domain
         public JhjTestNew ComC { get; set; }
 
         /// <summary>
-        /// 基础描述修改缓存11 当前字段已废弃(废弃了)
+        /// 1
+        /// </summary>
+        [XmlElement("is_s")]
+        public string IsS { get; set; }
+
+        /// <summary>
+        /// 11
+        /// </summary>
+        [XmlElement("isasdasd")]
+        public bool Isasdasd { get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [XmlElement("sdd")]
+        public bool Sdd { get; set; }
+
+        /// <summary>
+        /// 基础描述修改缓存11
         /// </summary>
         [XmlElement("test_a")]
         public string TestA { get; set; }

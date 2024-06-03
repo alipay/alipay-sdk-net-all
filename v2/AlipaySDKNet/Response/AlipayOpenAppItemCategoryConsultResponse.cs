@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayOpenAppItemCategoryConsultResponse : AopResponse
     {
         /// <summary>
+        /// 类目层级
+        /// </summary>
+        [XmlElement("cat_level")]
+        public long CatLevel { get; set; }
+
+        /// <summary>
         /// 类目不可用错误码
         /// </summary>
         [XmlElement("category_error_code")]

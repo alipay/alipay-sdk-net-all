@@ -10,10 +10,28 @@ namespace Aop.Api.Domain
     public class GroupUserVO : AopObject
     {
         /// <summary>
-        /// 身份证后4位，后台会进行校验。
+        /// 邀请者的user_id，2088开头的16位数字。
         /// </summary>
-        [XmlElement("cert_no")]
-        public string CertNo { get; set; }
+        [XmlElement("invite_id")]
+        public string InviteId { get; set; }
+
+        /// <summary>
+        /// 邀请者的open_id，2088开头的16位数字。
+        /// </summary>
+        [XmlElement("invite_open_id")]
+        public string InviteOpenId { get; set; }
+
+        /// <summary>
+        /// 入群时间
+        /// </summary>
+        [XmlElement("join_time")]
+        public string JoinTime { get; set; }
+
+        /// <summary>
+        /// 登录账号
+        /// </summary>
+        [XmlElement("login_id")]
+        public string LoginId { get; set; }
 
         /// <summary>
         /// 用户openid，2088开头的16位数字。

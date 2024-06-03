@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 报销操作。枚举值如下： *EXPENSE_APPLY：用户已提交申请。*EXPENSE_APPROVAL_PASS：报销审核通过。 *EXPENSE_FINISHED：报销完结。 *EXPENSE_CANCEL：报销撤回。
+        /// 报销操作
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

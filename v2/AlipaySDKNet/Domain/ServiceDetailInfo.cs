@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 用于feedback时，告知数据类型
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
+
+        /// <summary>
         /// 服务链接
         /// </summary>
         [XmlElement("url")]

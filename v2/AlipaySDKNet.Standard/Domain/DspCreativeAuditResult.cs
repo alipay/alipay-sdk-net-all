@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string RefuseReason { get; set; }
 
         /// <summary>
-        /// 审核状态 0审核通过 1审核中 2审核拒绝
+        /// 审核状态（0-初始化，1-审核通过，2-待审核，3-创意过期，-1-审核拒绝)
         /// </summary>
         [XmlElement("status")]
         public long Status { get; set; }

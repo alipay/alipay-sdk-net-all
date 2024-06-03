@@ -114,7 +114,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 个性化信息
+        /// 个性化信息 <a href='https://opendocs.alipay.com/pre-open/0ceh47?pathHash=14fac87c'>详见文档</a>
         /// </summary>
         [XmlElement("profiles")]
         public string Profiles { get; set; }

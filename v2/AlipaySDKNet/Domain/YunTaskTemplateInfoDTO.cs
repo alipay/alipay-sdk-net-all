@@ -112,6 +112,12 @@ namespace Aop.Api.Domain
         public string TaskEndTime { get; set; }
 
         /// <summary>
+        /// 任务推广背景图
+        /// </summary>
+        [XmlElement("task_img")]
+        public string TaskImg { get; set; }
+
+        /// <summary>
         /// 任务名称
         /// </summary>
         [XmlElement("task_name")]

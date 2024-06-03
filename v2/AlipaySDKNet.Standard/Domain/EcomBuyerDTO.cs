@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AlipayId { get; set; }
 
         /// <summary>
-        /// 支付宝登陆账号
+        /// 支付宝登录账号
         /// </summary>
         [XmlElement("alipay_logon_id")]
         public string AlipayLogonId { get; set; }
@@ -64,6 +64,18 @@ namespace Aop.Api.Domain
         public string BillAccountType { get; set; }
 
         /// <summary>
+        /// 买家协议保费
+        /// </summary>
+        [XmlElement("buyer_agreement_premium")]
+        public long BuyerAgreementPremium { get; set; }
+
+        /// <summary>
+        /// 买家协议保额
+        /// </summary>
+        [XmlElement("buyer_agreement_sum_insured")]
+        public long BuyerAgreementSumInsured { get; set; }
+
+        /// <summary>
         /// 买家id
         /// </summary>
         [XmlElement("buyer_id")]
@@ -92,6 +104,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("buyer_tag_data")]
         public string BuyerTagData { get; set; }
+
+        /// <summary>
+        /// 买家淘宝id
+        /// </summary>
+        [XmlElement("buyer_taobao_id")]
+        public string BuyerTaobaoId { get; set; }
 
         /// <summary>
         /// 身份证号

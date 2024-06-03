@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -38,5 +39,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_rent_risk_result")]
         public SubRentRiskResult SubRentRiskResult { get; set; }
+
+        /// <summary>
+        /// 子风险结果列表
+        /// </summary>
+        [XmlArray("sub_risk_result_list")]
+        [XmlArrayItem("sub_rent_risk_item")]
+        public List<SubRentRiskItem> SubRiskResultList { get; set; }
     }
 }

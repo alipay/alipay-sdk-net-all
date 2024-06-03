@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayEbppIndustrySupervisionFundstransferQuerystatusResponse : AopResponse
     {
         /// <summary>
+        /// 资金转出场景下，网商操作资金划拨至收方账户操作号
+        /// </summary>
+        [XmlElement("additional_operate_no")]
+        public string AdditionalOperateNo { get; set; }
+
+        /// <summary>
         /// 资金划拨的金额（单位分）
         /// </summary>
         [XmlElement("amount")]
@@ -27,10 +33,16 @@ namespace Aop.Api.Response
         public string Currency { get; set; }
 
         /// <summary>
-        /// 操作单号
+        /// 网商操作单号， 资金转出场景下，该字段表示网商子户资金解冻单号
         /// </summary>
         [XmlElement("operate_no")]
         public string OperateNo { get; set; }
+
+        /// <summary>
+        /// 划拨操作返回的操作单号
+        /// </summary>
+        [XmlElement("org_operate_no")]
+        public string OrgOperateNo { get; set; }
 
         /// <summary>
         /// 外部流水号确保每一笔资金划拨请求幂等。
@@ -39,7 +51,7 @@ namespace Aop.Api.Response
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 交易成功时有值
+        /// 交易成功时有值:结构 yyyymmddHHmmss
         /// </summary>
         [XmlElement("pay_finish_time")]
         public string PayFinishTime { get; set; }
@@ -87,13 +99,13 @@ namespace Aop.Api.Response
         public string PayerParticipantType { get; set; }
 
         /// <summary>
-        /// 保证金退保至支付宝ACS账户时需要经过监管子户过桥。该场景下，当前字段需要填写驾校监管子户号
+        /// 保证金退保至支付宝ACS账户时需要经过监管子户过桥。该场景下，当前字段需要填写驾校监管子户号  资金转出场景下，中间过渡母户号
         /// </summary>
         [XmlElement("relate_participant_id")]
         public string RelateParticipantId { get; set; }
 
         /// <summary>
-        /// 在保证金退回场景下，需要有监管子户过桥。 当前字段必填且为驾校监管子户
+        /// 在保证金退回场景下，需要有监管子户过桥。 当前字段必填且为驾校监管子户。 资金转出场景下，中间过渡母户类型
         /// </summary>
         [XmlElement("relate_participant_type")]
         public string RelateParticipantType { get; set; }

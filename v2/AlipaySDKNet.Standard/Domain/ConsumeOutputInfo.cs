@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string CategoryName { get; set; }
 
         /// <summary>
-        /// 金额
+        /// 金额，单位元
         /// </summary>
         [XmlElement("consume_amount")]
         public string ConsumeAmount { get; set; }

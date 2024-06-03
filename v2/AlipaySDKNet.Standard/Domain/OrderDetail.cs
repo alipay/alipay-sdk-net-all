@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// 营销扩展参数
+        /// </summary>
+        [XmlElement("promo_params")]
+        public PromoParam PromoParams { get; set; }
+
+        /// <summary>
         /// 分账信息
         /// </summary>
         [XmlElement("royalty_info")]
