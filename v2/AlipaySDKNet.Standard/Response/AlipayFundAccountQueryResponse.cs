@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipayFundAccountQueryResponse : AopResponse
     {
         /// <summary>
+        /// 支付宝账户的余额成份明细，仅当查询日终余额明细时返回
+        /// </summary>
+        [XmlElement("amount_detail")]
+        public BalanceAccountDetail AmountDetail { get; set; }
+
+        /// <summary>
         /// 账户可用余额，单位元，精确到小数点后两位。
         /// </summary>
         [XmlElement("available_amount")]
@@ -26,5 +32,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("freeze_amount")]
         public string FreezeAmount { get; set; }
+
+        /// <summary>
+        /// 支付宝账户的余额总数，仅当查询日终余额明细时返回。单位：元
+        /// </summary>
+        [XmlElement("total_amount")]
+        public string TotalAmount { get; set; }
     }
 }

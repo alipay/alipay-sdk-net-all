@@ -20,5 +20,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("enable_pay_channels")]
         public string EnablePayChannels { get; set; }
+
+        /// <summary>
+        /// 订单支付渠道，空值默认为支付宝支付
+        /// </summary>
+        [XmlElement("payment_biz_type")]
+        public string PaymentBizType { get; set; }
+
+        /// <summary>
+        /// 支付方式，到付等特殊场景下传入
+        /// </summary>
+        [XmlElement("payment_method")]
+        public string PaymentMethod { get; set; }
     }
 }

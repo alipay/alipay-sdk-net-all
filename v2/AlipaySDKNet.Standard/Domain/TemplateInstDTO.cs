@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class TemplateInstDTO : AopObject
     {
         /// <summary>
-        /// 文件名称
+        /// 实例文件名字
         /// </summary>
         [XmlElement("file_name")]
         public string FileName { get; set; }
 
         /// <summary>
-        /// html的oss地址
+        /// html格式的实例文件osskey
         /// </summary>
         [XmlElement("html_oss_url")]
         public string HtmlOssUrl { get; set; }
@@ -34,10 +34,16 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
-        /// word的oss地址
+        /// 模板实例文件oss文件key
         /// </summary>
         [XmlElement("oss_url")]
         public string OssUrl { get; set; }
+
+        /// <summary>
+        /// pdf预览地址
+        /// </summary>
+        [XmlElement("pdf_preview_url")]
+        public string PdfPreviewUrl { get; set; }
 
         /// <summary>
         /// word预览地址

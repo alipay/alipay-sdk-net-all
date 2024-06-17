@@ -48,6 +48,13 @@ namespace Aop.Api.Domain
         public List<string> QrcodeImgs { get; set; }
 
         /// <summary>
+        /// 码值url链接(必须是支付宝的码值),数组
+        /// </summary>
+        [XmlArray("qrcode_tokens")]
+        [XmlArrayItem("string")]
+        public List<string> QrcodeTokens { get; set; }
+
+        /// <summary>
         /// 店铺名称
         /// </summary>
         [XmlElement("shop_code")]

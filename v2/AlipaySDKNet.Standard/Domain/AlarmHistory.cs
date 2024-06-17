@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlarmHistory : AopObject
     {
         /// <summary>
+        /// 报警级别
+        /// </summary>
+        [XmlElement("alarm_level")]
+        public string AlarmLevel { get; set; }
+
+        /// <summary>
         /// 报警时间
         /// </summary>
         [XmlElement("alarm_time")]
@@ -62,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("total")]
         public long Total { get; set; }
+
+        /// <summary>
+        /// 触发条件
+        /// </summary>
+        [XmlElement("trigger_content")]
+        public string TriggerContent { get; set; }
     }
 }

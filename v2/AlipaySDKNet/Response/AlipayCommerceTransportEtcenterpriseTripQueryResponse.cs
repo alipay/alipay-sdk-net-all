@@ -23,6 +23,36 @@ namespace Aop.Api.Response
         public string BizMsg { get; set; }
 
         /// <summary>
+        /// 是否还有下一页
+        /// </summary>
+        [XmlElement("has_next")]
+        public bool HasNext { get; set; }
+
+        /// <summary>
+        /// 当前页码
+        /// </summary>
+        [XmlElement("page_num")]
+        public long PageNum { get; set; }
+
+        /// <summary>
+        /// 每页条数
+        /// </summary>
+        [XmlElement("page_size")]
+        public long PageSize { get; set; }
+
+        /// <summary>
+        /// 总页数
+        /// </summary>
+        [XmlElement("total_page")]
+        public long TotalPage { get; set; }
+
+        /// <summary>
+        /// 总记录数
+        /// </summary>
+        [XmlElement("total_size")]
+        public long TotalSize { get; set; }
+
+        /// <summary>
         /// 行程单据列表
         /// </summary>
         [XmlArray("trip_list")]

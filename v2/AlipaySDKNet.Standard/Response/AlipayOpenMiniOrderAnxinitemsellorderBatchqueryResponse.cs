@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayOpenMiniOrderAnxinitemsellorderBatchqueryResponse : AopResponse
     {
         /// <summary>
+        /// 是否有下一页，true代表有，false代表没有，如果有下一页，使用page_token翻到下一页
+        /// </summary>
+        [XmlElement("has_next_page")]
+        public bool HasNextPage { get; set; }
+
+        /// <summary>
         /// 售卖明细列表
         /// </summary>
         [XmlArray("order_list")]

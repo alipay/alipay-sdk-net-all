@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string LogisticsCode { get; set; }
 
         /// <summary>
+        /// 手机号后四位
+        /// </summary>
+        [XmlElement("phone_no")]
+        public string PhoneNo { get; set; }
+
+        /// <summary>
         /// 物流单号
         /// </summary>
         [XmlElement("tracking_no")]

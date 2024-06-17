@@ -70,6 +70,24 @@ namespace Aop.Api.Domain
         public string ViAc { get; set; }
 
         /// <summary>
+        /// 行驶证上的品牌型号信息
+        /// </summary>
+        [XmlElement("vi_brand_model")]
+        public string ViBrandModel { get; set; }
+
+        /// <summary>
+        /// 行驶证上的车辆类型
+        /// </summary>
+        [XmlElement("vi_car_type")]
+        public string ViCarType { get; set; }
+
+        /// <summary>
+        /// 行驶证上的发动机号
+        /// </summary>
+        [XmlElement("vi_engine_no")]
+        public string ViEngineNo { get; set; }
+
+        /// <summary>
         /// 总质量,单位kg
         /// </summary>
         [XmlElement("vi_gross_mass")]
@@ -88,10 +106,34 @@ namespace Aop.Api.Domain
         public string ViLength { get; set; }
 
         /// <summary>
+        /// 行驶证上的发证时间
+        /// </summary>
+        [XmlElement("vi_license_issue_date")]
+        public string ViLicenseIssueDate { get; set; }
+
+        /// <summary>
+        /// 行驶证上的注册时间
+        /// </summary>
+        [XmlElement("vi_license_register_date")]
+        public string ViLicenseRegisterDate { get; set; }
+
+        /// <summary>
         /// 行驶证上的车主姓名
         /// </summary>
         [XmlElement("vi_owner_name")]
         public string ViOwnerName { get; set; }
+
+        /// <summary>
+        /// 行驶证上的使用性质
+        /// </summary>
+        [XmlElement("vi_use_type")]
+        public string ViUseType { get; set; }
+
+        /// <summary>
+        /// 行驶证上的车架号信息
+        /// </summary>
+        [XmlElement("vi_vin")]
+        public string ViVin { get; set; }
 
         /// <summary>
         /// 车宽，单位mm

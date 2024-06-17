@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCloudCloudbaseMonitorAlarmhistoryGetResponse : AopResponse
     {
         /// <summary>
+        /// 报警级别
+        /// </summary>
+        [XmlElement("alarm_level")]
+        public string AlarmLevel { get; set; }
+
+        /// <summary>
         /// 报警时间
         /// </summary>
         [XmlElement("alarm_time")]
@@ -43,5 +49,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("rule_name")]
         public string RuleName { get; set; }
+
+        /// <summary>
+        /// 触发条件
+        /// </summary>
+        [XmlElement("trigger_content")]
+        public string TriggerContent { get; set; }
     }
 }

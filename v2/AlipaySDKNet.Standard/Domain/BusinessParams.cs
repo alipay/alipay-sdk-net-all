@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string McCreateTradeIp { get; set; }
 
         /// <summary>
+        /// 信用预授权转交易阶段，优先解冻的用户资产 CREDIT_ASSET：信用资产 COMMON_ASSET：自有资金资产 默认优先解冻资金资产
+        /// </summary>
+        [XmlElement("priority_unfreeze_asset")]
+        public string PriorityUnfreezeAsset { get; set; }
+
+        /// <summary>
         /// 当需要在 商家平台（b.alipay.com）—数据中心 中查看对应业务场景下的数据明细可以通过该参数传入 支持传入的值：<a target="_blank" href="https://opendocs.alipay.com/mini/08by8k?pathHash=96e03412">小程序细分业务场景</a>
         /// </summary>
         [XmlElement("tiny_app_merchant_biz_type")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CardType { get; set; }
 
         /// <summary>
+        /// 信用参数，可选，如有需要请与芝麻约定后传入，信用服务说明见
+        /// </summary>
+        [XmlElement("credit_ext_info")]
+        public string CreditExtInfo { get; set; }
+
+        /// <summary>
         /// 使用花呗分期要进行的分期数
         /// </summary>
         [XmlElement("hb_fq_num")]

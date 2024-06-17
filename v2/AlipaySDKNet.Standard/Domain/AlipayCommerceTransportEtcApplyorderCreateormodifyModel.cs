@@ -112,6 +112,12 @@ namespace Aop.Api.Domain
         public string ViLicenseApc { get; set; }
 
         /// <summary>
+        /// ETC办理时，可提供行驶证图片以便审核。此处需要提供上传图片后得到图片ID。
+        /// </summary>
+        [XmlElement("vi_license_back_img")]
+        public string ViLicenseBackImg { get; set; }
+
+        /// <summary>
         /// 行驶证信息-品牌车型
         /// </summary>
         [XmlElement("vi_license_brand_model")]
@@ -128,6 +134,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("vi_license_engine")]
         public string ViLicenseEngine { get; set; }
+
+        /// <summary>
+        /// ETC办理时，可提供行驶证图片以便审核。此处需要提供上传图片后得到图片ID。
+        /// </summary>
+        [XmlElement("vi_license_front_img")]
+        public string ViLicenseFrontImg { get; set; }
 
         /// <summary>
         /// 行驶证信息-总质量

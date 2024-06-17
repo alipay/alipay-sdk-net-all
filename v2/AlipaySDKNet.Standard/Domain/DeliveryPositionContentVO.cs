@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public DeliveryFatigueContent ContentFatigue { get; set; }
 
         /// <summary>
+        /// 经营基建展位内容埋点信息，用于完成埋点信息上报
+        /// </summary>
+        [XmlElement("content_info_log")]
+        public string ContentInfoLog { get; set; }
+
+        /// <summary>
         /// 创意对应的疲劳度配置信息
         /// </summary>
         [XmlElement("creativity_fatigue")]

@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 告警是否启用
+        /// </summary>
+        [XmlElement("open")]
+        public bool Open { get; set; }
+
+        /// <summary>
         /// 报警生效时间配置
         /// </summary>
         [XmlElement("time_config")]

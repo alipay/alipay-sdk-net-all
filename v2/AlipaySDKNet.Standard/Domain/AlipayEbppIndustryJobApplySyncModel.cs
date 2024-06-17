@@ -34,6 +34,24 @@ namespace Aop.Api.Domain
         public string ApplyTime { get; set; }
 
         /// <summary>
+        /// 业务场景ID，例如招聘专场id
+        /// </summary>
+        [XmlElement("biz_id")]
+        public string BizId { get; set; }
+
+        /// <summary>
+        /// 用于记录面试地点信息
+        /// </summary>
+        [XmlElement("inter_address")]
+        public string InterAddress { get; set; }
+
+        /// <summary>
+        /// 面试时间
+        /// </summary>
+        [XmlElement("inter_time")]
+        public string InterTime { get; set; }
+
+        /// <summary>
         /// IoT设备SN号，该字段向IoT服务商定向开放，非IoT服务商无需传值
         /// </summary>
         [XmlElement("iot_sn")]

@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// 顺序（升序or降序）
+        /// </summary>
+        [XmlElement("order")]
+        public string Order { get; set; }
+
+        /// <summary>
+        /// 排序的属性
+        /// </summary>
+        [XmlElement("order_by")]
+        public string OrderBy { get; set; }
+
+        /// <summary>
         /// 当前页码，从1开始，默认为1
         /// </summary>
         [XmlElement("page_num")]

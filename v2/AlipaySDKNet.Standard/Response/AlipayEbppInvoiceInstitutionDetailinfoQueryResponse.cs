@@ -92,6 +92,12 @@ namespace Aop.Api.Response
         public List<string> OwnerOpenIdList { get; set; }
 
         /// <summary>
+        /// 适配id类型
+        /// </summary>
+        [XmlElement("owner_type")]
+        public string OwnerType { get; set; }
+
+        /// <summary>
         /// 因公场景
         /// </summary>
         [XmlElement("scene_type")]

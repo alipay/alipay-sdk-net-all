@@ -111,6 +111,12 @@ namespace Aop.Api.Response
         public string PayAmount { get; set; }
 
         /// <summary>
+        /// 退款状态描述
+        /// </summary>
+        [XmlElement("refund_status_str")]
+        public string RefundStatusStr { get; set; }
+
+        /// <summary>
         /// 行业业务受理平台分配的业务服务编码
         /// </summary>
         [XmlElement("service_code")]

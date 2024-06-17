@@ -80,6 +80,13 @@ namespace Aop.Api.Domain
         public string RatePlanId { get; set; }
 
         /// <summary>
+        /// 价格计划标签列表
+        /// </summary>
+        [XmlArray("rate_plan_labels")]
+        [XmlArrayItem("rate_plan_label")]
+        public List<RatePlanLabel> RatePlanLabels { get; set; }
+
+        /// <summary>
         /// 产品名称
         /// </summary>
         [XmlElement("rate_plan_name")]

@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string Id { get; set; }
 
         /// <summary>
-        /// name
+        /// 【甲方姓名】
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
@@ -46,25 +46,25 @@ namespace Aop.Api.Domain
         public string Placeholder { get; set; }
 
         /// <summary>
-        /// readonly
+        /// 是否只读
         /// </summary>
         [XmlElement("readonly")]
         public string Readonly { get; set; }
 
         /// <summary>
-        /// ref
+        /// 关联的属性
         /// </summary>
         [XmlElement("ref")]
         public string Ref { get; set; }
 
         /// <summary>
-        /// required
+        /// 组件是否必填
         /// </summary>
         [XmlElement("required")]
         public string Required { get; set; }
 
         /// <summary>
-        /// size
+        /// 组件值最大长度
         /// </summary>
         [XmlElement("size")]
         public string Size { get; set; }

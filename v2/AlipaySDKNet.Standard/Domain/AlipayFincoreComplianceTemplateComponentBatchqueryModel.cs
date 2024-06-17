@@ -16,5 +16,11 @@ namespace Aop.Api.Domain
         [XmlArray("template_codes")]
         [XmlArrayItem("string")]
         public List<string> TemplateCodes { get; set; }
+
+        /// <summary>
+        /// 模板库编码
+        /// </summary>
+        [XmlElement("template_lib_code")]
+        public string TemplateLibCode { get; set; }
     }
 }

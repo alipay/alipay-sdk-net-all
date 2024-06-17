@@ -22,6 +22,24 @@ namespace Aop.Api.Domain
         public string CorpVehicleId { get; set; }
 
         /// <summary>
+        /// 行程查询结束时间
+        /// </summary>
+        [XmlElement("end_time")]
+        public string EndTime { get; set; }
+
+        /// <summary>
+        /// 当前页码
+        /// </summary>
+        [XmlElement("page_num")]
+        public long PageNum { get; set; }
+
+        /// <summary>
+        /// 每页数据条数
+        /// </summary>
+        [XmlElement("page_size")]
+        public long PageSize { get; set; }
+
+        /// <summary>
         /// 0：蓝； 1：黄； 2：黑； 3：白； 4：渐变绿
         /// </summary>
         [XmlElement("plate_color")]
@@ -32,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plate_no")]
         public string PlateNo { get; set; }
+
+        /// <summary>
+        /// 行程查询开始时间
+        /// </summary>
+        [XmlElement("start_time")]
+        public string StartTime { get; set; }
 
         /// <summary>
         /// 企业运单号

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -20,6 +21,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 返回的实例列表
+        /// </summary>
+        [XmlArray("template_instance_list")]
+        [XmlArrayItem("template_inst_d_t_o")]
+        public List<TemplateInstDTO> TemplateInstanceList { get; set; }
 
         /// <summary>
         /// 模版实例

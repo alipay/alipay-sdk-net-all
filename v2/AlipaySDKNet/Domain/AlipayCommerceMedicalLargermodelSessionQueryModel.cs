@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 用于区分同一个app下的机构
+        /// </summary>
+        [XmlElement("org_id")]
+        public string OrgId { get; set; }
+
+        /// <summary>
         /// 用户的userId。
         /// </summary>
         [XmlElement("out_user_id")]

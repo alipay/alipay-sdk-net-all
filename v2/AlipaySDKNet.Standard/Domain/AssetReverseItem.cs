@@ -162,6 +162,12 @@ namespace Aop.Api.Domain
         public string ReverseType { get; set; }
 
         /// <summary>
+        /// 供应商id
+        /// </summary>
+        [XmlElement("supplier_id")]
+        public string SupplierId { get; set; }
+
+        /// <summary>
         /// 目标地址
         /// </summary>
         [XmlElement("to_address")]

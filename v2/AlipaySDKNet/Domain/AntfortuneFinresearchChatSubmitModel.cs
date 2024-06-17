@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string FileType { get; set; }
 
         /// <summary>
+        /// RAG 快速解读，PEER 4e模式 不传默认使用PEER，
+        /// </summary>
+        [XmlElement("interpret_mode")]
+        public string InterpretMode { get; set; }
+
+        /// <summary>
         /// 用户所要提问的问题
         /// </summary>
         [XmlElement("question")]

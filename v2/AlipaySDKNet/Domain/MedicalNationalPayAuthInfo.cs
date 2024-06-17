@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string AuthUrl { get; set; }
 
         /// <summary>
+        /// 电子凭证中心线上身份核验返回的默认参保地
+        /// </summary>
+        [XmlElement("insu_org")]
+        public string InsuOrg { get; set; }
+
+        /// <summary>
         /// 就诊用户卡信息中机构内卡号,授权成功时返回
         /// </summary>
         [XmlElement("medical_card_id")]

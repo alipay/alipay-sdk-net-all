@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string IndustryCategory { get; set; }
 
         /// <summary>
+        /// 重点客户枚举CODE
+        /// </summary>
+        [XmlElement("key_customer")]
+        public string KeyCustomer { get; set; }
+
+        /// <summary>
         /// 所属地区
         /// </summary>
         [XmlElement("location")]
@@ -110,6 +116,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("memo")]
         public string Memo { get; set; }
+
+        /// <summary>
+        /// 公有云一级行业枚举CODE
+        /// </summary>
+        [XmlElement("pub_cloud_first_level_industry")]
+        public string PubCloudFirstLevelIndustry { get; set; }
+
+        /// <summary>
+        /// 公有云二级行业枚举CODE
+        /// </summary>
+        [XmlElement("pub_cloud_second_level_industry")]
+        public string PubCloudSecondLevelIndustry { get; set; }
 
         /// <summary>
         /// 区域

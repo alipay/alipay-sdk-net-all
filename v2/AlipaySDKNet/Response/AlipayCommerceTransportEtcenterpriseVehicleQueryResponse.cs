@@ -57,6 +57,12 @@ namespace Aop.Api.Response
         public string DeviceStatusDetail { get; set; }
 
         /// <summary>
+        /// 设备首次激活时间
+        /// </summary>
+        [XmlElement("first_actived_time")]
+        public string FirstActivedTime { get; set; }
+
+        /// <summary>
         /// 支付宝侧订单号
         /// </summary>
         [XmlElement("order_id")]
@@ -67,6 +73,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }
+
+        /// <summary>
+        /// 合约到期时间
+        /// </summary>
+        [XmlElement("service_exp")]
+        public string ServiceExp { get; set; }
 
         /// <summary>
         /// 支付宝车辆id

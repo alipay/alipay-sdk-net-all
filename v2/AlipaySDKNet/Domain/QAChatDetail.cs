@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ChatUuid { get; set; }
 
         /// <summary>
+        /// 数据创建时间
+        /// </summary>
+        [XmlElement("local_timestamp")]
+        public string LocalTimestamp { get; set; }
+
+        /// <summary>
         /// 问题内容
         /// </summary>
         [XmlElement("query")]

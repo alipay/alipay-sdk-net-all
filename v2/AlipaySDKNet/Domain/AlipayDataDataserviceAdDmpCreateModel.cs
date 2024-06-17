@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string DataType { get; set; }
 
         /// <summary>
-        /// 设备号数据，元素个数不能超过2000
+        /// 设备号数据，元素个数不能超过5000
         /// </summary>
         [XmlArray("device_ids")]
         [XmlArrayItem("string")]
