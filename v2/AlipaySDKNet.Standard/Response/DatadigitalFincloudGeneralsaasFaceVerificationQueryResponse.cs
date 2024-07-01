@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -25,6 +26,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("certify_state")]
         public string CertifyState { get; set; }
+
+        /// <summary>
+        /// 人脸认证元数据信息
+        /// </summary>
+        [XmlElement("meta_info")]
+        public OpenCertifyMetaInfo MetaInfo { get; set; }
 
         /// <summary>
         /// double值，人脸图片质量分

@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public BankcardExtInfo BankcardExtInfo { get; set; }
 
         /// <summary>
+        /// 参与方的证件号，支持身份证号、护照号。
+        /// </summary>
+        [XmlElement("cert_no")]
+        public string CertNo { get; set; }
+
+        /// <summary>
+        /// 参与方的证件类型。
+        /// </summary>
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
+
+        /// <summary>
         /// 描述参与方信息的扩展属性，使用前请与支付宝工程师确认
         /// </summary>
         [XmlElement("ext_info")]

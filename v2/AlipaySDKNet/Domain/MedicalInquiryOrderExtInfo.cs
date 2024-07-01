@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string OrderPid { get; set; }
 
         /// <summary>
+        /// 加号核销码等信息
+        /// </summary>
+        [XmlElement("plus_register_info")]
+        public PlusRegisterInfo PlusRegisterInfo { get; set; }
+
+        /// <summary>
         /// 链接格式
         /// </summary>
         [XmlElement("refund_url")]

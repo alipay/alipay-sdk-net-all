@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayTradeDeductMergePayResponse : AopResponse
     {
         /// <summary>
+        /// 用户userId，2088开头
+        /// </summary>
+        [XmlElement("buyer_user_id")]
+        public string BuyerUserId { get; set; }
+
+        /// <summary>
         /// 子单明细
         /// </summary>
         [XmlArray("order_detail_results")]

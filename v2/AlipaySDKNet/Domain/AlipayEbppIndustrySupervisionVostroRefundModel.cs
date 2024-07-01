@@ -10,37 +10,37 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustrySupervisionVostroRefundModel : AopObject
     {
         /// <summary>
-        /// 网商来帐通知对应子户户号，用于原路退校验
+        /// 来帐通知中对应的入账账户
         /// </summary>
         [XmlElement("account_no")]
         public string AccountNo { get; set; }
 
         /// <summary>
-        /// 网商来帐通知对应子户类型
+        /// 来帐通知中对应的入账账户 在子户账户创建时的子户庄户类型
         /// </summary>
         [XmlElement("account_type")]
         public string AccountType { get; set; }
 
         /// <summary>
-        /// 退款金额，当前只支持原单全额退.单位分
+        /// 退款金额
         /// </summary>
         [XmlElement("amount")]
         public long Amount { get; set; }
 
         /// <summary>
-        /// 业务场景
+        /// 不同的业务场景下对应不同的业务规则
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 原网商来帐单号（order_no）
+        /// 对应来帐通知接口的「银行侧来账业务单号 order_no 」
         /// </summary>
         [XmlElement("org_order_no")]
         public string OrgOrderNo { get; set; }
 
         /// <summary>
-        /// 业务流水号，相同请求幂等返回
+        /// 商户内部生成的本次原路退请求流水号
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }

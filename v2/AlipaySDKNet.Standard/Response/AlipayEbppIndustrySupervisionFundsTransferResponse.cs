@@ -9,13 +9,13 @@ namespace Aop.Api.Response
     public class AlipayEbppIndustrySupervisionFundsTransferResponse : AopResponse
     {
         /// <summary>
-        /// 操作单号，后续回调和查询划拨结果是需要带过来
+        /// 支付宝内部受理本次资金划拨请求时生成的流水单号
         /// </summary>
         [XmlElement("operate_no")]
         public string OperateNo { get; set; }
 
         /// <summary>
-        /// 等于请求参数中的外部流水号
+        /// 对应当前请求参数的「外部请求流水号 out_trade_no 」
         /// </summary>
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }

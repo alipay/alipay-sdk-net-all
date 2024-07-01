@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string OrderAmount { get; set; }
 
         /// <summary>
+        /// 营销信息，包含promo_taobao等信息
+        /// </summary>
+        [XmlElement("promo_info")]
+        public string PromoInfo { get; set; }
+
+        /// <summary>
         /// 参考调用收银台的promoParams，如需咨询结果与拉起收银台一致需要保证这个参数一致
         /// </summary>
         [XmlElement("promo_rule")]

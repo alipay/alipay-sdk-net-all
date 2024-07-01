@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// 小程序ID，若不指定，则以当前调用OPENAPI的小程序ID查询售卖订单
+        /// </summary>
+        [XmlElement("mini_app_id")]
+        public string MiniAppId { get; set; }
+
+        /// <summary>
         /// 分页大小
         /// </summary>
         [XmlElement("page_size")]

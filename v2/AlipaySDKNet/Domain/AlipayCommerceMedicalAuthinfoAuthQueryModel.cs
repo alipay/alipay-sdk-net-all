@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string OlBizTypeCode { get; set; }
 
         /// <summary>
+        /// 业务类型为04107且办理移动支付线上购药时需传入该字段
+        /// </summary>
+        [XmlElement("online_drug_chnl_app_id")]
+        public string OnlineDrugChnlAppId { get; set; }
+
+        /// <summary>
         /// 支付宝用户Id
         /// </summary>
         [XmlElement("open_id")]

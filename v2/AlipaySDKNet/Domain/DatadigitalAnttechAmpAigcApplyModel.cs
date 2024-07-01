@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string Context { get; set; }
 
         /// <summary>
+        /// 设备id
+        /// </summary>
+        [XmlElement("device_id")]
+        public string DeviceId { get; set; }
+
+        /// <summary>
+        /// 设备id类型
+        /// </summary>
+        [XmlElement("device_id_type")]
+        public string DeviceIdType { get; set; }
+
+        /// <summary>
         /// 像素高
         /// </summary>
         [XmlElement("height")]

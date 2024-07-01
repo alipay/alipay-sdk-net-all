@@ -40,5 +40,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("landing_url")]
         public string LandingUrl { get; set; }
+
+        /// <summary>
+        /// 商品视频信息
+        /// </summary>
+        [XmlArray("product_videos")]
+        [XmlArrayItem("video_info")]
+        public List<VideoInfo> ProductVideos { get; set; }
     }
 }

@@ -55,7 +55,7 @@ namespace Aop.Api.Domain
         public DeliveryMerchantRule DeliveryMerchantRule { get; set; }
 
         /// <summary>
-        /// 推荐定向曝光订单优惠标记。 1. 创建交易订单时，上传符合的订单优惠标。在业务参数信息“business_params”的子字段“delivery_promo_tags”填充订单优惠标。“统一收单交易支付接口”详情查看：https://opendocs.alipay.com/open/02ekfp?scene=32。 2. 订单优惠标，检验规则： * 单个优惠标最大长度32字节。多个标记值以英文逗号分隔。 * 单个优惠标仅支持字母/数字/下划线。 3. 订单优惠标规则和其他推荐规则同时叠加。
+        /// 推荐定向曝光订单优惠标记。 1. 创建交易订单时，上传符合的订单优惠标。在业务参数信息“business_params”的子字段“delivery_promo_tags”填充订单优惠标。“统一收单交易支付接口”详情查看：<a href ="https://opendocs.alipay.com/open/02ekfp?scene=32"> https://opendocs.alipay.com/open/02ekfp?scene=32</a>  2. 订单优惠标，检验规则： * 单个优惠标最大长度32字节。多个标记值以英文逗号分隔。 * 单个优惠标仅支持字母/数字/下划线。 3. 订单优惠标规则和其他推荐规则同时叠加。
         /// </summary>
         [XmlElement("delivery_promo_tags")]
         public string DeliveryPromoTags { get; set; }

@@ -72,6 +72,12 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// 退货寄送方式 action_code为201时可选填入, 不传入的情况下使用商家自行接入的售后物流能力。
+        /// </summary>
+        [XmlElement("return_delivery_type")]
+        public string ReturnDeliveryType { get; set; }
+
+        /// <summary>
         /// 买家支付宝用户id，小程序场景下获取用户ID请参考：<a href="https://opendocs.alipay.com/mini/05dxgc?pathHash=1a3ecb13">用户授权</a>; 其它场景下获取用户ID请参考：<a href="https://opendocs.alipay.com/open/284/web">网页授权获取用户信息</a>。
         /// </summary>
         [XmlElement("user_id")]

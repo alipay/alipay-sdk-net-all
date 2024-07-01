@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ExpectPayTime { get; set; }
 
         /// <summary>
+        /// 每一期的扣款分期单号
+        /// </summary>
+        [XmlElement("installment_id")]
+        public string InstallmentId { get; set; }
+
+        /// <summary>
         /// 代表某一个阶段的第几期的还款计划，要结合stage进行锁定某一期计划
         /// </summary>
         [XmlElement("period")]

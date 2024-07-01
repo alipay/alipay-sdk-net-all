@@ -18,13 +18,13 @@ namespace Aop.Api.Response
         public List<SupervisionBillInfo> BillList { get; set; }
 
         /// <summary>
-        /// 当前页面
+        /// 当前页码 对应查询参数的「查询页码 page_index 」
         /// </summary>
         [XmlElement("page_index")]
         public long PageIndex { get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// 每页记录数
         /// </summary>
         [XmlElement("page_size")]
         public string PageSize { get; set; }

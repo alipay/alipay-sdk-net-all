@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
+        /// 商品类型
+        /// </summary>
+        [XmlElement("goods_type")]
+        public string GoodsType { get; set; }
+
+        /// <summary>
         /// 商品图片，用于小程序订单中心展示，可通过 <a href="https://opendocs.alipay.com/mini/03l4lq?pathHash=c08922b1&scene=common">alipay.merchant.item.file.upload </a>接口上传素材获取素材id。默认使用已上报的商品库素材信息。
         /// </summary>
         [XmlElement("image_material_id")]

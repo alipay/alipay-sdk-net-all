@@ -10,10 +10,22 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustryGovserviceRecommendQueryModel : AopObject
     {
         /// <summary>
+        /// 兜底城市code
+        /// </summary>
+        [XmlElement("actual_city_code")]
+        public string ActualCityCode { get; set; }
+
+        /// <summary>
         /// 服务展示渠道
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
+
+        /// <summary>
+        /// lbs城市code
+        /// </summary>
+        [XmlElement("city_code")]
+        public string CityCode { get; set; }
 
         /// <summary>
         /// 当其他端不支持支付宝uid时，用于标识用户的唯一标识

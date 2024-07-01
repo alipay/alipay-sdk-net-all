@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string CrowdSize { get; set; }
 
         /// <summary>
-        /// 商户外部用户人群code 用于标识商家人群，需保证同一商户下crowd_code唯一
+        /// 商户外部用户人群code 用于标识商家人群，需保证同一商户下crowd_code唯一。 当且仅当通过openapi接口创建的人群不为空，其余方式创建出的人群本字段可能为空
         /// </summary>
         [XmlElement("external_crowd_code")]
         public string ExternalCrowdCode { get; set; }

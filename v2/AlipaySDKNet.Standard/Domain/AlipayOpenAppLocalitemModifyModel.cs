@@ -88,8 +88,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// sku数组
         /// </summary>
-        [XmlElement("skus")]
-        public LocalItemSkuModifyVO Skus { get; set; }
+        [XmlArray("skus")]
+        [XmlArrayItem("local_item_sku_modify_v_o")]
+        public List<LocalItemSkuModifyVO> Skus { get; set; }
 
         /// <summary>
         /// start_time描述售卖开始时间，end_time描述售卖结束时间，时间格式均为yyyy-MM-dd HH:mm:ss

@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppInvoiceInstitutionExpenseruleDeleteModel : AopObject
     {
         /// <summary>
-        /// 企业共同账户id
+        /// 企业共同账户id（alipay.ebpp.invoice.institution.expenserule.delete） 当前字段已废弃(alipay.ebpp.invoice.institution.expenserule.delete)
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 授权签约协议号
+        /// 授权签约协议号（该字段将废弃，不建议使用，可用enterprise_id字段替换） 当前字段已废弃(该字段将废弃，不建议使用，可用enterprise_id字段替换)
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }

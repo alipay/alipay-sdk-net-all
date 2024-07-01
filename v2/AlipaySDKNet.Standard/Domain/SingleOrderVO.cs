@@ -22,5 +22,12 @@ namespace Aop.Api.Domain
         [XmlArray("delivery_info_list")]
         [XmlArrayItem("mpc_delivery_info")]
         public List<MpcDeliveryInfo> DeliveryInfoList { get; set; }
+
+        /// <summary>
+        /// 商品sku列表
+        /// </summary>
+        [XmlArray("product_list")]
+        [XmlArrayItem("mpc_product_result")]
+        public List<MpcProductResult> ProductList { get; set; }
     }
 }

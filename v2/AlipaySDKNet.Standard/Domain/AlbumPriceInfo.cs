@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlbumPriceInfo : AopObject
     {
         /// <summary>
-        /// 已废弃。营销活动实际价格填写在promo_info中的discount_price
+        /// 已废弃。
         /// </summary>
         [XmlElement("actual_price")]
         public string ActualPrice { get; set; }

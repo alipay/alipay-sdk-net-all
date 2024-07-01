@@ -11,10 +11,16 @@ namespace Aop.Api.Domain
     public class AntfortuneFinresearchChatSubmitModel : AopObject
     {
         /// <summary>
-        /// 合作方内部的用户体系用户信息
+        /// 合作方内部的唯一标识
         /// </summary>
         [XmlElement("bu_unique_id")]
         public string BuUniqueId { get; set; }
+
+        /// <summary>
+        /// 业务类型，如果是就业问答请传入college_work 其他的情况可以不传或者传空字符串
+        /// </summary>
+        [XmlElement("business_type")]
+        public string BusinessType { get; set; }
 
         /// <summary>
         /// 文件id，目前仅支持单个，如果传多个会默认使用第一个， 如果filetype传了file，并且指定了file_id ，则会根据文件内容来回答问题

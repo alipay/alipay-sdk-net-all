@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public RentCarFeeItem BasicGuaranteeFee { get; set; }
 
         /// <summary>
+        /// 租金的每日明细信息，确保加起来等于租金费用总价
+        /// </summary>
+        [XmlArray("daily_car_rental_fee_detail")]
+        [XmlArrayItem("daily_car_rental_fee")]
+        public List<DailyCarRentalFee> DailyCarRentalFeeDetail { get; set; }
+
+        /// <summary>
         /// 用户还车时，门店工作人员上门服务的费用
         /// </summary>
         [XmlElement("home_return_fee")]
@@ -45,6 +52,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("night_send_fee")]
         public RentCarFeeItem NightSendFee { get; set; }
+
+        /// <summary>
+        /// 异地还车费用
+        /// </summary>
+        [XmlElement("offsite_drop_off_fee")]
+        public RentCarFeeItem OffsiteDropOffFee { get; set; }
 
         /// <summary>
         /// 其他费用列表

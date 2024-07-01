@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustrySupervisionAccountCreateModel : AopObject
     {
         /// <summary>
-        /// 业务场景 + 关联账户号 + 待开通子户类型。 三个唯一确定一个最终开通的子户账号
+        /// 不同的业务场景下对应不同的业务规则
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
@@ -28,73 +28,73 @@ namespace Aop.Api.Domain
         public string MerchantAlipayUid { get; set; }
 
         /// <summary>
-        /// 外部用户id，专款钱包场景下，根据当前字段创建对应专款钱包账户。
+        /// 外部用户id。专款钱包场景下，根据当前字段创建对应唯一的子户账户户号。根据业务诉求，可以传入调用方自己维护的冻资订单单号或者调用方自己维护的用户id
         /// </summary>
         [XmlElement("out_user_id")]
         public string OutUserId { get; set; }
 
         /// <summary>
-        /// 待开子户对关联账户名
+        /// 协会、商户在银行侧自行创建的结算户账户户名
         /// </summary>
         [XmlElement("parent_ext_account_name")]
         public string ParentExtAccountName { get; set; }
 
         /// <summary>
-        /// 待开子户的关联账户号。 驾校在网商申请的最终结算户。
+        /// 协会、商户在银行侧自行创建的结算户账户户号
         /// </summary>
         [XmlElement("parent_ext_account_no")]
         public string ParentExtAccountNo { get; set; }
 
         /// <summary>
-        /// 专款钱包场景下钱包子户的收方客户类型， 对公账户需要填入收方账户联行号
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下，收款方客户类型对公账户需要填入收款方账户联行号
         /// </summary>
         [XmlElement("payee_account_type")]
         public string PayeeAccountType { get; set; }
 
         /// <summary>
-        /// 专款钱包场景下，当收方账户为对公账户，则需要填入收方账户联行号
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下，当收款方账户为对公账户，则需要填入收款方账户联行号
         /// </summary>
         [XmlElement("payee_contact_line")]
         public string PayeeContactLine { get; set; }
 
         /// <summary>
-        /// 专款钱包场景下钱包子户的收方账户ID
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。转入子户时的收款方账户户号
         /// </summary>
         [XmlElement("payee_participant_id")]
         public string PayeeParticipantId { get; set; }
 
         /// <summary>
-        /// 收方账户名
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。子户转出时的收款方账户户名
         /// </summary>
         [XmlElement("payee_participant_name")]
         public string PayeeParticipantName { get; set; }
 
         /// <summary>
-        /// 专款钱包场景下钱包子户的收方账户类型
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。子户转出时的收款方账户类型
         /// </summary>
         [XmlElement("payee_participant_type")]
         public string PayeeParticipantType { get; set; }
 
         /// <summary>
-        /// 专款钱包场景下钱包子户的付方账户ID
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。后续资金转入子户时的付款方账户户号
         /// </summary>
         [XmlElement("payer_participant_id")]
         public string PayerParticipantId { get; set; }
 
         /// <summary>
-        /// 专款钱包场景下钱包子户的付方账户名
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。转入子户时的付款方账户户名
         /// </summary>
         [XmlElement("payer_participant_name")]
         public string PayerParticipantName { get; set; }
 
         /// <summary>
-        /// 专款钱包场景下钱包子户的付方账户类型
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。转入子户时的付款方账户类型
         /// </summary>
         [XmlElement("payer_participant_type")]
         public string PayerParticipantType { get; set; }
 
         /// <summary>
-        /// 专款资金金额，整数，单位：分  资金划拨时根据本次输入金额进行划付校验
+        /// 专款资金金额，整数，单位：分
         /// </summary>
         [XmlElement("special_funds_amount")]
         public long SpecialFundsAmount { get; set; }
@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public string SpecialFundsCurrency { get; set; }
 
         /// <summary>
-        /// 业务场景+ 待开子户关联账户+待开通子户类型 biz_scene + parent_ext_account_no +sub_account_type  最终申请出唯一的对应子户。
+        /// 本次在银行侧创建的子户账户类型。根据业务诉求选择对应账户类型
         /// </summary>
         [XmlElement("sub_account_type")]
         public string SubAccountType { get; set; }

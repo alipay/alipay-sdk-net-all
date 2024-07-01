@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 订单确认收货相对超时时间。从发货时间开始计算。 单位d-天。 该参数数值不接受小数点， 如 10d
+        /// </summary>
+        [XmlElement("confirm_timeout_express")]
+        public string ConfirmTimeoutExpress { get; set; }
+
+        /// <summary>
         /// 买家联系人信息
         /// </summary>
         [XmlElement("contact_info")]

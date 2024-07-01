@@ -22,5 +22,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("pass")]
         public bool Pass { get; set; }
+
+        /// <summary>
+        /// 拒绝列表
+        /// </summary>
+        [XmlArray("refuse_list")]
+        [XmlArrayItem("consult_refuse_response")]
+        public List<ConsultRefuseResponse> RefuseList { get; set; }
     }
 }

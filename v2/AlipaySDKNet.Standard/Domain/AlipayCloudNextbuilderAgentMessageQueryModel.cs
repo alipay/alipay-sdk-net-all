@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// 来源，例如小程序id
+        /// </summary>
+        [XmlElement("from_source")]
+        public string FromSource { get; set; }
+
+        /// <summary>
         /// 顺序（升序or降序）
         /// </summary>
         [XmlElement("order")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_by")]
         public string OrderBy { get; set; }
+
+        /// <summary>
+        /// 用户标识
+        /// </summary>
+        [XmlElement("outer_user_id")]
+        public string OuterUserId { get; set; }
 
         /// <summary>
         /// 当前页码，从1开始，默认为1

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -16,7 +17,7 @@ namespace Aop.Api.Domain
         public string BizAgreementNo { get; set; }
 
         /// <summary>
-        /// 车辆类型：  1 - 一型客车 2 - 二型客车 3 - 三型客车 4 - 四型客车
+        /// 车辆类型：  1 - 一型客车 2 - 二型客车 3 - 三型客车 4 - 四型客车 5 - 一型货车 6 - 二型货车 7 - 三型货车 8 - 四型货车 9 - 五型货车 当前字段已废弃(ETC办理时可以识别到车辆类型，无需重复上送)
         /// </summary>
         [XmlElement("car_type")]
         public string CarType { get; set; }
@@ -32,6 +33,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("end_time")]
         public string EndTime { get; set; }
+
+        /// <summary>
+        /// 本次扣款相关的行程明细列表
+        /// </summary>
+        [XmlArray("etc_trip_item_list")]
+        [XmlArrayItem("e_t_c_trip_item_dto")]
+        public List<ETCTripItemDto> EtcTripItemList { get; set; }
 
         /// <summary>
         /// 行程描述
@@ -56,6 +64,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plate_no")]
         public string PlateNo { get; set; }
+
+        /// <summary>
+        /// 若超过账期，请传递补扣标识为true，本批次行程受理将不限制账期。 默认false；
+        /// </summary>
+        [XmlElement("replenish_deduct")]
+        public bool ReplenishDeduct { get; set; }
 
         /// <summary>
         /// 1、默认为商户签约账号对应的支付宝用户ID 2、特殊情况可自定义，但需要额外配置白名单

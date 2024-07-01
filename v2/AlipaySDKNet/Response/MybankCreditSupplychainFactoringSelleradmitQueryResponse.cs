@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public string Exsit { get; set; }
 
         /// <summary>
+        /// 门店是否需要签约  true:需要签约 false：不需要签约
+        /// </summary>
+        [XmlElement("need_sign_ar")]
+        public bool NeedSignAr { get; set; }
+
+        /// <summary>
         /// 不准入原因代码
         /// </summary>
         [XmlElement("refuse_code")]

@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public long EasyCardUsableDayCount { get; set; }
 
         /// <summary>
+        /// 费用明细，每项费用都是优惠前的金额，请确保费用明细中所有金额加起来等于总金额totalAmount
+        /// </summary>
+        [XmlElement("fee_info")]
+        public RentCarOrderFeeInfo FeeInfo { get; set; }
+
+        /// <summary>
         /// isv优惠金额，单位分。仅用于展示，不会参与到优惠计算中
         /// </summary>
         [XmlElement("isv_discount_amount")]
@@ -65,7 +71,7 @@ namespace Aop.Api.Domain
         public string ServiceScore { get; set; }
 
         /// <summary>
-        /// 特色服务的列表，特色服务枚举值见 https://adccloud.yuque.com/adccloud/aqkbzc/bg8fiw#bO71H
+        /// 特色服务的列表，特色服务枚举值见 <a href="https://adccloud.yuque.com/adccloud/aqkbzc/bg8fiw#bO71H">特色服务枚举</a>
         /// </summary>
         [XmlArray("special_services")]
         [XmlArrayItem("string")]

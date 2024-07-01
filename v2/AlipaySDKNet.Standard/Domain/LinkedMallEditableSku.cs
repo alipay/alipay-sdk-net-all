@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string PicUrl { get; set; }
 
         /// <summary>
+        /// sku价格，单位分
+        /// </summary>
+        [XmlElement("price")]
+        public string Price { get; set; }
+
+        /// <summary>
+        /// sku状态
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
+
+        /// <summary>
         /// sku名称
         /// </summary>
         [XmlElement("title")]

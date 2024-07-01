@@ -79,7 +79,7 @@ namespace Aop.Api.Response
         public List<ReplyRecordResponse> ReplyDetailInfos { get; set; }
 
         /// <summary>
-        /// 状态  待处理：MERCHANT_PROCESSING  已处理：MERCHANT_FEEDBACKED  投诉完结：FINISHED  投诉关闭：CANCELLED  客服处理中：PLATFORM_PROCESSING  客服处理完结：PLATFORM_FINISH  投诉关闭：CLOSED
+        /// 状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
@@ -91,7 +91,7 @@ namespace Aop.Api.Response
         public string TargetId { get; set; }
 
         /// <summary>
-        /// 应用类型 例如小程序：APPID 生活号：PUBLICID 商家账户：PID
+        /// 投诉对象类型
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }

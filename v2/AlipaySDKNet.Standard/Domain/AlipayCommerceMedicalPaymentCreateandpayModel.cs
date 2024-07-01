@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public TradeExtendParams ExtendParams { get; set; }
 
         /// <summary>
+        /// 订单绝对超时时间。 格式为yyyy-MM-dd HH:mm:ss。超时时间最小支持1m
+        /// </summary>
+        [XmlElement("gmt_expire_time")]
+        public string GmtExpireTime { get; set; }
+
+        /// <summary>
         /// 医疗机构下单时间
         /// </summary>
         [XmlElement("gmt_out_create")]

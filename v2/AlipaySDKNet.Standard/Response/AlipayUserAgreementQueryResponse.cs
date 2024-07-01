@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -31,6 +33,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("device_id")]
         public string DeviceId { get; set; }
+
+        /// <summary>
+        /// 还款计划列表
+        /// </summary>
+        [XmlArray("execution_plans")]
+        [XmlArrayItem("execution_plan")]
+        public List<ExecutionPlan> ExecutionPlans { get; set; }
 
         /// <summary>
         /// 代扣协议中标示用户的唯一签约号(确保在商户系统中唯一)。当入参中传了此参数时返回。

@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustrySupervisionAccountQueryModel : AopObject
     {
         /// <summary>
-        /// 专款子户户号 专款钱包必填
+        /// 子户账户户号
         /// </summary>
         [XmlElement("account_no")]
         public string AccountNo { get; set; }
 
         /// <summary>
-        /// 业务场景 + 待开通子户类型。 确定开通的子户账号
+        /// 不同的业务场景下对应不同的业务规则
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string MerchantAlipayUid { get; set; }
 
         /// <summary>
-        /// 待开子户的关联账户号。 企业在网商申请的最终结算户。
+        /// 协会、商户在银行侧自行创建的结算户账户户号
         /// </summary>
         [XmlElement("parent_ext_account_no")]
         public string ParentExtAccountNo { get; set; }
 
         /// <summary>
-        /// 业务场景+ 开通子户类型 biz_scene +sub_account_type 最终确定唯一的对应子户。。 专款账户母户余额查询 传入 SPECIAL_FUNDS_DEPOSIT
+        /// 本次在银行侧创建的子户账户类型。根据业务诉求选择对应账户类型
         /// </summary>
         [XmlElement("sub_account_type")]
         public string SubAccountType { get; set; }

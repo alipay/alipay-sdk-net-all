@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string Stage { get; set; }
 
         /// <summary>
+        /// 分账成功之后对应的交易号
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
+
+        /// <summary>
         /// 租金类型
         /// </summary>
         [XmlElement("type")]

@@ -47,7 +47,13 @@ namespace Aop.Api.Domain
         public string PicUrl { get; set; }
 
         /// <summary>
-        /// 售价，单位分
+        /// 天猫店铺侧的商品当前售卖价（不保证实时性仅参考）
+        /// </summary>
+        [XmlElement("platform_price")]
+        public string PlatformPrice { get; set; }
+
+        /// <summary>
+        /// 采购供货价，单位分
         /// </summary>
         [XmlElement("price")]
         public long Price { get; set; }

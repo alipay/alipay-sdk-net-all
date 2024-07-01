@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public long AccountBalance { get; set; }
 
         /// <summary>
-        /// 脱敏商户子户账号，专款钱包查询返回明文
+        /// 子户账户户号
         /// </summary>
         [XmlElement("masking_account_no")]
         public string MaskingAccountNo { get; set; }

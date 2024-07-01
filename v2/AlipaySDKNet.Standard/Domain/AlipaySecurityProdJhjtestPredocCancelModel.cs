@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public bool Isasdasd { get; set; }
 
         /// <summary>
+        /// 111
+        /// </summary>
+        [XmlElement("price_a_input")]
+        public string PriceAInput { get; set; }
+
+        /// <summary>
         /// 1
         /// </summary>
         [XmlElement("sdd")]

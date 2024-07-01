@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string AddressDetail { get; set; }
 
         /// <summary>
-        /// 地址id
+        /// 地址id 当前字段已废弃(迭代后无需此字段，已合并进address_detail)
         /// </summary>
         [XmlElement("address_id")]
         public string AddressId { get; set; }

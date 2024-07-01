@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AgentId { get; set; }
 
         /// <summary>
+        /// 来源，例如小程序id
+        /// </summary>
+        [XmlElement("from_source")]
+        public string FromSource { get; set; }
+
+        /// <summary>
         /// 开始时间戳，闭区间
         /// </summary>
         [XmlElement("from_time")]

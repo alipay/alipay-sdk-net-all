@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,6 +33,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }
+
+        /// <summary>
+        /// 本次退款相关的明细列表
+        /// </summary>
+        [XmlArray("refund_item_list")]
+        [XmlArrayItem("e_t_c_refund_item_dto")]
+        public List<ETCRefundItemDto> RefundItemList { get; set; }
 
         /// <summary>
         /// 退款原因描述：退费

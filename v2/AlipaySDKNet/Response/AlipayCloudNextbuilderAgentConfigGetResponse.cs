@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayCloudNextbuilderAgentConfigGetResponse : AopResponse
     {
         /// <summary>
+        /// 配置版本号
+        /// </summary>
+        [XmlElement("config_version")]
+        public string ConfigVersion { get; set; }
+
+        /// <summary>
         /// 是否生成相关问题建议
         /// </summary>
         [XmlElement("create_questions")]
@@ -35,5 +41,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("prologue")]
         public string Prologue { get; set; }
+
+        /// <summary>
+        /// 配置发布时间
+        /// </summary>
+        [XmlElement("published_time")]
+        public string PublishedTime { get; set; }
     }
 }

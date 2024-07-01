@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ApplyTradeNo { get; set; }
 
         /// <summary>
-        /// 索赔金额
+        /// 索赔金额,单位是元
         /// </summary>
         [XmlElement("estimate_amount")]
         public string EstimateAmount { get; set; }

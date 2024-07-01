@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string BillType { get; set; }
 
         /// <summary>
-        /// 收费时间
+        /// 执行收费的时间
         /// </summary>
         [XmlElement("execute_dt")]
         public string ExecuteDt { get; set; }

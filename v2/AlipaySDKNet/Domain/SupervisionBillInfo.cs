@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class SupervisionBillInfo : AopObject
     {
         /// <summary>
-        /// 来账金额，整数，单位: 分
+        /// 资金划拨金额。单位: 分
         /// </summary>
         [XmlElement("amount")]
         public long Amount { get; set; }
@@ -28,25 +28,25 @@ namespace Aop.Api.Domain
         public string OrderNo { get; set; }
 
         /// <summary>
-        /// 收方户名
+        /// 收款方账户户名
         /// </summary>
         [XmlElement("payee_card_name")]
         public string PayeeCardName { get; set; }
 
         /// <summary>
-        /// 收方卡号
+        /// 收款方账户户号
         /// </summary>
         [XmlElement("payee_card_no")]
         public string PayeeCardNo { get; set; }
 
         /// <summary>
-        /// 付方户名
+        /// 付款方账户户名
         /// </summary>
         [XmlElement("payer_card_name")]
         public string PayerCardName { get; set; }
 
         /// <summary>
-        /// 付方卡号
+        /// 付款方账户户号
         /// </summary>
         [XmlElement("payer_card_no")]
         public string PayerCardNo { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
-        /// 来账时间：结构yyyyMMddHHmmss
+        /// 来账时间
         /// </summary>
         [XmlElement("vostro_time")]
         public string VostroTime { get; set; }

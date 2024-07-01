@@ -51,7 +51,7 @@ namespace Aop.Api.Response
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 单据状态
+        /// 转账：处理成功、处理失败、处理中、退票 充值：待操作、处理成功、处理失败 提现：处理中、处理成功、处理失败
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
