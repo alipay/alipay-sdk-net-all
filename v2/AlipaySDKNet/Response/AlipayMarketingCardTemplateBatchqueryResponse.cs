@@ -18,7 +18,7 @@ namespace Aop.Api.Response
         public List<McardTemplate> McardTemplate { get; set; }
 
         /// <summary>
-        /// 会员卡模板总数
+        /// 会员卡模板总数,如10个卡模版，单位：/个
         /// </summary>
         [XmlElement("template_total")]
         public long TemplateTotal { get; set; }

@@ -17,13 +17,13 @@ namespace Aop.Api.Domain
         public string CancelType { get; set; }
 
         /// <summary>
-        /// 订购单ID
+        /// 订单ID
         /// </summary>
         [XmlElement("card_id")]
         public string CardId { get; set; }
 
         /// <summary>
-        /// 订购单状态
+        /// 订单状态
         /// </summary>
         [XmlElement("card_status")]
         public string CardStatus { get; set; }

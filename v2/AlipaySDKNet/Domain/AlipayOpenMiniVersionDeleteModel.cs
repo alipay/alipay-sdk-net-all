@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniVersionDeleteModel : AopObject
     {
         /// <summary>
-        ///  小程序版本号。只有状态为开发中的版本才能被删除。
+        /// 小程序版本号。只有状态为开发中的版本才能被删除。
         /// </summary>
         [XmlElement("app_version")]
         public string AppVersion { get; set; }

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppLocalitemAllcategoryQueryModel : AopObject
     {
         /// <summary>
+        /// 返回筛选状态的类目
+        /// </summary>
+        [XmlElement("cat_status")]
+        public string CatStatus { get; set; }
+
+        /// <summary>
         /// 商品类型
         /// </summary>
         [XmlElement("item_type")]

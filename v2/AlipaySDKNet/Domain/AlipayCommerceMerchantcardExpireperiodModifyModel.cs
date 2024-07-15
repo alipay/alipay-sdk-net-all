@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AppointDate { get; set; }
 
         /// <summary>
-        /// 订购单ID
+        /// 订单ID
         /// </summary>
         [XmlElement("card_id")]
         public string CardId { get; set; }

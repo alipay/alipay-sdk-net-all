@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public bool CreateQuestions { get; set; }
 
         /// <summary>
+        /// 生图大小
+        /// </summary>
+        [XmlElement("draw_size")]
+        public NbDrawSize DrawSize { get; set; }
+
+        /// <summary>
         /// 用户输入
         /// </summary>
         [XmlArray("inputs")]

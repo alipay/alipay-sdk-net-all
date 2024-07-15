@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DeductionOrderInfo : AopObject
     {
         /// <summary>
-        /// 订购单ID
+        /// 订单ID
         /// </summary>
         [XmlElement("card_id")]
         public string CardId { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string DeductionOrderId { get; set; }
 
         /// <summary>
-        /// 订单类型
+        /// 扣款单类型
         /// </summary>
         [XmlElement("deduction_order_type")]
         public string DeductionOrderType { get; set; }

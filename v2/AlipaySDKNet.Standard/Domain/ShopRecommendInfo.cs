@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string RecommendAddress { get; set; }
 
         /// <summary>
-        /// 推荐纬度
+        /// 推荐纬度，单位度
         /// </summary>
         [XmlElement("recommend_latitude")]
         public string RecommendLatitude { get; set; }
 
         /// <summary>
-        /// 推荐经度
+        /// 推荐经度，单位为度
         /// </summary>
         [XmlElement("recommend_longtitude")]
         public string RecommendLongtitude { get; set; }

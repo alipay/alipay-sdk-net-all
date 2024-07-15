@@ -18,19 +18,19 @@ namespace Aop.Api.Response
         public List<TrusteeshipAccountBillQueryResponse> AccDetailList { get; set; }
 
         /// <summary>
-        /// 结果页数
+        /// 结果页数（单位：页）
         /// </summary>
         [XmlElement("page_num")]
         public string PageNum { get; set; }
 
         /// <summary>
-        /// 结果页大小
+        /// 结果页大小 （单位：条）
         /// </summary>
         [XmlElement("page_size")]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// 每页元素数
+        /// 每页元素数，单位：个
         /// </summary>
         [XmlElement("total_item_count")]
         public string TotalItemCount { get; set; }

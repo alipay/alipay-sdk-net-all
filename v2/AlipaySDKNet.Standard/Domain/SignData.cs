@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string OriSignType { get; set; }
 
         /// <summary>
-        /// 2088041181118800
+        /// 商户支付宝账号id
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }

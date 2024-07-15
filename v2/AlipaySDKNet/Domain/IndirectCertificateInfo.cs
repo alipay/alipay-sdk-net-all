@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string EffectTime { get; set; }
 
         /// <summary>
-        /// 证照过期时间
+        /// 证照过期时间，yyyy-mm-dd格式，如果是长期有效时传“forever”
         /// </summary>
         [XmlElement("expire_time")]
         public string ExpireTime { get; set; }

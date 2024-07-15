@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ClaimCancelTime { get; set; }
 
         /// <summary>
-        /// 赔付金额赔付成功之后有效
+        /// 赔付金额赔付成功之后有效（单位：分）
         /// </summary>
         [XmlElement("claim_fee")]
         public long ClaimFee { get; set; }

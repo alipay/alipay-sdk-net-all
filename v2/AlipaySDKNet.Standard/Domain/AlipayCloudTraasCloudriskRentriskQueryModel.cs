@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CustomerId { get; set; }
 
         /// <summary>
+        /// 客户支付宝OPENID 当customer_type=ALIPAY_OPENID时，传入支付宝账户OPENID
+        /// </summary>
+        [XmlElement("customer_open_id")]
+        public string CustomerOpenId { get; set; }
+
+        /// <summary>
         /// 客户标识类型
         /// </summary>
         [XmlElement("customer_type")]

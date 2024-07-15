@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayFundWalletDepositorderCreateModel : AopObject
     {
         /// <summary>
-        /// 充值的本金金额
+        /// 充值的本金金额，单位：元（人民币）
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string EffectiveEndDate { get; set; }
 
         /// <summary>
-        /// 充值的膨胀金额
+        /// 充值的膨胀金额，单位：元（人民币）
         /// </summary>
         [XmlElement("expand_amount")]
         public string ExpandAmount { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string OrderTitle { get; set; }
 
         /// <summary>
-        /// 充值外部订单号，用于幂等
+        /// 充值外部订单号，由客户自己定义，用于幂等
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string Platform { get; set; }
 
         /// <summary>
-        /// 销售产品码
+        /// 销售产品码，接入时由产品定义
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string TimeExpire { get; set; }
 
         /// <summary>
-        /// 钱包id
+        /// 用户开通钱包时返回的钱包id
         /// </summary>
         [XmlElement("user_wallet_id")]
         public string UserWalletId { get; set; }

@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<MerchantItemAttrVO> Attrs { get; set; }
 
         /// <summary>
+        /// sku原价，分为单位。
+        /// </summary>
+        [XmlElement("original_price")]
+        public long OriginalPrice { get; set; }
+
+        /// <summary>
         /// 商家侧sku ID，APPID 下全局唯一。
         /// </summary>
         [XmlElement("out_sku_id")]

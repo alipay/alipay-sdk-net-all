@@ -17,31 +17,31 @@ namespace Aop.Api.Domain
         public long CurrentPageNum { get; set; }
 
         /// <summary>
-        /// 按投诉时间范围进行查询：时间范围的上界
+        /// 按投诉时间范围进行查询：时间范围的上界，取值单位为秒
         /// </summary>
         [XmlElement("gmt_complaint_end")]
         public string GmtComplaintEnd { get; set; }
 
         /// <summary>
-        /// 按投诉时间范围进行查询：时间范围的下界
+        /// 按投诉时间范围进行查询：时间范围的下界，取值单位为秒
         /// </summary>
         [XmlElement("gmt_complaint_start")]
         public string GmtComplaintStart { get; set; }
 
         /// <summary>
-        /// 按处理时间范围进行查询：时间范围的上界
+        /// 按处理时间范围进行查询：时间范围的上界，取值单位为秒
         /// </summary>
         [XmlElement("gmt_process_end")]
         public string GmtProcessEnd { get; set; }
 
         /// <summary>
-        /// 按处理时间范围进行查询：时间范围的下界
+        /// 按处理时间范围进行查询：时间范围的下界，取值单位为秒
         /// </summary>
         [XmlElement("gmt_process_start")]
         public string GmtProcessStart { get; set; }
 
         /// <summary>
-        /// 分页查询每次查询的数据量，不传则默认为10
+        /// 分页查询每次查询的数据量，不传则默认为10，取值单位为条
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

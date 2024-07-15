@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AccountSceneCode { get; set; }
 
         /// <summary>
-        /// 支付宝用户uid
+        /// 托管子户id
         /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }
@@ -46,13 +46,13 @@ namespace Aop.Api.Domain
         public string MerchantUserId { get; set; }
 
         /// <summary>
-        /// 查询页码，必须大于0
+        /// 查询页码，必须大于0 （单位：页）
         /// </summary>
         [XmlElement("page_num")]
         public string PageNum { get; set; }
 
         /// <summary>
-        /// 分页大小，每页条目数需满足0< page_size < 100
+        /// 分页大小，每页条目数需满足0< page_size < 100 （单位：条 ）
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

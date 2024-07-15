@@ -9,13 +9,13 @@ namespace Aop.Api.Response
     public class AlipayEbppIndustrySupervisionAccountModifyResponse : AopResponse
     {
         /// <summary>
-        /// 商户子户户号
+        /// 子户账户户号
         /// </summary>
         [XmlElement("account_no")]
         public string AccountNo { get; set; }
 
         /// <summary>
-        /// 商户子户状态
+        /// 子户账户状态
         /// </summary>
         [XmlElement("account_status")]
         public string AccountStatus { get; set; }

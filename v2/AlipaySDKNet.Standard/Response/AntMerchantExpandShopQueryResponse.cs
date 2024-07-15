@@ -86,7 +86,21 @@ namespace Aop.Api.Response
         public List<ShopExtInfo> ExtInfos { get; set; }
 
         /// <summary>
-        /// 商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid。若未传入shop_id 则本参数与store_id均必填。
+        /// 查询门店详情时，如果需要同时返回行业信息，需要设置入参中的need_industry_info=1
+        /// </summary>
+        [XmlArray("industry_info")]
+        [XmlArrayItem("merchant_shop_industry_info")]
+        public List<MerchantShopIndustryInfo> IndustryInfo { get; set; }
+
+        /// <summary>
+        /// 查询门店详情时，如果需要同时返回行业资质，需要设置入参中的need_industry_license=1
+        /// </summary>
+        [XmlArray("industry_license")]
+        [XmlArrayItem("shop_industry_license")]
+        public List<ShopIndustryLicense> IndustryLicense { get; set; }
+
+        /// <summary>
+        /// 商户角色id，门店属于哪个商户角色。对于直连开店场景，为商户pid；对于间连开店场景（线上、线下、直付通），为商户smid。
         /// </summary>
         [XmlElement("ip_role_id")]
         public string IpRoleId { get; set; }

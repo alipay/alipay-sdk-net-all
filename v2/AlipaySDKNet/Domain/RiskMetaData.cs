@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string OpType { get; set; }
 
         /// <summary>
-        /// 当risk_meta_data_type = BLACK_ADDRESS时，key约定[province(省份), city(城市), district(区/县), address(详细地址)]。当risk_meta_data_type不为BLACK_ADDRESS时，传入具体的内容值。
+        /// risk_meta_data_type = BLACK_ADDRESS时，按照标准格式传入[province(省份), city(城市), district(区/县), address(详细地址)]四组值； risk_meta_data_type=BLACK_MOBILE, 传入手机号； risk_meta_data_type=BLACK_CERT_NO,传入身份证号； risk_meta_data_type=BLACK_ALIPAY_USER_ID,传入支付宝userId； risk_meta_data_type=BLACK_MOBILE_SHA256,传入手机号sha256值； risk_meta_data_type=BLACK_CERT_NO_SHA256,传入身份证号sha256值。
         /// </summary>
         [XmlElement("risk_meta_data_content")]
         public string RiskMetaDataContent { get; set; }

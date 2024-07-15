@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CustomerIdentityNo { get; set; }
 
         /// <summary>
+        /// 证件类型
+        /// </summary>
+        [XmlElement("customer_identity_type")]
+        public string CustomerIdentityType { get; set; }
+
+        /// <summary>
         /// 婚姻状况
         /// </summary>
         [XmlElement("customer_medical_status")]
@@ -44,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("customer_name")]
         public string CustomerName { get; set; }
+
+        /// <summary>
+        /// 是否备孕
+        /// </summary>
+        [XmlElement("prepare_pregnancy")]
+        public bool PreparePregnancy { get; set; }
     }
 }

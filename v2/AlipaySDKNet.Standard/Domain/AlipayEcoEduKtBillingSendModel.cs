@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string ChargeBillTitle { get; set; }
 
         /// <summary>
-        /// 缴费详情：输入json格式字符串。Json定义：key填写缴费项名称，value填写缴费项金额，金额保留2位小数
+        /// 缴费详情：输入json格式字符串。Json定义：key填写缴费项名称，value填写缴费项金额，金额保留2位小数（单位：元）
         /// </summary>
         [XmlArray("charge_item")]
         [XmlArrayItem("charge_items")]

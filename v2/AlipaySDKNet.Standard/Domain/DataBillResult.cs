@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string PayTime { get; set; }
 
         /// <summary>
-        /// 实际交易金额，提现金额
+        /// 实际交易金额，提现金额，单位分
         /// </summary>
         [XmlElement("real_pay_amt")]
         public string RealPayAmt { get; set; }
@@ -68,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_total_amt")]
         public string TradeTotalAmt { get; set; }
+
+        /// <summary>
+        /// 账单交易类型(支付转化和交易退款)
+        /// </summary>
+        [XmlElement("transaction_type")]
+        public string TransactionType { get; set; }
 
         /// <summary>
         /// 用户交易笔数排序

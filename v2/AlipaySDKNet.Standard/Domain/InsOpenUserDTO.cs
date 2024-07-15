@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class InsOpenUserDTO : AopObject
     {
         /// <summary>
+        /// 地址
+        /// </summary>
+        [XmlElement("address")]
+        public string Address { get; set; }
+
+        /// <summary>
         /// 证件名称
         /// </summary>
         [XmlElement("id_card_name")]

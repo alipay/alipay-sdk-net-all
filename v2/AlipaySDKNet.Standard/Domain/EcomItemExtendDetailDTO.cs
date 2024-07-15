@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// 免赔金额（元）
+        /// </summary>
+        [XmlElement("deductible_amount")]
+        public long DeductibleAmount { get; set; }
+
+        /// <summary>
         /// extInfo
         /// </summary>
         [XmlElement("ext_info")]
@@ -176,5 +182,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plug_no")]
         public string PlugNo { get; set; }
+
+        /// <summary>
+        /// 车辆信息
+        /// </summary>
+        [XmlElement("vehicle")]
+        public InsOpenVehicleDTO Vehicle { get; set; }
     }
 }

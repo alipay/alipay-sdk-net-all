@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string MerchantAppId { get; set; }
 
         /// <summary>
-        /// nfc设备BizTid
+        /// nfc设备BizTid，为NFC模块生成的设备唯一ID，非必填属性
         /// </summary>
         [XmlElement("nfc_biz_tid")]
         public string NfcBizTid { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string Params { get; set; }
 
         /// <summary>
-        /// pid
+        /// 调用方的商户pid
         /// </summary>
         [XmlElement("pid")]
         public string Pid { get; set; }
@@ -58,13 +58,13 @@ namespace Aop.Api.Domain
         public string RoutePage { get; set; }
 
         /// <summary>
-        /// 上位机biztid
+        /// 上位机biztid，，为上位机设备唯一ID
         /// </summary>
         [XmlElement("upper_biz_tid")]
         public string UpperBizTid { get; set; }
 
         /// <summary>
-        /// 上位机sn
+        /// 上位机sn，为商户设备的设备唯一ID
         /// </summary>
         [XmlElement("upper_sn")]
         public string UpperSn { get; set; }

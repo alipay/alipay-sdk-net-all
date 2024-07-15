@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string FuzzyQuantity { get; set; }
 
         /// <summary>
-        /// sku划线价，即原价
+        /// sku划线价，即原价，单位分
         /// </summary>
         [XmlElement("mark_price")]
         public string MarkPrice { get; set; }
@@ -53,13 +53,13 @@ namespace Aop.Api.Domain
         public string MpcSkuId { get; set; }
 
         /// <summary>
-        /// sku当前售卖价（不保证实时性仅参考）
+        /// sku当前售卖价（不保证实时性仅参考），单位分
         /// </summary>
         [XmlElement("platform_price")]
         public string PlatformPrice { get; set; }
 
         /// <summary>
-        /// sku采购供货价
+        /// sku采购供货价，单位分
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }

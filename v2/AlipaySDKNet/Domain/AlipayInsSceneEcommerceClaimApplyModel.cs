@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string ClaimPayMode { get; set; }
 
         /// <summary>
+        /// 理赔业务数据
+        /// </summary>
+        [XmlElement("claim_report_biz_info")]
+        public string ClaimReportBizInfo { get; set; }
+
+        /// <summary>
         /// 商品
         /// </summary>
         [XmlElement("item")]
@@ -60,10 +66,23 @@ namespace Aop.Api.Domain
         public string PolicyNo { get; set; }
 
         /// <summary>
+        /// 保单列表
+        /// </summary>
+        [XmlArray("policy_no_list")]
+        [XmlArrayItem("string")]
+        public List<string> PolicyNoList { get; set; }
+
+        /// <summary>
         /// 逆向纠纷单
         /// </summary>
         [XmlElement("refund_dispute")]
         public EcomRefundDisputeDTO RefundDispute { get; set; }
+
+        /// <summary>
+        /// 报案操作人类型
+        /// </summary>
+        [XmlElement("report_operator_type")]
+        public string ReportOperatorType { get; set; }
 
         /// <summary>
         /// 报案业务单号（用于幂等）
@@ -76,5 +95,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("seller")]
         public EcomSellerDTO Seller { get; set; }
+
+        /// <summary>
+        /// 报案来源
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
     }
 }

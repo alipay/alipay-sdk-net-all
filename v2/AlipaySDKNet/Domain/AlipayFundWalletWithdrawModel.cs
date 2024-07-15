@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayFundWalletWithdrawModel : AopObject
     {
         /// <summary>
-        /// 提现金额
+        /// 提现金额，单位：元（人民币）
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

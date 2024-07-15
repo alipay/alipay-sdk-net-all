@@ -17,13 +17,13 @@ namespace Aop.Api.Domain
         public string Label { get; set; }
 
         /// <summary>
-        /// 最大长度
+        /// 最大长度，单位字符
         /// </summary>
         [XmlElement("max_length")]
         public long MaxLength { get; set; }
 
         /// <summary>
-        /// 用户输入变量值的下拉选项列表
+        /// 用户输入变量值的自定义下拉选项列表
         /// </summary>
         [XmlArray("options")]
         [XmlArrayItem("string")]
@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string Variable { get; set; }
 
         /// <summary>
-        /// 权重
+        /// 权重比例，单位百分比
         /// </summary>
         [XmlElement("weight")]
         public string Weight { get; set; }

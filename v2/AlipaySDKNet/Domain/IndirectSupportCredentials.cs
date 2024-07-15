@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class IndirectSupportCredentials : AopObject
     {
         /// <summary>
-        /// 门店城市
+        /// 门店城市 当前字段已废弃(该值已废弃，以city_code字段映射的城市名称为准)
         /// </summary>
         [XmlElement("city")]
         public string City { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string CityCode { get; set; }
 
         /// <summary>
-        /// 门店街道
+        /// 门店所在区县。 当前字段已废弃(该值已废弃，以district_code字段映射的区县名称为准)
         /// </summary>
         [XmlElement("district")]
         public string District { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string MerchantType { get; set; }
 
         /// <summary>
-        /// 门店省份
+        /// 门店省份 当前字段已废弃(该值已废弃，以province_code字段映射的省份名称为准)
         /// </summary>
         [XmlElement("province")]
         public string Province { get; set; }

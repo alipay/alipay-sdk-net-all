@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCloudCloudbaseHttpscerthostingHistoryQueryModel : AopObject
     {
         /// <summary>
-        /// 小程序云应用ID
+        /// 小程序云应用APPID
         /// </summary>
         [XmlElement("biz_app_id")]
         public string BizAppId { get; set; }

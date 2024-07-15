@@ -42,13 +42,13 @@ namespace Aop.Api.Domain
         public string GmtComplain { get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// 过期时间，精确到秒
         /// </summary>
         [XmlElement("gmt_overdue")]
         public string GmtOverdue { get; set; }
 
         /// <summary>
-        /// 处理时间
+        /// 处理时间，精确到秒
         /// </summary>
         [XmlElement("gmt_process")]
         public string GmtProcess { get; set; }

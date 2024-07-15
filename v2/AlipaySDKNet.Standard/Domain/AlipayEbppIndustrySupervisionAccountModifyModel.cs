@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustrySupervisionAccountModifyModel : AopObject
     {
         /// <summary>
-        /// 专款钱包场景下开设的子户户号
+        /// 待修改属性的子户账户户号。对应「政务监管账户创建」接口返回的 「子户账户户号 merchant_account_no 」
         /// </summary>
         [XmlElement("account_no")]
         public string AccountNo { get; set; }
 
         /// <summary>
-        /// 业务场景
+        /// 不同的业务场景下对应不同的业务规则
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
@@ -46,37 +46,37 @@ namespace Aop.Api.Domain
         public string PayeeContactLine { get; set; }
 
         /// <summary>
-        /// 收方账户ID
+        /// 资金划拨支付的收款方账户户号
         /// </summary>
         [XmlElement("payee_participant_id")]
         public string PayeeParticipantId { get; set; }
 
         /// <summary>
-        /// 收方账户名
+        /// 资金划拨支付的收款方账户户名
         /// </summary>
         [XmlElement("payee_participant_name")]
         public string PayeeParticipantName { get; set; }
 
         /// <summary>
-        /// 收方账户类型
+        /// 资金划拨支付的收款方账户类型
         /// </summary>
         [XmlElement("payee_participant_type")]
         public string PayeeParticipantType { get; set; }
 
         /// <summary>
-        /// 付方账户ID
+        /// 资金转入子户时的付款方账户户号
         /// </summary>
         [XmlElement("payer_participant_id")]
         public string PayerParticipantId { get; set; }
 
         /// <summary>
-        /// 付方账户名
+        /// 资金转入子户时的付款方账户户名
         /// </summary>
         [XmlElement("payer_participant_name")]
         public string PayerParticipantName { get; set; }
 
         /// <summary>
-        /// 付方账户类型
+        /// 资金转入子户时的付款方账户类型
         /// </summary>
         [XmlElement("payer_participant_type")]
         public string PayerParticipantType { get; set; }

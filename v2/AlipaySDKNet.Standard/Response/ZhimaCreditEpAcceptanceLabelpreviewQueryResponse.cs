@@ -30,7 +30,7 @@ namespace Aop.Api.Response
         public List<EpLabelContent> LabelContent { get; set; }
 
         /// <summary>
-        /// 企业名下预计标签数量
+        /// 企业名下预计标签数量(个)
         /// </summary>
         [XmlElement("label_count")]
         public long LabelCount { get; set; }
@@ -42,7 +42,7 @@ namespace Aop.Api.Response
         public string LabelShowType { get; set; }
 
         /// <summary>
-        /// 企业名下标签待获取数量
+        /// 企业名下标签待获取数量(个)
         /// </summary>
         [XmlElement("label_to_obtain_count")]
         public long LabelToObtainCount { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardOrderCloseModel : AopObject
     {
         /// <summary>
-        /// 订购单ID
+        /// 订单ID
         /// </summary>
         [XmlElement("card_id")]
         public string CardId { get; set; }

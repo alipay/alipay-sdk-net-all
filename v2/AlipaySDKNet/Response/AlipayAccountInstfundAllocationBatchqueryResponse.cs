@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -24,8 +25,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 返回结果
         /// </summary>
-        [XmlElement("result_object")]
-        public InstFundFlowRecordDTO ResultObject { get; set; }
+        [XmlArray("result_object")]
+        [XmlArrayItem("inst_fund_flow_record_d_t_o")]
+        public List<InstFundFlowRecordDTO> ResultObject { get; set; }
 
         /// <summary>
         /// 总记录条数

@@ -30,7 +30,7 @@ namespace Aop.Api.Response
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 总页数
+        /// 总页数，单位：页
         /// </summary>
         [XmlElement("total_page_count")]
         public string TotalPageCount { get; set; }

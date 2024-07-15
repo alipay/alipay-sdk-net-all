@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AgentId { get; set; }
 
         /// <summary>
+        /// Agent 的配置版本号，当应用有多个发布成功配置版本的情况下用于手动指定调用的具体版本号，若不传默认选择最新的配置版本，该参数可以从"alipay.cloud.nextbuilder.agent.config.get"接口的返回中获取
+        /// </summary>
+        [XmlElement("config_version")]
+        public string ConfigVersion { get; set; }
+
+        /// <summary>
         /// 由应用定义的对话输入变量，具体内容参考青蓝平台应用定义，对话型应用非必选，JSON格式的Map，详细解释<a href="https://opendocs.alipay.com/pre-open/0cbmp8?pathHash=178b1334">青蓝平台应用调用接口请求参数解释- inputs</a>
         /// </summary>
         [XmlElement("inputs")]

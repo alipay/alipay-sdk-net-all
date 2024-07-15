@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string Description { get; set; }
 
         /// <summary>
-        /// 文件类型
+        /// 上传文件的后缀
         /// </summary>
         [XmlElement("file_type")]
         public string FileType { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Path { get; set; }
 
         /// <summary>
-        /// 文件大小
+        /// 文件大小KB
         /// </summary>
         [XmlElement("size")]
         public long Size { get; set; }

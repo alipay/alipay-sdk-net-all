@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string Description { get; set; }
 
         /// <summary>
+        /// 域名
+        /// </summary>
+        [XmlElement("domain")]
+        public string Domain { get; set; }
+
+        /// <summary>
         /// 域名服务商  - aliyun  - cloudflare  - dnspod  - godaddy
         /// </summary>
         [XmlElement("domain_provider")]

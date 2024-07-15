@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string OverdueDesc { get; set; }
 
         /// <summary>
-        /// 逾期的金额
+        /// 逾期的金额。单位:元，精度:分。
         /// </summary>
         [XmlElement("overdue_fee")]
         public string OverdueFee { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public long OverduePeriodNum { get; set; }
 
         /// <summary>
-        /// 逾期时间
+        /// 逾期时间 年-月-日 时:分:秒
         /// </summary>
         [XmlElement("overdue_time")]
         public string OverdueTime { get; set; }

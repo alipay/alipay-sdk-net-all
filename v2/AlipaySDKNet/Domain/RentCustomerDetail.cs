@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
-        /// 证件号
+        /// 身份证号码
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public long PageNumber { get; set; }
 
         /// <summary>
-        /// 单页行数，不能超过100行
+        /// 单页行数，不能超过100行，单位：行
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

@@ -17,16 +17,22 @@ namespace Aop.Api.Domain
         public string BusiPlatform { get; set; }
 
         /// <summary>
-        /// 卖家编号
+        /// 卖家编号，取值方式：卖家编号即可
         /// </summary>
         [XmlElement("eco_code")]
         public string EcoCode { get; set; }
 
         /// <summary>
-        /// 运单号
+        /// 运单号。取值方式是：实际运单号即可
         /// </summary>
         [XmlElement("express_no")]
         public string ExpressNo { get; set; }
+
+        /// <summary>
+        /// 订单状态
+        /// </summary>
+        [XmlElement("order_status")]
+        public string OrderStatus { get; set; }
 
         /// <summary>
         /// 下单时间
@@ -48,14 +54,26 @@ namespace Aop.Api.Domain
         public List<string> QrcodeImgs { get; set; }
 
         /// <summary>
-        /// 码值url链接(必须是支付宝的码值),数组
+        /// 码值url链接(必须是支付宝的码值),数组。取值方式是：用户上传码值链接即可
         /// </summary>
         [XmlArray("qrcode_tokens")]
         [XmlArrayItem("string")]
         public List<string> QrcodeTokens { get; set; }
 
         /// <summary>
-        /// 店铺名称
+        /// 确认收货时间
+        /// </summary>
+        [XmlElement("receive_time")]
+        public string ReceiveTime { get; set; }
+
+        /// <summary>
+        /// 发货时间
+        /// </summary>
+        [XmlElement("send_time")]
+        public string SendTime { get; set; }
+
+        /// <summary>
+        /// 店铺名称，取生态供应商店铺名称即可
         /// </summary>
         [XmlElement("shop_code")]
         public string ShopCode { get; set; }

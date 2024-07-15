@@ -22,6 +22,12 @@ namespace Aop.Api.Response
         public string AgentName { get; set; }
 
         /// <summary>
+        /// agent业务类型
+        /// </summary>
+        [XmlElement("agent_type")]
+        public string AgentType { get; set; }
+
+        /// <summary>
         /// AI创作平台agent功能描述
         /// </summary>
         [XmlElement("description")]

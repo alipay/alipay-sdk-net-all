@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public string AccuracyLevel { get; set; }
 
         /// <summary>
+        /// 门店参与的营销活动列表
+        /// </summary>
+        [XmlArray("activity_info_list")]
+        [XmlArrayItem("ec_activity_info")]
+        public List<EcActivityInfo> ActivityInfoList { get; set; }
+
+        /// <summary>
         /// 企业码门店所在位置的城市编码
         /// </summary>
         [XmlElement("city_id")]
@@ -53,13 +60,13 @@ namespace Aop.Api.Domain
         public bool HasOutDoorPic { get; set; }
 
         /// <summary>
-        /// 企业码门店所属纬度
+        /// 企业码门店所属纬度，单位是度
         /// </summary>
         [XmlElement("latitude")]
         public string Latitude { get; set; }
 
         /// <summary>
-        /// 企业码门店所属经度
+        /// 企业码门店所属经度，单位是度
         /// </summary>
         [XmlElement("longitude")]
         public string Longitude { get; set; }
@@ -124,5 +131,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("support_invoice")]
         public bool SupportInvoice { get; set; }
+
+        /// <summary>
+        /// 企业码门店的收单身份信息，来源支付宝账号信息
+        /// </summary>
+        [XmlArray("trade_identity_info_list")]
+        [XmlArrayItem("ec_trade_identity_info")]
+        public List<EcTradeIdentityInfo> TradeIdentityInfoList { get; set; }
+
+        /// <summary>
+        /// 门店商圈信息
+        /// </summary>
+        [XmlElement("trading_area_info")]
+        public EcTradingAreaInfo TradingAreaInfo { get; set; }
     }
 }

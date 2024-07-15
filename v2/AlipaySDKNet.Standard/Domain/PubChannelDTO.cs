@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 投放渠道类型
+        /// 投放渠道类型（选择需要推广投放的渠道） SHOP_DETAIL：店铺详情页
         /// </summary>
         [XmlElement("pub_channel")]
         public string PubChannel { get; set; }

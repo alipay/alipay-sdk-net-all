@@ -24,13 +24,13 @@ namespace Aop.Api.Response
         public long CurrentPage { get; set; }
 
         /// <summary>
-        /// 分页查询时每页大小
+        /// 分页查询时每页查询的记录条数，取值单位为条
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 满足条件的数据总条数
+        /// 满足条件的数据总记录条数，取值单位为条
         /// </summary>
         [XmlElement("total_size")]
         public long TotalSize { get; set; }

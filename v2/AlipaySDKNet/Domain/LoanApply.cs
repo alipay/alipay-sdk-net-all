@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string LoanContNo { get; set; }
 
         /// <summary>
-        /// 0.005
+        /// 借款费率，百分比
         /// </summary>
         [XmlElement("loan_cont_rate")]
         public string LoanContRate { get; set; }

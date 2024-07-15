@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class TemplateFieldRuleDTO : AopObject
     {
         /// <summary>
-        /// 字段名称
+        /// 模板字段规则 字段名称(用于定义会员卡开卡接口时卡相应的参数) 余额：Balance 积分：Point 等级：Level 开卡日期：OpenDate 过期日期：ValidDate
         /// </summary>
         [XmlElement("field_name")]
         public string FieldName { get; set; }

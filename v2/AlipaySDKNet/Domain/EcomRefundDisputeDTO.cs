@@ -10,6 +10,30 @@ namespace Aop.Api.Domain
     public class EcomRefundDisputeDTO : AopObject
     {
         /// <summary>
+        /// 事故发生地址
+        /// </summary>
+        [XmlElement("accident_address")]
+        public string AccidentAddress { get; set; }
+
+        /// <summary>
+        /// 事故描述
+        /// </summary>
+        [XmlElement("accident_desc")]
+        public string AccidentDesc { get; set; }
+
+        /// <summary>
+        /// 事故类型
+        /// </summary>
+        [XmlElement("accident_type")]
+        public string AccidentType { get; set; }
+
+        /// <summary>
+        /// 事故类型子项：全损/保险杠受损等
+        /// </summary>
+        [XmlElement("accident_type_detail")]
+        public string AccidentTypeDetail { get; set; }
+
+        /// <summary>
         /// 买家id
         /// </summary>
         [XmlElement("buyer_id")]
@@ -88,7 +112,7 @@ namespace Aop.Api.Domain
         public string RefundDisputeId { get; set; }
 
         /// <summary>
-        /// 退款金额
+        /// 退款金额（分）
         /// </summary>
         [XmlElement("refund_fee")]
         public long RefundFee { get; set; }

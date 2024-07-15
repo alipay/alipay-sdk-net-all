@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardDeductionorderQueryModel : AopObject
     {
         /// <summary>
-        /// 扣款单id，也叫做订单id
+        /// 扣款单id
         /// </summary>
         [XmlElement("deduction_order_id")]
         public string DeductionOrderId { get; set; }

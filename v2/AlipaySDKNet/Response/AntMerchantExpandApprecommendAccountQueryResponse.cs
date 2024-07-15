@@ -23,19 +23,19 @@ namespace Aop.Api.Response
         public long PageNumber { get; set; }
 
         /// <summary>
-        /// 单页行数
+        /// 单页行数，单位：行
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 总页数
+        /// 总页数，单位：页
         /// </summary>
         [XmlElement("total_pages")]
         public long TotalPages { get; set; }
 
         /// <summary>
-        /// 总行数
+        /// 总行数，  单位：行
         /// </summary>
         [XmlElement("total_size")]
         public string TotalSize { get; set; }

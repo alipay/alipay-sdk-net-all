@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public ItemRefundInfoVO ItemRefundInfo { get; set; }
 
         /// <summary>
+        /// 商品标签列表
+        /// </summary>
+        [XmlElement("item_tags")]
+        public ItemTagVO ItemTags { get; set; }
+
+        /// <summary>
         /// 本地生活商品凭证信息列表
         /// </summary>
         [XmlArray("order_certificate_infos")]
@@ -52,6 +58,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sale_price")]
         public string SalePrice { get; set; }
+
+        /// <summary>
+        /// 发货时效
+        /// </summary>
+        [XmlElement("shipping_time_limit")]
+        public ShippingTimeLimitVO ShippingTimeLimit { get; set; }
 
         /// <summary>
         /// 支付宝侧商品skuid

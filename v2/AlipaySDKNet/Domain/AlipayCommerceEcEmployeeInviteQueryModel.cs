@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CreateShareCode { get; set; }
 
         /// <summary>
-        /// 企业码员工ID
+        /// 企业码员工ID，签约适用对象为指定员工时填写
         /// </summary>
         [XmlElement("employee_id")]
         public string EmployeeId { get; set; }
@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 页面内容code
+        /// 用于展示不同的页面文案，使用标准页面文案是无需传值
         /// </summary>
         [XmlElement("page_content_code")]
         public string PageContentCode { get; set; }
 
         /// <summary>
-        /// 代扣签约串
+        /// 代扣签约串。需要签约代扣协议时，必传，返回的签约链接会拼接上代扣签约串。
         /// </summary>
         [XmlElement("withholding_sign_str")]
         public string WithholdingSignStr { get; set; }

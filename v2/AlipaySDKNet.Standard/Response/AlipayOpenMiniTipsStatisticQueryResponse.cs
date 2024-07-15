@@ -9,13 +9,13 @@ namespace Aop.Api.Response
     public class AlipayOpenMiniTipsStatisticQueryResponse : AopResponse
     {
         /// <summary>
-        /// 昨日（接口调用当日的前一天）小程序收藏人数，时间内未创建投放活动，则响应时不传出参数。
+        /// 昨日（接口调用当日的前一天）小程序收藏人数，时间内未创建投放活动，则响应时不传出参数。单位：个。
         /// </summary>
         [XmlElement("app_collect_cnt")]
         public long AppCollectCnt { get; set; }
 
         /// <summary>
-        /// 昨日（接口调用当日的前一天）小程序访问人数。当小程序日访问量为0，或以活动维度查询，或时间内未创建投放活动，则响应时不传出参数。
+        /// 昨日（接口调用当日的前一天）小程序访问人数。当小程序日访问量为0，或以活动维度查询，或时间内未创建投放活动，则响应时不传出参数。单位：个。
         /// </summary>
         [XmlElement("app_uv")]
         public long AppUv { get; set; }
@@ -39,25 +39,25 @@ namespace Aop.Api.Response
         public string TipsCollectRate { get; set; }
 
         /// <summary>
-        /// 昨日（接口调用当日的前一天）收藏引导文案收藏用户数，时间内未创建投放活动，则响应时不传出参数。
+        /// 昨日（接口调用当日的前一天）收藏引导文案收藏用户数，时间内未创建投放活动，则响应时不传出参数。单位：个。
         /// </summary>
         [XmlElement("tips_collect_uv")]
         public long TipsCollectUv { get; set; }
 
         /// <summary>
-        /// 昨日（接口调用当日的前一天）收藏引导文案曝光用户数，时间内未创建投放活动，则响应时不传出参数。
+        /// 昨日（接口调用当日的前一天）收藏引导文案曝光用户数，时间内未创建投放活动，则响应时不传出参数。单位：个。
         /// </summary>
         [XmlElement("tips_expo_uv")]
         public long TipsExpoUv { get; set; }
 
         /// <summary>
-        /// 时间段内累计小程序收藏人数，时间内未创建投放活动，则响应时不传出参数。
+        /// 时间段内累计小程序收藏人数，时间内未创建投放活动，则响应时不传出参数。单位：个。
         /// </summary>
         [XmlElement("total_app_collect_cnt")]
         public long TotalAppCollectCnt { get; set; }
 
         /// <summary>
-        /// 时间段内累计小程序访问人数。当小程序日访问量为0，或以活动维度查询，或时间内未创建投放活动，则响应时不传出参数。
+        /// 时间段内累计小程序访问人数。当小程序日访问量为0，或以活动维度查询，或时间内未创建投放活动，则响应时不传出参数。单位：个。
         /// </summary>
         [XmlElement("total_app_uv")]
         public long TotalAppUv { get; set; }
@@ -69,13 +69,13 @@ namespace Aop.Api.Response
         public string TotalTipsCollectRate { get; set; }
 
         /// <summary>
-        /// 时间段内累计收藏引导文案收藏用户数，时间内未创建投放活动，则响应时不传出参数。
+        /// 时间段内累计收藏引导文案收藏用户数，时间内未创建投放活动，则响应时不传出参数。单位：个。
         /// </summary>
         [XmlElement("total_tips_collect_uv")]
         public long TotalTipsCollectUv { get; set; }
 
         /// <summary>
-        /// 时间段内累计收藏引导文案曝光用户数，仅当小程序/活动投放活动时返回。时间内未创建投放活动，则响应时不传出参数。
+        /// 时间段内累计收藏引导文案曝光用户数，仅当小程序/活动投放活动时返回。时间内未创建投放活动，则响应时不传出参数。单位：个。
         /// </summary>
         [XmlElement("total_tips_expo_uv")]
         public long TotalTipsExpoUv { get; set; }

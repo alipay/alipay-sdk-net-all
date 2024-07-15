@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string RiskScore { get; set; }
 
         /// <summary>
-        /// 提供风控服务的厂商
+        /// 提供风控服务的厂商。填写对应厂商的中文名
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }

@@ -65,6 +65,13 @@ namespace Aop.Api.Domain
         public long DiscountFee { get; set; }
 
         /// <summary>
+        /// 驾驶人列表
+        /// </summary>
+        [XmlArray("drivers")]
+        [XmlArrayItem("ins_open_user_d_t_o")]
+        public List<InsOpenUserDTO> Drivers { get; set; }
+
+        /// <summary>
         /// 扩展信息
         /// </summary>
         [XmlElement("ext_info")]
@@ -107,6 +114,18 @@ namespace Aop.Api.Domain
         public long ItemTotalValue { get; set; }
 
         /// <summary>
+        /// 行程列表
+        /// </summary>
+        [XmlElement("itineraries")]
+        public InsTransportItineraryDTO Itineraries { get; set; }
+
+        /// <summary>
+        /// 出租人
+        /// </summary>
+        [XmlElement("leaser")]
+        public InsOpenUserDTO Leaser { get; set; }
+
+        /// <summary>
         /// 物流单
         /// </summary>
         [XmlElement("logistics_order")]
@@ -119,6 +138,12 @@ namespace Aop.Api.Domain
         public string MainOrderId { get; set; }
 
         /// <summary>
+        /// 订单结束时间
+        /// </summary>
+        [XmlElement("order_end_time")]
+        public string OrderEndTime { get; set; }
+
+        /// <summary>
         /// 订单金额,单位：分
         /// </summary>
         [XmlElement("order_fee")]
@@ -129,6 +154,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
+
+        /// <summary>
+        /// 订单开始时间
+        /// </summary>
+        [XmlElement("order_start_time")]
+        public string OrderStartTime { get; set; }
 
         /// <summary>
         /// 订单类型：MAIN_AND_DETAIL（主子一体订单）, MAIN（主订单）,DETAIL（子订单）
@@ -178,6 +209,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_end_time")]
         public string TradeEndTime { get; set; }
+
+        /// <summary>
+        /// 交易图片
+        /// </summary>
+        [XmlArray("trade_pictures")]
+        [XmlArrayItem("string")]
+        public List<string> TradePictures { get; set; }
 
         /// <summary>
         /// 交易开始时间

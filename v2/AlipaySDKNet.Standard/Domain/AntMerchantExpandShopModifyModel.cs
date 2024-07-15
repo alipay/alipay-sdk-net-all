@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<SettleCardInfo> BizCards { get; set; }
 
         /// <summary>
-        /// 品牌id。若无需更新本信息项，可以不填写
+        /// 品牌id。若无需更新本信息项，可以不填写。可以从B/P站品牌工具箱获取品牌id
         /// </summary>
         [XmlElement("brand_id")]
         public string BrandId { get; set; }
@@ -90,6 +90,20 @@ namespace Aop.Api.Domain
         [XmlArray("ext_infos")]
         [XmlArrayItem("shop_ext_info")]
         public List<ShopExtInfo> ExtInfos { get; set; }
+
+        /// <summary>
+        /// 行业信息，例如所属集团、特殊标签
+        /// </summary>
+        [XmlArray("industry_info")]
+        [XmlArrayItem("merchant_shop_industry_info")]
+        public List<MerchantShopIndustryInfo> IndustryInfo { get; set; }
+
+        /// <summary>
+        /// 门店资质信息
+        /// </summary>
+        [XmlArray("industry_license")]
+        [XmlArrayItem("shop_industry_license")]
+        public List<ShopIndustryLicense> IndustryLicense { get; set; }
 
         /// <summary>
         /// 商户角色id，表示将要修改的店属于哪个商户角色，和store_id一起定位待修改的门店。对于直连场景，填写商户pid；对于间连场景（线上、线下、直付通），填写商户smid。本信息项不可修改

@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public string AuthAppId { get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// 过期时间，单位为秒
         /// </summary>
         [XmlElement("expires_in")]
         public string ExpiresIn { get; set; }
 
         /// <summary>
-        /// 刷新令牌过期时间
+        /// 刷新令牌过期时间，单位为秒
         /// </summary>
         [XmlElement("re_expires_in")]
         public string ReExpiresIn { get; set; }

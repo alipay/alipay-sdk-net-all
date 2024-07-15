@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string MaType { get; set; }
 
         /// <summary>
-        /// 营销值
+        /// 营销值，单位：%
         /// </summary>
         [XmlElement("ma_value")]
         public string MaValue { get; set; }

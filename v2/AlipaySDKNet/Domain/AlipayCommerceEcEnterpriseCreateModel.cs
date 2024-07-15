@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcEnterpriseCreateModel : AopObject
     {
         /// <summary>
-        /// 场景码
+        /// 用于区分资金因公付协议、以及收银台文案等差异；
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
@@ -76,13 +76,13 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 企业码签约后回跳地址
+        /// 企业码签约后回跳地址。不传默认为空，签约后停留在当前页。
         /// </summary>
         [XmlElement("sign_return_url")]
         public string SignReturnUrl { get; set; }
 
         /// <summary>
-        /// 管理员签约终端类型
+        /// 管理员签约终端类型 当前字段已废弃(字段已废弃，不需要服务商传入)
         /// </summary>
         [XmlElement("sign_terminal")]
         public string SignTerminal { get; set; }

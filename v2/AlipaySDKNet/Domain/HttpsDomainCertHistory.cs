@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 历史记录更新时间
+        /// </summary>
+        [XmlElement("update_time")]
+        public string UpdateTime { get; set; }
     }
 }

@@ -74,6 +74,12 @@ namespace Aop.Api.Domain
         public string PayType { get; set; }
 
         /// <summary>
+        /// 价格计划中对应的套餐信息，目前支持一个价格计划对应一个套餐，可以为空
+        /// </summary>
+        [XmlElement("pkg_product_ids")]
+        public string PkgProductIds { get; set; }
+
+        /// <summary>
         /// 价格计划id
         /// </summary>
         [XmlElement("rate_plan_id")]

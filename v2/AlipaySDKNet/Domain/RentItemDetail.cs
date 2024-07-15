@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OutSkuId { get; set; }
 
         /// <summary>
-        /// 租赁商品数量
+        /// 租赁商品数量，单位为个
         /// </summary>
         [XmlElement("quantity")]
         public long Quantity { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public bool Supervised { get; set; }
 
         /// <summary>
-        /// 单个商品价格
+        /// 单个商品价格。单位:元，精度:分
         /// </summary>
         [XmlElement("unit_price")]
         public string UnitPrice { get; set; }

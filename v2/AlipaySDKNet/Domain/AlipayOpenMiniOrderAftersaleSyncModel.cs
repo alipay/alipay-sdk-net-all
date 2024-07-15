@@ -72,6 +72,13 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// 商家退款成功的外部退款单号,对应alipay.trade.refund(统一收单交易退款接口)的out_request_no
+        /// </summary>
+        [XmlArray("out_refund_request_no_list")]
+        [XmlArrayItem("string")]
+        public List<string> OutRefundRequestNoList { get; set; }
+
+        /// <summary>
         /// 退货寄送方式 action_code为201时可选填入, 不传入的情况下使用商家自行接入的售后物流能力。
         /// </summary>
         [XmlElement("return_delivery_type")]

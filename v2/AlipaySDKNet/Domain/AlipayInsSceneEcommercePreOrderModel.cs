@@ -66,7 +66,7 @@ namespace Aop.Api.Domain
         public List<InsUserTraceDTO> TraceList { get; set; }
 
         /// <summary>
-        /// 客户端渠道:ios / android / pc / wx_applet(微信小程序)
+        /// 客户端渠道:ios / android / pc / wx_applet(wx小程序)
         /// </summary>
         [XmlElement("user_client")]
         public string UserClient { get; set; }

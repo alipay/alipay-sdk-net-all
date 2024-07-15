@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
-        /// TEST(测试数据)/PROD(正式数据)
+        /// 环境参数 TEST(测试数据)/PROD(正式数据)
         /// </summary>
         [XmlElement("env")]
         public string Env { get; set; }
@@ -47,13 +47,13 @@ namespace Aop.Api.Domain
         public string GameId { get; set; }
 
         /// <summary>
-        /// 配合赛事总进度使用
+        /// 赛事总进度，线上赛为M（米），步数赛为STEP(步数)
         /// </summary>
         [XmlElement("game_progress_unit")]
         public string GameProgressUnit { get; set; }
 
         /// <summary>
-        /// 赛事总进度
+        /// 赛事总进度，线上赛为M（米），步数赛为STEP(步数)
         /// </summary>
         [XmlElement("game_progress_value")]
         public long GameProgressValue { get; set; }
@@ -90,25 +90,25 @@ namespace Aop.Api.Domain
         public string PosterUrl { get; set; }
 
         /// <summary>
-        /// 0代表上报条数无限制/1代表上报一条/n代表具体上报条数
+        /// 0代表上报条数无限制/1代表上报一条/n代表具体上报条数，n可为任意整数，单位为条
         /// </summary>
         [XmlElement("sports_data_limit_count")]
         public string SportsDataLimitCount { get; set; }
 
         /// <summary>
-        /// 支付宝运动
+        /// 运动类型 ALIPAY_SPORTS 支付宝运动
         /// </summary>
         [XmlElement("sports_data_source")]
         public string SportsDataSource { get; set; }
 
         /// <summary>
-        /// 跑步/走路
+        /// run跑步 walk走路  ride骑行
         /// </summary>
         [XmlElement("sports_data_type")]
         public string SportsDataType { get; set; }
 
         /// <summary>
-        /// 马拉松
+        /// MARATHON 马拉松
         /// </summary>
         [XmlElement("sports_type")]
         public string SportsType { get; set; }
@@ -120,13 +120,13 @@ namespace Aop.Api.Domain
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 白名单/上线/下线
+        /// 赛事状态 ONLINE上线  OFFLINE下线
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
 
         /// <summary>
-        /// 比如交互中提到的赛组
+        /// 比如交互中提到的赛组，目前未使用
         /// </summary>
         [XmlElement("sub_biz_type")]
         public string SubBizType { get; set; }

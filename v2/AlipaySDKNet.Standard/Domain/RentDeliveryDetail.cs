@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ReceiverAddress { get; set; }
 
         /// <summary>
-        /// 标准城市域码
+        /// <a href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=C9C488FD717AFDCD52157F41C3302C6D">中华人民共和国行政区划代码</a>
         /// </summary>
         [XmlElement("receiver_division_code")]
         public string ReceiverDivisionCode { get; set; }

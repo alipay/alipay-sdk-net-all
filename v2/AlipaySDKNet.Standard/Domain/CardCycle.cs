@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CycleValue { get; set; }
 
         /// <summary>
+        /// 周期卡商品类型，用于业务标识，年卡/季卡
+        /// </summary>
+        [XmlElement("period_item_type")]
+        public string PeriodItemType { get; set; }
+
+        /// <summary>
         /// 周期计费类型为USER_DESIGN，即用户可指定固定日期开始扣费的场景下，商家可以控制用户下单可选择时间范围，如下单时用户只能选0-30天范围内的时间作为首期计费时间，则该参数传0
         /// </summary>
         [XmlElement("user_select_range_start")]

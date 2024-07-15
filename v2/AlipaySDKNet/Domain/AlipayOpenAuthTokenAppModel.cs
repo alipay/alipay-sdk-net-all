@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Code { get; set; }
 
         /// <summary>
-        /// 授权方式。支持： authorization_code：使用应用授权码换取应用授权令牌app_auth_token。 refresh_token：使用app_refresh_token刷新获取新授权令牌。 
+        /// 授权方式。支持： authorization_code：使用应用授权码换取应用授权令牌app_auth_token。 refresh_token：使用app_refresh_token刷新获取新授权令牌。
         /// </summary>
         [XmlElement("grant_type")]
         public string GrantType { get; set; }

@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string Action { get; set; }
 
         /// <summary>
-        /// 涉及金额
+        /// 涉及金额（单元是元）
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
 
         /// <summary>
-        /// 账户剩余金额
+        /// 账户剩余金额(单位：元)
         /// </summary>
         [XmlElement("balance")]
         public string Balance { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string TransDt { get; set; }
 
         /// <summary>
-        /// 支付宝ID
+        /// 托管子户id
         /// </summary>
         [XmlElement("uid")]
         public string Uid { get; set; }

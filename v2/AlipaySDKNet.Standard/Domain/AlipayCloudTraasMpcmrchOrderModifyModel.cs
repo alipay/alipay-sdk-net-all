@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public RentPriceDetail PriceDetail { get; set; }
 
         /// <summary>
-        /// 订单的来源渠道
+        /// 订单的来源渠道。 支付宝:ALIPAY 微信:WECHAT 抖音:TIKTOK 美团:MEITUAN 饿了么:ELEME 其他:OTHERS
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }

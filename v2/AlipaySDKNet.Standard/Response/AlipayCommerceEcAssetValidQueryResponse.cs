@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceEcAssetValidQueryResponse : AopResponse
     {
         /// <summary>
-        /// 签约类型
+        /// 资产类型
         /// </summary>
         [XmlElement("asset_type")]
         public string AssetType { get; set; }

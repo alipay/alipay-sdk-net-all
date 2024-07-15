@@ -35,25 +35,25 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
-        /// TEST(测试数据)/PROD(正式数据)
+        /// 环境参数 TEST(测试数据)/PROD(正式数据)
         /// </summary>
         [XmlElement("env")]
         public string Env { get; set; }
 
         /// <summary>
-        /// 文体侧赛事业务号
+        /// 文体侧赛事业务号，由文体标志及时间戳生成
         /// </summary>
         [XmlElement("game_id")]
         public string GameId { get; set; }
 
         /// <summary>
-        /// 配合赛事总进度使用
+        /// 赛事总进度，线上赛为M（米），步数赛为STEP(步数)
         /// </summary>
         [XmlElement("game_progress_unit")]
         public string GameProgressUnit { get; set; }
 
         /// <summary>
-        /// 赛事总进度
+        /// 赛事总进度,线上赛单位为M，步数赛为单位STEP
         /// </summary>
         [XmlElement("game_progress_value")]
         public long GameProgressValue { get; set; }
@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public List<OnlineGameEventInfo> OnlineGameEventList { get; set; }
 
         /// <summary>
-        /// 三方赛事ID(唯一值)
+        /// 三方赛事ID(唯一值)，由三方提供值
         /// </summary>
         [XmlElement("out_game_no")]
         public string OutGameNo { get; set; }
@@ -90,13 +90,19 @@ namespace Aop.Api.Domain
         public string PosterUrl { get; set; }
 
         /// <summary>
-        /// 0代表上报条数无限制/1代表上报一条/n代表具体上报条数
+        /// 商品id，keep方必填，为交易组件接口返回
+        /// </summary>
+        [XmlElement("product_id")]
+        public string ProductId { get; set; }
+
+        /// <summary>
+        /// 0代表上报条数无限制/1代表上报一条/n代表具体上报条数，单位为条
         /// </summary>
         [XmlElement("sports_data_limit_count")]
         public long SportsDataLimitCount { get; set; }
 
         /// <summary>
-        /// 支付宝运动
+        /// ALIPAY_SPORTS 支付宝运动
         /// </summary>
         [XmlElement("sports_data_source")]
         public string SportsDataSource { get; set; }
@@ -108,7 +114,7 @@ namespace Aop.Api.Domain
         public string SportsDataType { get; set; }
 
         /// <summary>
-        /// 马拉松
+        /// MARATHON(马拉松)
         /// </summary>
         [XmlElement("sports_type")]
         public string SportsType { get; set; }

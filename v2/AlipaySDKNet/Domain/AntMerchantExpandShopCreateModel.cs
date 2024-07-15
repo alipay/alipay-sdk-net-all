@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<SettleCardInfo> BizCards { get; set; }
 
         /// <summary>
-        /// 品牌id，非加油站等特殊门店无需关注。
+        /// 品牌id，非加油站等特殊门店无需关注。通过BP站品牌工具箱可以获取品牌id
         /// </summary>
         [XmlElement("brand_id")]
         public string BrandId { get; set; }
@@ -91,6 +91,20 @@ namespace Aop.Api.Domain
         [XmlArray("ext_infos")]
         [XmlArrayItem("shop_ext_info")]
         public List<ShopExtInfo> ExtInfos { get; set; }
+
+        /// <summary>
+        /// 行业信息，例如所属集团、特殊标签
+        /// </summary>
+        [XmlArray("industry_info")]
+        [XmlArrayItem("merchant_shop_industry_info")]
+        public List<MerchantShopIndustryInfo> IndustryInfo { get; set; }
+
+        /// <summary>
+        /// 门店资质信息
+        /// </summary>
+        [XmlArray("industry_license")]
+        [XmlArrayItem("shop_industry_license")]
+        public List<ShopIndustryLicense> IndustryLicense { get; set; }
 
         /// <summary>
         /// 当前门店归属的商户角色 ID，表示当前进件的店铺的归属商户。对于直连开店场景，填写商户 PID。对于间连开店场景（线上、线下、直付通），商户SMID

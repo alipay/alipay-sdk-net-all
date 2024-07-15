@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string ApplyTime { get; set; }
 
         /// <summary>
-        /// 资产类型 枚举值 网商授信:EBE_MYBANK_CREDIT 拉卡拉授信：ENT_LAC_CREDIT
+        /// 授信资产类型
         /// </summary>
         [XmlElement("asset_type")]
         public string AssetType { get; set; }
@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string AvailableLimit { get; set; }
 
         /// <summary>
-        /// 授信额度，申请完成时必填，必须为整数
+        /// 授信额度，单位元
         /// </summary>
         [XmlElement("capital_limit")]
         public string CapitalLimit { get; set; }

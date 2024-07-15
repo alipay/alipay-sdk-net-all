@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Aaaa { get; set; }
 
         /// <summary>
-        /// 33
+        /// 33 当前字段已废弃(dddddddddd)
         /// </summary>
         [XmlElement("bbbb")]
         public string Bbbb { get; set; }
