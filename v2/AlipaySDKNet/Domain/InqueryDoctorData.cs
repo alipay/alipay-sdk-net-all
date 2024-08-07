@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,12 @@ namespace Aop.Api.Domain
     [Serializable]
     public class InqueryDoctorData : AopObject
     {
+        /// <summary>
+        /// 医生是否认证 1 已认证 0 未认证
+        /// </summary>
+        [XmlElement("auth_status")]
+        public string AuthStatus { get; set; }
+
         /// <summary>
         /// 医生头像
         /// </summary>
@@ -40,6 +47,37 @@ namespace Aop.Api.Domain
         public string DoctorName { get; set; }
 
         /// <summary>
+        /// 教育职称
+        /// </summary>
+        [XmlElement("educate_grade")]
+        public string EducateGrade { get; set; }
+
+        /// <summary>
+        /// 可以与支付宝侧关联的外部标准科室id
+        /// </summary>
+        [XmlElement("ext_depart_id")]
+        public string ExtDepartId { get; set; }
+
+        /// <summary>
+        /// 可以与支付宝侧关联的外部标准疾病id列表
+        /// </summary>
+        [XmlArray("ext_disease_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> ExtDiseaseIdList { get; set; }
+
+        /// <summary>
+        /// 外部自己医生的唯一标识
+        /// </summary>
+        [XmlElement("ext_doctor_id")]
+        public string ExtDoctorId { get; set; }
+
+        /// <summary>
+        /// 可以与支付宝侧关联的外部标准医院id
+        /// </summary>
+        [XmlElement("ext_hospital_id")]
+        public string ExtHospitalId { get; set; }
+
+        /// <summary>
         /// 医生性别
         /// </summary>
         [XmlElement("gender")]
@@ -58,7 +96,7 @@ namespace Aop.Api.Domain
         public string IdNo { get; set; }
 
         /// <summary>
-        /// 执医年限
+        /// 执医年限，单位年
         /// </summary>
         [XmlElement("practice_year")]
         public string PracticeYear { get; set; }
@@ -82,7 +120,7 @@ namespace Aop.Api.Domain
         public string SkilledDisease { get; set; }
 
         /// <summary>
-        /// 医生专业标签（多个标签时用英文逗号分隔）
+        /// 医生专业标签（多个标签时用英文逗号分隔） 专业标签数量不固定
         /// </summary>
         [XmlElement("special_tags")]
         public string SpecialTags { get; set; }

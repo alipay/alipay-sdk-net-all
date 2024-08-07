@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class BankcardExtInfo : AopObject
     {
         /// <summary>
-        /// 收款账户类型。  1：对公（在金融机构开设的公司账户）,如果银行卡为对公，必须传递省市支行信息或者联行号  2：对私（在金融机构开设的个人账户）
+        /// 收款账户类型。 1：对公（在金融机构开设的公司账户） 2：对私（在金融机构开设的个人账户）
         /// </summary>
         [XmlElement("account_type")]
         public string AccountType { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string InstName { get; set; }
 
         /// <summary>
-        /// 银行所在省份
+        /// 银行所在省
         /// </summary>
         [XmlElement("inst_province")]
         public string InstProvince { get; set; }

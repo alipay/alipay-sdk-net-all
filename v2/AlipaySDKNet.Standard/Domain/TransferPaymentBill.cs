@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public TransferAmount BillAmount { get; set; }
 
         /// <summary>
+        /// 账单提供方
+        /// </summary>
+        [XmlElement("bill_provide_agency")]
+        public string BillProvideAgency { get; set; }
+
+        /// <summary>
         /// 渠道付款参考号
         /// </summary>
         [XmlElement("channel_payment_ref")]

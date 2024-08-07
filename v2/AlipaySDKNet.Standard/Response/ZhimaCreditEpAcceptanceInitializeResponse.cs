@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string AccessToken { get; set; }
 
         /// <summary>
-        /// 用户接入企业信用受理台服务H5页面地址
+        /// 用户接入企业信用受理台服务H5页面地址 （根据平台的具体应用场景决策返回，目前是实力标产品并且入参指定企业时）
         /// </summary>
         [XmlElement("access_url")]
         public string AccessUrl { get; set; }
@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string BizNo { get; set; }
 
         /// <summary>
-        /// 商户唯一业务流水号，由大小写字母和数字构成
+        /// 商户唯一业务流水号，由大小写字母和数字构成（当商户传入时返回）
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

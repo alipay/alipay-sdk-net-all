@@ -16,13 +16,19 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// icrowd人群id
+        /// </summary>
+        [XmlElement("crowd_id")]
+        public string CrowdId { get; set; }
+
+        /// <summary>
         /// 实验场景
         /// </summary>
         [XmlElement("scenario")]
         public string Scenario { get; set; }
 
         /// <summary>
-        /// trace
+        /// 调用trace
         /// </summary>
         [XmlElement("trace")]
         public string Trace { get; set; }

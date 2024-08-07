@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Currency { get; set; }
 
         /// <summary>
-        /// 金额，对应币种的最小单位
+        /// 金额，对应币种的最小单位，大币种为分，小币种为元
         /// </summary>
         [XmlElement("value")]
         public string Value { get; set; }

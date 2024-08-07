@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenServicemarketPromotiontaskRelationQueryModel : AopObject
     {
         /// <summary>
-        /// 服务商品ID
+        /// 服务商品ID，并不是uid，取值来源于前端的获取
         /// </summary>
         [XmlElement("commodity_id")]
         public string CommodityId { get; set; }

@@ -10,16 +10,22 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardTemplateBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 商品归属appid
+        /// 卡的归属appid
         /// </summary>
         [XmlElement("card_template_appid")]
         public string CardTemplateAppid { get; set; }
 
         /// <summary>
-        /// 商品名称
+        /// 卡名称
         /// </summary>
         [XmlElement("card_template_name")]
         public string CardTemplateName { get; set; }
+
+        /// <summary>
+        /// 卡类型。需要查询次卡周期付时不用传。查询金额卡必传AXF_MONEY_CARD
+        /// </summary>
+        [XmlElement("card_type")]
+        public string CardType { get; set; }
 
         /// <summary>
         /// 页码

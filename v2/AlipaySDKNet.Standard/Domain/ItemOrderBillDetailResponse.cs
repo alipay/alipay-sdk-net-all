@@ -23,6 +23,24 @@ namespace Aop.Api.Domain
         public string FeeCategories { get; set; }
 
         /// <summary>
+        /// 花呗分期服务费（卖家贴息），单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("huabei_technical_service_fee")]
+        public string HuabeiTechnicalServiceFee { get; set; }
+
+        /// <summary>
+        /// 服务商佣金，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("isv_alloc_amount")]
+        public string IsvAllocAmount { get; set; }
+
+        /// <summary>
+        /// 服务商名称
+        /// </summary>
+        [XmlElement("isv_name")]
+        public string IsvName { get; set; }
+
+        /// <summary>
         /// 订单关联小程序应用ID
         /// </summary>
         [XmlElement("mini_app_id")]
@@ -65,19 +83,25 @@ namespace Aop.Api.Domain
         public string PayAmount { get; set; }
 
         /// <summary>
-        /// 平台技术服务费，单位：元，精确到小数点后两位
+        /// 支付手续费，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("pay_commission")]
+        public string PayCommission { get; set; }
+
+        /// <summary>
+        /// CPS技术服务费，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("platform_service")]
         public string PlatformService { get; set; }
 
         /// <summary>
-        /// 退平台技术服务费，单位：元，精确到小数点后两位
+        /// 退CPS技术服务费，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("platform_service_refund")]
         public string PlatformServiceRefund { get; set; }
 
         /// <summary>
-        /// 商家前置优惠金额，单位：元，精确到小数点后两位
+        /// 支付前优惠金额，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("pre_promotion")]
         public string PrePromotion { get; set; }
@@ -87,6 +111,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("predict_settle_time")]
         public string PredictSettleTime { get; set; }
+
+        /// <summary>
+        /// 达人佣金，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("public_alloc_amount")]
+        public string PublicAllocAmount { get; set; }
+
+        /// <summary>
+        /// 达人昵称
+        /// </summary>
+        [XmlElement("public_name")]
+        public string PublicName { get; set; }
 
         /// <summary>
         /// 订单实收金额，单位：元，精确到小数点后两位
@@ -108,10 +144,40 @@ namespace Aop.Api.Domain
         public List<ItemOrderBillRefundResponse> RefundFeeList { get; set; }
 
         /// <summary>
-        /// 资金提供方，为租赁商提供货品采购资金，帮助租赁商扩大经营规模，资方收取部分佣金
+        /// 退服务商佣金，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("refund_isv_alloc_amount")]
+        public string RefundIsvAllocAmount { get; set; }
+
+        /// <summary>
+        /// 退支付手续费，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("refund_pay_commission")]
+        public string RefundPayCommission { get; set; }
+
+        /// <summary>
+        /// 退达人佣金，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("refund_public_alloc_amount")]
+        public string RefundPublicAllocAmount { get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [XmlElement("remark")]
+        public string Remark { get; set; }
+
+        /// <summary>
+        /// 资金提供方为租赁商提供货品采购资金，帮助租赁商扩大经营规模，因此资方收取部分佣金，单位：元，精确到小数点后两位。
         /// </summary>
         [XmlElement("rent_funder_commission_amount")]
         public string RentFunderCommissionAmount { get; set; }
+
+        /// <summary>
+        /// 租赁资方昵称
+        /// </summary>
+        [XmlElement("rent_funder_nick_name")]
+        public string RentFunderNickName { get; set; }
 
         /// <summary>
         /// 订单二级场景类型
@@ -136,6 +202,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("settlement_amount")]
         public string SettlementAmount { get; set; }
+
+        /// <summary>
+        /// 平台子单号
+        /// </summary>
+        [XmlElement("sub_biz_no")]
+        public string SubBizNo { get; set; }
 
         /// <summary>
         /// 支付宝交易号

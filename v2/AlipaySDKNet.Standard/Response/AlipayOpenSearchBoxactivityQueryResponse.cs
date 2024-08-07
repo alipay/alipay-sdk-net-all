@@ -65,6 +65,12 @@ namespace Aop.Api.Response
         public string MaterialUrl { get; set; }
 
         /// <summary>
+        /// 投放终端
+        /// </summary>
+        [XmlElement("oriented_rule")]
+        public DeliveryOrientedRuleInfo OrientedRule { get; set; }
+
+        /// <summary>
         /// 运行状态，INITIAL-初始/ONLINE-已上架/EXPIRE-已失效/OFFLINE-已下架
         /// </summary>
         [XmlElement("run_status")]

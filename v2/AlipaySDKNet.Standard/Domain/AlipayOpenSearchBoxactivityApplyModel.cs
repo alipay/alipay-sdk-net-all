@@ -53,6 +53,12 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
+        /// 投放终端
+        /// </summary>
+        [XmlElement("oriented_rule")]
+        public DeliveryOrientedRuleInfo OrientedRule { get; set; }
+
+        /// <summary>
         /// 活动开始时间，开始和结束时间之间不得超过90天
         /// </summary>
         [XmlElement("start_time")]

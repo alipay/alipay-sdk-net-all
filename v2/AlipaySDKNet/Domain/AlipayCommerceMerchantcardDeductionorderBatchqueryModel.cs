@@ -10,25 +10,25 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardDeductionorderBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 订单ID
+        /// 售卖订单id
         /// </summary>
         [XmlElement("card_id")]
         public string CardId { get; set; }
 
         /// <summary>
-        /// 扣款结束时间
+        /// 核销订单结束时间
         /// </summary>
         [XmlElement("deduction_end_date")]
         public string DeductionEndDate { get; set; }
 
         /// <summary>
-        /// 扣款开始时间
+        /// 核销订单开始时间
         /// </summary>
         [XmlElement("deduction_start_date")]
         public string DeductionStartDate { get; set; }
 
         /// <summary>
-        /// 扣款单状态
+        /// 核销订单状态
         /// </summary>
         [XmlElement("deduction_status")]
         public string DeductionStatus { get; set; }
@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 订单结束时间
+        /// 售卖订单结束时间
         /// </summary>
         [XmlElement("order_end_date")]
         public string OrderEndDate { get; set; }
 
         /// <summary>
-        /// 订单开始时间
+        /// 售卖订单开始时间
         /// </summary>
         [XmlElement("order_start_date")]
         public string OrderStartDate { get; set; }

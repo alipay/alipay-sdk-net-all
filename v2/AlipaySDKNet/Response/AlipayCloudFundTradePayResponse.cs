@@ -39,7 +39,7 @@ namespace Aop.Api.Response
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 交易金额
+        /// 交易金额，单位元
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

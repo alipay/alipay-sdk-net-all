@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AftersaleItemInfo : AopObject
     {
         /// <summary>
-        /// 商品数量
+        /// 商品数量,单位:"个"
         /// </summary>
         [XmlElement("item_cnt")]
         public string ItemCnt { get; set; }

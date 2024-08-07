@@ -10,19 +10,19 @@ namespace Aop.Api.Domain
     public class ExecutionPlan : AopObject
     {
         /// <summary>
-        /// 周期扣预期执行时间
+        /// 周期扣预期执行时间，格式为YYYY-MM-DD
         /// </summary>
         [XmlElement("execute_time")]
         public string ExecuteTime { get; set; }
 
         /// <summary>
-        /// 周期扣执行计划最晚执行时间
+        /// 周期扣执行计划最晚执行时间，格式为YYYY-MM-DD
         /// </summary>
         [XmlElement("latest_execute_time")]
         public string LatestExecuteTime { get; set; }
 
         /// <summary>
-        /// 周期扣期数
+        /// 该值为自然数，表示周期扣期数。
         /// </summary>
         [XmlElement("period_id")]
         public string PeriodId { get; set; }

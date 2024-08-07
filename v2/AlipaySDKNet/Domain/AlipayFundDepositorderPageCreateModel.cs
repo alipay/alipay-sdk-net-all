@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string BackUrl { get; set; }
 
         /// <summary>
-        /// 场景码，固定值：DEFAULT
+        /// 描述特定的业务场景
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }

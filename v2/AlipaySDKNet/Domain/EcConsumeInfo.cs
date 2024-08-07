@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string BizOutNo { get; set; }
 
         /// <summary>
-        /// 账单分类名称，比如：餐饮美食，交通出行，酒店旅游等
+        /// 账单分类名称，如餐饮等
         /// </summary>
         [XmlElement("category_name")]
         public string CategoryName { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string ConsumeBizType { get; set; }
 
         /// <summary>
-        /// 员工消费记账分类
+        /// 员工消费记账分类： "cater": "餐饮" "purchase": "采购" "trip": "出行" "train": "培训" "entertainment": "娱乐" "hotel": "酒店" "pay": "缴费" "rent": "房租" "other": "其他"
         /// </summary>
         [XmlElement("consume_category")]
         public string ConsumeCategory { get; set; }
@@ -112,7 +112,7 @@ namespace Aop.Api.Domain
         public string ExpenseTypeSubCategory { get; set; }
 
         /// <summary>
-        /// 账单扩展信息，JsonMap格式, key值枚举 [{"value": "SUMMARY_INFO","name": "账单汇总信息"},{"value": "MERCHANT_EXTEND_INFO","name": "商户扩展信息"}, {"value": "TERMINAL_INFO","name": "终端设备信息"},{"value": "BENEFIT_INFO","name": "优惠扩展信息"}, {"value": "CONSUMPTION_LOCATION","name": "消费上报位置"},{"value": "THIRD_PARTY_PAYMENT_INFO","name": "代收款详情"}]
+        /// 账单扩展信息，JsonMap格式，以下信息可组合返回，"SUMMARY_INFO"表示"账单汇总信息"，"MERCHANT_EXTEND_INFO"表示"商户信息"，"TERMINAL_INFO"表示"终端设备信息"，"BENEFIT_INFO"表示"员工优惠信息"，"CONSUMPTION_LOCATION"表示"消费上报位置"，"THIRD_PARTY_PAYMENT_INFO"表示"代收款详情"
         /// </summary>
         [XmlElement("ext_infos")]
         public string ExtInfos { get; set; }
@@ -166,7 +166,7 @@ namespace Aop.Api.Domain
         public string OppositeFullName { get; set; }
 
         /// <summary>
-        /// 订单完结标识 0：未完结 1：已完结
+        /// 订单完结标识，0标识“未完结”，1标识“已完结”
         /// </summary>
         [XmlElement("order_complete_label")]
         public string OrderCompleteLabel { get; set; }
@@ -220,7 +220,7 @@ namespace Aop.Api.Domain
         public string PeerRefundAmount { get; set; }
 
         /// <summary>
-        /// 消费账单企业代付部分退款状态，默认为INIT。当消费账单有退款，该值会变为REFUND_PART或REFUND_FULL；退款账单该值无意义，为初始值INIT。 未退款：INIT， 部分退款：REFUND_PART， 全额退款：REFUND_FULL
+        /// 该字段只对因公付交易生效，默认为INIT。当消费账单有退款，该值会变为REFUND_PART或REFUND_FULL；退款账单该值无意义，为初始值INIT。 未退款：INIT 部分退款：REFUND_PART， 全额退款：REFUND_FULL
         /// </summary>
         [XmlElement("peer_refund_status")]
         public string PeerRefundStatus { get; set; }

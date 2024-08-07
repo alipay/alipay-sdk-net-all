@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class CardPeriodPrice : AopObject
     {
         /// <summary>
-        /// 原价，单位分
+        /// 原价，单位分。 字段值需要大于或等于sale_price。
         /// </summary>
         [XmlElement("original_price")]
         public long OriginalPrice { get; set; }

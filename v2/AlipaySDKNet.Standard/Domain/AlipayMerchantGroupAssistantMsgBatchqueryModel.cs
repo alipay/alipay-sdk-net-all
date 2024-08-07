@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMerchantGroupAssistantMsgBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 小助手类型列表，目前只支持 activity_recommend (自定义活动)
+        /// 小助手类型列表，目前支持 activity_recommend (自定义活动)、benefit_recommend（优惠券推荐）
         /// </summary>
         [XmlArray("biz_type_list")]
         [XmlArrayItem("string")]

@@ -10,7 +10,13 @@ namespace Aop.Api.Domain
     public class InstFundFlowRecordDTO : AopObject
     {
         /// <summary>
-        /// 调拨业务场景
+        /// 资金池ID
+        /// </summary>
+        [XmlElement("biz_context")]
+        public string BizContext { get; set; }
+
+        /// <summary>
+        /// 业务场景
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
@@ -64,7 +70,7 @@ namespace Aop.Api.Domain
         public string DebitUserId { get; set; }
 
         /// <summary>
-        /// 执行时间
+        /// 执行时间，单位秒
         /// </summary>
         [XmlElement("gmt_execute_time")]
         public string GmtExecuteTime { get; set; }
@@ -82,7 +88,7 @@ namespace Aop.Api.Domain
         public string PayResultCode { get; set; }
 
         /// <summary>
-        /// 针对pay_result_code的描述
+        /// 请求处理结果，无固定枚举值
         /// </summary>
         [XmlElement("pay_result_desc")]
         public string PayResultDesc { get; set; }

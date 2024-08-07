@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string EmployerCode { get; set; }
 
         /// <summary>
-        /// 用户在用工企业的唯一性身份标识，用户单位自定义参数，用于用工单位识别雇员身份
+        /// 用户在用工企业的唯一性身份标识，用工企业自定义参数，用于用工企业识别雇员身份
         /// </summary>
         [XmlElement("identification_in_belonging_employer")]
         public string IdentificationInBelongingEmployer { get; set; }

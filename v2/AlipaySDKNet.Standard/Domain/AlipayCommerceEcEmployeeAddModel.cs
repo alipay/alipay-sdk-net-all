@@ -96,7 +96,7 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// 员工刷脸加入企业人脸库时的核验方式
+        /// 员工刷脸加入企业人脸库时的核验方式，签约开通人脸库时必传
         /// </summary>
         [XmlElement("iot_check_type")]
         public string IotCheckType { get; set; }
@@ -114,7 +114,7 @@ namespace Aop.Api.Domain
         public string Profiles { get; set; }
 
         /// <summary>
-        /// 默认角色列表，目前只支持默认为 USER
+        /// 默认角色列表，目前只支持默认为 USER 当前字段已废弃(只有一个可选默认值，没必要传)
         /// </summary>
         [XmlArray("role_list")]
         [XmlArrayItem("string")]

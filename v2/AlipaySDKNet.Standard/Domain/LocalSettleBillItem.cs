@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
+        /// 本地生活商品原价，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("original_price")]
+        public string OriginalPrice { get; set; }
+
+        /// <summary>
         /// 外部门店ID
         /// </summary>
         [XmlElement("out_shop_id")]
@@ -160,7 +166,7 @@ namespace Aop.Api.Domain
         public string UseOrderNo { get; set; }
 
         /// <summary>
-        /// 核销时间
+        /// 核销时间，单位：秒。
         /// </summary>
         [XmlElement("use_time")]
         public string UseTime { get; set; }

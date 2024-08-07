@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string OutRequestNo { get; set; }
 
         /// <summary>
-        /// 医生执业问诊平台编码
+        /// 医生执业问诊平台编码，有新方向会新增，数量不固定
         /// </summary>
         [XmlElement("platform_code")]
         public string PlatformCode { get; set; }

@@ -10,7 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustrySupervisionAccountCreateModel : AopObject
     {
         /// <summary>
-        /// 不同的业务场景下对应不同的业务规则
+        /// 1:  支持异名打款 自动退  0: 不支持 。 默认为 1
+        /// </summary>
+        [XmlElement("auto_refund")]
+        public string AutoRefund { get; set; }
+
+        /// <summary>
+        /// 不同的业务场景走不同业务规则
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
@@ -34,7 +40,7 @@ namespace Aop.Api.Domain
         public string OutUserId { get; set; }
 
         /// <summary>
-        /// 协会、商户在银行侧自行创建的结算户账户户名
+        /// 协会、商户在银行侧自行创建的结算户账户户名，创建子户时由服务商调用接口传入
         /// </summary>
         [XmlElement("parent_ext_account_name")]
         public string ParentExtAccountName { get; set; }
@@ -64,7 +70,7 @@ namespace Aop.Api.Domain
         public string PayeeParticipantId { get; set; }
 
         /// <summary>
-        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。子户转出时的收款方账户户名
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。子户转出时的收款方账户户名。
         /// </summary>
         [XmlElement("payee_participant_name")]
         public string PayeeParticipantName { get; set; }
@@ -82,7 +88,7 @@ namespace Aop.Api.Domain
         public string PayerParticipantId { get; set; }
 
         /// <summary>
-        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。转入子户时的付款方账户户名
+        /// 业务场景为专款钱包 SPECIAL_FUNDS 场景下。转入子户时的付款方账户户名,在后续资金划拨请求中会校验资金划拨请求中的收方账户户名是否是本次开户请求的收款方账户户名或者是付款方账户户名
         /// </summary>
         [XmlElement("payer_participant_name")]
         public string PayerParticipantName { get; set; }

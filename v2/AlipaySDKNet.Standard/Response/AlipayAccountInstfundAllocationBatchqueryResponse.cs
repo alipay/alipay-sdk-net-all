@@ -17,7 +17,7 @@ namespace Aop.Api.Response
         public long PageNum { get; set; }
 
         /// <summary>
-        /// 页大小
+        /// 页大小，单位条
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

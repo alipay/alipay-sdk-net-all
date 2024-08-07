@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 结束的结果码
+        /// </summary>
+        [XmlElement("result_code")]
+        public string ResultCode { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("uid")]

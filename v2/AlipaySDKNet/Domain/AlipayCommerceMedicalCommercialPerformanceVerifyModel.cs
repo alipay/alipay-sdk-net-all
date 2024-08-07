@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizUrl { get; set; }
 
         /// <summary>
+        /// 核销业务url类型
+        /// </summary>
+        [XmlElement("biz_url_type")]
+        public string BizUrlType { get; set; }
+
+        /// <summary>
         /// 用户user_id，做了open_id映射
         /// </summary>
         [XmlElement("buyer_id")]
@@ -58,7 +64,7 @@ namespace Aop.Api.Domain
         public string OutProductId { get; set; }
 
         /// <summary>
-        /// status核销或确认场景使用，枚举值为S\C\R\N，正常核销或确认商品时传S、核销权益次数完结传C、拒绝核销或确认传入N、逆向核销回补使用次数时传递R。
+        /// status核销或确认场景使用，枚举值为S\C\R\N，正常核销或确认商品时传S、核销权益次数完结传C、拒绝核销或确认传入N、逆向核销回补使用次数时传递R。 不传默认为S
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
@@ -70,13 +76,13 @@ namespace Aop.Api.Domain
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// usage_count用于记录用户对某一商品的使用次数，每次核销时商户侧进行累加。该字段不影响主逻辑，用于支付宝侧日志监控
+        /// 已使用次数，usage_count用于记录用户对某一商品的使用次数，每次核销时商户侧进行累加。该字段不影响主逻辑，用于支付宝侧日志监控
         /// </summary>
         [XmlElement("usage_count")]
         public string UsageCount { get; set; }
 
         /// <summary>
-        /// 确认场景类型，枚举值用户核销，USER_PERFORMANCE。取消预约，RESERVE_CANCEL。修改预约，RESERVE_MODIFY。上传报告，REPORT_UPLOAD
+        /// 确认场景类型，枚举值用户核销，USER_PERFORMANCE。取消预约，RESERVE_CANCEL。修改预约，RESERVE_MODIFY。上传报告，REPORT_UPLOAD。 不传，默认为用户核销
         /// </summary>
         [XmlElement("verify_type")]
         public string VerifyType { get; set; }

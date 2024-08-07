@@ -17,7 +17,13 @@ namespace Aop.Api.Domain
         public ActivityAssistantMsgContentVO ActivityContent { get; set; }
 
         /// <summary>
-        /// 小助手类型，目前只支持 activity_recommend (自定义活动)
+        /// 权益推荐小助手内容
+        /// </summary>
+        [XmlElement("benefit_content")]
+        public BenefitAssistantMsgContentVO BenefitContent { get; set; }
+
+        /// <summary>
+        /// 小助手类型，目前支持 activity_recommend (自定义活动)、benefit_recommend（权益推荐）
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }

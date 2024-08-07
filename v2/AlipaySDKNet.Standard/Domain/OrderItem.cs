@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string CommodityId { get; set; }
 
         /// <summary>
-        /// 订单联系人
+        /// 订单联系人，在下单是传入则会返回
         /// </summary>
         [XmlElement("contacts")]
         public string Contacts { get; set; }

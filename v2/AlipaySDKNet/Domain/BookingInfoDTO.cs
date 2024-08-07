@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string Deadline { get; set; }
 
         /// <summary>
-        /// 商户为买家办理续住的时间
+        /// 商户为买家办理续住的时间，格式为：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("have_stay_time")]
         public string HaveStayTime { get; set; }

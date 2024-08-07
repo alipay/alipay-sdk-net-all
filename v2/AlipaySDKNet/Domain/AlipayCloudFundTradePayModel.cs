@@ -74,5 +74,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("subject")]
         public string Subject { get; set; }
+
+        /// <summary>
+        /// 场景钱包id
+        /// </summary>
+        [XmlElement("user_wallet_id")]
+        public string UserWalletId { get; set; }
     }
 }

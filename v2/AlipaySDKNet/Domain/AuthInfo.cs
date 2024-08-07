@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AuthInfo : AopObject
     {
         /// <summary>
-        /// 授权号
+        /// 授权号，协议授权或者cif协议对应的授权号。
         /// </summary>
         [XmlElement("auth_code")]
         public string AuthCode { get; set; }

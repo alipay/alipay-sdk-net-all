@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CardGroupName { get; set; }
 
         /// <summary>
+        /// 风控咨询结果
+        /// </summary>
+        [XmlElement("credit_risk_info")]
+        public string CreditRiskInfo { get; set; }
+
+        /// <summary>
         /// 芝麻人群标签
         /// </summary>
         [XmlElement("marketing_flag")]

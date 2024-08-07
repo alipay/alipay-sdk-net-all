@@ -9,13 +9,13 @@ namespace Aop.Api.Response
     public class AlipayCommerceLogisticsOrderInstantdeliveryCreateResponse : AopResponse
     {
         /// <summary>
-        /// 优惠券费用
+        /// 优惠券费用，单位元
         /// </summary>
         [XmlElement("coupon_fee")]
         public string CouponFee { get; set; }
 
         /// <summary>
-        /// 运费
+        /// 运费，单位元
         /// </summary>
         [XmlElement("deliver_fee")]
         public string DeliverFee { get; set; }
@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public long Distance { get; set; }
 
         /// <summary>
-        /// 实际运费
+        /// 实际运费，单位元
         /// </summary>
         [XmlElement("fee")]
         public string Fee { get; set; }
@@ -45,7 +45,7 @@ namespace Aop.Api.Response
         public string FinishCode { get; set; }
 
         /// <summary>
-        /// 保价费用
+        /// 保价费用，单位元
         /// </summary>
         [XmlElement("insurance_fee")]
         public string InsuranceFee { get; set; }
@@ -57,7 +57,7 @@ namespace Aop.Api.Response
         public string OrderNo { get; set; }
 
         /// <summary>
-        /// 支付金额, 实际扣减的费用以此字段为准
+        /// 支付金额, 实际扣减的费用以此字段为准，单位元
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }

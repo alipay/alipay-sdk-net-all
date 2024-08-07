@@ -18,7 +18,7 @@ namespace Aop.Api.Response
         public List<LocalSettleBillItem> BillList { get; set; }
 
         /// <summary>
-        /// 当前分页大小
+        /// 当前分页大小，单位：条目数。
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

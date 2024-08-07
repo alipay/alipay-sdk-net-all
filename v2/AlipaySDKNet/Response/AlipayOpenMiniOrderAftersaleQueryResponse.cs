@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string ActionType { get; set; }
 
         /// <summary>
+        /// 创建售后单时用户填写的补充描述
+        /// </summary>
+        [XmlElement("additional_reason")]
+        public string AdditionalReason { get; set; }
+
+        /// <summary>
         /// 商品列表
         /// </summary>
         [XmlArray("aftersale_goods_info_list")]
@@ -30,10 +36,29 @@ namespace Aop.Api.Response
         public string AftersaleId { get; set; }
 
         /// <summary>
+        /// 用户通过标准售后组件申请售后时，上传的证明图片和视频信息
+        /// </summary>
+        [XmlArray("aftersale_media_list")]
+        [XmlArrayItem("order_media_info")]
+        public List<OrderMediaInfo> AftersaleMediaList { get; set; }
+
+        /// <summary>
         /// 用户售后发起原因
         /// </summary>
         [XmlElement("aftersale_reason")]
         public string AftersaleReason { get; set; }
+
+        /// <summary>
+        /// 申请退款金额，单位：元,精确到小数点后两位
+        /// </summary>
+        [XmlElement("apply_refund_amount")]
+        public string ApplyRefundAmount { get; set; }
+
+        /// <summary>
+        /// 最终退款金额，单位：元,精确到小数点后两位
+        /// </summary>
+        [XmlElement("finally_refund_amount")]
+        public string FinallyRefundAmount { get; set; }
 
         /// <summary>
         /// 物流单详情

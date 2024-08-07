@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcConsumeDetailQueryModel : AopObject
     {
         /// <summary>
-        /// 共同账户ID
+        /// 共同账户ID 当前字段已废弃(该字段将废弃，不建议使用，可用enterprise_id字段替换)
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 授权签约协议号
+        /// 授权签约协议号 当前字段已废弃(该字段将废弃，不建议使用，可用enterprise_id字段替换)
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }

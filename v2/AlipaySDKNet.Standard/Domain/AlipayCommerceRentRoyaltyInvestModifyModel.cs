@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("royalty_stage")]
         public long RoyaltyStage { get; set; }
+
+        /// <summary>
+        /// 分账计划对应资金类型
+        /// </summary>
+        [XmlElement("royalty_type")]
+        public string RoyaltyType { get; set; }
     }
 }

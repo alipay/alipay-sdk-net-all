@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 业务转化属性实例值
+        /// 业务转化属性实例值， property_list的value值需与转化管理里创建转化事件时填写的归因口径值保持一致<br> attrbute_list的value值请参考该文档：<a href='https://adpub.alipay.com/adrlark/ivdktpyh511x9r6i'>转化事件类型属性规则</a>
         /// </summary>
         [XmlElement("value")]
         public string Value { get; set; }

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AgencyName { get; set; }
 
         /// <summary>
-        /// 证件类型，该参数为候选人在供应商机构体检时出示的有效证件，由候选人去现场体检后传回，字符串，蚂蚁系统接收之后用于校验是否为本人参加体检，候选人到检后传入
+        /// 证件名字，该参数为候选人在供应商机构体检时出示的有效证件，由候选人去现场体检后传回，字符串，蚂蚁系统接收之后用于校验是否为本人参加体检，候选人到检后传入
         /// </summary>
         [XmlElement("cert_genre")]
         public string CertGenre { get; set; }

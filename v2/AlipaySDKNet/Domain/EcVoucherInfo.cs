@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
+        /// 发票账单合规匹配结果
+        /// </summary>
+        [XmlElement("invoice_compliance_check_result")]
+        public InvoiceComplianceCheckResult InvoiceComplianceCheckResult { get; set; }
+
+        /// <summary>
         /// 员工支付宝UID
         /// </summary>
         [XmlElement("open_id")]

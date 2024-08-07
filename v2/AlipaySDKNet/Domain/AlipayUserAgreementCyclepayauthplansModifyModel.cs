@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string SingleAmount { get; set; }
 
         /// <summary>
-        /// 总扣款期数
+        /// 总扣款期数，入参为自然数，代表期数值。
         /// </summary>
         [XmlElement("total_payments")]
         public string TotalPayments { get; set; }

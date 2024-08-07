@@ -46,6 +46,18 @@ namespace Aop.Api.Domain
         public string EmployeeAlipayLogonId { get; set; }
 
         /// <summary>
+        /// 雇员身份标识
+        /// </summary>
+        [XmlElement("employee_identification")]
+        public string EmployeeIdentification { get; set; }
+
+        /// <summary>
+        /// 雇员身份标识的openid
+        /// </summary>
+        [XmlElement("employee_identification_open_id")]
+        public string EmployeeIdentificationOpenId { get; set; }
+
+        /// <summary>
         /// 用工企业入驻后平台后，平台提供的企业编码
         /// </summary>
         [XmlElement("employer_code")]

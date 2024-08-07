@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string PaymentBizType { get; set; }
 
         /// <summary>
-        /// 支付方式，到付等特殊场景下传入
+        /// 支付方式，到付、无需支付等特殊场景下传入，到付和无需支付都会直接推进订单到已支付状态。
         /// </summary>
         [XmlElement("payment_method")]
         public string PaymentMethod { get; set; }

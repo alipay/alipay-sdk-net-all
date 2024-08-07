@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceMerchantcardTemplateModifyResponse : AopResponse
     {
         /// <summary>
-        /// 商品ID
+        /// 卡ID
         /// </summary>
         [XmlElement("card_template_id")]
         public string CardTemplateId { get; set; }

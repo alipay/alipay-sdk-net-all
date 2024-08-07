@@ -80,5 +80,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payer_participant_type")]
         public string PayerParticipantType { get; set; }
+
+        /// <summary>
+        /// 专款资金金额，整数，单位：分
+        /// </summary>
+        [XmlElement("special_funds_amount")]
+        public long SpecialFundsAmount { get; set; }
+
+        /// <summary>
+        /// 币种，默认 CNY。目前只支持CNY
+        /// </summary>
+        [XmlElement("special_funds_currency")]
+        public string SpecialFundsCurrency { get; set; }
     }
 }

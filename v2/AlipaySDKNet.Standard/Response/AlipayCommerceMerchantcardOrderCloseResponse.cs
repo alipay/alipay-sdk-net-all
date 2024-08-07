@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceMerchantcardOrderCloseResponse : AopResponse
     {
         /// <summary>
-        /// 订购单ID
+        /// 售卖订单ID
         /// </summary>
         [XmlElement("card_id")]
         public string CardId { get; set; }

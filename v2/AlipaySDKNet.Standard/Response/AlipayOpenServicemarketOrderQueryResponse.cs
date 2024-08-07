@@ -48,7 +48,7 @@ namespace Aop.Api.Response
         public string Status { get; set; }
 
         /// <summary>
-        /// 总记录数
+        /// 总记录数，例如1000条
         /// </summary>
         [XmlElement("total_size")]
         public long TotalSize { get; set; }

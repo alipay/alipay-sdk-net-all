@@ -1,0 +1,102 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// MoneyCardUseRecordDetail Data Structure.
+    /// </summary>
+    [Serializable]
+    public class MoneyCardUseRecordDetail : AopObject
+    {
+        /// <summary>
+        /// 金额，对应金额卡实际核销金额，单位分
+        /// </summary>
+        [XmlElement("amount")]
+        public string Amount { get; set; }
+
+        /// <summary>
+        /// 业务类型
+        /// </summary>
+        [XmlElement("biz_type")]
+        public string BizType { get; set; }
+
+        /// <summary>
+        /// 售卖订单id
+        /// </summary>
+        [XmlElement("card_id")]
+        public string CardId { get; set; }
+
+        /// <summary>
+        /// 现金价值，对应金额卡实际出资部分，单位分
+        /// </summary>
+        [XmlElement("cash")]
+        public string Cash { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [XmlElement("create_time")]
+        public string CreateTime { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 平台订单id
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("owner_open_id")]
+        public string OwnerOpenId { get; set; }
+
+        /// <summary>
+        /// 金额卡归属人uid
+        /// </summary>
+        [XmlElement("owner_uid")]
+        public string OwnerUid { get; set; }
+
+        /// <summary>
+        /// 交易号
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
+
+        /// <summary>
+        /// 收单pid
+        /// </summary>
+        [XmlElement("trade_pid")]
+        public string TradePid { get; set; }
+
+        /// <summary>
+        /// 核销门店id
+        /// </summary>
+        [XmlElement("use_shop_id")]
+        public string UseShopId { get; set; }
+
+        /// <summary>
+        /// 核销门店名
+        /// </summary>
+        [XmlElement("use_shop_name")]
+        public string UseShopName { get; set; }
+
+        /// <summary>
+        /// 核销门店备注
+        /// </summary>
+        [XmlElement("use_shop_note")]
+        public string UseShopNote { get; set; }
+
+        /// <summary>
+        /// 核销支付宝用户的userId。
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
+    }
+}

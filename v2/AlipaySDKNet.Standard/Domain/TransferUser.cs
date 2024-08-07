@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public TransferCredential Credential { get; set; }
 
         /// <summary>
+        /// 用户性别：Male/Female
+        /// </summary>
+        [XmlElement("gender")]
+        public string Gender { get; set; }
+
+        /// <summary>
         /// 国籍
         /// </summary>
         [XmlElement("nationality")]

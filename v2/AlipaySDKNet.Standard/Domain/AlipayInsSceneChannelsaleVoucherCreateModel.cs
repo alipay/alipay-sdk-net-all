@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string PurchaseMerchantId { get; set; }
 
         /// <summary>
+        /// 同蚂蚁保约定确定
+        /// </summary>
+        [XmlElement("registered_subject_id")]
+        public string RegisteredSubjectId { get; set; }
+
+        /// <summary>
         /// 发放类型
         /// </summary>
         [XmlElement("send_type")]

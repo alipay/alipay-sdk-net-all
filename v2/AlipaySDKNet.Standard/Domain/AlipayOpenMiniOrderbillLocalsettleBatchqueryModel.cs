@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderbillLocalsettleBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 页大小，最大值为10
+        /// 页大小，最大值为10，单位：条目数。
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

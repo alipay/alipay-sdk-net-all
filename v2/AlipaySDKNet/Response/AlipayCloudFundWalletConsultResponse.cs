@@ -21,13 +21,13 @@ namespace Aop.Api.Response
         public string AssetNo { get; set; }
 
         /// <summary>
-        /// 可用金额
+        /// 可用金额，单位元
         /// </summary>
         [XmlElement("available_amount")]
         public string AvailableAmount { get; set; }
 
         /// <summary>
-        /// 总金额
+        /// 总金额，单位元
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

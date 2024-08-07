@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
-        /// 总条数
+        /// 交易时间
         /// </summary>
         [XmlElement("trans_dt")]
         public string TransDt { get; set; }

@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// 结果码
+        /// 结果码，数量不固定
         /// </summary>
         [XmlElement("result_code")]
         public string ResultCode { get; set; }

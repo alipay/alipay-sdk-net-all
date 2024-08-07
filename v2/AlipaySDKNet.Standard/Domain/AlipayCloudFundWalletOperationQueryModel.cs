@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// 分页大小，单位是条数
         /// </summary>
         [XmlElement("page_size")]
         public string PageSize { get; set; }

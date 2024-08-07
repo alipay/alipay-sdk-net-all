@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayAccountInstfundAllocationBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 最晚执行时间
+        /// 最晚执行时间，单位秒
         /// </summary>
         [XmlElement("max_gmt_execute_time")]
         public string MaxGmtExecuteTime { get; set; }
 
         /// <summary>
-        /// 最早执行时间
+        /// 最早执行时间，单位秒
         /// </summary>
         [XmlElement("min_gmt_execute_time")]
         public string MinGmtExecuteTime { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public long PageNum { get; set; }
 
         /// <summary>
-        /// 页大小
+        /// 页大小，单位条
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

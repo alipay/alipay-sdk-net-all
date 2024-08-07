@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class PromotionTaskRelation : AopObject
     {
         /// <summary>
-        /// 申请推广时填写的申请理由
+        /// 申请推广时填写的申请理由，自定义的内容
         /// </summary>
         [XmlElement("apply_reason")]
         public string ApplyReason { get; set; }

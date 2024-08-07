@@ -49,6 +49,12 @@ namespace Aop.Api.Domain
         public string IncludeQrcode { get; set; }
 
         /// <summary>
+        /// 是否包含SN
+        /// </summary>
+        [XmlElement("include_sn")]
+        public string IncludeSn { get; set; }
+
+        /// <summary>
         /// 是否是套组物料
         /// </summary>
         [XmlElement("is_suite")]
@@ -95,5 +101,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("std")]
         public AssetStandard Std { get; set; }
+
+        /// <summary>
+        /// 物料供给模板信息
+        /// </summary>
+        [XmlArray("supply_details")]
+        [XmlArrayItem("asset_supply_detail")]
+        public List<AssetSupplyDetail> SupplyDetails { get; set; }
     }
 }

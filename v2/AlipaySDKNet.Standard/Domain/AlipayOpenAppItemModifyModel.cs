@@ -122,6 +122,12 @@ namespace Aop.Api.Domain
         public string SaleStatus { get; set; }
 
         /// <summary>
+        /// 修改商品跳过算法检测
+        /// </summary>
+        [XmlElement("skip_algorithm_check")]
+        public string SkipAlgorithmCheck { get; set; }
+
+        /// <summary>
         /// sku数组
         /// </summary>
         [XmlArray("skus")]

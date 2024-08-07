@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceMerchantcardDeductionorderQueryResponse : AopResponse
     {
         /// <summary>
-        /// 扣款单信息
+        /// 核销订单信息
         /// </summary>
         [XmlElement("deduction_order_info")]
         public DeductionOrderInfo DeductionOrderInfo { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardTemplateQueryModel : AopObject
     {
         /// <summary>
-        /// 商品ID
+        /// 卡ID
         /// </summary>
         [XmlElement("card_template_id")]
         public string CardTemplateId { get; set; }

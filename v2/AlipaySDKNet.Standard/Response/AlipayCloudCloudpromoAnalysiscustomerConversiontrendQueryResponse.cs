@@ -1,0 +1,18 @@
+using System;
+using System.Xml.Serialization;
+using Aop.Api.Domain;
+
+namespace Aop.Api.Response
+{
+    /// <summary>
+    /// AlipayCloudCloudpromoAnalysiscustomerConversiontrendQueryResponse.
+    /// </summary>
+    public class AlipayCloudCloudpromoAnalysiscustomerConversiontrendQueryResponse : AopResponse
+    {
+        /// <summary>
+        /// {"rows":[{"tapp_trd_user_cnt_visit_rate_xox":-0.1846,"pv_xox_lastValue":165,"spu_cnt_xox":0.0671},{"pv":85,"isv_pid":"","spu_buyer_retention_1m_rate_xox_lastValue":null,"tapp_refund_cnt":40}]}
+        /// </summary>
+        [XmlElement("items")]
+        public OpenApiCustomerAnalysisResult Items { get; set; }
+    }
+}

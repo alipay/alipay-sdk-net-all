@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public bool BioInClient { get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 姓名，三要素入库必填
         /// </summary>
         [XmlElement("cert_name")]
         public string CertName { get; set; }
@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
-        /// 组件编码，该参数与userInfoList配对使用。详见接入指南
+        /// 组件编码，详见接入指南
         /// </summary>
         [XmlElement("component_out_id")]
         public string ComponentOutId { get; set; }
 
         /// <summary>
-        /// 扩展信息，ISV自定义，如无可为空
+        /// 扩展信息，服务商自定义，如无可为空
         /// </summary>
         [XmlElement("ext")]
         public string Ext { get; set; }
@@ -58,13 +58,13 @@ namespace Aop.Api.Domain
         public string Image { get; set; }
 
         /// <summary>
-        /// ISV的PID
+        /// 服务商传入服务商的PID
         /// </summary>
         [XmlElement("isv_pid")]
         public string IsvPid { get; set; }
 
         /// <summary>
-        /// 标签外标最多5个
+        /// 自定义标签
         /// </summary>
         [XmlElement("label_out_no")]
         public string LabelOutNo { get; set; }

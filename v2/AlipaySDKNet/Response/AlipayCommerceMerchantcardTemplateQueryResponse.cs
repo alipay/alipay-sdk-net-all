@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceMerchantcardTemplateQueryResponse : AopResponse
     {
         /// <summary>
-        /// 商品信息
+        /// 卡信息
         /// </summary>
         [XmlElement("card_template")]
         public MerchantCardTemplate CardTemplate { get; set; }

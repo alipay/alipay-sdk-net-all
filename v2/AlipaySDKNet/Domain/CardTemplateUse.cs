@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public long UsableCount { get; set; }
 
         /// <summary>
-        /// 传入指定商品的可用门店ID
+        /// 传入指定卡的可用门店ID
         /// </summary>
         [XmlArray("usable_shop_list")]
         [XmlArrayItem("string")]

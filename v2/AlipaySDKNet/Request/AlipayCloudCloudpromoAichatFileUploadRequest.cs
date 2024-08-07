@@ -26,6 +26,11 @@ namespace Aop.Api.Request
         public string FileExtension { get; set; }
 
         /// <summary>
+        /// 文件id，首次上传文件时由问答系统生成并返回给调用方。
+        /// </summary>
+        public string FileId { get; set; }
+
+        /// <summary>
         /// 文件名称
         /// </summary>
         public string FileName { get; set; }
@@ -34,6 +39,11 @@ namespace Aop.Api.Request
         /// 文件用途
         /// </summary>
         public string FileUsage { get; set; }
+
+        /// <summary>
+        /// 当后缀file_extension为xlsx/xls/csv/json时，index_column字段传值，表示对文件内容中指定的一级字段/列名建立优化索引；如果没有传递该值或不属于上述后缀，表示不针对字段级别建立索引。
+        /// </summary>
+        public string IndexColumn { get; set; }
 
         /// <summary>
         /// 场景唯一标识，由客户提供
@@ -132,8 +142,10 @@ namespace Aop.Api.Request
             AopDictionary parameters = new AopDictionary();
             parameters.Add("customer_id", this.CustomerId);
             parameters.Add("file_extension", this.FileExtension);
+            parameters.Add("file_id", this.FileId);
             parameters.Add("file_name", this.FileName);
             parameters.Add("file_usage", this.FileUsage);
+            parameters.Add("index_column", this.IndexColumn);
             parameters.Add("scene_id", this.SceneId);
             parameters.Add("session_id", this.SessionId);
             if(udfParams != null) 

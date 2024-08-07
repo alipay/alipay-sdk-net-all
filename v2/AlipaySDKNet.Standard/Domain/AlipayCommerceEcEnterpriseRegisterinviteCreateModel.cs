@@ -40,9 +40,15 @@ namespace Aop.Api.Domain
         public EnterpriseProfilesDTO Profiles { get; set; }
 
         /// <summary>
-        /// 用于区分接口返回的企业注册链接，用于「企业自助注册」还是「服务商代企业注册」<br/> 不传默认为 NORMAL 企业自入驻
+        /// 企业注册模式，用于区分接口返回的企业注册链接是「企业自助注册」还是「服务商代企业注册」<br/> 不传默认为企业自入驻(NORMAL)
         /// </summary>
         [XmlElement("register_mode")]
         public string RegisterMode { get; set; }
+
+        /// <summary>
+        /// 企业注册认证后，需要签约的出资方式；<br/> 不传默认为企业余额出资(BALANCE)
+        /// </summary>
+        [XmlElement("sign_fund_way")]
+        public string SignFundWay { get; set; }
     }
 }

@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string QueryType { get; set; }
 
         /// <summary>
-        /// 区分当前对话场景意图 卫健委通用助理——WJWCOMASS
+        /// 区分当前对话场景意图 前缀不同，不做强枚举校验
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

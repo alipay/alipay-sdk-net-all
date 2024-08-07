@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCloudFundWalletDepositorderCreateModel : AopObject
     {
         /// <summary>
-        /// 充值金额
+        /// 充值金额，单位元
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

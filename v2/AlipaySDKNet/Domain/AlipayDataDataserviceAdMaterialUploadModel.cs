@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string DealType { get; set; }
 
         /// <summary>
+        /// 上传图片/视频物料对应的外部id，需要保证唯一
+        /// </summary>
+        [XmlElement("material_outer_id")]
+        public string MaterialOuterId { get; set; }
+
+        /// <summary>
         /// 物料元素
         /// </summary>
         [XmlElement("material_unit")]
