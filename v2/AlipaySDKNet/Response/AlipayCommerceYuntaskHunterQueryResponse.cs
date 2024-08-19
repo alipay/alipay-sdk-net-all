@@ -17,7 +17,7 @@ namespace Aop.Api.Response
         public long Page { get; set; }
 
         /// <summary>
-        /// 页面大小
+        /// 页面大小，单位个
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
@@ -30,7 +30,7 @@ namespace Aop.Api.Response
         public List<TaskInstanceBasicInfo> TaskInfoList { get; set; }
 
         /// <summary>
-        /// 总数量
+        /// 总数量，单位个
         /// </summary>
         [XmlElement("total_size")]
         public long TotalSize { get; set; }

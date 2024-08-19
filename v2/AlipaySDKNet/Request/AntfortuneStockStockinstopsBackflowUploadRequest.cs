@@ -31,7 +31,7 @@ namespace Aop.Api.Request
         public string ForwardRoom { get; set; }
 
         /// <summary>
-        /// forward发送的时间
+        /// forward发送的时间，单位为秒
         /// </summary>
         public string ForwardTime { get; set; }
 

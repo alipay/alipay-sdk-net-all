@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceTransportParkingExitinfoSyncModel : AopObject
     {
         /// <summary>
+        /// 车辆出场的出口通道名称；取实地通道名称；
+        /// </summary>
+        [XmlElement("exit_name")]
+        public string ExitName { get; set; }
+
+        /// <summary>
+        /// 车辆出场的出口通道编号；与线下实地编码一致；
+        /// </summary>
+        [XmlElement("exit_number")]
+        public long ExitNumber { get; set; }
+
+        /// <summary>
         /// 车牌是否加密，true为加密，false为不加密，默认为false
         /// </summary>
         [XmlElement("is_encrypt_plate_no")]

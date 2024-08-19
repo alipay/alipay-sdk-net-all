@@ -30,13 +30,13 @@ namespace Aop.Api.Response
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 总数量。
+        /// 总数量，单位为图片个数。
         /// </summary>
         [XmlElement("total")]
         public long Total { get; set; }
 
         /// <summary>
-        /// 总页数。
+        /// 总页数，单位为页。
         /// </summary>
         [XmlElement("total_page")]
         public long TotalPage { get; set; }

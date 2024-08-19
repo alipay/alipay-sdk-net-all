@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceTransportParkingExitinfoSyncResponse : AopResponse
     {
         /// <summary>
-        /// 具体错误码
+        /// 具体错误码；
         /// </summary>
         [XmlElement("biz_code")]
         public string BizCode { get; set; }

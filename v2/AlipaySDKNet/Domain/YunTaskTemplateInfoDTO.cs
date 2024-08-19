@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CreatorUid { get; set; }
 
         /// <summary>
+        /// 任务生效范围
+        /// </summary>
+        [XmlElement("effect_scope")]
+        public TaskEffectScope EffectScope { get; set; }
+
+        /// <summary>
         /// 出资方id
         /// </summary>
         [XmlElement("funder_id")]
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("incentive")]
         public string Incentive { get; set; }
+
+        /// <summary>
+        /// 激励延长时间为xx天
+        /// </summary>
+        [XmlElement("incentive_extended_period")]
+        public long IncentiveExtendedPeriod { get; set; }
 
         /// <summary>
         /// 激励方式： PRESTROKE 逐笔 FIXEDLADDER 固定阶梯 ALGOLADDER 算法阶梯

@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string AdvanceAmount { get; set; }
 
         /// <summary>
+        /// 异步支付受理状态，仅异步支付模式且query_options指定async_pay_info时返回。S：受理成功，支付宝内部会在一定期限内捞起任务推进支付，直到支付成功或超出可重试期限；其它：受理结果未知，可通过查询接口获取交易状态。
+        /// </summary>
+        [XmlElement("async_pay_apply_status")]
+        public string AsyncPayApplyStatus { get; set; }
+
+        /// <summary>
         /// 异步支付模式，目前有五种值： ASYNC_DELAY_PAY(异步延时付款); ASYNC_REALTIME_PAY(异步准实时付款); SYNC_DIRECT_PAY(同步直接扣款); NORMAL_ASYNC_PAY(纯异步付款); QUOTA_OCCUPYIED_ASYNC_PAY(异步支付并且预占了先享后付额度);
         /// </summary>
         [XmlElement("async_payment_mode")]

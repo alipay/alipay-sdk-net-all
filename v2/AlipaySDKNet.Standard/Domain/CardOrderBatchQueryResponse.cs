@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CancelType { get; set; }
 
         /// <summary>
+        /// 已解约金额，单位：分 (金额卡无效)
+        /// </summary>
+        [XmlElement("cancelled_cash")]
+        public long CancelledCash { get; set; }
+
+        /// <summary>
         /// 售卖订单ID
         /// </summary>
         [XmlElement("card_id")]
@@ -64,6 +70,12 @@ namespace Aop.Api.Domain
         public string GmtExpired { get; set; }
 
         /// <summary>
+        /// 商户pid
+        /// </summary>
+        [XmlElement("merchant_pid")]
+        public string MerchantPid { get; set; }
+
+        /// <summary>
         /// 卡名称
         /// </summary>
         [XmlElement("name")]
@@ -92,6 +104,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }
+
+        /// <summary>
+        /// 退款金额，单位：分 (金额卡无效)
+        /// </summary>
+        [XmlElement("refund_cash")]
+        public long RefundCash { get; set; }
 
         /// <summary>
         /// 剩余期数(次数)
@@ -124,10 +142,16 @@ namespace Aop.Api.Domain
         public string TradeNo { get; set; }
 
         /// <summary>
-        /// 金额卡余额现金价值，单位分
+        /// （1）金额卡余额现金价值，单位分 （2）周期卡未核销金额
         /// </summary>
         [XmlElement("usable_cash")]
         public long UsableCash { get; set; }
+
+        /// <summary>
+        /// 已核销金额，单位：分 (金额卡无效)
+        /// </summary>
+        [XmlElement("used_cash")]
+        public long UsedCash { get; set; }
 
         /// <summary>
         /// 支付宝用户的userId。

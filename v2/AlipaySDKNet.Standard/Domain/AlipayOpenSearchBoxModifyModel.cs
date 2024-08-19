@@ -11,13 +11,6 @@ namespace Aop.Api.Domain
     public class AlipayOpenSearchBoxModifyModel : AopObject
     {
         /// <summary>
-        /// 小程序直达配置的常用服务中带有门店信息时，可添加简称触发词
-        /// </summary>
-        [XmlArray("area_keywords")]
-        [XmlArrayItem("string")]
-        public List<string> AreaKeywords { get; set; }
-
-        /// <summary>
         /// 品牌介绍，5-15个中文字符。当修改品牌介绍模块(module_type=BOX_EXCLUSIVE_BASE)时传入。 小程序直达时不支持设置
         /// </summary>
         [XmlElement("box_desc")]

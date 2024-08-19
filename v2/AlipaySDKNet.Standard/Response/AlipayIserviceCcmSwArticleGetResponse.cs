@@ -106,6 +106,13 @@ namespace Aop.Api.Response
         public string PublishStart { get; set; }
 
         /// <summary>
+        /// 关联的知识点基础信息
+        /// </summary>
+        [XmlArray("related_articles")]
+        [XmlArrayItem("base_article_info")]
+        public List<BaseArticleInfo> RelatedArticles { get; set; }
+
+        /// <summary>
         /// 场景ID。1（内部知识库）；2（机器人）;3（帮助中心）；4（无线帮助中心）
         /// </summary>
         [XmlArray("scene_codes")]

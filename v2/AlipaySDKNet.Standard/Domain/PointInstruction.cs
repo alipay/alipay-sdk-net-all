@@ -16,13 +16,19 @@ namespace Aop.Api.Domain
         public string ActionType { get; set; }
 
         /// <summary>
-        /// 积分数量
+        /// 积分数量，单位个
         /// </summary>
         [XmlElement("point_amount")]
         public string PointAmount { get; set; }
 
         /// <summary>
-        /// 原因，成功状态为补充说明，失败状态为失败原因
+        /// 积分类型
+        /// </summary>
+        [XmlElement("point_type")]
+        public string PointType { get; set; }
+
+        /// <summary>
+        /// 失败的原因文案描述，例如失败原因为账号异常问题，转账失败等。
         /// </summary>
         [XmlElement("reason")]
         public string Reason { get; set; }

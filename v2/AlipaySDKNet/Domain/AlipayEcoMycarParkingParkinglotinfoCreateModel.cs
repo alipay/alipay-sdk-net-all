@@ -24,6 +24,13 @@ namespace Aop.Api.Domain
         public List<BusinessItem> BusinessIsv { get; set; }
 
         /// <summary>
+        /// 停车场详细计费规则
+        /// </summary>
+        [XmlArray("charging_rule")]
+        [XmlArrayItem("parking_lot_charging_rule_info")]
+        public List<ParkingLotChargingRuleInfo> ChargingRule { get; set; }
+
+        /// <summary>
         /// 该参数废弃
         /// </summary>
         [XmlElement("city_id")]
@@ -84,13 +91,13 @@ namespace Aop.Api.Domain
         public string IsvMobile { get; set; }
 
         /// <summary>
-        /// 纬度
+        /// 纬度 单位:度
         /// </summary>
         [XmlElement("latitude")]
         public string Latitude { get; set; }
 
         /// <summary>
-        /// 经度
+        /// 经度 单位:度
         /// </summary>
         [XmlElement("longitude")]
         public string Longitude { get; set; }
@@ -180,7 +187,7 @@ namespace Aop.Api.Domain
         public string ParkingNumber { get; set; }
 
         /// <summary>
-        /// 如何获取parking_poiid（高德地图唯一标标识）参考文档 https://opendocs.alipay.com/support/01rghx；若无法成功获取高德POI时，也可选用经纬度的方式注册。
+        /// 如何获取parking_poiid（高德地图唯一标标识）参考文档 <a href="https://opendocs.alipay.com/support/01rghx">https://opendocs.alipay.com/support/01rghx</a> ；若无法成功获取高德POI时，也可选用经纬度的方式注册。
         /// </summary>
         [XmlElement("parking_poiid")]
         public string ParkingPoiid { get; set; }
@@ -198,7 +205,7 @@ namespace Aop.Api.Domain
         public string ParkingType { get; set; }
 
         /// <summary>
-        /// 支付方式。枚举支持： 1：表示支付宝在线缴费。 2：表示支付宝代扣缴费。 3：表示当面付。 说明：如支持多种方式以 ',' 进行分隔。
+        /// 支付方式。枚举支持： 1：表示支付宝在线缴费。 2：表示支付宝代扣缴费。 3：表示当面付。 4:  现金 说明：如支持多种方式以 ',' 进行分隔。
         /// </summary>
         [XmlElement("pay_type")]
         public string PayType { get; set; }
@@ -210,13 +217,20 @@ namespace Aop.Api.Domain
         public string PaymentMode { get; set; }
 
         /// <summary>
+        /// 停车场服务信息列表
+        /// </summary>
+        [XmlArray("service_list")]
+        [XmlArrayItem("parking_lot_service_info")]
+        public List<ParkingLotServiceInfo> ServiceList { get; set; }
+
+        /// <summary>
         /// 商圈id
         /// </summary>
         [XmlElement("shopingmall_id")]
         public string ShopingmallId { get; set; }
 
         /// <summary>
-        /// 停车场车位数
+        /// 停车场车位数 单位:个
         /// </summary>
         [XmlElement("sum_space")]
         public string SumSpace { get; set; }

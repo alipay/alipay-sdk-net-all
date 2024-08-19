@@ -14,7 +14,7 @@ namespace Aop.Api.Response
         /// 函数列表
         /// </summary>
         [XmlArray("functions")]
-        [XmlArrayItem("funtion_info")]
-        public List<FuntionInfo> Functions { get; set; }
+        [XmlArrayItem("function_info")]
+        public List<FunctionInfo> Functions { get; set; }
     }
 }

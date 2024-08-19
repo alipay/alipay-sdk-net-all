@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Detail { get; set; }
 
         /// <summary>
-        /// 高德坐标系经纬度 <br/> 经纬度半角逗号分隔
+        /// 高德坐标系经纬度 <br/> 经纬度半角逗号分隔 单位：°
         /// </summary>
         [XmlElement("geo")]
         public string Geo { get; set; }

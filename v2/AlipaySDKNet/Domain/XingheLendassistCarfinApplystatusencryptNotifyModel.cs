@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<OrgLoanDetail> LoanList { get; set; }
 
         /// <summary>
+        /// 机构侧状态码
+        /// </summary>
+        [XmlElement("org_status")]
+        public string OrgStatus { get; set; }
+
+        /// <summary>
         /// 机构侧唯一业务编号
         /// </summary>
         [XmlElement("out_apply_no")]

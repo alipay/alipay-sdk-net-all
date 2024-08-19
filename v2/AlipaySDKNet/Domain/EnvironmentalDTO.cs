@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string Environmental { get; set; }
 
         /// <summary>
-        /// 能量发放失败字典值对应数值 404 406 407 415 701 702 707 N1301
+        /// 能量发放失败字典值对应数值 404 406 407 415 701 702 707 N1301 ACTIVITY_NOT_EXISTS
         /// </summary>
         [XmlElement("failure_code")]
         public string FailureCode { get; set; }
 
         /// <summary>
-        /// 能量发放失败原因 商户信息不存在 商户签约信息不存在 签约信息不合法 签约状态未上线或用户不再商户的灰度名单中 超出限额 用户关闭授权 业务时间相差太久
+        /// 能量发放失败原因 商户信息不存在 商户签约信息不存在 签约信息不合法 签约状态未上线或用户不再商户的灰度名单中 超出限额 用户关闭授权 业务时间相差太久 活动不存在或已过期
         /// </summary>
         [XmlElement("failure_reason")]
         public string FailureReason { get; set; }

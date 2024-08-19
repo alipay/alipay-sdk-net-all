@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 关联代扣协议签约串
+        /// </summary>
+        [XmlElement("agreement_sign_info")]
+        public string AgreementSignInfo { get; set; }
+
+        /// <summary>
         /// 业务场景，联系支付宝分配
         /// </summary>
         [XmlElement("biz_scene")]
@@ -40,7 +46,7 @@ namespace Aop.Api.Domain
         public InviteMemberBusinessParamsDTO BusinessParams { get; set; }
 
         /// <summary>
-        /// 成员账号： identity_type是ALIPAY_USER_ID填支付宝会员ID（2088开头）； 是ALIPAY_LOGON_ID 填支付宝登录号； 是ALIPAY_OPEN_ID 填支付宝openId
+        /// 该字段为被邀请方账号ID： 当identity_type为ALIPAY_USER_ID时，需要填支付宝ID；当identity_type为ALIPAY_LOGON_ID时，需要填支付宝登录号；当identity_type为ALIPAY_OPEN_ID时，需要填支付宝openId
         /// </summary>
         [XmlElement("identity")]
         public string Identity { get; set; }

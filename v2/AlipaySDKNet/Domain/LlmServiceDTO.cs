@@ -80,6 +80,12 @@ namespace Aop.Api.Domain
         public List<ExternalServiceDTO> ServiceResult { get; set; }
 
         /// <summary>
+        /// 推荐问题。
+        /// </summary>
+        [XmlElement("suggest_questions")]
+        public SuggestQuestionsDTO SuggestQuestions { get; set; }
+
+        /// <summary>
         /// 目前只有文字模板
         /// </summary>
         [XmlElement("template_id")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string FileName { get; set; }
 
         /// <summary>
+        /// 附件id
+        /// </summary>
+        [XmlElement("id")]
+        public long Id { get; set; }
+
+        /// <summary>
         /// 附件完整Key
         /// </summary>
         [XmlElement("key")]

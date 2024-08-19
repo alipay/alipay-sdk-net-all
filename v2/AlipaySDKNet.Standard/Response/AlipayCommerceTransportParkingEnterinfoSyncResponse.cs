@@ -25,5 +25,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("biz_msg")]
         public string BizMsg { get; set; }
+
+        /// <summary>
+        /// 支付宝停车纪录流水号，串联一次停车行为；
+        /// </summary>
+        [XmlElement("serial_no")]
+        public string SerialNo { get; set; }
     }
 }

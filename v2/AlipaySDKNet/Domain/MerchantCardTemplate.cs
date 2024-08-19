@@ -47,14 +47,20 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// （1）当card_type不等于AXF_MERCHANT_PERIOD_PAY或AXF_PERIOD_PAY_INDIRECT时,字段image_id_list和image_url_list必须二选一传入，image_id_list优先级更高 （2）查询返回时该字段为空，返回image_url_list （3）当card_type=AXF_MERCHANT_PERIOD_PAY或AXF_PERIOD_PAY_INDIRECT或AXF_MONEY_CARD时，该字段不传，固定为一方小程序的图片url；
+        /// 客服电话
+        /// </summary>
+        [XmlElement("hotline")]
+        public string Hotline { get; set; }
+
+        /// <summary>
+        /// （1）当card_type=MERCHANT_TIMES_CARD或MERCHANT_PERIOD_PAY时，字段image_id_list和image_url_list必须二选一传入，image_id_list优先级更高 （2）查询返回时该字段为空，返回image_url_list （3）当card_type=AXF_MERCHANT_PERIOD_PAY或AXF_MONEY_CARD或AXF_PERIOD_PAY_INDIRECT 时，该字段选填，若该字段和image_url_list都不传，固定为一方小程序的图片url
         /// </summary>
         [XmlArray("image_id_list")]
         [XmlArrayItem("string")]
         public List<string> ImageIdList { get; set; }
 
         /// <summary>
-        /// （1）当card_type不等于AXF_MERCHANT_PERIOD_PAY或AXF_PERIOD_PAY_INDIRECT时,字段image_id_list和image_url_list必须二选一传入，image_id_list优先级更高 （2）当card_type=AXF_MERCHANT_PERIOD_PAY或AXF_PERIOD_PAY_INDIRECT或AXF_MONEY_CARD时，该字段不传，固定为一方小程序的图片url；
+        /// （1）当card_type=MERCHANT_TIMES_CARD或MERCHANT_PERIOD_PAY时，字段image_id_list和image_url_list必须二选一传入，image_id_list优先级更高 （2）当card_type=AXF_MERCHANT_PERIOD_PAY或AXF_MONEY_CARD或AXF_PERIOD_PAY_INDIRECT 时，该字段选填，若该字段和image_url_list都不传，固定为一方小程序的图片url
         /// </summary>
         [XmlArray("image_url_list")]
         [XmlArrayItem("string")]

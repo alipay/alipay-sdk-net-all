@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public JobAddress Address { get; set; }
 
         /// <summary>
-        /// 年龄范围 格式：最小年龄（含）,最大年龄（含） 如果没有限制，则传不限。 其他示例： 不限,不限 18,不限 不限,60
+        /// 年龄范围 格式：最小年龄（含）,最大年龄（含） 如果没有限制，则传不限。 其他示例： 不限,不限 18,不限 不限,60  单位：岁
         /// </summary>
         [XmlElement("age")]
         public string Age { get; set; }
@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public List<string> Certifications { get; set; }
 
         /// <summary>
-        /// 招聘人数
+        /// 招聘人数，单位：人
         /// </summary>
         [XmlElement("count")]
         public long Count { get; set; }
@@ -134,7 +134,7 @@ namespace Aop.Api.Domain
         public string PartTimeMode { get; set; }
 
         /// <summary>
-        /// 薪资单位
+        /// 薪资单位,单位：月、周、日
         /// </summary>
         [XmlElement("pay_period")]
         public string PayPeriod { get; set; }
@@ -146,7 +146,7 @@ namespace Aop.Api.Domain
         public long Priority { get; set; }
 
         /// <summary>
-        /// 薪资范围 格式：最低薪资（含）,最高薪资（含），薪资结算方式是面议时为空。 如果为单价型岗位，最低薪资和最高薪资内容保持一致，如: 800,800
+        /// 薪资范围 格式：最低薪资（含）,最高薪资（含），薪资结算方式是面议时为空。 如果为单价型岗位，最低薪资和最高薪资内容保持一致，如: 800,800，单位：元
         /// </summary>
         [XmlElement("salary")]
         public string Salary { get; set; }
@@ -164,7 +164,7 @@ namespace Aop.Api.Domain
         public bool WorkOnline { get; set; }
 
         /// <summary>
-        /// 工作年限要求
+        /// 工作年限要求，单位：年
         /// </summary>
         [XmlElement("working_years")]
         public string WorkingYears { get; set; }

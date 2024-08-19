@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ConfirmResult { get; set; }
 
         /// <summary>
-        /// 订单、分账确认类型
+        /// 订单、分账、放款确认类型
         /// </summary>
         [XmlElement("confirm_type")]
         public string ConfirmType { get; set; }

@@ -29,6 +29,12 @@ namespace Aop.Api.Response
         public string AlipaySubMerchantId { get; set; }
 
         /// <summary>
+        /// 异步支付受理状态，仅异步支付模式且query_options指定async_pay_info时返回。S：受理成功，支付宝内部会在一定期限内捞起任务推进支付，直到支付成功或超出可重试期限；其它：受理结果未知，可重试查询。
+        /// </summary>
+        [XmlElement("async_pay_apply_status")]
+        public string AsyncPayApplyStatus { get; set; }
+
+        /// <summary>
         /// 预授权支付模式，该参数仅在信用预授权支付场景下返回。信用预授权支付：CREDIT_PREAUTH_PAY
         /// </summary>
         [XmlElement("auth_trade_pay_mode")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string FileName { get; set; }
 
         /// <summary>
+        /// 图的高度，单位为px。
+        /// </summary>
+        [XmlElement("height")]
+        public long Height { get; set; }
+
+        /// <summary>
         /// 图归属目录id
         /// </summary>
         [XmlElement("image_directory_id")]
@@ -50,5 +56,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("modify_time")]
         public string ModifyTime { get; set; }
+
+        /// <summary>
+        /// 图片的宽，单位为px
+        /// </summary>
+        [XmlElement("width")]
+        public long Width { get; set; }
     }
 }

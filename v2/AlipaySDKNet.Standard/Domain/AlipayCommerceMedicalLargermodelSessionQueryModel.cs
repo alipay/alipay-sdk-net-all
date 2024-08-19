@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ChatId { get; set; }
 
         /// <summary>
+        /// 用户城市编码
+        /// </summary>
+        [XmlElement("city_code")]
+        public string CityCode { get; set; }
+
+        /// <summary>
         /// 城市名称
         /// </summary>
         [XmlElement("city_name")]

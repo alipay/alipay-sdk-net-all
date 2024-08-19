@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string AccountOpenId { get; set; }
 
         /// <summary>
-        /// 收费金额
+        /// 收费金额，单位：元
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }

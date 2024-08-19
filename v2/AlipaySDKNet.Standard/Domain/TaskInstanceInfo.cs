@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class TaskInstanceInfo : AopObject
     {
         /// <summary>
-        /// 当前进度
+        /// 当前进度，单位为笔，例如12为12笔
         /// </summary>
         [XmlElement("current_indicator")]
         public long CurrentIndicator { get; set; }
@@ -28,19 +28,19 @@ namespace Aop.Api.Domain
         public string IncentiveRule { get; set; }
 
         /// <summary>
-        /// 任务标的物推广数
+        /// 任务标的物推广数，单位为个
         /// </summary>
         [XmlElement("marker_promoted_count")]
         public long MarkerPromotedCount { get; set; }
 
         /// <summary>
-        /// 任务最大激励笔数
+        /// 任务最大激励笔数，单位个
         /// </summary>
         [XmlElement("max_incentive_count")]
         public long MaxIncentiveCount { get; set; }
 
         /// <summary>
-        /// 任务获取总积分数
+        /// 任务获取总积分数，单位为个
         /// </summary>
         [XmlElement("published_point_amount")]
         public long PublishedPointAmount { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 目标进度
+        /// 目标进度，单位为笔，112代表112笔
         /// </summary>
         [XmlElement("target_indicator")]
         public long TargetIndicator { get; set; }
@@ -118,13 +118,19 @@ namespace Aop.Api.Domain
         public string TaskType { get; set; }
 
         /// <summary>
-        /// 任务最多可获取积分数
+        /// 验证积分数量，单位个
+        /// </summary>
+        [XmlElement("test_point_amount")]
+        public string TestPointAmount { get; set; }
+
+        /// <summary>
+        /// 任务最多可获取积分数，单位为个
         /// </summary>
         [XmlElement("total_point_amount")]
         public long TotalPointAmount { get; set; }
 
         /// <summary>
-        /// 未兑换积分数
+        /// 未兑换积分数，单位为个
         /// </summary>
         [XmlElement("unexchange_point_amount")]
         public long UnexchangePointAmount { get; set; }

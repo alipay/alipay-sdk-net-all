@@ -30,6 +30,13 @@ namespace Aop.Api.Response
         public List<BusinessItem> BusinessIsv { get; set; }
 
         /// <summary>
+        /// 停车场详细计费规则
+        /// </summary>
+        [XmlArray("charging_rule")]
+        [XmlArrayItem("parking_lot_charging_rule_info")]
+        public List<ParkingLotChargingRuleInfo> ChargingRule { get; set; }
+
+        /// <summary>
         /// 城市编码
         /// </summary>
         [XmlElement("city_id")]
@@ -72,7 +79,7 @@ namespace Aop.Api.Response
         public string ParkingFeeDescription { get; set; }
 
         /// <summary>
-        /// 停车场价格明细图片
+        /// 商户在停车平台露出的停车价格图片地址
         /// </summary>
         [XmlElement("parking_fee_description_img")]
         public string ParkingFeeDescriptionImg { get; set; }
@@ -84,22 +91,28 @@ namespace Aop.Api.Response
         public string ParkingId { get; set; }
 
         /// <summary>
-        /// 停车场位置经度（优先高德坐标获取结果）
+        /// 停车场位置经度（优先高德坐标获取结果）单位：度
         /// </summary>
         [XmlElement("parking_latitude")]
         public string ParkingLatitude { get; set; }
 
         /// <summary>
-        /// 停车场位置经度（优先高德坐标获取结果）
+        /// 停车场位置经度（优先高德坐标获取结果）单位：度
         /// </summary>
         [XmlElement("parking_longitude")]
         public string ParkingLongitude { get; set; }
 
         /// <summary>
-        /// 停车场类型，1为居民小区、2为商圈停车场（购物中心商业广场商场等）、3为路侧停车、4为公园景点（景点乐园公园老街古镇等）、5为商务楼宇（酒店写字楼商务楼园区等）、6为其他、7为交通枢纽（机场火车站汽车站码头港口等）、8为市政设施（体育场博物图书馆医院学校等）
+        /// 停车场类型，1为居民小区、2为商圈停车场（购物中心商业广场商场等）、3为路侧停车、4为公园景点（景点乐园公园老街古镇等）、5为商务楼宇（酒店写字楼商务楼园区等）、6为其他、7为交通枢纽（机场火车站汽车站码头港口等）、8为市政设施（体育场博物图书馆医院学校等）、9独立园区（办公工业物流园区等）、10经营场所（4S店、门市餐饮等
         /// </summary>
         [XmlElement("parking_lot_type")]
         public string ParkingLotType { get; set; }
+
+        /// <summary>
+        /// 停车场类型，COMMUNITY为居民小区、BUSINESS_AREA为商圈停车场（购物中心商业广场商场等）、ROADSIDE为路侧停车、PARK_SCENIC为公园景点（景点乐园公园老街古镇等）、OFFICE_BUILDING为商务楼宇（酒店写字楼商务楼园区等）、OTHER为其他、TRANSPORTATION为交通枢纽（机场火车站汽车站码头港口等）、PUBLIC_FACILITIES为市政设施（体育场博物图书馆医院学校等）、TERRITORY独立园区（办公工业物流园区等）、BUSINESS_PLACE经营场所（4S店、门市餐饮等
+        /// </summary>
+        [XmlElement("parking_lot_type_code")]
+        public string ParkingLotTypeCode { get; set; }
 
         /// <summary>
         /// 停车场客服电话
@@ -120,7 +133,7 @@ namespace Aop.Api.Response
         public string ParkingPoiid { get; set; }
 
         /// <summary>
-        /// 支付方式（1为支付宝在线缴费，2为支付宝代扣缴费，3当面付)，如支持多种方式以','进行间隔
+        /// 支付方式（1为支付宝在线缴费，2为支付宝代扣缴费，3当面付 4现金)，如支持多种方式以','进行间隔
         /// </summary>
         [XmlElement("pay_type")]
         public string PayType { get; set; }
@@ -130,6 +143,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("province_id")]
         public string ProvinceId { get; set; }
+
+        /// <summary>
+        /// 停车场服务信息列表
+        /// </summary>
+        [XmlArray("service_list")]
+        [XmlArrayItem("parking_lot_service_info")]
+        public List<ParkingLotServiceInfo> ServiceList { get; set; }
 
         /// <summary>
         /// 商圈id

@@ -16,19 +16,19 @@ namespace Aop.Api.Domain
         public string Logo { get; set; }
 
         /// <summary>
-        /// 标的物完成数
+        /// 标的物完成数，单位个
         /// </summary>
         [XmlElement("marker_amount")]
         public long MarkerAmount { get; set; }
 
         /// <summary>
-        /// 已经发放积分数量
+        /// 已经发放积分数量，单位个
         /// </summary>
         [XmlElement("published_point_amount")]
         public long PublishedPointAmount { get; set; }
 
         /// <summary>
-        /// 任务实例状态 UNRECEIVED 未领取， 前端展示领取任务按钮 RECEIVED 已领取， 展示排名信息 FINISHED  任务完成 EXPIRED  任务到期
+        /// 任务实例状态 UNRECEIVED 未领取， 前端展示领取任务按钮 RECEIVED 已领取， 展示排名信息 FINISHED  任务完成 EXPIRED  任务完成
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string TaskType { get; set; }
 
         /// <summary>
-        /// 任务总积分数(单个导购员最大激励金额)
+        /// 任务总积分数(单个导购员最大激励金额),单位个
         /// </summary>
         [XmlElement("total_point_amount")]
         public long TotalPointAmount { get; set; }

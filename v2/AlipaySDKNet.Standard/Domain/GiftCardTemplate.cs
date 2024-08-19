@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BusinessParams { get; set; }
 
         /// <summary>
-        /// 面额
+        /// 面额，单位：元
         /// </summary>
         [XmlElement("denomination")]
         public string Denomination { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string GiftCardTemplateName { get; set; }
 
         /// <summary>
-        /// 价格
+        /// 价格，单位：元
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string StartDate { get; set; }
 
         /// <summary>
-        /// 库存
+        /// 库存，单位：件
         /// </summary>
         [XmlElement("stock_num")]
         public long StockNum { get; set; }
@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string ValidDate { get; set; }
 
         /// <summary>
-        /// 生效周期
+        /// 生效周期（单位：天）
         /// </summary>
         [XmlElement("valid_period")]
         public string ValidPeriod { get; set; }

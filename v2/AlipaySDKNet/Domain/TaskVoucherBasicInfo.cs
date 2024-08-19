@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Logo { get; set; }
 
         /// <summary>
-        /// 代金券面额
+        /// 代金券面额，单位元
         /// </summary>
         [XmlElement("reduction_amount")]
         public string ReductionAmount { get; set; }
@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public string ThresholdAmount { get; set; }
 
         /// <summary>
-        /// 总核销次数
+        /// 总核销次数，单位为次
         /// </summary>
         [XmlElement("total_used_count")]
         public long TotalUsedCount { get; set; }
 
         /// <summary>
-        /// 门店核销次数
+        /// 门店核销次数，单位为次
         /// </summary>
         [XmlElement("used_count")]
         public long UsedCount { get; set; }

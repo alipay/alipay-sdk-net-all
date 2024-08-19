@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceEcTransAccountTransferResponse : AopResponse
     {
         /// <summary>
+        /// 支付宝支付资金流水号
+        /// </summary>
+        [XmlElement("fund_order_id")]
+        public string FundOrderId { get; set; }
+
+        /// <summary>
         /// 支付宝转账单号
         /// </summary>
         [XmlElement("order_no")]

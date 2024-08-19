@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 支付运动币数量
+        /// 支付运动币数量，单位：运动币
         /// </summary>
         [XmlElement("pay_amount")]
         public long PayAmount { get; set; }

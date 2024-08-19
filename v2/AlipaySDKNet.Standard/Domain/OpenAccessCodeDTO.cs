@@ -10,10 +10,16 @@ namespace Aop.Api.Domain
     public class OpenAccessCodeDTO : AopObject
     {
         /// <summary>
-        /// 授权码
+        /// 授权码 当前字段已废弃(auth_code代替该出参)
         /// </summary>
         [XmlElement("access_code")]
         public string AccessCode { get; set; }
+
+        /// <summary>
+        /// 授权码
+        /// </summary>
+        [XmlElement("auth_code")]
+        public string AuthCode { get; set; }
 
         /// <summary>
         /// 过期时间

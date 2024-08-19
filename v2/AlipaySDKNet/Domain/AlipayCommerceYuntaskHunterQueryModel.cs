@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string HunterOpenId { get; set; }
 
         /// <summary>
+        /// 导购员的手机号
+        /// </summary>
+        [XmlElement("hunter_phone")]
+        public string HunterPhone { get; set; }
+
+        /// <summary>
         /// 商家id
         /// </summary>
         [XmlElement("merchant_pid")]
@@ -34,7 +40,7 @@ namespace Aop.Api.Domain
         public long Page { get; set; }
 
         /// <summary>
-        /// 页面大小
+        /// 页面大小，单位个
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

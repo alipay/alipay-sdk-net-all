@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcAuthorizationTokenCreateModel : AopObject
     {
         /// <summary>
-        /// 授权码
+        /// 授权码，和刷新令牌参数二选一
         /// </summary>
         [XmlElement("auth_code")]
         public string AuthCode { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 刷新令牌
+        /// 刷新令牌，和授权码参数二选一
         /// </summary>
         [XmlElement("refresh_token")]
         public string RefreshToken { get; set; }

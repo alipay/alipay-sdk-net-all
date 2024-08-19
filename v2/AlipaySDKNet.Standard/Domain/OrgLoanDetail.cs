@@ -34,19 +34,19 @@ namespace Aop.Api.Domain
         public string LoanDate { get; set; }
 
         /// <summary>
-        /// 客户贷款利率
+        /// 客户贷款利率，类型为小数，代表百分比，比如 0.18 就是18%
         /// </summary>
         [XmlElement("loan_rate")]
         public string LoanRate { get; set; }
 
         /// <summary>
-        /// 客户贷款期次
+        /// 客户贷款期次，类型为数字，单位支持Y、M等，单位字段从loan_term_unit获取
         /// </summary>
         [XmlElement("loan_term")]
         public long LoanTerm { get; set; }
 
         /// <summary>
-        /// 客户贷款期次类型 Y、M、D分别代表年月日；当前仅支持M
+        /// 客户贷款期次类型 Y、M分别代表年月，当前支持M
         /// </summary>
         [XmlElement("loan_term_unit")]
         public string LoanTermUnit { get; set; }

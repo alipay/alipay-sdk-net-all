@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 钱包场景码
+        /// 产品码
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }

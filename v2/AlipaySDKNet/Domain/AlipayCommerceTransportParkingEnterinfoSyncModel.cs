@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,25 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("agreement_query")]
         public bool AgreementQuery { get; set; }
+
+        /// <summary>
+        /// 本次行程收费计划清单
+        /// </summary>
+        [XmlArray("charge_info_list")]
+        [XmlArrayItem("parking_charge_info")]
+        public List<ParkingChargeInfo> ChargeInfoList { get; set; }
+
+        /// <summary>
+        /// 车辆进入停车场的入口通道名称
+        /// </summary>
+        [XmlElement("entrance_name")]
+        public string EntranceName { get; set; }
+
+        /// <summary>
+        /// 车辆进入停车场的入口通道编号；按线下实际编号为准；
+        /// </summary>
+        [XmlElement("entrance_number")]
+        public long EntranceNumber { get; set; }
 
         /// <summary>
         /// 当前停车场的入场免费时长分钟数
@@ -32,6 +52,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("is_encrypt_plate_no")]
         public bool IsEncryptPlateNo { get; set; }
+
+        /// <summary>
+        /// 当前车主的停车会员信息
+        /// </summary>
+        [XmlElement("membership_info")]
+        public ParkingMembershipInfo MembershipInfo { get; set; }
 
         /// <summary>
         /// 当前行程是否需要计费。true：需要，false：不需要。不传默认为true。

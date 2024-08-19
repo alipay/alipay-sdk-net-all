@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string PermissionStatus { get; set; }
 
         /// <summary>
+        /// POI信息，包括：POI编码、POI名称、POI地址、区域编码、经度、纬度、POI类型code、POI类型名称等信息
+        /// </summary>
+        [XmlElement("poi_info")]
+        public AmapPoiInfo PoiInfo { get; set; }
+
+        /// <summary>
         /// 生活号+号ID。如果发送类型=自研/三方发送，不要传入；发送类型=mcn发送，请传入public_id【mcn机构绑定达人号ID】
         /// </summary>
         [XmlElement("public_id")]

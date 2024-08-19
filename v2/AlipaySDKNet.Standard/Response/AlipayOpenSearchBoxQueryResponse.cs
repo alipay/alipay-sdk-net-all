@@ -17,12 +17,6 @@ namespace Aop.Api.Response
         public SearchBoxAccountModule AccountModule { get; set; }
 
         /// <summary>
-        /// 地域触发词
-        /// </summary>
-        [XmlElement("area_keyword_module")]
-        public SearchBoxAreaKeyWordModule AreaKeywordModule { get; set; }
-
-        /// <summary>
         /// 搜索直达基础信息模块
         /// </summary>
         [XmlElement("basic_info_module")]

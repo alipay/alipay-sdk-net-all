@@ -16,5 +16,12 @@ namespace Aop.Api.Response
         [XmlArray("order_goods_list")]
         [XmlArrayItem("environment_info")]
         public List<EnvironmentInfo> OrderGoodsList { get; set; }
+
+        /// <summary>
+        /// 订单回传存在订单维度错误信息时，需要返回
+        /// </summary>
+        [XmlArray("order_list")]
+        [XmlArrayItem("green_order_receipt_send_info")]
+        public List<GreenOrderReceiptSendInfo> OrderList { get; set; }
     }
 }

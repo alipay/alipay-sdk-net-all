@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string MarkerType { get; set; }
 
         /// <summary>
-        /// 个人完成数
+        /// 个人完成数，单位为次
         /// </summary>
         [XmlElement("personal_count")]
         public long PersonalCount { get; set; }
 
         /// <summary>
-        /// 总完成数
+        /// 总完成数，单位为次
         /// </summary>
         [XmlElement("total_count")]
         public long TotalCount { get; set; }

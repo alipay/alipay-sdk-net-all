@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 订单到期买断金，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("buyout_price")]
+        public string BuyoutPrice { get; set; }
+
+        /// <summary>
         /// 租赁订单的结束时间
         /// </summary>
         [XmlElement("end_time")]
