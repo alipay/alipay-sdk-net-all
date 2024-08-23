@@ -40,7 +40,13 @@ namespace Aop.Api.Domain
         public string SessionId { get; set; }
 
         /// <summary>
-        /// 提问时间，unix时间戳，单位：秒
+        /// 原始请求真实的APPID
+        /// </summary>
+        [XmlElement("source_id")]
+        public string SourceId { get; set; }
+
+        /// <summary>
+        /// 提问时间
         /// </summary>
         [XmlElement("time")]
         public string Time { get; set; }

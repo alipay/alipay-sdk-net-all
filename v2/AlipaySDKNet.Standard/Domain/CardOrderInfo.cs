@@ -66,6 +66,24 @@ namespace Aop.Api.Domain
         public List<DeductionPlanInfo> DeductionPlanList { get; set; }
 
         /// <summary>
+        /// 追回优惠金额，包含退款金额，单位：分 （金额卡无效）
+        /// </summary>
+        [XmlElement("discount_cash")]
+        public long DiscountCash { get; set; }
+
+        /// <summary>
+        /// 计划追回优惠金额，单位：分 （金额卡无效）
+        /// </summary>
+        [XmlElement("discount_plan_cash")]
+        public long DiscountPlanCash { get; set; }
+
+        /// <summary>
+        /// 追回金额--已退金额，单位：分 （金额卡无效）
+        /// </summary>
+        [XmlElement("discount_refund_cash")]
+        public long DiscountRefundCash { get; set; }
+
+        /// <summary>
         /// 订单有效期开始时间
         /// </summary>
         [XmlElement("gmt_active")]
@@ -156,7 +174,7 @@ namespace Aop.Api.Domain
         public long UsableCash { get; set; }
 
         /// <summary>
-        /// 已核销金额，单位：分 (金额卡无效)
+        /// 已核销金额，包含退款金额，单位：分 (金额卡无效)
         /// </summary>
         [XmlElement("used_cash")]
         public long UsedCash { get; set; }

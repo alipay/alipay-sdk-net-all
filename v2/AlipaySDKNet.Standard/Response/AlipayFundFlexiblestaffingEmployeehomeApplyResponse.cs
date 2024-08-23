@@ -15,7 +15,13 @@ namespace Aop.Api.Response
         public string ApplyLink { get; set; }
 
         /// <summary>
-        /// token
+        /// 跳转链接类型
+        /// </summary>
+        [XmlElement("apply_link_type")]
+        public string ApplyLinkType { get; set; }
+
+        /// <summary>
+        /// 唯一标识token
         /// </summary>
         [XmlElement("flow_token")]
         public string FlowToken { get; set; }

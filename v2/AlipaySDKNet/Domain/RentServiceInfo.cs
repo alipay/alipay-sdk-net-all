@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public ParticipantInfoDTO InvitePrincipal { get; set; }
 
         /// <summary>
-        /// 租金
+        /// 租金，单位：元
         /// </summary>
         [XmlElement("repayment_amount")]
         public string RepaymentAmount { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string RepaymentEndTime { get; set; }
 
         /// <summary>
-        /// 扣款周期
+        /// 扣款周期次数（期）
         /// </summary>
         [XmlElement("repayment_period")]
         public string RepaymentPeriod { get; set; }

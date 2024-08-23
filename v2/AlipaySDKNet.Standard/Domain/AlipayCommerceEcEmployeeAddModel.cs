@@ -17,20 +17,20 @@ namespace Aop.Api.Domain
         public bool CreateShareCode { get; set; }
 
         /// <summary>
-        /// 员工所属部门
+        /// 员工所属部门，支持多个部门，不传默认为根部门
         /// </summary>
         [XmlArray("department_ids")]
         [XmlArrayItem("string")]
         public List<string> DepartmentIds { get; set; }
 
         /// <summary>
-        /// 证件号码，根据employee_cert_type指定的证件类型，传入对应的证件号码，可用于企业人脸库员工刷脸开通时的核验。
+        /// 员工证件号码
         /// </summary>
         [XmlElement("employee_cert_no")]
         public string EmployeeCertNo { get; set; }
 
         /// <summary>
-        /// 证件类型，目前仅支持身份证，可用于企业人脸库员工刷脸开通时的核验
+        /// 员工证件类型
         /// </summary>
         [XmlElement("employee_cert_type")]
         public string EmployeeCertType { get; set; }
@@ -72,10 +72,16 @@ namespace Aop.Api.Domain
         public string EncryptMobile { get; set; }
 
         /// <summary>
-        /// 企业id
+        /// 员工所属企业ID
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
+
+        /// <summary>
+        /// 员工免签约授权密钥；<br/> 该密钥需联系企业码业务小二申请，当传入密钥有效，则员工添加时会默认签约企业因公付，并激活员工。
+        /// </summary>
+        [XmlElement("free_sign_token")]
+        public string FreeSignToken { get; set; }
 
         /// <summary>
         /// 员工身份唯一标识
@@ -84,7 +90,7 @@ namespace Aop.Api.Domain
         public string Identity { get; set; }
 
         /// <summary>
-        /// 当identity_type为ALIPAY_USER_ID时，此字段传入open_id
+        /// 当身份类型为支付宝会员ID(identity_type=ALIPAY_USER_ID)时，传入user_id对应的open_id
         /// </summary>
         [XmlElement("identity_open_id")]
         public string IdentityOpenId { get; set; }
@@ -96,7 +102,7 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// 员工刷脸加入企业人脸库时的核验方式，签约开通人脸库时必传
+        /// 员工签约开通企业刷脸付时，刷脸核身的核验方式
         /// </summary>
         [XmlElement("iot_check_type")]
         public string IotCheckType { get; set; }
@@ -114,7 +120,7 @@ namespace Aop.Api.Domain
         public string Profiles { get; set; }
 
         /// <summary>
-        /// 默认角色列表，目前只支持默认为 USER 当前字段已废弃(只有一个可选默认值，没必要传)
+        /// 默认角色列表，目前只支持默认为 USER 当前字段已废弃(目前仅支持普通员工，作为默认值，无需调用方传入)
         /// </summary>
         [XmlArray("role_list")]
         [XmlArrayItem("string")]
@@ -133,7 +139,7 @@ namespace Aop.Api.Domain
         public bool SignUrlCarryInfo { get; set; }
 
         /// <summary>
-        /// 代扣签约字符串，需调支付宝个人协议页面签约接口，并按规则生成，见 <a href='https://opendocs.alipay.com/pre-open/20170601105911096277new/moiixx?pathHash=10b1fa66'>参考文档</a> 3.1.3 生成签约字符串示例
+        /// 代扣签约字符串，员工需签约开通代扣时必传，否则无需传值
         /// </summary>
         [XmlElement("withholding_sign_str")]
         public string WithholdingSignStr { get; set; }

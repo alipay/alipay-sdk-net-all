@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 操作时间
         /// </summary>
         [XmlElement("operate_time")]

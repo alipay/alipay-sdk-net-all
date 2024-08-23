@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DatadigitalFincloudGeneralsaasTwometaCheckModel : AopObject
     {
         /// <summary>
+        /// 身份证二要素核验具体类型
+        /// </summary>
+        [XmlElement("biz_code")]
+        public string BizCode { get; set; }
+
+        /// <summary>
         /// 用户姓名，与身份证上的姓名相匹配
         /// </summary>
         [XmlElement("cert_name")]

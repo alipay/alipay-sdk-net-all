@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Desc { get; set; }
 
         /// <summary>
+        /// 凭证次序号
+        /// </summary>
+        [XmlElement("serial_no")]
+        public string SerialNo { get; set; }
+
+        /// <summary>
         /// true:凭证提交成功 false:凭证提交失败
         /// </summary>
         [XmlElement("success")]

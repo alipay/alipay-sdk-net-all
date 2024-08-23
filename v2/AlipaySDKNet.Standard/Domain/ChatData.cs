@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public ChatChunk Chunk { get; set; }
 
         /// <summary>
-        /// 问答处理报错
+        /// 拒识等答案处理，当出现了拒绝识别等回复时候，出该种类型的答案
         /// </summary>
         [XmlElement("error")]
         public ChatError Error { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public ChatHeader Header { get; set; }
 
         /// <summary>
-        /// 答案类型 当type == header时，展示header内容 当type == chunk时，展示chunk内容 当type == error时，展示error内容 当type == revoke时，展示revoke内容
+        /// 答案格式,header:第一次返回内容在header字段中，会包含原始问题和请求的requestID；chunk:实际的问答内容，流式进行返回；error:报错的类型返回报错的信息
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

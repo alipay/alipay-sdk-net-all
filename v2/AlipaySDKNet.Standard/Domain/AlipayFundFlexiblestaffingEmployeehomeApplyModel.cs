@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public EmployeeCardInfo EmployeeCardInfo { get; set; }
 
         /// <summary>
-        /// 超时时间
+        /// 超时时间，格式：yyyy-MM-dd HH:mm
         /// </summary>
         [XmlElement("expire_time")]
         public string ExpireTime { get; set; }

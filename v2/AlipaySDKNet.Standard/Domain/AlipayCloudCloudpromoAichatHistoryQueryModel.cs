@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string CustomerId { get; set; }
 
         /// <summary>
-        /// 每页拉取数量，[1,10]范围
+        /// 每页拉取数量，[1,10]范围，单位为int，个
         /// </summary>
         [XmlElement("num")]
         public long Num { get; set; }
 
         /// <summary>
-        /// 第几页，从1开始
+        /// 第几页，从1开始，页码的单位为int，从1开始
         /// </summary>
         [XmlElement("page")]
         public long Page { get; set; }
@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scene_id")]
         public string SceneId { get; set; }
+
+        /// <summary>
+        /// 原始请求真实的APPID
+        /// </summary>
+        [XmlElement("source_id")]
+        public string SourceId { get; set; }
     }
 }

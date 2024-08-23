@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 外部业务号
+        /// 外部业务号。agreement_no提供时可选，agreement_no未提供时必选
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

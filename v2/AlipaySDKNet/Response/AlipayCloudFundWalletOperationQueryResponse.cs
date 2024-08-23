@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -30,7 +31,8 @@ namespace Aop.Api.Response
         /// <summary>
         /// 钱包操作明细
         /// </summary>
-        [XmlElement("wallet_operations")]
-        public WalletOperationDetails WalletOperations { get; set; }
+        [XmlArray("wallet_operations")]
+        [XmlArrayItem("wallet_operation_details")]
+        public List<WalletOperationDetails> WalletOperations { get; set; }
     }
 }
