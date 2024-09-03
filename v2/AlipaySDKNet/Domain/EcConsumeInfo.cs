@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string ConsumeMemo { get; set; }
 
         /// <summary>
+        /// 商户收款时传的商品备注说明，在账单内进行表达
+        /// </summary>
+        [XmlElement("consume_title")]
+        public string ConsumeTitle { get; set; }
+
+        /// <summary>
         /// 账单类型 -消费账单：CONSUME -退款账单：REFUND -转账账单：TRANSFER
         /// </summary>
         [XmlElement("consume_type")]
@@ -224,6 +230,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("peer_refund_status")]
         public string PeerRefundStatus { get; set; }
+
+        /// <summary>
+        /// 消费账单退款金额，单位：元。退款账单该值无意义，值为0。
+        /// </summary>
+        [XmlElement("refund_amount")]
+        public string RefundAmount { get; set; }
+
+        /// <summary>
+        /// 当消费账单有退款，该值会变为REFUND_PART或REFUND_FULL；退款账单该值无意义，为初始值INIT。
+        /// </summary>
+        [XmlElement("refund_status")]
+        public string RefundStatus { get; set; }
 
         /// <summary>
         /// 退款账单关联的消费账单交易流水号，退款账单才有值

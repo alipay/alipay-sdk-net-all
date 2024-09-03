@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public MiniReceiverAddressInfoDTO AddressInfo { get; set; }
 
         /// <summary>
+        /// 个人协议页面签约信息
+        /// </summary>
+        [XmlElement("agreement_sign_info")]
+        public AgreementSignInfoDTO AgreementSignInfo { get; set; }
+
+        /// <summary>
         /// 分账条款
         /// </summary>
         [XmlElement("alloc_amount_info")]
@@ -81,6 +87,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ext_info")]
         public MiniOrderExtInfoDTO ExtInfo { get; set; }
+
+        /// <summary>
+        /// 线上资金预授权冻结信息
+        /// </summary>
+        [XmlElement("fund_auth_freeze_info")]
+        public FundAuthFreezeInfoDTO FundAuthFreezeInfo { get; set; }
 
         /// <summary>
         /// 订单类型

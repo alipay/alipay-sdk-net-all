@@ -53,6 +53,20 @@ namespace Aop.Api.Domain
         public string Hotline { get; set; }
 
         /// <summary>
+        /// （1）如需上传详情图，则字段image_detail_id_list和image_detail_url_list二选一传入，image_detail_id_list优先级更高 （2）查询返回时该字段为空，返回image_detail_url_list
+        /// </summary>
+        [XmlArray("image_detail_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> ImageDetailIdList { get; set; }
+
+        /// <summary>
+        /// 如需上传详情图，则字段image_detail_id_list和image_detail_url_list二选一传入，image_detail_id_list优先级更高
+        /// </summary>
+        [XmlArray("image_detail_url_list")]
+        [XmlArrayItem("string")]
+        public List<string> ImageDetailUrlList { get; set; }
+
+        /// <summary>
         /// （1）当card_type=MERCHANT_TIMES_CARD或MERCHANT_PERIOD_PAY时，字段image_id_list和image_url_list必须二选一传入，image_id_list优先级更高 （2）查询返回时该字段为空，返回image_url_list （3）当card_type=AXF_MERCHANT_PERIOD_PAY或AXF_MONEY_CARD或AXF_PERIOD_PAY_INDIRECT 时，该字段选填，若该字段和image_url_list都不传，固定为一方小程序的图片url
         /// </summary>
         [XmlArray("image_id_list")]

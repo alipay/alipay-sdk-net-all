@@ -18,7 +18,7 @@ namespace Aop.Api.Response
         public List<DataBillResult> Bills { get; set; }
 
         /// <summary>
-        /// 查询结果统计的总条数
+        /// 查询结果统计的总个数，单位个
         /// </summary>
         [XmlElement("count")]
         public long Count { get; set; }
@@ -36,7 +36,7 @@ namespace Aop.Api.Response
         public long PageNum { get; set; }
 
         /// <summary>
-        /// 查询结果数据中每页几条数据量
+        /// 查询结果数据中每页几条数据量，单位条
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

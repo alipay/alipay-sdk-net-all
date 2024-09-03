@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 订单类型 METRO：地铁 TAKEAWAY：外卖 OTHER：其他
+        /// 订单类型 METRO：地铁 TAKE_AWAY：外卖 OTHER：其他 REACH_SHOP：到店
         /// </summary>
         [XmlElement("order_type")]
         public string OrderType { get; set; }

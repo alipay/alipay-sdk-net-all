@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string LimitType { get; set; }
 
         /// <summary>
-        /// 面额价，不支持小数。单位分，转换为元后需是整数。 字段值需要大于或等于sale_price。
+        /// 面额价，不支持小数，单位分。 字段值需要大于或等于sale_price。
         /// </summary>
         [XmlElement("origin_price")]
         public long OriginPrice { get; set; }
@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public long RemainStock { get; set; }
 
         /// <summary>
-        /// 实际售卖价格，不支持小数。单位分，转换为元后需是整数。
+        /// 实际售卖价格，不支持小数，单位分。
         /// </summary>
         [XmlElement("sale_price")]
         public long SalePrice { get; set; }

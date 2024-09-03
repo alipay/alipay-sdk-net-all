@@ -58,13 +58,13 @@ namespace Aop.Api.Domain
         public string BatchType { get; set; }
 
         /// <summary>
-        /// 上年度实际奖金
+        /// 上年度实际奖金 单位人民币
         /// </summary>
         [XmlElement("bonus_all_year_last")]
         public string BonusAllYearLast { get; set; }
 
         /// <summary>
-        /// 年度目标奖金
+        /// 年度目标奖金 单位人民币
         /// </summary>
         [XmlElement("bonus_of_year_last")]
         public string BonusOfYearLast { get; set; }
@@ -82,19 +82,19 @@ namespace Aop.Api.Domain
         public string CandidateWorkNo { get; set; }
 
         /// <summary>
-        /// 目前月资
+        /// 目前月资 人民币
         /// </summary>
         [XmlElement("current_salary_month")]
         public string CurrentSalaryMonth { get; set; }
 
         /// <summary>
-        /// 其他薪资
+        /// 其他薪资 单位人民币
         /// </summary>
         [XmlElement("current_salary_other")]
         public string CurrentSalaryOther { get; set; }
 
         /// <summary>
-        /// 目前年薪
+        /// 目前年薪 人民币
         /// </summary>
         [XmlElement("current_salary_year")]
         public string CurrentSalaryYear { get; set; }
@@ -118,7 +118,7 @@ namespace Aop.Api.Domain
         public string EmployeeType { get; set; }
 
         /// <summary>
-        /// 发放月数
+        /// 发放月数 单位月
         /// </summary>
         [XmlElement("give_out_month")]
         public string GiveOutMonth { get; set; }
@@ -160,13 +160,13 @@ namespace Aop.Api.Domain
         public string HireFromPlace { get; set; }
 
         /// <summary>
-        /// 招聘工作年限
+        /// 招聘工作年限 单位年
         /// </summary>
         [XmlElement("hire_work_year")]
         public string HireWorkYear { get; set; }
 
         /// <summary>
-        /// 期望薪资
+        /// 期望薪资 单位人民币
         /// </summary>
         [XmlElement("hope_salary")]
         public string HopeSalary { get; set; }
@@ -178,7 +178,7 @@ namespace Aop.Api.Domain
         public string HrgWorkNo { get; set; }
 
         /// <summary>
-        /// 居民身份证号
+        /// 居民身份证号属于隐私信息，非必填，可内部hr工作台系统维护。
         /// </summary>
         [XmlElement("id_card")]
         public string IdCard { get; set; }
@@ -298,7 +298,7 @@ namespace Aop.Api.Domain
         public string National { get; set; }
 
         /// <summary>
-        /// 津贴
+        /// 津贴 单位人民币
         /// </summary>
         [XmlElement("out_subsidy_before")]
         public string OutSubsidyBefore { get; set; }
@@ -328,7 +328,7 @@ namespace Aop.Api.Domain
         public string SalaryCurrency { get; set; }
 
         /// <summary>
-        /// 同等职位工作年限
+        /// 同等职位工作年限 单位年
         /// </summary>
         [XmlElement("same_work_exp")]
         public string SameWorkExp { get; set; }
@@ -370,7 +370,7 @@ namespace Aop.Api.Domain
         public string WalfareTextLast { get; set; }
 
         /// <summary>
-        /// 工作年限
+        /// 工作年限 单位年
         /// </summary>
         [XmlElement("work_experience")]
         public string WorkExperience { get; set; }

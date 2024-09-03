@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string AdditionRebateBasePrice { get; set; }
 
         /// <summary>
+        /// 商家登录支付宝的邮箱账号或手机号，企业租赁业务传递该参数。
+        /// </summary>
+        [XmlElement("alipay_account")]
+        public string AlipayAccount { get; set; }
+
+        /// <summary>
+        /// 企业的统一社会信用代码，营业执照上有该信息，企业租赁业务需要传递该参数。
+        /// </summary>
+        [XmlElement("credit_code")]
+        public string CreditCode { get; set; }
+
+        /// <summary>
         /// 代扣协议签约场景值，商户可根据代扣产品常见场景值选择符合自身的行业场景，必须和合约中配置的一致。
         /// </summary>
         [XmlElement("deduct_sign_scene")]
@@ -38,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_trade_type")]
         public string OrderTradeType { get; set; }
+
+        /// <summary>
+        /// 外部风控参数信息
+        /// </summary>
+        [XmlElement("out_order_risk_info")]
+        public string OutOrderRiskInfo { get; set; }
 
         /// <summary>
         /// 支付单交易号，用于信用下单不成功转普通支付。

@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string RealPayAmt { get; set; }
 
         /// <summary>
-        /// 订单金额
+        /// 订单金额，单位元
         /// </summary>
         [XmlElement("trade_total_amt")]
         public string TradeTotalAmt { get; set; }

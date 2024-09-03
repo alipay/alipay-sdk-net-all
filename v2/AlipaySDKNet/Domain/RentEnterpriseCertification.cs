@@ -160,6 +160,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 认证的企业类型
+        /// </summary>
+        [XmlElement("org_type")]
+        public string OrgType { get; set; }
+
+        /// <summary>
         /// 商户ID
         /// </summary>
         [XmlElement("partner_id")]

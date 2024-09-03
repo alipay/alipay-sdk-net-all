@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public long PlayCount { get; set; }
 
         /// <summary>
-        /// 专辑评分
+        /// 专辑评分，十分制
         /// </summary>
         [XmlElement("score")]
         public string Score { get; set; }

@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayOpenMiniOrderQueryResponse : AopResponse
     {
         /// <summary>
+        /// 订单受理信息，租赁类型订单且通过快捷下单场景特有
+        /// </summary>
+        [XmlElement("accept_info")]
+        public AcceptInfoVO AcceptInfo { get; set; }
+
+        /// <summary>
         /// 收货地址
         /// </summary>
         [XmlElement("address_info")]

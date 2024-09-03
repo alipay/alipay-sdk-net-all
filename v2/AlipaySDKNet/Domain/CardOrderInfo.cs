@@ -35,7 +35,7 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
-        /// 售卖订单状态 ● 次卡/周期卡   ○ 订购中:init   ○ 可使用:available   ○ 已用完:used_up   ○ 关闭中:closing   ○ 已关闭:closed ● 金额卡   ○ 可使用:available   ○ 已失效：invalid   ○ 已支付：paid   ○ 已退款：refund   ○ 超时关闭：timeout_closed   ○ 已用完:used_up
+        /// 售卖订单状态 ● 次卡/周期卡   ○ 订购中:init   ○ 可使用:available   ○ 已用完:used_up   ○ 关闭中:closing   ○ 已关闭:closed   ○ 暂停:pause ● 金额卡   ○ 可使用:available   ○ 已失效：invalid   ○ 已支付：paid   ○ 已退款：refund   ○ 超时关闭：timeout_closed   ○ 已用完:used_up
         /// </summary>
         [XmlElement("card_status")]
         public string CardStatus { get; set; }

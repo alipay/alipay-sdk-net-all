@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 机构用户上传到知识库时定义的事项编码。
+        /// </summary>
+        [XmlElement("service_item_id")]
+        public string ServiceItemId { get; set; }
     }
 }

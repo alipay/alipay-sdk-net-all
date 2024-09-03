@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Inputs { get; set; }
 
         /// <summary>
+        /// 多模态参数： images标识是多模态中的图片参数，value是上传图片afts的文件ID列表。 当前多模态只支持图片
+        /// </summary>
+        [XmlElement("multi_modal_inputs")]
+        public MultiModalInputsRequest MultiModalInputs { get; set; }
+
+        /// <summary>
         /// 客户调用应用的用户唯一标识
         /// </summary>
         [XmlElement("outer_user_id")]

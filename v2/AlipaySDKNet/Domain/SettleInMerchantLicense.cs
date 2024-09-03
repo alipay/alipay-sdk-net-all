@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class SettleInMerchantLicense : AopObject
     {
         /// <summary>
-        /// 商户名称
+        /// 商户简称。用于芝麻信用服务开通。
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }

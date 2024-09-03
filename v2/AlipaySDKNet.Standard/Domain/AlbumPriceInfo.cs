@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlbumPriceInfo : AopObject
     {
         /// <summary>
-        /// 已废弃。
+        /// 专辑价格，单位元。已废弃。 当前字段已废弃(废弃actual_price字段，使用price字段)
         /// </summary>
         [XmlElement("actual_price")]
         public string ActualPrice { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string Price { get; set; }
 
         /// <summary>
-        /// 销售方式：ALBUM（专辑整本售卖）、SINGLE_SOUND（单集售卖）； 收费专辑必填。
+        /// 专辑的销售方式
         /// </summary>
         [XmlElement("sell_type")]
         public string SellType { get; set; }

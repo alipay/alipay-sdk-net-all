@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AIChatCustomerLike : AopObject
     {
         /// <summary>
+        /// 是否第一次进行对话
+        /// </summary>
+        [XmlElement("first_chat")]
+        public bool FirstChat { get; set; }
+
+        /// <summary>
         /// 输入方式
         /// </summary>
         [XmlElement("input_method")]

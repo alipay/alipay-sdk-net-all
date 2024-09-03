@@ -23,6 +23,24 @@ namespace Aop.Api.Domain
         public long SampleDuration { get; set; }
 
         /// <summary>
+        /// 这条声音的简介（正文）
+        /// </summary>
+        [XmlElement("sound_brief")]
+        public string SoundBrief { get; set; }
+
+        /// <summary>
+        /// 单个声音的封面图，有则传入
+        /// </summary>
+        [XmlElement("sound_cover_url")]
+        public string SoundCoverUrl { get; set; }
+
+        /// <summary>
+        /// 声音的全文摘要（AI总结）
+        /// </summary>
+        [XmlElement("sound_digest_desc")]
+        public string SoundDigestDesc { get; set; }
+
+        /// <summary>
         /// 收费专辑必传，该字段表示收费专辑下，声音是否可免费完整畅听。（例如前3集可免费听）
         /// </summary>
         [XmlElement("sound_free")]
@@ -41,6 +59,13 @@ namespace Aop.Api.Domain
         public string SoundName { get; set; }
 
         /// <summary>
+        /// 声音的节点信息，某个时间节点下的内容摘要（AI速览）
+        /// </summary>
+        [XmlArray("sound_node_list")]
+        [XmlArrayItem("sound_node_info")]
+        public List<SoundNodeInfo> SoundNodeList { get; set; }
+
+        /// <summary>
         /// 1，默认ADD，专辑新增录入时可不填 2，仅用于专辑内声音变更时传入，例如专辑A内声音1需删除，则album_operate_type传入UPDATE，sound_operate_type传入DELETE，同时传入sound_id=1；
         /// </summary>
         [XmlElement("sound_operate_type")]
@@ -51,6 +76,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sound_order")]
         public long SoundOrder { get; set; }
+
+        /// <summary>
+        /// 声音在第三方的发布上线时间
+        /// </summary>
+        [XmlElement("sound_release_time")]
+        public string SoundReleaseTime { get; set; }
 
         /// <summary>
         /// 声音标签列表，有则填入

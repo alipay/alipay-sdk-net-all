@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string NfcUrl { get; set; }
 
         /// <summary>
+        /// 生成要素扩展信息；qr_code_no 二维码编号
+        /// </summary>
+        [XmlElement("production_ext_info")]
+        public string ProductionExtInfo { get; set; }
+
+        /// <summary>
         /// 物料二维码url
         /// </summary>
         [XmlElement("qr_code_url")]

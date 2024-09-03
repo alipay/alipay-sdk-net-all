@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
-        /// 合作商id
+        /// 如果存在第二合作商，则传入合作商id
         /// </summary>
         [XmlElement("partner_org_id")]
         public string PartnerOrgId { get; set; }

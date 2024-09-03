@@ -29,6 +29,12 @@ namespace Aop.Api.Response
         public string CustomerId { get; set; }
 
         /// <summary>
+        /// 当前这条消息的请求唯一ID
+        /// </summary>
+        [XmlElement("request_id")]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// 会话唯一标识，用来表是否是同一个会话，用户传递时使用用户的标识，没有传递时系统自动生成会话id进行标识
         /// </summary>
         [XmlElement("session_id")]

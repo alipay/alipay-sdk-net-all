@@ -10,19 +10,19 @@ namespace Aop.Api.Domain
     public class AcChargePileRunTimeData : AopObject
     {
         /// <summary>
-        /// 可下调容量
+        /// 可下调容量，单位KW
         /// </summary>
         [XmlElement("adjust_down")]
         public string AdjustDown { get; set; }
 
         /// <summary>
-        /// 可上调容量
+        /// 可上调容量，单位KW
         /// </summary>
         [XmlElement("adjust_up")]
         public string AdjustUp { get; set; }
 
         /// <summary>
-        /// 本次充电电量
+        /// 本次充电电量，单位KWH
         /// </summary>
         [XmlElement("cumulative_power")]
         public string CumulativePower { get; set; }
@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string CurrentA { get; set; }
 
         /// <summary>
-        /// b相电流，单位（安培）
+        /// b相电流，单位（A）
         /// </summary>
         [XmlElement("current_b")]
         public string CurrentB { get; set; }
 
         /// <summary>
-        /// c相电流，单位（安培）
+        /// c相电流，单位（A）
         /// </summary>
         [XmlElement("current_c")]
         public string CurrentC { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string OutEntityId { get; set; }
 
         /// <summary>
-        /// 功率，kw
+        /// 功率，单位KW
         /// </summary>
         [XmlElement("power")]
         public string Power { get; set; }
@@ -64,19 +64,19 @@ namespace Aop.Api.Domain
         public string PwmDutyCycle { get; set; }
 
         /// <summary>
-        /// a相电压
+        /// a相电压，单位V
         /// </summary>
         [XmlElement("voltage_a")]
         public string VoltageA { get; set; }
 
         /// <summary>
-        /// b相电压
+        /// b相电压，单位V
         /// </summary>
         [XmlElement("voltage_b")]
         public string VoltageB { get; set; }
 
         /// <summary>
-        /// c相电压
+        /// c相电压，单位V
         /// </summary>
         [XmlElement("voltage_c")]
         public string VoltageC { get; set; }

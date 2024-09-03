@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string NfcUrl { get; set; }
 
         /// <summary>
+        /// 生产要素扩展参数
+        /// </summary>
+        [XmlElement("production_ext_info")]
+        public string ProductionExtInfo { get; set; }
+
+        /// <summary>
         /// 二维码url
         /// </summary>
         [XmlElement("qr_code_url")]
@@ -64,7 +70,7 @@ namespace Aop.Api.Domain
         public string ShopOrderNo { get; set; }
 
         /// <summary>
-        /// 对应门店数量的序列号
+        /// 对应门店数量的序列号 当前字段已废弃(无具体业务含义，修改为废弃)
         /// </summary>
         [XmlElement("shop_serial_number")]
         public string ShopSerialNumber { get; set; }

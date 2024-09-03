@@ -36,6 +36,12 @@ namespace Aop.Api.Response
         public List<string> GuessQuestionList { get; set; }
 
         /// <summary>
+        /// 是否为新的会话id
+        /// </summary>
+        [XmlElement("new_session_id")]
+        public bool NewSessionId { get; set; }
+
+        /// <summary>
         /// 会话id
         /// </summary>
         [XmlElement("session_id")]

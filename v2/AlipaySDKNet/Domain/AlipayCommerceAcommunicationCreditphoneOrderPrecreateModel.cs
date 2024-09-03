@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string FreezeAmount { get; set; }
 
         /// <summary>
+        /// 机构创单标识
+        /// </summary>
+        [XmlElement("inst_sign_aisle_data")]
+        public string InstSignAisleData { get; set; }
+
+        /// <summary>
         /// 外部业务订单号用于幂等返回预创单信息
         /// </summary>
         [XmlElement("out_order_no")]

@@ -10,25 +10,25 @@ namespace Aop.Api.Domain
     public class DcChargePileRunTimeData : AopObject
     {
         /// <summary>
-        /// 可下调容量
+        /// 可下调容量，单位KW
         /// </summary>
         [XmlElement("adjust_down")]
         public string AdjustDown { get; set; }
 
         /// <summary>
-        /// 可上调容量
+        /// 可上调容量，单位KW
         /// </summary>
         [XmlElement("adjust_up")]
         public string AdjustUp { get; set; }
 
         /// <summary>
-        /// 充电电量
+        /// 充电电量，单位KWH
         /// </summary>
         [XmlElement("cumulative_power")]
         public string CumulativePower { get; set; }
 
         /// <summary>
-        /// 输出电流，单位（安培）
+        /// 输出电流，单位（A）
         /// </summary>
         [XmlElement("output_current")]
         public string OutputCurrent { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string OutputVoltage { get; set; }
 
         /// <summary>
-        /// 功率，kw
+        /// 功率，单位 kw
         /// </summary>
         [XmlElement("power")]
         public string Power { get; set; }

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Question { get; set; }
 
         /// <summary>
+        /// 单条会话历史的记录唯一ID
+        /// </summary>
+        [XmlElement("request_id")]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// 提问时间
         /// </summary>
         [XmlElement("time")]

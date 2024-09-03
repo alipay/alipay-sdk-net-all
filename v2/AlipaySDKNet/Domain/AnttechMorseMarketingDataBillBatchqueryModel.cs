@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string DataType { get; set; }
 
         /// <summary>
-        /// 分页查询当前页数，取值区间：[1,100000]，查询页没有值则标识后期没有数据可以不用再查询了
+        /// 分页查询当前页数，取值区间：[1,100000]，查询页没有值则标识后期没有数据可以不用再查询了，单位页
         /// </summary>
         [XmlElement("page_num")]
         public string PageNum { get; set; }
 
         /// <summary>
-        /// 分页查询每页的个数，默认100条，取值区间：[1,300]，不在这个区间内，采用默认条数100
+        /// 分页查询每页的个数，默认100条，取值区间：[1,300]，不在这个区间内，采用默认条数100，单位条
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

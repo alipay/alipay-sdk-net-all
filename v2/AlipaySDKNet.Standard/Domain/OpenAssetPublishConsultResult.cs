@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AssetId { get; set; }
 
         /// <summary>
+        /// 返回券id+业务场景+品类+省份的组合信息
+        /// </summary>
+        [XmlElement("asset_info")]
+        public string AssetInfo { get; set; }
+
+        /// <summary>
         /// 实体id，配合实体id类型使用，可以是类目id、券id、模板id
         /// </summary>
         [XmlElement("entity_id")]
@@ -26,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("passed")]
         public bool Passed { get; set; }
+
+        /// <summary>
+        /// 未申领UN_PUBLISH已申领PUBLISHED已核销USED
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -18,7 +19,8 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 阶段付款计划详情列表
         /// </summary>
-        [XmlElement("stage_pay_plan_infos")]
-        public StagePayPlanInfoVO StagePayPlanInfos { get; set; }
+        [XmlArray("stage_pay_plan_infos")]
+        [XmlArrayItem("stage_pay_plan_info_v_o")]
+        public List<StagePayPlanInfoVO> StagePayPlanInfos { get; set; }
     }
 }

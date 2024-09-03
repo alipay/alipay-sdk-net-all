@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipayOpenMiniOrderCreateResponse : AopResponse
     {
         /// <summary>
+        /// 芝麻信用创单相关参数
+        /// </summary>
+        [XmlElement("credit_info_response")]
+        public CreditInfoResponse CreditInfoResponse { get; set; }
+
+        /// <summary>
         /// 建议对客展示文案。当接口返回异常时，建议将当前字段对客进行展示。
         /// </summary>
         [XmlElement("customer_display_text")]

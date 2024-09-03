@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string PartnerOpenId { get; set; }
 
         /// <summary>
+        /// 统一社会信用代码
+        /// </summary>
+        [XmlElement("unified_social_credit_code")]
+        public string UnifiedSocialCreditCode { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]
