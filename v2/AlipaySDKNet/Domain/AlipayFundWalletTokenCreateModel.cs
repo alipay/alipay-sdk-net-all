@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BackUrl { get; set; }
 
         /// <summary>
+        /// 根据跳转类型来区分用户开户完成之后是否回跳来源app
+        /// </summary>
+        [XmlElement("back_url_type")]
+        public string BackUrlType { get; set; }
+
+        /// <summary>
         /// 业务场景
         /// </summary>
         [XmlElement("biz_scene")]

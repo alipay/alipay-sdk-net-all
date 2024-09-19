@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AnxinkaDeliverDetailResponse : AopObject
     {
         /// <summary>
+        /// 代运营服务商佣金，单位：元。精确到小数点后两位
+        /// </summary>
+        [XmlElement("agent_commission")]
+        public string AgentCommission { get; set; }
+
+        /// <summary>
+        /// 代运营服务商名称
+        /// </summary>
+        [XmlElement("agent_name")]
+        public string AgentName { get; set; }
+
+        /// <summary>
         /// 安心卡卡号
         /// </summary>
         [XmlElement("card_no")]
@@ -28,6 +40,12 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
+        /// 退代运营服务商的佣金，单位：元。小数点后保留两位
+        /// </summary>
+        [XmlElement("refund_agent_commission")]
+        public string RefundAgentCommission { get; set; }
+
+        /// <summary>
         /// 安心付金额卡每笔退，卡使用扣除面额。单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("refund_amount")]
@@ -40,10 +58,34 @@ namespace Aop.Api.Domain
         public string RefundCash { get; set; }
 
         /// <summary>
+        /// 退给saas服务商的佣金，单位：元。精确到小数点后两位
+        /// </summary>
+        [XmlElement("refund_saas_commission")]
+        public string RefundSaasCommission { get; set; }
+
+        /// <summary>
         /// 安心付金额卡每笔退款时间， 单位：秒。
         /// </summary>
         [XmlElement("refund_time")]
         public string RefundTime { get; set; }
+
+        /// <summary>
+        /// saas服务商佣金，单位：元。精确到小数点后两位
+        /// </summary>
+        [XmlElement("saas_commission")]
+        public string SaasCommission { get; set; }
+
+        /// <summary>
+        /// 参与分账的saas服务商名称
+        /// </summary>
+        [XmlElement("saas_name")]
+        public string SaasName { get; set; }
+
+        /// <summary>
+        /// 结算时的批次号
+        /// </summary>
+        [XmlElement("settle_batch_no")]
+        public string SettleBatchNo { get; set; }
 
         /// <summary>
         /// 安心付金额卡每笔使用收单商家账号

@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_rule")]
         public string MerchantRule { get; set; }
+
+        /// <summary>
+        /// 核销规则范围
+        /// </summary>
+        [XmlElement("rule_define")]
+        public RuleDefine RuleDefine { get; set; }
     }
 }

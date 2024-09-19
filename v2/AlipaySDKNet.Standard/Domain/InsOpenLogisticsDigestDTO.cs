@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string AuthType { get; set; }
 
         /// <summary>
+        /// 承运物流公司编码
+        /// </summary>
+        [XmlElement("carrier_company_code")]
+        public string CarrierCompanyCode { get; set; }
+
+        /// <summary>
+        /// 承运物流公司名称
+        /// </summary>
+        [XmlElement("carrier_company_name")]
+        public string CarrierCompanyName { get; set; }
+
+        /// <summary>
         /// 物流公司编码
         /// </summary>
         [XmlElement("logistics_company_code")]
@@ -32,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("logistics_company_name")]
         public string LogisticsCompanyName { get; set; }
+
+        /// <summary>
+        /// 承运物流单号
+        /// </summary>
+        [XmlElement("logistics_mail_no")]
+        public string LogisticsMailNo { get; set; }
 
         /// <summary>
         /// 物流商快递单号

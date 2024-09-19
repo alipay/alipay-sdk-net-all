@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string BuyerTel { get; set; }
 
         /// <summary>
+        /// 交付邮箱
+        /// </summary>
+        [XmlElement("email")]
+        public string Email { get; set; }
+
+        /// <summary>
         /// 行业类型
         /// </summary>
         [XmlElement("industry_type")]
@@ -70,6 +76,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_type")]
         public string InvoiceType { get; set; }
+
+        /// <summary>
+        /// 交付手机号
+        /// </summary>
+        [XmlElement("phone")]
+        public string Phone { get; set; }
 
         /// <summary>
         /// 平台申请ID

@@ -61,7 +61,7 @@ namespace Aop.Api.Domain
         public List<SourceOffer> SourceOffers { get; set; }
 
         /// <summary>
-        /// 文章发布时间 仅支持 yyyy-MM-dd HH:mm:ss 格式
+        /// 文章发布时间 仅支持 yyyy-MM-dd HH:mm:ss 格式， 且发布时间的范围为：大于相对于当前时间+15分钟，小于相对于当前时间+7天
         /// </summary>
         [XmlElement("source_publish_date")]
         public string SourcePublishDate { get; set; }

@@ -93,6 +93,18 @@ namespace Aop.Api.Domain
         public List<OpenApiRoyaltyDetailInfoPojo> RefundRoyaltyParameters { get; set; }
 
         /// <summary>
+        /// 指定退款账号，对应指定账号退款合约中的约定账号  与refund_trans_out_type绑定使用 1、refund_trans_out_type=userId时，传入对应的支付宝2088账号 2、refund_trans_out_type=loginName时，传入对应的支付宝账号登录名
+        /// </summary>
+        [XmlElement("refund_trans_out")]
+        public string RefundTransOut { get; set; }
+
+        /// <summary>
+        /// 指定退款账号类型 userId：支付宝账号id loginName：支付宝账号登录名
+        /// </summary>
+        [XmlElement("refund_trans_out_type")]
+        public string RefundTransOutType { get; set; }
+
+        /// <summary>
         /// 针对账期交易，在确认结算后退款的话，需要指定确认结算时的结算单号。
         /// </summary>
         [XmlElement("related_settle_confirm_no")]

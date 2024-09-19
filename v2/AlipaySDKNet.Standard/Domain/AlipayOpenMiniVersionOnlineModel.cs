@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("downgrade")]
         public bool Downgrade { get; set; }
+
+        /// <summary>
+        /// 如果该字段为true，在首次发版的小程序在备案未完成的情况下，允许小程序上架，但小程序上架后只可以上架可扫码进行使用，但不可被搜索、限制访问人数（50人/每天）、限制公域（无法进行商品、服务、营促销）、限制上架后90天不完成备案自动下架。 默认为false
+        /// </summary>
+        [XmlElement("permit_registration_limit_release")]
+        public bool PermitRegistrationLimitRelease { get; set; }
     }
 }

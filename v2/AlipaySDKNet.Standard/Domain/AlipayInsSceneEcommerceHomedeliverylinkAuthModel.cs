@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OutSessionExpiration { get; set; }
 
         /// <summary>
-        /// sessionId
+        /// sessionId 外部的token
         /// </summary>
         [XmlElement("out_session_id")]
         public string OutSessionId { get; set; }

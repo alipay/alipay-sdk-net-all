@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("biz_msg")]
         public string BizMsg { get; set; }
+
+        /// <summary>
+        /// 当前行程是否会给用户发送停车消息
+        /// </summary>
+        [XmlElement("send_parking_message_flag")]
+        public string SendParkingMessageFlag { get; set; }
     }
 }

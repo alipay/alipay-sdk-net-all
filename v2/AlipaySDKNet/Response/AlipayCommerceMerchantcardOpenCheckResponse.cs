@@ -19,5 +19,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("fail_reason")]
         public string FailReason { get; set; }
+
+        /// <summary>
+        /// 商户二级类目code
+        /// </summary>
+        [XmlElement("mcc_code")]
+        public string MccCode { get; set; }
+
+        /// <summary>
+        /// 商户二级类目名称
+        /// </summary>
+        [XmlElement("mcc_name")]
+        public string MccName { get; set; }
     }
 }

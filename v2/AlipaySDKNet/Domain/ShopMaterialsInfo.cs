@@ -22,10 +22,22 @@ namespace Aop.Api.Domain
         public string DeskNo { get; set; }
 
         /// <summary>
+        /// 一个实例对应的实际生产数量
+        /// </summary>
+        [XmlElement("materials_count")]
+        public long MaterialsCount { get; set; }
+
+        /// <summary>
         /// 标识物料的唯一性
         /// </summary>
         [XmlElement("materials_instance_id")]
         public string MaterialsInstanceId { get; set; }
+
+        /// <summary>
+        /// 描述门店对应的商家名称，有部分物料印刷时需要，有必要时才会传递
+        /// </summary>
+        [XmlElement("merchant_name")]
+        public string MerchantName { get; set; }
 
         /// <summary>
         /// 物料的nfc链接，有可能为空，为空则先不写入碰一碰的url

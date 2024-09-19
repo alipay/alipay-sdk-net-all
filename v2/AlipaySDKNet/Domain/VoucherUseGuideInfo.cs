@@ -22,5 +22,11 @@ namespace Aop.Api.Domain
         [XmlArray("use_guide_mode")]
         [XmlArrayItem("string")]
         public List<string> UseGuideMode { get; set; }
+
+        /// <summary>
+        /// 核销跳转链接
+        /// </summary>
+        [XmlElement("use_url")]
+        public string UseUrl { get; set; }
     }
 }

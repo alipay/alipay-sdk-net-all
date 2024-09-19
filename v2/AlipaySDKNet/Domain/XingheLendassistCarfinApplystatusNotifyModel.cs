@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public long CreditAmt { get; set; }
 
         /// <summary>
+        /// 取消失败时，申请单当前状态
+        /// </summary>
+        [XmlElement("current_status")]
+        public string CurrentStatus { get; set; }
+
+        /// <summary>
+        /// 客户状态
+        /// </summary>
+        [XmlElement("cust_status")]
+        public string CustStatus { get; set; }
+
+        /// <summary>
         /// 资方支用号
         /// </summary>
         [XmlElement("fin_drawdown_no")]
@@ -100,7 +112,7 @@ namespace Aop.Api.Domain
         public string RepayType { get; set; }
 
         /// <summary>
-        /// FOLLOWING：客服跟进中，WILLING：客户有意愿，NO_WILLING：客户无意愿，PRE_REJECT：预审拒绝，PRE_PASS：预审通过，APPROVING：审批中，APPROVE_REJECT：审批拒绝，APPROVE_PASS：审批通过，SIGNING：签约中，SIGN_FAIL：签约失败，SIGNED：合同已生效，LENDING：放款中，LEND_REJECT：放款拒绝，LEND_SUC：已放款
+        /// CANCEL_FAIL: 取消失败（适用于客户挽回成功的场景，经联系后客户愿意继续办理） CANCEL_SUC: 取消成功（适用于客户确定放弃的场景，机构侧后续不能联系客户）
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

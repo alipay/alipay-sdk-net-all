@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalLargermodelSessionQueryModel : AopObject
     {
         /// <summary>
+        /// 挂号agent卡片上的点击参数
+        /// </summary>
+        [XmlElement("agent_param")]
+        public string AgentParam { get; set; }
+
+        /// <summary>
         /// 区分请求来源
         /// </summary>
         [XmlElement("app_type")]

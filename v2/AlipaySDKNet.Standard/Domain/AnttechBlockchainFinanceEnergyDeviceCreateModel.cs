@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AnttechBlockchainFinanceEnergyDeviceCreateModel : AopObject
     {
         /// <summary>
-        /// 地址
+        /// 地址，当设备为空调、热水器、地暖时必选；
         /// </summary>
         [XmlElement("address")]
         public EntityAddress Address { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public EntityEnterpriseInfo Manufacturer { get; set; }
 
         /// <summary>
-        /// 是否可计量
+        /// 是否可计量，插座设备必选
         /// </summary>
         [XmlElement("measurable")]
         public bool Measurable { get; set; }

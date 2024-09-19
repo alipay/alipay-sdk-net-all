@@ -34,19 +34,19 @@ namespace Aop.Api.Domain
         public string MainBodyModel { get; set; }
 
         /// <summary>
-        /// 签署页码
+        /// 签署页码，单位页
         /// </summary>
         [XmlElement("pos_page")]
         public long PosPage { get; set; }
 
         /// <summary>
-        /// 签署区位置横坐标
+        /// 签署区位置横坐标，单位像素。
         /// </summary>
         [XmlElement("pos_x")]
         public long PosX { get; set; }
 
         /// <summary>
-        /// 签署区位置纵坐标
+        /// 签署区位置纵坐标，单位像素。
         /// </summary>
         [XmlElement("pos_y")]
         public long PosY { get; set; }

@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string AuthSignerName { get; set; }
 
         /// <summary>
-        /// 是否指定授权人签署
+        /// 是否指定授权人签署,1为true，0为false
         /// </summary>
         [XmlElement("authorized")]
         public string Authorized { get; set; }

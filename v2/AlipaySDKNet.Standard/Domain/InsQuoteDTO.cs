@@ -28,7 +28,13 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
-        /// 折扣前原保费
+        /// 市场参考价 单位分
+        /// </summary>
+        [XmlElement("market_reference_price")]
+        public long MarketReferencePrice { get; set; }
+
+        /// <summary>
+        /// 折扣前原保费 单位分
         /// </summary>
         [XmlElement("original_premium")]
         public long OriginalPremium { get; set; }
@@ -40,7 +46,7 @@ namespace Aop.Api.Domain
         public string OriginalPremiumRate { get; set; }
 
         /// <summary>
-        /// 保费
+        /// 保费，单位分
         /// </summary>
         [XmlElement("premium")]
         public long Premium { get; set; }
@@ -82,7 +88,7 @@ namespace Aop.Api.Domain
         public string RecommendFlowId { get; set; }
 
         /// <summary>
-        /// 保额
+        /// 保额 单位分
         /// </summary>
         [XmlElement("sum_insured")]
         public long SumInsured { get; set; }

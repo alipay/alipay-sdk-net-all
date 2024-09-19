@@ -43,6 +43,13 @@ namespace Aop.Api.Domain
         public string ChatId { get; set; }
 
         /// <summary>
+        /// 通用内容列表，存放挂号agent的相关卡片数据
+        /// </summary>
+        [XmlArray("content_list")]
+        [XmlArrayItem("chat_content_d_t_o")]
+        public List<ChatContentDTO> ContentList { get; set; }
+
+        /// <summary>
         /// 只返回智能导诊意图 医疗科普——MEDICALSCI 用药指南—— DRUGGUIDE 智能导诊—— DEPARTGUIDE——只返回这个
         /// </summary>
         [XmlElement("intention")]

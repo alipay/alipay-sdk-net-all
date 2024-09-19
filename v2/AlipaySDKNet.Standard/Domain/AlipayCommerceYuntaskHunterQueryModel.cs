@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
+        /// SHOP_INSPECTION 巡店任务 OTHER 其他任务
+        /// </summary>
+        [XmlElement("task_type")]
+        public string TaskType { get; set; }
+
+        /// <summary>
         /// 任务类型 RECEIVED: 已领取任务 RECOMMENDED: 推荐任务 FINISHED：领取的已结束任务 EXCHANGEABLE：可兑换的任务
         /// </summary>
         [XmlElement("type")]

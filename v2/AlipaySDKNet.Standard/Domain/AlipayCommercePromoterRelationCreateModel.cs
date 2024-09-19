@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,6 +33,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("promoter_open_id")]
         public string PromoterOpenId { get; set; }
+
+        /// <summary>
+        /// 角色为督导员时，需要传入该字段，表示督导员管理的门店列表
+        /// </summary>
+        [XmlArray("related_shop_list")]
+        [XmlArrayItem("string")]
+        public List<string> RelatedShopList { get; set; }
 
         /// <summary>
         /// 导购员角色 店长 MANAGER 普通导购员 GENERAL 临促员 TEMPORARY 默认值GENERAL

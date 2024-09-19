@@ -115,6 +115,12 @@ namespace Aop.Api.Domain
         public string ReasonCode { get; set; }
 
         /// <summary>
+        /// 退款状态描述
+        /// </summary>
+        [XmlElement("refund_msg")]
+        public string RefundMsg { get; set; }
+
+        /// <summary>
         /// 退款订单号
         /// </summary>
         [XmlElement("refund_order_no")]

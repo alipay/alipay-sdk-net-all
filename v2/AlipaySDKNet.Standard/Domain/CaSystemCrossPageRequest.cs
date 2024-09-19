@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class CaSystemCrossPageRequest : AopObject
     {
         /// <summary>
-        /// defaultCrossPageRule = true  默认设置每五页盖一次
+        /// defaultCrossPageRule = true  默认设置每五页盖一次。单位，页。
         /// </summary>
         [XmlElement("default_cross_page")]
         public long DefaultCrossPage { get; set; }
@@ -22,31 +22,31 @@ namespace Aop.Api.Domain
         public bool DefaultCrossPageRule { get; set; }
 
         /// <summary>
-        /// 结束页码（供骑缝章使用）
+        /// 结束页码（供骑缝章使用），单位页。
         /// </summary>
         [XmlElement("pos_page_end")]
         public long PosPageEnd { get; set; }
 
         /// <summary>
-        /// 签署页码
+        /// 签署页码，单位页。
         /// </summary>
         [XmlElement("pos_page_start")]
         public long PosPageStart { get; set; }
 
         /// <summary>
-        /// 签署区位置横坐标
+        /// 签署区位置横坐标，单位像素（pixel）。
         /// </summary>
         [XmlElement("pos_x")]
         public long PosX { get; set; }
 
         /// <summary>
-        /// 签署区位置纵坐标
+        /// 签署区位置纵坐标，单位像素（pixel）。
         /// </summary>
         [XmlElement("pos_y")]
         public long PosY { get; set; }
 
         /// <summary>
-        /// 骑缝章用印次数，默认一次
+        /// 骑缝章用印次数，默认一次。单位，次。
         /// </summary>
         [XmlElement("seal_times")]
         public long SealTimes { get; set; }

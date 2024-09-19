@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }
+
+        /// <summary>
+        /// 用户名称（真实姓名）。
+        /// </summary>
+        [XmlElement("user_name")]
+        public string UserName { get; set; }
     }
 }

@@ -36,6 +36,13 @@ namespace Aop.Api.Domain
         public List<string> IndexList { get; set; }
 
         /// <summary>
+        /// 经纬度列表
+        /// </summary>
+        [XmlArray("lng_lat_list")]
+        [XmlArrayItem("lng_and_lat_param")]
+        public List<LngAndLatParam> LngLatList { get; set; }
+
+        /// <summary>
         /// 最短停留时长，单位为分钟。当获取停留车辆数据「T_RESIDENT_VEHICLE」时，必传。
         /// </summary>
         [XmlElement("min_parking_period")]

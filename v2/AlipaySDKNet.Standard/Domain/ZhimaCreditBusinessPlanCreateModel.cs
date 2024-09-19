@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string PlanMode { get; set; }
 
         /// <summary>
+        /// 日、周、月、季分期模式时间传输需要按照对应的时间间隔传输。
+        /// </summary>
+        [XmlElement("plan_type")]
+        public string PlanType { get; set; }
+
+        /// <summary>
         /// 产品标识，按枚举填入。
         /// </summary>
         [XmlElement("product_code")]

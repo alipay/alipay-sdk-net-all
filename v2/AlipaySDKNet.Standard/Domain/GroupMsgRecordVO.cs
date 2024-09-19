@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public string MsgId { get; set; }
 
         /// <summary>
-        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"
+        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"。
         /// </summary>
         [XmlElement("msg_type")]
         public string MsgType { get; set; }

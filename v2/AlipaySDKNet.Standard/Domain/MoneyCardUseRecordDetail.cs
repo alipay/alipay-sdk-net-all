@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
+
+        /// <summary>
+        /// 抽佣信息集合
+        /// </summary>
+        [XmlArray("bill_fee_info_list")]
+        [XmlArrayItem("bill_fee_info")]
+        public List<BillFeeInfo> BillFeeInfoList { get; set; }
 
         /// <summary>
         /// 业务类型

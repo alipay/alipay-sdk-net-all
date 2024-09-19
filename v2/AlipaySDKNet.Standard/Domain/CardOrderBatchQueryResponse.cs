@@ -182,5 +182,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_name")]
         public string UserName { get; set; }
+
+        /// <summary>
+        /// 用户电话，用户授权后才有值
+        /// </summary>
+        [XmlElement("user_phone")]
+        public string UserPhone { get; set; }
     }
 }

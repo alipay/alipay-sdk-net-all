@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("seal_id")]
         public string SealId { get; set; }
+
+        /// <summary>
+        /// 签署印模信息。osskey或者url
+        /// </summary>
+        [XmlElement("seal_pic_addr")]
+        public string SealPicAddr { get; set; }
     }
 }

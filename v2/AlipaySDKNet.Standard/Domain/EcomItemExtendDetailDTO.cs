@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public long DeductibleAmount { get; set; }
 
         /// <summary>
-        /// extInfo
+        /// 附加信息
         /// </summary>
         [XmlElement("ext_info")]
         public string ExtInfo { get; set; }

@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceTransportChargerCommandConfirmModel : AopObject
     {
         /// <summary>
-        /// 指令结果
+        /// 有序充电指令执行结果
         /// </summary>
         [XmlElement("command_result")]
         public string CommandResult { get; set; }
 
         /// <summary>
-        /// 支付宝指令流水号，唯一
+        /// 指令流水号，全局唯一
         /// </summary>
         [XmlElement("command_serial_number")]
         public string CommandSerialNumber { get; set; }

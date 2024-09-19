@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public SimpleOrderInfo OrderInfo { get; set; }
 
         /// <summary>
+        /// 商户订单号
+        /// </summary>
+        [XmlElement("out_order_id")]
+        public string OutOrderId { get; set; }
+
+        /// <summary>
         /// 租赁分期计划
         /// </summary>
         [XmlArray("plan_list")]
@@ -58,6 +64,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("price_info")]
         public string PriceInfo { get; set; }
+
+        /// <summary>
+        /// 履约明细信息
+        /// </summary>
+        [XmlArray("rent_detail_list")]
+        [XmlArrayItem("rent_detail")]
+        public List<RentDetail> RentDetailList { get; set; }
 
         /// <summary>
         /// 租赁订单id
@@ -83,6 +96,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("seller_id")]
         public string SellerId { get; set; }
+
+        /// <summary>
+        /// 二级商户id
+        /// </summary>
+        [XmlElement("smid")]
+        public string Smid { get; set; }
 
         /// <summary>
         /// 租赁订单的开始时间

@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string AmountDetails { get; set; }
 
         /// <summary>
-        /// 2023122000392001363140394362
+        /// 卡号：2023122000392001363140394362
         /// </summary>
         [XmlElement("asset_no")]
         public string AssetNo { get; set; }
@@ -45,10 +45,16 @@ namespace Aop.Api.Response
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// 总金额
+        /// 历史总充值金额
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }
+
+        /// <summary>
+        /// 钱包总余额=可用余额+冻结金额
+        /// </summary>
+        [XmlElement("total_balance")]
+        public string TotalBalance { get; set; }
 
         /// <summary>
         /// 钱包id

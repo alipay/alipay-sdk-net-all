@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class VoucherUseRuleInfo : AopObject
     {
+        /// <summary>
+        /// 支付方式限制
+        /// </summary>
+        [XmlArray("payment_restriction_list")]
+        [XmlArrayItem("string")]
+        public List<string> PaymentRestrictionList { get; set; }
+
         /// <summary>
         /// 核销次数限制。
         /// </summary>

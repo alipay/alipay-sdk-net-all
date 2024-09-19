@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 商家小程序该售后单的页面path，不存在则使用订单path
+        /// 商家小程序该售后单的页面path或者订单详情页面path，优先传入售后单页面path。
         /// </summary>
         [XmlElement("path")]
         public string Path { get; set; }

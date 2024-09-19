@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string SaleStatus { get; set; }
 
         /// <summary>
+        /// 商品sku属性
+        /// </summary>
+        [XmlElement("sku_attrs")]
+        public ItemSkuAttrVO SkuAttrs { get; set; }
+
+        /// <summary>
         /// 支付宝平台侧sku ID，是支付宝平台侧商品的唯一标识，后续与平台交互，需要使用该 ID，建议持久化。
         /// </summary>
         [XmlElement("sku_id")]

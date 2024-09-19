@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 分账接收方方类型。
+        /// 分账接收方类型。
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

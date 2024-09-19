@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ActualPayTime { get; set; }
 
         /// <summary>
+        /// 本期买断金金额，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("buyout_price")]
+        public string BuyoutPrice { get; set; }
+
+        /// <summary>
         /// 预期还款时间
         /// </summary>
         [XmlElement("expect_pay_time")]

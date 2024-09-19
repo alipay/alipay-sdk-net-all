@@ -28,7 +28,13 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
-        /// 本期对应的买断分账金
+        /// 当前期数改账中的买断分账金，单位：元
+        /// </summary>
+        [XmlElement("current_buyout_after_price")]
+        public string CurrentBuyoutAfterPrice { get; set; }
+
+        /// <summary>
+        /// 本期对应的买断分账金，单位：元
         /// </summary>
         [XmlElement("current_buyout_price")]
         public string CurrentBuyoutPrice { get; set; }
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("royalty_after_price")]
         public string RoyaltyAfterPrice { get; set; }
+
+        /// <summary>
+        /// 分账履约方式
+        /// </summary>
+        [XmlElement("royalty_deliver_type")]
+        public string RoyaltyDeliverType { get; set; }
 
         /// <summary>
         /// 分账金额，单位：元，精确到小数点后两位

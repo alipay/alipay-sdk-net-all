@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenSpNordermaterialsMaterialsBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 分批查询的页码
+        /// 分批查询的页码，必填
         /// </summary>
         [XmlElement("page_num")]
         public string PageNum { get; set; }

@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 设备标识信息，包括IMEI，IDFA，OAID。 注意：IMEI必须为MD5加密类型
+        /// 设备标识信息，包括IMEI，IDFA，OAID。 注意：IMEI必须为MD5加密类型，CAID则为原文设备号_版本格式，如:99ef8a8ae8ce8d70d8e4e515bfea60b1_20230330
         /// </summary>
         [XmlElement("principal")]
         public string Principal { get; set; }
 
         /// <summary>
-        /// 查询的设备类型（IMEI、IDFA、OAID、USERID、OPENID）
+        /// 查询的设备类型（IMEI、IDFA、OAID、USERID、OPENID、CAID）
         /// </summary>
         [XmlElement("principal_type")]
         public string PrincipalType { get; set; }

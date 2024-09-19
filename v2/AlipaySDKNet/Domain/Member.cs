@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class Member : AopObject
     {
         /// <summary>
-        /// 网商银行参与者会员ID
+        /// 网商银行参与者会员ID 融租场景、保理分期保理场景必填
         /// </summary>
         [XmlElement("ip_id")]
         public string IpId { get; set; }
 
         /// <summary>
-        /// 网商银行参与者会员角色ID
+        /// 网商银行参与者会员角色ID 融租场景、保理分期保理场景必填
         /// </summary>
         [XmlElement("ip_role_id")]
         public string IpRoleId { get; set; }

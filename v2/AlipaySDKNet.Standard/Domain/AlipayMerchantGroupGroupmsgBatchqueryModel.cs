@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayMerchantGroupGroupmsgBatchqueryModel : AopObject
     {
         /// <summary>
+        /// 消息id
+        /// </summary>
+        [XmlElement("msg_id")]
+        public string MsgId { get; set; }
+
+        /// <summary>
         /// 当前第几页
         /// </summary>
         [XmlElement("page_num")]

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string GotoUrl { get; set; }
 
         /// <summary>
-        /// 扩展区高度，当type值为"h5"时必填，取值范围为200-500的整数
+        /// 扩展区高度，当type值为"h5"时必填，取值范围为200-500的整数,单位是px
         /// </summary>
         [XmlElement("height")]
         public long Height { get; set; }

@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string FunderType { get; set; }
 
         /// <summary>
-        /// 激励对象： SHOP 门店 MERCHANT 商户 HUNTER 导购员
+        /// 激励对象： SHOP 门店 MERCHANT 商户 HUNTER 导购员 SUPERVISOR 督导员
         /// </summary>
         [XmlElement("incentive")]
         public string Incentive { get; set; }

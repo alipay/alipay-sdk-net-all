@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string InsurePlanName { get; set; }
 
         /// <summary>
+        /// 市场参考价 单位分
+        /// </summary>
+        [XmlElement("market_reference_price")]
+        public long MarketReferencePrice { get; set; }
+
+        /// <summary>
         /// 折扣前原保费
         /// </summary>
         [XmlElement("original_premium")]

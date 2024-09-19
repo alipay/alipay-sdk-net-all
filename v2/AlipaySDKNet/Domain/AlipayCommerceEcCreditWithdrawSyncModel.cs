@@ -28,13 +28,13 @@ namespace Aop.Api.Domain
         public BankOrderInfo ExtInfo { get; set; }
 
         /// <summary>
-        /// 审核失败原因，情况状态为APPROVE_FAIL时必填
+        /// 银行返回的审核失败原因描述，情况状态为APPROVE_FAIL时必填
         /// </summary>
         [XmlElement("fail_reason")]
         public string FailReason { get; set; }
 
         /// <summary>
-        /// 取款方的真实业务订单号
+        /// 商户请款申请单号，银行幂等字段
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

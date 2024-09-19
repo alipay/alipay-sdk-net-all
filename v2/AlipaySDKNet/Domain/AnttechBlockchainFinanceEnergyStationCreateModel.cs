@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string ProductAgreementCode { get; set; }
 
         /// <summary>
+        /// 总额定功率，单位kw
+        /// </summary>
+        [XmlElement("rated_power")]
+        public string RatedPower { get; set; }
+
+        /// <summary>
         /// 服务电话
         /// </summary>
         [XmlElement("service_tel")]
