@@ -12,7 +12,7 @@
     <Description>Alipay openapi3.0 SDK for .net</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>AlipaySDKNet.OpenAPI</RootNamespace>
-    <Version>3.0.0</Version>
+    <Version>3.0.16</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\AlipaySDKNet.OpenAPI.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/alipay/alipay-sdk-net-all.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

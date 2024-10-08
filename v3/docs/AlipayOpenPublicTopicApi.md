@@ -190,7 +190,7 @@ No authorization required
 
 营销位删除接口
 
-通过此接口,开发者可以根据营销位的id删除指定的营销位。
+通过此接口,开发者可以根据营销位的分组group删除指定的营销位。
 
 ### Example
 ```csharp
@@ -226,7 +226,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var topicId = 123;  // string | 营销位id (optional) 
+            var topicId = CG202011131013300867029;  // string | 营销位id (optional) 
 
             try
             {

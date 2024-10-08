@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="batchqueryvoucher"></a>
 # **Batchqueryvoucher**
-> AlipayMarketingActivityUserBatchqueryvoucherResponseModel Batchqueryvoucher (string authToken = null, string userId = null, string openId = null, string activityId = null, string belongMerchantId = null, string senderMerchantId = null, string voucherStatus = null, int? pageNum = null, string merchantAccessMode = null, int? pageSize = null)
+> AlipayMarketingActivityUserBatchqueryvoucherResponseModel Batchqueryvoucher (string userId = null, string openId = null, string activityId = null, string belongMerchantId = null, string senderMerchantId = null, string voucherStatus = null, int? pageNum = null, string merchantAccessMode = null, int? pageSize = null)
 
 条件查询用户券
 
@@ -50,7 +50,6 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var authToken = "authToken_example";  // string | 用户授权令牌 (optional) 
             var userId = 2088512417841101;  // string | 支付宝用户 id (optional) 
             var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 支付宝用户openId (optional) 
             var activityId = 2016042700826004508401111111;  // string | 活动 id (optional) 
@@ -64,7 +63,7 @@ namespace Example
             try
             {
                 // 条件查询用户券
-                AlipayMarketingActivityUserBatchqueryvoucherResponseModel result = apiInstance.Batchqueryvoucher(authToken, userId, openId, activityId, belongMerchantId, senderMerchantId, voucherStatus, pageNum, merchantAccessMode, pageSize);
+                AlipayMarketingActivityUserBatchqueryvoucherResponseModel result = apiInstance.Batchqueryvoucher(userId, openId, activityId, belongMerchantId, senderMerchantId, voucherStatus, pageNum, merchantAccessMode, pageSize);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -82,7 +81,6 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authToken** | **string**| 用户授权令牌 | [optional] 
  **userId** | **string**| 支付宝用户 id | [optional] 
  **openId** | **string**| 支付宝用户openId | [optional] 
  **activityId** | **string**| 活动 id | [optional] 

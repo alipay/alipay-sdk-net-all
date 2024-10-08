@@ -49,8 +49,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var accountId = 2088000194958956;  // string | 企业共同账户id (optional) 
-            var agreementNo = 20215425001112341234;  // string | 授权签约协议号 (optional) 
+            var accountId = 2088000194958956;  // string | 企业共同账户id（该字段将废弃，不建议使用，可用enterprise_id字段替换）(该字段将废弃，不建议使用，可用enterprise_id字段替换) (optional) 
+            var agreementNo = 20215425001112341234;  // string | 授权签约协议号（该字段将废弃，不建议使用，可用enterprise_id字段替换）(该字段将废弃，不建议使用，可用enterprise_id字段替换) (optional) 
             var enterpriseId = 2088000194958956;  // string | 企业ID (optional) 
             var pageNum = 10;  // int? | 页码 (optional) 
             var pageSize = 100;  // int? | 页大小 (optional) 
@@ -76,8 +76,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountId** | **string**| 企业共同账户id | [optional] 
- **agreementNo** | **string**| 授权签约协议号 | [optional] 
+ **accountId** | **string**| 企业共同账户id（该字段将废弃，不建议使用，可用enterprise_id字段替换）(该字段将废弃，不建议使用，可用enterprise_id字段替换) | [optional] 
+ **agreementNo** | **string**| 授权签约协议号（该字段将废弃，不建议使用，可用enterprise_id字段替换）(该字段将废弃，不建议使用，可用enterprise_id字段替换) | [optional] 
  **enterpriseId** | **string**| 企业ID | [optional] 
  **pageNum** | **int?**| 页码 | [optional] 
  **pageSize** | **int?**| 页大小 | [optional] 

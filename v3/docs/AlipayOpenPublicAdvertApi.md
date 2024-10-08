@@ -226,8 +226,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var advertId = 123;  // string | 待删除的广告位id (optional) 
-            var advertGroup = CG202008041013200064690;  // string | 待删除的广告位分组标识 (optional) 
+            var advertId = 123;  // string | 待删除的广告位id，删除通投广告位需传递此参数 (optional) 
+            var advertGroup = CG202008041013200064690;  // string | 待删除的广告位分组标识，删除个性化广告位需传递此参数。 (optional) 
 
             try
             {
@@ -250,8 +250,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **advertId** | **string**| 待删除的广告位id | [optional] 
- **advertGroup** | **string**| 待删除的广告位分组标识 | [optional] 
+ **advertId** | **string**| 待删除的广告位id，删除通投广告位需传递此参数 | [optional] 
+ **advertGroup** | **string**| 待删除的广告位分组标识，删除个性化广告位需传递此参数。 | [optional] 
 
 ### Return type
 

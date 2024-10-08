@@ -140,7 +140,7 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var certifyId = adsfasdfasdf;  // string | 填入人脸核身初始化阶段获取到的certify_id (optional) 
-            var needAlivePhoto = N;  // string | 是否需要返回活体结果图片，needAlivePhoto：Y_O （原始图片）、Y_M（虚化，背景马赛克）、N（不返图），默认为N (optional) 
+            var needAlivePhoto = N;  // string | 是否需要返回活体结果图片，默认为N（不返图） (optional) 
 
             try
             {
@@ -164,7 +164,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **certifyId** | **string**| 填入人脸核身初始化阶段获取到的certify_id | [optional] 
- **needAlivePhoto** | **string**| 是否需要返回活体结果图片，needAlivePhoto：Y_O （原始图片）、Y_M（虚化，背景马赛克）、N（不返图），默认为N | [optional] 
+ **needAlivePhoto** | **string**| 是否需要返回活体结果图片，默认为N（不返图） | [optional] 
 
 ### Return type
 

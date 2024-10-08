@@ -232,7 +232,7 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var appNo = 20210001****9069;  // string | 已关联小程序的app_id (optional) 
-            var pageSize = 10;  // int? | 单页行数，不能超过100行 (optional) 
+            var pageSize = 10;  // int? | 单页行数，不能超过100行，单位：行 (optional) 
             var pageNumber = 1;  // int? | 页码 (optional) 
 
             try
@@ -257,7 +257,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appNo** | **string**| 已关联小程序的app_id | [optional] 
- **pageSize** | **int?**| 单页行数，不能超过100行 | [optional] 
+ **pageSize** | **int?**| 单页行数，不能超过100行，单位：行 | [optional] 
  **pageNumber** | **int?**| 页码 | [optional] 
 
 ### Return type

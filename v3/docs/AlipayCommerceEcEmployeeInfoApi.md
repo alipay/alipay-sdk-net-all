@@ -4,7 +4,7 @@ All URIs are relative to *https://openapi.alipay.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Modify**](AlipayCommerceEcEmployeeInfoApi.md#modify) | **PUT** /v3/alipay/commerce/ec/employee/info | 员工信息修改
+[**Modify**](AlipayCommerceEcEmployeeInfoApi.md#modify) | **PUT** /v3/alipay/commerce/ec/employee/info | 修改员工基础信息
 [**Query**](AlipayCommerceEcEmployeeInfoApi.md#query) | **GET** /v3/alipay/commerce/ec/employee/info/query | 查询员工详情
 
 
@@ -12,9 +12,9 @@ Method | HTTP request | Description
 # **Modify**
 > AlipayCommerceEcEmployeeInfoModifyResponseModel Modify (AlipayCommerceEcEmployeeInfoModifyModel alipayCommerceEcEmployeeInfoModifyModel = null)
 
-员工信息修改
+修改员工基础信息
 
-员工信息修改
+修改员工基础信息
 
 ### Example
 ```csharp
@@ -54,7 +54,7 @@ namespace Example
 
             try
             {
-                // 员工信息修改
+                // 修改员工基础信息
                 AlipayCommerceEcEmployeeInfoModifyResponseModel result = apiInstance.Modify(alipayCommerceEcEmployeeInfoModifyModel);
                 Debug.WriteLine(result);
             }

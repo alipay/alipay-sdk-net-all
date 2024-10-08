@@ -49,7 +49,7 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var commodityId = SS010101000000003954;  // string | 服务商品ID (optional) 
+            var commodityId = SS010101000000003954;  // string | 服务商品ID，并不是uid，取值来源于前端的获取 (optional) 
             var pageSize = 10;  // int? | 每页数量，范围(1-100)。默认：10 (optional) 
             var pageNum = 1;  // int? | 当前页码，从1开始。默认：1 (optional) 
 
@@ -74,7 +74,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **commodityId** | **string**| 服务商品ID | [optional] 
+ **commodityId** | **string**| 服务商品ID，并不是uid，取值来源于前端的获取 | [optional] 
  **pageSize** | **int?**| 每页数量，范围(1-100)。默认：10 | [optional] 
  **pageNum** | **int?**| 当前页码，从1开始。默认：1 | [optional] 
 
