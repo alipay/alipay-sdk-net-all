@@ -46,5 +46,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("promo_apply_info")]
         public PromoApplyInfoVO PromoApplyInfo { get; set; }
+
+        /// <summary>
+        /// 优惠信息，包含分期优惠
+        /// </summary>
+        [XmlElement("promo_info")]
+        public PromoInfoVO PromoInfo { get; set; }
     }
 }

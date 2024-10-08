@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class TicketProduct : AopObject
     {
         /// <summary>
-        /// 票务是否区分人群
+        /// 返回的票务分组类型
         /// </summary>
         [XmlElement("group")]
         public bool Group { get; set; }

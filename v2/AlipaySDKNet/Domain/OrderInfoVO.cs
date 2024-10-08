@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string FinishTime { get; set; }
 
         /// <summary>
-        /// 是否医保订单
+        /// 1是自费订单，2是医保订单
         /// </summary>
         [XmlElement("mi_type")]
         public long MiType { get; set; }

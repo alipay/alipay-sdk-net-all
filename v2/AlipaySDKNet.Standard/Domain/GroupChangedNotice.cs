@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public List<GroupMemberDetail> MemChangeList { get; set; }
 
         /// <summary>
+        /// 商家pid
+        /// </summary>
+        [XmlElement("pid")]
+        public string Pid { get; set; }
+
+        /// <summary>
         /// 变更信息。成员入群: add_member，成员退群: del_member，群名变更: change_name
         /// </summary>
         [XmlElement("update_info")]

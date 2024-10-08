@@ -31,5 +31,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("page_order_no")]
         public string PageOrderNo { get; set; }
+
+        /// <summary>
+        /// 新增字段，签约使用的链接
+        /// </summary>
+        [XmlElement("sign_page_url")]
+        public string SignPageUrl { get; set; }
     }
 }

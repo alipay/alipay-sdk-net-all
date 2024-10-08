@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -46,10 +47,23 @@ namespace Aop.Api.Domain
         public string ChildPrice { get; set; }
 
         /// <summary>
+        /// 优惠列表
+        /// </summary>
+        [XmlArray("discount_list")]
+        [XmlArrayItem("discount")]
+        public List<Discount> DiscountList { get; set; }
+
+        /// <summary>
         /// 优惠券标签
         /// </summary>
         [XmlElement("discount_tag")]
         public string DiscountTag { get; set; }
+
+        /// <summary>
+        /// 燃油费用，精确到：元
+        /// </summary>
+        [XmlElement("fuel_cost")]
+        public string FuelCost { get; set; }
 
         /// <summary>
         /// 婴儿价格，精确到元，仅作展示
@@ -58,10 +72,57 @@ namespace Aop.Api.Domain
         public string InfantPrice { get; set; }
 
         /// <summary>
+        /// 基建费用，精确到元
+        /// </summary>
+        [XmlElement("infrastructure_cost")]
+        public string InfrastructureCost { get; set; }
+
+        /// <summary>
+        /// 航班详情跳转链接
+        /// </summary>
+        [XmlElement("link_url")]
+        public string LinkUrl { get; set; }
+
+        /// <summary>
+        /// 托运政策描述
+        /// </summary>
+        [XmlArray("luggage_policies")]
+        [XmlArrayItem("luggage_policy")]
+        public List<LuggagePolicy> LuggagePolicies { get; set; }
+
+        /// <summary>
         /// 餐食描述
         /// </summary>
         [XmlElement("meal")]
         public string Meal { get; set; }
+
+        /// <summary>
+        /// 改签政策
+        /// </summary>
+        [XmlArray("rebook_policies")]
+        [XmlArrayItem("policy")]
+        public List<Policy> RebookPolicies { get; set; }
+
+        /// <summary>
+        /// 退票政策
+        /// </summary>
+        [XmlArray("refund_policies")]
+        [XmlArrayItem("policy")]
+        public List<Policy> RefundPolicies { get; set; }
+
+        /// <summary>
+        /// 报销政策
+        /// </summary>
+        [XmlArray("reimbursement_policies")]
+        [XmlArrayItem("reimbursement_policy")]
+        public List<ReimbursementPolicy> ReimbursementPolicies { get; set; }
+
+        /// <summary>
+        /// 售卖限制的列表
+        /// </summary>
+        [XmlArray("sale_controls")]
+        [XmlArrayItem("sale_control")]
+        public List<SaleControl> SaleControls { get; set; }
 
         /// <summary>
         /// 余票数量，不明确可为空

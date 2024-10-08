@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string AcName { get; set; }
 
         /// <summary>
+        /// 航段的扩展信息（起飞、降落准点率等）
+        /// </summary>
+        [XmlElement("airline_ext_info")]
+        public AirlineExtInfo AirlineExtInfo { get; set; }
+
+        /// <summary>
         /// 票面航班号
         /// </summary>
         [XmlElement("flight_no")]

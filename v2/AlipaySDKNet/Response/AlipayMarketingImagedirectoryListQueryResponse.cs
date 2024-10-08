@@ -30,7 +30,7 @@ namespace Aop.Api.Response
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 总数量。
+        /// 总数量，单位为个。
         /// </summary>
         [XmlElement("total")]
         public long Total { get; set; }

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BizTid { get; set; }
 
         /// <summary>
-        /// 极简绑定：G1 三绑定：G3
+        /// 可用绑定：G2 三绑定：G3
         /// </summary>
         [XmlElement("device_grade")]
         public string DeviceGrade { get; set; }

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -44,6 +45,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 用户推广入群的渠道列表，可有多个渠道code，按列表顺序为：第一渠道、第二渠道依次存储
+        /// </summary>
+        [XmlArray("promote_channel_keys")]
+        [XmlArrayItem("string")]
+        public List<string> PromoteChannelKeys { get; set; }
 
         /// <summary>
         /// 邀请者uid对应的unionId

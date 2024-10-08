@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RoyaltyDTO : AopObject
     {
         /// <summary>
+        /// 对应这一期买断分账金，不能超过当期买断金，单位：元，精确到小数点后两位；
+        /// </summary>
+        [XmlElement("buy_out_price")]
+        public string BuyOutPrice { get; set; }
+
+        /// <summary>
         /// 租金分账期数，举例1、2、3.....
         /// </summary>
         [XmlElement("royalty_period")]

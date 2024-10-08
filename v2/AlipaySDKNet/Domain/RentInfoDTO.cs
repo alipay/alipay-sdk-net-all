@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AddonRealRentPrice { get; set; }
 
         /// <summary>
-        /// 买断价，单位元
+        /// 到期买断金，支持到期买断场景，回传到期买断金；单位：元，精确到小数点后两位；
         /// </summary>
         [XmlElement("buyout_price")]
         public string BuyoutPrice { get; set; }

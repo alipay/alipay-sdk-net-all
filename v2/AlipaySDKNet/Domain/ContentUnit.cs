@@ -16,7 +16,13 @@ namespace Aop.Api.Domain
         public StreamContent Content { get; set; }
 
         /// <summary>
-        /// text-文本 steam-流式
+        /// 内容id
+        /// </summary>
+        [XmlElement("content_id")]
+        public string ContentId { get; set; }
+
+        /// <summary>
+        /// text-文本 steam-流式 template-卡片
         /// </summary>
         [XmlElement("content_type")]
         public string ContentType { get; set; }

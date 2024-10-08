@@ -22,5 +22,11 @@ namespace Aop.Api.Domain
         [XmlArray("position_code")]
         [XmlArrayItem("string")]
         public List<string> PositionCode { get; set; }
+
+        /// <summary>
+        /// 展位相关的特征参数，如展位关联的通知类型、机构信息等。使用时根据position_code列表内的展位code获取对应展位的特征参数
+        /// </summary>
+        [XmlElement("position_feature")]
+        public string PositionFeature { get; set; }
     }
 }

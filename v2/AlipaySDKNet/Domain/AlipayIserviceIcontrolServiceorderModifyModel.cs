@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public CustomeServiceInboundUpdateDTO CsiPayload { get; set; }
 
         /// <summary>
+        /// 阿里云呼出任务更新模型
+        /// </summary>
+        [XmlElement("cso_payload")]
+        public CustomeServiceOutBoundUpdateDTO CsoPayload { get; set; }
+
+        /// <summary>
         /// 是否调度模式
         /// </summary>
         [XmlElement("dispatch_mode")]

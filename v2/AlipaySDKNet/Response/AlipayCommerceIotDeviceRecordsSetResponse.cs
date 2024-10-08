@@ -14,5 +14,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("device_records")]
         public DeviceRecords DeviceRecords { get; set; }
+
+        /// <summary>
+        /// 对设备绑定请求进行处理后的一些提示信息
+        /// </summary>
+        [XmlElement("device_remark")]
+        public string DeviceRemark { get; set; }
     }
 }

@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public long Period { get; set; }
 
         /// <summary>
+        /// 分账履约方式
+        /// </summary>
+        [XmlElement("royalty_deliver_type")]
+        public string RoyaltyDeliverType { get; set; }
+
+        /// <summary>
         /// 分账完成时间
         /// </summary>
         [XmlElement("royalty_time")]

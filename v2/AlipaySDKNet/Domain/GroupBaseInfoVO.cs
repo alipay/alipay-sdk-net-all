@@ -55,6 +55,12 @@ namespace Aop.Api.Domain
         public string GroupName { get; set; }
 
         /// <summary>
+        /// 修改是否对历史群组生效。true：修改对历史群组生效,false：修改对历史群组不生效。
+        /// </summary>
+        [XmlElement("modify_history_group")]
+        public bool ModifyHistoryGroup { get; set; }
+
+        /// <summary>
         /// 小程序id。用于群头像展示。
         /// </summary>
         [XmlElement("related_app_id")]

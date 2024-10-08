@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class CustomeServiceInboundUpdateDTO : AopObject
     {
         /// <summary>
-        /// 事件时间
+        /// 废弃字段，文档不可见 当前字段已废弃(该字段已经被废弃，所有文档不可见)
         /// </summary>
         [XmlElement("action_time")]
         public string ActionTime { get; set; }
@@ -34,10 +34,16 @@ namespace Aop.Api.Domain
         public string EventAction { get; set; }
 
         /// <summary>
-        /// 事件内容
+        /// 事件内容，所有的内容字段
         /// </summary>
         [XmlElement("event_content")]
         public string EventContent { get; set; }
+
+        /// <summary>
+        /// 事件时间
+        /// </summary>
+        [XmlElement("event_time")]
+        public string EventTime { get; set; }
 
         /// <summary>
         /// 坐席id

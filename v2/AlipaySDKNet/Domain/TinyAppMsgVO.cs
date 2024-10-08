@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Desc { get; set; }
 
         /// <summary>
-        /// 建议选择有吸引力的图片，引导用户点击链接（支持的图片 jpg、png，400*200，限制1M以内)
+        /// 建议选择有吸引力的图片，引导用户点击链接（支持的图片 jpg、png，400*200，限制1M以内) 当前字段已废弃(初始创建不规范，不曾用到)
         /// </summary>
         [XmlElement("image")]
         public string Image { get; set; }

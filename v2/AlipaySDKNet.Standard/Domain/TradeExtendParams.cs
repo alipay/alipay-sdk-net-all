@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class TradeExtendParams : AopObject
     {
         /// <summary>
+        /// 用来表示调用接口的渠道方名称，目前为固定的枚举值
+        /// </summary>
+        [XmlElement("channel_code")]
+        public string ChannelCode { get; set; }
+
+        /// <summary>
         /// 渠道标识
         /// </summary>
         [XmlElement("chinfo")]

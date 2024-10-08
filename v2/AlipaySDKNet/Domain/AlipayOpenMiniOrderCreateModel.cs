@@ -131,6 +131,12 @@ namespace Aop.Api.Domain
         public string SellerId { get; set; }
 
         /// <summary>
+        /// 签约资商通直付通平台商分账产品后，下单时传入平台模式，smid必传；此模式下支持服务商派单模式
+        /// </summary>
+        [XmlElement("service_provider_model")]
+        public string ServiceProviderModel { get; set; }
+
+        /// <summary>
         /// 门店信息
         /// </summary>
         [XmlElement("shop_info")]

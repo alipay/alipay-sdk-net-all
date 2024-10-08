@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CardName { get; set; }
 
         /// <summary>
-        /// 售卖订单状态 ● 次卡/周期卡 ○ 订购中:init ○ 可使用:available ○ 已用完:used_up ○ 关闭中:closing ○ 已关闭:closed ○ 暂停:pause ● 金额卡 ○ 可使用:available ○ 已失效：invalid ○ 已支付：paid ○ 已退款：refund ○ 超时关闭：timeout_closed ○ 已用完:used_up
+        /// （1）TIMES_CARD / PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY_INDIRECT： init、available、used_up、closing、closed、pause （2）AXF_MONEY_CARD：available、invalid、paid、refund、timeout_closed、used_up （3）AXF_MONEY_TIME_CARD：wait_pay、paid、available、timeout_closed、used_up、invalid、invaliding
         /// </summary>
         [XmlElement("card_status")]
         public string CardStatus { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CardTemplateId { get; set; }
 
         /// <summary>
-        /// 卡类型
+        /// 默认的订单类型范围：TIMES_CARD、PERIOD_PAY、AXF_MERCHANT_PERIOD_PAY、AXF_PERIOD_PAY_INDIRECT
         /// </summary>
         [XmlElement("card_type")]
         public string CardType { get; set; }

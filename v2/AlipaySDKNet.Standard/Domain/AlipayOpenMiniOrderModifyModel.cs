@@ -55,6 +55,12 @@ namespace Aop.Api.Domain
         public List<StagePayPlanDTO> StagePayPlans { get; set; }
 
         /// <summary>
+        /// 二级商户信息
+        /// </summary>
+        [XmlElement("sub_merchant")]
+        public SubMerchantModifyDTO SubMerchant { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

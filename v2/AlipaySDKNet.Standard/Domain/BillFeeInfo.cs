@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class BillFeeInfo : AopObject
     {
         /// <summary>
-        /// 抽佣金额，单位：分
+        /// 收费金额，单位：分
         /// </summary>
         [XmlElement("commission_cash")]
         public long CommissionCash { get; set; }
 
         /// <summary>
-        /// 抽佣pid
+        /// 收费pid
         /// </summary>
         [XmlElement("commission_pid")]
         public string CommissionPid { get; set; }
@@ -28,25 +28,31 @@ namespace Aop.Api.Domain
         public string CommissionPidName { get; set; }
 
         /// <summary>
-        /// 退佣金额，单位：分
+        /// 收费比例
+        /// </summary>
+        [XmlElement("commission_rate")]
+        public string CommissionRate { get; set; }
+
+        /// <summary>
+        /// 费用退款金额，单位：分
         /// </summary>
         [XmlElement("commission_refund_cash")]
         public long CommissionRefundCash { get; set; }
 
         /// <summary>
-        /// 退佣时间
+        /// 费用退款时间
         /// </summary>
         [XmlElement("commission_refund_time")]
         public string CommissionRefundTime { get; set; }
 
         /// <summary>
-        /// 抽佣日期
+        /// 收费日期
         /// </summary>
         [XmlElement("commission_time")]
         public string CommissionTime { get; set; }
 
         /// <summary>
-        /// 抽佣类型
+        /// 收费类型
         /// </summary>
         [XmlElement("commission_type")]
         public string CommissionType { get; set; }

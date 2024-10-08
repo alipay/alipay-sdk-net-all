@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string CityName { get; set; }
 
         /// <summary>
+        /// 扩展参数
+        /// </summary>
+        [XmlElement("ext_params")]
+        public string ExtParams { get; set; }
+
+        /// <summary>
         /// 纬度 无需携带单位符号
         /// </summary>
         [XmlElement("latitude")]
@@ -88,13 +94,13 @@ namespace Aop.Api.Domain
         public string QueryType { get; set; }
 
         /// <summary>
-        /// 区分当前对话场景意图 卫健委通用助理——WJWCOMASS
+        /// 区分当前对话场景意图 待分配后传入固定值
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// 会话id 不能为空
+        /// 会话id
         /// </summary>
         [XmlElement("session_id")]
         public string SessionId { get; set; }

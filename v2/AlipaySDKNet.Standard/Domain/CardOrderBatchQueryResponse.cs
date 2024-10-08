@@ -10,10 +10,16 @@ namespace Aop.Api.Domain
     public class CardOrderBatchQueryResponse : AopObject
     {
         /// <summary>
-        /// 金额卡余额面值，单位分
+        /// 售卖订单的余额面额，单位分
         /// </summary>
         [XmlElement("available_amount")]
         public long AvailableAmount { get; set; }
+
+        /// <summary>
+        /// 安心付绑卡信息
+        /// </summary>
+        [XmlElement("axf_card_bind_info")]
+        public AxfCardBindInfo AxfCardBindInfo { get; set; }
 
         /// <summary>
         /// 用于区分订购单的取消类型
@@ -22,7 +28,7 @@ namespace Aop.Api.Domain
         public string CancelType { get; set; }
 
         /// <summary>
-        /// 已解约金额，单位：分 (金额卡无效)
+        /// 已解约金额，单位：分
         /// </summary>
         [XmlElement("cancelled_cash")]
         public long CancelledCash { get; set; }
@@ -34,7 +40,7 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
-        /// 售卖订单状态 ● 次卡/周期卡 ○ 订购中:init ○ 可使用:available ○ 已用完:used_up ○ 关闭中:closing ○ 已关闭:closed ○ 暂停:pause ● 金额卡 ○ 可使用:available ○ 已失效：invalid ○ 已支付：paid ○ 已退款：refund ○ 超时关闭：timeout_closed ○ 已用完:used_up
+        /// （1）TIMES_CARD / PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY_INDIRECT： init、available、used_up、closing、closed、pause （2）AXF_MONEY_CARD：available、invalid、paid、refund、timeout_closed、used_up （3）AXF_MONEY_TIME_CARD：wait_pay、paid、available、timeout_closed、used_up、invalid、invaliding
         /// </summary>
         [XmlElement("card_status")]
         public string CardStatus { get; set; }
@@ -58,19 +64,19 @@ namespace Aop.Api.Domain
         public string CreateDate { get; set; }
 
         /// <summary>
-        /// 追回优惠金额，包含退款金额，单位：分 (金额卡无效)
+        /// 追回优惠金额，包含退款金额，单位：分
         /// </summary>
         [XmlElement("discount_cash")]
         public long DiscountCash { get; set; }
 
         /// <summary>
-        /// 计划追回优惠金额，单位：分 （金额卡无效）
+        /// 计划追回优惠金额，单位：分
         /// </summary>
         [XmlElement("discount_plan_cash")]
         public long DiscountPlanCash { get; set; }
 
         /// <summary>
-        /// 追回金额--已退金额，单位：分 （金额卡无效）
+        /// 追回金额--已退金额，单位：分
         /// </summary>
         [XmlElement("discount_refund_cash")]
         public long DiscountRefundCash { get; set; }
@@ -94,7 +100,7 @@ namespace Aop.Api.Domain
         public string MerchantPid { get; set; }
 
         /// <summary>
-        /// 卡名称
+        /// 购卡时的卡名称
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
@@ -112,19 +118,19 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 用户购买商品时的原价（面额），单位分
+        /// 用户购卡时的卡原价，单位分
         /// </summary>
         [XmlElement("origin_price_total")]
         public long OriginPriceTotal { get; set; }
 
         /// <summary>
-        /// 用于商户/服务商在插件商品详情页的自定义参数
+        /// 商户在跳转购卡页时的自定义外部单号
         /// </summary>
         [XmlElement("out_order_no")]
         public string OutOrderNo { get; set; }
 
         /// <summary>
-        /// 退款金额，单位：分 (金额卡无效)
+        /// 退款金额，单位：分
         /// </summary>
         [XmlElement("refund_cash")]
         public long RefundCash { get; set; }
@@ -136,13 +142,13 @@ namespace Aop.Api.Domain
         public long RemainCount { get; set; }
 
         /// <summary>
-        /// 用户购买商品时的实际价格（售价），单位分
+        /// 用户购卡时的卡售价，单位分
         /// </summary>
         [XmlElement("sale_price_total")]
         public long SalePriceTotal { get; set; }
 
         /// <summary>
-        /// 门店ID
+        /// 购卡时的门店ID
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }
@@ -166,7 +172,7 @@ namespace Aop.Api.Domain
         public long UsableCash { get; set; }
 
         /// <summary>
-        /// 已核销金额，单位：分 (金额卡无效)
+        /// 已核销金额，单位：分
         /// </summary>
         [XmlElement("used_cash")]
         public long UsedCash { get; set; }

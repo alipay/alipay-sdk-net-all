@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string RoyaltyAfterPrice { get; set; }
 
         /// <summary>
-        /// 分账履约方式
+        /// 分账履约方式 当前字段已废弃(该字段挪到了RentDetail模型中)
         /// </summary>
         [XmlElement("royalty_deliver_type")]
         public string RoyaltyDeliverType { get; set; }

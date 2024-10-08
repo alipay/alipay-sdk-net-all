@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
+        /// 09:00-10:00 这种属于按照天+分时控制余票，DATE是按照天控制余票
+        /// </summary>
+        [XmlElement("stock_type")]
+        public string StockType { get; set; }
+
+        /// <summary>
         /// 用户票种的一些描述信息
         /// </summary>
         [XmlElement("tips")]

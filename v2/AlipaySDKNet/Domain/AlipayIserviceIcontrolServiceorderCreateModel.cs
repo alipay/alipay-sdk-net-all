@@ -16,10 +16,22 @@ namespace Aop.Api.Domain
         public CustomeServiceInboundCreateDTO CsiOrderData { get; set; }
 
         /// <summary>
+        /// 阿里云呼出任务创建模型
+        /// </summary>
+        [XmlElement("cso_order_data")]
+        public CustomeServiceOutboundCreateDTO CsoOrderData { get; set; }
+
+        /// <summary>
         /// 是否调试模式
         /// </summary>
         [XmlElement("dispatch_mode")]
         public bool DispatchMode { get; set; }
+
+        /// <summary>
+        /// 首解数据
+        /// </summary>
+        [XmlElement("first_sloved")]
+        public FirstSloved FirstSloved { get; set; }
 
         /// <summary>
         /// 服务单的创建时间
@@ -38,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("origin_service_uniq_code")]
         public string OriginServiceUniqCode { get; set; }
+
+        /// <summary>
+        /// 满意度评价
+        /// </summary>
+        [XmlElement("satisfaction")]
+        public Satisfaction Satisfaction { get; set; }
 
         /// <summary>
         /// 服务唯一码
