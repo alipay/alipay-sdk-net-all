@@ -28,10 +28,16 @@ namespace Aop.Api.Domain
         public string BusiType { get; set; }
 
         /// <summary>
-        /// 若当月【due_date】日前未缴纳上月套餐费
+        /// 每个月份的逾期日期
         /// </summary>
         [XmlElement("due_date")]
         public long DueDate { get; set; }
+
+        /// <summary>
+        /// 首月价格，单位 元
+        /// </summary>
+        [XmlElement("first_month_price")]
+        public string FirstMonthPrice { get; set; }
 
         /// <summary>
         /// 分期数，决定了最大的分期扣款数。注意，提前结清认为是一笔特殊的分期扣款。
@@ -74,6 +80,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("province")]
         public string Province { get; set; }
+
+        /// <summary>
+        /// 要求在网月数，单位 月
+        /// </summary>
+        [XmlElement("require_month_count")]
+        public long RequireMonthCount { get; set; }
 
         /// <summary>
         /// 签约合约机套餐的手机号

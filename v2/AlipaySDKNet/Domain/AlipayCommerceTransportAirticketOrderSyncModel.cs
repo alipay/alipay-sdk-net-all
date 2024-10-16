@@ -110,7 +110,7 @@ namespace Aop.Api.Domain
         public string PayAmount { get; set; }
 
         /// <summary>
-        /// 订单来源渠道，见枚举值
+        /// 订单来源渠道，请在支付宝给出的枚举中选择使用
         /// </summary>
         [XmlElement("source_channel")]
         public string SourceChannel { get; set; }

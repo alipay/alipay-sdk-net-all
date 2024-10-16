@@ -42,6 +42,18 @@ namespace Aop.Api.Domain
         public string DeductionAmount { get; set; }
 
         /// <summary>
+        /// 核销现金价值，单位：分
+        /// </summary>
+        [XmlElement("deduction_cash")]
+        public long DeductionCash { get; set; }
+
+        /// <summary>
+        /// 核销次数
+        /// </summary>
+        [XmlElement("deduction_count")]
+        public long DeductionCount { get; set; }
+
+        /// <summary>
         /// 扣款失败原因
         /// </summary>
         [XmlElement("deduction_fail_reason")]
@@ -60,13 +72,20 @@ namespace Aop.Api.Domain
         public string DeductionOrderId { get; set; }
 
         /// <summary>
-        /// 扣款单类型
+        /// 每次核销信息
+        /// </summary>
+        [XmlArray("deduction_order_once_info_list")]
+        [XmlArrayItem("deduction_order_once_info")]
+        public List<DeductionOrderOnceInfo> DeductionOrderOnceInfoList { get; set; }
+
+        /// <summary>
+        /// 核销订单类型
         /// </summary>
         [XmlElement("deduction_order_type")]
         public string DeductionOrderType { get; set; }
 
         /// <summary>
-        /// 扣款状态
+        /// （1）TIMES_CARD / PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY_INDIRECT：UNPAID、PAYMENT_SUCCESS、PAYMENT_FAILED、REFUND （2）AXF_MONEY_TIME_CARD：FREEZING、FROZEN、UNFREEZING、UNFROZEN、REDEEMING、PAYMENT_FAILED、PAYMENT_SUCCESS、REFUND、PART_REFUND
         /// </summary>
         [XmlElement("deduction_status")]
         public string DeductionStatus { get; set; }
@@ -96,10 +115,16 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 业务单ID
+        /// 业务单ID，交易组件订单号
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
+
+        /// <summary>
+        /// 支付交易流水号
+        /// </summary>
+        [XmlElement("payment_no")]
+        public string PaymentNo { get; set; }
 
         /// <summary>
         /// 期数
@@ -112,6 +137,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plan_deduction_time")]
         public string PlanDeductionTime { get; set; }
+
+        /// <summary>
+        /// 核销方式
+        /// </summary>
+        [XmlElement("redeem_way")]
+        public string RedeemWay { get; set; }
 
         /// <summary>
         /// 退款金额，单位：分
@@ -142,5 +173,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 用户拒绝原因
+        /// </summary>
+        [XmlElement("user_refuse_reason")]
+        public string UserRefuseReason { get; set; }
     }
 }

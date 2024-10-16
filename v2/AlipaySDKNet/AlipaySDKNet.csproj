@@ -10,7 +10,7 @@
     <RootNamespace>AlipaySDKNet</RootNamespace>
     <AssemblyName>AlipaySDKNet</AssemblyName>
     <PackageId>AlipaySDKNet</PackageId>
-    <PackageVersion>4.9.286</PackageVersion>
+    <PackageVersion>4.9.296</PackageVersion>
     <Authors>antopen</Authors>
     <NeutralLanguage>zh</NeutralLanguage>
     <Description>支付宝开放平台官方SDK，支持.Net Framework 3.5(SP1)及其以上版本。</Description>
@@ -219,6 +219,8 @@
     <Compile Include="Response\ZhimaCreditPayafteruseCreditagreementQueryResponse.cs" />
     <Compile Include="Response\ZhimaCreditOrderRepaymentApplyResponse.cs" />
     <Compile Include="Response\ZhimaCreditEpYuqingBrmQueryResponse.cs" />
+    <Compile Include="Response\ZhimaCreditEpSpuinfoSpecificQueryResponse.cs" />
+    <Compile Include="Response\ZhimaCreditEpSpuinfoGeneralQueryResponse.cs" />
     <Compile Include="Response\ZhimaCreditEpSiriusTaskCallbackResponse.cs" />
     <Compile Include="Response\ZhimaCreditEpSiriusApplyCallbackResponse.cs" />
     <Compile Include="Response\ZhimaCreditEpScoreGetResponse.cs" />
@@ -3216,6 +3218,7 @@
     <Compile Include="Response\AlipayOpenAppRoomrentDeleteResponse.cs" />
     <Compile Include="Response\AlipayOpenAppRoomrentCreateResponse.cs" />
     <Compile Include="Response\AlipayOpenAppReproCesCreateResponse.cs" />
+    <Compile Include="Response\AlipayOpenAppRentroomCodeCreateResponse.cs" />
     <Compile Include="Response\AlipayOpenAppRentroomAreaQueryResponse.cs" />
     <Compile Include="Response\AlipayOpenAppRentroomAreaModifyResponse.cs" />
     <Compile Include="Response\AlipayOpenAppRentroomAreaDeleteResponse.cs" />
@@ -3343,6 +3346,12 @@
     <Compile Include="Response\AlipayOfflineProviderIndirectisvActivityCreateResponse.cs" />
     <Compile Include="Response\AlipayOfflineProviderEquipmentAuthRemoveResponse.cs" />
     <Compile Include="Response\AlipayOfflineProviderEquipmentAuthQuerybypageResponse.cs" />
+    <Compile Include="Response\AlipayOfflineProviderCollaborateTaskRefuseResponse.cs" />
+    <Compile Include="Response\AlipayOfflineProviderCollaborateTaskReceiveResponse.cs" />
+    <Compile Include="Response\AlipayOfflineProviderCollaborateTaskPullResponse.cs" />
+    <Compile Include="Response\AlipayOfflineProviderCollaborateTaskIncompleteResponse.cs" />
+    <Compile Include="Response\AlipayOfflineProviderCollaborateTaskCompleteResponse.cs" />
+    <Compile Include="Response\AlipayOfflineProviderCollaborateTaskAcceptResponse.cs" />
     <Compile Include="Response\AlipayOfflineProviderBundmeetingPassNotifyResponse.cs" />
     <Compile Include="Response\AlipayOfflineMaterialImageUploadResponse.cs" />
     <Compile Include="Response\AlipayOfflineMaterialImageDownloadResponse.cs" />
@@ -3389,6 +3398,8 @@
     <Compile Include="Response\AlipayMsaasMediarecogMmportalCvgoodsSyncResponse.cs" />
     <Compile Include="Response\AlipayMsaasMediarecogApiQrdetectIdentifyResponse.cs" />
     <Compile Include="Response\AlipayMsaasMediarecogAivisionrecgGoodsSyncResponse.cs" />
+    <Compile Include="Response\AlipayMsaasMediarecogAivisionrecgDeviceoperateQueryResponse.cs" />
+    <Compile Include="Response\AlipayMsaasMediarecogAivisionrecgDeviceactivationQueryResponse.cs" />
     <Compile Include="Response\AlipayMsaasMediarecogAivisionrecgDeviceUnbindResponse.cs" />
     <Compile Include="Response\AlipayMsaasMediarecogAftscvpayTransactionInitializeResponse.cs" />
     <Compile Include="Response\AlipayMsaasMediarecogAftsXnnIdentifyResponse.cs" />
@@ -3464,11 +3475,27 @@
     <Compile Include="Response\AlipayMerchantTradecomplainQueryResponse.cs" />
     <Compile Include="Response\AlipayMerchantTradecomplainFeedbackSubmitResponse.cs" />
     <Compile Include="Response\AlipayMerchantTradecomplainBatchqueryResponse.cs" />
+    <Compile Include="Response\AlipayMerchantTradeFileUploadResponse.cs" />
+    <Compile Include="Response\AlipayMerchantTradeAccountNotifyResponse.cs" />
     <Compile Include="Response\AlipayMerchantStoreShopcodeCreateResponse.cs" />
     <Compile Include="Response\AlipayMerchantStoreMiniappBindResponse.cs" />
     <Compile Include="Response\AlipayMerchantSolutionRecordQueryResponse.cs" />
     <Compile Include="Response\AlipayMerchantSolutionBatchSubmitResponse.cs" />
     <Compile Include="Response\AlipayMerchantSolutionBatchQueryResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodScenecategoryQueryResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodProductstatusModifyResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodProductQueryResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodProductCreateormodifyResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodOrderQueryResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodOrderFinishResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodOrderConfirmResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodMerchantreviewQueryResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodMerchantQueryResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodMerchantCreateormodifyResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodImageUploadResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodDeductionorderRefundResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodDeductionorderQueryResponse.cs" />
+    <Compile Include="Response\AlipayMerchantSolcreditserviceprodDeductionorderCreateResponse.cs" />
     <Compile Include="Response\AlipayMerchantShopcodeCategoryQueryResponse.cs" />
     <Compile Include="Response\AlipayMerchantShopcodeApplyorderBatchqueryResponse.cs" />
     <Compile Include="Response\AlipayMerchantServiceconsultQueryResponse.cs" />
@@ -3851,6 +3878,8 @@
     <Compile Include="Response\AlipayMarketingCampaignActivityOfflineTriggerResponse.cs" />
     <Compile Include="Response\AlipayMarketingAssetPublishConsultResponse.cs" />
     <Compile Include="Response\AlipayMarketingAssetPreconsultResponse.cs" />
+    <Compile Include="Response\AlipayMarketingAssetFundUseResponse.cs" />
+    <Compile Include="Response\AlipayMarketingAssetFundRefundResponse.cs" />
     <Compile Include="Response\AlipayMarketingActivityVoucherpackageQueryResponse.cs" />
     <Compile Include="Response\AlipayMarketingActivityVoucherpackageConsultResponse.cs" />
     <Compile Include="Response\AlipayMarketingActivityVoucherpackageBatchqueryResponse.cs" />
@@ -3948,6 +3977,7 @@
     <Compile Include="Response\AlipayIserviceIsresourceGrpquerybyclvgrpidsQueryResponse.cs" />
     <Compile Include="Response\AlipayIserviceIsresourceGroupquerybyuseridQueryResponse.cs" />
     <Compile Include="Response\AlipayIserviceIsresourceGroupquerybygroupidQueryResponse.cs" />
+    <Compile Include="Response\AlipayIserviceIsresourceEnterpriseuserAuthResponse.cs" />
     <Compile Include="Response\AlipayIserviceIsportalPermissioncheckQueryResponse.cs" />
     <Compile Include="Response\AlipayIserviceIotIntentQueryResponse.cs" />
     <Compile Include="Response\AlipayIserviceIdeployShiftQueryResponse.cs" />
@@ -4647,6 +4677,9 @@
     <Compile Include="Response\AlipayEcoMycarSeriesServicecodeQueryResponse.cs" />
     <Compile Include="Response\AlipayEcoMycarRentcarUserpickupSyncResponse.cs" />
     <Compile Include="Response\AlipayEcoMycarRentcarUserdropoffSyncResponse.cs" />
+    <Compile Include="Response\AlipayEcoMycarRentcarSpuexpoQueryResponse.cs" />
+    <Compile Include="Response\AlipayEcoMycarRentcarQuotefilterQueryResponse.cs" />
+    <Compile Include="Response\AlipayEcoMycarRentcarQuoteadvQueryResponse.cs" />
     <Compile Include="Response\AlipayEcoMycarRentcarPreauthpayCloseResponse.cs" />
     <Compile Include="Response\AlipayEcoMycarRentcarPreauthUnfreezeResponse.cs" />
     <Compile Include="Response\AlipayEcoMycarRentcarPreauthRefundResponse.cs" />
@@ -5120,6 +5153,7 @@
     <Compile Include="Response\AlipayEbppCommunityIsvCreateResponse.cs" />
     <Compile Include="Response\AlipayEbppCommunityExternalbillsyncUploadResponse.cs" />
     <Compile Include="Response\AlipayEbppCommunityEntranceguarddataSyncResponse.cs" />
+    <Compile Include="Response\AlipayEbppCommunityDeliveryidentityDetectResponse.cs" />
     <Compile Include="Response\AlipayEbppCommunityCommunityinfoCreateResponse.cs" />
     <Compile Include="Response\AlipayEbppCommunityChargeproductModifyResponse.cs" />
     <Compile Include="Response\AlipayEbppCommunityAffordrentalhouseUploadResponse.cs" />
@@ -5282,6 +5316,7 @@
     <Compile Include="Response\AlipayDataDataserviceProductAppModifyResponse.cs" />
     <Compile Include="Response\AlipayDataDataserviceProductAppCreateormodifyResponse.cs" />
     <Compile Include="Response\AlipayDataDataserviceOrderreportCreateResponse.cs" />
+    <Compile Include="Response\AlipayDataDataserviceMediaReportQueryResponse.cs" />
     <Compile Include="Response\AlipayDataDataserviceIcrowdUseResponse.cs" />
     <Compile Include="Response\AlipayDataDataserviceHolographicFactorQueryResponse.cs" />
     <Compile Include="Response\AlipayDataDataserviceHellobikeLogSyncResponse.cs" />
@@ -5829,6 +5864,8 @@
     <Compile Include="Response\AlipayCommerceMerchantcardOpenCreateResponse.cs" />
     <Compile Include="Response\AlipayCommerceMerchantcardOpenCheckResponse.cs" />
     <Compile Include="Response\AlipayCommerceMerchantcardExpireperiodModifyResponse.cs" />
+    <Compile Include="Response\AlipayCommerceMerchantcardDeductionorderUseResponse.cs" />
+    <Compile Include="Response\AlipayCommerceMerchantcardDeductionorderSetResponse.cs" />
     <Compile Include="Response\AlipayCommerceMerchantcardDeductionorderQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceMerchantcardDeductionorderBatchqueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceMerchantcardConfigModifyResponse.cs" />
@@ -5847,6 +5884,7 @@
     <Compile Include="Response\AlipayCommerceMedicalQrcodeGetResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalPaymentQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalPaymentPreconsultResponse.cs" />
+    <Compile Include="Response\AlipayCommerceMedicalPaymentOrderSyncResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalPaymentCreateandpayResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalPaymentCodeGetResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalOrderRefundQueryResponse.cs" />
@@ -5869,12 +5907,14 @@
     <Compile Include="Response\AlipayCommerceMedicalMedicineItempriceModifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalMedicineItemModifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalMedicineItemCreateResponse.cs" />
+    <Compile Include="Response\AlipayCommerceMedicalLargermodelWelcomecardQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalLargermodelSseQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalLargermodelSessionQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalLargermodelSessionCancelResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalLargermodelResourceUploadResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalLargermodelFeedbackSetResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalLargermodelDoctorcardQueryResponse.cs" />
+    <Compile Include="Response\AlipayCommerceMedicalLargermodelAgentwelcomecardQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalItemStockModifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalItemPriceModifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalIotfmUsersimpleinfoQueryResponse.cs" />
@@ -6076,6 +6116,7 @@
     <Compile Include="Response\AlipayCommerceGasTagSaveResponse.cs" />
     <Compile Include="Response\AlipayCommerceGasOrderSyncResponse.cs" />
     <Compile Include="Response\AlipayCommerceGasOrderDetailQueryResponse.cs" />
+    <Compile Include="Response\AlipayCommerceFundTransferDetectResponse.cs" />
     <Compile Include="Response\AlipayCommerceFundBindQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceFundBindModifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceFundBindCreateResponse.cs" />
@@ -7265,6 +7306,8 @@
     <Compile Include="Domain\ZhimaCreditPayafteruseCreditagreementQueryModel.cs" />
     <Compile Include="Domain\ZhimaCreditOrderRepaymentApplyModel.cs" />
     <Compile Include="Domain\ZhimaCreditEpYuqingBrmQueryModel.cs" />
+    <Compile Include="Domain\ZhimaCreditEpSpuinfoSpecificQueryModel.cs" />
+    <Compile Include="Domain\ZhimaCreditEpSpuinfoGeneralQueryModel.cs" />
     <Compile Include="Domain\ZhimaCreditEpSiriusTaskCallbackModel.cs" />
     <Compile Include="Domain\ZhimaCreditEpSiriusApplyCallbackModel.cs" />
     <Compile Include="Domain\ZhimaCreditEpScoreGetModel.cs" />
@@ -7955,6 +7998,7 @@
     <Compile Include="Domain\TaskBaseInfo.cs" />
     <Compile Include="Domain\TargetSendOrderParam.cs" />
     <Compile Include="Domain\TargetInfo.cs" />
+    <Compile Include="Domain\TapPayInfo.cs" />
     <Compile Include="Domain\TaoKeTaskTemplateInfoDTO.cs" />
     <Compile Include="Domain\TaoKeRewardRecordDTO.cs" />
     <Compile Include="Domain\TakeAwayScopeInfo.cs" />
@@ -8049,6 +8093,7 @@
     <Compile Include="Domain\SubAccountQueryRequest.cs" />
     <Compile Include="Domain\SubAccountInfoQueryOrder.cs" />
     <Compile Include="Domain\SubAccountInfoDTO.cs" />
+    <Compile Include="Domain\SubAccountInfo.cs" />
     <Compile Include="Domain\SubAccountBaseInfo.cs" />
     <Compile Include="Domain\SubAccountBalanceQueryOrder.cs" />
     <Compile Include="Domain\SubAccountBalanceOpenApiDTO.cs" />
@@ -8338,6 +8383,7 @@
     <Compile Include="Domain\SettlementbillOpenApiDTO.cs" />
     <Compile Include="Domain\SettlementBillCreateOrder.cs" />
     <Compile Include="Domain\SettleInMerchantLicense.cs" />
+    <Compile Include="Domain\SettleInfoListDTO.cs" />
     <Compile Include="Domain\SettleInfoDTO.cs" />
     <Compile Include="Domain\SettleInfo.cs" />
     <Compile Include="Domain\SettleExtraParams.cs" />
@@ -8532,9 +8578,12 @@
     <Compile Include="Domain\SceneData.cs" />
     <Compile Include="Domain\SceneContent.cs" />
     <Compile Include="Domain\SceneConfigQueryDTO.cs" />
+    <Compile Include="Domain\SceneCategoryDTO.cs" />
     <Compile Include="Domain\Scene.cs" />
     <Compile Include="Domain\SCardQueryVO.cs" />
     <Compile Include="Domain\ScanDetail.cs" />
+    <Compile Include="Domain\ScalesActivationCodeDeviceRelationInfo.cs" />
+    <Compile Include="Domain\ScalesActivationCodeDeviceInfo.cs" />
     <Compile Include="Domain\Satisfaction.cs" />
     <Compile Include="Domain\SalesData.cs" />
     <Compile Include="Domain\SaleProduct.cs" />
@@ -8607,6 +8656,7 @@
     <Compile Include="Domain\RiskEvaluationQueryRequest.cs" />
     <Compile Include="Domain\RiskDoc.cs" />
     <Compile Include="Domain\RiskConsultResult.cs" />
+    <Compile Include="Domain\RiskConfigDTO.cs" />
     <Compile Include="Domain\RiskConfig.cs" />
     <Compile Include="Domain\RiskCheckLabel.cs" />
     <Compile Include="Domain\RiskBizDomain.cs" />
@@ -8687,8 +8737,10 @@
     <Compile Include="Domain\RentCarVoucherInfo.cs" />
     <Compile Include="Domain\RentCarVehicleGallery.cs" />
     <Compile Include="Domain\RentCarStoreQuotation.cs" />
+    <Compile Include="Domain\RentCarSpuExpoInfo.cs" />
     <Compile Include="Domain\RentCarReservationTextRule.cs" />
     <Compile Include="Domain\RentCarRefundItem.cs" />
+    <Compile Include="Domain\RentCarQuoteInfo.cs" />
     <Compile Include="Domain\RentCarOrderFeeInfo.cs" />
     <Compile Include="Domain\RentCarLocation.cs" />
     <Compile Include="Domain\RentCarFreeCancelRule.cs" />
@@ -8735,6 +8787,7 @@
     <Compile Include="Domain\RefundHistory.cs" />
     <Compile Include="Domain\RefundGoodsDetail.cs" />
     <Compile Include="Domain\RefundExtendParams.cs" />
+    <Compile Include="Domain\RefundedRecordListDTO.cs" />
     <Compile Include="Domain\RefundedInfo.cs" />
     <Compile Include="Domain\RefundDetail.cs" />
     <Compile Include="Domain\RefundDescriptionDTO.cs" />
@@ -8859,6 +8912,7 @@
     <Compile Include="Domain\QuotaQueryResponse.cs" />
     <Compile Include="Domain\QuotaModifyDetail.cs" />
     <Compile Include="Domain\QuotaLimitModelDTO.cs" />
+    <Compile Include="Domain\QuotaGradientRuleDTO.cs" />
     <Compile Include="Domain\QuotaGradientRuleApiConfig.cs" />
     <Compile Include="Domain\QuotaGradientRule.cs" />
     <Compile Include="Domain\QuotaControlRule.cs" />
@@ -8975,6 +9029,7 @@
     <Compile Include="Domain\PromoActivityAccessActionVO.cs" />
     <Compile Include="Domain\PromoAccessBaseCatalogVO.cs" />
     <Compile Include="Domain\PromiseDetail.cs" />
+    <Compile Include="Domain\PromiseConfigDTO.cs" />
     <Compile Include="Domain\PromiseConfig.cs" />
     <Compile Include="Domain\PromiseApiConfig.cs" />
     <Compile Include="Domain\ProjectTimeTable.cs" />
@@ -9167,6 +9222,9 @@
     <Compile Include="Domain\PermissionDTO.cs" />
     <Compile Include="Domain\PeriodRuleParams.cs" />
     <Compile Include="Domain\PeriodRuleParam.cs" />
+    <Compile Include="Domain\PeriodPayBillingRuleFixedDTO.cs" />
+    <Compile Include="Domain\PeriodPayBillingRuleDynamicDTO.cs" />
+    <Compile Include="Domain\PeriodPayBillingRuleDTO.cs" />
     <Compile Include="Domain\PeriodInfo.cs" />
     <Compile Include="Domain\PeopleOpenApiDTO.cs" />
     <Compile Include="Domain\People.cs" />
@@ -9174,6 +9232,7 @@
     <Compile Include="Domain\PenCaseInfo.cs" />
     <Compile Include="Domain\PdfCertificateResult.cs" />
     <Compile Include="Domain\PayUserInfoDTO.cs" />
+    <Compile Include="Domain\PayType.cs" />
     <Compile Include="Domain\PaytoolResultDetail.cs" />
     <Compile Include="Domain\PaytoolRequestDetail.cs" />
     <Compile Include="Domain\PaytoolRefundResultDetail.cs" />
@@ -9342,6 +9401,7 @@
     <Compile Include="Domain\OutboundOrder.cs" />
     <Compile Include="Domain\OurSubjectInfoDTO.cs" />
     <Compile Include="Domain\OuDTO.cs" />
+    <Compile Include="Domain\OtherSettleAccountDTO.cs" />
     <Compile Include="Domain\OtherConfigVo.cs" />
     <Compile Include="Domain\OtherAmountInfos.cs" />
     <Compile Include="Domain\OssPostUploadFormData.cs" />
@@ -9550,6 +9610,7 @@
     <Compile Include="Domain\OpenApiEventReportItemVO.cs" />
     <Compile Include="Domain\OpenApiEventReportDataResult.cs" />
     <Compile Include="Domain\OpenApiEventReportCommRequest.cs" />
+    <Compile Include="Domain\OpenApiEnterpriseUserAuthInfo.cs" />
     <Compile Include="Domain\OpenApiDailyScheduleVO.cs" />
     <Compile Include="Domain\OpenApiCustomerAnalysisTradeLevelResult.cs" />
     <Compile Include="Domain\OpenApiCustomerAnalysisResult.cs" />
@@ -9905,6 +9966,7 @@
     <Compile Include="Domain\MultiStepTransferParticipant.cs" />
     <Compile Include="Domain\MultiStagePayLineInfo.cs" />
     <Compile Include="Domain\MultiStagePayInfo.cs" />
+    <Compile Include="Domain\MultiStageAmountConfigDTO.cs" />
     <Compile Include="Domain\MultiSignerAndTabVosDTO.cs" />
     <Compile Include="Domain\MultiModalInputsRequest.cs" />
     <Compile Include="Domain\MultilineTextRectOpenVO.cs" />
@@ -9932,9 +9994,12 @@
     <Compile Include="Domain\MsgDynamicData.cs" />
     <Compile Include="Domain\MsgContent.cs" />
     <Compile Include="Domain\MsgApplyKeyword.cs" />
+    <Compile Include="Domain\MrchShopInfo.cs" />
     <Compile Include="Domain\MrchCrmUserTagInfo.cs" />
     <Compile Include="Domain\MrchCrmUser.cs" />
     <Compile Include="Domain\MrchCrmMemberCardBenefit.cs" />
+    <Compile Include="Domain\MrchCashierInfo.cs" />
+    <Compile Include="Domain\MrchBrandInfo.cs" />
     <Compile Include="Domain\MPromoInfo.cs" />
     <Compile Include="Domain\MPromoConstraint.cs" />
     <Compile Include="Domain\MpPrizeSendOrder.cs" />
@@ -10175,6 +10240,7 @@
     <Compile Include="Domain\MedicalServiceMagaDTO.cs" />
     <Compile Include="Domain\MedicalServiceMagaCardDTO.cs" />
     <Compile Include="Domain\MedicalPaymentQueryResponse.cs" />
+    <Compile Include="Domain\MedicalOrderPayChannel.cs" />
     <Compile Include="Domain\MedicalOnlinePayAuthInfo.cs" />
     <Compile Include="Domain\MedicalOnlineCreateAndPayInfo.cs" />
     <Compile Include="Domain\MedicalNoSubscribeOrderMsgInfo.cs" />
@@ -10203,6 +10269,7 @@
     <Compile Include="Domain\MedicalAreaPlatformMsgSendArg.cs" />
     <Compile Include="Domain\MedicalAppSceneMsgSendArg.cs" />
     <Compile Include="Domain\MedicalAppointmentOrderUploadExtInfo.cs" />
+    <Compile Include="Domain\MediaReportDetail.cs" />
     <Compile Include="Domain\MediaContentList.cs" />
     <Compile Include="Domain\MdRecord.cs" />
     <Compile Include="Domain\MdCodeInfoDTO.cs" />
@@ -11725,6 +11792,7 @@
     <Compile Include="Domain\FixProblemDTO.cs" />
     <Compile Include="Domain\FixFileInfo.cs" />
     <Compile Include="Domain\FixExtData.cs" />
+    <Compile Include="Domain\FixedRentBillingRuleDTO.cs" />
     <Compile Include="Domain\FixCooperationDTO.cs" />
     <Compile Include="Domain\FirstSloved.cs" />
     <Compile Include="Domain\FinUserInfo.cs" />
@@ -11920,6 +11988,10 @@
     <Compile Include="Domain\EquityInfo.cs" />
     <Compile Include="Domain\EquipmentBindInfo.cs" />
     <Compile Include="Domain\EquipmentAuthRemoveQueryBypageDTO.cs" />
+    <Compile Include="Domain\EpSpuSpecificInfoResult.cs" />
+    <Compile Include="Domain\EpSpuSpecificInfo.cs" />
+    <Compile Include="Domain\EpSpuGeneralInfoResult.cs" />
+    <Compile Include="Domain\EpSpuGeneralInfo.cs" />
     <Compile Include="Domain\EpLabelContent.cs" />
     <Compile Include="Domain\EpInfo.cs" />
     <Compile Include="Domain\EpElement.cs" />
@@ -12042,6 +12114,9 @@
     <Compile Include="Domain\EbppBillKey.cs" />
     <Compile Include="Domain\EbikeBindInfo.cs" />
     <Compile Include="Domain\EapAuthVO.cs" />
+    <Compile Include="Domain\DynamicRentBillingRuleSingleStageDTO.cs" />
+    <Compile Include="Domain\DynamicRentBillingRuleMultiStageDTO.cs" />
+    <Compile Include="Domain\DynamicRentBillingRuleDTO.cs" />
     <Compile Include="Domain\DynamicDataVO.cs" />
     <Compile Include="Domain\DynamicAwardConfigDataDto.cs" />
     <Compile Include="Domain\DynamicAttributeVO.cs" />
@@ -12240,10 +12315,13 @@
     <Compile Include="Domain\DefaultInCartInfo.cs" />
     <Compile Include="Domain\DefaultDeliverAddress.cs" />
     <Compile Include="Domain\DeductOrderDetail.cs" />
+    <Compile Include="Domain\DeductionRefundOrderInfo.cs" />
     <Compile Include="Domain\DeductionPlanResponse.cs" />
     <Compile Include="Domain\DeductionPlanInfo.cs" />
     <Compile Include="Domain\DeductionOrderPageProcessorResponse.cs" />
+    <Compile Include="Domain\DeductionOrderOnceInfo.cs" />
     <Compile Include="Domain\DeductionOrderInfo.cs" />
+    <Compile Include="Domain\DeductionOrderDTO.cs" />
     <Compile Include="Domain\DeductInfo.cs" />
     <Compile Include="Domain\DcmealPayDetail.cs" />
     <Compile Include="Domain\DcmealDishDetail.cs" />
@@ -12678,6 +12756,8 @@
     <Compile Include="Domain\CollectReceiptOpenApiDTO.cs" />
     <Compile Include="Domain\CollectLimitRuleDTO.cs" />
     <Compile Include="Domain\CollectionFileDTO.cs" />
+    <Compile Include="Domain\CollaborateTaskCompleteContent.cs" />
+    <Compile Include="Domain\CollaborateTask.cs" />
     <Compile Include="Domain\CodeResult.cs" />
     <Compile Include="Domain\CodeResInfo.cs" />
     <Compile Include="Domain\CodeNOList.cs" />
@@ -12753,6 +12833,7 @@
     <Compile Include="Domain\ChargeInfo.cs" />
     <Compile Include="Domain\ChargeConnectorInfo.cs" />
     <Compile Include="Domain\ChapterInfo.cs" />
+    <Compile Include="Domain\ChannelStatistic.cs" />
     <Compile Include="Domain\ChannelRuleDTO.cs" />
     <Compile Include="Domain\ChannelPutPlanDTO.cs" />
     <Compile Include="Domain\ChannelPutPlanDetailDTO.cs" />
@@ -12813,11 +12894,13 @@
     <Compile Include="Domain\CategoryRootDTO.cs" />
     <Compile Include="Domain\CategoryRiskInfoApiConfig.cs" />
     <Compile Include="Domain\CategoryRiskInfo.cs" />
+    <Compile Include="Domain\CategoryRiskDTO.cs" />
     <Compile Include="Domain\CategoryRequireInfo.cs" />
     <Compile Include="Domain\CategoryRangeInfoDTO.cs" />
     <Compile Include="Domain\CategoryRangeInfo.cs" />
     <Compile Include="Domain\CategoryLevelInfo.cs" />
     <Compile Include="Domain\CategoryLeafDTO.cs" />
+    <Compile Include="Domain\CategoryInfoDTO.cs" />
     <Compile Include="Domain\CategoryDTO.cs" />
     <Compile Include="Domain\CategoryAndParentVO.cs" />
     <Compile Include="Domain\Category.cs" />
@@ -12845,6 +12928,7 @@
     <Compile Include="Domain\CardUserInfo.cs" />
     <Compile Include="Domain\CardUseMethodInfo.cs" />
     <Compile Include="Domain\CardUsableShopInfo.cs" />
+    <Compile Include="Domain\CardUnit.cs" />
     <Compile Include="Domain\CardTypeVO.cs" />
     <Compile Include="Domain\CardTemplateUseInfo.cs" />
     <Compile Include="Domain\CardTemplateUse.cs" />
@@ -12878,6 +12962,7 @@
     <Compile Include="Domain\CardCycleInfo.cs" />
     <Compile Include="Domain\CardCycle.cs" />
     <Compile Include="Domain\CardCreditInfo.cs" />
+    <Compile Include="Domain\CardContentDTO.cs" />
     <Compile Include="Domain\CardBinActivityInfo.cs" />
     <Compile Include="Domain\CardAssetInfo.cs" />
     <Compile Include="Domain\CardAmountDetailVO.cs" />
@@ -13266,6 +13351,7 @@
     <Compile Include="Domain\AssetInfoCorrectionItem.cs" />
     <Compile Include="Domain\AssetInfo.cs" />
     <Compile Include="Domain\AssetFundInfo.cs" />
+    <Compile Include="Domain\AssetFundDTO.cs" />
     <Compile Include="Domain\AssetEcoOrderBillDetail.cs" />
     <Compile Include="Domain\AssetEcoFeeDetail.cs" />
     <Compile Include="Domain\AssetEcoBillDetail.cs" />
@@ -15540,6 +15626,7 @@
     <Compile Include="Domain\AlipayOpenAppRoomrentDeleteModel.cs" />
     <Compile Include="Domain\AlipayOpenAppRoomrentCreateModel.cs" />
     <Compile Include="Domain\AlipayOpenAppReproCesCreateModel.cs" />
+    <Compile Include="Domain\AlipayOpenAppRentroomCodeCreateModel.cs" />
     <Compile Include="Domain\AlipayOpenAppRentroomAreaQueryModel.cs" />
     <Compile Include="Domain\AlipayOpenAppRentroomAreaModifyModel.cs" />
     <Compile Include="Domain\AlipayOpenAppRentroomAreaDeleteModel.cs" />
@@ -15655,6 +15742,12 @@
     <Compile Include="Domain\AlipayOfflineProviderIndirectisvActivityCreateModel.cs" />
     <Compile Include="Domain\AlipayOfflineProviderEquipmentAuthRemoveModel.cs" />
     <Compile Include="Domain\AlipayOfflineProviderEquipmentAuthQuerybypageModel.cs" />
+    <Compile Include="Domain\AlipayOfflineProviderCollaborateTaskRefuseModel.cs" />
+    <Compile Include="Domain\AlipayOfflineProviderCollaborateTaskReceiveModel.cs" />
+    <Compile Include="Domain\AlipayOfflineProviderCollaborateTaskPullModel.cs" />
+    <Compile Include="Domain\AlipayOfflineProviderCollaborateTaskIncompleteModel.cs" />
+    <Compile Include="Domain\AlipayOfflineProviderCollaborateTaskCompleteModel.cs" />
+    <Compile Include="Domain\AlipayOfflineProviderCollaborateTaskAcceptModel.cs" />
     <Compile Include="Domain\AlipayOfflineProviderBundmeetingPassNotifyModel.cs" />
     <Compile Include="Domain\AlipayOfflinePayMasterKey.cs" />
     <Compile Include="Domain\AlipayOfflineMarketShopSummaryBatchqueryModel.cs" />
@@ -15699,6 +15792,8 @@
     <Compile Include="Domain\AlipayMsaasMediarecogApiQrdetectIdentifyModel.cs" />
     <Compile Include="Domain\AlipayMsaasMediarecogAivisionrecgGoodsSyncModel.cs" />
     <Compile Include="Domain\AlipayMsaasMediarecogAivisionrecgDeviceUnbindModel.cs" />
+    <Compile Include="Domain\AlipayMsaasMediarecogAivisionrecgDeviceoperateQueryModel.cs" />
+    <Compile Include="Domain\AlipayMsaasMediarecogAivisionrecgDeviceactivationQueryModel.cs" />
     <Compile Include="Domain\AlipayMsaasMediarecogAftsXnnIdentifyModel.cs" />
     <Compile Include="Domain\AlipayMsaasMediarecogAftscvpayTransactionInitializeModel.cs" />
     <Compile Include="Domain\AlipayMsaasMediarecogAftsCertIdentifyModel.cs" />
@@ -15715,11 +15810,24 @@
     <Compile Include="Domain\AlipayMerchantTradecomplainReplySubmitModel.cs" />
     <Compile Include="Domain\AlipayMerchantTradecomplainQueryModel.cs" />
     <Compile Include="Domain\AlipayMerchantTradecomplainBatchqueryModel.cs" />
+    <Compile Include="Domain\AlipayMerchantTradeAccountNotifyModel.cs" />
     <Compile Include="Domain\AlipayMerchantStoreShopcodeCreateModel.cs" />
     <Compile Include="Domain\AlipayMerchantStoreMiniappBindModel.cs" />
     <Compile Include="Domain\AlipayMerchantSolutionRecordQueryModel.cs" />
     <Compile Include="Domain\AlipayMerchantSolutionBatchSubmitModel.cs" />
     <Compile Include="Domain\AlipayMerchantSolutionBatchQueryModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodProductstatusModifyModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodProductQueryModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodProductCreateormodifyModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodOrderQueryModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodOrderFinishModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodOrderConfirmModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodMerchantreviewQueryModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodMerchantQueryModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodMerchantCreateormodifyModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodDeductionorderRefundModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodDeductionorderQueryModel.cs" />
+    <Compile Include="Domain\AlipayMerchantSolcreditserviceprodDeductionorderCreateModel.cs" />
     <Compile Include="Domain\AlipayMerchantShopcodeCategoryQueryModel.cs" />
     <Compile Include="Domain\AlipayMerchantShopcodeApplyorderBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayMerchantServiceconsultQueryModel.cs" />
@@ -16093,6 +16201,8 @@
     <Compile Include="Domain\AlipayMarketingCampaignActivityOfflineTriggerModel.cs" />
     <Compile Include="Domain\AlipayMarketingAssetPublishConsultModel.cs" />
     <Compile Include="Domain\AlipayMarketingAssetPreconsultModel.cs" />
+    <Compile Include="Domain\AlipayMarketingAssetFundUseModel.cs" />
+    <Compile Include="Domain\AlipayMarketingAssetFundRefundModel.cs" />
     <Compile Include="Domain\AlipayMarketingActivityVoucherStopModel.cs" />
     <Compile Include="Domain\AlipayMarketingActivityVoucherSendModel.cs" />
     <Compile Include="Domain\AlipayMarketingActivityVoucherQueryModel.cs" />
@@ -16194,6 +16304,7 @@
     <Compile Include="Domain\AlipayIserviceIsresourceGrpquerybyclvgrpidsQueryModel.cs" />
     <Compile Include="Domain\AlipayIserviceIsresourceGroupquerybyuseridQueryModel.cs" />
     <Compile Include="Domain\AlipayIserviceIsresourceGroupquerybygroupidQueryModel.cs" />
+    <Compile Include="Domain\AlipayIserviceIsresourceEnterpriseuserAuthModel.cs" />
     <Compile Include="Domain\AlipayIserviceIsresourceapiBizuserQuitModel.cs" />
     <Compile Include="Domain\AlipayIserviceIsresourceapiBizuserDeleteModel.cs" />
     <Compile Include="Domain\AlipayIserviceIsportalPermissioncheckQueryModel.cs" />
@@ -16892,6 +17003,9 @@
     <Compile Include="Domain\AlipayEcoMycarSeriesServicecodeQueryModel.cs" />
     <Compile Include="Domain\AlipayEcoMycarRentcarUserpickupSyncModel.cs" />
     <Compile Include="Domain\AlipayEcoMycarRentcarUserdropoffSyncModel.cs" />
+    <Compile Include="Domain\AlipayEcoMycarRentcarSpuexpoQueryModel.cs" />
+    <Compile Include="Domain\AlipayEcoMycarRentcarQuotefilterQueryModel.cs" />
+    <Compile Include="Domain\AlipayEcoMycarRentcarQuoteadvQueryModel.cs" />
     <Compile Include="Domain\AlipayEcoMycarRentcarPreauthUnfreezeModel.cs" />
     <Compile Include="Domain\AlipayEcoMycarRentcarPreauthRefundModel.cs" />
     <Compile Include="Domain\AlipayEcoMycarRentcarPreauthPayModel.cs" />
@@ -17340,6 +17454,7 @@
     <Compile Include="Domain\AlipayEbppCommunityIsvCreateModel.cs" />
     <Compile Include="Domain\AlipayEbppCommunityExternalbillsyncUploadModel.cs" />
     <Compile Include="Domain\AlipayEbppCommunityEntranceguarddataSyncModel.cs" />
+    <Compile Include="Domain\AlipayEbppCommunityDeliveryidentityDetectModel.cs" />
     <Compile Include="Domain\AlipayEbppCommunityCommunityinfoCreateModel.cs" />
     <Compile Include="Domain\AlipayEbppCommunityChargeproductModifyModel.cs" />
     <Compile Include="Domain\AlipayEbppCommunityAffordrentalhouseUploadModel.cs" />
@@ -17464,6 +17579,7 @@
     <Compile Include="Domain\AlipayDataDataserviceProductAppModifyModel.cs" />
     <Compile Include="Domain\AlipayDataDataserviceProductAppCreateormodifyModel.cs" />
     <Compile Include="Domain\AlipayDataDataserviceOrderreportCreateModel.cs" />
+    <Compile Include="Domain\AlipayDataDataserviceMediaReportQueryModel.cs" />
     <Compile Include="Domain\AlipayDataDataserviceIcrowdUseModel.cs" />
     <Compile Include="Domain\AlipayDataDataserviceHolographicFactorQueryModel.cs" />
     <Compile Include="Domain\AlipayDataDataserviceHellobikeLogSyncModel.cs" />
@@ -17992,6 +18108,7 @@
     <Compile Include="Domain\AlipayCommerceMerchantcardTemplateBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardSmidBindModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardSettleaccountSaveModel.cs" />
+    <Compile Include="Domain\AlipayCommerceMerchantcardSettleaccountBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardPricepropertyCreateModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardOrderSetModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardOrderQueryModel.cs" />
@@ -18001,6 +18118,8 @@
     <Compile Include="Domain\AlipayCommerceMerchantcardOpenCreateModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardOpenCheckModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardExpireperiodModifyModel.cs" />
+    <Compile Include="Domain\AlipayCommerceMerchantcardDeductionorderUseModel.cs" />
+    <Compile Include="Domain\AlipayCommerceMerchantcardDeductionorderSetModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardDeductionorderQueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardDeductionorderBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceMerchantcardConfigModifyModel.cs" />
@@ -18018,6 +18137,7 @@
     <Compile Include="Domain\AlipayCommerceMedicalQrcodeGetModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalPaymentQueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalPaymentPreconsultModel.cs" />
+    <Compile Include="Domain\AlipayCommerceMedicalPaymentOrderSyncModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalPaymentCreateandpayModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalPaymentCodeGetModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalOrderRefundQueryModel.cs" />
@@ -18040,11 +18160,13 @@
     <Compile Include="Domain\AlipayCommerceMedicalMedicineItempriceModifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalMedicineItemModifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalMedicineItemCreateModel.cs" />
+    <Compile Include="Domain\AlipayCommerceMedicalLargermodelWelcomecardQueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalLargermodelSseQueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalLargermodelSessionQueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalLargermodelSessionCancelModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalLargermodelFeedbackSetModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalLargermodelDoctorcardQueryModel.cs" />
+    <Compile Include="Domain\AlipayCommerceMedicalLargermodelAgentwelcomecardQueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalItemStockModifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalItemPriceModifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalIotFtokenGetModel.cs" />
@@ -18243,6 +18365,7 @@
     <Compile Include="Domain\AlipayCommerceGasTagSaveModel.cs" />
     <Compile Include="Domain\AlipayCommerceGasOrderSyncModel.cs" />
     <Compile Include="Domain\AlipayCommerceGasOrderDetailQueryModel.cs" />
+    <Compile Include="Domain\AlipayCommerceFundTransferDetectModel.cs" />
     <Compile Include="Domain\AlipayCommerceFundBindQueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceFundBindModifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceFundBindCreateModel.cs" />
@@ -19262,6 +19385,7 @@
     <Compile Include="Domain\AgmTagDTO.cs" />
     <Compile Include="Domain\AgmComponentInstanceDTO.cs" />
     <Compile Include="Domain\AggregationInstance.cs" />
+    <Compile Include="Domain\AgentWelcomeCardDTO.cs" />
     <Compile Include="Domain\AgentVO.cs" />
     <Compile Include="Domain\AgentScheduleLog.cs" />
     <Compile Include="Domain\AgentOrganization.cs" />
@@ -19564,6 +19688,8 @@
     <Compile Include="Request\ZhimaCreditPayafteruseCreditagreementQueryRequest.cs" />
     <Compile Include="Request\ZhimaCreditOrderRepaymentApplyRequest.cs" />
     <Compile Include="Request\ZhimaCreditEpYuqingBrmQueryRequest.cs" />
+    <Compile Include="Request\ZhimaCreditEpSpuinfoSpecificQueryRequest.cs" />
+    <Compile Include="Request\ZhimaCreditEpSpuinfoGeneralQueryRequest.cs" />
     <Compile Include="Request\ZhimaCreditEpSiriusTaskCallbackRequest.cs" />
     <Compile Include="Request\ZhimaCreditEpSiriusApplyCallbackRequest.cs" />
     <Compile Include="Request\ZhimaCreditEpScoreGetRequest.cs" />
@@ -22561,6 +22687,7 @@
     <Compile Include="Request\AlipayOpenAppRoomrentDeleteRequest.cs" />
     <Compile Include="Request\AlipayOpenAppRoomrentCreateRequest.cs" />
     <Compile Include="Request\AlipayOpenAppReproCesCreateRequest.cs" />
+    <Compile Include="Request\AlipayOpenAppRentroomCodeCreateRequest.cs" />
     <Compile Include="Request\AlipayOpenAppRentroomAreaQueryRequest.cs" />
     <Compile Include="Request\AlipayOpenAppRentroomAreaModifyRequest.cs" />
     <Compile Include="Request\AlipayOpenAppRentroomAreaDeleteRequest.cs" />
@@ -22688,6 +22815,12 @@
     <Compile Include="Request\AlipayOfflineProviderIndirectisvActivityCreateRequest.cs" />
     <Compile Include="Request\AlipayOfflineProviderEquipmentAuthRemoveRequest.cs" />
     <Compile Include="Request\AlipayOfflineProviderEquipmentAuthQuerybypageRequest.cs" />
+    <Compile Include="Request\AlipayOfflineProviderCollaborateTaskRefuseRequest.cs" />
+    <Compile Include="Request\AlipayOfflineProviderCollaborateTaskReceiveRequest.cs" />
+    <Compile Include="Request\AlipayOfflineProviderCollaborateTaskPullRequest.cs" />
+    <Compile Include="Request\AlipayOfflineProviderCollaborateTaskIncompleteRequest.cs" />
+    <Compile Include="Request\AlipayOfflineProviderCollaborateTaskCompleteRequest.cs" />
+    <Compile Include="Request\AlipayOfflineProviderCollaborateTaskAcceptRequest.cs" />
     <Compile Include="Request\AlipayOfflineProviderBundmeetingPassNotifyRequest.cs" />
     <Compile Include="Request\AlipayOfflineMaterialImageUploadRequest.cs" />
     <Compile Include="Request\AlipayOfflineMaterialImageDownloadRequest.cs" />
@@ -22734,6 +22867,8 @@
     <Compile Include="Request\AlipayMsaasMediarecogMmportalCvgoodsSyncRequest.cs" />
     <Compile Include="Request\AlipayMsaasMediarecogApiQrdetectIdentifyRequest.cs" />
     <Compile Include="Request\AlipayMsaasMediarecogAivisionrecgGoodsSyncRequest.cs" />
+    <Compile Include="Request\AlipayMsaasMediarecogAivisionrecgDeviceoperateQueryRequest.cs" />
+    <Compile Include="Request\AlipayMsaasMediarecogAivisionrecgDeviceactivationQueryRequest.cs" />
     <Compile Include="Request\AlipayMsaasMediarecogAivisionrecgDeviceUnbindRequest.cs" />
     <Compile Include="Request\AlipayMsaasMediarecogAftscvpayTransactionInitializeRequest.cs" />
     <Compile Include="Request\AlipayMsaasMediarecogAftsXnnIdentifyRequest.cs" />
@@ -22809,11 +22944,27 @@
     <Compile Include="Request\AlipayMerchantTradecomplainQueryRequest.cs" />
     <Compile Include="Request\AlipayMerchantTradecomplainFeedbackSubmitRequest.cs" />
     <Compile Include="Request\AlipayMerchantTradecomplainBatchqueryRequest.cs" />
+    <Compile Include="Request\AlipayMerchantTradeFileUploadRequest.cs" />
+    <Compile Include="Request\AlipayMerchantTradeAccountNotifyRequest.cs" />
     <Compile Include="Request\AlipayMerchantStoreShopcodeCreateRequest.cs" />
     <Compile Include="Request\AlipayMerchantStoreMiniappBindRequest.cs" />
     <Compile Include="Request\AlipayMerchantSolutionRecordQueryRequest.cs" />
     <Compile Include="Request\AlipayMerchantSolutionBatchSubmitRequest.cs" />
     <Compile Include="Request\AlipayMerchantSolutionBatchQueryRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodScenecategoryQueryRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodProductstatusModifyRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodProductQueryRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodProductCreateormodifyRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodOrderQueryRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodOrderFinishRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodOrderConfirmRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodMerchantreviewQueryRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodMerchantQueryRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodMerchantCreateormodifyRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodImageUploadRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodDeductionorderRefundRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodDeductionorderQueryRequest.cs" />
+    <Compile Include="Request\AlipayMerchantSolcreditserviceprodDeductionorderCreateRequest.cs" />
     <Compile Include="Request\AlipayMerchantShopcodeCategoryQueryRequest.cs" />
     <Compile Include="Request\AlipayMerchantShopcodeApplyorderBatchqueryRequest.cs" />
     <Compile Include="Request\AlipayMerchantServiceconsultQueryRequest.cs" />
@@ -23196,6 +23347,8 @@
     <Compile Include="Request\AlipayMarketingCampaignActivityOfflineTriggerRequest.cs" />
     <Compile Include="Request\AlipayMarketingAssetPublishConsultRequest.cs" />
     <Compile Include="Request\AlipayMarketingAssetPreconsultRequest.cs" />
+    <Compile Include="Request\AlipayMarketingAssetFundUseRequest.cs" />
+    <Compile Include="Request\AlipayMarketingAssetFundRefundRequest.cs" />
     <Compile Include="Request\AlipayMarketingActivityVoucherpackageQueryRequest.cs" />
     <Compile Include="Request\AlipayMarketingActivityVoucherpackageConsultRequest.cs" />
     <Compile Include="Request\AlipayMarketingActivityVoucherpackageBatchqueryRequest.cs" />
@@ -23293,6 +23446,7 @@
     <Compile Include="Request\AlipayIserviceIsresourceGrpquerybyclvgrpidsQueryRequest.cs" />
     <Compile Include="Request\AlipayIserviceIsresourceGroupquerybyuseridQueryRequest.cs" />
     <Compile Include="Request\AlipayIserviceIsresourceGroupquerybygroupidQueryRequest.cs" />
+    <Compile Include="Request\AlipayIserviceIsresourceEnterpriseuserAuthRequest.cs" />
     <Compile Include="Request\AlipayIserviceIsportalPermissioncheckQueryRequest.cs" />
     <Compile Include="Request\AlipayIserviceIotIntentQueryRequest.cs" />
     <Compile Include="Request\AlipayIserviceIdeployShiftQueryRequest.cs" />
@@ -23992,6 +24146,9 @@
     <Compile Include="Request\AlipayEcoMycarSeriesServicecodeQueryRequest.cs" />
     <Compile Include="Request\AlipayEcoMycarRentcarUserpickupSyncRequest.cs" />
     <Compile Include="Request\AlipayEcoMycarRentcarUserdropoffSyncRequest.cs" />
+    <Compile Include="Request\AlipayEcoMycarRentcarSpuexpoQueryRequest.cs" />
+    <Compile Include="Request\AlipayEcoMycarRentcarQuotefilterQueryRequest.cs" />
+    <Compile Include="Request\AlipayEcoMycarRentcarQuoteadvQueryRequest.cs" />
     <Compile Include="Request\AlipayEcoMycarRentcarPreauthpayCloseRequest.cs" />
     <Compile Include="Request\AlipayEcoMycarRentcarPreauthUnfreezeRequest.cs" />
     <Compile Include="Request\AlipayEcoMycarRentcarPreauthRefundRequest.cs" />
@@ -24465,6 +24622,7 @@
     <Compile Include="Request\AlipayEbppCommunityIsvCreateRequest.cs" />
     <Compile Include="Request\AlipayEbppCommunityExternalbillsyncUploadRequest.cs" />
     <Compile Include="Request\AlipayEbppCommunityEntranceguarddataSyncRequest.cs" />
+    <Compile Include="Request\AlipayEbppCommunityDeliveryidentityDetectRequest.cs" />
     <Compile Include="Request\AlipayEbppCommunityCommunityinfoCreateRequest.cs" />
     <Compile Include="Request\AlipayEbppCommunityChargeproductModifyRequest.cs" />
     <Compile Include="Request\AlipayEbppCommunityAffordrentalhouseUploadRequest.cs" />
@@ -24627,6 +24785,7 @@
     <Compile Include="Request\AlipayDataDataserviceProductAppModifyRequest.cs" />
     <Compile Include="Request\AlipayDataDataserviceProductAppCreateormodifyRequest.cs" />
     <Compile Include="Request\AlipayDataDataserviceOrderreportCreateRequest.cs" />
+    <Compile Include="Request\AlipayDataDataserviceMediaReportQueryRequest.cs" />
     <Compile Include="Request\AlipayDataDataserviceIcrowdUseRequest.cs" />
     <Compile Include="Request\AlipayDataDataserviceHolographicFactorQueryRequest.cs" />
     <Compile Include="Request\AlipayDataDataserviceHellobikeLogSyncRequest.cs" />
@@ -25174,6 +25333,8 @@
     <Compile Include="Request\AlipayCommerceMerchantcardOpenCreateRequest.cs" />
     <Compile Include="Request\AlipayCommerceMerchantcardOpenCheckRequest.cs" />
     <Compile Include="Request\AlipayCommerceMerchantcardExpireperiodModifyRequest.cs" />
+    <Compile Include="Request\AlipayCommerceMerchantcardDeductionorderUseRequest.cs" />
+    <Compile Include="Request\AlipayCommerceMerchantcardDeductionorderSetRequest.cs" />
     <Compile Include="Request\AlipayCommerceMerchantcardDeductionorderQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceMerchantcardDeductionorderBatchqueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceMerchantcardConfigModifyRequest.cs" />
@@ -25192,6 +25353,7 @@
     <Compile Include="Request\AlipayCommerceMedicalQrcodeGetRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalPaymentQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalPaymentPreconsultRequest.cs" />
+    <Compile Include="Request\AlipayCommerceMedicalPaymentOrderSyncRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalPaymentCreateandpayRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalPaymentCodeGetRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalOrderRefundQueryRequest.cs" />
@@ -25214,12 +25376,14 @@
     <Compile Include="Request\AlipayCommerceMedicalMedicineItempriceModifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalMedicineItemModifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalMedicineItemCreateRequest.cs" />
+    <Compile Include="Request\AlipayCommerceMedicalLargermodelWelcomecardQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalLargermodelSseQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalLargermodelSessionQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalLargermodelSessionCancelRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalLargermodelResourceUploadRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalLargermodelFeedbackSetRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalLargermodelDoctorcardQueryRequest.cs" />
+    <Compile Include="Request\AlipayCommerceMedicalLargermodelAgentwelcomecardQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalItemStockModifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalItemPriceModifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalIotfmUsersimpleinfoQueryRequest.cs" />
@@ -25421,6 +25585,7 @@
     <Compile Include="Request\AlipayCommerceGasTagSaveRequest.cs" />
     <Compile Include="Request\AlipayCommerceGasOrderSyncRequest.cs" />
     <Compile Include="Request\AlipayCommerceGasOrderDetailQueryRequest.cs" />
+    <Compile Include="Request\AlipayCommerceFundTransferDetectRequest.cs" />
     <Compile Include="Request\AlipayCommerceFundBindQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceFundBindModifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceFundBindCreateRequest.cs" />

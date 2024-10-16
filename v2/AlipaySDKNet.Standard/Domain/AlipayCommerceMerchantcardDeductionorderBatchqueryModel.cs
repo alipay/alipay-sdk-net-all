@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
+        /// 默认的订单类型范围：TIMES_CARD、PERIOD_PAY、AXF_MERCHANT_PERIOD_PAY、AXF_PERIOD_PAY_INDIRECT
+        /// </summary>
+        [XmlElement("card_type")]
+        public string CardType { get; set; }
+
+        /// <summary>
         /// 核销订单结束时间
         /// </summary>
         [XmlElement("deduction_end_date")]
@@ -28,7 +34,7 @@ namespace Aop.Api.Domain
         public string DeductionStartDate { get; set; }
 
         /// <summary>
-        /// 核销订单状态
+        /// （1）TIMES_CARD / PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY_INDIRECT：UNPAID、PAYMENT_SUCCESS、PAYMENT_FAILED、REFUND （2）AXF_MONEY_TIME_CARD：INIT、FROZEN、CANCELLED、REDEEMING、PAYMENT_FAILED、PAYMENT_SUCCESS、REFUND、PART_REFUND
         /// </summary>
         [XmlElement("deduction_status")]
         public string DeductionStatus { get; set; }

@@ -53,6 +53,12 @@ namespace Aop.Api.Response
         public List<string> PackageNames { get; set; }
 
         /// <summary>
+        /// false：非受限发布；true：受限发布。 受限发布：是为了能让首次发版的小程序在备案未完成的情况下，进行上架的一种折中的操作方式，小程序可以上架可扫码进行使用，但不可被搜索、限制访问人数（50人/每天）、限制公域（无法进行商品、服务、营促销）、限制上架后90天不完成备案自动下架。
+        /// </summary>
+        [XmlElement("registration_limit_release")]
+        public bool RegistrationLimitRelease { get; set; }
+
+        /// <summary>
         /// 域白名单
         /// </summary>
         [XmlArray("safe_domains")]

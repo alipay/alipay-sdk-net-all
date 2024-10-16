@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardDeductionorderQueryModel : AopObject
     {
         /// <summary>
+        /// 售卖订单id
+        /// </summary>
+        [XmlElement("card_id")]
+        public string CardId { get; set; }
+
+        /// <summary>
         /// 核销订单id
         /// </summary>
         [XmlElement("deduction_order_id")]

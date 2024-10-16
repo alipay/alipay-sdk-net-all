@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<string> AdCodeList { get; set; }
 
         /// <summary>
+        /// 预警信息发布单位
+        /// </summary>
+        [XmlElement("alarm_publish_unit")]
+        public string AlarmPublishUnit { get; set; }
+
+        /// <summary>
         /// 天气预警描述信息
         /// </summary>
         [XmlElement("content")]

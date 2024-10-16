@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 自建站留资字段类型
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
     }
 }

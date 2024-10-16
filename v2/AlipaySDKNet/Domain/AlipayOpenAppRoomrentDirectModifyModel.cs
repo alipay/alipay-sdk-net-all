@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_item_id")]
         public string OutItemId { get; set; }
+
+        /// <summary>
+        /// 目前支持库存区间1~100000
+        /// </summary>
+        [XmlElement("stock_num")]
+        public long StockNum { get; set; }
     }
 }

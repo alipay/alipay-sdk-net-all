@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ConfigKey { get; set; }
 
         /// <summary>
-        /// 配置value
+        /// (1)当config_key=MERCHANT_MSG_APP_ID时，config_value需要是商户的appId
         /// </summary>
         [XmlElement("config_value")]
         public string ConfigValue { get; set; }

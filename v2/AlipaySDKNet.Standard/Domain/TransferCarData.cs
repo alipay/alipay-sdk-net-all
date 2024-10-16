@@ -17,6 +17,18 @@ namespace Aop.Api.Domain
         public string Acid { get; set; }
 
         /// <summary>
+        /// 活动结束时间
+        /// </summary>
+        [XmlElement("activity_end_date")]
+        public string ActivityEndDate { get; set; }
+
+        /// <summary>
+        /// 活动开始时间
+        /// </summary>
+        [XmlElement("activity_start_date")]
+        public string ActivityStartDate { get; set; }
+
+        /// <summary>
         /// 电池状态, 1 原车买断 2 租用(BaaS) , 默认：0
         /// </summary>
         [XmlElement("attr_car_source_battery_owner_type")]
@@ -216,5 +228,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("transmission_type")]
         public string TransmissionType { get; set; }
+
+        /// <summary>
+        /// 商户车辆展示状态  0 下线态  1 上线态/待活动态度 2 活动中  3 活动结束
+        /// </summary>
+        [XmlElement("vehicle_display_status")]
+        public long VehicleDisplayStatus { get; set; }
     }
 }
