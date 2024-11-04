@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayUserDtbankActivitybillQueryModel : AopObject
     {
         /// <summary>
-        /// 银行活动id
+        /// 银行活动id/解决方案id
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }

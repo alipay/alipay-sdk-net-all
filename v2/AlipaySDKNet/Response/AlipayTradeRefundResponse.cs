@@ -59,6 +59,12 @@ namespace Aop.Api.Response
         public string OutTradeNo { get; set; }
 
         /// <summary>
+        /// 当用户使用芝麻信用先享后付时，且当前的操作为预授权撤销动作时，会返回该字段，代表当前撤销的预授权金额，单位元。
+        /// </summary>
+        [XmlElement("pre_auth_cancel_fee")]
+        public string PreAuthCancelFee { get; set; }
+
+        /// <summary>
         /// 本次退款金额中买家退款金额;单位：元。 该字段默认不返回；
         /// </summary>
         [XmlElement("present_refund_buyer_amount")]

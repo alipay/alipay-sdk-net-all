@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class SportsRecordInfo : AopObject
     {
         /// <summary>
+        /// 加速度传感器步频，一分钟多少步
+        /// </summary>
+        [XmlElement("accel_step_frequency")]
+        public string AccelStepFrequency { get; set; }
+
+        /// <summary>
         /// 消耗卡路里，实际为 decimal类型，有小数
         /// </summary>
         [XmlElement("calorie")]

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -26,6 +27,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("create_type")]
         public string CreateType { get; set; }
+
+        /// <summary>
+        /// 多评估方案信用服务风控配置。此字段为复杂模型。
+        /// </summary>
+        [XmlArray("evaluation_risk_configs")]
+        [XmlArrayItem("risk_api_config")]
+        public List<RiskApiConfig> EvaluationRiskConfigs { get; set; }
 
         /// <summary>
         /// 拓展字段

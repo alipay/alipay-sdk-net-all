@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string PeriodItemType { get; set; }
 
         /// <summary>
-        /// 周期计费类型为USER_DESIGN，即用户可指定固定日期开始扣费的场景下，商家可以控制用户下单可选择时间范围，如下单时用户只能选0-30天范围内的时间作为首期计费时间，则该参数传0
+        /// 周期计费类型为USER_DESIGN，即用户可指定固定日期开始扣费的场景下，商家可以控制用户下单可选择时间范围。 值的范围是[0,26]：如下单时用户只能选0-30天范围内的时间作为首期计费时间，则该参数传0。如下单时用户只能选15-30天范围内的时间作为首期计费时间，则该参数传15。
         /// </summary>
         [XmlElement("user_select_range_start")]
         public string UserSelectRangeStart { get; set; }

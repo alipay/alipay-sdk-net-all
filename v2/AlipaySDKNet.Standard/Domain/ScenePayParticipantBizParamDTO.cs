@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// 高速出行行业标识
+        /// </summary>
+        [XmlElement("city_traffic_industry_tag")]
+        public string CityTrafficIndustryTag { get; set; }
+
+        /// <summary>
         /// 外部卡号
         /// </summary>
         [XmlElement("out_card_no")]

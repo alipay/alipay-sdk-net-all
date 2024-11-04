@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// 间连周期卡开通状态
+        /// </summary>
+        [XmlElement("indirect_period_card_status")]
+        public string IndirectPeriodCardStatus { get; set; }
+
+        /// <summary>
         /// 最新的申请单
         /// </summary>
         [XmlArray("last_apply_orders")]

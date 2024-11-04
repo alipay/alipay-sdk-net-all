@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string ItemType { get; set; }
 
         /// <summary>
+        /// 商家优惠金额，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("merchant_discount_amount")]
+        public string MerchantDiscountAmount { get; set; }
+
+        /// <summary>
         /// 商户订单号
         /// </summary>
         [XmlElement("merchant_order_no")]
@@ -80,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pay_commission")]
         public string PayCommission { get; set; }
+
+        /// <summary>
+        /// 支付宝优惠金额，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("platform_discount_amount")]
+        public string PlatformDiscountAmount { get; set; }
 
         /// <summary>
         /// 预计实收金额，单位：元，精确到小数点后两位

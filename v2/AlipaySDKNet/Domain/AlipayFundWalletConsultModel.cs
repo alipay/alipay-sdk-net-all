@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 查询不同场景信息 WALLET_INFO：查用户钱包 WITHDRAW_INFO：原路退资金 DESTROY_INFO：销户资金查询
+        /// 查询不同场景信息
         /// </summary>
         [XmlElement("search_type")]
         public string SearchType { get; set; }

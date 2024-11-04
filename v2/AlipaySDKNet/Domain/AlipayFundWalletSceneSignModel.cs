@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayFundWalletSceneSignModel : AopObject
     {
         /// <summary>
-        /// 钱包业务的场景吗
+        /// 钱包业务的场景码
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }

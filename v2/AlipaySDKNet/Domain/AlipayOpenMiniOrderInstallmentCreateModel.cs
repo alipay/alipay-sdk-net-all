@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("installment_no")]
         public string InstallmentNo { get; set; }
+
+        /// <summary>
+        /// 分期号信息列表，多期合并主动支付场景传入
+        /// </summary>
+        [XmlArray("installment_no_info_list")]
+        [XmlArrayItem("installment_no_info_d_t_o")]
+        public List<InstallmentNoInfoDTO> InstallmentNoInfoList { get; set; }
 
         /// <summary>
         /// 分期数类型

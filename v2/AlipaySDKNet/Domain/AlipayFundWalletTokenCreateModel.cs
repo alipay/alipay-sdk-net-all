@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string AgreementPaySign { get; set; }
 
         /// <summary>
-        /// 1. 格式必须为： https://开头域名链接地址 或者 alipays://开头的支付宝小程序链接。 2. 需要保证传入的 returnUrl 链接能够有效访问
+        /// 结果页的跳转地址。 1. 跳转类型为dont_back_app，back_url就不做跳端，back_url格式必须为： https://开头域名链接地址或者 alipays://开头的支付宝小程序链接 2、跳转类型为back_app，back_url就做跳端，不做格式校验
         /// </summary>
         [XmlElement("back_url")]
         public string BackUrl { get; set; }
 
         /// <summary>
-        /// 根据跳转类型来区分用户开户完成之后是否回跳来源app
+        /// 用于开户完成之后的地址跳转（目前有跳端、不跳端） 1、类型为back_app，代表back_url按照跳端方式拼接 2、类型为dont_back_app，back_url就不跳端
         /// </summary>
         [XmlElement("back_url_type")]
         public string BackUrlType { get; set; }

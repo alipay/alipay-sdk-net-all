@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class ScenePayParticipantInfoDTO : AopObject
     {
         /// <summary>
+        /// 参与方mcc
+        /// </summary>
+        [XmlElement("mcc")]
+        public string Mcc { get; set; }
+
+        /// <summary>
+        /// 参与方名称
+        /// </summary>
+        [XmlElement("name")]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 参与者业务参数
         /// </summary>
         [XmlElement("participant_biz_param")]

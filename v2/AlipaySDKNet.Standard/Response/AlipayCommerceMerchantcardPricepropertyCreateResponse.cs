@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("card_property_id")]
         public string CardPropertyId { get; set; }
+
+        /// <summary>
+        /// 卡模版ID
+        /// </summary>
+        [XmlElement("card_template_id")]
+        public string CardTemplateId { get; set; }
     }
 }

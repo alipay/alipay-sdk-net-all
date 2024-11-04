@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("materials_template_code")]
         public string MaterialsTemplateCode { get; set; }
+
+        /// <summary>
+        /// 是否测试数据，默认不传为false
+        /// </summary>
+        [XmlElement("test_flag")]
+        public bool TestFlag { get; set; }
     }
 }

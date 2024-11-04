@@ -34,7 +34,13 @@ namespace Aop.Api.Domain
         public string Cate2NameStd { get; set; }
 
         /// <summary>
-        /// 置信度
+        /// 置信度(商标标准）
+        /// </summary>
+        [XmlElement("confidence")]
+        public string Confidence { get; set; }
+
+        /// <summary>
+        /// 置信度 当前字段已废弃(字段拼写错误，升级新增)
         /// </summary>
         [XmlElement("confindence")]
         public string Confindence { get; set; }

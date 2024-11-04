@@ -22,7 +22,13 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
-        /// 企业Id，企业入驻企业码时自动分配的用于唯一标识的编号
+        /// 企业统一社会信用代码，与enterprise_id二选一
+        /// </summary>
+        [XmlElement("enterprise_code")]
+        public string EnterpriseCode { get; set; }
+
+        /// <summary>
+        /// 企业码内部自动生成企业唯一标识，与enterprise_code二选一
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }

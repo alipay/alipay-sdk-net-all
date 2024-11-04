@@ -74,5 +74,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("use_scene")]
         public string UseScene { get; set; }
+
+        /// <summary>
+        /// 活动配置对应的券模板id信息
+        /// </summary>
+        [XmlElement("voucher_template_id")]
+        public string VoucherTemplateId { get; set; }
+
+        /// <summary>
+        /// 当前活动的白名单信息，逗号分隔
+        /// </summary>
+        [XmlElement("white_list_info")]
+        public string WhiteListInfo { get; set; }
     }
 }

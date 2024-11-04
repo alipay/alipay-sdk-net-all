@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string OutOrderRiskInfo { get; set; }
 
         /// <summary>
+        /// 官方插件下单回调透传拓展参数
+        /// </summary>
+        [XmlElement("submit_order_callback_ext_str")]
+        public string SubmitOrderCallbackExtStr { get; set; }
+
+        /// <summary>
         /// 支付单交易号，用于信用下单不成功转普通支付。
         /// </summary>
         [XmlElement("trade_no")]

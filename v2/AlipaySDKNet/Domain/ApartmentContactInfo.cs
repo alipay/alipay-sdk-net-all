@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ContactProfilePic { get; set; }
 
         /// <summary>
+        /// 商家IM支付宝端内的跳转链接
+        /// </summary>
+        [XmlElement("im_url")]
+        public string ImUrl { get; set; }
+
+        /// <summary>
         /// 联系人的电话号码
         /// </summary>
         [XmlElement("mobile")]

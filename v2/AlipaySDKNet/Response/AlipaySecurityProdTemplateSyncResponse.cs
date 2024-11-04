@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("tgt_template_code")]
         public string TgtTemplateCode { get; set; }
+
+        /// <summary>
+        /// 版本号
+        /// </summary>
+        [XmlElement("version_no")]
+        public string VersionNo { get; set; }
     }
 }

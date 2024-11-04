@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string BizName { get; set; }
 
         /// <summary>
+        /// 默认不填为在线模式，离线模式必传
+        /// </summary>
+        [XmlElement("boot_type")]
+        public string BootType { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

@@ -28,10 +28,16 @@ namespace Aop.Api.Domain
         public string Identity { get; set; }
 
         /// <summary>
-        /// 签约方类型 ALIPAY_USER_ID：表示是支付宝账号对应的支付宝唯一用户号；ALIPAY_LOGON_ID：表示是支付宝登录号；ALIPAY_OPEN_ID：表示是支付宝开放ID
+        /// 签约方类型 ALIPAY_USER_ID：表示是支付宝账号对应的支付宝唯一用户号；ALIPAY_LOGON_ID：表示是支付宝登录号；ALIPAY_OPEN_ID：表示是支付宝OPENID
         /// </summary>
         [XmlElement("identity_type")]
         public string IdentityType { get; set; }
+
+        /// <summary>
+        /// 当identity_type=ALIPAY_LOGON_ID时，填写此字段
+        /// </summary>
+        [XmlElement("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// 外部业务号 该参数需搭配identity、identityType一起使用

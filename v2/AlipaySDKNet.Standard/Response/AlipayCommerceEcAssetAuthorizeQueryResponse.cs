@@ -15,19 +15,19 @@ namespace Aop.Api.Response
         public string ApplyTime { get; set; }
 
         /// <summary>
-        /// 授信资产类型
+        /// 企业码定义资产类型
         /// </summary>
         [XmlElement("asset_type")]
         public string AssetType { get; set; }
 
         /// <summary>
-        /// 剩余可用额度，单位元，精确到分
+        /// 当前可用授信额度，单位元，精确到分
         /// </summary>
         [XmlElement("available_limit")]
         public string AvailableLimit { get; set; }
 
         /// <summary>
-        /// 授信额度，单位元
+        /// 银行审批完成后返回的授信总额度，单位元
         /// </summary>
         [XmlElement("capital_limit")]
         public string CapitalLimit { get; set; }

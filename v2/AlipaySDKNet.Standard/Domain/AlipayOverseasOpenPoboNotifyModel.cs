@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public TuitionISVPoboBuyerInfo BuyerInfo { get; set; }
 
         /// <summary>
+        /// 售后操作申请
+        /// </summary>
+        [XmlElement("manual_operation_apply")]
+        public IndrPoboManualOperationApplyRequestDTO ManualOperationApply { get; set; }
+
+        /// <summary>
         /// 留学vcc，代付订单号
         /// </summary>
         [XmlElement("order_id")]

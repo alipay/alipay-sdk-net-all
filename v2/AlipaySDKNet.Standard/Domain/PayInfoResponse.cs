@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("no_pay_close_time")]
         public string NoPayCloseTime { get; set; }
+
+        /// <summary>
+        /// 支付宝收单交易号
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
     }
 }

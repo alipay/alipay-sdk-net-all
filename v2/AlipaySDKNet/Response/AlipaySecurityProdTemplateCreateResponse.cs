@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("template_code")]
         public string TemplateCode { get; set; }
+
+        /// <summary>
+        /// 版本号
+        /// </summary>
+        [XmlElement("version_no")]
+        public string VersionNo { get; set; }
     }
 }

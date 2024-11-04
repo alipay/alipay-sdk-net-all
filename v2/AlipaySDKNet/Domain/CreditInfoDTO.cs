@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string AcceptanceJumpUrl { get; set; }
 
         /// <summary>
+        /// 芝麻免押周期扣款类型，使用芝麻免押产品时该字段必传
+        /// </summary>
+        [XmlElement("credit_deposit_period_pay_type")]
+        public string CreditDepositPeriodPayType { get; set; }
+
+        /// <summary>
+        /// 使用芝麻信用服务的产品码，不传默认使用芝麻先享服务
+        /// </summary>
+        [XmlElement("credit_product_code")]
+        public string CreditProductCode { get; set; }
+
+        /// <summary>
         /// 使用芝麻信用先享服务，是否不需要核身，默认false：表示需要当前订单需要核身
         /// </summary>
         [XmlElement("no_need_verify_identity")]

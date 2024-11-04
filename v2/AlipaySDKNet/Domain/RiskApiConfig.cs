@@ -18,6 +18,18 @@ namespace Aop.Api.Domain
         public List<CategoryRiskInfoApiConfig> CategoryRisks { get; set; }
 
         /// <summary>
+        /// 押金类型，用于查询接口，创建和修改不用传入
+        /// </summary>
+        [XmlElement("deposit_type")]
+        public string DepositType { get; set; }
+
+        /// <summary>
+        /// 多评估方案的唯一id，创建时不用传入，修改时可传入，传入时为修改此评估方案
+        /// </summary>
+        [XmlElement("evaluation_id")]
+        public string EvaluationId { get; set; }
+
+        /// <summary>
         /// 全局分段限额配置
         /// </summary>
         [XmlElement("quota_gradient_rule")]

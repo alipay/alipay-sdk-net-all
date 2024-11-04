@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class TransferCarUpdateData : AopObject
     {
         /// <summary>
+        /// 活动结束时间
+        /// </summary>
+        [XmlElement("activity_end_date")]
+        public string ActivityEndDate { get; set; }
+
+        /// <summary>
         /// 商户数据修改的时间，商户数据发生变化，该值必须更新，单位时间戳
         /// </summary>
         [XmlElement("isv_update_date")]
@@ -32,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public long Status { get; set; }
+
+        /// <summary>
+        /// 商户车辆展示状态 0 下线态 1 上线态/待活动态度 2 活动中 3 活动结束
+        /// </summary>
+        [XmlElement("vehicle_display_status")]
+        public long VehicleDisplayStatus { get; set; }
     }
 }

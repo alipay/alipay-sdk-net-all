@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardPricepropertyCreateModel : AopObject
     {
         /// <summary>
+        /// 周期卡计费信息，周期卡一客一价需要修改扣款方式可传该字段，非周期卡不传
+        /// </summary>
+        [XmlElement("card_property_cycle")]
+        public CardPropertyCycle CardPropertyCycle { get; set; }
+
+        /// <summary>
         /// 卡ID
         /// </summary>
         [XmlElement("card_template_id")]

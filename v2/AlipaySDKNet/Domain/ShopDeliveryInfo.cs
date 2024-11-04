@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string LogisticsCode { get; set; }
 
         /// <summary>
+        /// 发货的物流公司
+        /// </summary>
+        [XmlElement("logistics_name")]
+        public string LogisticsName { get; set; }
+
+        /// <summary>
         /// 物流的物料数量，单位 个
         /// </summary>
         [XmlElement("materials_num")]

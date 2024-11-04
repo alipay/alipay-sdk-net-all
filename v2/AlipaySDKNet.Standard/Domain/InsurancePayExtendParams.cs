@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class InsurancePayExtendParams : AopObject
     {
         /// <summary>
+        /// 用来表示调用接口的渠道方名称，目前为固定的枚举值
+        /// </summary>
+        [XmlElement("channel_code")]
+        public string ChannelCode { get; set; }
+
+        /// <summary>
         /// 医保卡Id；即医保电子凭证授权码
         /// </summary>
         [XmlElement("medical_card_id")]

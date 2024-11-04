@@ -9,10 +9,16 @@ namespace Aop.Api.Response
     public class AlipayOpenSpNordermaterialsapplyOrderQueryResponse : AopResponse
     {
         /// <summary>
-        /// 申请单的状态
+        /// 申请单的状态描述
         /// </summary>
         [XmlElement("apply_status")]
         public string ApplyStatus { get; set; }
+
+        /// <summary>
+        /// 状态编码
+        /// </summary>
+        [XmlElement("apply_status_code")]
+        public string ApplyStatusCode { get; set; }
 
         /// <summary>
         /// 该申请单下物料数量 ，单位个

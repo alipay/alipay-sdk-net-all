@@ -112,6 +112,12 @@ namespace Aop.Api.Domain
         public string SettleShopName { get; set; }
 
         /// <summary>
+        /// 第三方结算金额，单位：元。精确到小数点后两位 产生场景，例如担保服务提前支取，造成核销时会有提前结算金额
+        /// </summary>
+        [XmlElement("third_settlement_amount")]
+        public string ThirdSettlementAmount { get; set; }
+
+        /// <summary>
         /// 支付宝交易号
         /// </summary>
         [XmlElement("trade_no")]

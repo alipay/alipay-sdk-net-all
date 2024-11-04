@@ -37,7 +37,7 @@ namespace Aop.Api.Domain
         public List<QuotaLimitModelDTO> QuotaLimitList { get; set; }
 
         /// <summary>
-        /// 规则有效期
+        /// 规则有效期 单位：年月日 时分秒
         /// </summary>
         [XmlElement("validity_period")]
         public string ValidityPeriod { get; set; }

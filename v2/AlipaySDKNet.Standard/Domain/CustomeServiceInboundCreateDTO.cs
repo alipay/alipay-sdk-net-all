@@ -28,6 +28,24 @@ namespace Aop.Api.Domain
         public string ChannelType { get; set; }
 
         /// <summary>
+        /// 事件动作
+        /// </summary>
+        [XmlElement("event_action")]
+        public string EventAction { get; set; }
+
+        /// <summary>
+        /// 事件内容所有的字段
+        /// </summary>
+        [XmlElement("event_content")]
+        public string EventContent { get; set; }
+
+        /// <summary>
+        /// 事件的触发时间
+        /// </summary>
+        [XmlElement("event_time")]
+        public string EventTime { get; set; }
+
+        /// <summary>
         /// 转接前的坐席id
         /// </summary>
         [XmlElement("origin_seat_id")]

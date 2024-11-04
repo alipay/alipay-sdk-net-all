@@ -204,6 +204,12 @@ namespace Aop.Api.Response
         public string PointAmount { get; set; }
 
         /// <summary>
+        /// 当用户使用芝麻信用先享后付时，会返回该字段，代表整笔交易的原始待履约金额，单位元。
+        /// </summary>
+        [XmlElement("pre_auth_pay_amount")]
+        public string PreAuthPayAmount { get; set; }
+
+        /// <summary>
         /// 实收金额
         /// </summary>
         [XmlElement("receipt_amount")]
@@ -244,6 +250,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("store_name")]
         public string StoreName { get; set; }
+
+        /// <summary>
+        /// 碰一下支付信息
+        /// </summary>
+        [XmlElement("tap_pay_info")]
+        public TapPayInfo TapPayInfo { get; set; }
 
         /// <summary>
         /// 交易金额
