@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceEducateRosterIdentityQueryResponse : AopResponse
     {
         /// <summary>
-        /// 人员所属的部门、学院或班级
+        /// 人员所属的部门、学院或班级名称
         /// </summary>
         [XmlElement("department_name")]
         public string DepartmentName { get; set; }

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string DeductionEndDate { get; set; }
 
         /// <summary>
+        /// 核销订单类型
+        /// </summary>
+        [XmlElement("deduction_order_type")]
+        public string DeductionOrderType { get; set; }
+
+        /// <summary>
         /// 核销订单开始时间
         /// </summary>
         [XmlElement("deduction_start_date")]

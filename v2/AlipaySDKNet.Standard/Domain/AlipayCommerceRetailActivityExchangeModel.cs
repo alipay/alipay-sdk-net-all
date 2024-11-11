@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string RetailActivityId { get; set; }
 
         /// <summary>
+        /// 转账备注
+        /// </summary>
+        [XmlElement("transfer_info")]
+        public string TransferInfo { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

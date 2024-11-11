@@ -118,6 +118,12 @@ namespace Aop.Api.Domain
         public string SettleType { get; set; }
 
         /// <summary>
+        /// 次卡信息
+        /// </summary>
+        [XmlElement("times_card_info")]
+        public TimesCardInfo TimesCardInfo { get; set; }
+
+        /// <summary>
         /// 使用信息
         /// </summary>
         [XmlElement("use_info")]

@@ -64,5 +64,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 先享次卡开通状态
+        /// </summary>
+        [XmlElement("xian_xiang_times_card_status")]
+        public string XianXiangTimesCardStatus { get; set; }
     }
 }

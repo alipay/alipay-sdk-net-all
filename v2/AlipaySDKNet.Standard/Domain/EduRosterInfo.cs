@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -28,10 +29,17 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
-        /// 部门信息
+        /// 部门信息 当前字段已废弃(该字段是否数组类型定义错误)
         /// </summary>
         [XmlElement("department_info")]
         public EduDepartmentNode DepartmentInfo { get; set; }
+
+        /// <summary>
+        /// 部门信息
+        /// </summary>
+        [XmlArray("department_info_list")]
+        [XmlArrayItem("edu_department_node")]
+        public List<EduDepartmentNode> DepartmentInfoList { get; set; }
 
         /// <summary>
         /// 学号或工号

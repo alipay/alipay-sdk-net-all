@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string MobilePhone { get; set; }
 
         /// <summary>
+        /// 授权查询来源唯一标识
+        /// </summary>
+        [XmlElement("source_tag")]
+        public string SourceTag { get; set; }
+
+        /// <summary>
         /// 用户开票邮箱
         /// </summary>
         [XmlElement("user_email")]

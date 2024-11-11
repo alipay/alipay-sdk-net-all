@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DeductionPlanInfo : AopObject
     {
         /// <summary>
+        /// 凭证次序号
+        /// </summary>
+        [XmlElement("certificate_serial_no")]
+        public string CertificateSerialNo { get; set; }
+
+        /// <summary>
         /// 扣款金额，单位分
         /// </summary>
         [XmlElement("deduction_amount")]

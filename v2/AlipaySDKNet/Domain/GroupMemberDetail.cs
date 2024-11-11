@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string InviteOpenId { get; set; }
 
         /// <summary>
-        /// 入群方式
+        /// 入群渠道
         /// </summary>
         [XmlElement("join_scene")]
         public string JoinScene { get; set; }

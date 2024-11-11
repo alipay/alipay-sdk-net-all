@@ -40,7 +40,19 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 外部操作幂等ID（接入方接口调用幂等控制ID）
+        /// 批量发放时，可填写该字段
+        /// </summary>
+        [XmlElement("issue_desc")]
+        public string IssueDesc { get; set; }
+
+        /// <summary>
+        /// 批量发放时，可填写该字段作为发放名称，如果未填写取outer_source_id为默认值
+        /// </summary>
+        [XmlElement("issue_name")]
+        public string IssueName { get; set; }
+
+        /// <summary>
+        /// 外部操作幂等ID，标识创建额度的唯一性，防止重复创建
         /// </summary>
         [XmlElement("outer_source_id")]
         public string OuterSourceId { get; set; }
@@ -94,7 +106,7 @@ namespace Aop.Api.Domain
         public string TargetId { get; set; }
 
         /// <summary>
-        /// 额度维度 枚举值： EXPENSE_TYPE（费用类型维度）， RULE_GROUP_AGGREGATION（规则聚合维度）， INSTITUTION（制度维度）
+        /// 额度维度 枚举值： INSTITUTION（制度维度）， EXPENSE_TYPE（费用类型维度）
         /// </summary>
         [XmlElement("target_type")]
         public string TargetType { get; set; }

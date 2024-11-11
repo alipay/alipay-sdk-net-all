@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BizId { get; set; }
 
         /// <summary>
+        /// 弹性操作类型
+        /// </summary>
+        [XmlElement("elastic_type")]
+        public string ElasticType { get; set; }
+
+        /// <summary>
         /// 服务商pid
         /// </summary>
         [XmlElement("isv_pid")]

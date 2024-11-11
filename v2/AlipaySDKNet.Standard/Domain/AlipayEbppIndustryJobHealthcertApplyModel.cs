@@ -20,5 +20,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
+
+        /// <summary>
+        /// 条件必填，授权失败回跳地址 回跳方式=TO_MINI_PROGRAM时必填，可以和certify_return_url一致； 回跳方式=BACK_MINI_PROGRAM时该入参无效
+        /// </summary>
+        [XmlElement("fail_return_url")]
+        public string FailReturnUrl { get; set; }
+
+        /// <summary>
+        /// 回跳方式：  TO_MINI_PROGRAM，打开新的应用模式，支持小程序和三方APP调用授权页  BACK_MINI_PROGRAM，返回原小程序模式，使用该模式时授权后回到原有页面 若参数为空，默认为BACK_MINI_PROGRAM
+        /// </summary>
+        [XmlElement("jump_type")]
+        public string JumpType { get; set; }
     }
 }

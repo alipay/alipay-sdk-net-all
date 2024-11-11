@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMsaasMediarecogMmtcaftscvTransactionInitializeModel : AopObject
     {
         /// <summary>
-        /// 货柜类型，static为静态柜，dynamic为动态柜
+        /// 货柜类型，STATIC-静态柜，DYNAMIC-动态重力柜，PURE_DYNAMIC-动态视觉货柜
         /// </summary>
         [XmlElement("device_identify_type")]
         public string DeviceIdentifyType { get; set; }
@@ -36,10 +36,22 @@ namespace Aop.Api.Domain
         public string ReqId { get; set; }
 
         /// <summary>
-        /// 标识是什么场景下的视觉识别请求
+        /// 标识是什么场景下的视觉识别请求，visionPay,putInOrder,queryAll
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }
+
+        /// <summary>
+        /// 二级商户ID
+        /// </summary>
+        [XmlElement("sub_merchant_id")]
+        public string SubMerchantId { get; set; }
+
+        /// <summary>
+        /// 二级商户名称
+        /// </summary>
+        [XmlElement("sub_merchant_name")]
+        public string SubMerchantName { get; set; }
 
         /// <summary>
         /// 售卖设备编号

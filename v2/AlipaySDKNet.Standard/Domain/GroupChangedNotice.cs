@@ -17,10 +17,22 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// 群ID
+        /// 群ID（冗余字段，可忽略，参考group_instance_id）
         /// </summary>
         [XmlElement("group_id")]
         public string GroupId { get; set; }
+
+        /// <summary>
+        /// 群id
+        /// </summary>
+        [XmlElement("group_instance_id")]
+        public string GroupInstanceId { get; set; }
+
+        /// <summary>
+        /// 群组id
+        /// </summary>
+        [XmlElement("group_oid")]
+        public string GroupOid { get; set; }
 
         /// <summary>
         /// 当是成员入群或退群时有值。表示成员变更数量

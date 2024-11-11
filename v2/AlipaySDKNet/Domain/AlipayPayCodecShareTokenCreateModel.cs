@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string StartDate { get; set; }
 
         /// <summary>
-        /// 1000*3600*24（一天）,默认30D，最大值不超过180D
+        /// 3600*24（一天）,默认30D，最大值不超过180D
         /// </summary>
         [XmlElement("timeout")]
         public long Timeout { get; set; }

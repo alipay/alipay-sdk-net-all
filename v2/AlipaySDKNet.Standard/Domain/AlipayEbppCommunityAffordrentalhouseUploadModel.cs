@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string CityCode { get; set; }
 
         /// <summary>
-        /// 房源详情链接,可以使用h5链接或者小程序链接
+        /// 房源详情链接,可以使用h5链接或者支付宝小程序链接
         /// </summary>
         [XmlElement("detail_url")]
         public string DetailUrl { get; set; }
@@ -84,7 +84,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 电话号码
+        /// 房源联系电话号码，支持11位数字手机号码，和座机号码
         /// </summary>
         [XmlElement("tel")]
         public string Tel { get; set; }

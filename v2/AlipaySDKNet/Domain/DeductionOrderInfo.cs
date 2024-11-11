@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string CertificateSerial { get; set; }
 
         /// <summary>
+        /// 违约金信息
+        /// </summary>
+        [XmlElement("damages_info")]
+        public DamagesInfo DamagesInfo { get; set; }
+
+        /// <summary>
         /// 扣款金额，单位：分
         /// </summary>
         [XmlElement("deduction_amount")]

@@ -146,7 +146,7 @@ namespace Aop.Api.Request
         public Nullable<bool> LongTerm { get; set; }
 
         /// <summary>
-        /// <a href="https://opendocs.alipay.com/common/02khjv">商家经营类目</a> 中的“经营类目编码”
+        /// <a href="https://opendocs.alipay.com/common/02khjv">商家经营类目2.0</a> 中的“经营类目编码”
         /// </summary>
         public string MccCode { get; set; }
 

@@ -65,6 +65,18 @@ namespace Aop.Api.Domain
         public string CreateDate { get; set; }
 
         /// <summary>
+        /// 咨询退卡违约金信息
+        /// </summary>
+        [XmlElement("damages_consult")]
+        public DamagesConsultInfo DamagesConsult { get; set; }
+
+        /// <summary>
+        /// 在途违约金信息
+        /// </summary>
+        [XmlElement("damages_info")]
+        public DamagesInfo DamagesInfo { get; set; }
+
+        /// <summary>
         /// 扣款计划列表
         /// </summary>
         [XmlArray("deduction_plan_list")]
@@ -88,6 +100,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("discount_refund_cash")]
         public long DiscountRefundCash { get; set; }
+
+        /// <summary>
+        /// 资金模式
+        /// </summary>
+        [XmlElement("funding_model")]
+        public string FundingModel { get; set; }
 
         /// <summary>
         /// 订单有效期开始时间

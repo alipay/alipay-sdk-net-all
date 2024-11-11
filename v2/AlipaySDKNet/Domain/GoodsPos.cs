@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string GoodsId { get; set; }
 
         /// <summary>
-        /// 商品重力位置信息
+        /// 商品重力位置信息，厘米
         /// </summary>
         [XmlElement("pos")]
         public long Pos { get; set; }

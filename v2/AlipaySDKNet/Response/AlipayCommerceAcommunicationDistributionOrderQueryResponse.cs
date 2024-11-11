@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -15,6 +17,13 @@ namespace Aop.Api.Response
         public string AlipayOrderId { get; set; }
 
         /// <summary>
+        /// 该订单已产生的业务消息
+        /// </summary>
+        [XmlArray("biz_order_message_list")]
+        [XmlArrayItem("biz_order_message")]
+        public List<BizOrderMessage> BizOrderMessageList { get; set; }
+
+        /// <summary>
         /// 机构订单号
         /// </summary>
         [XmlElement("inst_order_id")]
@@ -25,5 +34,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }
+
+        /// <summary>
+        /// 订单成功
+        /// </summary>
+        [XmlElement("order_status_code")]
+        public string OrderStatusCode { get; set; }
     }
 }

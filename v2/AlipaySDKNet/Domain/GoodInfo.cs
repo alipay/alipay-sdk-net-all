@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 商品价格
+        /// 商品价格（单位元）
         /// </summary>
         [XmlElement("goods_price")]
         public string GoodsPrice { get; set; }

@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<string> CardTypes { get; set; }
 
         /// <summary>
+        /// 商户二级类目code
+        /// </summary>
+        [XmlElement("mcc_code")]
+        public string MccCode { get; set; }
+
+        /// <summary>
         /// 是否需要代运营授权
         /// </summary>
         [XmlElement("need_auth")]
