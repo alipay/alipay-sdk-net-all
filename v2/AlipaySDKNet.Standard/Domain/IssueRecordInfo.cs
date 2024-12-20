@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class IssueRecordInfo : AopObject
     {
         /// <summary>
+        /// 发放额度对应的币种
+        /// </summary>
+        [XmlElement("currency")]
+        public string Currency { get; set; }
+
+        /// <summary>
         /// 发放金额，支持两位小数，单位为（元）
         /// </summary>
         [XmlElement("issue_quota")]

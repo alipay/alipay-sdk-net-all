@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string OperatorUid { get; set; }
 
         /// <summary>
+        /// 用户手机号码，该绑定方式需联系业务配置，仅针对部分场景。
+        /// </summary>
+        [XmlElement("phone_num")]
+        public string PhoneNum { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

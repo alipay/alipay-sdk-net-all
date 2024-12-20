@@ -71,6 +71,12 @@ namespace Aop.Api.Domain
         public string City { get; set; }
 
         /// <summary>
+        /// 有码组序列为 Y,反之则为 N
+        /// </summary>
+        [XmlElement("code_group_flag")]
+        public string CodeGroupFlag { get; set; }
+
+        /// <summary>
         /// 合单批次号
         /// </summary>
         [XmlElement("combination_batch_no")]
@@ -232,6 +238,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("receiver_name")]
         public string ReceiverName { get; set; }
+
+        /// <summary>
+        /// 关联的上游业务单号
+        /// </summary>
+        [XmlElement("related_out_biz_no")]
+        public string RelatedOutBizNo { get; set; }
 
         /// <summary>
         /// 物料供应商PID，和调用方的供应商PID一致

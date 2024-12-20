@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BizCode { get; set; }
 
         /// <summary>
-        /// 批量代发业务场景。如： GLOBAL: 全球代发. 除CNY的多币种代发或人民币跨境代发。 LOCAL：中国境内纯人民币代发。 MESSAGE_BATCH_PAY：接口报文代发。
+        /// 批量代发业务场景。如： GLOBAL: 全球代发. 除CNY的多币种代发或人民币跨境代发。 LOCAL：中国境内纯人民币代发。 MESSAGE_BATCH_PAY：接口报文代发。 MESSAGE_SATF_BATCH_PAY：专户批量代发的报文代发。
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }

@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class MerchantCardTemplate : AopObject
     {
         /// <summary>
+        /// 卡营销优惠信息
+        /// </summary>
+        [XmlArray("card_promo_list")]
+        [XmlArrayItem("card_promo_info")]
+        public List<CardPromoInfo> CardPromoList { get; set; }
+
+        /// <summary>
         /// 卡归属的小程序appid
         /// </summary>
         [XmlElement("card_template_app_id")]

@@ -197,6 +197,20 @@ namespace Aop.Api.Domain
         public List<ShopRatingInfo> ShopRatingList { get; set; }
 
         /// <summary>
+        /// 企业销售金额TOP10商品链接名称
+        /// </summary>
+        [XmlArray("standard_amt_top_10_products")]
+        [XmlArrayItem("product_detail_info")]
+        public List<ProductDetailInfo> StandardAmtTop10Products { get; set; }
+
+        /// <summary>
+        /// 企业销量TOP10商品链接名称
+        /// </summary>
+        [XmlArray("standard_volume_top_10_products")]
+        [XmlArrayItem("product_detail_info")]
+        public List<ProductDetailInfo> StandardVolumeTop10Products { get; set; }
+
+        /// <summary>
         /// 统一社会信用代码
         /// </summary>
         [XmlElement("uscc")]

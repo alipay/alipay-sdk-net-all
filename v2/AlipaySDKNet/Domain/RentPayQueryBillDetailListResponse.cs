@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AccAmount { get; set; }
 
         /// <summary>
-        /// 公积金付费状态
+        /// 待创单
         /// </summary>
         [XmlElement("acc_pay_status")]
         public string AccPayStatus { get; set; }
@@ -80,6 +80,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payment_date")]
         public string PaymentDate { get; set; }
+
+        /// <summary>
+        /// 收款银行全称
+        /// </summary>
+        [XmlElement("rent_bank_name")]
+        public string RentBankName { get; set; }
+
+        /// <summary>
+        /// 收款账户号码
+        /// </summary>
+        [XmlElement("rent_card_num")]
+        public string RentCardNum { get; set; }
 
         /// <summary>
         /// 租房直付，非公积金支付金额，单位：元

@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string DistrictName { get; set; }
 
         /// <summary>
+        /// 收银员是否打卡
+        /// </summary>
+        [XmlElement("do_check_in")]
+        public bool DoCheckIn { get; set; }
+
+        /// <summary>
         /// nfc是否动销
         /// </summary>
         [XmlElement("has_nfc_trade")]

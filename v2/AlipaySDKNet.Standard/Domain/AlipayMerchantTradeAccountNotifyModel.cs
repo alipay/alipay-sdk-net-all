@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string MerchantNo { get; set; }
 
         /// <summary>
-        /// 外部业务号，每笔动账确保唯一，否则可能导致消息重复发送
+        /// 外部业务号，与收款详情中出参的order_no保持一致，每笔动账确保唯一，否则可能导致消息重复发送
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public List<PayType> PayerBankTypeList { get; set; }
 
         /// <summary>
-        /// 付款用户在当前商家的当天消费金额
+        /// 付款用户在当前商家的当天消费金额，交易成功金额的总和
         /// </summary>
         [XmlElement("payer_total_amount")]
         public string PayerTotalAmount { get; set; }
@@ -78,7 +78,13 @@ namespace Aop.Api.Domain
         public string ShopName { get; set; }
 
         /// <summary>
-        /// 如果是支付宝，为smid的值 如果是微信 ，为sub_mch_id的值
+        /// 本交易是支付宝直连交易还是支付宝间连交易
+        /// </summary>
+        [XmlElement("sub_trade_channel")]
+        public string SubTradeChannel { get; set; }
+
+        /// <summary>
+        /// 如果是微信交易 ，为sub_mch_id的值 如果是间连支付宝交易，为smid的值 如果是直连支付宝交易，为交易pid的值
         /// </summary>
         [XmlElement("third_party_merchant_no")]
         public string ThirdPartyMerchantNo { get; set; }
@@ -90,7 +96,7 @@ namespace Aop.Api.Domain
         public string ThirdPartyTradeNo { get; set; }
 
         /// <summary>
-        /// 当日收款总金额
+        /// 当日的交易成功的金额总和
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

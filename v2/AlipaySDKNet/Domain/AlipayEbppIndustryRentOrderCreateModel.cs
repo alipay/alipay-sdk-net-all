@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustryRentOrderCreateModel : AopObject
     {
         /// <summary>
+        /// 中心编号
+        /// </summary>
+        [XmlElement("accfund_center_no")]
+        public string AccfundCenterNo { get; set; }
+
+        /// <summary>
         /// 租房账单明细详情
         /// </summary>
         [XmlElement("bill_detail")]
@@ -62,5 +68,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("redirect_url")]
         public string RedirectUrl { get; set; }
+
+        /// <summary>
+        /// 租房直付银行信息
+        /// </summary>
+        [XmlElement("rent_bank_info")]
+        public RentPayBankInfo RentBankInfo { get; set; }
+
+        /// <summary>
+        /// 用户租房合同信息
+        /// </summary>
+        [XmlElement("rent_contract_info")]
+        public RentPayContractInfo RentContractInfo { get; set; }
     }
 }

@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BizType { get; set; }
 
         /// <summary>
+        /// 优惠群活动顶部运营位内容
+        /// </summary>
+        [XmlElement("coupon_content")]
+        public CouponActivityContentVO CouponContent { get; set; }
+
+        /// <summary>
         /// 自定义活动顶部运营位内容
         /// </summary>
         [XmlElement("custom_content")]
@@ -48,7 +54,7 @@ namespace Aop.Api.Domain
         public List<string> GroupIds { get; set; }
 
         /// <summary>
-        /// 展示优先级 1-5, 数字越大优先级越高
+        /// 展示优先级 1-100, 数字越大优先级越高
         /// </summary>
         [XmlElement("priority")]
         public string Priority { get; set; }

@@ -59,6 +59,12 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
+        /// 支心租一口价优惠金额，单位分
+        /// </summary>
+        [XmlElement("one_price_discount")]
+        public long OnePriceDiscount { get; set; }
+
+        /// <summary>
         /// 服务商当前车型、门店报价的id，用于从支付宝租车页面跳转到服务商页面时，准确定位车型、门店及价格数据
         /// </summary>
         [XmlElement("quote_id")]

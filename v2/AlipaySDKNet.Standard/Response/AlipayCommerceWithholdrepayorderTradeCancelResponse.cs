@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public string RefundSettlementId { get; set; }
 
         /// <summary>
-        /// 是否需要重试
+        /// 是否需要重试，Y为需要，N为不需要
         /// </summary>
         [XmlElement("retry_flag")]
         public string RetryFlag { get; set; }

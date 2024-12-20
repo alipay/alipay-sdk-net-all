@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ParentPhone { get; set; }
 
         /// <summary>
+        /// 查询资产，请求按照枚举上送
+        /// </summary>
+        [XmlElement("query_asset")]
+        public string QueryAsset { get; set; }
+
+        /// <summary>
         /// 学校外标
         /// </summary>
         [XmlElement("school_std_code")]

@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sesame_promo_amount")]
         public string SesamePromoAmount { get; set; }
+
+        /// <summary>
+        /// 商家满减券优惠金额
+        /// </summary>
+        [XmlElement("voucher_promo_amount")]
+        public string VoucherPromoAmount { get; set; }
     }
 }

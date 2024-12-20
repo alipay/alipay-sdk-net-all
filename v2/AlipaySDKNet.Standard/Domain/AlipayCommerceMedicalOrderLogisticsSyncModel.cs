@@ -28,10 +28,22 @@ namespace Aop.Api.Domain
         public string CourierPhone { get; set; }
 
         /// <summary>
+        /// 骑手当前的纬度，使用的是高德坐标系
+        /// </summary>
+        [XmlElement("latitude")]
+        public string Latitude { get; set; }
+
+        /// <summary>
         /// 骑手配送状态
         /// </summary>
         [XmlElement("logistics_status")]
         public string LogisticsStatus { get; set; }
+
+        /// <summary>
+        /// 骑手当前的经度，使用的是高德坐标系
+        /// </summary>
+        [XmlElement("longitude")]
+        public string Longitude { get; set; }
 
         /// <summary>
         /// 订单号
@@ -50,5 +62,23 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("provider_phone")]
         public string ProviderPhone { get; set; }
+
+        /// <summary>
+        /// 配送取消/异常的原因
+        /// </summary>
+        [XmlElement("reason")]
+        public string Reason { get; set; }
+
+        /// <summary>
+        /// 配送取消/异常的原因code 9999 :其他原因（ 商家传入自定义）
+        /// </summary>
+        [XmlElement("reason_code")]
+        public string ReasonCode { get; set; }
+
+        /// <summary>
+        /// 当前时间，格式：时间戳
+        /// </summary>
+        [XmlElement("utc")]
+        public string Utc { get; set; }
     }
 }

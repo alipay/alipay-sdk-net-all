@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public List<ItemSkuAttrVO> SkuAttrs { get; set; }
 
         /// <summary>
+        /// sku类型
+        /// </summary>
+        [XmlElement("sku_type")]
+        public string SkuType { get; set; }
+
+        /// <summary>
         /// sku库存，目前支持库存区间为0-99999
         /// </summary>
         [XmlElement("stock_num")]

@@ -17,19 +17,19 @@ namespace Aop.Api.Domain
         public string CityCode { get; set; }
 
         /// <summary>
-        /// 查询数据起始日期
+        /// 数据起始日期
         /// </summary>
         [XmlElement("date_from")]
         public string DateFrom { get; set; }
 
         /// <summary>
-        /// 查询数据截止日期
+        /// 数据截止日期，请晚于起始日期
         /// </summary>
         [XmlElement("date_to")]
         public string DateTo { get; set; }
 
         /// <summary>
-        /// H3坐标网格编码（编码为8级，六边形面积约为0.7373km2）
+        /// 1. H3坐标网格编码（编码为8级，六边形面积约为0.7373km2） 2. 若为预测场站价格时，请传入场站编码
         /// </summary>
         [XmlArray("index_list")]
         [XmlArrayItem("string")]

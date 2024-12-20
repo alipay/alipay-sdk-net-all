@@ -24,13 +24,13 @@ namespace Aop.Api.Domain
         public DeviceExtParams ExtParams { get; set; }
 
         /// <summary>
-        /// 设备档案管理场景 IOT_DEVICE_RECORDS_G3_INDIRECT(间连三绑定) IOT_DEVICE_RECORDS_G3_DIRECT(直连三绑定) IOT_DEVICE_RECORDS_DELETE(解绑) IOT_DEVICE_RECORDS_QUERY（绑定查询） IOT_DEVICE_RECORDS_G2(可用绑定)
+        /// 设备档案管理场景 IOT_DEVICE_RECORDS_G3_INDIRECT(间连三绑定) IOT_DEVICE_RECORDS_G3_DIRECT(直连三绑定) IOT_DEVICE_RECORDS_DELETE(解绑) IOT_DEVICE_RECORDS_QUERY（绑定查询） IOT_DEVICE_RECORDS_G2(可用绑定) IOT_DEVICE_RECORDS_UPDATE_EXT_PARAMS(更新拓展信息)
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// CREATE（间连三绑定、可用绑定、直连三绑定时传） DEFAULT（解绑、绑定查询时传） G2TOG3_UPDATE（可用绑定升级为间联三绑定时传）
+        /// CREATE（间连三绑定、可用绑定、直连三绑定时传） DEFAULT（解绑、绑定查询、更新拓展信息时传） G2TOG3_UPDATE（可用绑定升级为间联三绑定时传）
         /// </summary>
         [XmlElement("scene_params")]
         public string SceneParams { get; set; }

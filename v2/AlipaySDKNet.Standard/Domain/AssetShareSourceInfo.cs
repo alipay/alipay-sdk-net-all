@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string ShareMode { get; set; }
 
         /// <summary>
-        /// 资产共享来源id列表，与share_mode配合设置
+        /// 资产共享来源id列表，与share_mode配合设置，如果share_mode为INSTITUTION，该值则填写制度id列表
         /// </summary>
         [XmlArray("source_id_list")]
         [XmlArrayItem("string")]

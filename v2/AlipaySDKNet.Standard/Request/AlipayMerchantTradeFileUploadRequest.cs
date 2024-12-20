@@ -11,7 +11,7 @@ namespace Aop.Api.Request
     public class AlipayMerchantTradeFileUploadRequest : IAopUploadRequest<AlipayMerchantTradeFileUploadResponse>
     {
         /// <summary>
-        /// 数据聚合维度，用于指定当前上传数据的统计维度。 ● merchant：服务商侧商户（商编）维度 ● cashier：收银员维度
+        /// 数据聚合维度，用于指定当前上传数据的统计维度。 merchant：服务商侧商户（商编）维度 cashier：收银员维度
         /// </summary>
         public string DataDim { get; set; }
 
@@ -21,7 +21,7 @@ namespace Aop.Api.Request
         public FileItem FileContent { get; set; }
 
         /// <summary>
-        /// 文件名(用于幂等)，格式规范见说明
+        /// 文件名(用于幂等)
         /// </summary>
         public string FileName { get; set; }
 

@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public string ReasonCode { get; set; }
 
         /// <summary>
+        /// 原因描述
+        /// </summary>
+        [XmlElement("reason_desc")]
+        public string ReasonDesc { get; set; }
+
+        /// <summary>
+        /// 二级原因编码
+        /// </summary>
+        [XmlElement("reason_sub_code")]
+        public string ReasonSubCode { get; set; }
+
+        /// <summary>
         /// 拉取任务时获得的任务号。
         /// </summary>
         [XmlElement("task_no")]

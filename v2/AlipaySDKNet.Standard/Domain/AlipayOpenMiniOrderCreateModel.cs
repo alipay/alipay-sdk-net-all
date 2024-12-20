@@ -137,6 +137,12 @@ namespace Aop.Api.Domain
         public string ServiceProviderModel { get; set; }
 
         /// <summary>
+        /// 订单服务类型
+        /// </summary>
+        [XmlElement("service_type")]
+        public string ServiceType { get; set; }
+
+        /// <summary>
         /// 门店信息
         /// </summary>
         [XmlElement("shop_info")]
@@ -172,5 +178,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("title")]
         public string Title { get; set; }
+
+        /// <summary>
+        /// 收单appid；商家异收单主体情况下，当前功能不支持（当前默认下单主体为收单主体）；需要商家回传收单主体，实现真实交易流程；
+        /// </summary>
+        [XmlElement("trade_app_id")]
+        public string TradeAppId { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
-        /// 次卡的违约金场景里，代表商户期望收到的违约金，注意不要大于售卖订单详情接口返回的咨询结果，单位：分
+        /// 次卡的违约金场景里，代表商户期望收到的违约金，注意不要大于售卖订单详情接口的返回值card_order_info.damages_consult.damages_cash，单位：分
         /// </summary>
         [XmlElement("damages_cash")]
         public long DamagesCash { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 在次卡的违约金场景，传入订单剩余金额用于做幂等，单位：分
+        /// 在次卡的违约金场景，需要传入订单剩余金额用于做幂等，字段来源是售卖订单详情接口的返回值card_order_info.damages_consult.refund_cash，单位：分
         /// </summary>
         [XmlElement("total_cash")]
         public long TotalCash { get; set; }

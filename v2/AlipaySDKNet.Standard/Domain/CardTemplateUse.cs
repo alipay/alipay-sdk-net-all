@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public string ReservationUrl { get; set; }
 
         /// <summary>
+        /// 周期卡是否全部门店
+        /// </summary>
+        [XmlElement("show_shop")]
+        public string ShowShop { get; set; }
+
+        /// <summary>
         /// 可用次数或期数
         /// </summary>
         [XmlElement("usable_count")]

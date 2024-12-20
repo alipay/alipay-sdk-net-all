@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string PaymentTime { get; set; }
 
         /// <summary>
-        /// 交易类型来源 需要按照枚举映射  consume 账单  hotel 酒店水单  itinerary 打车行程单  catering 餐饮小票
+        /// 交易类型来源 需要按照枚举映射
         /// </summary>
         [XmlElement("souce")]
         public string Souce { get; set; }

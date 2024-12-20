@@ -74,7 +74,7 @@ namespace Aop.Api.Domain
         public List<string> ImageList { get; set; }
 
         /// <summary>
-        /// 1=官方插件版，商品详情页链接不传入 0=自定义详情页版，商品详情页链接必须传入 当前字段已废弃(该字段下线展示，无需传递，默认填写自定义详情页版商品详情页链接)
+        /// 1=官方插件版，商品详情页链接不传入 0=自定义详情页版，商品详情页链接必须传入
         /// </summary>
         [XmlElement("item_details_page_model")]
         public string ItemDetailsPageModel { get; set; }

@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("request_id")]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 会话id,表示一次对话，由服务端生成。首次发起为空，会在Response中返回；基于历史对话需指定。
+        /// </summary>
+        [XmlElement("session_id")]
+        public string SessionId { get; set; }
     }
 }

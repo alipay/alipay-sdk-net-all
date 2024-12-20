@@ -18,6 +18,13 @@ namespace Aop.Api.Domain
         public List<string> BookingRuleIds { get; set; }
 
         /// <summary>
+        /// 取消规则v2，新增商户对接该字段
+        /// </summary>
+        [XmlArray("cancel_rules")]
+        [XmlArrayItem("cancel_rule")]
+        public List<CancelRule> CancelRules { get; set; }
+
+        /// <summary>
         /// 平均确认时长分钟数，IsInstantConfirm 为false时需传该值
         /// </summary>
         [XmlElement("confirm_minutes")]

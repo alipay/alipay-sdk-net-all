@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -22,7 +23,7 @@ namespace Aop.Api.Domain
         public string OutSkuId { get; set; }
 
         /// <summary>
-        /// sku售价，分为单位
+        /// sku售价，分为单位，当更新商品为租赁套餐的商品时，售价字段不生效，需要填租赁套餐里的totalSalePrice代表商品售价
         /// </summary>
         [XmlElement("sale_price")]
         public long SalePrice { get; set; }
@@ -34,10 +35,11 @@ namespace Aop.Api.Domain
         public string SaleStatus { get; set; }
 
         /// <summary>
-        /// 商品sku属性
+        /// 商品sku属性，当更新商品是租赁套餐商品时，sku_attrs必须传rent_commodity租赁套餐属性
         /// </summary>
-        [XmlElement("sku_attrs")]
-        public ItemSkuAttrVO SkuAttrs { get; set; }
+        [XmlArray("sku_attrs")]
+        [XmlArrayItem("item_sku_attr_v_o")]
+        public List<ItemSkuAttrVO> SkuAttrs { get; set; }
 
         /// <summary>
         /// 支付宝平台侧sku ID，是支付宝平台侧商品的唯一标识，后续与平台交互，需要使用该 ID，建议持久化。

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string PeriodType { get; set; }
 
         /// <summary>
+        /// 周期扣中场景化规则信息，例如影音会员续费、保险等场景特殊规则字段
+        /// </summary>
+        [XmlElement("scene_rule_params")]
+        public SceneRuleParams SceneRuleParams { get; set; }
+
+        /// <summary>
         /// 单次扣款最大金额single_amount是周期扣款产品必填，即每次发起扣款时限制的最大金额，单位为元。商户每次发起扣款都不允许大于此金额。
         /// </summary>
         [XmlElement("single_amount")]

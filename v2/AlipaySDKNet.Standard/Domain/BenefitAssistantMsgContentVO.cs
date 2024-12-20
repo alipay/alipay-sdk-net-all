@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -16,10 +17,23 @@ namespace Aop.Api.Domain
         public string ActivityId { get; set; }
 
         /// <summary>
+        /// 活动id列表
+        /// </summary>
+        [XmlArray("activity_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> ActivityIdList { get; set; }
+
+        /// <summary>
         /// 人群code，需要通过棋盘人群创建接口<a href="https://opendocs.alipay.com/open/09c10677_alipay.marketing.qipan.crowdoperation.create?pathHash=3d8bad63">https://opendocs.alipay.com/open/09c10677_alipay.marketing.qipan.crowdoperation.create?pathHash=3d8bad63</a>创建并获取返回crowd_code作为这个地方传的人群code参数
         /// </summary>
         [XmlElement("crowd_code")]
         public string CrowdCode { get; set; }
+
+        /// <summary>
+        /// 该字段用于描述本群发消息是否使用券包样式, 若为true, 则群发消息展示使用券包样式, 否则使用普通样式
+        /// </summary>
+        [XmlElement("multi_coupon")]
+        public bool MultiCoupon { get; set; }
 
         /// <summary>
         /// 小助手定向消息内容，发送小助手时推送给用户的群内权益推荐内容

@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 是否脱敏
+        /// 是否脱敏。非空就是不脱敏，空就是脱敏。脱敏规则根据发生的业务定义
         /// </summary>
         [XmlElement("no_mbill_encrypt")]
         public string NoMbillEncrypt { get; set; }
@@ -154,7 +154,7 @@ namespace Aop.Api.Domain
         public string Source { get; set; }
 
         /// <summary>
-        /// 单据状态
+        /// 订单状态
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

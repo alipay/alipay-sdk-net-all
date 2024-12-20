@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AxfMerchantConfig : AopObject
     {
         /// <summary>
-        /// 配置key
+        /// 如果需要监听开放消息，并且卡上没有配置msg_app_id，一定要配置MERCHANT_MSG_APP_ID
         /// </summary>
         [XmlElement("config_key")]
         public string ConfigKey { get; set; }

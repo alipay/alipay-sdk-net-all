@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string AliCloudBpidList { get; set; }
 
         /// <summary>
+        /// 阿里云结算模式枚举值
+        /// </summary>
+        [XmlElement("alicloud_settlement_mode")]
+        public string AlicloudSettlementMode { get; set; }
+
+        /// <summary>
         /// 招标类型
         /// </summary>
         [XmlElement("bid_type")]
@@ -96,6 +102,36 @@ namespace Aop.Api.Domain
         public string ExpectSignDate { get; set; }
 
         /// <summary>
+        /// 最终客户签约对方主体ID
+        /// </summary>
+        [XmlElement("final_customer_sign_other_party_subject_id")]
+        public string FinalCustomerSignOtherPartySubjectId { get; set; }
+
+        /// <summary>
+        /// 最终客户签约对方主体名称
+        /// </summary>
+        [XmlElement("final_customer_sign_other_party_subject_name")]
+        public string FinalCustomerSignOtherPartySubjectName { get; set; }
+
+        /// <summary>
+        /// 最终客户签约主体ID
+        /// </summary>
+        [XmlElement("final_customer_sign_subject_id")]
+        public string FinalCustomerSignSubjectId { get; set; }
+
+        /// <summary>
+        /// 最终客户签约主体名称
+        /// </summary>
+        [XmlElement("final_customer_sign_subject_name")]
+        public string FinalCustomerSignSubjectName { get; set; }
+
+        /// <summary>
+        /// 总代合作类型枚举值
+        /// </summary>
+        [XmlElement("general_agent_cooperation_type")]
+        public string GeneralAgentCooperationType { get; set; }
+
+        /// <summary>
         /// id
         /// </summary>
         [XmlElement("id")]
@@ -144,6 +180,18 @@ namespace Aop.Api.Domain
         public string LeadsOtherCloudPedestal { get; set; }
 
         /// <summary>
+        /// 其他伙伴，保存ID，多个逗号隔开
+        /// </summary>
+        [XmlElement("leads_other_partners")]
+        public string LeadsOtherPartners { get; set; }
+
+        /// <summary>
+        /// 其他伙伴名字
+        /// </summary>
+        [XmlElement("leads_other_partners_name")]
+        public string LeadsOtherPartnersName { get; set; }
+
+        /// <summary>
         /// 商机产品类别
         /// </summary>
         [XmlElement("leads_product_type")]
@@ -166,6 +214,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("leads_source_partner_id")]
         public string LeadsSourcePartnerId { get; set; }
+
+        /// <summary>
+        /// OB签约对方主体ID
+        /// </summary>
+        [XmlElement("ob_sign_other_party_subject_id")]
+        public string ObSignOtherPartySubjectId { get; set; }
+
+        /// <summary>
+        /// OB签约对方主体名称
+        /// </summary>
+        [XmlElement("ob_sign_other_party_subject_name")]
+        public string ObSignOtherPartySubjectName { get; set; }
 
         /// <summary>
         /// 其他合作伙伴（二代）

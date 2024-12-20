@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string City { get; set; }
 
         /// <summary>
-        /// 收货地址，用于后续接收物料的快递
+        /// 物料快递收货地址，用于后续接收物料的快递
         /// </summary>
         [XmlElement("delivery_address")]
         public string DeliveryAddress { get; set; }

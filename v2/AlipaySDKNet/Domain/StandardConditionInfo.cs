@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string RuleName { get; set; }
 
         /// <summary>
-        /// 费控条件操作符 枚举值： LT("<","小于") LE("<=","小于等于") EQ("=","等于") NE("!=","不等于") GE(">=","大于等于") GT(">","大于")
+        /// 费控条件操作符 枚举值： LT("<","小于") LE("<=","小于等于") EQ("=","等于") NE("!=","不等于") GE(">=","大于等于") GT(">","大于") 当前字段已废弃(该字段为保留字段，目前未被使用)
         /// </summary>
         [XmlElement("rule_operator")]
         public string RuleOperator { get; set; }

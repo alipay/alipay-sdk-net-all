@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string RatedCurrent { get; set; }
 
         /// <summary>
-        /// 额定功率
+        /// 额定功率，单位KW
         /// </summary>
         [XmlElement("rated_power")]
         public string RatedPower { get; set; }

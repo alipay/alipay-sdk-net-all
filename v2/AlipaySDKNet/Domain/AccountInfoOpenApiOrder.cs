@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public string AccountingTypeCode { get; set; }
 
         /// <summary>
-        /// 原币发生额
+        /// 原币发生额，单位为分
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
 
         /// <summary>
-        /// 本位币发生额
+        /// 本位币发生额，单位为分
         /// </summary>
         [XmlElement("amount_beq")]
         public string AmountBeq { get; set; }

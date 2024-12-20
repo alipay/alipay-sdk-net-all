@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string PrincipalOpenId { get; set; }
 
         /// <summary>
-        /// alipay_user_id代表支付宝用户id mechant_user_id代表商户id
+        /// 主体类型
         /// </summary>
         [XmlElement("principal_type")]
         public string PrincipalType { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public RefundBusinessExtend RefundBusinessExtend { get; set; }
 
         /// <summary>
-        /// 提现策略
+        /// 提现策略，默认为原路退
         /// </summary>
         [XmlElement("refund_strategy")]
         public string RefundStrategy { get; set; }

@@ -15,10 +15,22 @@ namespace Aop.Api.Response
         public string BuyerLoginId { get; set; }
 
         /// <summary>
+        /// 买家在支付宝的用户ID
+        /// </summary>
+        [XmlElement("buyer_user_id")]
+        public string BuyerUserId { get; set; }
+
+        /// <summary>
         /// 退款支付时间，格式："yyyy-MM-dd HH:mm:ss"
         /// </summary>
         [XmlElement("gmt_refund_pay")]
         public string GmtRefundPay { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 商户订单号

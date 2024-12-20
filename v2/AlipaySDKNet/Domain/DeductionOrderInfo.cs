@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class DeductionOrderInfo : AopObject
     {
         /// <summary>
-        /// 抽佣信息集合
+        /// 费用信息集合
         /// </summary>
         [XmlArray("bill_fee_info_list")]
         [XmlArrayItem("bill_fee_info")]
@@ -91,7 +91,7 @@ namespace Aop.Api.Domain
         public string DeductionOrderType { get; set; }
 
         /// <summary>
-        /// （1）TIMES_CARD / PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY_INDIRECT：UNPAID、PAYMENT_SUCCESS、PAYMENT_FAILED、REFUND （2）AXF_MONEY_TIME_CARD：FREEZING、FROZEN、UNFREEZING、UNFROZEN、REDEEMING、PAYMENT_FAILED、PAYMENT_SUCCESS、REFUND、PART_REFUND
+        /// （1）TIMES_CARD / PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY_INDIRECT：UNPAID、PAYMENT_SUCCESS、PAYMENT_FAILED、REFUND  （2）AXF_MONEY_TIME_CARD 核销单：FREEZING、FROZEN、UNFREEZING、UNFROZEN、REDEEMING、PAYMENT_FAILED、PAYMENT_SUCCESS、REFUND、PART_REFUND （3）AXF_MONEY_TIME_CARD 违约金单：INIT、UNPAID、PAYMENT_SUCCESS、PAYMENT_FAILED
         /// </summary>
         [XmlElement("deduction_status")]
         public string DeductionStatus { get; set; }
@@ -143,6 +143,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plan_deduction_time")]
         public string PlanDeductionTime { get; set; }
+
+        /// <summary>
+        /// 平台优惠金额，单位分
+        /// </summary>
+        [XmlElement("platform_discount_price")]
+        public long PlatformDiscountPrice { get; set; }
 
         /// <summary>
         /// 核销方式

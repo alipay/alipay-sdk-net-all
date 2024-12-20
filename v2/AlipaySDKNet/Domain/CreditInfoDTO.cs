@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CreditDepositPeriodPayType { get; set; }
 
         /// <summary>
+        /// 芝麻任务信息
+        /// </summary>
+        [XmlElement("credit_go_info")]
+        public CreditGoInfo CreditGoInfo { get; set; }
+
+        /// <summary>
         /// 使用芝麻信用服务的产品码，不传默认使用芝麻先享服务
         /// </summary>
         [XmlElement("credit_product_code")]

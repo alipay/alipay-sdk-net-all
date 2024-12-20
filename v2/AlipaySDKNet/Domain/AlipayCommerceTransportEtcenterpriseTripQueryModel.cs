@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 0：蓝； 1：黄； 2：黑； 3：白； 4：渐变绿
+        /// 蓝:BLUE 黄:YELLOW 黑:BLACK 白:WHITE 绿:GREEN
         /// </summary>
         [XmlElement("plate_color")]
         public string PlateColor { get; set; }

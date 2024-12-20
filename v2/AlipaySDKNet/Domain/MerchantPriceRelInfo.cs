@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class MerchantPriceRelInfo : AopObject
     {
         /// <summary>
-        /// 安心付直联版后台产品code使用商家扣款（I1140100001000001000）、间联版不需要填
+        /// 安心付直联版后台产品code使用商家扣款（I1140100001000001000）、 间联版不需要、 安心付先享次卡需要（I1140300001000013424和I1140100001000001000）
         /// </summary>
         [XmlElement("back_product_code")]
         public string BackProductCode { get; set; }

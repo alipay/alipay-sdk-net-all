@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizToken { get; set; }
 
         /// <summary>
-        /// 留资结束日期，格式：yyyy-mm-dd；不能晚于当天
+        /// 留资结束日期，格式：yyyy-mm-dd 或 yyyy-mm-dd hh:mm:ss;不能晚于当天
         /// </summary>
         [XmlElement("end_date")]
         public string EndDate { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public long PromotePageId { get; set; }
 
         /// <summary>
-        /// 留资开始日期，格式：yyyy-mm-dd，不能早于30天前
+        /// 留资开始日期，格式：yyyy-mm-dd 或 yyyy-mm-dd hh:mm:ss;不能早于30天前
         /// </summary>
         [XmlElement("start_date")]
         public string StartDate { get; set; }

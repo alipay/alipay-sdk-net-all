@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceEducateSceneTokenQueryResponse : AopResponse
     {
         /// <summary>
+        /// 资产信息，生成token时候，上传查询资产字段才会返回
+        /// </summary>
+        [XmlElement("asset")]
+        public string Asset { get; set; }
+
+        /// <summary>
         /// 业务场景类型标识
         /// </summary>
         [XmlElement("biz_code")]

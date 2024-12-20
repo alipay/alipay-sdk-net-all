@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<DTAgentChatContent> ChatContents { get; set; }
 
         /// <summary>
+        /// 是否使用心跳模式，为true返回event会包含心跳信息
+        /// </summary>
+        [XmlElement("heartbeat_mode")]
+        public bool HeartbeatMode { get; set; }
+
+        /// <summary>
         /// 业务场景参数，用于特殊场景的定制化入参
         /// </summary>
         [XmlElement("scene_param")]

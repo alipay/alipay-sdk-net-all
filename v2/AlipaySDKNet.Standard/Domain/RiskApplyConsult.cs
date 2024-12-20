@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// 风险场景，有限枚举：  User Account Risk：账户安全咨询  Enterprise Access Risk：社保风险咨询  Enterprise Manager Risk：董监高风险咨询
+        /// 风险场景，有限枚举：  User Account Risk：账户安全咨询  Enterprise Access Risk：社保风险咨询  Enterprise Manager Risk：董监高风险咨询 Account Limit Risk：限权风险咨询
         /// </summary>
         [XmlElement("risk_scene")]
         public string RiskScene { get; set; }

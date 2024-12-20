@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string FloorAmount { get; set; }
 
         /// <summary>
+        /// 活动任务参与单位
+        /// </summary>
+        [XmlElement("join_limit")]
+        public string JoinLimit { get; set; }
+
+        /// <summary>
         /// 兑换奖品后续使用是否支持nfc支付
         /// </summary>
         [XmlElement("nfc_pay")]
@@ -46,9 +52,21 @@ namespace Aop.Api.Domain
         public string PrizeName { get; set; }
 
         /// <summary>
+        /// 活动任务剩余需参与的数量，结合状态可判断还剩多少数量即可完成活动任务进行兑换
+        /// </summary>
+        [XmlElement("remaining_join_count")]
+        public long RemainingJoinCount { get; set; }
+
+        /// <summary>
         /// 对应活动的id
         /// </summary>
         [XmlElement("retail_activity_id")]
         public string RetailActivityId { get; set; }
+
+        /// <summary>
+        /// 奖品兑换的状态，用于判断如何展示
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
     }
 }

@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string CardNo { get; set; }
 
         /// <summary>
-        /// 付款渠道
+        /// 用户收款渠道
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string ContactInfo { get; set; }
 
         /// <summary>
-        /// 支付宝登录号。业务系统无用户UID时，可通过该参数同步手机号码。因手机号有一定比例无法匹配到UID，建议有UID的情况下优先同步UID。
+        /// 支付宝登录号。业务系统无用户UID时，可通过该参数同步用户支付宝登录账号，手机号/邮箱均可。因手机号/邮箱有一定比例无法匹配到UID，建议有UID的情况下优先同步UID。
         /// </summary>
         [XmlElement("login_id")]
         public string LoginId { get; set; }

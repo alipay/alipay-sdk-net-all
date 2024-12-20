@@ -112,6 +112,12 @@ namespace Aop.Api.Response
         public string SingleQuota { get; set; }
 
         /// <summary>
+        /// 协议履约节点，依照还款业务单类型变化，不同类型会有不同的履约节点
+        /// </summary>
+        [XmlElement("stage")]
+        public string Stage { get; set; }
+
+        /// <summary>
         /// 协议当前状态 1. TEMP：暂存，协议未生效过； 2. NORMAL：正常； 3. STOP：暂停
         /// </summary>
         [XmlElement("status")]

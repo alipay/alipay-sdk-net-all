@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
-        /// 核销次数
+        /// 注意：先享次卡目前只支持同时核销1次
         /// </summary>
         [XmlElement("count")]
         public long Count { get; set; }
@@ -32,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 商家发起核销需要服务商回传外部交易订单号，商户开启了用户核销免授权确认，参数必传。
+        /// </summary>
+        [XmlElement("out_biz_id")]
+        public string OutBizId { get; set; }
 
         /// <summary>
         /// 门店id

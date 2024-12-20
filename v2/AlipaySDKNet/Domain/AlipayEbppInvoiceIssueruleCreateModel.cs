@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string OuterSourceId { get; set; }
 
         /// <summary>
-        /// 额度类型，枚举：COUPON（点券）、CAP（余额）、ISV（外算额度）
+        /// 额度类型，枚举：COUPON（点券）、CAP（余额）
         /// </summary>
         [XmlElement("quota_type")]
         public string QuotaType { get; set; }

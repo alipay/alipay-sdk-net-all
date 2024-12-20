@@ -38,5 +38,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("pay_info_response")]
         public PayInfoResponse PayInfoResponse { get; set; }
+
+        /// <summary>
+        /// 订单服务类型
+        /// </summary>
+        [XmlElement("service_type")]
+        public string ServiceType { get; set; }
     }
 }

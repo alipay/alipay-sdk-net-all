@@ -11,6 +11,24 @@ namespace Aop.Api.Domain
     public class CollaborateTask : AopObject
     {
         /// <summary>
+        /// 活动描述，用户参与活动时返回。
+        /// </summary>
+        [XmlElement("activity_desc")]
+        public string ActivityDesc { get; set; }
+
+        /// <summary>
+        /// 活动id，用户参与活动时返回。
+        /// </summary>
+        [XmlElement("activity_id")]
+        public string ActivityId { get; set; }
+
+        /// <summary>
+        /// 活动类型，用户参与活动时返回。
+        /// </summary>
+        [XmlElement("activity_type")]
+        public string ActivityType { get; set; }
+
+        /// <summary>
         /// 任务拉取时该字段无返回内容，确认领取时会返回该字段。
         /// </summary>
         [XmlElement("address")]
@@ -45,6 +63,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("district_name")]
         public string DistrictName { get; set; }
+
+        /// <summary>
+        /// 外部展业人员编号
+        /// </summary>
+        [XmlElement("installer_no")]
+        public string InstallerNo { get; set; }
 
         /// <summary>
         /// 服务商可以基于此id判断拉取到的任务需要协同什么样的产品，如： N7 设备。

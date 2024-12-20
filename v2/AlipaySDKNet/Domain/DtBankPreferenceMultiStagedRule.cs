@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -18,7 +19,8 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 阶梯立减优惠类型下，多区间优惠配置列表
         /// </summary>
-        [XmlElement("staged_discount_list")]
-        public DtBankStagedThresholdInfo StagedDiscountList { get; set; }
+        [XmlArray("staged_discount_list")]
+        [XmlArrayItem("dt_bank_staged_threshold_info")]
+        public List<DtBankStagedThresholdInfo> StagedDiscountList { get; set; }
     }
 }

@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string ConsultMode { get; set; }
 
         /// <summary>
+        /// 该字段用于管控制度下发放的资产币种，不填写默认为人民币，设置该字段后，制度下手工发放的资产币种均为设置值。
+        /// </summary>
+        [XmlElement("currency")]
+        public string Currency { get; set; }
+
+        /// <summary>
         /// 制度生效结束时间
         /// </summary>
         [XmlElement("effective_end_date")]
@@ -104,7 +110,7 @@ namespace Aop.Api.Domain
         public string OwnerType { get; set; }
 
         /// <summary>
-        /// 因公场景
+        /// 因公场景 当前字段已废弃(该字段将废弃，不建议使用)
         /// </summary>
         [XmlElement("scene_type")]
         public string SceneType { get; set; }

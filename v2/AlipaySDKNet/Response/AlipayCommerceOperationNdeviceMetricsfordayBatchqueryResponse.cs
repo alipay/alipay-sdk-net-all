@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -14,6 +15,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("count")]
         public long Count { get; set; }
+
+        /// <summary>
+        /// 设备明细列表
+        /// </summary>
+        [XmlArray("data")]
+        [XmlArrayItem("n_device_metrics_list_for_day_response")]
+        public List<NDeviceMetricsListForDayResponse> Data { get; set; }
 
         /// <summary>
         /// 设备明细列表

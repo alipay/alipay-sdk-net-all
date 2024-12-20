@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 操作类型
+        /// 卡适用范围 【CANCEL】 AXF_MERCHANT_PERIOD_PAY、 AXF_MERCHANT_PERIOD_PAY_INDIRECT 【PAUSE/RECOVER】AXF_MERCHANT_PERIOD_PAY、 AXF_MERCHANT_PERIOD_PAY_INDIRECT 【UNBIND_CARD】AXF_MERCHANT_PERIOD_PAY、 AXF_MERCHANT_PERIOD_PAY_INDIRECT、AXF_MONEY_TIME_CARD、AXF_MONEY_CARD
         /// </summary>
         [XmlElement("operation_type")]
         public string OperationType { get; set; }

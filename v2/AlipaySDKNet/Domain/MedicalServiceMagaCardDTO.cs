@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 是否为第三方服务
+        /// </summary>
+        [XmlElement("third_service_flag")]
+        public bool ThirdServiceFlag { get; set; }
+
+        /// <summary>
         /// 服务的标题
         /// </summary>
         [XmlElement("title")]

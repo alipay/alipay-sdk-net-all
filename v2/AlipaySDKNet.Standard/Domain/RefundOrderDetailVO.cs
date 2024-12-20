@@ -97,6 +97,12 @@ namespace Aop.Api.Domain
         public string OperatorRole { get; set; }
 
         /// <summary>
+        /// 订单创建时生成的订单号
+        /// </summary>
+        [XmlElement("order_no")]
+        public string OrderNo { get; set; }
+
+        /// <summary>
         /// 打包费退款金额，单位：元
         /// </summary>
         [XmlElement("packing_fee")]
@@ -121,7 +127,7 @@ namespace Aop.Api.Domain
         public string RefundMsg { get; set; }
 
         /// <summary>
-        /// 退款订单号
+        /// 退款订单号，同alipay.commerce.medical.order.refund.changed(订单退款消息推送)的refund_no
         /// </summary>
         [XmlElement("refund_order_no")]
         public string RefundOrderNo { get; set; }

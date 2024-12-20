@@ -29,6 +29,13 @@ namespace Aop.Api.Domain
         public GuaranteeDetail DepreciationGuarantee { get; set; }
 
         /// <summary>
+        /// 保障服务详细描述
+        /// </summary>
+        [XmlArray("guarantee_detail_description")]
+        [XmlArrayItem("rent_car_guarantee_detail_description")]
+        public List<RentCarGuaranteeDetailDescription> GuaranteeDetailDescription { get; set; }
+
+        /// <summary>
         /// 保障服务的名称
         /// </summary>
         [XmlElement("name")]

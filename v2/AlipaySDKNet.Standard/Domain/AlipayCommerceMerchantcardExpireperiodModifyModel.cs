@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardExpireperiodModifyModel : AopObject
     {
         /// <summary>
-        /// 当industry_solution_type为TIMES_CARD时使用、代表将原有的有效期延期到这个时间点，时间格式是yyyy-MM-dd HH:mm:ss
+        /// 将售卖订单的有效期延期到入参的时间点{appoint_date}，时间格式是yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("appoint_date")]
         public string AppointDate { get; set; }
@@ -46,13 +46,13 @@ namespace Aop.Api.Domain
         public string PeriodType { get; set; }
 
         /// <summary>
-        /// 当industry_solution_type为PERIOD_PAY的时候并且update_type为FIXED的时候代表顺延几周或者几个月；当industry_solution_type为PERIOD_PAY的时候并且update_type为APPOINT的时候代表从第几期向后延多少天
+        /// 【update_type=FIXED】代表延期几个周期，单位是周/月 【update_type=APPOINT】代表延期几天，单位是天
         /// </summary>
         [XmlElement("period_value")]
         public long PeriodValue { get; set; }
 
         /// <summary>
-        /// 延期模式
+        /// 【注意】如果指定的期数已经被核销了则不允许延期 【FIXED】将指定期数及后续期数按固定周期延；月卡、季卡必须按照月延期；周卡必须按照周延期；日卡不支持按固定周期延 【APPOINT】将指定期数及后续期数都延长{period_value}天 【RECAST】将指定期数延长{period_value}天，后续期数会自动按周期延
         /// </summary>
         [XmlElement("update_type")]
         public string UpdateType { get; set; }

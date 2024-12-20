@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ServiceGuide { get; set; }
 
         /// <summary>
-        /// 商品的名称，最长不超过30个字
+        /// 商品的名称，最长不超过60个字
         /// </summary>
         [XmlElement("service_name")]
         public string ServiceName { get; set; }

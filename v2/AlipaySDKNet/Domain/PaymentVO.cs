@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class PaymentVO : AopObject
     {
         /// <summary>
+        /// 订单优惠总金额
+        /// </summary>
+        [XmlElement("amount_discount")]
+        public string AmountDiscount { get; set; }
+
+        /// <summary>
         /// 商品总金额
         /// </summary>
         [XmlElement("amount_item")]

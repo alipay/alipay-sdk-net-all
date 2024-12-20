@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 操作类型
+        /// （1）退款时：当funding_model=PREPAID，会退次数； 当funding_model=PAY_AFTER_CONSUMPTION_MODE，不会退次数；
         /// </summary>
         [XmlElement("operation_type")]
         public string OperationType { get; set; }

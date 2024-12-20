@@ -53,7 +53,7 @@ namespace Aop.Api.Response
         public List<string> CertifyFailReasons { get; set; }
 
         /// <summary>
-        /// 认证模式，取值如下：ATTORNEY代表代理人；LEGAL_PERSON代表法定代表人
+        /// 认证模式，取值如下：ATTORNEY代表代理人；LEGAL_PERSON代表法定代表人；STAFF代表人企；ENTERPRISE 企业
         /// </summary>
         [XmlElement("certify_mode")]
         public string CertifyMode { get; set; }
@@ -129,6 +129,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("li_xin_ep")]
         public bool LiXinEp { get; set; }
+
+        /// <summary>
+        /// 用户授权手机号返回
+        /// </summary>
+        [XmlElement("mobile_phone")]
+        public string MobilePhone { get; set; }
 
         /// <summary>
         /// 个人用户姓名，字段auth_status为SUCCESS时返回

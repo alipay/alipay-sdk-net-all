@@ -11,13 +11,13 @@ namespace Aop.Api.Domain
     public class MoneyCardUseRecordDetail : AopObject
     {
         /// <summary>
-        /// 金额，对应金额卡实际核销金额，单位分
+        /// 金额，对应金额卡实际核销金额，单位：分
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
 
         /// <summary>
-        /// 抽佣信息集合
+        /// 费用信息集合
         /// </summary>
         [XmlArray("bill_fee_info_list")]
         [XmlArrayItem("bill_fee_info")]
@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
-        /// 现金价值，对应金额卡实际出资部分，单位分
+        /// 现金价值，对应金额卡实际出资部分，单位：分
         /// </summary>
         [XmlElement("cash")]
         public string Cash { get; set; }
@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 平台订单id
+        /// 交易组件业务单号
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }

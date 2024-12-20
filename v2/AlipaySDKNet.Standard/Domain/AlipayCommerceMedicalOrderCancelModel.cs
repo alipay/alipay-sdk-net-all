@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string OrderNo { get; set; }
 
         /// <summary>
-        /// 此字段传取商家消订单的自定义原因，当reason_code=1099时，必填
+        /// 此字段传取商家消订单的自定义原因，当reason_code=1299时，必填
         /// </summary>
         [XmlElement("reason")]
         public string Reason { get; set; }

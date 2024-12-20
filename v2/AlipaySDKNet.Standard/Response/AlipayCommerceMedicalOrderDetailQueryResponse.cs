@@ -11,6 +11,13 @@ namespace Aop.Api.Response
     public class AlipayCommerceMedicalOrderDetailQueryResponse : AopResponse
     {
         /// <summary>
+        /// 用户订单维度享受的优惠信息
+        /// </summary>
+        [XmlArray("discount")]
+        [XmlArrayItem("discount_v_o")]
+        public List<DiscountVO> Discount { get; set; }
+
+        /// <summary>
         /// 商品信息
         /// </summary>
         [XmlArray("items")]

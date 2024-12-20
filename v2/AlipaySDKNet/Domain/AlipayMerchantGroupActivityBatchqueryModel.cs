@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayMerchantGroupActivityBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 商家群活动类型列表，目前支持custom (自定义活动)
+        /// 商家群活动类型列表，目前支持custom (自定义活动)、coupon(优惠群活动)
         /// </summary>
         [XmlArray("biz_type_list")]
         [XmlArrayItem("string")]

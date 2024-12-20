@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public bool HasDetail { get; set; }
 
         /// <summary>
+        /// 提示风险 PROMPT_RISK; 重大风险 SIGNIFICANT_RISK
+        /// </summary>
+        [XmlElement("risk_level")]
+        public string RiskLevel { get; set; }
+
+        /// <summary>
         /// 策略命中标识
         /// </summary>
         [XmlElement("strategy_hit_flag")]

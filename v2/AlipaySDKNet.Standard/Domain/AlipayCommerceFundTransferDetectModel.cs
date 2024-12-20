@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public string MonetaryAmount { get; set; }
 
         /// <summary>
-        /// 付款银行卡号
+        /// 付款企业支付宝账号
         /// </summary>
         [XmlElement("payment_account")]
         public string PaymentAccount { get; set; }
 
         /// <summary>
-        /// 付款银行名称
+        /// 付款企业账户名
         /// </summary>
         [XmlElement("payment_bank_name")]
         public string PaymentBankName { get; set; }
@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string PaymentDate { get; set; }
 
         /// <summary>
-        /// 收款银行卡号
+        /// 收款银行卡号/收款方支付宝登录号
         /// </summary>
         [XmlElement("receipt_account")]
         public string ReceiptAccount { get; set; }
 
         /// <summary>
-        /// 收款银行名称
+        /// 收款银行名称, 到卡需要填
         /// </summary>
         [XmlElement("receipt_bank_name")]
         public string ReceiptBankName { get; set; }

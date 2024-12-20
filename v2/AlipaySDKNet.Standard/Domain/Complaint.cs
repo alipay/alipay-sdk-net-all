@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class Complaint : AopObject
     {
         /// <summary>
-        /// 订购单ID
+        /// 售卖订单id
         /// </summary>
         [XmlElement("card_id")]
         public string CardId { get; set; }

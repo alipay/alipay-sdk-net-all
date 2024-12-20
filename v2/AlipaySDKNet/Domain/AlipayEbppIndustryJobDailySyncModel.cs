@@ -115,7 +115,7 @@ namespace Aop.Api.Domain
         public string PartTimeMode { get; set; }
 
         /// <summary>
-        /// 薪资单位，单位：月、周、日
+        /// 薪资单位，单位：周、日、小时
         /// </summary>
         [XmlElement("pay_period")]
         public string PayPeriod { get; set; }

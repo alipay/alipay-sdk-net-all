@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string AgreementStatus { get; set; }
 
         /// <summary>
+        /// 资产信息，入参token上送的时候才会返回
+        /// </summary>
+        [XmlElement("asset")]
+        public string Asset { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

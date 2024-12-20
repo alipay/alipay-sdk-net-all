@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 员工免签约授权密钥；<br/> 该密钥需联系企业码业务小二申请，当传入密钥有效，则员工添加时会默认签约企业因公付，并激活员工。
+        /// 员工签约授权密钥；<br/> 该密钥需联系企业码业务小二申请，当传入密钥有效，则员工添加时会默认签约企业因公付，并激活员工。
         /// </summary>
         [XmlElement("free_sign_token")]
         public string FreeSignToken { get; set; }

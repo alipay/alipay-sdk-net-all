@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string PageSize { get; set; }
 
         /// <summary>
-        /// 账务流水创建时间的起始范围
+        /// 账务流水创建时间的起始范围。只能查询一年内的记录
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }

@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 状态描述
+        /// 群发消息发送记录描述
         /// </summary>
         [XmlElement("tips")]
         public string Tips { get; set; }

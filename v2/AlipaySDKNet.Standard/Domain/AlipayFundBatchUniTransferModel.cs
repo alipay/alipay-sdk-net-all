@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BusinessParams { get; set; }
 
         /// <summary>
+        /// 转账订单的标题，用于在收银台和消费记录展示
+        /// </summary>
+        [XmlElement("order_title")]
+        public string OrderTitle { get; set; }
+
+        /// <summary>
         /// 关联的资金单据ID，非必需。特定业务场景需要关联历史单据进行推进，如当前业务接入指南未标注此字段则可忽略。
         /// </summary>
         [XmlElement("original_order_id")]

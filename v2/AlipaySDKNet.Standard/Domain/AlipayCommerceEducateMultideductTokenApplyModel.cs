@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public PayConfig PayConfig { get; set; }
 
         /// <summary>
+        /// 查询资产，按照枚举填写
+        /// </summary>
+        [XmlElement("query_asset")]
+        public string QueryAsset { get; set; }
+
+        /// <summary>
         /// 学校（或教育机构）内标。支付宝提供的学校编号，如果您不知道学校编号，可以联系您的BD咨询获取
         /// </summary>
         [XmlElement("school_code")]

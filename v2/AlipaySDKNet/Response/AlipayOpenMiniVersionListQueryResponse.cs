@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayOpenMiniVersionListQueryResponse : AopResponse
     {
         /// <summary>
-        /// 版本列表，根据版本号倒叙排列，即版本号大的在前面；如果不存在任何版本，返回空列表
+        /// 版本列表，根据版本号倒叙排列，最多呈现最近 20 条。即版本号大的在前面；如果不存在任何版本，返回空列表。
         /// </summary>
         [XmlArray("app_version_infos")]
         [XmlArrayItem("app_version_info")]

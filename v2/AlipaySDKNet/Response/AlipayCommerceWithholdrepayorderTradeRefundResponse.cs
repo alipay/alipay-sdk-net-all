@@ -29,7 +29,7 @@ namespace Aop.Api.Response
         public string BuyerUserId { get; set; }
 
         /// <summary>
-        /// 本次退款是否发生了资金变化
+        /// 本次退款是否发生了资金变化，Y为是，N为否
         /// </summary>
         [XmlElement("fund_change")]
         public string FundChange { get; set; }
@@ -41,7 +41,7 @@ namespace Aop.Api.Response
         public string GmtRefundPay { get; set; }
 
         /// <summary>
-        /// 是否有银行卡冲退，仅当query_options中传入deposit_back_info时返回
+        /// 是否有银行卡冲退，仅当query_options中传入deposit_back_info时返回，返回值为true或false
         /// </summary>
         [XmlElement("has_deposit_back")]
         public string HasDepositBack { get; set; }

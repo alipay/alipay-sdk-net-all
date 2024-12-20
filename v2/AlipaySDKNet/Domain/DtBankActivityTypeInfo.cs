@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ActivityType { get; set; }
 
         /// <summary>
+        /// 当活动为天天减时，为true；非天天减活动，此字段不返回
+        /// </summary>
+        [XmlElement("daily_discount_activity")]
+        public bool DailyDiscountActivity { get; set; }
+
+        /// <summary>
         /// 首绑有礼活动信息，activity_type为FIRST_BIND_GIFT_CARD时有值
         /// </summary>
         [XmlElement("first_bind_card_gift_info")]

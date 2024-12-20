@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
+        /// 商户订单号
+        /// </summary>
+        [XmlElement("out_order_id")]
+        public string OutOrderId { get; set; }
+
+        /// <summary>
         /// 分账信息列表，每一期的分账详情
         /// </summary>
         [XmlArray("royalty_list")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DeductAgreementNo { get; set; }
 
         /// <summary>
+        /// 协议类型
+        /// </summary>
+        [XmlElement("personal_product_code")]
+        public string PersonalProductCode { get; set; }
+
+        /// <summary>
         /// 用户脱敏登陆号
         /// </summary>
         [XmlElement("rent_logon_id")]

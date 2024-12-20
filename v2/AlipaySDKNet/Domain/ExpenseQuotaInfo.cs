@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ExpenseQuotaInfo : AopObject
     {
         /// <summary>
+        /// 额度对应的币种
+        /// </summary>
+        [XmlElement("currency")]
+        public string Currency { get; set; }
+
+        /// <summary>
         /// 额度失效时间
         /// </summary>
         [XmlElement("effective_end_date")]

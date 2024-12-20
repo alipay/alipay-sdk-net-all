@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DtBankPreferenceIntelligentRule : AopObject
     {
         /// <summary>
+        /// 平均优惠金额，单位分
+        /// </summary>
+        [XmlElement("avg_discount_amount")]
+        public long AvgDiscountAmount { get; set; }
+
+        /// <summary>
         /// 最大优惠金额，单位分
         /// </summary>
         [XmlElement("max_amount")]

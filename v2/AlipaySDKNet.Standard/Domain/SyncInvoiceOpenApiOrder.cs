@@ -101,7 +101,7 @@ namespace Aop.Api.Domain
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// 燃油附件费
+        /// 燃油附件费，单位为元
         /// </summary>
         [XmlElement("fuel_surcharge")]
         public string FuelSurcharge { get; set; }

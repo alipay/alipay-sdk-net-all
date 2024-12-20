@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public string ActivityId { get; set; }
 
         /// <summary>
+        /// 活动id列表
+        /// </summary>
+        [XmlArray("activity_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> ActivityIdList { get; set; }
+
+        /// <summary>
         /// 图片id
         /// </summary>
         [XmlElement("image_id")]
@@ -27,6 +34,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("long_introduce_text")]
         public string LongIntroduceText { get; set; }
+
+        /// <summary>
+        /// 该字段用于描述本群发消息是否使用券包样式, 若为true, 则群发消息展示使用券包样式, 否则使用普通样式
+        /// </summary>
+        [XmlElement("multi_coupon")]
+        public bool MultiCoupon { get; set; }
 
         /// <summary>
         /// 短文本介绍文案列表

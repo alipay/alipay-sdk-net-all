@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceAcommunicationDistributionFlowsmscodeSendModel : AopObject
     {
         /// <summary>
+        /// 分销商订单号
+        /// </summary>
+        [XmlElement("inst_order_id")]
+        public string InstOrderId { get; set; }
+
+        /// <summary>
         /// 商品id
         /// </summary>
         [XmlElement("item_id")]

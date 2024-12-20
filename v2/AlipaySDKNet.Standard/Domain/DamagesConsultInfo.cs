@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public long DamagesCash { get; set; }
 
         /// <summary>
-        /// 违约金比例
+        /// 违约金比例，单位：%，例如返回值是30，代表30%
         /// </summary>
         [XmlElement("damages_rate")]
         public string DamagesRate { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string DamagesType { get; set; }
 
         /// <summary>
-        /// 是否需要违约金
+        /// 注意 如果售卖订单在7天内没有核销使用过，退卡时是没有违约金的
         /// </summary>
         [XmlElement("need_damages")]
         public bool NeedDamages { get; set; }
@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_cash")]
         public long RefundCash { get; set; }
+
+        /// <summary>
+        /// 不可以退卡的原因
+        /// </summary>
+        [XmlElement("refuse_close_reason")]
+        public string RefuseCloseReason { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceMerchantcardCertificationUseResponse : AopResponse
     {
         /// <summary>
-        /// 凭证提交结果
+        /// 批量核销结果
         /// </summary>
         [XmlArray("context")]
         [XmlArrayItem("certificate_submit_resonse")]

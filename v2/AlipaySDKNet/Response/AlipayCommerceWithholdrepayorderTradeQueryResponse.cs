@@ -247,7 +247,7 @@ namespace Aop.Api.Response
         public string PassbackParams { get; set; }
 
         /// <summary>
-        /// 支付币种订单金额
+        /// 支付币种订单金额，单位见pay_currency
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }
@@ -303,7 +303,7 @@ namespace Aop.Api.Response
         public string SendPayDate { get; set; }
 
         /// <summary>
-        /// 结算币种订单金额
+        /// 结算币种订单金额，单位见settle_currency
         /// </summary>
         [XmlElement("settle_amount")]
         public string SettleAmount { get; set; }

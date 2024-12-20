@@ -160,7 +160,7 @@ namespace Aop.Api.Domain
         public string RevokeDate { get; set; }
 
         /// <summary>
-        /// 查询人姓名
+        /// 法人姓名
         /// </summary>
         [XmlElement("ry_name")]
         public string RyName { get; set; }

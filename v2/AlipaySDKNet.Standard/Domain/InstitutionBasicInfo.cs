@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ConsultMode { get; set; }
 
         /// <summary>
+        /// 制度可发放资产币种
+        /// </summary>
+        [XmlElement("currency")]
+        public string Currency { get; set; }
+
+        /// <summary>
         /// 制度是否启用
         /// </summary>
         [XmlElement("effective")]

@@ -30,7 +30,7 @@ namespace Aop.Api.Response
         public string BatchNo { get; set; }
 
         /// <summary>
-        /// 境外场景批次状态： INIT 批次已接收 WAIT_APPLY 批次资金准备中 DEALING 批次处理中 FINISH 批次处理完成 FAIL 全部处理失败 UNKNOWN 未知状态  其他场景批次状态： INIT 批次已接收 WAIT_PAY 等待支付 DEALING 批次处理中 SUCCESS 批次处理全部成功 PART_SUCCESS 批次处理部分成功 FAIL 全部处理失败 DISUSE 批次单据废弃 INVALID 批次单据中明细全部无效
+        /// 境外场景批次状态： INIT 批次已接收 WAIT_APPLY 批次资金准备中 DEALING 批次处理中 FINISH 批次处理完成 FAIL 全部处理失败 UNKNOWN 未知状态  其他场景批次状态： INIT 批次已接收 WAIT_PAY 等待支付 DEALING 批次处理中 SUCCESS 批次处理全部成功 PART_SUCCESS 批次处理部分成功 FAIL 全部处理失败 DISUSE 批次单据废弃 INVALID 批次单据中明细全部无效 WAIT_PAY 待付款 SUCCESS 处理成功
         /// </summary>
         [XmlElement("batch_status")]
         public string BatchStatus { get; set; }
@@ -48,7 +48,7 @@ namespace Aop.Api.Response
         public string BizCode { get; set; }
 
         /// <summary>
-        /// 批量代发业务场景。 如： GLOBAL：全球代发，多币种代发（包括除人民币以外的同币种代发），需要支付宝做货币兑换。 LOCAL：纯人民币代发，不需要支付宝做货币兑换。 MESSAGE_BATCH_PAY：接口报文代发。
+        /// 批量代发业务场景。 如： GLOBAL：全球代发，多币种代发（包括除人民币以外的同币种代发），需要支付宝做货币兑换。 LOCAL：纯人民币代发，不需要支付宝做货币兑换。 MESSAGE_BATCH_PAY：接口报文代发。 MESSAGE_SATF_BATCH_PAY：专户批量代发的报文代发
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Response
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// 失败金额
+        /// 失败金额 (单位：元)
         /// </summary>
         [XmlElement("fail_amount")]
         public string FailAmount { get; set; }
@@ -144,7 +144,7 @@ namespace Aop.Api.Response
         public string SignPrincipal { get; set; }
 
         /// <summary>
-        /// 成功金额
+        /// 成功金额 (单位：元)
         /// </summary>
         [XmlElement("success_amount")]
         public string SuccessAmount { get; set; }
@@ -156,7 +156,7 @@ namespace Aop.Api.Response
         public long SuccessCount { get; set; }
 
         /// <summary>
-        /// 批次总金额
+        /// 批次总金额 (单位：元)
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

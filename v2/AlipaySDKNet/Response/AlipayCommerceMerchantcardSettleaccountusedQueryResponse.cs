@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("settle_alipay_logon_id")]
         public string SettleAlipayLogonId { get; set; }
+
+        /// <summary>
+        /// 是否支持代扣
+        /// </summary>
+        [XmlElement("support_deduct")]
+        public bool SupportDeduct { get; set; }
     }
 }

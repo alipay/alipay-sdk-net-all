@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayUserDtbankcustActivityconfigQueryResponse : AopResponse
     {
         /// <summary>
-        /// 活动ID
+        /// 当入参活动类型是DISCOUNT、VOUCHER、FIRST_BIND_CARD_GIFT时返回活动ID； 当入参活动类型是SOLUTION时返回解决方案ID
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }
@@ -38,6 +38,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("activity_type_info")]
         public DtBankActivityTypeInfo ActivityTypeInfo { get; set; }
+
+        /// <summary>
+        /// 预算预警信息 为空时表示不进行预算预警， 不为空时表示有预算预警，返回预算预警配置
+        /// </summary>
+        [XmlElement("alert_config_info")]
+        public DtbankActivityAlertConfigInfo AlertConfigInfo { get; set; }
 
         /// <summary>
         /// 活动配置银行信息
@@ -76,7 +82,7 @@ namespace Aop.Api.Response
         public string UseScene { get; set; }
 
         /// <summary>
-        /// 活动配置对应的券模板id信息
+        /// 活动配置对应的模板id信息
         /// </summary>
         [XmlElement("voucher_template_id")]
         public string VoucherTemplateId { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayFundFlexiblestaffingEmployeehomeQueryModel : AopObject
     {
         /// <summary>
-        /// 协议号
+        /// 协议号，与商户唯一订单号out_biz_no不能同时为空
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 商户端唯一订单号
+        /// 商户端唯一订单号，与协议号agreement_no不能同时为空
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

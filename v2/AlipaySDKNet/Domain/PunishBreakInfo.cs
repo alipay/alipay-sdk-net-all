@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string Trpe { get; set; }
 
         /// <summary>
+        /// 失信人类型
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
+
+        /// <summary>
         /// 未履行金额（元）
         /// </summary>
         [XmlElement("un_perform_part")]

@@ -145,6 +145,12 @@ namespace Aop.Api.Response
         public string ProvinceId { get; set; }
 
         /// <summary>
+        /// 提供用户查看停车状态、缴费功能
+        /// </summary>
+        [XmlElement("serivce_url")]
+        public string SerivceUrl { get; set; }
+
+        /// <summary>
         /// 停车场服务信息列表
         /// </summary>
         [XmlArray("service_list")]

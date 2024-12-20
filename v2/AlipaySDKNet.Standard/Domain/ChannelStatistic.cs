@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string PayChannel { get; set; }
 
         /// <summary>
+        /// 当前渠道，退款成功的总金额
+        /// </summary>
+        [XmlElement("refund_amount")]
+        public string RefundAmount { get; set; }
+
+        /// <summary>
         /// 实际到账金额
         /// </summary>
         [XmlElement("settle_amount")]

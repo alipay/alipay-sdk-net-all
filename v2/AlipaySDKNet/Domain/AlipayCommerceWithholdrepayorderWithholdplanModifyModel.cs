@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string SignScene { get; set; }
 
         /// <summary>
+        /// 业务单类型的履约节点，如激活，注意激活仅可进行一次
+        /// </summary>
+        [XmlElement("stage")]
+        public string Stage { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

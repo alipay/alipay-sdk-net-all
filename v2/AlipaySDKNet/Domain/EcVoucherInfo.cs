@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 发票账单合规匹配结果
+        /// 发票账单合规匹配结果 当前字段已废弃(请更换“合规信息”凭证，通过voucher_content字段获取发票账单匹配的合规结果)
         /// </summary>
         [XmlElement("invoice_compliance_check_result")]
         public InvoiceComplianceCheckResult InvoiceComplianceCheckResult { get; set; }

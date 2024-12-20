@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string CurrentBuyoutPrice { get; set; }
 
         /// <summary>
+        /// 商户订单号
+        /// </summary>
+        [XmlElement("out_order_id")]
+        public string OutOrderId { get; set; }
+
+        /// <summary>
         /// 代表某一个阶段的第几期的还款计划，要结合stage进行锁定某一期计划
         /// </summary>
         [XmlElement("period")]
@@ -52,10 +58,16 @@ namespace Aop.Api.Domain
         public string RoyaltyAfterPrice { get; set; }
 
         /// <summary>
-        /// 分账履约方式 当前字段已废弃(该字段挪到了RentDetail模型中)
+        /// 分账履约方式。历史代偿分账，统一输出COMPENSATORY_ALLOC
         /// </summary>
         [XmlElement("royalty_deliver_type")]
         public string RoyaltyDeliverType { get; set; }
+
+        /// <summary>
+        /// 分账履约单号
+        /// </summary>
+        [XmlElement("royalty_installment_no")]
+        public string RoyaltyInstallmentNo { get; set; }
 
         /// <summary>
         /// 分账金额，单位：元，精确到小数点后两位
@@ -70,10 +82,16 @@ namespace Aop.Api.Domain
         public string RoyaltyStatus { get; set; }
 
         /// <summary>
-        /// 分账完成时间
+        /// 分账完成时间点
         /// </summary>
         [XmlElement("royalty_time")]
         public string RoyaltyTime { get; set; }
+
+        /// <summary>
+        /// 仅在代偿给资方时，资方的收款方式为到银行卡的场景下才有值，资方的入金流水号
+        /// </summary>
+        [XmlElement("settle_serial_no")]
+        public string SettleSerialNo { get; set; }
 
         /// <summary>
         /// 代表第几阶段的还款计划，要配合period锁定第几期还款计划

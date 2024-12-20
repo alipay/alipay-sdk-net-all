@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class CertificateSubmitResonse : AopObject
     {
         /// <summary>
-        /// 订购单编号
+        /// 售卖订单id
         /// </summary>
         [XmlElement("card_id")]
         public string CardId { get; set; }
 
         /// <summary>
-        /// 订单编号/扣款单号
+        /// 核销订单id
         /// </summary>
         [XmlElement("deduction_order_id")]
         public string DeductionOrderId { get; set; }

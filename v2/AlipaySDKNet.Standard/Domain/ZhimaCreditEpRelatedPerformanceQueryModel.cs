@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string RyCertNo { get; set; }
 
         /// <summary>
+        /// 自然人证件号（身份证号含护照等其他证件）SHA256加密的密文
+        /// </summary>
+        [XmlElement("ry_cert_no_sha_256")]
+        public string RyCertNoSha256 { get; set; }
+
+        /// <summary>
         /// 人员姓名
         /// </summary>
         [XmlElement("ry_name")]

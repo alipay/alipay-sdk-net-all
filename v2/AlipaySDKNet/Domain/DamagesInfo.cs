@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string DamagesIssueType { get; set; }
 
         /// <summary>
-        /// 违约金的比例
+        /// 违约金比例，单位：%，例如返回值是30，代表30%
         /// </summary>
         [XmlElement("damages_rate")]
         public string DamagesRate { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string DamagesType { get; set; }
 
         /// <summary>
-        /// 违约金订单id
+        /// 违约金订单id，damages_status=init时没有值，需要用户确认
         /// </summary>
         [XmlElement("deduction_order_id")]
         public string DeductionOrderId { get; set; }

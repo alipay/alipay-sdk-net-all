@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string ConsumeMode { get; set; }
 
         /// <summary>
-        /// 费用类型子类，当制度的费用类型为MEAL时，支持到店、外卖；当费用类型为非MEAL时，与费用类型保持一致
+        /// 费用类型子类
         /// </summary>
         [XmlElement("expense_type_sub_category")]
         public string ExpenseTypeSubCategory { get; set; }

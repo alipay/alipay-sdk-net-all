@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
+        /// 是否校验主体身份信息
+        /// </summary>
+        [XmlElement("need_check_identity")]
+        public bool NeedCheckIdentity { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]
@@ -80,5 +86,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("wallet_template_id")]
         public string WalletTemplateId { get; set; }
+
+        /// <summary>
+        /// 用户主体身份信息
+        /// </summary>
+        [XmlElement("wallet_user_identity_info")]
+        public WalletUserIdentityInfo WalletUserIdentityInfo { get; set; }
     }
 }

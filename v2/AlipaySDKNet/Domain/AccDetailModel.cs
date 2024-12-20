@@ -112,7 +112,7 @@ namespace Aop.Api.Domain
         public string SettlementCurrency { get; set; }
 
         /// <summary>
-        /// INIT：初始  APPLIED：已下单  DEALED：处理中  SUCCESS：处理成功  DISUSE：已废除  FAIL：处理失败  UNKNOWN：未知状态
+        /// INIT：初始 APPLIED：已下单 DEALED：处理中 SUCCESS：处理成功 DISUSE：已废除 FAIL：处理失败 UNKNOWN：未知状态 WAIT_PAY：待付款
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

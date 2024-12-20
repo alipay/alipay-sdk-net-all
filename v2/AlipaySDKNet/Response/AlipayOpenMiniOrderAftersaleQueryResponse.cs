@@ -86,6 +86,13 @@ namespace Aop.Api.Response
         public string Path { get; set; }
 
         /// <summary>
+        /// 售后服务标签列表，该笔售后单享有哪些需要关注的售后保障服务。
+        /// </summary>
+        [XmlArray("service_tag_list")]
+        [XmlArrayItem("aftersale_service_tag")]
+        public List<AftersaleServiceTag> ServiceTagList { get; set; }
+
+        /// <summary>
         /// 售后单状态
         /// </summary>
         [XmlElement("status")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string MobilePhone { get; set; }
 
         /// <summary>
+        /// 用于查询授权的发票的预览链接
+        /// </summary>
+        [XmlElement("redirect_url")]
+        public string RedirectUrl { get; set; }
+
+        /// <summary>
         /// 授权查询来源唯一标识
         /// </summary>
         [XmlElement("source_tag")]

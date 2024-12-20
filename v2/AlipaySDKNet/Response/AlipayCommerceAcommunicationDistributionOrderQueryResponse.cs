@@ -40,5 +40,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("order_status_code")]
         public string OrderStatusCode { get; set; }
+
+        /// <summary>
+        /// 订单状态详情描述
+        /// </summary>
+        [XmlElement("order_status_desc")]
+        public string OrderStatusDesc { get; set; }
     }
 }

@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string ConsultMode { get; set; }
 
         /// <summary>
+        /// 制度下可发放币种
+        /// </summary>
+        [XmlElement("currency")]
+        public string Currency { get; set; }
+
+        /// <summary>
         /// 制度启用停用状态
         /// </summary>
         [XmlElement("effective")]

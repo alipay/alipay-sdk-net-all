@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("page_redirection_data")]
         public string PageRedirectionData { get; set; }
+
+        /// <summary>
+        /// 所生成的签约跳转链接的短链接
+        /// </summary>
+        [XmlElement("shortened_page_redirection_url")]
+        public string ShortenedPageRedirectionUrl { get; set; }
     }
 }

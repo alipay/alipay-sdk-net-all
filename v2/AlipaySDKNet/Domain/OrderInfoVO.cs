@@ -112,13 +112,13 @@ namespace Aop.Api.Domain
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// 用户期望最晚送达时间
+        /// 用户期望最晚送达时间 当前字段已废弃(该字段和预计最晚送达时间重复，后续取预计最晚送达时间即可)
         /// </summary>
         [XmlElement("user_expect_end_time")]
         public string UserExpectEndTime { get; set; }
 
         /// <summary>
-        /// 用户期望最早送达时间
+        /// 用户期望最早送达时间 当前字段已废弃(该字段和预计最早送达时间重复，后续取预计最早送达时间即可)
         /// </summary>
         [XmlElement("user_expect_start_time")]
         public string UserExpectStartTime { get; set; }

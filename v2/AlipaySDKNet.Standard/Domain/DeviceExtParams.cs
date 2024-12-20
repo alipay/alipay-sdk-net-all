@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ShopName { get; set; }
 
         /// <summary>
+        /// 该参数为门店名称的拓展使用，供商户自主配置店铺昵称
+        /// </summary>
+        [XmlElement("shop_nick_name")]
+        public string ShopNickName { get; set; }
+
+        /// <summary>
         /// 进件服务商pid
         /// </summary>
         [XmlElement("source")]

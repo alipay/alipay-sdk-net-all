@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string ClientPosition { get; set; }
 
         /// <summary>
+        /// 优惠群活动顶部运营位内容
+        /// </summary>
+        [XmlElement("coupon_content")]
+        public CouponActivityContentVO CouponContent { get; set; }
+
+        /// <summary>
         /// 自定义活动顶部运营位内容
         /// </summary>
         [XmlElement("custom_content")]

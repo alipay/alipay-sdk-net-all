@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string MerchantName { get; set; }
 
         /// <summary>
-        /// 是否需要代运营授权
+        /// 是否需要代运营授权 当前字段已废弃(周期卡-直连+间连开通，去掉【是否代运营授权】，并一并去掉后续的代运营授权逻辑。)
         /// </summary>
         [XmlElement("need_auth")]
         public bool NeedAuth { get; set; }

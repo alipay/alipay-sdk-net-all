@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,7 +11,14 @@ namespace Aop.Api.Domain
     public class DTAgentSceneParam : AopObject
     {
         /// <summary>
-        /// 场景业务参数
+        /// 自定义业务参数
+        /// </summary>
+        [XmlArray("scene_biz_args")]
+        [XmlArrayItem("d_t_agent_ext_info")]
+        public List<DTAgentExtInfo> SceneBizArgs { get; set; }
+
+        /// <summary>
+        /// 场景业务参数 当前字段已废弃(该参数在下游已废弃使用)
         /// </summary>
         [XmlElement("scene_ext_info")]
         public DTAgentExtInfo SceneExtInfo { get; set; }

@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("activity_type")]
         public string ActivityType { get; set; }
+
+        /// <summary>
+        /// 数字分行智银管家解决方案唯一id
+        /// </summary>
+        [XmlElement("solution_id")]
+        public string SolutionId { get; set; }
     }
 }

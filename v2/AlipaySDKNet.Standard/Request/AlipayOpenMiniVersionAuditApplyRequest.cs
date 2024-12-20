@@ -27,7 +27,7 @@ namespace Aop.Api.Request
         public string AppEnglishName { get; set; }
 
         /// <summary>
-        /// 小程序logo图标，图片格式仅支持 jpeg,png,jpg格式，不支持 bmp,gif,BMP,GIF格式。建议上传像素为180*180 px，logo图片最大 2M。
+        /// 小程序logo图标，图片格式仅支持 jpeg,png,jpg格式，不支持 bmp,gif,BMP,GIF格式。建议上传像素为180*180 px，logo图标最大不超过2M。
         /// </summary>
         public FileItem AppLogo { get; set; }
 
