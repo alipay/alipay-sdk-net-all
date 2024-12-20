@@ -1,16 +1,17 @@
 using System;
+using Aop.Api.Domain;
 using System.Collections.Generic;
 using Aop.Api.Response;
 
 namespace Aop.Api.Request
 {
     /// <summary>
-    /// AOP API: alipay.data.dataexchange.schemapretestfirst.rainystest.query
+    /// AOP API: alipay.cloud.cloudpromo.travel.partner.recommend
     /// </summary>
-    public class AlipayDataDataexchangeSchemapretestfirstRainystestQueryRequest : IAopRequest<AlipayDataDataexchangeSchemapretestfirstRainystestQueryResponse>
+    public class AlipayCloudCloudpromoTravelPartnerRecommendRequest : IAopRequest<AlipayCloudCloudpromoTravelPartnerRecommendResponse>
     {
         /// <summary>
-        /// 新模型测试二期
+        /// 随心游下一站推荐
         /// </summary>
         public string BizContent { get; set; }
 
@@ -76,7 +77,7 @@ namespace Aop.Api.Request
 
         public string GetApiName()
         {
-            return "alipay.data.dataexchange.schemapretestfirst.rainystest.query";
+            return "alipay.cloud.cloudpromo.travel.partner.recommend";
         }
 
         public void SetApiVersion(string apiVersion){

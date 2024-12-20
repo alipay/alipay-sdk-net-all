@@ -10,7 +10,7 @@
     <RootNamespace>AlipaySDKNet</RootNamespace>
     <AssemblyName>AlipaySDKNet</AssemblyName>
     <PackageId>AlipaySDKNet</PackageId>
-    <PackageVersion>4.9.369</PackageVersion>
+    <PackageVersion>4.9.370</PackageVersion>
     <Authors>antopen</Authors>
     <NeutralLanguage>zh</NeutralLanguage>
     <Description>支付宝开放平台官方SDK，支持.Net Framework 3.5(SP1)及其以上版本。</Description>
@@ -6360,6 +6360,7 @@
     <Compile Include="Response\AlipayCommerceEducateRosterInfoModifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceEducateRosterInfoDeleteResponse.cs" />
     <Compile Include="Response\AlipayCommerceEducateRosterInfoBatchqueryResponse.cs" />
+    <Compile Include="Response\AlipayCommerceEducateRosterIdentityUnbindResponse.cs" />
     <Compile Include="Response\AlipayCommerceEducateRosterIdentityQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceEducateRosterIdentityIdentifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceEducateRosterIdentityBindResponse.cs" />
@@ -6726,12 +6727,15 @@
     <Compile Include="Response\AlipayCloudCloudrunAppserviceBatchqueryResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoTravelWeatherQueryResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoTravelPartnerTriggerResponse.cs" />
+    <Compile Include="Response\AlipayCloudCloudpromoTravelPartnerRecommendResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoTravelPartnerQuitResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoTravelPartnerQueryResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoTicketOrdersUploadResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoTicketOrderUploadResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoTicketOrderSyncResponse.cs" />
+    <Compile Include="Response\AlipayCloudCloudpromoRoutePolylineQueryResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoQueuePushSyncResponse.cs" />
+    <Compile Include="Response\AlipayCloudCloudpromoPartnerAllpoiQueryResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoMsgQueryResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoMessageTemplateModifyResponse.cs" />
     <Compile Include="Response\AlipayCloudCloudpromoMessageTemplateDeleteResponse.cs" />
@@ -7347,7 +7351,6 @@
     <Compile Include="Response\AlipayDataDataexchangeSchematrtypeRainystestQueryResponse.cs" />
     <Compile Include="Response\AlipayDataDataexchangeSchemasdktypeRainystestQueryResponse.cs" />
     <Compile Include="Response\AlipayDataDataexchangeSchemaprodwiceRainystestQueryResponse.cs" />
-    <Compile Include="Response\AlipayDataDataexchangeSchemapretestfirstRainystestQueryResponse.cs" />
     <Compile Include="Response\AlipayDataDataexchangeSchemanullparamRainysthefirtQueryResponse.cs" />
     <Compile Include="Response\AlipayDataDataexchangeSchemainputparamsRainyinoutQueryResponse.cs" />
     <Compile Include="Response\AlipayDataDataexchangeSchemainputparamRainythetwiceQueryResponse.cs" />
@@ -19049,6 +19052,7 @@
     <Compile Include="Domain\AlipayCommerceEducateRosterInfoModifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceEducateRosterInfoDeleteModel.cs" />
     <Compile Include="Domain\AlipayCommerceEducateRosterInfoBatchqueryModel.cs" />
+    <Compile Include="Domain\AlipayCommerceEducateRosterIdentityUnbindModel.cs" />
     <Compile Include="Domain\AlipayCommerceEducateRosterIdentityQueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceEducateRosterIdentityIdentifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceEducateRosterIdentityBindModel.cs" />
@@ -19405,12 +19409,15 @@
     <Compile Include="Domain\AlipayCloudCloudrunAppserviceBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoTravelWeatherQueryModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoTravelPartnerTriggerModel.cs" />
+    <Compile Include="Domain\AlipayCloudCloudpromoTravelPartnerRecommendModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoTravelPartnerQuitModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoTravelPartnerQueryModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoTicketOrderUploadModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoTicketOrderSyncModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoTicketOrdersUploadModel.cs" />
+    <Compile Include="Domain\AlipayCloudCloudpromoRoutePolylineQueryModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoQueuePushSyncModel.cs" />
+    <Compile Include="Domain\AlipayCloudCloudpromoPartnerAllpoiQueryModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoMsgQueryModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoMessageTemplateModifyModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoMessageTemplateDeleteModel.cs" />
@@ -20188,12 +20195,10 @@
     <Compile Include="Domain\AlipayDataDataexchangeSchemanullparamRainysthefirtQueryModel.cs" />
     <Compile Include="Domain\AlipaySecurityProdSchemaopenidtestRainystestQueryModel.cs" />
     <Compile Include="Domain\RainyComplexTypeRefWeakFirst.cs" />
-    <Compile Include="Domain\RainyAa.cs" />
     <Compile Include="Domain\AlipayDataDataserviceProdtestQueryModel.cs" />
     <Compile Include="Domain\AlipayOpenAppTestPayModel.cs" />
     <Compile Include="Domain\AlipayDataDataserviceSchemaprodfirstRainysQueryModel.cs" />
     <Compile Include="Domain\AlipayDataDataexchangeSchemainputparamRainythetwiceQueryModel.cs" />
-    <Compile Include="Domain\RainyAaA.cs" />
     <Compile Include="Domain\AlipayDataDataserviceSchemaapitesttoRainysQueryModel.cs" />
     <Compile Include="Domain\AlipayDataDataexchangeSchemainputparamsRainyinoutQueryModel.cs" />
     <Compile Include="Domain\SsdataDataserviceRpcQueryModel.cs" />
@@ -20209,10 +20214,7 @@
     <Compile Include="Domain\RainyComplexTypesTheSecond.cs" />
     <Compile Include="Domain\ApiScheameTwo.cs" />
     <Compile Include="Domain\AlipayOpenAppHexidemoModifyModel.cs" />
-    <Compile Include="Domain\AlipayDataDataexchangeSchemapretestfirstRainystestQueryModel.cs" />
     <Compile Include="Domain\AlipayDataDataexchangeSchematrtypeRainystestQueryModel.cs" />
-    <Compile Include="Domain\RainyAAA.cs" />
-    <Compile Include="Domain\RainyWeakRefFourth.cs" />
     <Compile Include="Domain\AlipayPcreditSdkQueryModel.cs" />
     <Compile Include="Domain\KoubeiMemberDataOnlinetestRainystestQueryModel.cs" />
     <Compile Include="Domain\RainyComplexTypesRefWeakFirst.cs" />
@@ -26526,6 +26528,7 @@
     <Compile Include="Request\AlipayCommerceEducateRosterInfoModifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceEducateRosterInfoDeleteRequest.cs" />
     <Compile Include="Request\AlipayCommerceEducateRosterInfoBatchqueryRequest.cs" />
+    <Compile Include="Request\AlipayCommerceEducateRosterIdentityUnbindRequest.cs" />
     <Compile Include="Request\AlipayCommerceEducateRosterIdentityQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceEducateRosterIdentityIdentifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceEducateRosterIdentityBindRequest.cs" />
@@ -26892,12 +26895,15 @@
     <Compile Include="Request\AlipayCloudCloudrunAppserviceBatchqueryRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoTravelWeatherQueryRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoTravelPartnerTriggerRequest.cs" />
+    <Compile Include="Request\AlipayCloudCloudpromoTravelPartnerRecommendRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoTravelPartnerQuitRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoTravelPartnerQueryRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoTicketOrdersUploadRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoTicketOrderUploadRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoTicketOrderSyncRequest.cs" />
+    <Compile Include="Request\AlipayCloudCloudpromoRoutePolylineQueryRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoQueuePushSyncRequest.cs" />
+    <Compile Include="Request\AlipayCloudCloudpromoPartnerAllpoiQueryRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoMsgQueryRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoMessageTemplateModifyRequest.cs" />
     <Compile Include="Request\AlipayCloudCloudpromoMessageTemplateDeleteRequest.cs" />
@@ -27513,7 +27519,6 @@
     <Compile Include="Request\AlipayDataDataexchangeSchematrtypeRainystestQueryRequest.cs" />
     <Compile Include="Request\AlipayDataDataexchangeSchemasdktypeRainystestQueryRequest.cs" />
     <Compile Include="Request\AlipayDataDataexchangeSchemaprodwiceRainystestQueryRequest.cs" />
-    <Compile Include="Request\AlipayDataDataexchangeSchemapretestfirstRainystestQueryRequest.cs" />
     <Compile Include="Request\AlipayDataDataexchangeSchemanullparamRainysthefirtQueryRequest.cs" />
     <Compile Include="Request\AlipayDataDataexchangeSchemainputparamsRainyinoutQueryRequest.cs" />
     <Compile Include="Request\AlipayDataDataexchangeSchemainputparamRainythetwiceQueryRequest.cs" />

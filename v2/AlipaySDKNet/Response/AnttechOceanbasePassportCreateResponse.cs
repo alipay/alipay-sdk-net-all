@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AnttechOceanbasePassportCreateResponse : AopResponse
     {
         /// <summary>
+        /// 实体角色id
+        /// </summary>
+        [XmlElement("entity_role_id")]
+        public string EntityRoleId { get; set; }
+
+        /// <summary>
         /// 用户通行证id
         /// </summary>
         [XmlElement("passport_id")]

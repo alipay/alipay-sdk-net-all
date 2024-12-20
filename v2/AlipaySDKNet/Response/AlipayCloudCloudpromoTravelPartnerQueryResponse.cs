@@ -23,10 +23,34 @@ namespace Aop.Api.Response
         public string AttractionsCount { get; set; }
 
         /// <summary>
+        /// 当前播报语音讲解的景点POI
+        /// </summary>
+        [XmlElement("audio_poi_info")]
+        public PoiInfoVo AudioPoiInfo { get; set; }
+
+        /// <summary>
         /// 预计消耗卡路里
         /// </summary>
         [XmlElement("calorie")]
         public string Calorie { get; set; }
+
+        /// <summary>
+        /// 已游览景点数
+        /// </summary>
+        [XmlElement("current_attraction_count")]
+        public string CurrentAttractionCount { get; set; }
+
+        /// <summary>
+        /// 已游玩距离，如540米，1.2千米
+        /// </summary>
+        [XmlElement("current_distance")]
+        public string CurrentDistance { get; set; }
+
+        /// <summary>
+        /// 已游玩时长，如20分钟，1时13分，1天
+        /// </summary>
+        [XmlElement("current_duration")]
+        public string CurrentDuration { get; set; }
 
         /// <summary>
         /// 当前POI景点信息
@@ -45,6 +69,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("duration")]
         public string Duration { get; set; }
+
+        /// <summary>
+        /// 当前路线是否已经走完
+        /// </summary>
+        [XmlElement("finish_view")]
+        public bool FinishView { get; set; }
 
         /// <summary>
         /// 介绍

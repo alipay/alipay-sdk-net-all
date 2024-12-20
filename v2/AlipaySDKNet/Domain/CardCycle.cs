@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CycleType { get; set; }
 
         /// <summary>
-        /// 根据周期计费类型来传递参数值 1.固定日期开始扣费，需要传入周几（1-7）或每月几号（1-28）开始扣费 2.指定固定天数后开始扣费，需要传入具体多少天（0-30）
+        /// 根据周期计费类型来传递参数值 1.固定日期开始扣费，需要传入周几（1-7）或每月几号（1-28）开始扣费 2.指定固定天数后开始扣费，需要传入具体多少天（0-60）
         /// </summary>
         [XmlElement("cycle_value")]
         public string CycleValue { get; set; }

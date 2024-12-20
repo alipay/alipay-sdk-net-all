@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public List<string> ImgList { get; set; }
 
         /// <summary>
+        /// 景点的一句话介绍
+        /// </summary>
+        [XmlElement("introduction")]
+        public string Introduction { get; set; }
+
+        /// <summary>
         /// 景点ID
         /// </summary>
         [XmlElement("item_id")]
@@ -70,6 +76,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("latitude")]
         public string Latitude { get; set; }
+
+        /// <summary>
+        /// 两景点间推荐交通方式
+        /// </summary>
+        [XmlElement("line_type")]
+        public string LineType { get; set; }
 
         /// <summary>
         /// 经度
@@ -103,6 +115,13 @@ namespace Aop.Api.Domain
         public string PoiType { get; set; }
 
         /// <summary>
+        /// 当前位置到景点的推荐路线经纬度坐标列表
+        /// </summary>
+        [XmlArray("polyline")]
+        [XmlArrayItem("string")]
+        public List<string> Polyline { get; set; }
+
+        /// <summary>
         /// 关联的商家
         /// </summary>
         [XmlArray("related_merchant_list")]
@@ -127,5 +146,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("title")]
         public string Title { get; set; }
+
+        /// <summary>
+        /// 路线预计长度，单位米
+        /// </summary>
+        [XmlElement("travel_distance")]
+        public string TravelDistance { get; set; }
+
+        /// <summary>
+        /// 路线预计耗时，如10分钟，1时1分
+        /// </summary>
+        [XmlElement("travel_duration")]
+        public string TravelDuration { get; set; }
     }
 }

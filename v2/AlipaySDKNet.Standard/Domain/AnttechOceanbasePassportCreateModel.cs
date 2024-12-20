@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Email { get; set; }
 
         /// <summary>
+        /// 阿里云精选买家
+        /// </summary>
+        [XmlElement("entity_role_type")]
+        public string EntityRoleType { get; set; }
+
+        /// <summary>
         /// 手机号  取值为加密后的手机号码
         /// </summary>
         [XmlElement("mobile_phone")]
