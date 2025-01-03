@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public RentCustomerDetail CustomerDetail { get; set; }
 
         /// <summary>
-        /// 客户唯一标识： 当 customer_type = MOBILE 时，填写11位手机号； 当 customer_type = CERT_NO 时，填写18位或15位身份证号； 当 customer_type = MOBILE_SHA256 时，填写手机号的 SHA256 值； 当 customer_type = CERT_NO_SHA256 时，填写证件号的 SHA256 值； 当 customer_type = ALIPAY_USER_ID 时，填写支付宝账户 UserId。
+        /// 客户唯一标识： 当 customer_type = MOBILE 时，填写11位手机号； 当 customer_type = CERT_NO 时，填写18位或15位身份证号； 当 customer_type = MOBILE_SHA256 时，填写手机号的 SHA256 值； 当 customer_type = CERT_NO_SHA256 时，填写证件号的 SHA256 值； 当 customer_type = ALIPAY_USER_ID 时，填写支付宝账户 UserId； 当 customer_type = ALIPAY_OPEN_ID 时，填写支付宝账户 OpenId
         /// </summary>
         [XmlElement("customer_id")]
         public string CustomerId { get; set; }
 
         /// <summary>
-        /// 客户支付宝OPENID 当customer_type=ALIPAY_OPENID时，传入支付宝账户OPENID
+        /// 客户支付宝OpenId 当前字段已废弃(针对用户标识字段，在入参上做收口，建议统一用customer_id+customer_type的方式)
         /// </summary>
         [XmlElement("customer_open_id")]
         public string CustomerOpenId { get; set; }

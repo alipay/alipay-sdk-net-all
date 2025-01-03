@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Zxbd { get; set; }
 
         /// <summary>
-        /// 身份证号码/组织机构代码
+        /// 组织机构代码
         /// </summary>
         [XmlElement("zzjgdm")]
         public string Zzjgdm { get; set; }

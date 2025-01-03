@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string FileName { get; set; }
 
         /// <summary>
+        /// 签署类型
+        /// </summary>
+        [XmlElement("file_sign_type")]
+        public string FileSignType { get; set; }
+
+        /// <summary>
         /// 文件下载的http链接
         /// </summary>
         [XmlElement("file_url")]

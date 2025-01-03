@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ContractAmount { get; set; }
 
         /// <summary>
-        /// 软件订阅年限
+        /// 软件订阅年限，输入1则为1年
         /// </summary>
         [XmlElement("software_subscription_years")]
         public string SoftwareSubscriptionYears { get; set; }

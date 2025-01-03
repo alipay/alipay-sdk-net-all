@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class IssueQuotaCheckInfo : AopObject
     {
         /// <summary>
-        /// 发放金额
+        /// 发放点券和余额时，单位为元，发放次卡时，单位为次
         /// </summary>
         [XmlElement("issue_quota")]
         public string IssueQuota { get; set; }

@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// JSON格式，传递业务扩展参数。
+        /// </summary>
+        [XmlElement("business_params")]
+        public string BusinessParams { get; set; }
+
+        /// <summary>
         /// 多步转账明细
         /// </summary>
         [XmlArray("order_details")]

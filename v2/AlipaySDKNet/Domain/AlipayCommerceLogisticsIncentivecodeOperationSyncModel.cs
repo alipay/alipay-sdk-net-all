@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceLogisticsIncentivecodeOperationSyncModel : AopObject
     {
         /// <summary>
-        /// 支付宝交易号
+        /// 支付宝交易号 当前字段已废弃(支付成功相关参数，迁移到alipay.commerce.logistics.trade.event.sync接口)
         /// </summary>
         [XmlElement("alipay_trade_no")]
         public string AlipayTradeNo { get; set; }
 
         /// <summary>
-        /// 支付宝交易成功状态
+        /// 支付宝交易成功状态 当前字段已废弃(支付成功相关参数，迁移到alipay.commerce.logistics.trade.event.sync接口)
         /// </summary>
         [XmlElement("alipay_trade_status")]
         public string AlipayTradeStatus { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string LogisticsCode { get; set; }
 
         /// <summary>
-        /// SCAN(用户扫码) SEND_ORDER(用户寄件下单) RECEIVE_SUCCESS（揽收成功） PAY_SUCCESS(完成支付)
+        /// SCAN(用户扫码) SEND_ORDER(用户寄件下单) RECEIVE_SUCCESS（揽收成功）
         /// </summary>
         [XmlElement("operation_dynamic_sales_type")]
         public string OperationDynamicSalesType { get; set; }
@@ -82,19 +82,19 @@ namespace Aop.Api.Domain
         public string OrderNo { get; set; }
 
         /// <summary>
-        /// 支付完成页面链接（支付宝小程序链接）
+        /// 支付完成页面链接（支付宝小程序链接） 当前字段已废弃(支付成功相关参数，迁移到alipay.commerce.logistics.trade.event.sync接口)
         /// </summary>
         [XmlElement("pay_finish_url")]
         public string PayFinishUrl { get; set; }
 
         /// <summary>
-        /// 待支付页面链接（支付宝小程序链接） 当用户下单后有待支付链接请传
+        /// 待支付页面链接（支付宝小程序链接） 当用户下单后有待支付链接请传 当前字段已废弃(支付成功相关参数，迁移到alipay.commerce.logistics.trade.event.sync接口)
         /// </summary>
         [XmlElement("pay_url")]
         public string PayUrl { get; set; }
 
         /// <summary>
-        /// 运单号
+        /// 运单号 当前字段已废弃(支付成功相关参数，迁移到alipay.commerce.logistics.trade.event.sync接口)
         /// </summary>
         [XmlElement("waybill_no")]
         public string WaybillNo { get; set; }

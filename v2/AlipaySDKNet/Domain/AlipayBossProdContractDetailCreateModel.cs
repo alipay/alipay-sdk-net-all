@@ -89,6 +89,12 @@ namespace Aop.Api.Domain
         public List<OpenApiPartnerSaDTO> OppositeParts { get; set; }
 
         /// <summary>
+        /// 数据处理关系枚举值，ENTRUST("ENTRUST", "委托处理"),CROSS_OU("CROSS_OU", "跨主体数据采集/共享"),OTHER("OTHER", "其他")
+        /// </summary>
+        [XmlElement("ou_data_relationship")]
+        public string OuDataRelationship { get; set; }
+
+        /// <summary>
         /// 我方主体名称
         /// </summary>
         [XmlArray("our_parts")]
@@ -107,6 +113,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("source_system_id")]
         public string SourceSystemId { get; set; }
+
+        /// <summary>
+        /// 合同模版
+        /// </summary>
+        [XmlArray("template_files")]
+        [XmlArrayItem("open_api_contract_file_sa_d_t_o")]
+        public List<OpenApiContractFileSaDTO> TemplateFiles { get; set; }
 
         /// <summary>
         /// 租户

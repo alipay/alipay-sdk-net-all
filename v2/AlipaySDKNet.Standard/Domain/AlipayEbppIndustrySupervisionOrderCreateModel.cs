@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
+
+        /// <summary>
+        /// 冻资订单所需用户签署协议列表
+        /// </summary>
+        [XmlArray("authorization_list")]
+        [XmlArrayItem("string")]
+        public List<string> AuthorizationList { get; set; }
 
         /// <summary>
         /// 业务场景

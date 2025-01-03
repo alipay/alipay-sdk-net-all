@@ -132,10 +132,16 @@ namespace Aop.Api.Domain
         public string GeneralAgentCooperationType { get; set; }
 
         /// <summary>
-        /// id
+        /// id，商机ID
         /// </summary>
         [XmlElement("id")]
         public long Id { get; set; }
+
+        /// <summary>
+        /// 0=否  1=是
+        /// </summary>
+        [XmlElement("if_resource_pool")]
+        public string IfResourcePool { get; set; }
 
         /// <summary>
         /// 是否招投标0是1否
@@ -265,7 +271,7 @@ namespace Aop.Api.Domain
         public string PartnerName { get; set; }
 
         /// <summary>
-        /// 预计个集群对应存储空间大小（公共云）
+        /// 预计个集群对应存储空间大小（公共云），单位由predict_clusters_storage_unit字段来决定
         /// </summary>
         [XmlElement("predict_clusters_storage_capacity")]
         public long PredictClustersStorageCapacity { get; set; }
@@ -301,7 +307,7 @@ namespace Aop.Api.Domain
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// 公有云：触达中/交流中/测试中/商务中/使用中/Upsell/下线 专有云：潜在商机/确认商机/方案沟通/商务谈判?中标/签约中 已签约/项目关闭
+        /// 公有云：触达中/交流中/测试中/商务中/公有云-使用中/Upsell/下线 专有云：潜在商机/确认商机/方案沟通/商务谈判?中标/签约中 已签约/专有云-使用中/项目关闭
         /// </summary>
         [XmlElement("project_phase")]
         public string ProjectPhase { get; set; }
@@ -350,7 +356,7 @@ namespace Aop.Api.Domain
         public string Source { get; set; }
 
         /// <summary>
-        /// 商机类型，枚举值{独立项目0，框架项目1，订单项目2}
+        /// 商机类型，{独立项目0，框架项目1，订单项目2}
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

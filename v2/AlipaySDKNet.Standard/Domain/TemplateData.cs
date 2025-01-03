@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class TemplateData : AopObject
     {
         /// <summary>
+        /// 返回预期页面的数据
+        /// </summary>
+        [XmlElement("content")]
+        public string Content { get; set; }
+
+        /// <summary>
         /// 卡片id
         /// </summary>
         [XmlElement("id")]

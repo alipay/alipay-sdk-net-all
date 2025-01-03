@@ -17,6 +17,24 @@ namespace Aop.Api.Response
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 外部业务单号
+        /// </summary>
+        [XmlElement("out_trade_no")]
+        public string OutTradeNo { get; set; }
+
+        /// <summary>
+        /// 代扣委托调度中
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 当前代扣任务总扣款金额
+        /// </summary>
+        [XmlElement("total_deduct")]
+        public string TotalDeduct { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

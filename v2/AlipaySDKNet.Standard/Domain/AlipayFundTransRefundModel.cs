@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFundTransRefundModel : AopObject
     {
         /// <summary>
+        /// 场景码
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
+        /// <summary>
         /// JSON格式，传递业务扩展参数，使用前请与支付宝工程师联系！
         /// </summary>
         [XmlElement("business_params")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("passback_params")]
         public string PassbackParams { get; set; }
+
+        /// <summary>
+        /// 产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
 
         /// <summary>
         /// 需要退款的金额，该金额不能大于订单金额,单位为元，支持两位小数

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AlipayOrderNo { get; set; }
 
         /// <summary>
+        /// 渠道
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// 结果码
         /// </summary>
         [XmlElement("code")]

@@ -10,10 +10,22 @@ namespace Aop.Api.Domain
     public class OpenApiPartnerSaDTO : AopObject
     {
         /// <summary>
+        /// 关键字索引
+        /// </summary>
+        [XmlElement("keyword_index")]
+        public string KeywordIndex { get; set; }
+
+        /// <summary>
         /// 公司主体号
         /// </summary>
         [XmlElement("ou_code")]
         public string OuCode { get; set; }
+
+        /// <summary>
+        /// 公司主体id
+        /// </summary>
+        [XmlElement("ou_id")]
+        public string OuId { get; set; }
 
         /// <summary>
         /// 签约主体名称

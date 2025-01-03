@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AccountBookId { get; set; }
 
         /// <summary>
+        /// 资金专户外表卡信息
+        /// </summary>
+        [XmlElement("account_card_info")]
+        public TransInCardInfo AccountCardInfo { get; set; }
+
+        /// <summary>
         /// 资金专户可用余额，最多两位小数（元）
         /// </summary>
         [XmlElement("available_amount")]

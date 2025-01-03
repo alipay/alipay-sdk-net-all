@@ -61,6 +61,13 @@ namespace Aop.Api.Domain
         public string BusinessLineCode { get; set; }
 
         /// <summary>
+        /// docusign抄送人集合
+        /// </summary>
+        [XmlArray("carbon_copies")]
+        [XmlArrayItem("carbon_copies")]
+        public List<CarbonCopies> CarbonCopies { get; set; }
+
+        /// <summary>
         /// 合同id
         /// </summary>
         [XmlElement("contract_id")]

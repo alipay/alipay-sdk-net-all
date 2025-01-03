@@ -28,10 +28,28 @@ namespace Aop.Api.Domain
         public string ExpressmanUserId { get; set; }
 
         /// <summary>
+        /// 激励码值
+        /// </summary>
+        [XmlElement("incentive_code")]
+        public string IncentiveCode { get; set; }
+
+        /// <summary>
         /// 商户标识（接口调用方的渠道编码，由支付宝分配）
         /// </summary>
         [XmlElement("logistics_code")]
         public string LogisticsCode { get; set; }
+
+        /// <summary>
+        /// ALIPAY 支付宝操作渠道 OTHER 其他渠道
+        /// </summary>
+        [XmlElement("operation_source")]
+        public string OperationSource { get; set; }
+
+        /// <summary>
+        /// 订单号
+        /// </summary>
+        [XmlElement("order_no")]
+        public string OrderNo { get; set; }
 
         /// <summary>
         /// 支付者用户标识

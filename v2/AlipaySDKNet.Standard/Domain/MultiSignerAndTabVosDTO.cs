@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class MultiSignerAndTabVosDTO : AopObject
     {
         /// <summary>
+        /// ture表示自动签署，false表示手动签署。不传默认false
+        /// </summary>
+        [XmlElement("auto")]
+        public bool Auto { get; set; }
+
+        /// <summary>
         /// 电子邮件主题 最大99个字
         /// </summary>
         [XmlElement("email_body")]

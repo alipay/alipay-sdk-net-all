@@ -75,6 +75,18 @@ namespace Aop.Api.Response
         public string PayFundOrderId { get; set; }
 
         /// <summary>
+        /// 收款方支付宝账号openid
+        /// </summary>
+        [XmlElement("receiver_open_id")]
+        public string ReceiverOpenId { get; set; }
+
+        /// <summary>
+        /// 收款方支付宝账号uid
+        /// </summary>
+        [XmlElement("receiver_user_id")]
+        public string ReceiverUserId { get; set; }
+
+        /// <summary>
         /// 金融机构发起签约类、支付类、差错类业务时，应为每笔业务分配唯一的交易流水号。31位交易流水号组成规则为：“8位日期”+“16位序列号”+“1位预留位”+“6位控制位”，其中： a）“8位日期”为系统当前日期，ISODate格式：“YYYYMMDD” b）“16位序列号”由金融机构生成，金融机构应确保该值在网联当日唯一 c）“1位预留位”由平台分配 d）“6位控制位”由金融机构通过平台获取 例如：2023052993044491260542090100400
         /// </summary>
         [XmlElement("settle_serial_no")]
@@ -103,6 +115,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("sub_order_status")]
         public string SubOrderStatus { get; set; }
+
+        /// <summary>
+        /// 转账单据子状态，SUCCESS：二阶段转账领取成功；REFUNDED：二阶段转账退款
+        /// </summary>
+        [XmlElement("sub_status")]
+        public string SubStatus { get; set; }
 
         /// <summary>
         /// 付款金额，收银台场景下付款成功后的支付金额，订单状态为SUCCESS才返回，其他状态不返回。付款金额，单位为元，精确到小数点后两位。

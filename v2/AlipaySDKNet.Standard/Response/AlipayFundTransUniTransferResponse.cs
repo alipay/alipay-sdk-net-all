@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string Amount { get; set; }
 
         /// <summary>
+        /// 访问链接，用于多阶段转账时，后续阶段跳转支付宝端内领取阵地使用
+        /// </summary>
+        [XmlElement("link")]
+        public string Link { get; set; }
+
+        /// <summary>
         /// 支付宝转账订单号
         /// </summary>
         [XmlElement("order_id")]
@@ -43,6 +49,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 转账单据子状态。 SUCCESS（二阶段转账到支付宝账户领取成功）： REFUNDED：退款（二阶段转账到支付宝账户退款）；
+        /// </summary>
+        [XmlElement("sub_status")]
+        public string SubStatus { get; set; }
 
         /// <summary>
         /// 订单支付时间，格式为yyyy-MM-dd HH:mm:ss

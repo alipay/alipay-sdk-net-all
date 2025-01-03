@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string Currency { get; set; }
 
         /// <summary>
+        /// 行业内部受理当前请求后的受理操作单号。
+        /// </summary>
+        [XmlElement("operate_no")]
+        public string OperateNo { get; set; }
+
+        /// <summary>
         /// 请求参数中的外部流水号
         /// </summary>
         [XmlElement("out_flow_id")]

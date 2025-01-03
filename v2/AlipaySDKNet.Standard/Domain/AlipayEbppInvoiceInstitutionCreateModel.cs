@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string AccountId { get; set; }
 
         /// <summary>
-        /// 制度适配范围
+        /// 制度适配范围 当前字段已废弃(请使用institution_scope_info中adapter_type)
         /// </summary>
         [XmlElement("adapter_type")]
         public string AdapterType { get; set; }
@@ -77,6 +77,12 @@ namespace Aop.Api.Domain
         public string InstitutionName { get; set; }
 
         /// <summary>
+        /// 制度适用范围信息
+        /// </summary>
+        [XmlElement("institution_scope_info")]
+        public InstitutionScopeInfo InstitutionScopeInfo { get; set; }
+
+        /// <summary>
         /// 发放规则列表
         /// </summary>
         [XmlArray("issue_rule_info_list")]
@@ -90,21 +96,21 @@ namespace Aop.Api.Domain
         public string OuterSourceId { get; set; }
 
         /// <summary>
-        /// 适配id列表
+        /// 适配id列表 当前字段已废弃(请使用institution_scope_info中owner_id_list)
         /// </summary>
         [XmlArray("owner_id_list")]
         [XmlArrayItem("string")]
         public List<string> OwnerIdList { get; set; }
 
         /// <summary>
-        /// 适配开放id列表
+        /// 适配开放id列表 当前字段已废弃(仅存量使用员工支付宝id配置适配范围的场景需要该字段，新对接方案不推荐使用员工支付宝id)
         /// </summary>
         [XmlArray("owner_open_id_list")]
         [XmlArrayItem("string")]
         public List<string> OwnerOpenIdList { get; set; }
 
         /// <summary>
-        /// 适配id类型
+        /// 适配id类型 当前字段已废弃(请使用institution_scope_info中owner_type)
         /// </summary>
         [XmlElement("owner_type")]
         public string OwnerType { get; set; }

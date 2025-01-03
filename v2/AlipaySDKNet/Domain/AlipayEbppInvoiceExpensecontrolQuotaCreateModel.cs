@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -52,31 +53,38 @@ namespace Aop.Api.Domain
         public string IssueName { get; set; }
 
         /// <summary>
+        /// 创建额度发放明细列表
+        /// </summary>
+        [XmlArray("issue_quota_target_list")]
+        [XmlArrayItem("issue_target_info_content")]
+        public List<IssueTargetInfoContent> IssueQuotaTargetList { get; set; }
+
+        /// <summary>
         /// 外部操作幂等ID，标识创建额度的唯一性，防止重复创建
         /// </summary>
         [XmlElement("outer_source_id")]
         public string OuterSourceId { get; set; }
 
         /// <summary>
-        /// 额度所属者ID（未切换open_id请使用此字段）：
+        /// 额度所属者ID（未切换open_id请使用此字段）： 当前字段已废弃(字段升级，请使用issue_target_info_list中owner_id字段)
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// 额度所属者ID（切换open_id后请使用此字段）：
+        /// 额度所属者ID（切换open_id后请使用此字段）： 当前字段已废弃(字段升级，请使用issue_quota_target_list中owner_open_id)
         /// </summary>
         [XmlElement("owner_open_id")]
         public string OwnerOpenId { get; set; }
 
         /// <summary>
-        /// 额度所属者类型
+        /// 额度所属者类型 当前字段已废弃(字段升级，请使用issue_quota_target_list中owner_type字段)
         /// </summary>
         [XmlElement("owner_type")]
         public string OwnerType { get; set; }
 
         /// <summary>
-        /// 外部平台编码（通常为接入方大写英文缩写）
+        /// 外部平台编码（通常为接入方大写英文缩写） 当前字段已废弃(历史版本字段，不推荐使用)
         /// </summary>
         [XmlElement("platform")]
         public string Platform { get; set; }
@@ -88,7 +96,7 @@ namespace Aop.Api.Domain
         public string QuotaType { get; set; }
 
         /// <summary>
-        /// 额度值，以（分）为单位
+        /// 额度值，以（分）为单位 当前字段已废弃(字段升级，请使用issue_quota_target_list中issue_quota字段)
         /// </summary>
         [XmlElement("quota_value")]
         public string QuotaValue { get; set; }

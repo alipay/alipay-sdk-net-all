@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceGasMemberInstQueryModel : AopObject
     {
         /// <summary>
+        /// 机构侧会员唯一标识
+        /// </summary>
+        [XmlElement("member_no")]
+        public string MemberNo { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

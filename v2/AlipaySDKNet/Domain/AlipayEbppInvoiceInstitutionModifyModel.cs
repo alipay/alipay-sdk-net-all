@@ -68,5 +68,23 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("institution_name")]
         public string InstitutionName { get; set; }
+
+        /// <summary>
+        /// 修改的发放规则详情
+        /// </summary>
+        [XmlElement("modify_issue_rule_detail_info")]
+        public ModifyIssueRuleDetailInfo ModifyIssueRuleDetailInfo { get; set; }
+
+        /// <summary>
+        /// 制度下适用范围修改信息
+        /// </summary>
+        [XmlElement("modify_scope_info")]
+        public ModifyScopeInfo ModifyScopeInfo { get; set; }
+
+        /// <summary>
+        /// 修改的使用规则详情
+        /// </summary>
+        [XmlElement("modify_standard_detail_info")]
+        public ModifyStandardDetailInfo ModifyStandardDetailInfo { get; set; }
     }
 }

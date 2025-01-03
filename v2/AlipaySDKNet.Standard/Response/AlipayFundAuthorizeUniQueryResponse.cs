@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// true（已授权电子回单）
+        /// </summary>
+        [XmlElement("authorize_electronic_receipt")]
+        public bool AuthorizeElectronicReceipt { get; set; }
+
+        /// <summary>
         /// 业务场景码
         /// </summary>
         [XmlElement("biz_scene")]
@@ -37,6 +43,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 标准制单授权（FUND_AUTHORIZE_FLOW）
+        /// </summary>
+        [XmlElement("personal_product_code")]
+        public string PersonalProductCode { get; set; }
 
         /// <summary>
         /// 业务产品码

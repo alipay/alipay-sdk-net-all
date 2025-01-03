@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("passport_id")]
         public string PassportId { get; set; }
+
+        /// <summary>
+        /// 用户的出生年份
+        /// </summary>
+        [XmlElement("year_of_birth")]
+        public string YearOfBirth { get; set; }
     }
 }
