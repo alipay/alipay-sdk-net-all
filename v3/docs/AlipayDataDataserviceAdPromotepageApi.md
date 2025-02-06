@@ -147,8 +147,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var startDate = 2020-12-12;  // string | 留资开始日期，格式：yyyy-mm-dd，不能早于30天前 (optional) 
-            var endDate = 2020-12-13;  // string | 留资结束日期，格式：yyyy-mm-dd；不能晚于当天 (optional) 
+            var startDate = 2020-12-12 00:00:00;  // string | 留资开始日期，格式：yyyy-mm-dd 或 yyyy-mm-dd hh:mm:ss;不能早于30天前 (optional) 
+            var endDate = 2020-12-13 23:59:59;  // string | 留资结束日期，格式：yyyy-mm-dd 或 yyyy-mm-dd hh:mm:ss;不能晚于当天 (optional) 
             var pageNo = 1;  // int? | 分页参数之页数，从1开始 (optional) 
             var pageSize = 100;  // int? | 分页参数之每页大小，最大1000 (optional) 
             var bizToken = HYjofejnnlp89730202bcklHH;  // string | 代理商访问灯火平台的token (optional) 
@@ -176,8 +176,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **string**| 留资开始日期，格式：yyyy-mm-dd，不能早于30天前 | [optional] 
- **endDate** | **string**| 留资结束日期，格式：yyyy-mm-dd；不能晚于当天 | [optional] 
+ **startDate** | **string**| 留资开始日期，格式：yyyy-mm-dd 或 yyyy-mm-dd hh:mm:ss;不能早于30天前 | [optional] 
+ **endDate** | **string**| 留资结束日期，格式：yyyy-mm-dd 或 yyyy-mm-dd hh:mm:ss;不能晚于当天 | [optional] 
  **pageNo** | **int?**| 分页参数之页数，从1开始 | [optional] 
  **pageSize** | **int?**| 分页参数之每页大小，最大1000 | [optional] 
  **bizToken** | **string**| 代理商访问灯火平台的token | [optional] 

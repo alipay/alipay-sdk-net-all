@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **Query**
-> AlipayDataBillBizfundagentQueryResponseModel Query (string startTime = null, string endTime = null, string pageNo = null, string pageSize = null, string agreementNo = null, string accountBookId = null)
+> AlipayDataBillBizfundagentQueryResponseModel Query (string startTime = null, string endTime = null, string pageNo = null, string pageSize = null, string agreementType = null, string agreementNo = null, string accountBookId = null)
 
 ISV代理商户资金业务账单查询
 
@@ -53,13 +53,14 @@ namespace Example
             var endTime = 2021-02-01 00:00:00;  // string | 账单查询时间范围 - - 结束范围。时间范围最大不超过31天。 (optional) 
             var pageNo = 1;  // string | 页码，从1开始 (optional) 
             var pageSize = 2000;  // string | 分页大小1000-2000，默认2000 (optional) 
+            var agreementType = FUND_SAFT_SIGN_WITHHOLDING_P;  // string | 根据不同业务协议类型，传入不同参数。传入协议产品码（personal_product_code，通过协议查询接口、协议签约通知响应参数获取），不填的话默认按照示例值传入。 安全发协议：FUND_SAFT_SIGN_WITHHOLDING_P 专用金协议：FLEXIBLE_EMPLOYMENT_SERVICE_P (optional) 
             var agreementNo = 20205215001418078112;  // string | ISV与商户授权协议号 (optional) 
             var accountBookId = 20880123456789012;  // string | 记账本id，服务商在帮助商户开通时候获取的唯一身份号 (optional) 
 
             try
             {
                 // ISV代理商户资金业务账单查询
-                AlipayDataBillBizfundagentQueryResponseModel result = apiInstance.Query(startTime, endTime, pageNo, pageSize, agreementNo, accountBookId);
+                AlipayDataBillBizfundagentQueryResponseModel result = apiInstance.Query(startTime, endTime, pageNo, pageSize, agreementType, agreementNo, accountBookId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -81,6 +82,7 @@ Name | Type | Description  | Notes
  **endTime** | **string**| 账单查询时间范围 - - 结束范围。时间范围最大不超过31天。 | [optional] 
  **pageNo** | **string**| 页码，从1开始 | [optional] 
  **pageSize** | **string**| 分页大小1000-2000，默认2000 | [optional] 
+ **agreementType** | **string**| 根据不同业务协议类型，传入不同参数。传入协议产品码（personal_product_code，通过协议查询接口、协议签约通知响应参数获取），不填的话默认按照示例值传入。 安全发协议：FUND_SAFT_SIGN_WITHHOLDING_P 专用金协议：FLEXIBLE_EMPLOYMENT_SERVICE_P | [optional] 
  **agreementNo** | **string**| ISV与商户授权协议号 | [optional] 
  **accountBookId** | **string**| 记账本id，服务商在帮助商户开通时候获取的唯一身份号 | [optional] 
 
