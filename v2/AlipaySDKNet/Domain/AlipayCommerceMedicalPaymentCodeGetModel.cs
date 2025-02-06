@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("org_no")]
         public string OrgNo { get; set; }
+
+        /// <summary>
+        /// 通过该参数可以重复获取付款码
+        /// </summary>
+        [XmlElement("out_request_no")]
+        public string OutRequestNo { get; set; }
     }
 }

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string DrugName { get; set; }
 
         /// <summary>
+        /// 药品图片链接
+        /// </summary>
+        [XmlElement("drug_url")]
+        public string DrugUrl { get; set; }
+
+        /// <summary>
         /// 用药说明
         /// </summary>
         [XmlElement("instructions")]

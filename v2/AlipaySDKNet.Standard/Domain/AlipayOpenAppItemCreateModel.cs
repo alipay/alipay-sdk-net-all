@@ -141,7 +141,7 @@ namespace Aop.Api.Domain
         public long StockNum { get; set; }
 
         /// <summary>
-        /// 商品名称，字符类型，最少不低于3，最长不超过60个字。
+        /// 商品名称，字符类型，最少不低于3，最长不超过100个字。
         /// </summary>
         [XmlElement("title")]
         public string Title { get; set; }

@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string BuyUrl { get; set; }
 
         /// <summary>
+        /// 景点当前的舒适度等级
+        /// </summary>
+        [XmlElement("comfort_level")]
+        public string ComfortLevel { get; set; }
+
+        /// <summary>
         /// 中文描述
         /// </summary>
         [XmlElement("description")]
@@ -51,6 +57,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("distance")]
         public string Distance { get; set; }
+
+        /// <summary>
+        /// 景点的历史趣闻
+        /// </summary>
+        [XmlElement("historical_curiosities")]
+        public string HistoricalCuriosities { get; set; }
 
         /// <summary>
         /// 景点图片

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class JobAddress : AopObject
     {
         /// <summary>
+        /// 地址名称
+        /// </summary>
+        [XmlElement("address_name")]
+        public string AddressName { get; set; }
+
+        /// <summary>
         /// 详细办公地址
         /// </summary>
         [XmlElement("detail")]

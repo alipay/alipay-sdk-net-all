@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public long PeriodValue { get; set; }
 
         /// <summary>
-        /// 【注意】如果指定的期数已经被核销了则不允许延期 【FIXED】将指定期数及后续期数按固定周期延；月卡、季卡必须按照月延期；周卡必须按照周延期；日卡不支持按固定周期延 【APPOINT】将指定期数及后续期数都延长{period_value}天 【RECAST】将指定期数延长{period_value}天，后续期数会自动按周期延
+        /// 【注意】 周期卡：如果指定的期数已经被核销了则不允许延期； 次卡：只能使用APPOINT模式 【FIXED】将指定期数及后续期数按固定周期延；月卡、季卡必须按照月延期；周卡必须按照周延期；日卡不支持按固定周期延 【APPOINT】将指定期数及后续期数都延长{period_value}天 【RECAST】将指定期数延长{period_value}天，后续期数会自动按周期延
         /// </summary>
         [XmlElement("update_type")]
         public string UpdateType { get; set; }

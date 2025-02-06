@@ -126,6 +126,12 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
+        /// 是否可追垫标识（TAG_NO-否，TAG_YES-是）
+        /// </summary>
+        [XmlElement("supplement_tag")]
+        public string SupplementTag { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

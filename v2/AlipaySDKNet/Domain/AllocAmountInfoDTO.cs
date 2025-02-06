@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public RoyaltyDTO BuyOutRoyalty { get; set; }
 
         /// <summary>
+        /// 用于资方明确指定app时使用
+        /// </summary>
+        [XmlElement("invest_app_id")]
+        public string InvestAppId { get; set; }
+
+        /// <summary>
         /// 资方PID，对应合作融资的资方pid
         /// </summary>
         [XmlElement("invest_id")]

@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string AuthorizeLinkType { get; set; }
 
         /// <summary>
+        /// 在authorize_link_type=OUT_SHOR_URL时，返回授权凭证
+        /// </summary>
+        [XmlElement("authorize_token")]
+        public string AuthorizeToken { get; set; }
+
+        /// <summary>
         /// 业务场景码
         /// </summary>
         [XmlElement("biz_scene")]

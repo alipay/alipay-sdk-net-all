@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BankCode { get; set; }
 
         /// <summary>
-        /// 交易使用的资金渠道，详见支付渠道列表<a herf='https://doc.open.alipay.com/doc2/detail?treeId=26&articleId=103259&docType=1'>支付渠道列表</a>
+        /// 交易使用的资金渠道，详见<a herf="https://opendocs.alipay.com/open/08gj4x">支付渠道列表</a>。
         /// </summary>
         [XmlElement("fund_channel")]
         public string FundChannel { get; set; }

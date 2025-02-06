@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
+        /// 展位码
+        /// </summary>
+        [XmlElement("space_code")]
+        public string SpaceCode { get; set; }
+
+        /// <summary>
         /// 数据查询开始日期，时间格式：yyyyMMdd
         /// </summary>
         [XmlElement("start_date")]

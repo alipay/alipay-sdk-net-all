@@ -121,6 +121,13 @@ namespace Aop.Api.Domain
         public string TaskNo { get; set; }
 
         /// <summary>
+        /// 任务标签，如：强意愿用户
+        /// </summary>
+        [XmlArray("task_tags")]
+        [XmlArrayItem("string")]
+        public List<string> TaskTags { get; set; }
+
+        /// <summary>
         /// 任务拉取时该字段无返回内容，确认领取时会返回该字段。
         /// </summary>
         [XmlElement("tel")]

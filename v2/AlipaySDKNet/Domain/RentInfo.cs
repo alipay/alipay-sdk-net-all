@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
+        /// 资方appid
+        /// </summary>
+        [XmlElement("invest_app_id")]
+        public string InvestAppId { get; set; }
+
+        /// <summary>
         /// 订单信息，包含订单信息、商品信息、收货人信息以及价格信息
         /// </summary>
         [XmlElement("order_info")]

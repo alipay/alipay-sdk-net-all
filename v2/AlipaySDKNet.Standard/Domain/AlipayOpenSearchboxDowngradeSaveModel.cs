@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public List<string> BusinessDistrictIds { get; set; }
 
         /// <summary>
-        /// 自定义触发词，最多可配置6个，限1-8个中文字符。 小程序直达不支持设置此项
+        /// 自定义触发词，最多可配置10个，限1-8个中文字符。 小程序直达不支持设置此项
         /// </summary>
         [XmlArray("custom_keywords")]
         [XmlArrayItem("string")]

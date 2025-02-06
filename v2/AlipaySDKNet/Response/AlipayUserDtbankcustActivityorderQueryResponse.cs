@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 流水状态 INIT("INIT", "初始化"),  SUCCESS("SUCCESS", "成功"), FAILED("FAILED", "失败"), PENDING("PENDING", "挂起"),
+        /// 发放流水状态，SUCCESS表示发放成功，FAILED表示发放失败，INIT表示发放处理中，可原单重试发放，勿换单重试，以免导致额外损失
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

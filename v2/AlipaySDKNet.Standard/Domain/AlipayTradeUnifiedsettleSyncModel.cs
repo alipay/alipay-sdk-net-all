@@ -16,10 +16,10 @@ namespace Aop.Api.Domain
         public string AcquireMode { get; set; }
 
         /// <summary>
-        /// 同步流水的类型，支付为PAY_SYNC，退款为REFUND_SYNC
+        /// 订单同步金额，biz_type=PAY_SYNC时为支付金额，biz_type=REFUND_SYNC时为退款金额。
         /// </summary>
-        [XmlElement("biz_type")]
-        public string BizType { get; set; }
+        [XmlElement("amount")]
+        public string Amount { get; set; }
 
         /// <summary>
         /// 扩展字段
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ExternalInstBizDate { get; set; }
 
         /// <summary>
-        /// 外部支付渠道
+        /// 外部收单渠道
         /// </summary>
         [XmlElement("external_inst_channel")]
         public string ExternalInstChannel { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ExternalInstCreateDate { get; set; }
 
         /// <summary>
-        /// 外部流水号
+        /// 退款流水号。由商家自定义，64个字符以内，仅支持字母、数字、下划线且需保证在商户端单笔交易维度不重复。
         /// </summary>
         [XmlElement("out_request_no")]
         public string OutRequestNo { get; set; }
@@ -58,21 +58,27 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 支付金额
-        /// </summary>
-        [XmlElement("pay_amount")]
-        public string PayAmount { get; set; }
-
-        /// <summary>
         /// 签约产品码，目前仅支持UNIFIED_SETTLE
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 退款金额
+        /// 同步流水的类型，支付为PAY_SYNC，退款为REFUND_SYNC
         /// </summary>
-        [XmlElement("refund_amount")]
-        public string RefundAmount { get; set; }
+        [XmlElement("request_type")]
+        public string RequestType { get; set; }
+
+        /// <summary>
+        /// 结算信息， 直付通模式下requestType=PAY_SYNC时必传。
+        /// </summary>
+        [XmlElement("settle_info")]
+        public SettleInfo SettleInfo { get; set; }
+
+        /// <summary>
+        /// 二级商户信息。 直付通模式下requestType=PAY_SYNC时必传
+        /// </summary>
+        [XmlElement("sub_merchant")]
+        public SubMerchant SubMerchant { get; set; }
     }
 }

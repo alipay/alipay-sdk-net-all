@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizId { get; set; }
 
         /// <summary>
+        /// 查询保单的来源场景，为空默认为默认场景
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
+        /// <summary>
         /// 买家用户Id
         /// </summary>
         [XmlElement("buyer_id")]

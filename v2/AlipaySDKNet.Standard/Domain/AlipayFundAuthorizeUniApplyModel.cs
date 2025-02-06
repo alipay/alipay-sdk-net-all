@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string BackUrl { get; set; }
 
         /// <summary>
+        /// 回跳地址类型 默认值: BACK_ALIPAY
+        /// </summary>
+        [XmlElement("back_url_type")]
+        public string BackUrlType { get; set; }
+
+        /// <summary>
         /// 业务场景码，固定值
         /// </summary>
         [XmlElement("biz_scene")]

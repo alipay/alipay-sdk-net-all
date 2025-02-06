@@ -92,5 +92,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 支付宝账户对应的用户姓名；新接入商户该字段必填
+        /// </summary>
+        [XmlElement("user_name")]
+        public string UserName { get; set; }
     }
 }

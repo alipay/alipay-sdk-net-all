@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string DeductSignScene { get; set; }
 
         /// <summary>
+        /// 不使用通用代扣
+        /// </summary>
+        [XmlElement("deposit_payment")]
+        public string DepositPayment { get; set; }
+
+        /// <summary>
         /// 预约上门取件的时间,格式为  yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("door_time")]

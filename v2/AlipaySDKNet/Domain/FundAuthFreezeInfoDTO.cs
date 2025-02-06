@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string PayeeUserId { get; set; }
 
         /// <summary>
+        /// 免押风控评估金额，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("risk_assessment_price")]
+        public string RiskAssessmentPrice { get; set; }
+
+        /// <summary>
         /// 芝麻侧生成的信用服务id
         /// </summary>
         [XmlElement("zm_service_id")]

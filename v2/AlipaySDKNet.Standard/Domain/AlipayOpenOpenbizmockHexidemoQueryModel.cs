@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string FileParam { get; set; }
 
         /// <summary>
+        /// 测试名称
+        /// </summary>
+        [XmlElement("mock_name")]
+        public string MockName { get; set; }
+
+        /// <summary>
         /// 123
         /// </summary>
         [XmlElement("open_id")]
@@ -58,6 +64,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("req_num")]
         public long ReqNum { get; set; }
+
+        /// <summary>
+        /// 12
+        /// </summary>
+        [XmlElement("res")]
+        public string Res { get; set; }
 
         /// <summary>
         /// 蚂蚁统一会员ID

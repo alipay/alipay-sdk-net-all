@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public ContactStrategy ContactStrategy { get; set; }
 
         /// <summary>
-        /// 传递触达类型
+        /// 传递触达策略
         /// </summary>
         [XmlElement("contact_type")]
         public string ContactType { get; set; }

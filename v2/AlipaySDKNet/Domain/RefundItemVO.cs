@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AmountItem { get; set; }
 
         /// <summary>
-        /// APP方商品ID
+        /// APP方商品编码，对应商品接口的sku_code｜商品编码
         /// </summary>
         [XmlElement("app_item_code")]
         public string AppItemCode { get; set; }

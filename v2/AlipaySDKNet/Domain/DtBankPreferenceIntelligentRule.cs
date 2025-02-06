@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public long MinAmount { get; set; }
 
         /// <summary>
-        /// 智能立减优惠目标 moreUsers:覆盖更多用户 lowerAvgPrice:平均金额更低
+        /// 智能立减优惠目标 moreUsers:覆盖更多用户 lowerAvgPrice:平均金额更低 MORE_GMV:交易规模更大 MORE_USER_RANGE:覆盖更多用户
         /// </summary>
         [XmlElement("optimization_target")]
         public string OptimizationTarget { get; set; }

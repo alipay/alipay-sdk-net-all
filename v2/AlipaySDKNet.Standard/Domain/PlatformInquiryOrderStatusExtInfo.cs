@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string DoctorOutName { get; set; }
 
         /// <summary>
+        /// 医生拒诊原因
+        /// </summary>
+        [XmlElement("doctor_refuse_reason")]
+        public string DoctorRefuseReason { get; set; }
+
+        /// <summary>
         /// 是否首次回复
         /// </summary>
         [XmlElement("first_reply")]
@@ -94,6 +100,12 @@ namespace Aop.Api.Domain
         public string GmtRefundApplying { get; set; }
 
         /// <summary>
+        /// 问诊完成类型 DOCTOR_ACTIVE_END：医生主动完成 TIMEOUT_END：超时结束
+        /// </summary>
+        [XmlElement("inquiry_complete_status")]
+        public string InquiryCompleteStatus { get; set; }
+
+        /// <summary>
         /// 是否触发消息通知
         /// </summary>
         [XmlElement("notice")]
@@ -134,5 +146,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reply_content")]
         public string ReplyContent { get; set; }
+
+        /// <summary>
+        /// 服务截止时间
+        /// </summary>
+        [XmlElement("service_end_time")]
+        public string ServiceEndTime { get; set; }
     }
 }

@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string AuditPharmacistName { get; set; }
 
         /// <summary>
+        /// 诊断结果
+        /// </summary>
+        [XmlElement("clinic_desc")]
+        public string ClinicDesc { get; set; }
+
+        /// <summary>
         /// 开方医生名称
         /// </summary>
         [XmlElement("doctor_name")]

@@ -101,6 +101,12 @@ namespace Aop.Api.Response
         public RefundInfoVO RefundInfo { get; set; }
 
         /// <summary>
+        /// 租赁信息
+        /// </summary>
+        [XmlElement("rent_info")]
+        public RentInfoVO RentInfo { get; set; }
+
+        /// <summary>
         /// 结算方式
         /// </summary>
         [XmlElement("settle_type")]

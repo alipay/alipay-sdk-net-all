@@ -70,6 +70,12 @@ namespace Aop.Api.Response
         public DtBankCrowdInfo CrowdInfo { get; set; }
 
         /// <summary>
+        /// 活动效果数据，一般情况下数据更新到昨日，具体以接口中返回的更新日期为准。
+        /// </summary>
+        [XmlElement("data_effect_info")]
+        public DtbankActivityDataEffectInfo DataEffectInfo { get; set; }
+
+        /// <summary>
         /// 优惠类型信息
         /// </summary>
         [XmlElement("preference_type_info")]

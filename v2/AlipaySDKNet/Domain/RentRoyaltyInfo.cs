@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 资方appid
+        /// </summary>
+        [XmlElement("invest_app_id")]
+        public string InvestAppId { get; set; }
+
+        /// <summary>
         /// 订单分配给的资方的id
         /// </summary>
         [XmlElement("invest_pid")]

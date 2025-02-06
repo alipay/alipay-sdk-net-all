@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string CommunityId { get; set; }
 
         /// <summary>
+        /// 小区名称缩写
+        /// </summary>
+        [XmlElement("community_short_name")]
+        public string CommunityShortName { get; set; }
+
+        /// <summary>
         /// 对应请求参数「物业公司 community_property_company」「公司缩写 short_name」 后续小区绑定物业公司实现快速关联。物业公司信息更新时使用。
         /// </summary>
         [XmlElement("property_company_short_name")]

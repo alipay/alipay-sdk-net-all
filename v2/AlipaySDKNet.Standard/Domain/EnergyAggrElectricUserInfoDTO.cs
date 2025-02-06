@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string ElectricAccountId { get; set; }
 
         /// <summary>
+        /// 创建时间
+        /// </summary>
+        [XmlElement("gmt_create")]
+        public string GmtCreate { get; set; }
+
+        /// <summary>
         /// 0-独立缴费 1-缴费到公户 2-缴费到物业
         /// </summary>
         [XmlElement("payment_type")]

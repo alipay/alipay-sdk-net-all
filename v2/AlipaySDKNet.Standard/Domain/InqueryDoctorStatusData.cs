@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string PracticingDoctorCertificateNo { get; set; }
 
         /// <summary>
-        /// 公益时长
+        /// 公益时长,单位小时
         /// </summary>
         [XmlElement("public_time")]
         public string PublicTime { get; set; }

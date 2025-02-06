@@ -217,6 +217,12 @@ namespace Aop.Api.Domain
         public string Tyshxydm { get; set; }
 
         /// <summary>
+        /// 注册资本币种
+        /// </summary>
+        [XmlElement("zczbbz")]
+        public string Zczbbz { get; set; }
+
+        /// <summary>
         /// 执行合伙人
         /// </summary>
         [XmlElement("zxhhr")]

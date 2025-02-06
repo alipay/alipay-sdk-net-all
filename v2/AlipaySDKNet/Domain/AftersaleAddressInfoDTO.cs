@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// 省份
+        /// 省份，直辖市直接填写简称即可，例如：北京、上海、天津、重庆。
         /// </summary>
         [XmlElement("province")]
         public string Province { get; set; }

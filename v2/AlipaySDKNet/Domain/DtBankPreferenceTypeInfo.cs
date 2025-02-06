@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public DtBankPreferenceIntelligentRule IntelligentRule { get; set; }
 
         /// <summary>
-        /// 多阶梯立减规则
+        /// 多阶梯立减规则，preference_type取值为multiStagedDiscount时，此参数有值
         /// </summary>
         [XmlElement("multi_staged_rule")]
         public DtBankPreferenceMultiStagedRule MultiStagedRule { get; set; }

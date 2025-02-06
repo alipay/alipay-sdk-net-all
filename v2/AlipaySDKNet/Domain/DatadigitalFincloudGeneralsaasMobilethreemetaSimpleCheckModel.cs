@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
+        /// 证件类型
+        /// </summary>
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
+
+        /// <summary>
         /// 客户业务单据号
         /// </summary>
         [XmlElement("outer_biz_no")]

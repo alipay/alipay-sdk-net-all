@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// 芝麻开通/授权协议号，在用户开通芝麻先享服务后，由芝麻生成并返回给商户；只有当opertaion_type传入AGREEMENT_TRANSFER值是，该字段必传；其他场景不需要传入
+        /// </summary>
+        [XmlElement("credit_agreement_id")]
+        public string CreditAgreementId { get; set; }
+
+        /// <summary>
         /// 用户的代扣协议号
         /// </summary>
         [XmlElement("deduct_agreement_no")]
@@ -26,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("extend_params")]
         public string ExtendParams { get; set; }
+
+        /// <summary>
+        /// AGREEMENT_TRANSFER代表是存量先享协议的主体切换功能；其他场景不需要传入；默认为空；
+        /// </summary>
+        [XmlElement("operation_type")]
+        public string OperationType { get; set; }
 
         /// <summary>
         /// 商户外部协议号，不同的支付宝用户需要传递不同的外部单号

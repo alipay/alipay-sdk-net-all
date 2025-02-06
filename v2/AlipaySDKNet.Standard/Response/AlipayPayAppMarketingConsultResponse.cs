@@ -29,6 +29,13 @@ namespace Aop.Api.Response
         public string BizTag { get; set; }
 
         /// <summary>
+        /// name String 人群标签名称 bindCard 用户匹配到的人群标签。枚举示例 引导绑卡：bindCard?引导绑信用卡：bindCreditCard?引导花呗签约：huabeiSign extParams Map<String,String> 扩展参数 {"url":"xxx"} 标签对应的扩展信息。类似本次新增的跳转链接地址
+        /// </summary>
+        [XmlArray("biz_tag_entity_list")]
+        [XmlArrayItem("biz_tag_entity")]
+        public List<BizTagEntity> BizTagEntityList { get; set; }
+
+        /// <summary>
         /// 返回前置咨询用户命中的人群标签，如用户在花呗设首人群中，则透出ALICREDIT_PRIORITY，命中多个标签时以列表形式返回
         /// </summary>
         [XmlArray("biz_tag_list")]

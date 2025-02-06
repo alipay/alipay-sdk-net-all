@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<string> AppIdList { get; set; }
 
         /// <summary>
-        /// 预警方式：MESSAGE：短信；INTERFAC：接口
+        /// 预警方式：MESSAGE：短信；INTERFACE：接口
         /// </summary>
         [XmlElement("budget_alert_notify_type")]
         public string BudgetAlertNotifyType { get; set; }

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ActivityId { get; set; }
 
         /// <summary>
-        /// 申请查询的账单类型
+        /// 申请查询的账单类型 当前字段已废弃(数字分行账单已经全部迁移)
         /// </summary>
         [XmlElement("bill_type")]
         public string BillType { get; set; }

@@ -102,6 +102,12 @@ namespace Aop.Api.Domain
         public string IotVid { get; set; }
 
         /// <summary>
+        /// 员工职级
+        /// </summary>
+        [XmlElement("job_level_show")]
+        public string JobLevelShow { get; set; }
+
+        /// <summary>
         /// 手机号码
         /// </summary>
         [XmlElement("mobile")]
@@ -125,6 +131,12 @@ namespace Aop.Api.Domain
         [XmlArray("role_list")]
         [XmlArrayItem("string")]
         public List<string> RoleList { get; set; }
+
+        /// <summary>
+        /// 直属主管员工ID
+        /// </summary>
+        [XmlElement("tl_employee_id")]
+        public string TlEmployeeId { get; set; }
 
         /// <summary>
         /// 用户ID（绑定支付宝账号的uid）

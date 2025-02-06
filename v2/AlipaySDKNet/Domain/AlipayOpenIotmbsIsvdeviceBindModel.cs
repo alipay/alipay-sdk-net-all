@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string SceneType { get; set; }
 
         /// <summary>
-        /// 要进行绑定操作的设备sn
+        /// 要进行绑定操作的设备sn，英文逗号隔开
         /// </summary>
         [XmlElement("sn")]
         public string Sn { get; set; }

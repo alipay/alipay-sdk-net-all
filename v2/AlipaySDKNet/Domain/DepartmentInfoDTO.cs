@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string DepartmentName { get; set; }
 
         /// <summary>
+        /// 部门负责人员工ID
+        /// </summary>
+        [XmlElement("dept_charge_employee_id")]
+        public string DeptChargeEmployeeId { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [XmlElement("gmt_create")]

@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_merchant_id_type")]
         public string SubMerchantIdType { get; set; }
+
+        /// <summary>
+        /// 钱包id
+        /// </summary>
+        [XmlElement("user_wallet_id")]
+        public string UserWalletId { get; set; }
     }
 }

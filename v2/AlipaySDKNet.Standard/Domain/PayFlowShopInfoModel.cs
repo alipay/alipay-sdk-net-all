@@ -72,13 +72,13 @@ namespace Aop.Api.Domain
         public string IndustryLevel2 { get; set; }
 
         /// <summary>
-        /// 三级行业
+        /// 三级行业 当前字段已废弃(无数据，需要废除无数据字段)
         /// </summary>
         [XmlElement("industry_level_3")]
         public string IndustryLevel3 { get; set; }
 
         /// <summary>
-        /// 四级行业
+        /// 四级行业 当前字段已废弃(无数据，需要废除无数据字段)
         /// </summary>
         [XmlElement("industry_level_4")]
         public string IndustryLevel4 { get; set; }

@@ -46,5 +46,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("register_flag")]
         public bool RegisterFlag { get; set; }
+
+        /// <summary>
+        /// 服务时长（单位小时）
+        /// </summary>
+        [XmlElement("service_duration")]
+        public string ServiceDuration { get; set; }
     }
 }

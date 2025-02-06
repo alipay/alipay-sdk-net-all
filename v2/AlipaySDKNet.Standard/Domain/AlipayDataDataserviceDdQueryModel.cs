@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -18,8 +19,9 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 测试
         /// </summary>
-        [XmlElement("qwe")]
-        public string Qwe { get; set; }
+        [XmlArray("qwe")]
+        [XmlArrayItem("string")]
+        public List<string> Qwe { get; set; }
 
         /// <summary>
         /// 测试

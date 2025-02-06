@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class MedicareInfoVO : AopObject
     {
         /// <summary>
-        /// 医保个账金额 当前字段已废弃(字段类型不正确，改为price 元为单位)
+        /// 医保个账金额 当前字段已废弃(字段类型修改为price)
         /// </summary>
         [XmlElement("mi_personal_amount")]
         public long MiPersonalAmount { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string MiPersonalAmt { get; set; }
 
         /// <summary>
-        /// 医保统筹金额 当前字段已废弃(字段类型不正确，改为price 元为单位)
+        /// 医保统筹金额 当前字段已废弃(字段类型修改为price)
         /// </summary>
         [XmlElement("mi_pool_amount")]
         public long MiPoolAmount { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string MiPoolAmt { get; set; }
 
         /// <summary>
-        /// 医保自付金额 当前字段已废弃(字段类型不正确，改为price 元为单位)
+        /// 医保自付金额 当前字段已废弃(字段类型修改为price)
         /// </summary>
         [XmlElement("mi_self_amount")]
         public long MiSelfAmount { get; set; }

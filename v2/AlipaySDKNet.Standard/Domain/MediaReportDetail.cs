@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string AdPosName { get; set; }
 
         /// <summary>
+        /// 广告位类型
+        /// </summary>
+        [XmlElement("ad_pos_type")]
+        public string AdPosType { get; set; }
+
+        /// <summary>
+        /// 广告位类型名称
+        /// </summary>
+        [XmlElement("ad_pos_type_name")]
+        public string AdPosTypeName { get; set; }
+
+        /// <summary>
         /// 应用名称
         /// </summary>
         [XmlElement("app_name")]
@@ -46,6 +58,12 @@ namespace Aop.Api.Domain
         public string ClickRate { get; set; }
 
         /// <summary>
+        /// 组件被展现的总次数
+        /// </summary>
+        [XmlElement("component_exposure")]
+        public long ComponentExposure { get; set; }
+
+        /// <summary>
         /// 资源位维度预估cpm,千次曝光收入
         /// </summary>
         [XmlElement("cpm")]
@@ -68,5 +86,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("exposure")]
         public long Exposure { get; set; }
+
+        /// <summary>
+        /// 展位码列表
+        /// </summary>
+        [XmlElement("space_code_list")]
+        public string SpaceCodeList { get; set; }
     }
 }
