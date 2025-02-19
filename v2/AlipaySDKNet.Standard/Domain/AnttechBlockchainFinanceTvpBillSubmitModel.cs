@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string EndDate { get; set; }
 
         /// <summary>
+        /// 订单过期时间
+        /// </summary>
+        [XmlElement("expire_time")]
+        public string ExpireTime { get; set; }
+
+        /// <summary>
         /// 账单初始总金额，单位元
         /// </summary>
         [XmlElement("original_total_amount")]
@@ -58,7 +64,13 @@ namespace Aop.Api.Domain
         public string OutBillNo { get; set; }
 
         /// <summary>
-        /// 收款方主体
+        /// 收款方账号未管控的场景，需传入收款方账号。 payee_entity 和 payee_account 不能都为空。
+        /// </summary>
+        [XmlElement("payee_account")]
+        public TrustAccountInfo PayeeAccount { get; set; }
+
+        /// <summary>
+        /// 针对收款方账号管控的场景，只需要传入收款方主体名称即可，无需传入收款方账号。 payee_entity 和 payee_account 不能都为空
         /// </summary>
         [XmlElement("payee_entity")]
         public TrustEntityInfo PayeeEntity { get; set; }
@@ -74,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 备注|附言
+        /// </summary>
+        [XmlElement("remark")]
+        public string Remark { get; set; }
 
         /// <summary>
         /// 账单核算起始时间

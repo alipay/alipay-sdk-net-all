@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayCommerceRentRiskConsultRequest : IAopRequest<AlipayCommerceRentRiskConsultResponse>
     {
         /// <summary>
-        /// 智安通风险咨询API
+        /// 租赁智能风险咨询（智安盾免费版）
         /// </summary>
         public string BizContent { get; set; }
 

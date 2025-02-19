@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string RiskCode { get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// 【订单维度共租风险】low / mid / high； 【小程序维度共租风险】P1 ~ P6；
         /// </summary>
         [XmlElement("risk_level")]
         public string RiskLevel { get; set; }

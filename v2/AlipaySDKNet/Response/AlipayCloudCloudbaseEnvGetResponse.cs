@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayCloudCloudbaseEnvGetResponse : AopResponse
     {
         /// <summary>
+        /// 付费方式  - 套餐  - 计量计费
+        /// </summary>
+        [XmlElement("billing_model")]
+        public string BillingModel { get; set; }
+
+        /// <summary>
         /// api网关AK
         /// </summary>
         [XmlElement("cloudbase_api_gateway_ak")]
@@ -48,6 +54,12 @@ namespace Aop.Api.Response
         public string Name { get; set; }
 
         /// <summary>
+        /// 资源包创建时间
+        /// </summary>
+        [XmlElement("pkg_create_time")]
+        public string PkgCreateTime { get; set; }
+
+        /// <summary>
         /// 资源包到期时间
         /// </summary>
         [XmlElement("pkg_expiration_time")]
@@ -60,7 +72,13 @@ namespace Aop.Api.Response
         public string Region { get; set; }
 
         /// <summary>
-        /// 环境状态  - INIT  - ENABLE  - SYSTEM_DISABLE
+        /// 环境套餐资源包的状态
+        /// </summary>
+        [XmlElement("resource_pkg_status")]
+        public string ResourcePkgStatus { get; set; }
+
+        /// <summary>
+        /// 环境状态    - INIT    - ACTIVATING_UNPAY    - ACTIVATING_PAY    - ENABLE("正常")    - MANUAL_DISABLE    - USER_DISABLE    - SYSTEM_DISABLE    - DELETED    - DELETING    - SYSTEM_SUSPENDING    - RECOVERING    - REFUNDING    - REFUND_SUCCESS    - REFUND_FAILED
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

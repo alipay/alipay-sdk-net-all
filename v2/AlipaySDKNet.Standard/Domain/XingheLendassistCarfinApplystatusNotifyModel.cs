@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -16,10 +17,29 @@ namespace Aop.Api.Domain
         public string ApplyNo { get; set; }
 
         /// <summary>
+        /// 是否完成完善企业信息（人查企，含非企业主场景） true/false
+        /// </summary>
+        [XmlElement("company_info_completed")]
+        public bool CompanyInfoCompleted { get; set; }
+
+        /// <summary>
         /// 授信金额，单位分
         /// </summary>
         [XmlElement("credit_amt")]
         public long CreditAmt { get; set; }
+
+        /// <summary>
+        /// 授信额度到期时间
+        /// </summary>
+        [XmlElement("credit_amt_expire_date")]
+        public string CreditAmtExpireDate { get; set; }
+
+        /// <summary>
+        /// 授信信息列表
+        /// </summary>
+        [XmlArray("credit_list")]
+        [XmlArrayItem("credit")]
+        public List<Credit> CreditList { get; set; }
 
         /// <summary>
         /// 取消失败时，申请单当前状态
@@ -44,6 +64,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("fin_org")]
         public string FinOrg { get; set; }
+
+        /// <summary>
+        /// 是否完成实名认证，true/false
+        /// </summary>
+        [XmlElement("identity_verified")]
+        public bool IdentityVerified { get; set; }
 
         /// <summary>
         /// 放款金额，单位分

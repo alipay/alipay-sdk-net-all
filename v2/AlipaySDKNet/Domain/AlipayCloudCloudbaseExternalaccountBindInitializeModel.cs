@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string CardType { get; set; }
 
         /// <summary>
+        /// 登录账号
+        /// </summary>
+        [XmlElement("main_logon_id")]
+        public string MainLogonId { get; set; }
+
+        /// <summary>
         /// 钱包ID
         /// </summary>
         [XmlElement("wallet_id")]

@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string UserCardNo { get; set; }
 
         /// <summary>
-        /// 填写证件类型
+        /// 身份证
         /// </summary>
         [XmlElement("user_cert_type")]
         public string UserCertType { get; set; }

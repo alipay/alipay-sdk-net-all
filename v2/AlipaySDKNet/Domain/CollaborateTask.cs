@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public string CityName { get; set; }
 
         /// <summary>
+        /// pull接口返回脱敏后的联系人姓名，如刘*,confirm接口确认商家有意愿安装，则返回完整的联系人姓名。
+        /// </summary>
+        [XmlElement("contact_name")]
+        public string ContactName { get; set; }
+
+        /// <summary>
         /// 任务分配的时间。
         /// </summary>
         [XmlElement("dispatched_time")]

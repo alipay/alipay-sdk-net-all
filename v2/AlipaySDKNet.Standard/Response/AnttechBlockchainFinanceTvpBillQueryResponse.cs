@@ -60,6 +60,12 @@ namespace Aop.Api.Response
         public string EndDate { get; set; }
 
         /// <summary>
+        /// 账单过期时间
+        /// </summary>
+        [XmlElement("expire_time")]
+        public string ExpireTime { get; set; }
+
+        /// <summary>
         /// 账单初始总金额, 单位元
         /// </summary>
         [XmlElement("original_total_amount")]
@@ -70,6 +76,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_bill_no")]
         public string OutBillNo { get; set; }
+
+        /// <summary>
+        /// 交易备注
+        /// </summary>
+        [XmlElement("remark")]
+        public string Remark { get; set; }
 
         /// <summary>
         /// 账单核算起始时间

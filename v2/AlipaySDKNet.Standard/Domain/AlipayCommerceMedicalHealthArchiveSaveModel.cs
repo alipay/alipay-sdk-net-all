@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string DataSource { get; set; }
 
         /// <summary>
+        /// 健康档案字类型，可以用来划分健康自测量表的二级分类，如心理健康下的焦虑症自测，如果不传无法通过subType检测，
+        /// </summary>
+        [XmlElement("data_sub_type")]
+        public string DataSubType { get; set; }
+
+        /// <summary>
         /// 数据类型
         /// </summary>
         [XmlElement("data_type")]
@@ -76,7 +82,7 @@ namespace Aop.Api.Domain
         public string UserCardNo { get; set; }
 
         /// <summary>
-        /// 填写证件类型英文编码
+        /// 身份证
         /// </summary>
         [XmlElement("user_cert_type")]
         public string UserCertType { get; set; }

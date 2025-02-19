@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -68,6 +69,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sku_info_list")]
         public SkuInfoVO SkuInfoList { get; set; }
+
+        /// <summary>
+        /// sku信息
+        /// </summary>
+        [XmlArray("sku_list")]
+        [XmlArrayItem("sku_info_v_o")]
+        public List<SkuInfoVO> SkuList { get; set; }
 
         /// <summary>
         /// 商家自定义店内code

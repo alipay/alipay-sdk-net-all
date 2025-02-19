@@ -25,6 +25,12 @@ namespace Aop.Api.Domain
         public List<TaoBaoEcomStoreInfo> EcomShopInfo { get; set; }
 
         /// <summary>
+        /// 法人维度店铺指标数据
+        /// </summary>
+        [XmlElement("fr_shop_index_info")]
+        public FrShopIndexInfo FrShopIndexInfo { get; set; }
+
+        /// <summary>
         /// 失信被执行人信息列表
         /// </summary>
         [XmlArray("punish_break_list")]

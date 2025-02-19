@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("device_sn")]
         public string DeviceSn { get; set; }
+
+        /// <summary>
+        /// 托管一定有
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
     }
 }

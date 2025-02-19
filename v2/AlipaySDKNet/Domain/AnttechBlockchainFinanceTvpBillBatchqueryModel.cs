@@ -22,7 +22,13 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 收款方
+        /// 收款方账号
+        /// </summary>
+        [XmlElement("payee_account")]
+        public TrustAccountInfo PayeeAccount { get; set; }
+
+        /// <summary>
+        /// 收款方主体
         /// </summary>
         [XmlElement("payee_entity")]
         public TrustEntityInfo PayeeEntity { get; set; }

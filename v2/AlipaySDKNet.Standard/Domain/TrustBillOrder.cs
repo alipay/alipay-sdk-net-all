@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string OutBillNo { get; set; }
 
         /// <summary>
+        /// 交易备注
+        /// </summary>
+        [XmlElement("remark")]
+        public string Remark { get; set; }
+
+        /// <summary>
         /// 账单状态
         /// </summary>
         [XmlElement("status")]

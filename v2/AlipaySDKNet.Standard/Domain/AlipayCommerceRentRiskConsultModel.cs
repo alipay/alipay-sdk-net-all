@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRentRiskConsultModel : AopObject
     {
         /// <summary>
+        /// 支付宝openid
+        /// </summary>
+        [XmlElement("alipay_open_id")]
+        public string AlipayOpenId { get; set; }
+
+        /// <summary>
         /// 支付宝用户id
         /// </summary>
         [XmlElement("alipay_user_id")]
