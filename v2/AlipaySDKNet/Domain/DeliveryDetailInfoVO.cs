@@ -22,5 +22,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("finish_all_delivery")]
         public string FinishAllDelivery { get; set; }
+
+        /// <summary>
+        /// 履约状态
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 履约方式
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
     }
 }

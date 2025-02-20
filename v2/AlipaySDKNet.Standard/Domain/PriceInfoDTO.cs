@@ -28,15 +28,33 @@ namespace Aop.Api.Domain
         public string Freight { get; set; }
 
         /// <summary>
+        /// 最大订单金额，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("max_order_price")]
+        public string MaxOrderPrice { get; set; }
+
+        /// <summary>
         /// 商家侧储蓄卡金额，单位为元，精确到小数点后两位
         /// </summary>
         [XmlElement("merchant_value_price")]
         public string MerchantValuePrice { get; set; }
 
         /// <summary>
+        /// 最小订单金额，单位：元,精确到小数点后两位
+        /// </summary>
+        [XmlElement("min_order_price")]
+        public string MinOrderPrice { get; set; }
+
+        /// <summary>
         /// 订单总价，单位：元,精确到小数点后两位
         /// </summary>
         [XmlElement("order_price")]
         public string OrderPrice { get; set; }
+
+        /// <summary>
+        /// 默认值：FIXED
+        /// </summary>
+        [XmlElement("price_mode")]
+        public string PriceMode { get; set; }
     }
 }

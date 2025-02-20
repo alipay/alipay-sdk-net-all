@@ -84,6 +84,18 @@ namespace Aop.Api.Domain
         public ItemInstallmentInfoDTO ItemInstallmentInfo { get; set; }
 
         /// <summary>
+        /// 最大售价，单位：元，保留两位小数
+        /// </summary>
+        [XmlElement("max_sale_price")]
+        public string MaxSalePrice { get; set; }
+
+        /// <summary>
+        /// 最低售价，单位：元，保留两位小数
+        /// </summary>
+        [XmlElement("min_sale_price")]
+        public string MinSalePrice { get; set; }
+
+        /// <summary>
         /// 商户侧商品id，用于公域场景结算，会影响主播归因。私域场景无需传入，公域场景未传入会影响后续结算
         /// </summary>
         [XmlElement("out_item_id")]
@@ -100,6 +112,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("platform_item_version_id")]
         public string PlatformItemVersionId { get; set; }
+
+        /// <summary>
+        /// 默认值：FIXED
+        /// </summary>
+        [XmlElement("price_mode")]
+        public string PriceMode { get; set; }
 
         /// <summary>
         /// 租金信息，租赁商品特有

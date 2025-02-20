@@ -10,7 +10,7 @@
     <RootNamespace>AlipaySDKNet</RootNamespace>
     <AssemblyName>AlipaySDKNet</AssemblyName>
     <PackageId>AlipaySDKNet</PackageId>
-    <PackageVersion>4.9.409</PackageVersion>
+    <PackageVersion>4.9.412</PackageVersion>
     <Authors>antopen</Authors>
     <NeutralLanguage>zh</NeutralLanguage>
     <Description>支付宝开放平台官方SDK，支持.Net Framework 3.5(SP1)及其以上版本。</Description>
@@ -198,6 +198,7 @@
     <Compile Include="Response\ZhimaCreditPeUserContractSignResponse.cs" />
     <Compile Include="Response\ZhimaCreditPeUserContractQueryResponse.cs" />
     <Compile Include="Response\ZhimaCreditPeUserAuthApplyResponse.cs" />
+    <Compile Include="Response\ZhimaCreditPePayafteruseTaskSyncResponse.cs" />
     <Compile Include="Response\ZhimaCreditPeLevelQueryResponse.cs" />
     <Compile Include="Response\ZhimaCreditPeLawsuitRecordGetResponse.cs" />
     <Compile Include="Response\ZhimaCreditPeLawsuitDetailQueryResponse.cs" />
@@ -1335,6 +1336,7 @@
     <Compile Include="Response\AnttechBlockchainDefinAssetmanagePenetrateSubmitResponse.cs" />
     <Compile Include="Response\AnttechBlockchainDefinAssetmanagePenetrateQueryResponse.cs" />
     <Compile Include="Response\AnttechAiDonationServiceCreateResponse.cs" />
+    <Compile Include="Response\AnttechAiDevicePayCallbackResponse.cs" />
     <Compile Include="Response\AnttechAiCvUaIdentifyResponse.cs" />
     <Compile Include="Response\AnttechAiCvUaAsyncQueryResponse.cs" />
     <Compile Include="Response\AnttechAiCvUaAsyncIdentifyResponse.cs" />
@@ -7713,6 +7715,7 @@
     <Compile Include="Domain\ZhimaCreditPeUserContractSignModel.cs" />
     <Compile Include="Domain\ZhimaCreditPeUserContractQueryModel.cs" />
     <Compile Include="Domain\ZhimaCreditPeUserAuthApplyModel.cs" />
+    <Compile Include="Domain\ZhimaCreditPePayafteruseTaskSyncModel.cs" />
     <Compile Include="Domain\ZhimaCreditPeLevelQueryModel.cs" />
     <Compile Include="Domain\ZhimaCreditPeLawsuitRecordGetModel.cs" />
     <Compile Include="Domain\ZhimaCreditPeLawsuitDetailQueryModel.cs" />
@@ -8153,7 +8156,6 @@
     <Compile Include="Domain\UserOnlineGameDataInfo.cs" />
     <Compile Include="Domain\UserOccupationTagDTO.cs" />
     <Compile Include="Domain\UserNodeTaskSimpleDto.cs" />
-    <Compile Include="Domain\UserName.cs" />
     <Compile Include="Domain\UserMailInfoVO.cs" />
     <Compile Include="Domain\UserMailInfoOrder.cs" />
     <Compile Include="Domain\UserInvoiceInfoOrder.cs" />
@@ -8165,7 +8167,6 @@
     <Compile Include="Domain\UserInfoDTO.cs" />
     <Compile Include="Domain\UserInfoDetailDTO.cs" />
     <Compile Include="Domain\UserInfoDetail.cs" />
-    <Compile Include="Domain\UserInfoAndBenefitQueryResult.cs" />
     <Compile Include="Domain\UserIdentityInfo.cs" />
     <Compile Include="Domain\UserIdentityExt.cs" />
     <Compile Include="Domain\UserIdentity.cs" />
@@ -8366,7 +8367,6 @@
     <Compile Include="Domain\TicketUserInfo.cs" />
     <Compile Include="Domain\TicketTransInfo.cs" />
     <Compile Include="Domain\TicketSKU.cs" />
-    <Compile Include="Domain\TicketQRCode.cs" />
     <Compile Include="Domain\TicketProduct.cs" />
     <Compile Include="Domain\TicketPassagerInfo.cs" />
     <Compile Include="Domain\TicketPassager.cs" />
@@ -8468,7 +8468,6 @@
     <Compile Include="Domain\TbapiQueryAmountBizContent.cs" />
     <Compile Include="Domain\TaxReceiptOnceInfo.cs" />
     <Compile Include="Domain\TaxiOrder.cs" />
-    <Compile Include="Domain\TaxInfoDto.cs" />
     <Compile Include="Domain\TaxBillContent.cs" />
     <Compile Include="Domain\TaskVoucherInfo.cs" />
     <Compile Include="Domain\TaskVoucherBasicInfo.cs" />
@@ -8608,7 +8607,6 @@
     <Compile Include="Domain\SubAccountBalanceOpenApiDTO.cs" />
     <Compile Include="Domain\SubAccountBalanceFreezeResultOpenApiDTO.cs" />
     <Compile Include="Domain\SubAccountBalanceFreezeOrder.cs" />
-    <Compile Include="Domain\SubAccountBalanceDTO.cs" />
     <Compile Include="Domain\SubAccountApplyResult.cs" />
     <Compile Include="Domain\SubAccountApplyRequest.cs" />
     <Compile Include="Domain\SubAccountAndBindDTO.cs" />
@@ -8660,7 +8658,6 @@
     <Compile Include="Domain\StatesSyncPayload.cs" />
     <Compile Include="Domain\StatementDetaileds.cs" />
     <Compile Include="Domain\StarUidAmountRatioDTO.cs" />
-    <Compile Include="Domain\StandardVoucherVO.cs" />
     <Compile Include="Domain\StandardVoucherOpenApiVO.cs" />
     <Compile Include="Domain\StandardVoucherMultipleConditionQueryRequest.cs" />
     <Compile Include="Domain\StandardServiceBaseInfo.cs" />
@@ -8756,7 +8753,6 @@
     <Compile Include="Domain\SlmCaseErrorInfo.cs" />
     <Compile Include="Domain\SlmArtifactInfo.cs" />
     <Compile Include="Domain\SlmAppInfo.cs" />
-    <Compile Include="Domain\SkuVoucherApply.cs" />
     <Compile Include="Domain\SkuUpdateSuccessInfoDTO.cs" />
     <Compile Include="Domain\SkuUpdateInfoParam.cs" />
     <Compile Include="Domain\SkuUpdateFailInfoDTO.cs" />
@@ -8811,7 +8807,6 @@
     <Compile Include="Domain\SignTask.cs" />
     <Compile Include="Domain\SignResultValue.cs" />
     <Compile Include="Domain\SignRestrictInfo.cs" />
-    <Compile Include="Domain\SignRecordVO.cs" />
     <Compile Include="Domain\SignRecordLogVO.cs" />
     <Compile Include="Domain\SignPrincipalDTO.cs" />
     <Compile Include="Domain\SignPartyOpenApiDTO.cs" />
@@ -8848,7 +8843,6 @@
     <Compile Include="Domain\ShowText.cs" />
     <Compile Include="Domain\ShopVO.cs" />
     <Compile Include="Domain\ShopSummaryQueryResponse.cs" />
-    <Compile Include="Domain\ShopSummaryInfo.cs" />
     <Compile Include="Domain\ShopStaffInfo.cs" />
     <Compile Include="Domain\ShopServiceItem.cs" />
     <Compile Include="Domain\ShopScoreResultInfoDTO.cs" />
@@ -8986,9 +8980,7 @@
     <Compile Include="Domain\SecurityCertProfileExt.cs" />
     <Compile Include="Domain\SecGravityServiceHeader.cs" />
     <Compile Include="Domain\SeatInfo.cs" />
-    <Compile Include="Domain\SearchToggleBoxStatusRequest.cs" />
     <Compile Include="Domain\SearchServiceItems.cs" />
-    <Compile Include="Domain\SearchQueryBoxMarketingRequest.cs" />
     <Compile Include="Domain\SearchQueryBoxExclusiveServiceInfoRequest.cs" />
     <Compile Include="Domain\SearchProductRegion.cs" />
     <Compile Include="Domain\SearchProductPeriod.cs" />
@@ -9013,7 +9005,6 @@
     <Compile Include="Domain\SearchBrandBoxInfo.cs" />
     <Compile Include="Domain\SearchBoxServiceModule.cs" />
     <Compile Include="Domain\SearchBoxServiceInfo.cs" />
-    <Compile Include="Domain\SearchBoxMarketingchangeOptStatusReq.cs" />
     <Compile Include="Domain\SearchBoxKeyWordModule.cs" />
     <Compile Include="Domain\SearchBoxKeywordInfo.cs" />
     <Compile Include="Domain\SearchBoxImageModule.cs" />
@@ -9099,7 +9090,6 @@
     <Compile Include="Domain\SceneMarketingContent.cs" />
     <Compile Include="Domain\SceneInfo.cs" />
     <Compile Include="Domain\SceneExtParam.cs" />
-    <Compile Include="Domain\SceneDTO.cs" />
     <Compile Include="Domain\SceneDrawdownDetail.cs" />
     <Compile Include="Domain\SceneDetail.cs" />
     <Compile Include="Domain\SceneDataUnit.cs" />
@@ -9164,8 +9154,6 @@
     <Compile Include="Domain\RoleId.cs" />
     <Compile Include="Domain\Role.cs" />
     <Compile Include="Domain\RobotAnswer.cs" />
-    <Compile Include="Domain\Roadinter.cs" />
-    <Compile Include="Domain\Road.cs" />
     <Compile Include="Domain\RndBenefitRule.cs" />
     <Compile Include="Domain\RiskStrategy.cs" />
     <Compile Include="Domain\RiskRuleResultDTO.cs" />
@@ -9347,7 +9335,6 @@
     <Compile Include="Domain\RefundConfirmResult.cs" />
     <Compile Include="Domain\RefundConfirmCommitResult.cs" />
     <Compile Include="Domain\RefundConfirmCommitActivityInfo.cs" />
-    <Compile Include="Domain\RefundConfirmActivityInfo.cs" />
     <Compile Include="Domain\RefundChargeInfo.cs" />
     <Compile Include="Domain\RefundBusinessExtend.cs" />
     <Compile Include="Domain\RefundActivityInfo.cs" />
@@ -9664,8 +9651,6 @@
     <Compile Include="Domain\PrincipalFinanceDetail.cs" />
     <Compile Include="Domain\Principal.cs" />
     <Compile Include="Domain\PricingVO.cs" />
-    <Compile Include="Domain\PriceQueryFail.cs" />
-    <Compile Include="Domain\PriceQuery.cs" />
     <Compile Include="Domain\PriceInfoVO.cs" />
     <Compile Include="Domain\PriceInformation.cs" />
     <Compile Include="Domain\PriceInfoNode.cs" />
@@ -9746,7 +9731,6 @@
     <Compile Include="Domain\PointAccountLog.cs" />
     <Compile Include="Domain\PoiListDayVo.cs" />
     <Compile Include="Domain\PoiInfoVo.cs" />
-    <Compile Include="Domain\POIinfo.cs" />
     <Compile Include="Domain\PoCumAccruedBalanceAmtDTO.cs" />
     <Compile Include="Domain\PoCumAccruedBalanceAmtDetailDTO.cs" />
     <Compile Include="Domain\PoBillableInfoDto.cs" />
@@ -9848,7 +9832,6 @@
     <Compile Include="Domain\PaymentPlanDTO.cs" />
     <Compile Include="Domain\PaymentMethod.cs" />
     <Compile Include="Domain\PaymentList.cs" />
-    <Compile Include="Domain\PaymentItems.cs" />
     <Compile Include="Domain\PaymentInfoWithId.cs" />
     <Compile Include="Domain\PaymentInformation.cs" />
     <Compile Include="Domain\PaymentGoods.cs" />
@@ -9960,7 +9943,6 @@
     <Compile Include="Domain\PackageItemOpenInfo.cs" />
     <Compile Include="Domain\OwnedSystemPrivacyField.cs" />
     <Compile Include="Domain\OverseasTravelRate.cs" />
-    <Compile Include="Domain\OverseasGoods.cs" />
     <Compile Include="Domain\OverseasExtendParams.cs" />
     <Compile Include="Domain\OverdueDetail.cs" />
     <Compile Include="Domain\OutStockStuffInfo.cs" />
@@ -10126,7 +10108,6 @@
     <Compile Include="Domain\OpenCertifyIdentityParam.cs" />
     <Compile Include="Domain\OpenCertifyIdentifyInfo.cs" />
     <Compile Include="Domain\OpenBudget.cs" />
-    <Compile Include="Domain\OpenbizmockSseMockEvent.cs" />
     <Compile Include="Domain\OpenbizmockMapExt.cs" />
     <Compile Include="Domain\OpenBatchVoucher.cs" />
     <Compile Include="Domain\OpenBatchExpireVoucher.cs" />
@@ -10668,7 +10649,6 @@
     <Compile Include="Domain\MobileDeviceInfo.cs" />
     <Compile Include="Domain\MobileAppInfo.cs" />
     <Compile Include="Domain\MMemberLevel.cs" />
-    <Compile Include="Domain\MlmParamTestDemo.cs" />
     <Compile Include="Domain\MlmParamTest.cs" />
     <Compile Include="Domain\MItemInfo.cs" />
     <Compile Include="Domain\MiniVersionBaseInfo.cs" />
@@ -10683,6 +10663,7 @@
     <Compile Include="Domain\MiniPackageInfo.cs" />
     <Compile Include="Domain\MiniOrderExtInfoDTO.cs" />
     <Compile Include="Domain\MiniOrderDetailDTO.cs" />
+    <Compile Include="Domain\MiniOrderAddressInfoDTO.cs" />
     <Compile Include="Domain\MiniInstantiateInfo.cs" />
     <Compile Include="Domain\MiniIcpAuditReason.cs" />
     <Compile Include="Domain\MiniGoodsDetailInfoDTO.cs" />
@@ -10745,7 +10726,6 @@
     <Compile Include="Domain\MerchantSettleRelationProcessorResponse.cs" />
     <Compile Include="Domain\MerchantSettleRelationProcessorRequest.cs" />
     <Compile Include="Domain\MerchantSettleInInfo.cs" />
-    <Compile Include="Domain\MerchantScreenHit.cs" />
     <Compile Include="Domain\MerchantQueryResult.cs" />
     <Compile Include="Domain\MerchantPromoDetailInfoVO.cs" />
     <Compile Include="Domain\MerchantPriceRelInfo.cs" />
@@ -10920,7 +10900,6 @@
     <Compile Include="Domain\MaskedUserCertView.cs" />
     <Compile Include="Domain\MaskedLogonIdView.cs" />
     <Compile Include="Domain\MarketOddsSelection.cs" />
-    <Compile Include="Domain\Marketingusertest.cs" />
     <Compile Include="Domain\Marketingtestt.cs" />
     <Compile Include="Domain\Marketingtest.cs" />
     <Compile Include="Domain\MarketingSelectionInfo.cs" />
@@ -10961,7 +10940,6 @@
     <Compile Include="Domain\MakePriceAgrs.cs" />
     <Compile Include="Domain\MakeCallRequest.cs" />
     <Compile Include="Domain\MaitainShopProduct.cs" />
-    <Compile Include="Domain\MaiseDataSATest.cs" />
     <Compile Include="Domain\MaintainVehicleInfo.cs" />
     <Compile Include="Domain\MaintainOrderStatusExtParams.cs" />
     <Compile Include="Domain\MaintainBizOrderServer.cs" />
@@ -10974,7 +10952,6 @@
     <Compile Include="Domain\LuggagePolicy.cs" />
     <Compile Include="Domain\LotteryType.cs" />
     <Compile Include="Domain\LotteryPresent.cs" />
-    <Compile Include="Domain\LogWriteoffResult.cs" />
     <Compile Include="Domain\LogisticsWaybill.cs" />
     <Compile Include="Domain\LogisticsSyncDataDTO.cs" />
     <Compile Include="Domain\LogisticsShopStatusDTO.cs" />
@@ -11473,7 +11450,6 @@
     <Compile Include="Domain\KoubeiCateringBizMovehomeSyncModel.cs" />
     <Compile Include="Domain\KoubeiAdvertCommissionChannelDeleteModel.cs" />
     <Compile Include="Domain\KoubeiAdvertCommissionChannelBatchqueryModel.cs" />
-    <Compile Include="Domain\KongsuTest.cs" />
     <Compile Include="Domain\KnPrizeInfo.cs" />
     <Compile Include="Domain\KnowledgeDetail.cs" />
     <Compile Include="Domain\KnCertSendOrderDetail.cs" />
@@ -11488,7 +11464,6 @@
     <Compile Include="Domain\Keyword.cs" />
     <Compile Include="Domain\KeyValuePair.cs" />
     <Compile Include="Domain\KeyValueMap.cs" />
-    <Compile Include="Domain\KeyanColumn.cs" />
     <Compile Include="Domain\KdsPrinterModel.cs" />
     <Compile Include="Domain\KdsOrderInfoDTO.cs" />
     <Compile Include="Domain\KdsInfoModel.cs" />
@@ -11559,7 +11534,6 @@
     <Compile Include="Domain\KbAdvertSubjectVoucher.cs" />
     <Compile Include="Domain\KbAdvertSubjectResponse.cs" />
     <Compile Include="Domain\KbAdvertSpecialAdvContentRequest.cs" />
-    <Compile Include="Domain\KbadvertSmartPromoResponse.cs" />
     <Compile Include="Domain\KbadvertSmartPromoRequest.cs" />
     <Compile Include="Domain\KbAdvertQuotaCommissionClause.cs" />
     <Compile Include="Domain\KbAdvertPreserveCommissionClause.cs" />
@@ -11567,7 +11541,6 @@
     <Compile Include="Domain\KbAdvertModifyChannelRequest.cs" />
     <Compile Include="Domain\KbAdvertMissionSubject.cs" />
     <Compile Include="Domain\KbAdvertContentShortLink.cs" />
-    <Compile Include="Domain\KbAdvertContentShareCodeModify.cs" />
     <Compile Include="Domain\KbAdvertContentShareCode.cs" />
     <Compile Include="Domain\KbAdvertContentPasswordModify.cs" />
     <Compile Include="Domain\KbAdvertContentPassword.cs" />
@@ -11581,7 +11554,6 @@
     <Compile Include="Domain\KbAdvertCommissionClause.cs" />
     <Compile Include="Domain\KbadvertChannelTypeResponse.cs" />
     <Compile Include="Domain\KbAdvertChannelResponse.cs" />
-    <Compile Include="Domain\KbAdvertCascadeCommissionInfo.cs" />
     <Compile Include="Domain\KbAdvertAdvSingleVoucherResponse.cs" />
     <Compile Include="Domain\KbAdvertAdvContentResponse.cs" />
     <Compile Include="Domain\KbAdvertAdvContent.cs" />
@@ -11765,10 +11737,8 @@
     <Compile Include="Domain\IotIdentityOrgUserSpiResponse.cs" />
     <Compile Include="Domain\IotIdentityOrgUserSaveApiResponse.cs" />
     <Compile Include="Domain\IotIdentityOrgUserRemoveApiResponse.cs" />
-    <Compile Include="Domain\IotIdentityOrgUserQueryListApiResponse.cs" />
     <Compile Include="Domain\IotIdentityOrgUserQueryApiResponse.cs" />
     <Compile Include="Domain\IotIdentityOrgQueryApiResponse.cs" />
-    <Compile Include="Domain\IotIdentityOrgQueryAllListApiResponse.cs" />
     <Compile Include="Domain\IotIdentityOrgQueryAllApiResponse.cs" />
     <Compile Include="Domain\IotIdentityFaceOutEventApiResponse.cs" />
     <Compile Include="Domain\IotFmInsuCityVO.cs" />
@@ -11808,7 +11778,6 @@
     <Compile Include="Domain\InvoiceSyncCheckDTO.cs" />
     <Compile Include="Domain\InvoiceSpecificsDTO.cs" />
     <Compile Include="Domain\InvoiceSendOpenModel.cs" />
-    <Compile Include="Domain\InvoiceSaveTaxFileDTO.cs" />
     <Compile Include="Domain\InvoiceRevAmountDTO.cs" />
     <Compile Include="Domain\InvoiceResponsePageDTO.cs" />
     <Compile Include="Domain\InvoiceResponseDTO.cs" />
@@ -11964,7 +11933,6 @@
     <Compile Include="Domain\InstallmentInfo.cs" />
     <Compile Include="Domain\InstallmentDetail.cs" />
     <Compile Include="Domain\InstallmentBill.cs" />
-    <Compile Include="Domain\InstAccountInfo.cs" />
     <Compile Include="Domain\InstAccountElementsDTO.cs" />
     <Compile Include="Domain\InstAccountDTO.cs" />
     <Compile Include="Domain\InsSumInsured.cs" />
@@ -11984,7 +11952,6 @@
     <Compile Include="Domain\InsPolicy.cs" />
     <Compile Include="Domain\InsPerson.cs" />
     <Compile Include="Domain\InsPeriodDTO.cs" />
-    <Compile Include="Domain\InsPayeeDTO.cs" />
     <Compile Include="Domain\InsPartnerOrganization.cs" />
     <Compile Include="Domain\InsOrderInfo.cs" />
     <Compile Include="Domain\InsOption.cs" />
@@ -12035,7 +12002,6 @@
     <Compile Include="Domain\InsCoupon.cs" />
     <Compile Include="Domain\InsCompany.cs" />
     <Compile Include="Domain\InsClaimReportProgress.cs" />
-    <Compile Include="Domain\InsClaimReporterDTO.cs" />
     <Compile Include="Domain\InsClaimReport.cs" />
     <Compile Include="Domain\InsClaimPolicy.cs" />
     <Compile Include="Domain\InsClaimDetailDTO.cs" />
@@ -12311,11 +12277,9 @@
     <Compile Include="Domain\GpsInfo.cs" />
     <Compile Include="Domain\GovernGoodsMerchantTrans.cs" />
     <Compile Include="Domain\GovernGoodsCheckMessage.cs" />
-    <Compile Include="Domain\GovDocRequest.cs" />
     <Compile Include="Domain\GoodsVO.cs" />
     <Compile Include="Domain\GoodsTagResult.cs" />
     <Compile Include="Domain\GoodsState.cs" />
-    <Compile Include="Domain\GoodsSkuInfo.cs" />
     <Compile Include="Domain\GoodsSalesVolume.cs" />
     <Compile Include="Domain\GoodsSafetyInventoryVO.cs" />
     <Compile Include="Domain\GoodsSafetyInventory.cs" />
@@ -12413,7 +12377,6 @@
     <Compile Include="Domain\FundLimit.cs" />
     <Compile Include="Domain\FundItemAOPModel.cs" />
     <Compile Include="Domain\FundItem.cs" />
-    <Compile Include="Domain\FundIdentityParams.cs" />
     <Compile Include="Domain\FundHistory.cs" />
     <Compile Include="Domain\FundExtInfo.cs" />
     <Compile Include="Domain\FundDetailItemAOPModel.cs" />
@@ -12865,7 +12828,6 @@
     <Compile Include="Domain\DxDeployOrderInfo.cs" />
     <Compile Include="Domain\DumTestFFAA.cs" />
     <Compile Include="Domain\DumpPageRes.cs" />
-    <Compile Include="Domain\DumMmmY.cs" />
     <Compile Include="Domain\DtBankVoucherInfo.cs" />
     <Compile Include="Domain\DtBankStagedThresholdInfo.cs" />
     <Compile Include="Domain\DtBankRandomRangeInfo.cs" />
@@ -12922,6 +12884,7 @@
     <Compile Include="Domain\DoctorContentStatisticalResult.cs" />
     <Compile Include="Domain\DocInfo.cs" />
     <Compile Include="Domain\DmActivityShopData.cs" />
+    <Compile Include="Domain\DivinationBizContextDetail.cs" />
     <Compile Include="Domain\District.cs" />
     <Compile Include="Domain\DisposalResult.cs" />
     <Compile Include="Domain\DisplaySetting.cs" />
@@ -13665,7 +13628,6 @@
     <Compile Include="Domain\CertificatePrepareInfo.cs" />
     <Compile Include="Domain\CertificateInstanceAmountInfo.cs" />
     <Compile Include="Domain\CertificateInfo.cs" />
-    <Compile Include="Domain\Certificate.cs" />
     <Compile Include="Domain\CertFields.cs" />
     <Compile Include="Domain\CertDomainProvider.cs" />
     <Compile Include="Domain\CertAuditResult.cs" />
@@ -13749,7 +13711,6 @@
     <Compile Include="Domain\CardFundInfo.cs" />
     <Compile Include="Domain\CardFrontTextDTO.cs" />
     <Compile Include="Domain\CardExtInfoDTO.cs" />
-    <Compile Include="Domain\CardExtensionInfoData.cs" />
     <Compile Include="Domain\CardExtendParamsDTO.cs" />
     <Compile Include="Domain\CardEachPromoInfo.cs" />
     <Compile Include="Domain\CardDomainVO.cs" />
@@ -13821,7 +13782,6 @@
     <Compile Include="Domain\BusinessPropertyDTO.cs" />
     <Compile Include="Domain\BusinessPoint.cs" />
     <Compile Include="Domain\BusinessPermission.cs" />
-    <Compile Include="Domain\BusinessPartner.cs" />
     <Compile Include="Domain\BusinessParamsMap.cs" />
     <Compile Include="Domain\BusinessParamsDTO.cs" />
     <Compile Include="Domain\BusinessParams.cs" />
@@ -13855,7 +13815,6 @@
     <Compile Include="Domain\BsParticipantResponseDTO.cs" />
     <Compile Include="Domain\BsParticipantDTO.cs" />
     <Compile Include="Domain\BsEnrollParticipant.cs" />
-    <Compile Include="Domain\BsEnrollInfo.cs" />
     <Compile Include="Domain\BsEnrollablePlan.cs" />
     <Compile Include="Domain\BsBrandPlanIntro.cs" />
     <Compile Include="Domain\BsBrandPlanDetail.cs" />
@@ -13879,12 +13838,10 @@
     <Compile Include="Domain\BPOpenApiAddSignContent.cs" />
     <Compile Include="Domain\BpmsMessageDTO.cs" />
     <Compile Include="Domain\BPaaSServiceInfo.cs" />
-    <Compile Include="Domain\BpaasConfSingleCheckResult.cs" />
     <Compile Include="Domain\BoxOrderStatusInfo.cs" />
     <Compile Include="Domain\BoxExclusiveServiceOpenApiInfos.cs" />
     <Compile Include="Domain\BoxExclusiveServiceData.cs" />
     <Compile Include="Domain\BoxExclusiveService.cs" />
-    <Compile Include="Domain\BoxExclusiveMarketingPageQueryDTO.cs" />
     <Compile Include="Domain\BoxExclusiveKeyword.cs" />
     <Compile Include="Domain\BoxExclusiveBase.cs" />
     <Compile Include="Domain\BoxDetail.cs" />
@@ -13962,7 +13919,6 @@
     <Compile Include="Domain\BillRepayResult.cs" />
     <Compile Include="Domain\BillRepayRequest.cs" />
     <Compile Include="Domain\BillRepayBudgetVO.cs" />
-    <Compile Include="Domain\BillPaymentDetail.cs" />
     <Compile Include="Domain\BillNotifyInfo.cs" />
     <Compile Include="Domain\BillKeyInfo.cs" />
     <Compile Include="Domain\BillInvoiceResponseDTO.cs" />
@@ -14125,7 +14081,6 @@
     <Compile Include="Domain\AuthenticationInfo.cs" />
     <Compile Include="Domain\AuthBizParam.cs" />
     <Compile Include="Domain\AuthApiDTO.cs" />
-    <Compile Include="Domain\AuthAmountDTO.cs" />
     <Compile Include="Domain\AuditLicenseInfo.cs" />
     <Compile Include="Domain\AuditEvidenceInfo.cs" />
     <Compile Include="Domain\AudioEvent.cs" />
@@ -14261,7 +14216,6 @@
     <Compile Include="Domain\ApplyCodeRequest.cs" />
     <Compile Include="Domain\ApplyBusinessPropertyDTO.cs" />
     <Compile Include="Domain\ApplyBusinessCity.cs" />
-    <Compile Include="Domain\ApplyBoxExclusiveRequest.cs" />
     <Compile Include="Domain\ApplyBizBudgetRequest.cs" />
     <Compile Include="Domain\ApplyBasicInfo.cs" />
     <Compile Include="Domain\ApplyAttatchmentVO.cs" />
@@ -14375,14 +14329,12 @@
     <Compile Include="Domain\ApartmentPicInfo.cs" />
     <Compile Include="Domain\ApartmentContactInfo.cs" />
     <Compile Include="Domain\AosSuggestItem.cs" />
-    <Compile Include="Domain\AosSearchItem.cs" />
     <Compile Include="Domain\AosHotItem.cs" />
     <Compile Include="Domain\AosHintItem.cs" />
     <Compile Include="Domain\AosGoodItem.cs" />
     <Compile Include="Domain\AosDataItem.cs" />
     <Compile Include="Domain\AoiUser.cs" />
     <Compile Include="Domain\AoiInfoDTO.cs" />
-    <Compile Include="Domain\AOIinfo.cs" />
     <Compile Include="Domain\AnxinkaDeliverDetailResponse.cs" />
     <Compile Include="Domain\AnxinItemSellOrderDetailResponse.cs" />
     <Compile Include="Domain\AntTttDetetA.cs" />
@@ -14593,6 +14545,7 @@
     <Compile Include="Domain\AnttechBlockchainDefinAssetmanagePenetrateSubmitModel.cs" />
     <Compile Include="Domain\AnttechBlockchainDefinAssetmanagePenetrateQueryModel.cs" />
     <Compile Include="Domain\AnttechAiDonationServiceCreateModel.cs" />
+    <Compile Include="Domain\AnttechAiDevicePayCallbackModel.cs" />
     <Compile Include="Domain\AnttechAiCvUaIdentifyModel.cs" />
     <Compile Include="Domain\AnttechAiCvUaAsyncQueryModel.cs" />
     <Compile Include="Domain\AnttechAiCvUaAsyncIdentifyModel.cs" />
@@ -14935,9 +14888,6 @@
     <Compile Include="Domain\AllocAmountInfoDTO.cs" />
     <Compile Include="Domain\AliyunBSN.cs" />
     <Compile Include="Domain\AliveSubtitleExt.cs" />
-    <Compile Include="Domain\AliTrustRiskIdentify.cs" />
-    <Compile Include="Domain\AliTrustCert.cs" />
-    <Compile Include="Domain\AliTrustAlipayCert.cs" />
     <Compile Include="Domain\AlisisReportColumn.cs" />
     <Compile Include="Domain\AlisisReport.cs" />
     <Compile Include="Domain\AlipmcProcessInstanceOpenMqDTO.cs" />
@@ -16993,7 +16943,6 @@
     <Compile Include="Domain\AlipayMarketingQipanCrowdwithtagQueryModel.cs" />
     <Compile Include="Domain\AlipayMarketingQipanCrowdwithtagCreateModel.cs" />
     <Compile Include="Domain\AlipayMarketingQipanCrowdoperationCreateModel.cs" />
-    <Compile Include="Domain\AlipayMarketingProductContext.cs" />
     <Compile Include="Domain\AlipayMarketingPassTemplateQueryModel.cs" />
     <Compile Include="Domain\AlipayMarketingPassShopBindModel.cs" />
     <Compile Include="Domain\AlipayMarketingPassInstanceQueryModel.cs" />
@@ -17015,12 +16964,10 @@
     <Compile Include="Domain\AlipayMarketingIbsInfo.cs" />
     <Compile Include="Domain\AlipayMarketingFacetofaceTwostageUseModel.cs" />
     <Compile Include="Domain\AlipayMarketingFacetofaceDecodeUseModel.cs" />
-    <Compile Include="Domain\AlipayMarketingExtData.cs" />
     <Compile Include="Domain\AlipayMarketingExchangevoucherUseModel.cs" />
     <Compile Include="Domain\AlipayMarketingExchangevoucherTemplateCreateModel.cs" />
     <Compile Include="Domain\AlipayMarketingEntityQualificationVerifyModel.cs" />
     <Compile Include="Domain\AlipayMarketingEncodeShortlinkCreateModel.cs" />
-    <Compile Include="Domain\AlipayMarketingDecodeData.cs" />
     <Compile Include="Domain\AlipayMarketingDataModelQueryModel.cs" />
     <Compile Include="Domain\AlipayMarketingDataModelBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayMarketingDataEquitySyncModel.cs" />
@@ -17900,7 +17847,6 @@
     <Compile Include="Domain\AlipayFinanceQuotationProtocolAuthorizeSubscribeModel.cs" />
     <Compile Include="Domain\AlipayFinanceQuotationProtocolAuthorizeCheckModel.cs" />
     <Compile Include="Domain\AlipayFinanceQuotationFindataSendModel.cs" />
-    <Compile Include="Domain\AlipayFinanceQuotationDtcrawlerSendModel.cs" />
     <Compile Include="Domain\AlipayFinanceFundSimilarquotationQueryModel.cs" />
     <Compile Include="Domain\AlipayFinanceFundFundquotationQueryModel.cs" />
     <Compile Include="Domain\AlipayFinanceFundFundprodQueryModel.cs" />
@@ -20505,7 +20451,6 @@
     <Compile Include="Domain\AgmTemplateInstanceDTO.cs" />
     <Compile Include="Domain\AgmTagDTO.cs" />
     <Compile Include="Domain\AgmComponentInstanceDTO.cs" />
-    <Compile Include="Domain\AggregationInstance.cs" />
     <Compile Include="Domain\AgentWelcomeCardDTO.cs" />
     <Compile Include="Domain\AgentVO.cs" />
     <Compile Include="Domain\AgentScheduleLog.cs" />
@@ -20546,13 +20491,11 @@
     <Compile Include="Domain\AddressPoi.cs" />
     <Compile Include="Domain\AddressOpenApiDTO.cs" />
     <Compile Include="Domain\AddressInfoVO.cs" />
-    <Compile Include="Domain\AddressInfoRecmixer.cs" />
     <Compile Include="Domain\AddressInfoObj.cs" />
     <Compile Include="Domain\AddressInfoKt.cs" />
     <Compile Include="Domain\AddressInfoDTO.cs" />
     <Compile Include="Domain\AddressInfo.cs" />
     <Compile Include="Domain\AddressDTO.cs" />
-    <Compile Include="Domain\Addresscomponent.cs" />
     <Compile Include="Domain\Address.cs" />
     <Compile Include="Domain\AddRentTradeInfo.cs" />
     <Compile Include="Domain\AddPlanGroupResult.cs" />
@@ -20642,7 +20585,6 @@
     <Compile Include="Domain\AbilityResourceConsume.cs" />
     <Compile Include="Domain\AbilityResourceBizMark.cs" />
     <Compile Include="Domain\AbilityPageQueryDTO.cs" />
-    <Compile Include="Domain\Aaabbbaaaa.cs" />
     <Compile Include="Domain\AAAAAtest.cs" />
     <Compile Include="Domain\CancelCommissionRoleInfo.cs" />
     <Compile Include="Domain\ApiScheameOne.cs" />
@@ -20876,6 +20818,7 @@
     <Compile Include="Request\ZhimaCreditPeUserContractSignRequest.cs" />
     <Compile Include="Request\ZhimaCreditPeUserContractQueryRequest.cs" />
     <Compile Include="Request\ZhimaCreditPeUserAuthApplyRequest.cs" />
+    <Compile Include="Request\ZhimaCreditPePayafteruseTaskSyncRequest.cs" />
     <Compile Include="Request\ZhimaCreditPeLevelQueryRequest.cs" />
     <Compile Include="Request\ZhimaCreditPeLawsuitRecordGetRequest.cs" />
     <Compile Include="Request\ZhimaCreditPeLawsuitDetailQueryRequest.cs" />
@@ -22013,6 +21956,7 @@
     <Compile Include="Request\AnttechBlockchainDefinAssetmanagePenetrateSubmitRequest.cs" />
     <Compile Include="Request\AnttechBlockchainDefinAssetmanagePenetrateQueryRequest.cs" />
     <Compile Include="Request\AnttechAiDonationServiceCreateRequest.cs" />
+    <Compile Include="Request\AnttechAiDevicePayCallbackRequest.cs" />
     <Compile Include="Request\AnttechAiCvUaIdentifyRequest.cs" />
     <Compile Include="Request\AnttechAiCvUaAsyncQueryRequest.cs" />
     <Compile Include="Request\AnttechAiCvUaAsyncIdentifyRequest.cs" />

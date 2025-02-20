@@ -47,7 +47,7 @@ namespace Aop.Api.Response
         public AddressInfoVO DefaultReceivingAddress { get; set; }
 
         /// <summary>
-        /// 配送信息
+        /// 履约信息
         /// </summary>
         [XmlElement("delivery_detail")]
         public DeliveryDetailInfoVO DeliveryDetail { get; set; }
@@ -105,6 +105,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("rent_info")]
         public RentInfoVO RentInfo { get; set; }
+
+        /// <summary>
+        /// 发货地址信息
+        /// </summary>
+        [XmlElement("send_address_info")]
+        public MiniOrderAddressInfoDTO SendAddressInfo { get; set; }
 
         /// <summary>
         /// 结算方式

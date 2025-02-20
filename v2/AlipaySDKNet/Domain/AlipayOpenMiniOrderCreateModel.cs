@@ -95,6 +95,12 @@ namespace Aop.Api.Domain
         public FundAuthFreezeInfoDTO FundAuthFreezeInfo { get; set; }
 
         /// <summary>
+        /// 订单备注
+        /// </summary>
+        [XmlElement("memo")]
+        public string Memo { get; set; }
+
+        /// <summary>
         /// 订单类型
         /// </summary>
         [XmlElement("merchant_biz_type")]
@@ -129,6 +135,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("seller_id")]
         public string SellerId { get; set; }
+
+        /// <summary>
+        /// 发货地址信息
+        /// </summary>
+        [XmlElement("send_address_info")]
+        public MiniOrderAddressInfoDTO SendAddressInfo { get; set; }
 
         /// <summary>
         /// 签约资商通直付通平台商分账产品后，下单时传入平台模式，smid必传；此模式下支持服务商派单模式

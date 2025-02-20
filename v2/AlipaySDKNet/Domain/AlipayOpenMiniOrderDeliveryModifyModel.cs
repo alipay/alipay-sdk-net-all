@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// 订单价格修改信息
+        /// </summary>
+        [XmlElement("price_info")]
+        public PriceInfoModifyDTO PriceInfo { get; set; }
+
+        /// <summary>
         /// 订单的履约状态
         /// </summary>
         [XmlElement("status")]

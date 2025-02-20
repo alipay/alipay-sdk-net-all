@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_price")]
         public string OrderPrice { get; set; }
+
+        /// <summary>
+        /// 订单的真实金额，适用于下单时不能确定实际金额的场景，单位为元
+        /// </summary>
+        [XmlElement("real_order_price")]
+        public string RealOrderPrice { get; set; }
     }
 }

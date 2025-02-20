@@ -55,6 +55,12 @@ namespace Aop.Api.Response
         public string ApplyRefundAmount { get; set; }
 
         /// <summary>
+        /// 创建时间，yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [XmlElement("create_time")]
+        public string CreateTime { get; set; }
+
+        /// <summary>
         /// 最终退款金额，单位：元,精确到小数点后两位
         /// </summary>
         [XmlElement("finally_refund_amount")]
