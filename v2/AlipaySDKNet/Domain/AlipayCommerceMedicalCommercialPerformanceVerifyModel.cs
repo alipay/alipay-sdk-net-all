@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string OutProductId { get; set; }
 
         /// <summary>
+        /// 用于商户核销时，需要携带特殊业务参数场景
+        /// </summary>
+        [XmlElement("special_biz_info")]
+        public string SpecialBizInfo { get; set; }
+
+        /// <summary>
         /// status核销或确认场景使用，枚举值为S\C\R\N，正常核销或确认商品时传S、核销权益次数完结传C、拒绝核销或确认传入N、逆向核销回补使用次数时传递R。 不传默认为S
         /// </summary>
         [XmlElement("status")]

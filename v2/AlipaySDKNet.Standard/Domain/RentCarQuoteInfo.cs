@@ -28,6 +28,30 @@ namespace Aop.Api.Domain
         public string DiffAdvQuoteAmt { get; set; }
 
         /// <summary>
+        /// 行程结束详情地址
+        /// </summary>
+        [XmlElement("end_address")]
+        public string EndAddress { get; set; }
+
+        /// <summary>
+        /// 行程结束城市名
+        /// </summary>
+        [XmlElement("end_city_name")]
+        public string EndCityName { get; set; }
+
+        /// <summary>
+        /// 行程结束纬度
+        /// </summary>
+        [XmlElement("end_latitude")]
+        public string EndLatitude { get; set; }
+
+        /// <summary>
+        /// 行程结束经度
+        /// </summary>
+        [XmlElement("end_longitude")]
+        public string EndLongitude { get; set; }
+
+        /// <summary>
         /// 行程结束时间
         /// </summary>
         [XmlElement("end_time")]
@@ -94,9 +118,27 @@ namespace Aop.Api.Domain
         public string StartCityName { get; set; }
 
         /// <summary>
+        /// 行程开始纬度
+        /// </summary>
+        [XmlElement("start_latitude")]
+        public string StartLatitude { get; set; }
+
+        /// <summary>
+        /// 行程开始经度
+        /// </summary>
+        [XmlElement("start_longitude")]
+        public string StartLongitude { get; set; }
+
+        /// <summary>
         /// 行程开始时间
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
+
+        /// <summary>
+        /// 请求时间
+        /// </summary>
+        [XmlElement("trace_datetime")]
+        public string TraceDatetime { get; set; }
     }
 }

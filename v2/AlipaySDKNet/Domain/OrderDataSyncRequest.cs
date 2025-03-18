@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// 周期卡次数单位，标识是几周或者几个月
+        /// 周期卡次数单位，天:DAY，周:WEEK，月:MONTH，季:QUARTER
         /// </summary>
         [XmlElement("count_unit")]
         public string CountUnit { get; set; }
@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("expired_start_time")]
         public string ExpiredStartTime { get; set; }
+
+        /// <summary>
+        /// 服务提供商PID
+        /// </summary>
+        [XmlElement("isv_pid")]
+        public string IsvPid { get; set; }
 
         /// <summary>
         /// 商品编码，由外部传入

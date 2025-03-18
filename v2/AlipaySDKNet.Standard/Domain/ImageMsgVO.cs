@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ImageMsgVO : AopObject
     {
         /// <summary>
-        /// 图片高度，请必须传图片真实的高度，否则客户端会按照填的宽高进行剪裁
+        /// 图片高度，请必须传图片真实的高度，否则客户端会按照填的宽高进行剪裁，单位为像素
         /// </summary>
         [XmlElement("height")]
         public long Height { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ImageId { get; set; }
 
         /// <summary>
-        /// 图片宽，请必须传图片真实的宽，否则客户端会按照填的宽高进行剪裁
+        /// 图片宽，请必须传图片真实的宽，否则客户端会按照填的宽高进行剪裁，单位为像素
         /// </summary>
         [XmlElement("width")]
         public long Width { get; set; }

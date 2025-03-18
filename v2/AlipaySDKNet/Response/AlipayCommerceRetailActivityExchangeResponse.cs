@@ -9,9 +9,9 @@ namespace Aop.Api.Response
     public class AlipayCommerceRetailActivityExchangeResponse : AopResponse
     {
         /// <summary>
-        /// 积分兑换状态
+        /// 积分兑换结果，true为成功，false为失败
         /// </summary>
         [XmlElement("status")]
-        public string Status { get; set; }
+        public bool Status { get; set; }
     }
 }

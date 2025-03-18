@@ -8,5 +8,10 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayCommerceMedicalInsuranceClaimSyncResponse : AopResponse
     {
+        /// <summary>
+        /// 支付宝理赔报案号
+        /// </summary>
+        [XmlElement("ant_claim_no")]
+        public string AntClaimNo { get; set; }
     }
 }

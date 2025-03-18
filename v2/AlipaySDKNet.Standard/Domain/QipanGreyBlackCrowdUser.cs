@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }
+
+        /// <summary>
+        /// 用户黑名单类型，多种类型请用英文逗号隔开，如：FRAUD,DISPUTE。 枚举值： FRAUD：疑似欺诈 DISPUTE：案件纠纷 OVERDUE：租赁逾期 OTHER：其他黑名单
+        /// </summary>
+        [XmlElement("user_tags")]
+        public string UserTags { get; set; }
     }
 }

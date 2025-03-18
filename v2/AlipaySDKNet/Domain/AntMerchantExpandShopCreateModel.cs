@@ -169,6 +169,12 @@ namespace Aop.Api.Domain
         public string ShopCategory { get; set; }
 
         /// <summary>
+        /// 主要针对医疗行业门店主体类型进件使用，不同门店认证主体需要相应的主体资质证书。  企业营业执照: ENTERPRISE;  事业单位法人证书: INST_RGST_CTF;  民办非企业单位登记证书 PRIVATE_NON_ENTERPRISE
+        /// </summary>
+        [XmlElement("shop_main_type")]
+        public string ShopMainType { get; set; }
+
+        /// <summary>
         /// 店铺名称, 由商户定义在支付宝内的店铺名称
         /// </summary>
         [XmlElement("shop_name")]

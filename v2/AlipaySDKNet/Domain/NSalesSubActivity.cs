@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string FulfillAmount { get; set; }
 
         /// <summary>
-        /// 卖进订单子活动履约状态
+        /// 卖进订单子活动履约状态，初始化或进行中的子任务不会返回该字段。
         /// </summary>
         [XmlElement("fulfill_status")]
         public string FulfillStatus { get; set; }
@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public long PeriodNo { get; set; }
 
         /// <summary>
-        /// 当期子活动支付宝记录参考收单笔数
+        /// 当期子活动支付宝记录参考收单笔数，未开启统计前不会返回该字段。
         /// </summary>
         [XmlElement("refer_trade_count")]
         public long ReferTradeCount { get; set; }
 
         /// <summary>
-        /// 当期子活动支付宝记录参考收单天数
+        /// 当期子活动支付宝记录参考收单天数，未开启统计前不会返回该字段。
         /// </summary>
         [XmlElement("refer_trade_days")]
         public long ReferTradeDays { get; set; }

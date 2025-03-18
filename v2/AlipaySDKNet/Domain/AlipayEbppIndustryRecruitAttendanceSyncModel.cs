@@ -68,5 +68,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_job_id")]
         public string OutJobId { get; set; }
+
+        /// <summary>
+        /// 外部用户id
+        /// </summary>
+        [XmlElement("out_user_id")]
+        public string OutUserId { get; set; }
+
+        /// <summary>
+        /// 考勤信息来源
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
     }
 }

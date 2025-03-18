@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string GmtStart { get; set; }
 
         /// <summary>
+        /// 商品群活动顶部运营位内容
+        /// </summary>
+        [XmlElement("goods_content")]
+        public GoodsActivityContentVO GoodsContent { get; set; }
+
+        /// <summary>
         /// 商家群活动id，创建顶部运营位时对应的唯一键
         /// </summary>
         [XmlElement("group_activity_id")]

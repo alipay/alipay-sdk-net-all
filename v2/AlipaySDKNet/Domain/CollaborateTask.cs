@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string ActivityType { get; set; }
 
         /// <summary>
-        /// 任务拉取时该字段无返回内容，确认领取时会返回该字段。
+        /// 任务拉取时该字段无返回内容，确认商户有安装意图时返回该字段
         /// </summary>
         [XmlElement("address")]
         public string Address { get; set; }
@@ -134,7 +134,7 @@ namespace Aop.Api.Domain
         public List<string> TaskTags { get; set; }
 
         /// <summary>
-        /// 任务拉取时该字段无返回内容，确认领取时会返回该字段。
+        /// 任务拉取时无该内容返回，确认领取时返回脱敏内容，如131****2222，确认商户有意图或呼叫商户N次未接通的情况会返回该字段未脱敏数据，N以实际业务沟通为准
         /// </summary>
         [XmlElement("tel")]
         public string Tel { get; set; }

@@ -15,7 +15,7 @@ namespace Aop.Api.Request
         public string ComplainEventId { get; set; }
 
         /// <summary>
-        /// 反馈类目ID 00:使用体验保障金退款； 02:通过其他方式退款; 03:已发货; 04:其他; 05:已完成售后服务; 06:非我方责任范围；
+        /// 小程序交易反馈类目ID： 02:通过其他方式退款; 03:已发货; 04:其他; 05:已完成售后服务; 06:非我方责任范围;  安心付/先享后付反馈类目ID： 194:反馈处理结果;
         /// </summary>
         public string FeedbackCode { get; set; }
 

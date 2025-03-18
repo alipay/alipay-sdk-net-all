@@ -174,6 +174,12 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
+        /// 主要针对医疗行业门店主体类型进件使用，不同门店认证主体需要相应的主体资质证书。  企业营业执照: ENTERPRISE;  事业单位法人证书: INST_RGST_CTF;  民办非企业单位登记证书 PRIVATE_NON_ENTERPRISE
+        /// </summary>
+        [XmlElement("shop_main_type")]
+        public string ShopMainType { get; set; }
+
+        /// <summary>
         /// 店铺名称。直连开店要保证全局店铺名称+地址唯一，间连开店要保证服务商pid下店铺名称+地址唯一。若无需更新本信息项，可以不填写
         /// </summary>
         [XmlElement("shop_name")]

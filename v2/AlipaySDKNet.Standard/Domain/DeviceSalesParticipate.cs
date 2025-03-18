@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DeviceSalesParticipate : AopObject
     {
         /// <summary>
-        /// 活动 id（0元先享、先采后返的时候必有）
+        /// 活动 id（做任务得设备、先采后返的时候必有）
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }

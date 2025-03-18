@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayOfflineProviderCollaborateDevicebindApplyResponse : AopResponse
     {
         /// <summary>
-        /// 活动链接，非白名单情况一定有
+        /// 商户签约链接，需要将该链接生成二维码让商户扫码签约，非白名单情况一定有
         /// </summary>
         [XmlElement("activity_info_url")]
         public string ActivityInfoUrl { get; set; }
@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string DeviceBindStatus { get; set; }
 
         /// <summary>
-        /// 设备备注信息
+        /// 设备备注信息，可将该提示展示给小二，由小二决定是否展示二维码给商户签约
         /// </summary>
         [XmlElement("device_remark")]
         public string DeviceRemark { get; set; }

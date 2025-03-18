@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZhimaCreditEpEcomstoreDetailQueryModel : AopObject
     {
         /// <summary>
+        /// 授权编号
+        /// </summary>
+        [XmlElement("auth_id")]
+        public string AuthId { get; set; }
+
+        /// <summary>
         /// 店铺平台ID
         /// </summary>
         [XmlElement("platform_id")]

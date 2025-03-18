@@ -16,19 +16,25 @@ namespace Aop.Api.Domain
         public string ExternalId { get; set; }
 
         /// <summary>
-        /// 外部门店 ID，如果是可用绑定必有
+        /// 外部门店 ID，如果是间连绑定必有
         /// </summary>
         [XmlElement("external_shop_id")]
         public string ExternalShopId { get; set; }
 
         /// <summary>
-        /// 可用绑定时必有，用于设备左上角展示，可以区分设备所在门店
+        /// 卖进方案扩展信息
+        /// </summary>
+        [XmlElement("sales_solution_ext")]
+        public SalesSolutionExt SalesSolutionExt { get; set; }
+
+        /// <summary>
+        /// 间连绑定时必有，用于设备左上角展示，可以区分设备所在门店
         /// </summary>
         [XmlElement("shop_name")]
         public string ShopName { get; set; }
 
         /// <summary>
-        /// 可用绑定时选填，用于设备左上角展示，可以区分设备所在门店
+        /// 间连绑定时选填，用于设备左上角展示，可以区分设备所在门店
         /// </summary>
         [XmlElement("shop_nick_name")]
         public string ShopNickName { get; set; }

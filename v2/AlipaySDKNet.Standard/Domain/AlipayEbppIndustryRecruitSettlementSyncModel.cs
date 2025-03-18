@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string OutSettlementId { get; set; }
 
         /// <summary>
+        /// 外部用户id
+        /// </summary>
+        [XmlElement("out_user_id")]
+        public string OutUserId { get; set; }
+
+        /// <summary>
         /// 调整后工时：（单位：小时）
         /// </summary>
         [XmlElement("real_attendance_time")]
@@ -88,5 +94,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("settle_status")]
         public string SettleStatus { get; set; }
+
+        /// <summary>
+        /// 结算信息来源
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
     }
 }

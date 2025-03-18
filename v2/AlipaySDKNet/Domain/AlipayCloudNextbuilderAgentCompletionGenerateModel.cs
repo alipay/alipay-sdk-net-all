@@ -28,6 +28,24 @@ namespace Aop.Api.Domain
         public string Inputs { get; set; }
 
         /// <summary>
+        /// 纬度数据，如2.247
+        /// </summary>
+        [XmlElement("latitude")]
+        public string Latitude { get; set; }
+
+        /// <summary>
+        /// 是否接收思维链数据
+        /// </summary>
+        [XmlElement("llm_thinking")]
+        public bool LlmThinking { get; set; }
+
+        /// <summary>
+        /// 经度数据，如48.888
+        /// </summary>
+        [XmlElement("longitude")]
+        public string Longitude { get; set; }
+
+        /// <summary>
         /// 客户调用应用的用户唯一标识
         /// </summary>
         [XmlElement("outer_user_id")]

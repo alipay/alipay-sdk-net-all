@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class UpdateCustomerRequest : AopObject
     {
         /// <summary>
-        /// bd
+        /// 客户bd
         /// </summary>
         [XmlElement("bd")]
         public string Bd { get; set; }
@@ -22,10 +22,16 @@ namespace Aop.Api.Domain
         public string ChargePersonName { get; set; }
 
         /// <summary>
-        /// cid
+        /// 客户cid
         /// </summary>
         [XmlElement("cid")]
         public string Cid { get; set; }
+
+        /// <summary>
+        /// CLOUD_TAG=多云标签
+        /// </summary>
+        [XmlElement("cloud_tag")]
+        public string CloudTag { get; set; }
 
         /// <summary>
         /// 国家
@@ -64,7 +70,7 @@ namespace Aop.Api.Domain
         public string EpRegNo { get; set; }
 
         /// <summary>
-        /// 经营状态
+        /// 经营状态字符串，16位长度内任意值
         /// </summary>
         [XmlElement("ep_status")]
         public string EpStatus { get; set; }
@@ -94,10 +100,16 @@ namespace Aop.Api.Domain
         public string IndustryCategory { get; set; }
 
         /// <summary>
-        /// 重点客户枚举CODE
+        /// 重点客户,,分销销客重点客户值
         /// </summary>
         [XmlElement("key_customer")]
         public string KeyCustomer { get; set; }
+
+        /// <summary>
+        /// LEADS_CLOUD_TAG=商机多云标签
+        /// </summary>
+        [XmlElement("leads_cloud_tag")]
+        public string LeadsCloudTag { get; set; }
 
         /// <summary>
         /// 所属地区
@@ -118,13 +130,19 @@ namespace Aop.Api.Domain
         public string Operator { get; set; }
 
         /// <summary>
-        /// 公有云一级行业枚举CODE
+        /// PLATFORM_CLOUD_TAG=平台多云标签
+        /// </summary>
+        [XmlElement("platform_cloud_tag")]
+        public string PlatformCloudTag { get; set; }
+
+        /// <summary>
+        /// 公有云一级行业,分销销客行业值
         /// </summary>
         [XmlElement("pub_cloud_first_level_industry")]
         public string PubCloudFirstLevelIndustry { get; set; }
 
         /// <summary>
-        /// 公有云二级行业枚举CODE
+        /// 公有云二级行业,,分销销客行业值
         /// </summary>
         [XmlElement("pub_cloud_second_level_industry")]
         public string PubCloudSecondLevelIndustry { get; set; }
@@ -142,13 +160,13 @@ namespace Aop.Api.Domain
         public string RegisteredAddress { get; set; }
 
         /// <summary>
-        /// 注册资本
+        /// 注册资本带单位文本值
         /// </summary>
         [XmlElement("registered_capital")]
         public string RegisteredCapital { get; set; }
 
         /// <summary>
-        /// 企业人员规模
+        /// 企业人员规模(人数)
         /// </summary>
         [XmlElement("social_security_account")]
         public string SocialSecurityAccount { get; set; }

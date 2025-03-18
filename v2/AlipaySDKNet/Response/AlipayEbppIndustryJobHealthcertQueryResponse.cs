@@ -33,7 +33,7 @@ namespace Aop.Api.Response
         public string Uid { get; set; }
 
         /// <summary>
-        /// 健康证有效期， 枚举值: 距过期时间>30天， 距过期时间≤30天， 已过期
+        /// 健康证有效期，单位：天 枚举值: 距过期时间>30天， 距过期时间≤30天， 失效日期＞60天, 失效日期＞90天, 失效日期＞180天, 已过期
         /// </summary>
         [XmlElement("valid_period")]
         public string ValidPeriod { get; set; }

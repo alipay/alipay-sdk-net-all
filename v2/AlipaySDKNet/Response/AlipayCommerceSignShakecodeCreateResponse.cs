@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("shake_code")]
         public string ShakeCode { get; set; }
+
+        /// <summary>
+        /// 签约链接转换的短链接，点击打开签约页面
+        /// </summary>
+        [XmlElement("short_url")]
+        public string ShortUrl { get; set; }
     }
 }

@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string Id { get; set; }
 
         /// <summary>
+        /// metadata数据
+        /// </summary>
+        [XmlElement("metadata")]
+        public string Metadata { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

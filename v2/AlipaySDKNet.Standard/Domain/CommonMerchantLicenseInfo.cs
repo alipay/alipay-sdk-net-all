@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class CommonMerchantLicenseInfo : AopObject
     {
         /// <summary>
+        /// 经营范围
+        /// </summary>
+        [XmlElement("business_scope")]
+        public string BusinessScope { get; set; }
+
+        /// <summary>
         /// 证件号，比如统一社会信用代码、登记管理部门代码、机构类型代码、行政区划码、主体识别码和校验码等
         /// </summary>
         [XmlElement("cert_no")]
@@ -34,6 +40,12 @@ namespace Aop.Api.Domain
         [XmlArray("license_urls")]
         [XmlArrayItem("string")]
         public List<string> LicenseUrls { get; set; }
+
+        /// <summary>
+        /// 注册地址
+        /// </summary>
+        [XmlElement("reg_capital")]
+        public string RegCapital { get; set; }
 
         /// <summary>
         /// 资质类型

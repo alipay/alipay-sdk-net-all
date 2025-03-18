@@ -127,7 +127,7 @@ namespace Aop.Api.Domain
         public string Salary { get; set; }
 
         /// <summary>
-        /// 岗位来源，如安心就业码渠道
+        /// 岗位来源，如安心快招渠道
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }

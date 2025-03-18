@@ -11,14 +11,14 @@ namespace Aop.Api.Response
     public class AlipayOfflineProviderCollaborateDevicebindQueryResponse : AopResponse
     {
         /// <summary>
-        /// 设备申请绑定的结果
+        /// 设备绑定申请单列表
         /// </summary>
         [XmlArray("apply_result_info")]
         [XmlArrayItem("bind_apply_result")]
         public List<BindApplyResult> ApplyResultInfo { get; set; }
 
         /// <summary>
-        /// 设备绑定信息
+        /// 设备当前绑定信息
         /// </summary>
         [XmlElement("bind_info")]
         public IotDeviceBindBaseInfo BindInfo { get; set; }

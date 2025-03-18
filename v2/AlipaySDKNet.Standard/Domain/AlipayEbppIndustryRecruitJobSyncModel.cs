@@ -126,6 +126,12 @@ namespace Aop.Api.Domain
         public string JobType { get; set; }
 
         /// <summary>
+        /// 外部服务商雇主id
+        /// </summary>
+        [XmlElement("out_hire_user_id")]
+        public string OutHireUserId { get; set; }
+
+        /// <summary>
         /// ISV侧岗位唯一标识
         /// </summary>
         [XmlElement("out_job_id")]
@@ -172,6 +178,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("server_job_url")]
         public string ServerJobUrl { get; set; }
+
+        /// <summary>
+        /// 岗位来源
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
 
         /// <summary>
         /// 工作结束日期，格式:yyyy-MM-dd

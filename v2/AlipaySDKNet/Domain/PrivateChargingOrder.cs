@@ -10,19 +10,19 @@ namespace Aop.Api.Domain
     public class PrivateChargingOrder : AopObject
     {
         /// <summary>
-        /// A相电流。单位A，含直流（输出）
+        /// A相电流，单位A。含直流（输出）。
         /// </summary>
         [XmlElement("current_a")]
         public string CurrentA { get; set; }
 
         /// <summary>
-        /// B相电流
+        /// B相电流，单位A。
         /// </summary>
         [XmlElement("current_b")]
         public string CurrentB { get; set; }
 
         /// <summary>
-        /// C相电流
+        /// C相电流，单位A。
         /// </summary>
         [XmlElement("current_c")]
         public string CurrentC { get; set; }
@@ -94,7 +94,7 @@ namespace Aop.Api.Domain
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 累计充电量
+        /// 累计充电量，单位为kwh
         /// </summary>
         [XmlElement("total_power")]
         public string TotalPower { get; set; }
@@ -112,13 +112,13 @@ namespace Aop.Api.Domain
         public string VoltageA { get; set; }
 
         /// <summary>
-        /// B相电压
+        /// B相电压，单位V。
         /// </summary>
         [XmlElement("voltage_b")]
         public string VoltageB { get; set; }
 
         /// <summary>
-        /// C相电压
+        /// C相电压，单位V。
         /// </summary>
         [XmlElement("voltage_c")]
         public string VoltageC { get; set; }

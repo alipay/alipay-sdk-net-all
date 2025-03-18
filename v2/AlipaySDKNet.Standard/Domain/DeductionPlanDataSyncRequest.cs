@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DeductionPlanDataSyncRequest : AopObject
     {
         /// <summary>
-        /// 课时数（电教馆教培特有）
+        /// 课时数（电教馆教培特有）,单位个，表示有1个课时
         /// </summary>
         [XmlElement("class_hours")]
         public long ClassHours { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string OriginalAmount { get; set; }
 
         /// <summary>
-        /// 期数
+        /// 期数，具体数值，如1表示第1期
         /// </summary>
         [XmlElement("period")]
         public string Period { get; set; }

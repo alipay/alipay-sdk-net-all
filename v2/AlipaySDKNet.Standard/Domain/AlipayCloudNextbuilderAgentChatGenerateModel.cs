@@ -28,6 +28,24 @@ namespace Aop.Api.Domain
         public string Inputs { get; set; }
 
         /// <summary>
+        /// 纬度数据，如2.247
+        /// </summary>
+        [XmlElement("latitude")]
+        public string Latitude { get; set; }
+
+        /// <summary>
+        /// 是否接收思维链数据
+        /// </summary>
+        [XmlElement("llm_thinking")]
+        public bool LlmThinking { get; set; }
+
+        /// <summary>
+        /// 经度数据，如48.888
+        /// </summary>
+        [XmlElement("longitude")]
+        public string Longitude { get; set; }
+
+        /// <summary>
         /// 多模态参数： images标识是多模态中的图片参数，value是上传图片afts的文件ID列表。 当前多模态只支持图片
         /// </summary>
         [XmlElement("multi_modal_inputs")]

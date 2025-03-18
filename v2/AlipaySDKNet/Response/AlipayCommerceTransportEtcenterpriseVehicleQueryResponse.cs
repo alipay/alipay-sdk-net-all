@@ -81,6 +81,18 @@ namespace Aop.Api.Response
         public string ServiceExp { get; set; }
 
         /// <summary>
+        /// 用于区分车辆归属真实企业信息，vehicle_corp_id由两部分组成corp-租车公司Id
+        /// </summary>
+        [XmlElement("vehicle_corp_id")]
+        public string VehicleCorpId { get; set; }
+
+        /// <summary>
+        /// 用于展示车辆归属企业名称
+        /// </summary>
+        [XmlElement("vehicle_corp_name")]
+        public string VehicleCorpName { get; set; }
+
+        /// <summary>
         /// 支付宝车辆id
         /// </summary>
         [XmlElement("vehicle_id")]

@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string PageId { get; set; }
 
         /// <summary>
+        /// ADB查询adb的数据 LLM表示查询大模型的数据
+        /// </summary>
+        [XmlElement("query_stage")]
+        public string QueryStage { get; set; }
+
+        /// <summary>
         /// 区分当前对话场景意图 待分配后传入固定值
         /// </summary>
         [XmlElement("scene_code")]

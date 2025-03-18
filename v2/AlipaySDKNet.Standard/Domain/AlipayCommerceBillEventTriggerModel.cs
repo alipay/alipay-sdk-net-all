@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceBillEventTriggerModel : AopObject
     {
         /// <summary>
+        /// 当前触发动作的额外信息
+        /// </summary>
+        [XmlElement("action_ext_info")]
+        public ConsumerLoanTriggerActionExtInfo ActionExtInfo { get; set; }
+
+        /// <summary>
         /// 账单ID列表，账单ID格式由各机构自己定义即可，若填写则仅针对指定的账单ID推送还款消息，否则推送该用户下所有的还款消息
         /// </summary>
         [XmlArray("bill_id_list")]

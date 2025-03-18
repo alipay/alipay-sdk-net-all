@@ -55,7 +55,7 @@ namespace Aop.Api.Domain
         public List<RiskDetectionMap> RiskDetectionParameters { get; set; }
 
         /// <summary>
-        /// 二级业务环节枚举 BILL_INVOICE_CORRELATION-账票关联 PAYMENT_RECEIPT_CREATE-付款单创建
+        /// 二级业务环节枚举 BILL_INVOICE_CORRELATION-VPC老账票关联 PAYMENT_RECEIPT_CREATE-VPC老付款单创建 INVOICE_RELATE-VPC新账票关联 PAYMENT_APPLY-VPC新付款单创建
         /// </summary>
         [XmlElement("second_level_business_link")]
         public string SecondLevelBusinessLink { get; set; }

@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public bool StreamOutput { get; set; }
 
         /// <summary>
+        /// true为用户选择「深度思考」，在回答内容中会返回思维链内容，具体解析逻辑参考spi：spi.alipay.ebpp.industry.bot.answer.send接口说明。
+        /// </summary>
+        [XmlElement("think_output")]
+        public bool ThinkOutput { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

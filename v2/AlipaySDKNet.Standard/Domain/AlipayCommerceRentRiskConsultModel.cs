@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("consult_risk_types")]
+        [XmlArrayItem("string")]
+        public List<string> ConsultRiskTypes { get; set; }
 
         /// <summary>
         /// 商家系统订单号

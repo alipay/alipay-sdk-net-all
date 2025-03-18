@@ -10,25 +10,25 @@ namespace Aop.Api.Domain
     public class FxiaokeCreateCustomerResponse : AopObject
     {
         /// <summary>
-        /// bid
+        /// 客户bid
         /// </summary>
         [XmlElement("bid")]
         public string Bid { get; set; }
 
         /// <summary>
-        /// id
+        /// 客户id
         /// </summary>
         [XmlElement("id")]
         public long Id { get; set; }
 
         /// <summary>
-        /// 蚂蚁关联方代码
+        /// 蚂蚁关联方代码文本值
         /// </summary>
         [XmlElement("intertrade_ou_code")]
         public string IntertradeOuCode { get; set; }
 
         /// <summary>
-        /// 关联交易类型
+        /// 关联交易类型文本值
         /// </summary>
         [XmlElement("intertrade_type")]
         public string IntertradeType { get; set; }

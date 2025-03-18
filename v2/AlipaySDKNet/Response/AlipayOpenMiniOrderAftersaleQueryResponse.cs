@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string AdditionalReason { get; set; }
 
         /// <summary>
+        /// 退货地址信息
+        /// </summary>
+        [XmlElement("address_info")]
+        public AftersaleAddressInfoVO AddressInfo { get; set; }
+
+        /// <summary>
         /// 商品列表
         /// </summary>
         [XmlArray("aftersale_goods_info_list")]

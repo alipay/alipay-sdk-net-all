@@ -22,5 +22,11 @@ namespace Aop.Api.Response
         [XmlArray("recommend_item_info")]
         [XmlArrayItem("recommend_item_info")]
         public List<RecommendItemInfo> RecommendItemInfo { get; set; }
+
+        /// <summary>
+        /// 分层商品信息
+        /// </summary>
+        [XmlElement("recommend_layered_item_info")]
+        public RecommendLayeredItemResponse RecommendLayeredItemInfo { get; set; }
     }
 }

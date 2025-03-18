@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string ApplyTime { get; set; }
 
         /// <summary>
-        /// 报名用户UID
+        /// 报名用户支付宝UID
         /// </summary>
         [XmlElement("apply_user_id")]
         public string ApplyUserId { get; set; }
@@ -88,9 +88,21 @@ namespace Aop.Api.Domain
         public string OutJobId { get; set; }
 
         /// <summary>
+        /// 外部用户id
+        /// </summary>
+        [XmlElement("out_user_id")]
+        public string OutUserId { get; set; }
+
+        /// <summary>
         /// 报名管理URL
         /// </summary>
         [XmlElement("server_apply_url")]
         public string ServerApplyUrl { get; set; }
+
+        /// <summary>
+        /// 应聘报名投递的数据来源
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
     }
 }

@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("royalty_finish")]
         public string RoyaltyFinish { get; set; }
+
+        /// <summary>
+        /// 部分分账完结的金额，单位为元。若该参数不为空，则会按照该参数金额进行部分解冻。注：该参数不为空时，royalty_finish需要传入true
+        /// </summary>
+        [XmlElement("royalty_finish_amount")]
+        public string RoyaltyFinishAmount { get; set; }
     }
 }

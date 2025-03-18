@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string CorpVehicleId { get; set; }
 
         /// <summary>
+        /// 车辆所属企业id
+        /// </summary>
+        [XmlElement("vehicle_corp_id")]
+        public string VehicleCorpId { get; set; }
+
+        /// <summary>
         /// ETC办理车辆信息
         /// </summary>
         [XmlElement("vehicle_info")]

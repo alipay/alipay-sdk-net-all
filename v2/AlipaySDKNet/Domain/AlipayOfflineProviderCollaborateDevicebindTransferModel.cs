@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOfflineProviderCollaborateDevicebindTransferModel : AopObject
     {
         /// <summary>
-        /// 如果换smid必须要传，smid和之前的smid必须是同一个支付宝账户下
+        /// 如果换smid必须要传，smid和之前的smid必须是同一个支付宝账户下；维保换绑场景必传
         /// </summary>
         [XmlArray("device_record_files")]
         [XmlArrayItem("device_record_info")]
@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string DeviceSn { get; set; }
 
         /// <summary>
-        /// 如果需要改动其中的内容，则需要传，不改动的话，继承之前sn的信息
+        /// 如果需要改动其中的内容，则需要传；维保换绑场景必传
         /// </summary>
         [XmlElement("ext_params")]
         public DeviceExtAttribute ExtParams { get; set; }

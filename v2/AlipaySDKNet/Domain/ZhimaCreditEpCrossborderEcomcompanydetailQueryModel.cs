@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ZhimaCreditEpCrossborderEcomcompanydetailQueryModel : AopObject
     {
         /// <summary>
+        /// 授权编号
+        /// </summary>
+        [XmlElement("auth_id")]
+        public string AuthId { get; set; }
+
+        /// <summary>
         /// 企业查询key：社会统一信用代码、注册号、企业名入参，建议优先使用统代
         /// </summary>
         [XmlElement("company_key")]

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string DeviceBindStatus { get; set; }
 
         /// <summary>
-        /// 1. 直联商家三绑定必传： RECORDS_TYPE_PID(直连 PID)、 RECORDS_TYPE_SHOPID(shopid); 2. 可用绑定必传： RECORDS_TYPE_SMID（二级商家 ID） RECORDS_TYPE_PID(PID)。
+        /// 1. 直连绑定必传： RECORDS_TYPE_PID(直连 PID)、 RECORDS_TYPE_SHOPID(shopid);  2. 间连绑定必传： RECORDS_TYPE_SMID（二级商家 ID）
         /// </summary>
         [XmlArray("device_record_files")]
         [XmlArrayItem("device_record_info")]

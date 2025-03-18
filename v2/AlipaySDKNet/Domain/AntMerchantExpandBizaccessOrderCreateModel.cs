@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandBizaccessOrderCreateModel : AopObject
     {
         /// <summary>
+        /// 受益人证照
+        /// </summary>
+        [XmlElement("benefit_info")]
+        public CertificateInfoForEntry BenefitInfo { get; set; }
+
+        /// <summary>
         /// 服务商抽佣信息。本对象为空表示无需抽佣配置。一期只支持传入一个
         /// </summary>
         [XmlArray("isv_commission_info")]
@@ -18,7 +24,19 @@ namespace Aop.Api.Domain
         public List<IsvCommissionInfo> IsvCommissionInfo { get; set; }
 
         /// <summary>
-        /// 商家主体证件信息。对于企业或个体户商户，其值为营业执照信息
+        /// 法人证照
+        /// </summary>
+        [XmlElement("legal_info")]
+        public CertificateInfoForEntry LegalInfo { get; set; }
+
+        /// <summary>
+        /// 法人登录号
+        /// </summary>
+        [XmlElement("legal_person_logon_id")]
+        public string LegalPersonLogonId { get; set; }
+
+        /// <summary>
+        /// 商家主体证件信息。对于企业或个体户商户，其值为营业执照信息。事业单位、民办非当前无需传入。
         /// </summary>
         [XmlElement("license_info")]
         public CommonMerchantLicenseInfo LicenseInfo { get; set; }
@@ -42,7 +60,13 @@ namespace Aop.Api.Domain
         public string MerchantName { get; set; }
 
         /// <summary>
-        /// 是否需要代开发授权，默认为false
+        /// 商户类型
+        /// </summary>
+        [XmlElement("merchant_type")]
+        public string MerchantType { get; set; }
+
+        /// <summary>
+        /// 是否需要代开发授权，默认为false。注意，如果重复发起代开发授权，会刷新商户的token。请调用后参考文档进行token重新获取。https://opendocs.alipay.com/isv/03l4iy?pathHash=92c490b7
         /// </summary>
         [XmlElement("need_interface_auth")]
         public bool NeedInterfaceAuth { get; set; }
@@ -52,6 +76,19 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("need_operation_auth")]
         public bool NeedOperationAuth { get; set; }
+
+        /// <summary>
+        /// 是否需要代入驻
+        /// </summary>
+        [XmlElement("need_register_merchant")]
+        public bool NeedRegisterMerchant { get; set; }
+
+        /// <summary>
+        /// 某些场景，允许传入可选开通的产品。具体传参与业务BD联系沟通
+        /// </summary>
+        [XmlArray("optional_front_prod_code")]
+        [XmlArrayItem("string")]
+        public List<string> OptionalFrontProdCode { get; set; }
 
         /// <summary>
         /// 联系方式

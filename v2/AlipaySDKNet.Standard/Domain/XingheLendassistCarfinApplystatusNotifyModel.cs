@@ -66,6 +66,12 @@ namespace Aop.Api.Domain
         public string FinOrg { get; set; }
 
         /// <summary>
+        /// 资金利率
+        /// </summary>
+        [XmlElement("fund_rate")]
+        public string FundRate { get; set; }
+
+        /// <summary>
         /// 是否完成实名认证，true/false
         /// </summary>
         [XmlElement("identity_verified")]
@@ -136,6 +142,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("repay_type")]
         public string RepayType { get; set; }
+
+        /// <summary>
+        /// 服务费率（融担费率、保险费率等）
+        /// </summary>
+        [XmlElement("service_fee_rate")]
+        public string ServiceFeeRate { get; set; }
 
         /// <summary>
         /// CANCEL_FAIL: 取消失败（适用于客户挽回成功的场景，经联系后客户愿意继续办理） CANCEL_SUC: 取消成功（适用于客户确定放弃的场景，机构侧后续不能联系客户）

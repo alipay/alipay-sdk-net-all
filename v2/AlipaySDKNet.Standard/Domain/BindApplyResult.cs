@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string ApplyStatus { get; set; }
 
         /// <summary>
-        /// 设备绑定状态
+        /// 本单对应的设备绑定状态
         /// </summary>
         [XmlElement("device_bind_status")]
         public string DeviceBindStatus { get; set; }

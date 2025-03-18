@@ -204,10 +204,29 @@ namespace Aop.Api.Domain
         public bool Online { get; set; }
 
         /// <summary>
+        /// 外部单据号
+        /// </summary>
+        [XmlArray("out_business_no_list")]
+        [XmlArrayItem("string")]
+        public List<string> OutBusinessNoList { get; set; }
+
+        /// <summary>
         /// 收款人
         /// </summary>
         [XmlElement("payee")]
         public string Payee { get; set; }
+
+        /// <summary>
+        /// PDF附件名称
+        /// </summary>
+        [XmlElement("pdf_file_name")]
+        public string PdfFileName { get; set; }
+
+        /// <summary>
+        /// 可外网访问的PDF附件的下载链接
+        /// </summary>
+        [XmlElement("pdf_file_url")]
+        public string PdfFileUrl { get; set; }
 
         /// <summary>
         /// 邮件信息的主键，用于‘根据发票邮寄ID获取当前的邮寄信息’的查询输入。
@@ -246,6 +265,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reviewer")]
         public string Reviewer { get; set; }
+
+        /// <summary>
+        /// 销售产品码字符串数组
+        /// </summary>
+        [XmlArray("sales_product_name_list")]
+        [XmlArrayItem("string")]
+        public List<string> SalesProductNameList { get; set; }
 
         /// <summary>
         /// 销方公司地址

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFinancialnetAuthUserInnerCertifyModel : AopObject
     {
         /// <summary>
+        /// 浙江省杭州市地区编码
+        /// </summary>
+        [XmlElement("area_code")]
+        public string AreaCode { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

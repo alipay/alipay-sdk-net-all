@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class RecycleSkuDTO : AopObject
     {
         /// <summary>
+        /// 当前sku的过期时间，如果为空时，不同的场景平台会有默认的过期时间
+        /// </summary>
+        [XmlElement("expired_time")]
+        public string ExpiredTime { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("sku_attrs")]

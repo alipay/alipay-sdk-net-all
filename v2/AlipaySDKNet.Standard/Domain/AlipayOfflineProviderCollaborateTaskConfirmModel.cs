@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizTime { get; set; }
 
         /// <summary>
-        /// 商家意图确认结果
+        /// 商家意图确认结果；当反馈商家有意向 HAS,接口将返回详细作业信息，任务状态推进到已确认；当反馈商家无意向 NOT_HAS,接口不返回详细作业信息，任务状态推进到无法完成，当反馈商家无法联系，接口将根据业务规则判断是否返回详细作业信息，任务状态不推进
         /// </summary>
         [XmlElement("confirm_result")]
         public string ConfirmResult { get; set; }

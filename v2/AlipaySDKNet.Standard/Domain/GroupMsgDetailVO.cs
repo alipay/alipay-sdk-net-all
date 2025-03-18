@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BizId { get; set; }
 
         /// <summary>
+        /// 用于描述定时群发消息发送失败的原因包括校验异常或者是消息内容异常等信息, 一般与send_status一起判断, 当send_status不等于成功时, 可以查看该字段是否有校验错误信息
+        /// </summary>
+        [XmlElement("error_msg")]
+        public string ErrorMsg { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [XmlElement("gmt_create")]
@@ -66,7 +72,7 @@ namespace Aop.Api.Domain
         public long SendStatus { get; set; }
 
         /// <summary>
-        /// 发送策略。目前支持0（立即发送）。
+        /// 发送策略。支持0（立即发送）和1（定时发送）。
         /// </summary>
         [XmlElement("send_strategy")]
         public string SendStrategy { get; set; }

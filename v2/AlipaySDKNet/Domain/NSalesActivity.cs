@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public List<NSalesSubActivity> PeriodList { get; set; }
 
         /// <summary>
-        /// 卖进订单活动跳过日期
+        /// 卖进订单活动跳过日期，未配置跳过日期时不返回该字段。
         /// </summary>
         [XmlArray("skip_dates")]
         [XmlArrayItem("date")]

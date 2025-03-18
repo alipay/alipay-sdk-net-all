@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string PayChannel { get; set; }
 
         /// <summary>
-        /// 还款期数
+        /// 代表某一个阶段的第几期的还款计划，要结合stage进行锁定某一期计划
         /// </summary>
         [XmlElement("period")]
         public long Period { get; set; }

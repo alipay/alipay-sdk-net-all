@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOfflineProviderCollaborateDevicebindApplyModel : AopObject
     {
         /// <summary>
-        /// 1. 直联商家三绑定必传： RECORDS_TYPE_PID(直连 PID)、 RECORDS_TYPE_SHOPID(shopid); 2. 可用绑定必传： RECORDS_TYPE_SMID（二级商家 ID）。
+        /// 1. 直连绑定必传： RECORDS_TYPE_PID(直连 PID)、 RECORDS_TYPE_SHOPID(shopid); 2. 间连绑定必传： RECORDS_TYPE_SMID（二级商家 ID）。
         /// </summary>
         [XmlArray("device_record_files")]
         [XmlArrayItem("device_record_info")]
@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 设备绑定场景 IOT_DEVICE_RECORDS_G3_DIRECT(直连三绑定) IOT_DEVICE_RECORDS_G2(可用绑定)
+        /// 设备绑定场景
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

@@ -77,5 +77,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("shop_code")]
         public string ShopCode { get; set; }
+
+        /// <summary>
+        /// nfc线圈的tag_id
+        /// </summary>
+        [XmlArray("tag_ids")]
+        [XmlArrayItem("string")]
+        public List<string> TagIds { get; set; }
     }
 }

@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayFincoreComplianceSignStatusQueryResponse : AopResponse
     {
         /// <summary>
+        /// 用印归档文件下载地址，有效期12小时
+        /// </summary>
+        [XmlElement("archived_file_http_url")]
+        public string ArchivedFileHttpUrl { get; set; }
+
+        /// <summary>
         /// 业务单据号
         /// </summary>
         [XmlElement("business_id")]
