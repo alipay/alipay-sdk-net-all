@@ -30,6 +30,18 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
+        /// 二级商户ID
+        /// </summary>
+        [XmlElement("sub_merchant_id")]
+        public string SubMerchantId { get; set; }
+
+        /// <summary>
+        /// 1:商户+商品，2:二级商户+商品
+        /// </summary>
+        [XmlElement("task_type")]
+        public long TaskType { get; set; }
+
+        /// <summary>
         /// 交易笔数，单位笔
         /// </summary>
         [XmlElement("trans_count")]

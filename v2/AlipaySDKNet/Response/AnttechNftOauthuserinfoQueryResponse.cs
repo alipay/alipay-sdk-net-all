@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string OuId { get; set; }
 
         /// <summary>
+        /// 4-7位脱敏后的手机号
+        /// </summary>
+        [XmlElement("phone")]
+        public string Phone { get; set; }
+
+        /// <summary>
         /// 租户下用户id
         /// </summary>
         [XmlElement("tu_id")]

@@ -11,10 +11,28 @@ namespace Aop.Api.Domain
     public class OrderItemInfoVO : AopObject
     {
         /// <summary>
+        /// 商品类目ID
+        /// </summary>
+        [XmlElement("category_id")]
+        public string CategoryId { get; set; }
+
+        /// <summary>
+        /// 商品名称
+        /// </summary>
+        [XmlElement("item_brand")]
+        public string ItemBrand { get; set; }
+
+        /// <summary>
         /// 商品数量
         /// </summary>
         [XmlElement("item_cnt")]
         public long ItemCnt { get; set; }
+
+        /// <summary>
+        /// 商品成色
+        /// </summary>
+        [XmlElement("item_condition")]
+        public string ItemCondition { get; set; }
 
         /// <summary>
         /// 支付宝平台侧商品ID
@@ -52,6 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_sku_id")]
         public string OutSkuId { get; set; }
+
+        /// <summary>
+        /// 租赁商品扩展信息
+        /// </summary>
+        [XmlElement("rent_item_info")]
+        public RentItemInfoVO RentItemInfo { get; set; }
 
         /// <summary>
         /// 商品单价，单位：元,精确到小数点后两位，可以跟上传商品接口的价格不一致

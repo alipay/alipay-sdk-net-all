@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<AvatarMultiPageConfig> MultiPageConfig { get; set; }
 
         /// <summary>
+        /// 需要添加水印
+        /// </summary>
+        [XmlElement("need_water_mark")]
+        public bool NeedWaterMark { get; set; }
+
+        /// <summary>
         /// 播报内容，不超过1000个字
         /// </summary>
         [XmlElement("ori_text")]
@@ -43,7 +49,7 @@ namespace Aop.Api.Domain
         public long ProjectId { get; set; }
 
         /// <summary>
-        /// 分辨率，720/1080两种
+        /// 分辨率，单位为像素
         /// </summary>
         [XmlElement("resolution")]
         public string Resolution { get; set; }

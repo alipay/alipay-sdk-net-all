@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string Date { get; set; }
 
         /// <summary>
+        /// 当日库存数
+        /// </summary>
+        [XmlElement("inventory")]
+        public long Inventory { get; set; }
+
+        /// <summary>
         /// 会员价（BigDecimal）（元） 已经通过DRR的计算可以直接显示给客人。价格为-1表示不能销售
         /// </summary>
         [XmlElement("member")]

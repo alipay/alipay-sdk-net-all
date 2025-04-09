@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string Telephone { get; set; }
 
         /// <summary>
+        /// 抬头编码
+        /// </summary>
+        [XmlElement("title_code")]
+        public string TitleCode { get; set; }
+
+        /// <summary>
         /// 企业抬头名称
         /// </summary>
         [XmlElement("title_name")]

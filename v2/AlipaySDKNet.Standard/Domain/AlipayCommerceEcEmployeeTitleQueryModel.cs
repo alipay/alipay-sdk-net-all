@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 抬头标识
+        /// 默认抬头
         /// </summary>
         [XmlElement("title_tag")]
         public string TitleTag { get; set; }

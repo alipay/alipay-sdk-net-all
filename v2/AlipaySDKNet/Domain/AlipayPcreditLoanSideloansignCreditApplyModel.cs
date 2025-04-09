@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CreditApplyNo { get; set; }
 
         /// <summary>
+        /// SIMPLE_CREDIT，极简授信
+        /// </summary>
+        [XmlElement("credit_type")]
+        public string CreditType { get; set; }
+
+        /// <summary>
         /// 淘宝会员id
         /// </summary>
         [XmlElement("customer_id")]

@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public AllocAmountInfoDTO AllocAmountInfo { get; set; }
 
         /// <summary>
+        /// 履约信息
+        /// </summary>
+        [XmlElement("delivery_detail")]
+        public MiniDeliveryInfoUpdateDTO DeliveryDetail { get; set; }
+
+        /// <summary>
         /// 商品修改信息
         /// </summary>
         [XmlArray("item_infos")]
@@ -52,6 +58,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("price_info")]
         public PriceInfoModifyDTO PriceInfo { get; set; }
+
+        /// <summary>
+        /// 发件人地址：工程师上门地址、快递上门地址
+        /// </summary>
+        [XmlElement("send_address_info")]
+        public MiniOrderAddressInfoDTO SendAddressInfo { get; set; }
 
         /// <summary>
         /// 阶段付款计划列表，请在修改付款计划时传入

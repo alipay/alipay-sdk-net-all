@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 支付宝转账订单id，新接入的商户必填
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
         /// 外部业务编号
         /// </summary>
         [XmlElement("out_biz_no")]

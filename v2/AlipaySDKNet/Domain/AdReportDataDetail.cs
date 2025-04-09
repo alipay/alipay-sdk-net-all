@@ -11,6 +11,24 @@ namespace Aop.Api.Domain
     public class AdReportDataDetail : AopObject
     {
         /// <summary>
+        /// 代理商账号(只在代理商接口返回)
+        /// </summary>
+        [XmlElement("agent_alipay_account")]
+        public string AgentAlipayAccount { get; set; }
+
+        /// <summary>
+        /// 代理商名称(只在代理商接口返回)
+        /// </summary>
+        [XmlElement("agent_name")]
+        public string AgentName { get; set; }
+
+        /// <summary>
+        /// 广告主为每个转化所付出的平均成本(单位:元)，计算方式：总消耗/转化量
+        /// </summary>
+        [XmlElement("avg_conv_cost")]
+        public string AvgConvCost { get; set; }
+
+        /// <summary>
         /// 当query_type为DETAIL时数据汇总时间格式yyyyMMdd；当按ALL_SUM时该出参非必填
         /// </summary>
         [XmlElement("biz_date")]
@@ -21,6 +39,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("click")]
         public long Click { get; set; }
+
+        /// <summary>
+        /// 广告被点击的次数占展示次数的百分比。计算方法：点击数/展示量*100%
+        /// </summary>
+        [XmlElement("click_rate")]
+        public string ClickRate { get; set; }
+
+        /// <summary>
+        /// 按转化事件发生时间统计的转化数
+        /// </summary>
+        [XmlElement("conv_result")]
+        public string ConvResult { get; set; }
 
         /// <summary>
         /// 投放转化数据，当无投放未产生转化数据或未绑定转化事件时，查询数据为空
@@ -36,10 +66,34 @@ namespace Aop.Api.Domain
         public long Cost { get; set; }
 
         /// <summary>
+        /// 消费金额(单位:元)
+        /// </summary>
+        [XmlElement("cost_format")]
+        public string CostFormat { get; set; }
+
+        /// <summary>
+        /// 广告主为每次点击付出的费用成本(单位:元)，计算公式是：总消耗/点击量
+        /// </summary>
+        [XmlElement("cpc")]
+        public string Cpc { get; set; }
+
+        /// <summary>
+        /// 广告平均每一千次展现所付出的费用(单位:元)，计算公式是：总消耗/展示量*1000
+        /// </summary>
+        [XmlElement("cpm")]
+        public string Cpm { get; set; }
+
+        /// <summary>
         /// 创意名称
         /// </summary>
         [XmlElement("creative_name")]
         public string CreativeName { get; set; }
+
+        /// <summary>
+        /// 广告被用户转化的次数占点击次数的百分比。计算方式：转化量/点击量*100%
+        /// </summary>
+        [XmlElement("cvr")]
+        public string Cvr { get; set; }
 
         /// <summary>
         /// 根据ad_level不同会透出汇总数据的plan_id/group_id/creative_id/order_id
@@ -106,6 +160,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("principal_name")]
         public string PrincipalName { get; set; }
+
+        /// <summary>
+        /// 商家PID
+        /// </summary>
+        [XmlElement("principal_pid")]
+        public string PrincipalPid { get; set; }
 
         /// <summary>
         /// 投放产品名称

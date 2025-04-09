@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceAdProductModifyModel : AopObject
     {
         /// <summary>
+        /// 商品归属的商户oid, 传入oid时优先使用oid，否则使用pid
+        /// </summary>
+        [XmlElement("alipay_oid")]
+        public string AlipayOid { get; set; }
+
+        /// <summary>
         /// 支付宝唯一id，用于操作鉴权
         /// </summary>
         [XmlElement("alipay_pid")]

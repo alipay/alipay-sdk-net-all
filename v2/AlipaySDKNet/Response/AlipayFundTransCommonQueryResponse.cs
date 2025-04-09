@@ -27,6 +27,24 @@ namespace Aop.Api.Response
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// 查询到的订单状态为FAIL失败时，返回具体报错银行的错误码。
+        /// </summary>
+        [XmlElement("fail_inst_error_code")]
+        public string FailInstErrorCode { get; set; }
+
+        /// <summary>
+        /// 查询到的订单状态为FAIL失败时，返回具体的报错银行名称
+        /// </summary>
+        [XmlElement("fail_inst_name")]
+        public string FailInstName { get; set; }
+
+        /// <summary>
+        /// 查询到的订单状态为FAIL失败时，返回具体的原因。
+        /// </summary>
+        [XmlElement("fail_inst_reason")]
+        public string FailInstReason { get; set; }
+
+        /// <summary>
         /// 查询到的订单状态为FAIL失败或REFUND退票时，返回具体的原因。
         /// </summary>
         [XmlElement("fail_reason")]

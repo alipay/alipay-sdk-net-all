@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcEmployeeAddModel : AopObject
     {
         /// <summary>
+        /// 员工所属核算主体，核算主体可用于管控不同员工的出资方式，建议和不同出资账户关联
+        /// </summary>
+        [XmlArray("accounting_entity_ids")]
+        [XmlArrayItem("string")]
+        public List<string> AccountingEntityIds { get; set; }
+
+        /// <summary>
         /// 是否需要生成吱口令，默认不生成
         /// </summary>
         [XmlElement("create_share_code")]
@@ -112,6 +119,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("iot_vid")]
         public string IotVid { get; set; }
+
+        /// <summary>
+        /// 员工标签，用于员工的打标分类，后续费控管理可使用标签进行控制，支持输入多个标签，如“差旅员工，用餐员工”等；若企业需要将离职员工统一管理且不变更员工状态，可打标“离职员工”
+        /// </summary>
+        [XmlArray("label_names")]
+        [XmlArrayItem("string")]
+        public List<string> LabelNames { get; set; }
 
         /// <summary>
         /// 个性化信息 <a href='https://opendocs.alipay.com/pre-open/0ceh47?pathHash=14fac87c'>详见文档</a>

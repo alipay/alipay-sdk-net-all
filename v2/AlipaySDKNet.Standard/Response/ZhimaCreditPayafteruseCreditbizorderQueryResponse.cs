@@ -45,6 +45,12 @@ namespace Aop.Api.Response
         public string TotalAmount { get; set; }
 
         /// <summary>
+        /// 信用服务订单中信用支付金额，不包含支付宝营销金额
+        /// </summary>
+        [XmlElement("total_credit_pay_amount")]
+        public string TotalCreditPayAmount { get; set; }
+
+        /// <summary>
         /// 支付宝交易号。 先用后付产品下必传；芝麻风险评估与召回产品下不传。
         /// </summary>
         [XmlElement("trade_no")]

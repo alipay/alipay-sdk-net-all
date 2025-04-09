@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ExternalShopId { get; set; }
 
         /// <summary>
+        /// 卖进订单id，先卖进后绑定模式下必传。
+        /// </summary>
+        [XmlElement("sales_entry_order_id")]
+        public string SalesEntryOrderId { get; set; }
+
+        /// <summary>
         /// 卖进方案扩展信息
         /// </summary>
         [XmlElement("sales_solution_ext")]

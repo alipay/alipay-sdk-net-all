@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceRentRoyaltySellerAppendResponse : AopResponse
     {
         /// <summary>
-        /// 单位：元。补分账金额执行的实际金额
+        /// 单位：元。分账金额执行的实际金额
         /// </summary>
         [XmlElement("execute_amount")]
         public string ExecuteAmount { get; set; }

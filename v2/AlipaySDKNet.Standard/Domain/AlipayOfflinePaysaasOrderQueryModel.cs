@@ -20,5 +20,23 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("isv_out_order_no")]
         public string IsvOutOrderNo { get; set; }
+
+        /// <summary>
+        /// 商家的直间连类型，按照商家类型，选择正确的枚举值。
+        /// </summary>
+        [XmlElement("merchant_type")]
+        public string MerchantType { get; set; }
+
+        /// <summary>
+        /// 设备序列号
+        /// </summary>
+        [XmlElement("sn")]
+        public string Sn { get; set; }
+
+        /// <summary>
+        /// 设备供应商 ID：supplierId，如意生态版AMX设备请填写“201901111100635561”
+        /// </summary>
+        [XmlElement("supplier_id")]
+        public string SupplierId { get; set; }
     }
 }

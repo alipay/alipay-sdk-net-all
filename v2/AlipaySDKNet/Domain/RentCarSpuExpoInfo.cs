@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public long ExpoRank { get; set; }
 
         /// <summary>
+        /// 分城市订单排名（订单量越大值越小）
+        /// </summary>
+        [XmlElement("order_rank")]
+        public long OrderRank { get; set; }
+
+        /// <summary>
+        /// spu的标识
+        /// </summary>
+        [XmlElement("spu_id")]
+        public string SpuId { get; set; }
+
+        /// <summary>
         /// spu名称
         /// </summary>
         [XmlElement("spu_name")]

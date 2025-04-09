@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 授信类型
+        /// </summary>
+        [XmlElement("credit_type")]
+        public string CreditType { get; set; }
+
+        /// <summary>
         /// 传入拉取代签协议列表前, 扩展信息透传相关业务场景的咨询结果信息
         /// </summary>
         [XmlElement("extension")]

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BundleId { get; set; }
 
         /// <summary>
-        /// true - 性能优先； false - 覆盖优先（默认）
+        /// true - 性能优先； false - 覆盖优先（默认）；试点开放，如需使用，请咨询在线客服
         /// </summary>
         [XmlElement("downgrade")]
         public bool Downgrade { get; set; }

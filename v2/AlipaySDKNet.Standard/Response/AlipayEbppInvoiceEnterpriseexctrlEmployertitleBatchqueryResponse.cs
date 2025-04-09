@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string Msg { get; set; }
 
         /// <summary>
+        /// 抬头编码
+        /// </summary>
+        [XmlElement("title_code")]
+        public string TitleCode { get; set; }
+
+        /// <summary>
         /// 企业抬头信息
         /// </summary>
         [XmlArray("title_info_list")]

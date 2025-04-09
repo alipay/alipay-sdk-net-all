@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string CurrentBuyoutPrice { get; set; }
 
         /// <summary>
+        /// 预期分账时间
+        /// </summary>
+        [XmlElement("expect_royalty_time")]
+        public string ExpectRoyaltyTime { get; set; }
+
+        /// <summary>
         /// 商户订单号
         /// </summary>
         [XmlElement("out_order_id")]
@@ -86,6 +92,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("royalty_time")]
         public string RoyaltyTime { get; set; }
+
+        /// <summary>
+        /// 分账触发方式
+        /// </summary>
+        [XmlElement("royalty_trigger_type")]
+        public string RoyaltyTriggerType { get; set; }
 
         /// <summary>
         /// 仅在代偿给资方时，资方的收款方式为到银行卡的场景下才有值，资方的入金流水号

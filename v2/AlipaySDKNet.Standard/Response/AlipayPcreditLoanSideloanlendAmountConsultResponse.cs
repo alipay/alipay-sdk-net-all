@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayPcreditLoanSideloanlendAmountConsultResponse : AopResponse
     {
         /// <summary>
+        /// 渠道户状态枚举值（INIT/ENABLE/DISABLE）
+        /// </summary>
+        [XmlElement("account_status")]
+        public string AccountStatus { get; set; }
+
+        /// <summary>
         /// 授信总额度，单位元，保留?数点后两位
         /// </summary>
         [XmlElement("credit_quota")]

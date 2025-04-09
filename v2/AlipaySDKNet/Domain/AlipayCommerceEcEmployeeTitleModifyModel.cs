@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string NewTitleId { get; set; }
 
         /// <summary>
-        /// 修改前的抬头id
+        /// 修改前的抬头id 当前字段已废弃(数据库自行查询是否有有效抬头)
         /// </summary>
         [XmlElement("old_title_id")]
         public string OldTitleId { get; set; }

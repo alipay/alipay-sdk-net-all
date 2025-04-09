@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public List<string> GroupIds { get; set; }
 
         /// <summary>
+        /// 用于描述周期消息的发送时间
+        /// </summary>
+        [XmlElement("group_msg_schedule_config")]
+        public GroupMsgScheduleConfigVO GroupMsgScheduleConfig { get; set; }
+
+        /// <summary>
         /// 群发消息内容模型
         /// </summary>
         [XmlElement("msg_data")]
@@ -42,7 +48,7 @@ namespace Aop.Api.Domain
         public string MsgId { get; set; }
 
         /// <summary>
-        /// 该参数用于描述群发消息是立即发送还是定时发送，0表示立即发送，1表示定时发送，不填表示定时发送
+        /// 该参数用于描述群发消息是立即发送还是定时发送，0表示立即发送，1表示定时发送，2表示周期发送，不填表示定时发送
         /// </summary>
         [XmlElement("send_strategy")]
         public string SendStrategy { get; set; }

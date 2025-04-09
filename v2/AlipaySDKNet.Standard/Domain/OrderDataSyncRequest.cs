@@ -162,6 +162,12 @@ namespace Aop.Api.Domain
         public long RemainCount { get; set; }
 
         /// <summary>
+        /// 商户smid
+        /// </summary>
+        [XmlElement("smid")]
+        public string Smid { get; set; }
+
+        /// <summary>
         /// 解决方案类型（卡类型）
         /// </summary>
         [XmlElement("solution_type")]

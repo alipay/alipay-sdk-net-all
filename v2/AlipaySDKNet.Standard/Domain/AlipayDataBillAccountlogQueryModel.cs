@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string BillUserId { get; set; }
 
         /// <summary>
-        /// 账务流水创建时间的结束范围。与起始时间间隔不超过31天。查询结果为起始时间至结束时间的左闭右开区间
+        /// 账务流水创建时间的结束范围。与起始时间间隔不超过31天。查询结果为起始时间至结束时间的左闭右开区间。精确查询不需要指定
         /// </summary>
         [XmlElement("end_time")]
         public string EndTime { get; set; }
@@ -44,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_order_no")]
         public string MerchantOrderNo { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 分页号，从1开始
@@ -58,7 +64,7 @@ namespace Aop.Api.Domain
         public string PageSize { get; set; }
 
         /// <summary>
-        /// 账务流水创建时间的起始范围。只能查询一年内的记录
+        /// 账务流水创建时间的起始范围。只能查询一年内的记录。精确查询不需要指定
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }

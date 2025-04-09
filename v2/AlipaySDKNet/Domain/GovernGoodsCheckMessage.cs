@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("result")]
         public string Result { get; set; }
+
+        /// <summary>
+        /// 治理的类型，即哪个地方需要治理
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
     }
 }

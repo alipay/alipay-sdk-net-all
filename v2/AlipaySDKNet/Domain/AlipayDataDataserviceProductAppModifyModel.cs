@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string OutSource { get; set; }
 
         /// <summary>
+        /// 商品归属的商户oid, 传入oid时优先使用oid，否则使用pid
+        /// </summary>
+        [XmlElement("owner_oid")]
+        public string OwnerOid { get; set; }
+
+        /// <summary>
         /// 商品归属的商户pid
         /// </summary>
         [XmlElement("owner_pid")]

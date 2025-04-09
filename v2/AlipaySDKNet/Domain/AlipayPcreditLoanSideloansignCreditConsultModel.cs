@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// SIMPLE_CREDIT，极简授信
+        /// </summary>
+        [XmlElement("credit_type")]
+        public string CreditType { get; set; }
+
+        /// <summary>
         /// 外部渠道客户id
         /// </summary>
         [XmlElement("customer_id")]

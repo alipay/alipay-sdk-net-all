@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ParentId { get; set; }
 
         /// <summary>
-        /// 户名
+        /// 商户名称
         /// </summary>
         [XmlElement("parent_name")]
         public string ParentName { get; set; }

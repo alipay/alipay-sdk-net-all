@@ -11,6 +11,18 @@ namespace Aop.Api.Response
     public class AlipayEbppBillchargeOrderBatchcreateResponse : AopResponse
     {
         /// <summary>
+        /// 行业收单流水,50新链路单笔订单创建的时候返回。对应原本的子订单号中的参数
+        /// </summary>
+        [XmlElement("bill_no")]
+        public string BillNo { get; set; }
+
+        /// <summary>
+        /// 用于作为交易号拉起 my.tradePay 收银台
+        /// </summary>
+        [XmlElement("merge_trade_no")]
+        public string MergeTradeNo { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("open_id")]
@@ -46,6 +58,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("total_pay_amount")]
         public string TotalPayAmount { get; set; }
+
+        /// <summary>
+        /// 统一收单流水号用于非合并支付情况下50新链路拉起收银台
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
 
         /// <summary>
         /// 蚂蚁统一会员ID

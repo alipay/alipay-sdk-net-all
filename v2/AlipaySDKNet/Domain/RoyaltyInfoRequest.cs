@@ -10,10 +10,16 @@ namespace Aop.Api.Domain
     public class RoyaltyInfoRequest : AopObject
     {
         /// <summary>
-        /// 买断分账金
+        /// 买断分账金，人明币，单位：元
         /// </summary>
         [XmlElement("buy_out_royalty")]
         public string BuyOutRoyalty { get; set; }
+
+        /// <summary>
+        /// 预期分账时间
+        /// </summary>
+        [XmlElement("expect_royalty_time")]
+        public string ExpectRoyaltyTime { get; set; }
 
         /// <summary>
         /// 分账期数

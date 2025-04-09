@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string Note { get; set; }
 
         /// <summary>
+        /// 订单的场景值   1:O2O订单，2:B2C订单
+        /// </summary>
+        [XmlElement("order_scene")]
+        public long OrderScene { get; set; }
+
+        /// <summary>
         /// 当日订单顺序号
         /// </summary>
         [XmlElement("order_seq")]
@@ -100,7 +106,7 @@ namespace Aop.Api.Domain
         public string PredictDeliveryStartTime { get; set; }
 
         /// <summary>
-        /// 商品总数量，保留小数点后3位 + 单位， 单位固定两种（g和ml）
+        /// 商品总数量
         /// </summary>
         [XmlElement("quantity")]
         public long Quantity { get; set; }
@@ -124,7 +130,7 @@ namespace Aop.Api.Domain
         public string UserExpectStartTime { get; set; }
 
         /// <summary>
-        /// 商品总重量，保留小数点后3位 + 单位， 单位固定两种（g和ml）
+        /// 商品总重量，保留小数点后3位 + 单位， 单位固定两种（g和ml） 当前字段已废弃(商品总重量由items-weight_item汇总计算即可)
         /// </summary>
         [XmlElement("weight")]
         public long Weight { get; set; }

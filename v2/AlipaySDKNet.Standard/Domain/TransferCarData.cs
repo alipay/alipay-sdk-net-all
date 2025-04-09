@@ -53,6 +53,12 @@ namespace Aop.Api.Domain
         public string BrandName { get; set; }
 
         /// <summary>
+        /// 是否品牌官方门店
+        /// </summary>
+        [XmlElement("brand_official_store")]
+        public bool BrandOfficialStore { get; set; }
+
+        /// <summary>
         /// 呼叫号码
         /// </summary>
         [XmlElement("call_phone")]
@@ -100,6 +106,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("car_year")]
         public long CarYear { get; set; }
+
+        /// <summary>
+        /// 检查报告内容明细 DTO
+        /// </summary>
+        [XmlElement("check_report_data")]
+        public CheckReportData CheckReportData { get; set; }
 
         /// <summary>
         /// 车源地；行政区城市编码值
@@ -234,5 +246,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("vehicle_display_status")]
         public long VehicleDisplayStatus { get; set; }
+
+        /// <summary>
+        /// 车辆 video url 地址
+        /// </summary>
+        [XmlElement("vehicle_video_url")]
+        public string VehicleVideoUrl { get; set; }
+
+        /// <summary>
+        /// 车辆识别代码（VIN）
+        /// </summary>
+        [XmlElement("vin")]
+        public string Vin { get; set; }
     }
 }

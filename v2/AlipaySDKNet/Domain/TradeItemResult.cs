@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// 交易支付时间
+        /// 交易支付时间。支付后会有值
         /// </summary>
         [XmlElement("gmt_pay")]
         public string GmtPay { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string RefundAmount { get; set; }
 
         /// <summary>
-        /// 服务费金额
+        /// 服务费金额，人民币元
         /// </summary>
         [XmlElement("service_fee")]
         public string ServiceFee { get; set; }

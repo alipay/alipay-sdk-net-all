@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class EmployeeBatchAddDTO : AopObject
     {
         /// <summary>
+        /// 员工所属核算主体，核算主体可用于管控不同员工的出资方式，建议和不同出资账户关联
+        /// </summary>
+        [XmlArray("accounting_entity_ids")]
+        [XmlArrayItem("string")]
+        public List<string> AccountingEntityIds { get; set; }
+
+        /// <summary>
         /// 员工所属部门
         /// </summary>
         [XmlArray("department_ids")]
@@ -64,6 +71,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("encrypt_mobile")]
         public string EncryptMobile { get; set; }
+
+        /// <summary>
+        /// 员工标签，用于员工的打标分类，后续费控管理可使用标签进行控制，支持输入多个标签，如“差旅员工，用餐员工”等
+        /// </summary>
+        [XmlArray("label_names")]
+        [XmlArrayItem("string")]
+        public List<string> LabelNames { get; set; }
 
         /// <summary>
         /// 个性化信息 <a href='https://opendocs.alipay.com/pre-open/0ceh47?pathHash=14fac87c'>详见文档</a>

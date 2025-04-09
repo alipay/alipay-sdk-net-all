@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayInsSceneEcommercePurchaselinkAuthModel : AopObject
     {
         /// <summary>
+        /// 如果明确要求需要指定扣费账户，传入用于蚂蚁保进行校验
+        /// </summary>
+        [XmlElement("assign_withdraw_account_no")]
+        public string AssignWithdrawAccountNo { get; set; }
+
+        /// <summary>
         /// 至少订购天数
         /// </summary>
         [XmlElement("at_least_days")]
@@ -35,7 +41,7 @@ namespace Aop.Api.Domain
         public string LoginUserId { get; set; }
 
         /// <summary>
-        /// session过期时间
+        /// session过期时间，具体的过期结束时间
         /// </summary>
         [XmlElement("out_session_expiration")]
         public string OutSessionExpiration { get; set; }

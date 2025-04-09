@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// 自行寄回保额，单位分，仅在运费险产品返回
+        /// </summary>
+        [XmlElement("self_delivery_sum_insured")]
+        public long SelfDeliverySumInsured { get; set; }
+
+        /// <summary>
         /// 保额，单位分
         /// </summary>
         [XmlElement("sum_insured")]

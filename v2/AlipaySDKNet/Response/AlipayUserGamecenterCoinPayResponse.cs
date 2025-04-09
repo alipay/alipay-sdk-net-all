@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayUserGamecenterCoinPayResponse : AopResponse
     {
         /// <summary>
-        /// 预扣后的用户游戏币余额
+        /// 预扣后的用户游戏币余额数量，单位:个
         /// </summary>
         [XmlElement("balance")]
         public long Balance { get; set; }

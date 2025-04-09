@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Source { get; set; }
 
         /// <summary>
+        /// 50链路单订单情况下的单个订单号
+        /// </summary>
+        [XmlElement("sub_order_no")]
+        public string SubOrderNo { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

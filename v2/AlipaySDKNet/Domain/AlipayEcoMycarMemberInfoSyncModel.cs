@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
+        /// true代表是关闭 不传和false 代表开通
+        /// </summary>
+        [XmlElement("closed")]
+        public bool Closed { get; set; }
+
+        /// <summary>
         /// 会员卡发放时间
         /// </summary>
         [XmlElement("issuance_date")]

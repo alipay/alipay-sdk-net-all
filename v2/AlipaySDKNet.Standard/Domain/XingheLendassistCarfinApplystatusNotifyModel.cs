@@ -96,28 +96,34 @@ namespace Aop.Api.Domain
         public string LoanRate { get; set; }
 
         /// <summary>
-        /// 贷款期次
+        /// 贷款期次，单位根据loan_term_unit字段决定(Y年/M月/D日)
         /// </summary>
         [XmlElement("loan_term")]
         public long LoanTerm { get; set; }
 
         /// <summary>
-        /// 客户贷款期次类型，Y、M、D分别代表年月日
+        /// 贷款期次类型 Y、M、D分别代表年月日
         /// </summary>
         [XmlElement("loan_term_unit")]
         public string LoanTermUnit { get; set; }
 
         /// <summary>
-        /// 抵押率，授信金额/车辆估值金额
+        /// 抵押率（授信金额/车辆估值金额），单位为小数
         /// </summary>
         [XmlElement("mortgage_rate")]
         public string MortgageRate { get; set; }
 
         /// <summary>
-        /// 机构侧支用号，放款时必传
+        /// 机构侧支用号
         /// </summary>
         [XmlElement("org_drawdown_no")]
         public string OrgDrawdownNo { get; set; }
+
+        /// <summary>
+        /// 其他信息
+        /// </summary>
+        [XmlElement("other")]
+        public CarfinStatusNotifyOther Other { get; set; }
 
         /// <summary>
         /// 机构侧唯一业务编号
@@ -126,7 +132,7 @@ namespace Aop.Api.Domain
         public string OutApplyNo { get; set; }
 
         /// <summary>
-        /// 拒绝原因错误码
+        /// 拒绝原因错误
         /// </summary>
         [XmlElement("refuse_code")]
         public string RefuseCode { get; set; }
@@ -144,7 +150,7 @@ namespace Aop.Api.Domain
         public string RepayType { get; set; }
 
         /// <summary>
-        /// 服务费率（融担费率、保险费率等）
+        /// 服务费率（融担费率、保险费率等），单位为小数
         /// </summary>
         [XmlElement("service_fee_rate")]
         public string ServiceFeeRate { get; set; }

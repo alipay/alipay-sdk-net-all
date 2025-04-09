@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string Preview { get; set; }
 
         /// <summary>
-        /// 视频状态
+        /// 当前视频查询结果
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

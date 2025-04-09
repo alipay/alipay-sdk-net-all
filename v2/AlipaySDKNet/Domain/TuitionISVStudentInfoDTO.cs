@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string LastName { get; set; }
 
         /// <summary>
+        /// 学制信息，可根据枚举值传入，学年制
+        /// </summary>
+        [XmlElement("length_of_schooling")]
+        public string LengthOfSchooling { get; set; }
+
+        /// <summary>
         /// 学生姓名
         /// </summary>
         [XmlElement("student_name")]

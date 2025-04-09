@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AccountBookId { get; set; }
 
         /// <summary>
-        /// JSON格式，传递业务扩展参数
+        /// 传递业务扩展参数。 注意：ext_info字段本质上是String类型，所以传递 的是转义后的json字符串。
         /// </summary>
         [XmlElement("ext_info")]
         public string ExtInfo { get; set; }

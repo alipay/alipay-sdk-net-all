@@ -22,9 +22,27 @@ namespace Aop.Api.Domain
         public string IsvOutOrderNo { get; set; }
 
         /// <summary>
+        /// 商家的直间连类型，按照商家类型，选择正确的枚举值。
+        /// </summary>
+        [XmlElement("merchant_type")]
+        public string MerchantType { get; set; }
+
+        /// <summary>
         /// 单位为分，最大值为100000000分
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }
+
+        /// <summary>
+        /// 设备序列号
+        /// </summary>
+        [XmlElement("sn")]
+        public string Sn { get; set; }
+
+        /// <summary>
+        /// 设备供应商 ID：supplierId，如意生态版AMX设备请填写“201901111100635561”
+        /// </summary>
+        [XmlElement("supplier_id")]
+        public string SupplierId { get; set; }
     }
 }

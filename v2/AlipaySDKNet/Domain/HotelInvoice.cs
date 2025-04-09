@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public List<string> InvoiceType { get; set; }
 
         /// <summary>
+        /// 1 支持预约开票，2不支持预约开票
+        /// </summary>
+        [XmlElement("order_invoice")]
+        public string OrderInvoice { get; set; }
+
+        /// <summary>
         /// 邮费提供方： 0：未设置  1：卖家承担， 2：买家承担（邮费到付）， 3：卖家承担（邮费￥XX）
         /// </summary>
         [XmlElement("postage_provider")]

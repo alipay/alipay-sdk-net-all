@@ -47,6 +47,13 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// 租赁分期计划，每一期分期计划详情
+        /// </summary>
+        [XmlArray("plan_list")]
+        [XmlArrayItem("rent_plan")]
+        public List<RentPlan> PlanList { get; set; }
+
+        /// <summary>
         /// 分账信息列表，每一期的分账详情
         /// </summary>
         [XmlArray("royalty_list")]

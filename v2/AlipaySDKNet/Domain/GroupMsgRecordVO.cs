@@ -23,11 +23,17 @@ namespace Aop.Api.Domain
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// 群组id列表
+        /// null
         /// </summary>
         [XmlArray("group_ids")]
         [XmlArrayItem("string")]
         public List<string> GroupIds { get; set; }
+
+        /// <summary>
+        /// 用于描述周期消息发送配置
+        /// </summary>
+        [XmlElement("group_msg_schedule_config")]
+        public GroupMsgScheduleConfigVO GroupMsgScheduleConfig { get; set; }
 
         /// <summary>
         /// 消息id

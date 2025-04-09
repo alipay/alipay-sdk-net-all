@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string BankCode { get; set; }
 
         /// <summary>
+        /// 如果收款方式是BPAY类型，biller_code是必传字段
+        /// </summary>
+        [XmlElement("biller_code")]
+        public string BillerCode { get; set; }
+
+        /// <summary>
         /// 国家
         /// </summary>
         [XmlElement("country")]

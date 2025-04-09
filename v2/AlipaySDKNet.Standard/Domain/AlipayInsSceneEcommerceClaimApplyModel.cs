@@ -79,6 +79,12 @@ namespace Aop.Api.Domain
         public EcomRefundDisputeDTO RefundDispute { get; set; }
 
         /// <summary>
+        /// 退货物流信息
+        /// </summary>
+        [XmlElement("refund_logistics_order")]
+        public EcomLogisticsOrderDTO RefundLogisticsOrder { get; set; }
+
+        /// <summary>
         /// 报案操作人类型
         /// </summary>
         [XmlElement("report_operator_type")]

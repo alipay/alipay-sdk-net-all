@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public BenefitAssistantMsgContentVO BenefitContent { get; set; }
 
         /// <summary>
-        /// 小助手类型，目前支持 activity_recommend (自定义活动)、benefit_recommend（权益推荐）
+        /// 小助手类型，目前支持 activity_recommend (自定义活动)、benefit_recommend（权益推荐）、goods_recommend（商品推荐）
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }
@@ -33,6 +33,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("gmt_published")]
         public string GmtPublished { get; set; }
+
+        /// <summary>
+        /// 商品推荐活动类型的消息内容，对应biz_type 为 goods_recommend 时必须传相关内容
+        /// </summary>
+        [XmlElement("goods_content")]
+        public GoodsAssistantMsgContentVO GoodsContent { get; set; }
 
         /// <summary>
         /// 群组id列表，创建群组时对应的一个群组id

@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// SIMPLE_CREDIT极简授信
+        /// </summary>
+        [XmlElement("credit_type")]
+        public string CreditType { get; set; }
+
+        /// <summary>
         /// 部分协议内容展示需要上游咨询结果信息, 以及用户提交前填写的动态字段, 需要在参扩展信息中透传
         /// </summary>
         [XmlElement("extension")]

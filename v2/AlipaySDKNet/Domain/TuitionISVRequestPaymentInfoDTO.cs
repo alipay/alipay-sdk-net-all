@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public TuitionMoneyDTO Amount { get; set; }
 
         /// <summary>
+        /// billerCode字段，当收款类型为BPAY时，该字段必传
+        /// </summary>
+        [XmlElement("biller_code")]
+        public string BillerCode { get; set; }
+
+        /// <summary>
         /// 证书列表
         /// </summary>
         [XmlElement("certificate_list")]
@@ -50,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("post_script")]
         public string PostScript { get; set; }
+
+        /// <summary>
+        /// referenceNumber字段，当收款类型为BPAY时，该字段必传
+        /// </summary>
+        [XmlElement("reference_number")]
+        public string ReferenceNumber { get; set; }
 
         /// <summary>
         /// 学校id

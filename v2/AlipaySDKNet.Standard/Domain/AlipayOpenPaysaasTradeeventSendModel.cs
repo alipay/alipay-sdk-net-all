@@ -40,10 +40,22 @@ namespace Aop.Api.Domain
         public string MerchantType { get; set; }
 
         /// <summary>
+        /// 设备sn
+        /// </summary>
+        [XmlElement("sn")]
+        public string Sn { get; set; }
+
+        /// <summary>
         /// 触发提醒的时间戳，可以不填，不填写，默认为接收到请求的时间
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
+
+        /// <summary>
+        /// 供应商ID
+        /// </summary>
+        [XmlElement("supply_id")]
+        public string SupplyId { get; set; }
 
         /// <summary>
         /// 交易订单id,生产环境必传

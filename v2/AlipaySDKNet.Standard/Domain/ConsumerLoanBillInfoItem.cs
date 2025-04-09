@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bill_id")]
         public string BillId { get; set; }
+
+        /// <summary>
+        /// 手续费金额，单位为分（如1000代表10.00元）
+        /// </summary>
+        [XmlElement("commission_amount")]
+        public long CommissionAmount { get; set; }
 
         /// <summary>
         /// 本期还款金额，单位为分，1000代表10.00元，状态为“本期已还”时必填，其余状态选填
@@ -82,10 +89,23 @@ namespace Aop.Api.Domain
         public long PrincipalAmount { get; set; }
 
         /// <summary>
+        /// 当前账单和借据的关系
+        /// </summary>
+        [XmlArray("related_loan_info")]
+        [XmlArrayItem("consumer_loan_bill_loan_relation")]
+        public List<ConsumerLoanBillLoanRelation> RelatedLoanInfo { get; set; }
+
+        /// <summary>
         /// 单位为分，1000代表10.00元
         /// </summary>
         [XmlElement("repay_amount")]
         public long RepayAmount { get; set; }
+
+        /// <summary>
+        /// 账单待还金额，单位为分（1000代表10.00元），不包含手续费，仅包含账单本身金额（如本金、利息、罚息等）
+        /// </summary>
+        [XmlElement("repay_bill_amount")]
+        public long RepayBillAmount { get; set; }
 
         /// <summary>
         /// 账单还款日，日期格式为YYYY-MM-DD hh:mm:ss

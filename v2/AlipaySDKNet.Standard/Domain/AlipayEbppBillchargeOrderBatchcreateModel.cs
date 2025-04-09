@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 1234567890
+        /// 外部订单id
         /// </summary>
         [XmlElement("out_biz_id")]
         public string OutBizId { get; set; }

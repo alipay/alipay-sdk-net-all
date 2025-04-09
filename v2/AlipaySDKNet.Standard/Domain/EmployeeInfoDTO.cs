@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class EmployeeInfoDTO : AopObject
     {
         /// <summary>
+        /// 员工所属核算主体列表
+        /// </summary>
+        [XmlArray("accounting_entity_list")]
+        [XmlArrayItem("employee_accounting_entity_d_t_o")]
+        public List<EmployeeAccountingEntityDTO> AccountingEntityList { get; set; }
+
+        /// <summary>
         /// 是否激活
         /// </summary>
         [XmlElement("activate")]
@@ -106,6 +113,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("job_level_show")]
         public string JobLevelShow { get; set; }
+
+        /// <summary>
+        /// 员工标签
+        /// </summary>
+        [XmlArray("label_names")]
+        [XmlArrayItem("string")]
+        public List<string> LabelNames { get; set; }
 
         /// <summary>
         /// 手机号码

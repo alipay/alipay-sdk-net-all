@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AlipayOrderNo { get; set; }
 
         /// <summary>
-        /// 余额，仅供参考。由于架构原因，余额变动并不保证连续。也就是余额不一定等于上一笔余额减去当笔金额。但是会保证最终一致。
+        /// 余额，单位元，仅供参考。由于架构原因，余额变动并不保证连续。也就是余额不一定等于上一笔余额减去当笔金额。但是会保证最终一致。
         /// </summary>
         [XmlElement("balance")]
         public string Balance { get; set; }
@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string StoreName { get; set; }
 
         /// <summary>
-        /// 金额
+        /// 金额，单位元
         /// </summary>
         [XmlElement("trans_amount")]
         public string TransAmount { get; set; }

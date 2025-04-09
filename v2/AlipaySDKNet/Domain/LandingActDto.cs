@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Key { get; set; }
 
         /// <summary>
-        /// 活动值
+        /// 活动值（次数）
         /// </summary>
         [XmlElement("value")]
         public string Value { get; set; }

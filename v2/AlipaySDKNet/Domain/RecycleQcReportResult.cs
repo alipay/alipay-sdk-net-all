@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<string> ImageIdList { get; set; }
 
         /// <summary>
+        /// option_code是问卷中的问题选项code，和text二选一传入 使用支付宝问卷问题时，传入option_code；非支付宝问卷，传入text
+        /// </summary>
+        [XmlElement("option_code")]
+        public string OptionCode { get; set; }
+
+        /// <summary>
         /// 文案
         /// </summary>
         [XmlElement("text")]

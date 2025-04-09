@@ -180,6 +180,12 @@ namespace Aop.Api.Domain
         public long PostFee { get; set; }
 
         /// <summary>
+        /// 订单商家物流寄件方式
+        /// </summary>
+        [XmlElement("post_type")]
+        public string PostType { get; set; }
+
+        /// <summary>
         /// 卖家id
         /// </summary>
         [XmlElement("seller_id")]

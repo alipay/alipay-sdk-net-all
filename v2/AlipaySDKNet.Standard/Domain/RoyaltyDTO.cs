@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BuyOutPrice { get; set; }
 
         /// <summary>
+        /// 预期分账时间
+        /// </summary>
+        [XmlElement("expect_royalty_time")]
+        public string ExpectRoyaltyTime { get; set; }
+
+        /// <summary>
         /// 租金分账期数，举例1、2、3.....
         /// </summary>
         [XmlElement("royalty_period")]

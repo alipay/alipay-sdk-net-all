@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayTradeCloseModel : AopObject
     {
         /// <summary>
+        /// 扩展字段
+        /// </summary>
+        [XmlElement("extend_params")]
+        public CloseExtendParams ExtendParams { get; set; }
+
+        /// <summary>
         /// 商家操作员编号 id，由商家自定义。
         /// </summary>
         [XmlElement("operator_id")]

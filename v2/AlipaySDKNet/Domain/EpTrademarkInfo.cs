@@ -65,6 +65,12 @@ namespace Aop.Api.Domain
         public bool JointlyOwnedTrademark { get; set; }
 
         /// <summary>
+        /// 商标图片地址。链接地址1个小时内有效
+        /// </summary>
+        [XmlElement("logo_oss_path")]
+        public string LogoOssPath { get; set; }
+
+        /// <summary>
         /// 商标名称
         /// </summary>
         [XmlElement("name")]

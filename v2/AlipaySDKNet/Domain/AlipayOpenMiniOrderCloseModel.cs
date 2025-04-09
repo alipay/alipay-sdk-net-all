@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// 关闭原因编码对应的描述信息
+        /// </summary>
+        [XmlElement("reason")]
+        public string Reason { get; set; }
+
+        /// <summary>
+        /// 取消订单的原因编码，不同业务的取消原因不同
+        /// </summary>
+        [XmlElement("reason_code")]
+        public string ReasonCode { get; set; }
+
+        /// <summary>
         /// 买家支付宝用户ID；open_id和user_id二选一
         /// </summary>
         [XmlElement("user_id")]

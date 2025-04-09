@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class PayFlowModel : AopObject
     {
         /// <summary>
+        /// 是否查得
+        /// </summary>
+        [XmlElement("is_effective")]
+        public string IsEffective { get; set; }
+
+        /// <summary>
         /// 店铺信息列表
         /// </summary>
         [XmlArray("shop_list")]

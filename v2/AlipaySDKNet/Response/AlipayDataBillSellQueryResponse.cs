@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayDataBillSellQueryResponse : AopResponse
     {
         /// <summary>
-        /// 交易流水详情
+        /// 交易流水详情，如果不存在记录则为空
         /// </summary>
         [XmlArray("detail_list")]
         [XmlArrayItem("trade_item_result")]

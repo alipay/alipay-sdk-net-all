@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<ActivityInfoModifyDTO> ActivityInfos { get; set; }
 
         /// <summary>
+        /// 收货地址
+        /// </summary>
+        [XmlElement("address_info")]
+        public MiniReceiverAddressInfoDTO AddressInfo { get; set; }
+
+        /// <summary>
         /// 酒店预订信息
         /// </summary>
         [XmlElement("booking_info")]
@@ -28,6 +34,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("contact_info")]
         public ContactInfoDTO ContactInfo { get; set; }
+
+        /// <summary>
+        /// 商品修改信息
+        /// </summary>
+        [XmlArray("item_infos")]
+        [XmlArrayItem("goods_info_modify_d_t_o")]
+        public List<GoodsInfoModifyDTO> ItemInfos { get; set; }
 
         /// <summary>
         /// 买家open_id；open_id和user_id二选一
@@ -42,6 +55,12 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
+        /// 订单质检金额，单位：元
+        /// </summary>
+        [XmlElement("order_inspect_price")]
+        public string OrderInspectPrice { get; set; }
+
+        /// <summary>
         /// 商户订单号，创建订单请求由商户传入；order_id和out_order_id二选一
         /// </summary>
         [XmlElement("out_order_id")]
@@ -52,6 +71,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("price_info")]
         public PriceInfoModifyDTO PriceInfo { get; set; }
+
+        /// <summary>
+        /// 履约原因编码，特指拒绝场景下的原因
+        /// </summary>
+        [XmlElement("reason_code")]
+        public string ReasonCode { get; set; }
+
+        /// <summary>
+        /// 派单联系人信息
+        /// </summary>
+        [XmlElement("send_order_contact_info")]
+        public SendOrderContactInfoDTO SendOrderContactInfo { get; set; }
 
         /// <summary>
         /// 订单的履约状态

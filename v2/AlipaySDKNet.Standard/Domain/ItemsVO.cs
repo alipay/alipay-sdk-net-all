@@ -34,19 +34,19 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
-        /// 商品原价
+        /// 商品原价，单位：元
         /// </summary>
         [XmlElement("price_original")]
         public string PriceOriginal { get; set; }
 
         /// <summary>
-        /// 商品单价
+        /// 商品单价，单位：元
         /// </summary>
         [XmlElement("price_sale")]
         public string PriceSale { get; set; }
 
         /// <summary>
-        /// 购买数量
+        /// 购买数量，单位：件
         /// </summary>
         [XmlElement("quantity_item")]
         public long QuantityItem { get; set; }

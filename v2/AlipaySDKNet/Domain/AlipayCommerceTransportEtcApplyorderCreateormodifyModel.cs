@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string PlateNo { get; set; }
 
         /// <summary>
+        /// 参数需要咨询业务同学,车系品牌id
+        /// </summary>
+        [XmlElement("product_id")]
+        public string ProductId { get; set; }
+
+        /// <summary>
         /// 发行方的标识ID
         /// </summary>
         [XmlElement("seller_id")]

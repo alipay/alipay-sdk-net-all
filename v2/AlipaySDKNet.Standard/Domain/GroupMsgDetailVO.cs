@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public List<string> GroupIds { get; set; }
 
         /// <summary>
+        /// 用于描述周期消息的发送配置
+        /// </summary>
+        [XmlElement("group_msg_schedule_config")]
+        public GroupMsgScheduleConfigVO GroupMsgScheduleConfig { get; set; }
+
+        /// <summary>
         /// 创建者
         /// </summary>
         [XmlElement("merchant_name")]

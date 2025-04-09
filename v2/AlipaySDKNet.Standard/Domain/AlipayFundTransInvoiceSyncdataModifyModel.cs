@@ -118,6 +118,12 @@ namespace Aop.Api.Domain
         public string Time { get; set; }
 
         /// <summary>
+        /// 机构开票成功的交易流水号集合，用于公益侧开票对账
+        /// </summary>
+        [XmlElement("trade_no_list")]
+        public string TradeNoList { get; set; }
+
+        /// <summary>
         /// 票据状态: 1医疗，2捐赠，3教育，4罚没，5其他
         /// </summary>
         [XmlElement("type")]
