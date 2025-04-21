@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string CertNo { get; set; }
 
         /// <summary>
+        /// 证件号尾号
+        /// </summary>
+        [XmlElement("cert_no_tail")]
+        public string CertNoTail { get; set; }
+
+        /// <summary>
         /// 证件类型
         /// </summary>
         [XmlElement("cert_type")]
@@ -34,6 +40,12 @@ namespace Aop.Api.Response
         [XmlArray("department_info")]
         [XmlArrayItem("edu_department_node")]
         public List<EduDepartmentNode> DepartmentInfo { get; set; }
+
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        [XmlElement("email")]
+        public string Email { get; set; }
 
         /// <summary>
         /// 学工号
@@ -76,6 +88,27 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 所属组织节点列表
+        /// </summary>
+        [XmlArray("node_info_list")]
+        [XmlArrayItem("edu_node_info")]
+        public List<EduNodeInfo> NodeInfoList { get; set; }
+
+        /// <summary>
+        /// 所属位置列表
+        /// </summary>
+        [XmlArray("place_info_list")]
+        [XmlArrayItem("edu_place_info")]
+        public List<EduPlaceInfo> PlaceInfoList { get; set; }
+
+        /// <summary>
+        /// 所属角色列表
+        /// </summary>
+        [XmlArray("role_info_list")]
+        [XmlArrayItem("edu_role_info")]
+        public List<EduRoleInfo> RoleInfoList { get; set; }
 
         /// <summary>
         /// 角色名称，可自定义，未自定义则使用默认值

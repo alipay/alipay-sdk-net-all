@@ -122,7 +122,7 @@ namespace Aop.Api.Domain
         public string Path { get; set; }
 
         /// <summary>
-        /// 价格单元
+        /// 价格单位
         /// </summary>
         [XmlElement("price_unit")]
         public string PriceUnit { get; set; }

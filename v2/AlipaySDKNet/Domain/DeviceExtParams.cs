@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ExternalShopId { get; set; }
 
         /// <summary>
+        /// 服务商通过这个参数传入服务商定制版本信息，不传默认为标准版
+        /// </summary>
+        [XmlElement("isv_device_version_tag")]
+        public string IsvDeviceVersionTag { get; set; }
+
+        /// <summary>
         /// 支付类型 云支付服务商：ALIPAY_CLOUD 生态服务商：SPI
         /// </summary>
         [XmlElement("payment_type")]

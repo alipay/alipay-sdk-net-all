@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// 商品erp编码
+        /// </summary>
+        [XmlElement("erp_code")]
+        public string ErpCode { get; set; }
+
+        /// <summary>
         /// 商品名称
         /// </summary>
         [XmlElement("item_brand")]
@@ -33,6 +39,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_condition")]
         public string ItemCondition { get; set; }
+
+        /// <summary>
+        /// 商品成色等级
+        /// </summary>
+        [XmlElement("item_condition_grade")]
+        public string ItemConditionGrade { get; set; }
 
         /// <summary>
         /// 支付宝平台侧商品ID

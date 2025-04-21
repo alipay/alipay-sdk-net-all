@@ -25,5 +25,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("pay_time")]
         public string PayTime { get; set; }
+
+        /// <summary>
+        /// 支付时isv返回的内部订单号，当订单状态为：PAID、REFUND_CLOSED可以返回该值
+        /// </summary>
+        [XmlElement("third_order_no")]
+        public string ThirdOrderNo { get; set; }
     }
 }

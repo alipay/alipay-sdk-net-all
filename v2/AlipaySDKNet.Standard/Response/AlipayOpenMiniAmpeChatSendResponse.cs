@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -13,6 +14,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("content")]
         public string Content { get; set; }
+
+        /// <summary>
+        /// 运行时设备信息，例如卡片的长款
+        /// </summary>
+        [XmlElement("device_info")]
+        public AmpeDeviceInfo DeviceInfo { get; set; }
 
         /// <summary>
         /// 请求流水，回传

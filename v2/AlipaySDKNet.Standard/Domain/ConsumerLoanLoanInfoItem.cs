@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public long LastPrincipalAmount { get; set; }
 
         /// <summary>
+        /// 当前该笔借据剩余待还总金额，单位为分，如1000代表10.00元
+        /// </summary>
+        [XmlElement("last_total_repay_amount")]
+        public long LastTotalRepayAmount { get; set; }
+
+        /// <summary>
         /// 总借款金额，单位为分，1000代表10.00元
         /// </summary>
         [XmlElement("loan_amount")]

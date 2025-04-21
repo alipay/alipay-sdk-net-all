@@ -35,6 +35,18 @@ namespace Aop.Api.Domain
         public string BuyoutPrice { get; set; }
 
         /// <summary>
+        /// 提前结清,true表示提前结清
+        /// </summary>
+        [XmlElement("early_settle")]
+        public bool EarlySettle { get; set; }
+
+        /// <summary>
+        /// 提前结清金额，单位：元
+        /// </summary>
+        [XmlElement("early_settle_price")]
+        public string EarlySettlePrice { get; set; }
+
+        /// <summary>
         /// 租赁订单的结束时间
         /// </summary>
         [XmlElement("end_time")]

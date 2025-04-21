@@ -21,6 +21,11 @@ namespace Aop.Api.Request
         public string BizInfo { get; set; }
 
         /// <summary>
+        /// 送货清单，转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem DeliveryListContent { get; set; }
+
+        /// <summary>
         /// 辅助文件信息，如四码照片，转为字节流传递，要求为jpg、jpeg、png格式
         /// </summary>
         public FileItem EvidentiaryContent { get; set; }
@@ -34,6 +39,11 @@ namespace Aop.Api.Request
         /// 外部订单号
         /// </summary>
         public string OutTradeNo { get; set; }
+
+        /// <summary>
+        /// 销货清单，转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem SalesListContent { get; set; }
 
         /// <summary>
         /// 支付宝分配的场景编码，用于识别活动场景及区域等信息
@@ -153,8 +163,10 @@ namespace Aop.Api.Request
         public IDictionary<string, FileItem> GetFileParameters()
         {
             IDictionary<string, FileItem> parameters = new Dictionary<string, FileItem>();
+            parameters.Add("delivery_list_content", this.DeliveryListContent);
             parameters.Add("evidentiary_content", this.EvidentiaryContent);
             parameters.Add("invoice_content", this.InvoiceContent);
+            parameters.Add("sales_list_content", this.SalesListContent);
             return parameters;
         }
 

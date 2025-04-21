@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCloudCloudrunStaticsiteDirDeleteModel : AopObject
     {
         /// <summary>
+        /// 内部使用，uiam角色扮演token
+        /// </summary>
+        [XmlElement("assume_token")]
+        public string AssumeToken { get; set; }
+
+        /// <summary>
         /// 要删除的文件名称
         /// </summary>
         [XmlElement("dir_name")]

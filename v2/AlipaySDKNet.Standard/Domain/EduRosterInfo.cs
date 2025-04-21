@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
+        /// 证件号尾号
+        /// </summary>
+        [XmlElement("cert_no_tail")]
+        public string CertNoTail { get; set; }
+
+        /// <summary>
         /// 证件类型
         /// </summary>
         [XmlElement("cert_type")]
@@ -40,6 +46,12 @@ namespace Aop.Api.Domain
         [XmlArray("department_info_list")]
         [XmlArrayItem("edu_department_node")]
         public List<EduDepartmentNode> DepartmentInfoList { get; set; }
+
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        [XmlElement("email")]
+        public string Email { get; set; }
 
         /// <summary>
         /// 学号或工号
@@ -60,7 +72,7 @@ namespace Aop.Api.Domain
         public string Gender { get; set; }
 
         /// <summary>
-        /// 机构ID
+        /// 机构内标
         /// </summary>
         [XmlElement("inst_id")]
         public string InstId { get; set; }
@@ -84,7 +96,21 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 角色名称，可自定义，未自定义则使用默认值
+        /// 组织节点信息列表，一个人可能属于多个组织节点，列表记录的都是最低级组织部门节点
+        /// </summary>
+        [XmlArray("node_info_list")]
+        [XmlArrayItem("edu_node_info")]
+        public List<EduNodeInfo> NodeInfoList { get; set; }
+
+        /// <summary>
+        /// 角色信息列表
+        /// </summary>
+        [XmlArray("role_info_list")]
+        [XmlArrayItem("edu_role_info")]
+        public List<EduRoleInfo> RoleInfoList { get; set; }
+
+        /// <summary>
+        /// 角色类型名称
         /// </summary>
         [XmlElement("role_name")]
         public string RoleName { get; set; }

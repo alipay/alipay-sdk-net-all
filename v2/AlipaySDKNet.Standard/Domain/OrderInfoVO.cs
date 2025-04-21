@@ -112,6 +112,12 @@ namespace Aop.Api.Domain
         public long Quantity { get; set; }
 
         /// <summary>
+        /// 1-处方订单，2-非处方订单
+        /// </summary>
+        [XmlElement("rx_type")]
+        public long RxType { get; set; }
+
+        /// <summary>
         /// 订单更新时间
         /// </summary>
         [XmlElement("update_time")]

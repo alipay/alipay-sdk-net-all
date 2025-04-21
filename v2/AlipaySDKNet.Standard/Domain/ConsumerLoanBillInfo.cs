@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public ConsumerLoanLoanInfo LoanInfo { get; set; }
 
         /// <summary>
-        /// 还款周期数
+        /// 待还款期数，单位：笔
         /// </summary>
         [XmlElement("period_count")]
         public long PeriodCount { get; set; }

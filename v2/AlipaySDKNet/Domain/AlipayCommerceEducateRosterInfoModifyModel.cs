@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
+        /// 证件号尾号
+        /// </summary>
+        [XmlElement("cert_no_tail")]
+        public string CertNoTail { get; set; }
+
+        /// <summary>
         /// 证件类型
         /// </summary>
         [XmlElement("cert_type")]
@@ -28,6 +34,12 @@ namespace Aop.Api.Domain
         [XmlArray("department_info")]
         [XmlArrayItem("edu_department_node")]
         public List<EduDepartmentNode> DepartmentInfo { get; set; }
+
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        [XmlElement("email")]
+        public string Email { get; set; }
 
         /// <summary>
         /// 学号或工号
@@ -66,10 +78,24 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 组织节点ID列表
+        /// </summary>
+        [XmlArray("node_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> NodeIdList { get; set; }
+
+        /// <summary>
         /// 角色名称
         /// </summary>
         [XmlElement("role_name")]
         public string RoleName { get; set; }
+
+        /// <summary>
+        /// 角色名称列表
+        /// </summary>
+        [XmlArray("role_name_list")]
+        [XmlArrayItem("string")]
+        public List<string> RoleNameList { get; set; }
 
         /// <summary>
         /// 角色类型

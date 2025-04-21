@@ -83,7 +83,7 @@ namespace Aop.Api.Domain
         public string Elevator { get; set; }
 
         /// <summary>
-        /// 梯户比，例：一梯两户
+        /// （该字段废弃） 当前字段已废弃(枚举值过多，另加字段采用数字传输)
         /// </summary>
         [XmlElement("elevator_to_unit_ratio")]
         public string ElevatorToUnitRatio { get; set; }

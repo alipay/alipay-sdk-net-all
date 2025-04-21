@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reason")]
         public string Reason { get; set; }
+
+        /// <summary>
+        /// 取消原因编码
+        /// </summary>
+        [XmlElement("reason_code")]
+        public string ReasonCode { get; set; }
     }
 }

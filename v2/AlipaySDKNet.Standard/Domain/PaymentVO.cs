@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string PayNum { get; set; }
 
         /// <summary>
+        /// 自费支付产生费用时的订单号
+        /// </summary>
+        [XmlElement("self_trade_no")]
+        public string SelfTradeNo { get; set; }
+
+        /// <summary>
         /// 特殊时段加价费用，单位：元，保留2位小数
         /// </summary>
         [XmlElement("time_markup_price")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ExternalShopId { get; set; }
 
         /// <summary>
+        /// 小写字母串_服务商PID
+        /// </summary>
+        [XmlElement("isv_device_version_tag")]
+        public string IsvDeviceVersionTag { get; set; }
+
+        /// <summary>
         /// 卖进订单id，先卖进后绑定模式下必传。
         /// </summary>
         [XmlElement("sales_entry_order_id")]

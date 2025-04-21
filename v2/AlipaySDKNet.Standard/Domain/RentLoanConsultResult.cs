@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class RentLoanConsultResult : AopObject
     {
         /// <summary>
-        /// ALLOW：表示允许放款 FORBID：表示不允许放款
+        /// ALLOW：表示允许通过 FORBID：表示不允许通过 UN_KNOW：风险未知,无法识别
         /// </summary>
         [XmlElement("consult_result")]
         public string ConsultResult { get; set; }

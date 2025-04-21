@@ -46,7 +46,25 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// 预授权页面类型</br> - CLOSE_ACCOUNT：注销账户 </br>  - BILL_LIST：查看账单列表</br>  - FUND_PLAN_RESTART：重启自动攒计划</br>  - MAKE_PROFIT ：开启生息</br>  - UNFREEZE ：解锁
+        /// 被邀请账号支付宝侧唯一标识
+        /// </summary>
+        [XmlElement("invitee_id")]
+        public string InviteeId { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("invitee_open_id")]
+        public string InviteeOpenId { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 预授权页面类型</br> - CLOSE_ACCOUNT：注销账户 </br>  - BILL_LIST：查看账单列表</br>  - FUND_PLAN_RESTART：重启自动攒计划</br>  - MAKE_PROFIT ：开启生息</br>  - UNFREEZE ：解锁</br>  - DEVICE_MANAGE ：设备管理
         /// </summary>
         [XmlElement("page")]
         public string Page { get; set; }
@@ -56,5 +74,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 关系id，唯一代表设备和小荷包关系
+        /// </summary>
+        [XmlElement("relation_id")]
+        public string RelationId { get; set; }
     }
 }

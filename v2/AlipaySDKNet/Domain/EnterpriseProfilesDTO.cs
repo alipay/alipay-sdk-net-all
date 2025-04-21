@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("group_app_id")]
         public string GroupAppId { get; set; }
+
+        /// <summary>
+        /// 接口返回的PC端企业注册链接，需适用的集成模式；<br/>不传默认为网页跳转的模式，需要跳转页面链接进入企业注册页面；如需以页面组件嵌入其他系统，请传入iframe
+        /// </summary>
+        [XmlElement("pc_invite_url_mode")]
+        public string PcInviteUrlMode { get; set; }
     }
 }

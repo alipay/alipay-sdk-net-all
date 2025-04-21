@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public bool ForbidAdminChat { get; set; }
 
         /// <summary>
+        /// 禁止用户同时加入该群组下多个群聊, true表示禁止
+        /// </summary>
+        [XmlElement("forbid_join_multiple_group_chat")]
+        public bool ForbidJoinMultipleGroupChat { get; set; }
+
+        /// <summary>
         /// 允许群员发起私聊：建议关闭；关闭后群员将不能主动添加群主或其它群内用户好友。true：关闭；false：开启。
         /// </summary>
         [XmlElement("forbid_member_chat")]

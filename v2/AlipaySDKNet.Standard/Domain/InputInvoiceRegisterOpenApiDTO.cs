@@ -17,10 +17,22 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 标识是否走主站登记链路
+        /// </summary>
+        [XmlElement("ant_group_register_flag")]
+        public string AntGroupRegisterFlag { get; set; }
+
+        /// <summary>
         /// 是否海外某些国家的发票使用
         /// </summary>
         [XmlElement("authorized_dealer")]
         public string AuthorizedDealer { get; set; }
+
+        /// <summary>
+        /// 表示是否需要勾选抵扣
+        /// </summary>
+        [XmlElement("certify_deduct_flag")]
+        public string CertifyDeductFlag { get; set; }
 
         /// <summary>
         /// 校验码
@@ -41,6 +53,12 @@ namespace Aop.Api.Domain
         public string Currency { get; set; }
 
         /// <summary>
+        /// 发展基金
+        /// </summary>
+        [XmlElement("development_fund")]
+        public string DevelopmentFund { get; set; }
+
+        /// <summary>
         /// 有效税额，币种见currency字段
         /// </summary>
         [XmlElement("effective_tax_amount")]
@@ -59,10 +77,28 @@ namespace Aop.Api.Domain
         public string ExcludingTaxAmount { get; set; }
 
         /// <summary>
+        /// 票价信息
+        /// </summary>
+        [XmlElement("fare")]
+        public string Fare { get; set; }
+
+        /// <summary>
         /// 文件下载http地址
         /// </summary>
         [XmlElement("file_download_http_url")]
         public string FileDownloadHttpUrl { get; set; }
+
+        /// <summary>
+        /// 燃油附加费
+        /// </summary>
+        [XmlElement("fuel_surcharge")]
+        public string FuelSurcharge { get; set; }
+
+        /// <summary>
+        /// 全电票标签，根据具体发票类型传入
+        /// </summary>
+        [XmlElement("full_elc_flag")]
+        public string FullElcFlag { get; set; }
 
         /// <summary>
         /// 影像原始文件名称

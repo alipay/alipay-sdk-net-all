@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 用户身份证号
+        /// </summary>
+        [XmlElement("cert_no")]
+        public string CertNo { get; set; }
+
+        /// <summary>
         /// 冻结金额，单位元
         /// </summary>
         [XmlElement("freeze_amount")]
@@ -44,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_name")]
         public string MerchantName { get; set; }
+
+        /// <summary>
+        /// 用户手机号
+        /// </summary>
+        [XmlElement("mobile")]
+        public string Mobile { get; set; }
 
         /// <summary>
         /// 省份

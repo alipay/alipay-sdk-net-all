@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcEnterpriseRegisterinviteCreateModel : AopObject
     {
         /// <summary>
+        /// 企业基本信息，仅用于企业注册页面回显信息，用户可编辑修改，请按需使用
+        /// </summary>
+        [XmlElement("base_info")]
+        public EnterpriseBaseInfoDTO BaseInfo { get; set; }
+
+        /// <summary>
         /// 企业管理员身份唯一标识，搭配 identity_type 传参：<br/> 1. 当identity_type=ALIPAY_USER_ID时，identity传支付宝会员uid（此时可与identity_open_id二选一）<br/>  2. 当identity_type=ALIPAY_LOGON_ID时，identity传已注册支付宝且可以登录支付宝的手机号或邮箱 ；<br/> 3. 当identity_type=ISV_USER_ID时，identity传服务商生成的用户唯一标识；<br/> 4. 当identity_type=ENTERPRISE_EMAIL时，identity传企业邮箱；
         /// </summary>
         [XmlElement("identity")]
@@ -34,7 +40,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 企业个性化信息，适用于特殊场景，可按需使用
+        /// 企业个性化信息，适用于特殊场景，请按需使用
         /// </summary>
         [XmlElement("profiles")]
         public EnterpriseProfilesDTO Profiles { get; set; }

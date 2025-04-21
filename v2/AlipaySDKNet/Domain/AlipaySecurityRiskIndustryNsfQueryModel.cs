@@ -41,13 +41,13 @@ namespace Aop.Api.Domain
         public string Channel { get; set; }
 
         /// <summary>
-        /// 城市编码；请按照https://gw.alipayobjects.com/os/basement_prod/253c4dcb-b8a4-4a1e-8be2-79e191a9b6db.xlsx 表格中内容填写。 （参考资料： http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/）
+        /// 城市编码；请按照 <a href="https://gw.alipayobjects.com/os/basement_prod/253c4dcb-b8a4-4a1e-8be2-79e191a9b6db.xlsx">城市编码</a>  表格中内容填写。 （参考资料：  <a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/">参考资料</a> ）
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
 
         /// <summary>
-        /// 区域编码；请按照https://gw.alipayobjects.com/os/basement_prod/253c4dcb-b8a4-4a1e-8be2-79e191a9b6db.xlsx 表格中内容填写。 （参考资料： http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/）
+        /// 区域编码；请按照 <a href="https://gw.alipayobjects.com/os/basement_prod/253c4dcb-b8a4-4a1e-8be2-79e191a9b6db.xlsx">区域编码</a>  表格中内容填写。 （参考资料：  <a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/">参考资料</a> ）
         /// </summary>
         [XmlElement("district_code")]
         public string DistrictCode { get; set; }
@@ -168,7 +168,7 @@ namespace Aop.Api.Domain
         public string OutletAddress { get; set; }
 
         /// <summary>
-        /// 省编码；请按照https://gw.alipayobjects.com/os/basement_prod/253c4dcb-b8a4-4a1e-8be2-79e191a9b6db.xlsx 表格中内容填写。 （参考资料： http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/）
+        /// 省编码；请按照 <a href="https://gw.alipayobjects.com/os/basement_prod/253c4dcb-b8a4-4a1e-8be2-79e191a9b6db.xlsx">省编码</a> 表格中内容填写。 （参考资料：  <a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/">参考资料</a> ）
         /// </summary>
         [XmlElement("province_code")]
         public string ProvinceCode { get; set; }

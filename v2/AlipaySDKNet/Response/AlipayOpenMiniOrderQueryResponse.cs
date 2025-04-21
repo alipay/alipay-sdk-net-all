@@ -71,6 +71,12 @@ namespace Aop.Api.Response
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 订单取消信息
+        /// </summary>
+        [XmlElement("order_cancel_info")]
+        public OrderCancelInfo OrderCancelInfo { get; set; }
+
+        /// <summary>
         /// 订单详细数据
         /// </summary>
         [XmlElement("order_detail")]

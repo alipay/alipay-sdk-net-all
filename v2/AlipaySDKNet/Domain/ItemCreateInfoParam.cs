@@ -11,6 +11,18 @@ namespace Aop.Api.Domain
     public class ItemCreateInfoParam : AopObject
     {
         /// <summary>
+        /// 病种编码, 厂商自行维护
+        /// </summary>
+        [XmlElement("disease_code")]
+        public string DiseaseCode { get; set; }
+
+        /// <summary>
+        /// 病种名称
+        /// </summary>
+        [XmlElement("disease_name")]
+        public string DiseaseName { get; set; }
+
+        /// <summary>
         /// 是否为医保商品, 0不是, 1是, 默认1
         /// </summary>
         [XmlElement("insurance")]
@@ -36,7 +48,7 @@ namespace Aop.Api.Domain
         public List<SkuCreateInfoParam> SkuList { get; set; }
 
         /// <summary>
-        /// 商品上下架状态
+        /// 商品上下架状态 当前字段已废弃(创建商品默认下架状态, 如需上架请使用上下架接口)
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

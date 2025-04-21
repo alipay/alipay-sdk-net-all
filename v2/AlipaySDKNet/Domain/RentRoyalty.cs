@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ExpectRoyaltyTime { get; set; }
 
         /// <summary>
+        /// 当前请求分账期数,true表示是当前请求的分账期数，面向资金方的分账成功消息该字段才有值。
+        /// </summary>
+        [XmlElement("is_current_request")]
+        public string IsCurrentRequest { get; set; }
+
+        /// <summary>
         /// 商户订单号
         /// </summary>
         [XmlElement("out_order_id")]
@@ -76,10 +82,22 @@ namespace Aop.Api.Domain
         public string RoyaltyInstallmentNo { get; set; }
 
         /// <summary>
+        /// 分账利息，币种：人民币，单位：元。
+        /// </summary>
+        [XmlElement("royalty_interest_price")]
+        public string RoyaltyInterestPrice { get; set; }
+
+        /// <summary>
         /// 分账金额，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("royalty_price")]
         public string RoyaltyPrice { get; set; }
+
+        /// <summary>
+        /// 分账本金，币种：人民币，单位:元。
+        /// </summary>
+        [XmlElement("royalty_principal_price")]
+        public string RoyaltyPrincipalPrice { get; set; }
 
         /// <summary>
         /// 分账计划的状态
@@ -94,7 +112,7 @@ namespace Aop.Api.Domain
         public string RoyaltyTime { get; set; }
 
         /// <summary>
-        /// 分账触发方式
+        /// 提前结清的分账触发方式
         /// </summary>
         [XmlElement("royalty_trigger_type")]
         public string RoyaltyTriggerType { get; set; }

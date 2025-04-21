@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppItemDirectModifyModel : AopObject
     {
         /// <summary>
+        /// 商品属性
+        /// </summary>
+        [XmlArray("attrs")]
+        [XmlArrayItem("app_item_attr_v_o")]
+        public List<AppItemAttrVO> Attrs { get; set; }
+
+        /// <summary>
         /// 支付宝平台侧商品ID，是支付宝平台侧商品的唯一标识，后续与平台交互，需要使用该 ID，建议持久化。该字段特殊可选，与out_item_id不能同时为空，优先使用item_id。
         /// </summary>
         [XmlElement("item_id")]

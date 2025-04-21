@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<AttributeBean> AttributeList { get; set; }
 
         /// <summary>
+        /// 商品描述
+        /// </summary>
+        [XmlElement("description")]
+        public string Description { get; set; }
+
+        /// <summary>
         /// 商品图片
         /// </summary>
         [XmlElement("image_url")]
@@ -58,6 +64,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("origin_sku")]
         public OriginSkuBean OriginSku { get; set; }
+
+        /// <summary>
+        /// 当前库存数量，单位：份/个
+        /// </summary>
+        [XmlElement("quantity")]
+        public long Quantity { get; set; }
 
         /// <summary>
         /// true/false -- 当且仅当 true 时才是必选，false 或者字段不存在，都表示非必选商品

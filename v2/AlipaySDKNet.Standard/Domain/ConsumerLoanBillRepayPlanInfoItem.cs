@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string BillId { get; set; }
 
         /// <summary>
+        /// 当前该笔还款所归属的借据号
+        /// </summary>
+        [XmlElement("loan_id")]
+        public string LoanId { get; set; }
+
+        /// <summary>
+        /// 在该项还款计划所关联的借据中的期号
+        /// </summary>
+        [XmlElement("period_no")]
+        public long PeriodNo { get; set; }
+
+        /// <summary>
         /// 还款金额，单位为分，1000代表10.00元
         /// </summary>
         [XmlElement("repay_amount")]

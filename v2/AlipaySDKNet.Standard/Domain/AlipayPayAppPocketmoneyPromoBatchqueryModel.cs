@@ -18,6 +18,13 @@ namespace Aop.Api.Domain
         public List<string> BizNoList { get; set; }
 
         /// <summary>
+        /// 活动场景数组
+        /// </summary>
+        [XmlArray("biz_scene_list")]
+        [XmlArrayItem("string")]
+        public List<string> BizSceneList { get; set; }
+
+        /// <summary>
         /// 设备号，openWatchId，rtos设备可不传
         /// </summary>
         [XmlElement("device_id")]

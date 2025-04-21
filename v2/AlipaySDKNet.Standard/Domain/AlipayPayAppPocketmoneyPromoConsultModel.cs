@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 活动业务场景
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
+
+        /// <summary>
+        /// 运动步数（单位步）、跳绳数（单位次）等
+        /// </summary>
+        [XmlElement("biz_value")]
+        public string BizValue { get; set; }
+
+        /// <summary>
         /// 设备号，openWatchId，rtos设备可不传
         /// </summary>
         [XmlElement("device_id")]

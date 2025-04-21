@@ -36,6 +36,12 @@ namespace Aop.Api.Response
         public string DiscountedPrice { get; set; }
 
         /// <summary>
+        /// 订单确认时友好地异常信息（可以直接透出）
+        /// </summary>
+        [XmlElement("exception_msg")]
+        public string ExceptionMsg { get; set; }
+
+        /// <summary>
         /// 该价格是商品总价-满减优惠的，不包含外送费，打包费，单位元
         /// </summary>
         [XmlElement("item_total_price")]

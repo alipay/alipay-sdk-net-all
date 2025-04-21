@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Price { get; set; }
 
         /// <summary>
-        /// 商品编码
+        /// OMS厂商sku编码, 厂商自行维护
         /// </summary>
         [XmlElement("sku_code")]
         public string SkuCode { get; set; }

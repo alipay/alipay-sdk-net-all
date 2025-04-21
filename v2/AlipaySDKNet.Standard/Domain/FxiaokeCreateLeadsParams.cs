@@ -356,7 +356,7 @@ namespace Aop.Api.Domain
         public string Source { get; set; }
 
         /// <summary>
-        /// 商机类型，{独立项目0，框架项目1，订单项目2，ULA3}
+        /// 商机类型，{独立项目0，框架项目1，订单项目2，交付资源池商机3}
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

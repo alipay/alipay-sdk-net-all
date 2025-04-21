@@ -43,6 +43,13 @@ namespace Aop.Api.Response
         public PaymentVO Payment { get; set; }
 
         /// <summary>
+        /// 处方信息
+        /// </summary>
+        [XmlArray("prescriptions")]
+        [XmlArrayItem("prescription_v_o")]
+        public List<PrescriptionVO> Prescriptions { get; set; }
+
+        /// <summary>
         /// 商户店铺信息
         /// </summary>
         [XmlElement("store")]

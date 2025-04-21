@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public long Click { get; set; }
 
         /// <summary>
-        /// 广告被点击的次数占展示次数的百分比。计算方法：点击数/展示量*100%
+        /// 广告被点击的次数占展示次数的百分比。计算方法：点击数/展示量*100
         /// </summary>
         [XmlElement("click_rate")]
         public string ClickRate { get; set; }
@@ -90,7 +90,7 @@ namespace Aop.Api.Domain
         public string CreativeName { get; set; }
 
         /// <summary>
-        /// 广告被用户转化的次数占点击次数的百分比。计算方式：转化量/点击量*100%
+        /// 广告被用户转化的次数占点击次数的百分比。计算方式：转化量/点击量*100
         /// </summary>
         [XmlElement("cvr")]
         public string Cvr { get; set; }

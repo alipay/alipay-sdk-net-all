@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ExtraDeviceId { get; set; }
 
         /// <summary>
+        /// 厂商名称
+        /// </summary>
+        [XmlElement("solution_vendor")]
+        public string SolutionVendor { get; set; }
+
+        /// <summary>
         /// 厂商家长ID
         /// </summary>
         [XmlElement("vendor_parent_id")]

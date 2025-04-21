@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string EmployeeNo { get; set; }
 
         /// <summary>
-        /// 机构ID
+        /// 机构内标
         /// </summary>
         [XmlElement("inst_id")]
         public string InstId { get; set; }

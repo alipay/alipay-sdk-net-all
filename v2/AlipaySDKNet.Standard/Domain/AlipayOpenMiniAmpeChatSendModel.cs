@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string AmpeProductId { get; set; }
 
         /// <summary>
-        /// 支付宝的意图code，由支付宝定义，意图列表可从参见BD提供的意图code列表，不定期更新。接入方可以根据支付宝提供的语料对自由的模型进行训练标注，经过自有模型意图分析后，在调用本接口时传入，这样会提高query的识别准确度，并提高响应速度。如果不传入，支付宝将根据自己的模型对query进行意图识别。
+        /// 支付宝的意图code，由支付宝定义，意图列表可从参见BD提供的意图code列表，不定期更新。接入方可以根据支付宝提供的语料对自由的模型进行训练标注，经过自有模型意图分析后，在调用本接口时传入，这样会提高query的识别准确度，并提高响应速度。如果不传入，支付宝将根据自己的模型对query进行意图识别。目前可选值为:SMART_ORDER（智能点单）
         /// </summary>
         [XmlElement("intent_code")]
         public string IntentCode { get; set; }
@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         [XmlArray("locations")]
         [XmlArrayItem("chat_location")]
         public List<ChatLocation> Locations { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 用户输入的原始query，不能改写。
@@ -52,6 +58,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("session_id")]
         public string SessionId { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的userId。
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
 
         /// <summary>
         /// 支付宝用户uid的加密串，可以通过客户端接口获取。不涉及用户个人数据操作的可为空，其他场景都为非空。

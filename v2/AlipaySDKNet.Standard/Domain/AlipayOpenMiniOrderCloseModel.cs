@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string Reason { get; set; }
 
         /// <summary>
-        /// 取消订单的原因编码，不同业务的取消原因不同
+        /// 取消订单的原因编码，不同业务的取消原因不同，更多原因编码枚举值请参考：https://xfpzl.yuque.com/dgw58m/apg2ie/howyv43z3piimp48#SaZq
         /// </summary>
         [XmlElement("reason_code")]
         public string ReasonCode { get; set; }

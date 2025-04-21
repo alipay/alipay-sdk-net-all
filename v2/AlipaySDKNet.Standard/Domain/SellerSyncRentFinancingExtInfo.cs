@@ -10,6 +10,36 @@ namespace Aop.Api.Domain
     public class SellerSyncRentFinancingExtInfo : AopObject
     {
         /// <summary>
+        /// 收款银行卡账户
+        /// </summary>
+        [XmlElement("beneficiary_account_number")]
+        public string BeneficiaryAccountNumber { get; set; }
+
+        /// <summary>
+        /// 收款支行名称
+        /// </summary>
+        [XmlElement("beneficiary_bank_name")]
+        public string BeneficiaryBankName { get; set; }
+
+        /// <summary>
+        /// 收款户名
+        /// </summary>
+        [XmlElement("beneficiary_name")]
+        public string BeneficiaryName { get; set; }
+
+        /// <summary>
+        /// 买断金融资金额，单位：元
+        /// </summary>
+        [XmlElement("buyout_financing_amount")]
+        public string BuyoutFinancingAmount { get; set; }
+
+        /// <summary>
+        /// 买断金还款方式
+        /// </summary>
+        [XmlElement("buyout_repayment_type")]
+        public string BuyoutRepaymentType { get; set; }
+
+        /// <summary>
         /// 需要融资的金额，币种：人民币
         /// </summary>
         [XmlElement("financing_amount")]
@@ -76,7 +106,13 @@ namespace Aop.Api.Domain
         public string PayeeMemo { get; set; }
 
         /// <summary>
-        /// 还款的方式，例如：等额本息/等额本差
+        /// 租金融资金额，单位：元
+        /// </summary>
+        [XmlElement("rent_financing_amount")]
+        public string RentFinancingAmount { get; set; }
+
+        /// <summary>
+        /// 租金还款的方式，例如：等额本息/等额本差
         /// </summary>
         [XmlElement("repayment_type")]
         public string RepaymentType { get; set; }

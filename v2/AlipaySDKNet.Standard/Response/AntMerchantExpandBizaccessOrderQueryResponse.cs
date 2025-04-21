@@ -18,6 +18,12 @@ namespace Aop.Api.Response
         public List<IsvBizOpenOrderFailReason> FailReasons { get; set; }
 
         /// <summary>
+        /// 订单信息
+        /// </summary>
+        [XmlElement("order_content")]
+        public IsvBizOpenOrderContent OrderContent { get; set; }
+
+        /// <summary>
         /// 业务开通主单号
         /// </summary>
         [XmlElement("order_id")]
@@ -28,6 +34,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("order_status")]
         public string OrderStatus { get; set; }
+
+        /// <summary>
+        /// 子单列表
+        /// </summary>
+        [XmlArray("sub_merchant_orders")]
+        [XmlArrayItem("isv_sub_merchant_order_v_o")]
+        public List<IsvSubMerchantOrderVO> SubMerchantOrders { get; set; }
 
         /// <summary>
         /// 待办url

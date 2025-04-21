@@ -18,7 +18,7 @@ namespace Aop.Api.Domain
         public List<SkuPriceDeatail> SkusData { get; set; }
 
         /// <summary>
-        /// 门店编码
+        /// OMS厂商门店编码, 录入门店时填写的值, 厂商自行维护
         /// </summary>
         [XmlElement("store_code")]
         public string StoreCode { get; set; }

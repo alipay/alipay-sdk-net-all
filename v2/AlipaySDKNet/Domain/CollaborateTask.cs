@@ -108,6 +108,12 @@ namespace Aop.Api.Domain
         public string ProvinceName { get; set; }
 
         /// <summary>
+        /// 线上强leads签约了必有
+        /// </summary>
+        [XmlElement("sales_order_id")]
+        public string SalesOrderId { get; set; }
+
+        /// <summary>
         /// 任务拉取时该字段无返回内容，确认领取时会返回该字段。
         /// </summary>
         [XmlElement("shop_name")]
@@ -119,6 +125,12 @@ namespace Aop.Api.Domain
         [XmlArray("smid_list")]
         [XmlArrayItem("string")]
         public List<string> SmidList { get; set; }
+
+        /// <summary>
+        /// 线上有参与活动的必有
+        /// </summary>
+        [XmlElement("solution_id")]
+        public string SolutionId { get; set; }
 
         /// <summary>
         /// 任务编号

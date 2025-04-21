@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AuditMemo { get; set; }
 
         /// <summary>
-        /// 待提交/审核中/审核通过/审核拒绝
+        /// 待提交/审核中/审核通过/审核拒绝/待处理
         /// </summary>
         [XmlElement("audit_status")]
         public string AuditStatus { get; set; }

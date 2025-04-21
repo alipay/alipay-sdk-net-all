@@ -22,10 +22,22 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 预期分账时间，java时间戳，13位长度，精确到秒
+        /// </summary>
+        [XmlElement("expect_royalty_time")]
+        public string ExpectRoyaltyTime { get; set; }
+
+        /// <summary>
         /// 交易组件的业务订单Id
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
+
+        /// <summary>
+        /// 分账利息，单位：元。
+        /// </summary>
+        [XmlElement("royalty_interest_price")]
+        public string RoyaltyInterestPrice { get; set; }
 
         /// <summary>
         /// 代表第几阶段的还款计划，要配合royalty_stage锁定第几期还款计划
@@ -38,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("royalty_price")]
         public string RoyaltyPrice { get; set; }
+
+        /// <summary>
+        /// 分账本金，单位：元。
+        /// </summary>
+        [XmlElement("royalty_principal_price")]
+        public string RoyaltyPrincipalPrice { get; set; }
 
         /// <summary>
         /// 代表某一个阶段的第几期的还款计划，要结合royalty_period进行锁定某一期计划

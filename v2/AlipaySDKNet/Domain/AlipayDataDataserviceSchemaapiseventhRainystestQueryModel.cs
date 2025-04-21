@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("demo")]
         public string Demo { get; set; }
+
+        /// <summary>
+        /// 测试
+        /// </summary>
+        [XmlElement("demo_price")]
+        public string DemoPrice { get; set; }
     }
 }

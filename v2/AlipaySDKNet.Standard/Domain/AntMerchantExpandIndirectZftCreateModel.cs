@@ -128,7 +128,7 @@ namespace Aop.Api.Domain
         public string LegalCertFrontImage { get; set; }
 
         /// <summary>
-        /// 法人身份证号。非个人商户类型必填
+        /// 法人身份证号。
         /// </summary>
         [XmlElement("legal_cert_no")]
         public string LegalCertNo { get; set; }
@@ -140,7 +140,7 @@ namespace Aop.Api.Domain
         public string LegalCertType { get; set; }
 
         /// <summary>
-        /// 法人名称。非个人商户类型必填
+        /// 法人名称。
         /// </summary>
         [XmlElement("legal_name")]
         public string LegalName { get; set; }

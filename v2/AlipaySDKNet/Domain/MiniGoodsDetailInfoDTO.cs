@@ -90,6 +90,18 @@ namespace Aop.Api.Domain
         public string ItemDiscount { get; set; }
 
         /// <summary>
+        /// 商品成色
+        /// </summary>
+        [XmlElement("item_fineness")]
+        public string ItemFineness { get; set; }
+
+        /// <summary>
+        /// 成色等级，成色为二手时需传入此字段
+        /// </summary>
+        [XmlElement("item_fineness_grade")]
+        public string ItemFinenessGrade { get; set; }
+
+        /// <summary>
         /// 商品分期信息
         /// </summary>
         [XmlElement("item_installment_info")]

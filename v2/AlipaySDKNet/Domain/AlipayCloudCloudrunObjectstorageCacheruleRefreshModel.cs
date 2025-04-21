@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCloudCloudrunObjectstorageCacheruleRefreshModel : AopObject
     {
         /// <summary>
+        /// 内部使用，uiam角色扮演token
+        /// </summary>
+        [XmlElement("assume_token")]
+        public string AssumeToken { get; set; }
+
+        /// <summary>
         /// 文件/目录路径
         /// </summary>
         [XmlElement("data")]

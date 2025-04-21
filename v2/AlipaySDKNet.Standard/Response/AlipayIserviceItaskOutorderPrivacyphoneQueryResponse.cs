@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("privacy_bind_phone")]
         public string PrivacyBindPhone { get; set; }
+
+        /// <summary>
+        /// 用户手机类型
+        /// </summary>
+        [XmlElement("user_phone_type")]
+        public string UserPhoneType { get; set; }
     }
 }

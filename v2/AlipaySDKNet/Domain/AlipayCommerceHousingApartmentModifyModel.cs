@@ -119,13 +119,13 @@ namespace Aop.Api.Domain
         public string HouseStructure { get; set; }
 
         /// <summary>
-        /// 房源类型
+        /// (该字段已删除)
         /// </summary>
         [XmlElement("housing_type")]
         public string HousingType { get; set; }
 
         /// <summary>
-        /// 政府申请页地址：HTTP:// 
+        /// (该字段已删除)
         /// </summary>
         [XmlElement("intentional_application")]
         public string IntentionalApplication { get; set; }
@@ -162,7 +162,7 @@ namespace Aop.Api.Domain
         public string PropertyTitle { get; set; }
 
         /// <summary>
-        /// 户籍等，描述文字 
+        /// (该字段已删除)
         /// </summary>
         [XmlElement("qualification_requirements")]
         public string QualificationRequirements { get; set; }
