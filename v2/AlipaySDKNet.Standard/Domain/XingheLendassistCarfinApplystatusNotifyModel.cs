@@ -108,6 +108,12 @@ namespace Aop.Api.Domain
         public string LoanTermUnit { get; set; }
 
         /// <summary>
+        /// 是否合并初终审
+        /// </summary>
+        [XmlElement("merged_approval_flag")]
+        public bool MergedApprovalFlag { get; set; }
+
+        /// <summary>
         /// 抵押率（授信金额/车辆估值金额），单位为小数
         /// </summary>
         [XmlElement("mortgage_rate")]
@@ -160,6 +166,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 是否需要补充信息或流水
+        /// </summary>
+        [XmlElement("supplement_info_flag")]
+        public bool SupplementInfoFlag { get; set; }
+
+        /// <summary>
+        /// 用户类别
+        /// </summary>
+        [XmlElement("user_tier")]
+        public string UserTier { get; set; }
 
         /// <summary>
         /// 车辆估值金额，单位分

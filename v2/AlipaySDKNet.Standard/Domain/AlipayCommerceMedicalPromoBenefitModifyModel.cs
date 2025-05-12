@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string CategoryName { get; set; }
 
         /// <summary>
+        /// 动作
+        /// </summary>
+        [XmlElement("item_action")]
+        public string ItemAction { get; set; }
+
+        /// <summary>
         /// 淘宝商品id
         /// </summary>
         [XmlElement("item_id")]

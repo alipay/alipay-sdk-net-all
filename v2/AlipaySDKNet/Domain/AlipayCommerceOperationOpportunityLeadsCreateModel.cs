@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public BsContactPersonInfo ContactPersonInfo { get; set; }
 
         /// <summary>
+        /// 支付宝侧铺设设备类型
+        /// </summary>
+        [XmlElement("device_type")]
+        public string DeviceType { get; set; }
+
+        /// <summary>
         /// 补充材料 ● 意愿确认单
         /// </summary>
         [XmlElement("extra_credentials")]

@@ -34,5 +34,11 @@ namespace Aop.Api.Response
         [XmlArray("risk_infos")]
         [XmlArrayItem("rent_risk_info_v_o")]
         public List<RentRiskInfoVO> RiskInfos { get; set; }
+
+        /// <summary>
+        /// 对赌实验命中的分组
+        /// </summary>
+        [XmlElement("vam_group")]
+        public string VamGroup { get; set; }
     }
 }

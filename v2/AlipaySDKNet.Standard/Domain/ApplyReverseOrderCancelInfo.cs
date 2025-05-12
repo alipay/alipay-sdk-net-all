@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class ApplyReverseOrderCancelInfo : AopObject
     {
         /// <summary>
+        /// 指令id列表
+        /// </summary>
+        [XmlArray("assign_item_id")]
+        [XmlArrayItem("string")]
+        public List<string> AssignItemId { get; set; }
+
+        /// <summary>
         /// 逆向配送指令集合
         /// </summary>
         [XmlArray("assign_item_ids")]

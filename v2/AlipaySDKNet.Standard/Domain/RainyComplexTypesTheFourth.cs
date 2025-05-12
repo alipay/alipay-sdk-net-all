@@ -23,14 +23,14 @@ namespace Aop.Api.Domain
         public string IdtypeUserId { get; set; }
 
         /// <summary>
-        /// null
+        /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlArray("json_open_id_json")]
         [XmlArrayItem("string")]
         public List<string> JsonOpenIdJson { get; set; }
 
         /// <summary>
-        /// null
+        /// 支付宝用户的userId。
         /// </summary>
         [XmlArray("json_user_id")]
         [XmlArrayItem("string")]

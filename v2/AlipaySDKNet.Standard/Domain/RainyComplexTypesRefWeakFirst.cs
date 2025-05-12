@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class RainyComplexTypesRefWeakFirst : AopObject
     {
+        /// <summary>
+        /// 布尔
+        /// </summary>
+        [XmlArray("schema_param_boolean")]
+        [XmlArrayItem("boolean")]
+        public List<bool> SchemaParamBoolean { get; set; }
+
         /// <summary>
         /// 数字类型
         /// </summary>

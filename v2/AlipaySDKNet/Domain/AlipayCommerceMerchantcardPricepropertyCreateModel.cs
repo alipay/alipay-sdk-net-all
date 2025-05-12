@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string CardType { get; set; }
 
         /// <summary>
+        /// 是否立即扣款，如果传入为true，则下单时则立即扣款。否则不立即扣款。
+        /// </summary>
+        [XmlElement("charge_now")]
+        public bool ChargeNow { get; set; }
+
+        /// <summary>
         /// 原价，单位：分
         /// </summary>
         [XmlElement("original_price")]

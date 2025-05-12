@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string MobileNumber { get; set; }
 
         /// <summary>
+        /// 表示当前请求类型：用户缴费或用户在岗亭前缴费准备离场状态
+        /// </summary>
+        [XmlElement("node_type")]
+        public string NodeType { get; set; }
+
+        /// <summary>
         /// 蚂蚁会员统一ID对应的归属应用appid
         /// </summary>
         [XmlElement("open_appid")]
@@ -64,6 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 停车岗亭前订单创建时间，格式"YYYY-MM-DD HH:mm:ss"，24小时制，请保证服务器时间准确，创建时不应晚于当前网络时间
+        /// </summary>
+        [XmlElement("order_create_time")]
+        public string OrderCreateTime { get; set; }
 
         /// <summary>
         /// 服务商停车费支付订单号；

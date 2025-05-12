@@ -71,6 +71,18 @@ namespace Aop.Api.Response
         public bool ContinueAsk { get; set; }
 
         /// <summary>
+        /// 自定义卡片配置信息
+        /// </summary>
+        [XmlElement("custom_card_body")]
+        public string CustomCardBody { get; set; }
+
+        /// <summary>
+        /// 自定卡片ID
+        /// </summary>
+        [XmlElement("custom_card_id")]
+        public string CustomCardId { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("support_qa_mode")]

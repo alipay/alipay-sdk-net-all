@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CardTemplateId { get; set; }
 
         /// <summary>
+        /// 线上售卖开关，可选。传入01表示将卡推广至线上售卖。传入02标识关闭线上售卖。
+        /// </summary>
+        [XmlElement("online_sale_switch")]
+        public string OnlineSaleSwitch { get; set; }
+
+        /// <summary>
         /// 售卖信息
         /// </summary>
         [XmlElement("sale_info")]

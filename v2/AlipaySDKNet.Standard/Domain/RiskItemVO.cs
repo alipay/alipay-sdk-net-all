@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string RiskCode { get; set; }
 
         /// <summary>
-        /// 【订单维度共租风险】low / mid / high； 【小程序交易健康度】数值范围 0.0 ~ 5.0 ，值越大越健康； 【小程序维度共租风险（已废弃）】P1 ~ P6，数字越大风险越高；
+        /// 【订单维度共租风险】low / mid / high； 【小程序交易健康度】数值范围 0.0 ~ 5.0 ，值越大越健康；
         /// </summary>
         [XmlElement("risk_level")]
         public string RiskLevel { get; set; }

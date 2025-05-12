@@ -53,6 +53,12 @@ namespace Aop.Api.Domain
         public string ContactName { get; set; }
 
         /// <summary>
+        /// 如果为空默认是N7，商户需要铺设设备的类型
+        /// </summary>
+        [XmlElement("device_type")]
+        public string DeviceType { get; set; }
+
+        /// <summary>
         /// 任务分配的时间。
         /// </summary>
         [XmlElement("dispatched_time")]
@@ -139,7 +145,7 @@ namespace Aop.Api.Domain
         public string TaskNo { get; set; }
 
         /// <summary>
-        /// 任务标签，如：强意愿用户
+        /// WILLNGNESS-强意愿用户（多次提报） NOT_SIGNING-未签约 HAS_SIGNED-已签约 STOCK-存量摸排
         /// </summary>
         [XmlArray("task_tags")]
         [XmlArrayItem("string")]

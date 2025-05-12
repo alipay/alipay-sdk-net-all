@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public long VolumeWidth { get; set; }
 
         /// <summary>
-        /// 保留三位小数，单位g/ml
+        /// 保留三位小数，单位g/ml 当前字段已废弃(和其他接口定义保持一致, 使用字符串类型. 此字段不再返回值, 请使用weight_v_2)
         /// </summary>
         [XmlElement("weight")]
         public long Weight { get; set; }
@@ -80,5 +80,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("weight_unit")]
         public string WeightUnit { get; set; }
+
+        /// <summary>
+        /// 重量信息, 内容需要为纯数字, 精度支持小数点后三位. 重量单位为weight_unit字段的值
+        /// </summary>
+        [XmlElement("weight_v_2")]
+        public string WeightV2 { get; set; }
     }
 }

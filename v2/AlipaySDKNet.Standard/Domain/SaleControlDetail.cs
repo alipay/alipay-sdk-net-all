@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class SaleControlDetail : AopObject
     {
         /// <summary>
-        /// 售卖策略为SPEC_CROWD时传入该值，null标识无限制，枚举类型 ● STUDENT：学生 ● MEMBER：会员
+        /// 售卖策略为SPEC_CROWD时传入该值，null标识无限制，枚举类型 1. STUDENT：学生 2. SILVER：银发人群（老人） 3. MEMBER：会员
         /// </summary>
         [XmlElement("crowd_type")]
         public string CrowdType { get; set; }

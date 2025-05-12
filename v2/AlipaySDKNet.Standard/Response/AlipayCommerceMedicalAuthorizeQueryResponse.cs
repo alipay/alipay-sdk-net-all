@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public bool InstitutionEcodeStatus { get; set; }
 
         /// <summary>
+        /// 结果页地址
+        /// </summary>
+        [XmlElement("page_result_url")]
+        public string PageResultUrl { get; set; }
+
+        /// <summary>
         /// ecode_open:开通一码付
         /// </summary>
         [XmlElement("page_suggestion")]

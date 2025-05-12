@@ -84,6 +84,12 @@ namespace Aop.Api.Domain
         public string PayChannel { get; set; }
 
         /// <summary>
+        /// 支付产品码
+        /// </summary>
+        [XmlElement("pay_product_code")]
+        public string PayProductCode { get; set; }
+
+        /// <summary>
         /// 支付时间，特指发生在支付宝端外支付的时间，分期单同步模式且非支付宝渠道支付，请传入该参数
         /// </summary>
         [XmlElement("pay_time")]

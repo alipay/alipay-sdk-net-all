@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class RecycleSkuCustomPriceDTO : AopObject
     {
         /// <summary>
-        /// 价格类型
+        /// 自定义价格类型
         /// </summary>
         [XmlElement("price_code")]
         public string PriceCode { get; set; }

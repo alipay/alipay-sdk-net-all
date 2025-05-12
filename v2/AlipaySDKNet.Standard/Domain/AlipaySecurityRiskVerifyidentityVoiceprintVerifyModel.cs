@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// 设备名称
+        /// </summary>
+        [XmlElement("device_name")]
+        public string DeviceName { get; set; }
+
+        /// <summary>
         /// 流程类型
         /// </summary>
         [XmlElement("flow_data")]

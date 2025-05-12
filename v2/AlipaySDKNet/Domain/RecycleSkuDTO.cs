@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// null
+        /// 商品款式的描述，例如一款商品有3个属性进行选择，那么款式列表里需要包含3个属性的具体选项，与回收的问券和选项一致
         /// </summary>
         [XmlArray("sku_attrs")]
         [XmlArrayItem("recycle_sku_attr_d_t_o")]

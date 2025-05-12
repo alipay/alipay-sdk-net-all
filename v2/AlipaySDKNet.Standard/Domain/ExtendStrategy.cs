@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public ParticipantForm ParticipantForm { get; set; }
 
         /// <summary>
-        /// 提现策略，当前支持同人账户提现（策略key: withdrawToSamePersonAccount）
+        /// 提现策略。 withdrawToSamePersonAccount仅支持支付宝已注销，但是场景钱包仍有余额的情况； withdrawToSameCidAccount支持同CID，且双方支付宝未注销时，场景钱包提现到同CID支付宝余额。
         /// </summary>
         [XmlElement("strategy")]
         public string Strategy { get; set; }

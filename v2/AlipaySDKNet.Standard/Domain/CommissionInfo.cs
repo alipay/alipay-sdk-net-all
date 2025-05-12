@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class CommissionInfo : AopObject
     {
         /// <summary>
-        /// null
+        /// 角色列表
         /// </summary>
         [XmlArray("commission_role_list")]
         [XmlArrayItem("commission_role_info")]

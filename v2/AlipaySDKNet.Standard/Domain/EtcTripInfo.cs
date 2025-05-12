@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class EtcTripInfo : AopObject
     {
         /// <summary>
+        /// 0:未垫资,1:已垫资,2:垫资已还款
+        /// </summary>
+        [XmlElement("advance_status")]
+        public string AdvanceStatus { get; set; }
+
+        /// <summary>
         /// 1、收费站出口名称 2、格式为省份+收费站名，比如“黑龙江瓦盆窑西站”
         /// </summary>
         [XmlElement("end_station_name")]
@@ -50,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }
+
+        /// <summary>
+        /// 行程扣款状态： "S":"支付成功"; "F":"支付失败";"R":"已退款";"PR", "部分退款";
+        /// </summary>
+        [XmlElement("trade_status")]
+        public string TradeStatus { get; set; }
 
         /// <summary>
         /// 行程结束时间

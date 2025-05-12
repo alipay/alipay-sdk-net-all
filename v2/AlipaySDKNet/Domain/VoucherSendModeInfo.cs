@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class VoucherSendModeInfo : AopObject
     {
+        /// <summary>
+        /// 推广渠道列表
+        /// </summary>
+        [XmlArray("delivery_channel_list")]
+        [XmlArrayItem("string")]
+        public List<string> DeliveryChannelList { get; set; }
+
         /// <summary>
         /// 券包信息。
         /// </summary>

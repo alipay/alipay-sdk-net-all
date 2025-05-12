@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string CheckInEndTime { get; set; }
 
         /// <summary>
+        /// 签到结果
+        /// </summary>
+        [XmlElement("check_in_result")]
+        public string CheckInResult { get; set; }
+
+        /// <summary>
         /// 签到开始时间
         /// </summary>
         [XmlElement("check_in_start_time")]
@@ -64,5 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
+
+        /// <summary>
+        /// 签到记录所属位置Id列表
+        /// </summary>
+        [XmlArray("place_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> PlaceIdList { get; set; }
     }
 }

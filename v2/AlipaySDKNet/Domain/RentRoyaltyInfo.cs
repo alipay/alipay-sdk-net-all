@@ -23,6 +23,18 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 提前结清标志
+        /// </summary>
+        [XmlElement("early_settle")]
+        public bool EarlySettle { get; set; }
+
+        /// <summary>
+        /// 提前结清金额,单位：元
+        /// </summary>
+        [XmlElement("early_settle_price")]
+        public string EarlySettlePrice { get; set; }
+
+        /// <summary>
         /// 资方appid
         /// </summary>
         [XmlElement("invest_app_id")]

@@ -18,6 +18,13 @@ namespace Aop.Api.Domain
         public List<BFActivityFundInfo> ActivityFundInfos { get; set; }
 
         /// <summary>
+        /// 多主体信息，指定渠道贴息，相较于activityFundInfos补充资产和机构信息
+        /// </summary>
+        [XmlArray("activity_fund_infos_new")]
+        [XmlArrayItem("b_f_activity_fund_info_new")]
+        public List<BFActivityFundInfoNew> ActivityFundInfosNew { get; set; }
+
+        /// <summary>
         /// 活动模板ID
         /// </summary>
         [XmlElement("aggr_id")]
@@ -76,6 +83,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_id")]
         public string ProductId { get; set; }
+
+        /// <summary>
+        /// 活动类型
+        /// </summary>
+        [XmlElement("product_type")]
+        public string ProductType { get; set; }
 
         /// <summary>
         /// 活动费率的版本信息

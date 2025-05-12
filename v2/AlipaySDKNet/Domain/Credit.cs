@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<CreditPricing> CreditPricingList { get; set; }
 
         /// <summary>
+        /// 是否默认授信
+        /// </summary>
+        [XmlElement("default_credit")]
+        public bool DefaultCredit { get; set; }
+
+        /// <summary>
         /// 授信过期时间，格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("expire_time")]

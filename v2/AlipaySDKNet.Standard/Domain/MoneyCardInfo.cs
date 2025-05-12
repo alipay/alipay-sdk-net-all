@@ -66,7 +66,7 @@ namespace Aop.Api.Domain
         public long StockNum { get; set; }
 
         /// <summary>
-        /// 是否支持用户主动退卡。true表示用户可在有效期内主动退卡，无需商家操作，false表示商家可在后台订单管理中手动操作退卡，用户可电话联系商家协商退款
+        /// 是否支持用户主动退卡。true表示用户可在有效期内主动退卡，无需商家操作，false表示商家可在后台订单管理中手动操作退卡，用户可电话联系商家协商退款 当前字段已废弃(因是否支持退卡新增参数值，该字段已废弃，请使用最外层的support_withdraw字段)
         /// </summary>
         [XmlElement("support_withdraw")]
         public bool SupportWithdraw { get; set; }

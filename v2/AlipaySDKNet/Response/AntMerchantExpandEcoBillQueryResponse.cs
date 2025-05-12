@@ -22,5 +22,11 @@ namespace Aop.Api.Response
         [XmlArray("eco_bill_details")]
         [XmlArrayItem("asset_eco_bill_detail")]
         public List<AssetEcoBillDetail> EcoBillDetails { get; set; }
+
+        /// <summary>
+        /// 是否还有下一页
+        /// </summary>
+        [XmlElement("has_next_page")]
+        public bool HasNextPage { get; set; }
     }
 }

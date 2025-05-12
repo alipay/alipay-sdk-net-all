@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public AmpeDeviceInfo DeviceInfo { get; set; }
 
         /// <summary>
-        /// 支付宝用户openId
+        /// 支付宝用户openId 当前字段已废弃(通过accessToken获取userId)
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ReqNo { get; set; }
 
         /// <summary>
-        /// 支付宝用户userId
+        /// 支付宝用户userId 当前字段已废弃(通过accessToken获取userId)
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

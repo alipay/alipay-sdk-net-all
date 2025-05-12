@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceTransportChargerPrivatebindSyncModel : AopObject
     {
         /// <summary>
-        /// true: 绑定，false：解绑
+        /// true: 绑定，false：解绑；支持user_id和phone_num绑定，支持user_id解绑
         /// </summary>
         [XmlElement("bind_status")]
         public bool BindStatus { get; set; }
@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string OperateTime { get; set; }
 
         /// <summary>
-        /// 商家用户ID
+        /// 商家侧的用户ID
         /// </summary>
         [XmlElement("operator_uid")]
         public string OperatorUid { get; set; }
 
         /// <summary>
-        /// 用户手机号码，该绑定方式需联系业务配置，仅针对部分场景。
+        /// 用户的支付宝登陆手机号。通过手机号绑定，仅针对部分场景，需联系业务或技术支持配置开放。
         /// </summary>
         [XmlElement("phone_num")]
         public string PhoneNum { get; set; }

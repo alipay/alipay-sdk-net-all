@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string InquiryPrice { get; set; }
 
         /// <summary>
+        /// 问诊服务状态
+        /// </summary>
+        [XmlElement("inquiry_status")]
+        public string InquiryStatus { get; set; }
+
+        /// <summary>
         /// 问诊类型
         /// </summary>
         [XmlElement("inquiry_type")]

@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string EpName { get; set; }
 
         /// <summary>
+        /// 在cpa模式的预算下，创建投放计划，可以对需要用户进行授权上传的信息进行配置（如身份证照片等），用户上传后，客户可通过CPA接口进行查询
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 法人身份证号
         /// </summary>
         [XmlElement("legal_person_cert_no")]

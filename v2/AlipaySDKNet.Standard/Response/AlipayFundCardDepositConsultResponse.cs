@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string ExpiredTime { get; set; }
 
         /// <summary>
+        /// 制卡单id
+        /// </summary>
+        [XmlElement("generate_card_order_id")]
+        public string GenerateCardOrderId { get; set; }
+
+        /// <summary>
         /// 卡片状态
         /// </summary>
         [XmlElement("status")]

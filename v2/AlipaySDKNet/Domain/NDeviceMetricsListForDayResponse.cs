@@ -164,5 +164,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }
+
+        /// <summary>
+        /// 碰一下用户数，单位为人，日维度已去重
+        /// </summary>
+        [XmlElement("trd_nfc_device_usercnt")]
+        public string TrdNfcDeviceUsercnt { get; set; }
     }
 }

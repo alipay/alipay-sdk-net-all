@@ -91,6 +91,12 @@ namespace Aop.Api.Domain
         public string OwnPayAmt { get; set; }
 
         /// <summary>
+        /// 通过换码拿到的自费付款码
+        /// </summary>
+        [XmlElement("pay_code")]
+        public string PayCode { get; set; }
+
+        /// <summary>
         /// 就医所在地城市编码，需传入国家标准行政区划编码
         /// </summary>
         [XmlElement("payment_city_code")]

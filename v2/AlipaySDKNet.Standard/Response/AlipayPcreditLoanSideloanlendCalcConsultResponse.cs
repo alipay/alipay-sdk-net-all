@@ -11,6 +11,13 @@ namespace Aop.Api.Response
     public class AlipayPcreditLoanSideloanlendCalcConsultResponse : AopResponse
     {
         /// <summary>
+        /// 本次试算使用的营销卡券列表
+        /// </summary>
+        [XmlArray("coupon_code_list")]
+        [XmlArrayItem("string")]
+        public List<string> CouponCodeList { get; set; }
+
+        /// <summary>
         /// 授信总额度，单位元，保留两位小数
         /// </summary>
         [XmlElement("credit_quota")]

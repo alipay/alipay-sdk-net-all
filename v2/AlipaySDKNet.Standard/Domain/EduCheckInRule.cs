@@ -54,7 +54,7 @@ namespace Aop.Api.Domain
         public List<EduPlaceInfo> PlaceList { get; set; }
 
         /// <summary>
-        /// 签到半径
+        /// 签到半径，单位米
         /// </summary>
         [XmlElement("radius")]
         public long Radius { get; set; }

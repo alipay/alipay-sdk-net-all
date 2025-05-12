@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class RecycleSkuPriceExtDTO : AopObject
     {
         /// <summary>
-        /// null
+        /// 价格的个性化扩展列表
         /// </summary>
         [XmlArray("custom_prices")]
         [XmlArrayItem("recycle_sku_custom_price_d_t_o")]

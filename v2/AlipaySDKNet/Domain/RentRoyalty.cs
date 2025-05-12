@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string Period { get; set; }
 
         /// <summary>
+        /// 应还日（资方
+        /// </summary>
+        [XmlElement("repay_time")]
+        public string RepayTime { get; set; }
+
+        /// <summary>
         /// 改账中的分账金额，单位：元，精确到小数点后两位
         /// </summary>
         [XmlElement("royalty_after_price")]

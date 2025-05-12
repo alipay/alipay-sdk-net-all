@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("apply_loan_amount")]
         public string ApplyLoanAmount { get; set; }
+
+        /// <summary>
+        /// 营销卡券Code列表，传权益实例ID列表，试算接口从列表中可选的卡券进行试算
+        /// </summary>
+        [XmlArray("coupon_code_list")]
+        [XmlArrayItem("string")]
+        public List<string> CouponCodeList { get; set; }
 
         /// <summary>
         /// 待补充

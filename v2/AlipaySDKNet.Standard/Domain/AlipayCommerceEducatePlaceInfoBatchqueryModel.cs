@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
+        /// 父级楼栋ID。
+        /// </summary>
+        [XmlElement("parent_id")]
+        public string ParentId { get; set; }
+
+        /// <summary>
         /// 位置标签
         /// </summary>
         [XmlElement("place_label")]

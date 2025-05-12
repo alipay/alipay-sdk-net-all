@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string Period { get; set; }
 
         /// <summary>
+        /// 发货的区域编码
+        /// </summary>
+        [XmlElement("send_division_code")]
+        public string SendDivisionCode { get; set; }
+
+        /// <summary>
         /// 快递单号
         /// </summary>
         [XmlElement("waybill_id")]

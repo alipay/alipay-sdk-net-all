@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string ExpectRoyaltyTime { get; set; }
 
         /// <summary>
+        /// 应还日（资方）
+        /// </summary>
+        [XmlElement("repay_time")]
+        public string RepayTime { get; set; }
+
+        /// <summary>
+        /// 分账利息，币种：人民币。
+        /// </summary>
+        [XmlElement("royalty_interest_price")]
+        public string RoyaltyInterestPrice { get; set; }
+
+        /// <summary>
         /// 分账期数
         /// </summary>
         [XmlElement("royalty_period")]
@@ -32,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("royalty_price")]
         public string RoyaltyPrice { get; set; }
+
+        /// <summary>
+        /// 分账本金，币种:人民币
+        /// </summary>
+        [XmlElement("royalty_principal_price")]
+        public string RoyaltyPrincipalPrice { get; set; }
 
         /// <summary>
         /// 分账类型

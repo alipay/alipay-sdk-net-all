@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -86,5 +87,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("valid_date")]
         public string ValidDate { get; set; }
+
+        /// <summary>
+        /// 需要家宴的用户主体信息
+        /// </summary>
+        [XmlArray("validate_user_principal_list")]
+        [XmlArrayItem("validate_user_principal")]
+        public List<ValidateUserPrincipal> ValidateUserPrincipalList { get; set; }
     }
 }

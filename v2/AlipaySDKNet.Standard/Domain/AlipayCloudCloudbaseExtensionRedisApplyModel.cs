@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// 实例规格，每个数据节点的内存大小  - 1GB  - 4GB  - 128MB
+        /// 实例规格，每个数据节点的内存大小  - 1GB  - 4GB  - 8GB  - 16GB  - 128MB
         /// </summary>
         [XmlElement("instance_spec")]
         public string InstanceSpec { get; set; }

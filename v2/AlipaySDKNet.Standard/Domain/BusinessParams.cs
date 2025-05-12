@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string EnterprisePayInfo { get; set; }
 
         /// <summary>
+        /// 收银台强制密码核身参数，实际收银侧会根据这个参数为true并结合业务场景来判断是否密码核身
+        /// </summary>
+        [XmlElement("force_pwd")]
+        public string ForcePwd { get; set; }
+
+        /// <summary>
         /// 商户传入的交易税费。需要落地风控使用
         /// </summary>
         [XmlElement("good_taxes")]

@@ -11,6 +11,18 @@ namespace Aop.Api.Domain
     public class CardOrderInfo : AopObject
     {
         /// <summary>
+        /// 卡关联的最新一笔售后单编号
+        /// </summary>
+        [XmlElement("aftersales_id")]
+        public string AftersalesId { get; set; }
+
+        /// <summary>
+        /// 售后单状态
+        /// </summary>
+        [XmlElement("aftersales_status")]
+        public string AftersalesStatus { get; set; }
+
+        /// <summary>
         /// 售卖订单的余额面额，单位分
         /// </summary>
         [XmlElement("available_amount")]
@@ -41,7 +53,7 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
-        /// （1）TIMES_CARD / PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY_INDIRECT： init、available、used_up、closing、closed、pause （2）AXF_MONEY_CARD：available、invalid、paid、refund、timeout_closed、used_up （3）AXF_MONEY_TIME_CARD：wait_pay、paid、available、timeout_closed、used_up、closed、closing、expired
+        /// （1）TIMES_CARD / PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY / AXF_MERCHANT_PERIOD_PAY_INDIRECT： init、available、used_up、closing、closed、pause （2）AXF_MONEY_CARD：available、invalid、paid、refund、timeout_closed、used_up、closing（3）AXF_MONEY_TIME_CARD：wait_pay、paid、available、timeout_closed、used_up、closed、closing、expired
         /// </summary>
         [XmlElement("card_status")]
         public string CardStatus { get; set; }

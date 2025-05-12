@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalAuthorizeQueryModel : AopObject
     {
         /// <summary>
+        /// 设备SN
+        /// </summary>
+        [XmlElement("device_sn")]
+        public string DeviceSn { get; set; }
+
+        /// <summary>
         /// 用户在IOT设备上刷脸获得的ftoken
         /// </summary>
         [XmlElement("ftoken")]

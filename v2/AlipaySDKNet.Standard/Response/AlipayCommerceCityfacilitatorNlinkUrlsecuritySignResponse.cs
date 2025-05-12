@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceCityfacilitatorNlinkUrlsecuritySignResponse : AopResponse
     {
         /// <summary>
+        /// 设备biztid
+        /// </summary>
+        [XmlElement("biztid")]
+        public string Biztid { get; set; }
+
+        /// <summary>
         /// 耗时单位毫秒
         /// </summary>
         [XmlElement("cost_time")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public long Amount { get; set; }
 
         /// <summary>
+        /// 是否默认定价
+        /// </summary>
+        [XmlElement("default_credit_pricing")]
+        public bool DefaultCreditPricing { get; set; }
+
+        /// <summary>
         /// 年利率，如为8%，则为0.08
         /// </summary>
         [XmlElement("int_rate")]

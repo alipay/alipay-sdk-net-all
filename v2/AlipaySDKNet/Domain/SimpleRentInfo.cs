@@ -53,6 +53,18 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
+        /// 放款金额，单位：元
+        /// </summary>
+        [XmlElement("loan_price")]
+        public string LoanPrice { get; set; }
+
+        /// <summary>
+        /// 放款时间
+        /// </summary>
+        [XmlElement("loan_time")]
+        public string LoanTime { get; set; }
+
+        /// <summary>
         /// 商户订单号
         /// </summary>
         [XmlElement("out_order_id")]

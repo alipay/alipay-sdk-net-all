@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string AmpeProductId { get; set; }
 
         /// <summary>
+        /// AMPE运行时的设备信息，仅用于云卡片场景
+        /// </summary>
+        [XmlElement("device_info")]
+        public AmpeDeviceInfo DeviceInfo { get; set; }
+
+        /// <summary>
         /// 支付宝的意图code，由支付宝定义，意图列表可从参见BD提供的意图code列表，不定期更新。接入方可以根据支付宝提供的语料对自由的模型进行训练标注，经过自有模型意图分析后，在调用本接口时传入，这样会提高query的识别准确度，并提高响应速度。如果不传入，支付宝将根据自己的模型对query进行意图识别。目前可选值为:SMART_ORDER（智能点单）
         /// </summary>
         [XmlElement("intent_code")]

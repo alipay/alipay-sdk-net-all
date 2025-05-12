@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string EcoCode { get; set; }
 
         /// <summary>
+        /// 当前页码
+        /// </summary>
+        [XmlElement("page_num")]
+        public long PageNum { get; set; }
+
+        /// <summary>
         /// 生态供应商店铺编号
         /// </summary>
         [XmlElement("shop_code")]

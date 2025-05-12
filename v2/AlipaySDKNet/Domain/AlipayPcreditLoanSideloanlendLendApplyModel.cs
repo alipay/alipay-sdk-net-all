@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bank_card_id")]
         public string BankCardId { get; set; }
+
+        /// <summary>
+        /// 营销卡券Code列表,不能超过100个
+        /// </summary>
+        [XmlArray("coupon_code_list")]
+        [XmlArrayItem("string")]
+        public List<string> CouponCodeList { get; set; }
 
         /// <summary>
         /// 扩展字段JSON String
@@ -68,6 +76,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 优惠利息，单位元，保留2位小数
+        /// </summary>
+        [XmlElement("promotion_amount")]
+        public string PromotionAmount { get; set; }
 
         /// <summary>
         /// 固定还款日

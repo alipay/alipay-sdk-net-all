@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ApproveComment { get; set; }
 
         /// <summary>
+        /// 渠道描述
+        /// </summary>
+        [XmlElement("channel_desc")]
+        public string ChannelDesc { get; set; }
+
+        /// <summary>
         /// 医患沟通详情链接
         /// </summary>
         [XmlElement("chat_url")]

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public long OriginalPrice { get; set; }
 
         /// <summary>
-        /// 期数
+        /// 期数，根据cycle_type确定单位，如周，天，月
         /// </summary>
         [XmlElement("period")]
         public long Period { get; set; }

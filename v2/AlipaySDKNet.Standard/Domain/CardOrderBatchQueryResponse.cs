@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class CardOrderBatchQueryResponse : AopObject
     {
         /// <summary>
+        /// 卡关联的最新的售后单编号
+        /// </summary>
+        [XmlElement("aftersales_id")]
+        public string AftersalesId { get; set; }
+
+        /// <summary>
+        /// 用于描述订单关联的售后单的最新状态
+        /// </summary>
+        [XmlElement("aftersales_status")]
+        public string AftersalesStatus { get; set; }
+
+        /// <summary>
         /// 售卖订单的余额面额，单位分
         /// </summary>
         [XmlElement("available_amount")]

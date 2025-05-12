@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class MerchantCardTemplate : AopObject
     {
         /// <summary>
+        /// 违约金信息
+        /// </summary>
+        [XmlElement("break_costs_info")]
+        public BreakCostsInfo BreakCostsInfo { get; set; }
+
+        /// <summary>
         /// 卡营销优惠信息
         /// </summary>
         [XmlArray("card_promo_list")]
@@ -100,6 +106,12 @@ namespace Aop.Api.Domain
         public string MsgAppId { get; set; }
 
         /// <summary>
+        /// 线上售卖表示。01标识已开启线上售卖。02标识未开启线上售卖.
+        /// </summary>
+        [XmlElement("online_sale_switch")]
+        public string OnlineSaleSwitch { get; set; }
+
+        /// <summary>
         /// 外部卡ID
         /// </summary>
         [XmlElement("out_card_id")]
@@ -123,6 +135,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("settle_type")]
         public string SettleType { get; set; }
+
+        /// <summary>
+        /// 是否支持用户主动退卡
+        /// </summary>
+        [XmlElement("support_withdraw")]
+        public string SupportWithdraw { get; set; }
 
         /// <summary>
         /// 次卡信息

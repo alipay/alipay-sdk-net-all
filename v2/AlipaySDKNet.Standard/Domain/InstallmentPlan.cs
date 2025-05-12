@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Principal { get; set; }
 
         /// <summary>
+        /// 优惠利息，单位元，保留两位小数
+        /// </summary>
+        [XmlElement("promotion_amount")]
+        public string PromotionAmount { get; set; }
+
+        /// <summary>
         /// 总金额，单位元，保留两位小数
         /// </summary>
         [XmlElement("total_amount")]

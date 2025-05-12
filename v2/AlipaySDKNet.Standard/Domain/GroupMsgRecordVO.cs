@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// null
+        /// 群组id列表
         /// </summary>
         [XmlArray("group_ids")]
         [XmlArrayItem("string")]

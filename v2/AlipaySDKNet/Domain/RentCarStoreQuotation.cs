@@ -59,6 +59,12 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
+        /// 当报价是小伤免赔的报价时，该字段表示报价加购小伤免赔的额外费用，单位分
+        /// </summary>
+        [XmlElement("minor_injury_exemption_amount")]
+        public long MinorInjuryExemptionAmount { get; set; }
+
+        /// <summary>
         /// 支心租一口价优惠金额，单位分
         /// </summary>
         [XmlElement("one_price_discount")]

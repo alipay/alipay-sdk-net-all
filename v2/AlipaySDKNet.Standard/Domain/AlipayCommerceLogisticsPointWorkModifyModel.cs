@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string NfcStatus { get; set; }
 
         /// <summary>
+        /// 变更前的铺设点ID
+        /// </summary>
+        [XmlElement("old_place_id")]
+        public string OldPlaceId { get; set; }
+
+        /// <summary>
         /// 变更前的点位ID
         /// </summary>
         [XmlElement("old_point_id")]
@@ -64,7 +70,7 @@ namespace Aop.Api.Domain
         public string OperatorType { get; set; }
 
         /// <summary>
-        /// 变更前的铺设点ID
+        /// 变更前的铺设点ID 当前字段已废弃(该参数拼写错误，实际应该是old_place_id，请用old_place_id传参。)
         /// </summary>
         [XmlElement("out_place_id")]
         public string OutPlaceId { get; set; }
