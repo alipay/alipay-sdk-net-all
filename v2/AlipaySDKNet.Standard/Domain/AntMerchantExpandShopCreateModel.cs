@@ -137,6 +137,13 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
+        /// 门店营业时间，支持一周7天，支持1天内多时间段
+        /// </summary>
+        [XmlArray("new_business_time")]
+        [XmlArrayItem("complex_business_time")]
+        public List<ComplexBusinessTime> NewBusinessTime { get; set; }
+
+        /// <summary>
         /// 需传入<a href="https://opendocs.alipay.com/apis/api_1/ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。
         /// </summary>
         [XmlArray("out_door_images")]

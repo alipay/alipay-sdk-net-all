@@ -22,6 +22,12 @@ namespace Aop.Api.Response
         public string AlipayDesensitizeLoginId { get; set; }
 
         /// <summary>
+        /// 冷静期类型，LONG-长，SHORT-短，NONE-无
+        /// </summary>
+        [XmlElement("cool_off_type")]
+        public string CoolOffType { get; set; }
+
+        /// <summary>
         /// 扩展信息
         /// </summary>
         [XmlElement("extension")]

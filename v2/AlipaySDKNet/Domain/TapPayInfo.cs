@@ -14,5 +14,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payment_medium_type")]
         public string PaymentMediumType { get; set; }
+
+        /// <summary>
+        /// 碰一下支付的碰一下共减优惠金额
+        /// </summary>
+        [XmlElement("total_discount_amount")]
+        public string TotalDiscountAmount { get; set; }
+
+        /// <summary>
+        /// 碰一下支付的碰一下共减金额展示名称
+        /// </summary>
+        [XmlElement("total_discount_name")]
+        public string TotalDiscountName { get; set; }
     }
 }

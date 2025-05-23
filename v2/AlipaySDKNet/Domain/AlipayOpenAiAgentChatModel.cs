@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string InitiatorType { get; set; }
 
         /// <summary>
-        /// 会话ID，用来串联同一次会话的多轮对话。如果调用方不传入则由平台生成。会在请求结果中返回。 默认情况下session 超过30分钟自动超时
+        /// 会话ID，用来串联同一次会话的多轮对话。如果调用方不传入则由平台生成。会在请求结果中返回。 默认情况下session 超过6个小时自动关闭
         /// </summary>
         [XmlElement("session_id")]
         public string SessionId { get; set; }

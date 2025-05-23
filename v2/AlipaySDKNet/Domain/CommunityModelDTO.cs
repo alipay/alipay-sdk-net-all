@@ -154,7 +154,7 @@ namespace Aop.Api.Domain
         public string ExternalId { get; set; }
 
         /// <summary>
-        /// 容积率
+        /// 容积率(百分比)
         /// </summary>
         [XmlElement("floor_area_ratio")]
         public string FloorAreaRatio { get; set; }

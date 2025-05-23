@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BusvcId { get; set; }
 
         /// <summary>
+        /// 工作台用户id
+        /// </summary>
+        [XmlElement("clv_user_id")]
+        public string ClvUserId { get; set; }
+
+        /// <summary>
         /// 权限码
         /// </summary>
         [XmlArray("codes")]
@@ -30,9 +36,27 @@ namespace Aop.Api.Domain
         public List<string> Codes { get; set; }
 
         /// <summary>
+        /// 租户id
+        /// </summary>
+        [XmlElement("tnt_inst_id")]
+        public string TntInstId { get; set; }
+
+        /// <summary>
+        /// 人力资源id
+        /// </summary>
+        [XmlElement("ur_id")]
+        public string UrId { get; set; }
+
+        /// <summary>
         /// 鉴权uri
         /// </summary>
         [XmlElement("uri")]
         public string Uri { get; set; }
+
+        /// <summary>
+        /// 星云用户id
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

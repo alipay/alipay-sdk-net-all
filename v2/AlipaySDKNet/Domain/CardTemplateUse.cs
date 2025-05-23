@@ -42,10 +42,17 @@ namespace Aop.Api.Domain
         public string ReservationUrl { get; set; }
 
         /// <summary>
-        /// 周期卡是否全部门店
+        /// 是否全部门店
         /// </summary>
         [XmlElement("show_shop")]
         public string ShowShop { get; set; }
+
+        /// <summary>
+        /// 对顾客展示的门店，传入门店id。
+        /// </summary>
+        [XmlArray("show_shop_ids")]
+        [XmlArrayItem("string")]
+        public List<string> ShowShopIds { get; set; }
 
         /// <summary>
         /// 可用次数或期数

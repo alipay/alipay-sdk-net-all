@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Code { get; set; }
 
         /// <summary>
-        /// 枚举类型(二手房/租房/独栋/小区)
+        /// 枚举类型(二手房/租房/独栋/小区/楼盘)
         /// </summary>
         [XmlElement("enum_type")]
         public string EnumType { get; set; }

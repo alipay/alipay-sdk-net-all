@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,5 +21,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bundle_id")]
         public string BundleId { get; set; }
+
+        /// <summary>
+        /// 智能体投放端列表
+        /// </summary>
+        [XmlArray("bundle_ids")]
+        [XmlArrayItem("string")]
+        public List<string> BundleIds { get; set; }
     }
 }

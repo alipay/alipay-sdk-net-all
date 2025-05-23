@@ -58,6 +58,24 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
+        /// 还款利息，单位：元
+        /// </summary>
+        [XmlElement("repayment_interest_price")]
+        public string RepaymentInterestPrice { get; set; }
+
+        /// <summary>
+        /// 还款本金，单位：元
+        /// </summary>
+        [XmlElement("repayment_principal_price")]
+        public string RepaymentPrincipalPrice { get; set; }
+
+        /// <summary>
+        /// 还款总金额,单位：元
+        /// </summary>
+        [XmlElement("repayment_total_price")]
+        public string RepaymentTotalPrice { get; set; }
+
+        /// <summary>
         /// 代表第几阶段的还款计划，要配合royalty_stage锁定第几期还款计划，royalty_type=BUYOUT的情况下，可不填
         /// </summary>
         [XmlElement("royalty_period")]

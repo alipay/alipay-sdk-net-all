@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayOpenAiAgentChatRequest : IAopRequest<AlipayOpenAiAgentChatResponse>
     {
         /// <summary>
-        /// 智能应用对话服务
+        /// 该能力为智能体开放对话服务，开发者可基于O站开放生态，通过智能体编排能力快速搭建智能体服务能力并且可通过以智能体应用为主体发起openapi调用。 
         /// </summary>
         public string BizContent { get; set; }
 

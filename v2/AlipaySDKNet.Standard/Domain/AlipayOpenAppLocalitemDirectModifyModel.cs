@@ -37,6 +37,12 @@ namespace Aop.Api.Domain
         public string OutItemId { get; set; }
 
         /// <summary>
+        /// 商品的售卖状态，有值时更新。
+        /// </summary>
+        [XmlElement("sale_status")]
+        public string SaleStatus { get; set; }
+
+        /// <summary>
         /// sku数组
         /// </summary>
         [XmlArray("skus")]

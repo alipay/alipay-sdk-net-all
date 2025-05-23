@@ -41,6 +41,12 @@ namespace Aop.Api.Response
         public string GmtSuccess { get; set; }
 
         /// <summary>
+        /// 订单的备注字段,用于发票的备注显示
+        /// </summary>
+        [XmlElement("memo")]
+        public string Memo { get; set; }
+
+        /// <summary>
         /// 订单金额（元，两位小数）
         /// </summary>
         [XmlElement("order_amount")]

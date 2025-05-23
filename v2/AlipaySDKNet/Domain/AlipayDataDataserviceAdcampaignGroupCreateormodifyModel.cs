@@ -125,7 +125,7 @@ namespace Aop.Api.Domain
         public long GroupId { get; set; }
 
         /// <summary>
-        /// 单元继承Id同主体鉴权
+        /// 同营销目标和同主体下的单元ID
         /// </summary>
         [XmlElement("group_inherit")]
         public long GroupInherit { get; set; }

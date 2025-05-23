@@ -149,13 +149,13 @@ namespace Aop.Api.Domain
         public string HouseStructure { get; set; }
 
         /// <summary>
-        /// (该字段已删除)
+        /// (该字段已删除) 当前字段已废弃(业务删除,后续不再需要)
         /// </summary>
         [XmlElement("housing_type")]
         public string HousingType { get; set; }
 
         /// <summary>
-        /// (该字段已删除)
+        /// (该字段已删除) 当前字段已废弃(业务删除,后续不再需要)
         /// </summary>
         [XmlElement("intentional_application")]
         public string IntentionalApplication { get; set; }
@@ -171,6 +171,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("other")]
         public string Other { get; set; }
+
+        /// <summary>
+        /// 小程序详情跳转地址，例如：page=pages/af-home/index?myKey%3DmyValue
+        /// </summary>
+        [XmlElement("page")]
+        public string Page { get; set; }
 
         /// <summary>
         /// 户型介绍
@@ -198,7 +204,7 @@ namespace Aop.Api.Domain
         public string ProvinceCode { get; set; }
 
         /// <summary>
-        /// (该字段已删除)
+        /// (该字段已删除) 当前字段已废弃(业务删除,后续不再需要)
         /// </summary>
         [XmlElement("qualification_requirements")]
         public string QualificationRequirements { get; set; }

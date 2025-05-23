@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class RentInfoDTO : AopObject
     {
         /// <summary>
-        /// 续租总期数，1-12的整数，包含边界值
+        /// 续租总期数，1-12的整数，包含边界值。度量单位：期
         /// </summary>
         [XmlElement("addon_period_num")]
         public string AddonPeriodNum { get; set; }

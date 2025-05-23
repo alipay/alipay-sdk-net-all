@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ItemList { get; set; }
 
         /// <summary>
+        /// 渠道信息
+        /// </summary>
+        [XmlElement("kz_info")]
+        public string KzInfo { get; set; }
+
+        /// <summary>
         /// lm订单id
         /// </summary>
         [XmlElement("lm_order_id")]

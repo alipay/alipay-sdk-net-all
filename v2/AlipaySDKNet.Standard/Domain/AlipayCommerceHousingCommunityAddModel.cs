@@ -25,6 +25,12 @@ namespace Aop.Api.Domain
         public List<string> ApartmentServices { get; set; }
 
         /// <summary>
+        /// 10000元/平米
+        /// </summary>
+        [XmlElement("avg_price")]
+        public string AvgPrice { get; set; }
+
+        /// <summary>
         /// 商圈
         /// </summary>
         [XmlElement("business_district")]
@@ -142,7 +148,7 @@ namespace Aop.Api.Domain
         public string ExternalId { get; set; }
 
         /// <summary>
-        /// 容积率
+        /// 容积率/百分比
         /// </summary>
         [XmlElement("floor_area_ratio")]
         public string FloorAreaRatio { get; set; }

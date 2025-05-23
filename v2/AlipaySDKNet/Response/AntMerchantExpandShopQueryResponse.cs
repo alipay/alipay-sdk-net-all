@@ -130,6 +130,13 @@ namespace Aop.Api.Response
         public string Memo { get; set; }
 
         /// <summary>
+        /// 门店营业时间，支持一周7天，支持1天内多时间段
+        /// </summary>
+        [XmlArray("new_business_time")]
+        [XmlArrayItem("complex_business_time")]
+        public List<ComplexBusinessTime> NewBusinessTime { get; set; }
+
+        /// <summary>
         /// 新版门店类目标准二级类目code
         /// </summary>
         [XmlElement("new_shop_category")]

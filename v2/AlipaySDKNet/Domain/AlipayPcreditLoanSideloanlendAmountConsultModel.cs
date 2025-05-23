@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 凌晨批量调度的时候会在扩展字段中传入查询场景
+        /// </summary>
+        [XmlElement("extension")]
+        public string Extension { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

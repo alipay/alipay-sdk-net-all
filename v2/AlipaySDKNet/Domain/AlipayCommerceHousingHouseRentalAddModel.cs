@@ -225,6 +225,12 @@ namespace Aop.Api.Domain
         public string OwnerName { get; set; }
 
         /// <summary>
+        /// 小程序跳转详情页地址，例如：page=pages/af-home/index?myKey%3DmyValue
+        /// </summary>
+        [XmlElement("page")]
+        public string Page { get; set; }
+
+        /// <summary>
         /// 车位
         /// </summary>
         [XmlElement("parking_space")]

@@ -206,6 +206,12 @@ namespace Aop.Api.Domain
         public string OwnerName { get; set; }
 
         /// <summary>
+        /// 小程序跳转页面，例如：page=pages/af-home/index?myKey%3DmyValue
+        /// </summary>
+        [XmlElement("page")]
+        public string Page { get; set; }
+
+        /// <summary>
         /// 车位，是否带车位，列举：是，否
         /// </summary>
         [XmlElement("parking_space")]

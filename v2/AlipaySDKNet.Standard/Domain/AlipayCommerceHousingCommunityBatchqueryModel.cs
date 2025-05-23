@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CityCode { get; set; }
 
         /// <summary>
+        /// 小区名称
+        /// </summary>
+        [XmlElement("community_name")]
+        public string CommunityName { get; set; }
+
+        /// <summary>
         /// 区县编码
         /// </summary>
         [XmlElement("district_code")]

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Phone { get; set; }
 
         /// <summary>
+        /// 浙江省杭州市地区编码
+        /// </summary>
+        [XmlElement("region_code")]
+        public string RegionCode { get; set; }
+
+        /// <summary>
         /// 传入外部商户的名称即可，记录发起认证的用户来自哪一个外部商户
         /// </summary>
         [XmlElement("source")]

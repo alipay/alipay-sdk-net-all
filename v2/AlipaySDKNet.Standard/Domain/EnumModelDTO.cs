@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class EnumModelDTO : AopObject
     {
         /// <summary>
-        /// 单个值，非固定枚举值
+        /// 一类枚举的值，非小范围枚举类型，无法用枚举全列举出来
         /// </summary>
         [XmlElement("enum_code")]
         public string EnumCode { get; set; }

@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string BizAgreementNo { get; set; }
 
         /// <summary>
+        /// 订单状态
+        /// </summary>
+        [XmlElement("order_status")]
+        public string OrderStatus { get; set; }
+
+        /// <summary>
         /// 签约状态的描述。
         /// </summary>
         [XmlElement("sign_status")]

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -52,10 +53,17 @@ namespace Aop.Api.Domain
         public string Platform { get; set; }
 
         /// <summary>
-        /// 商品的售卖信息列表
+        /// 商品的售卖信息列表 当前字段已废弃(使用新字段替换老字段结构)
         /// </summary>
         [XmlElement("sku_info_list")]
         public OmsItemSkuInfoReq SkuInfoList { get; set; }
+
+        /// <summary>
+        /// 商品信息中sku售卖相关信息
+        /// </summary>
+        [XmlArray("sku_list_v_2")]
+        [XmlArrayItem("oms_item_sku_info_req")]
+        public List<OmsItemSkuInfoReq> SkuListV2 { get; set; }
 
         /// <summary>
         /// 枚举值：0-上架，-1-下架

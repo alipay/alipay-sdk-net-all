@@ -66,7 +66,7 @@ namespace Aop.Api.Domain
         public string ImageMaterialId { get; set; }
 
         /// <summary>
-        /// 品牌编号；商品品牌信息https://xfpzl.yuque.com/dgw58m/apg2ie/qlqvdv0dhsbldyhv#kIy4；参考此文档传入品牌编号
+        /// 品牌编号；商品品牌信息参<a href="https://xfpzl.yuque.com/dgw58m/apg2ie/qlqvdv0dhsbldyhv#kIy4">https://xfpzl.yuque.com/dgw58m/apg2ie/qlqvdv0dhsbldyhv#kIy4 </a>考此文档传入品牌编号
         /// </summary>
         [XmlElement("item_brand")]
         public string ItemBrand { get; set; }

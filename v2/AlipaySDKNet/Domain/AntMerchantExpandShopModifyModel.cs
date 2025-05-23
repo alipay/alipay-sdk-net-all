@@ -136,6 +136,13 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
+        /// 门店营业时间，支持一周7天，支持1天内多时间段
+        /// </summary>
+        [XmlArray("new_business_time")]
+        [XmlArrayItem("complex_business_time")]
+        public List<ComplexBusinessTime> NewBusinessTime { get; set; }
+
+        /// <summary>
         /// 门头照，其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。若无需更新本信息项，可以不填写。若填写则会整体覆盖原有的门头照列表
         /// </summary>
         [XmlArray("out_door_images")]

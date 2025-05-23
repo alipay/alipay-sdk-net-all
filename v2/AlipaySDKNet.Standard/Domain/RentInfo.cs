@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public string EarlySettlePrice { get; set; }
 
         /// <summary>
+        /// 提前结清时间，具体到天
+        /// </summary>
+        [XmlElement("early_settle_time")]
+        public string EarlySettleTime { get; set; }
+
+        /// <summary>
         /// 租赁订单的结束时间
         /// </summary>
         [XmlElement("end_time")]
@@ -57,6 +63,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invest_app_id")]
         public string InvestAppId { get; set; }
+
+        /// <summary>
+        /// 资方pid
+        /// </summary>
+        [XmlElement("invest_pid")]
+        public string InvestPid { get; set; }
 
         /// <summary>
         /// 订单信息，包含订单信息、商品信息、收货人信息以及价格信息

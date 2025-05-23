@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string CompanySupplierId { get; set; }
 
         /// <summary>
+        /// 订单的备注字段,用于发票的备注显示
+        /// </summary>
+        [XmlElement("memo")]
+        public string Memo { get; set; }
+
+        /// <summary>
         /// 订单商品明细
         /// </summary>
         [XmlArray("order_item_list")]

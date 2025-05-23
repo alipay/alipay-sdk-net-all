@@ -36,7 +36,7 @@ namespace Aop.Api.Response
         public string AdName { get; set; }
 
         /// <summary>
-        /// 创意点击检测地址
+        /// 创意点击监测地址
         /// </summary>
         [XmlElement("click_track_url")]
         public string ClickTrackUrl { get; set; }
@@ -60,7 +60,7 @@ namespace Aop.Api.Response
         public string GroupName { get; set; }
 
         /// <summary>
-        /// 创意曝光检测地址
+        /// 创意曝光监测地址
         /// </summary>
         [XmlElement("impression_track_url")]
         public string ImpressionTrackUrl { get; set; }
@@ -107,6 +107,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }
+
+        /// <summary>
+        /// true打开/false关闭
+        /// </summary>
+        [XmlElement("smart_switch")]
+        public bool SmartSwitch { get; set; }
 
         /// <summary>
         /// 创意状态

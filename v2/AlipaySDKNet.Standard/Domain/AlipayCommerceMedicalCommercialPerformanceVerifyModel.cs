@@ -94,7 +94,7 @@ namespace Aop.Api.Domain
         public VerifyLogisticsDetail VerifyLogisticsDetail { get; set; }
 
         /// <summary>
-        /// 确认场景类型，枚举值： 用户核销，USER_PERFORMANCE。 取消预约，RESERVE_CANCEL。 修改预约，RESERVE_MODIFY。 上传报告，REPORT_UPLOAD。 商家确认发货，DELIVERY。 用户已收到货，DELIVERIED。 商家收到退货或退款确认，REFUND_CONFIRM。 该字段为空值默认动作为用户核销 ：USER_PERFORMANCE。
+        /// 确认场景类型，枚举值： 用户核销，USER_PERFORMANCE。 取消预约，RESERVE_CANCEL。 修改预约，RESERVE_MODIFY。 上传报告，REPORT_UPLOAD。 商家确认发货，DELIVERY。 用户已收到货，DELIVERIED。 商家收到退货或退款确认，REFUND_CONFIRM。 商家待确认预约，WAIT_CONFIRM_RESERVE。 该字段为空值默认动作为用户核销 ：USER_PERFORMANCE。
         /// </summary>
         [XmlElement("verify_type")]
         public string VerifyType { get; set; }

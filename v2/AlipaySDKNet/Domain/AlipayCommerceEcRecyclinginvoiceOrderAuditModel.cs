@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcRecyclinginvoiceOrderAuditModel : AopObject
     {
         /// <summary>
+        /// 订单的备注字段,用于发票的备注显示
+        /// </summary>
+        [XmlElement("memo")]
+        public string Memo { get; set; }
+
+        /// <summary>
         /// 订单号，调用反向订单创建接口时返回，也可以通过反向订单查询接口通过外部订单号查询
         /// </summary>
         [XmlElement("order_id")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceAdcampaignAppBatchqueryModel : AopObject
     {
         /// <summary>
-        /// 创意动作类型
+        /// 选择的创意交互动作类型需从接口获取，该字段类型从前置模版配置接口获取当前创意可提交的落地页类型 alipay.data.dataservice.adcampaign.actionandtemplate.query
         /// </summary>
         [XmlElement("action_type")]
         public string ActionType { get; set; }

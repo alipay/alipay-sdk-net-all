@@ -36,6 +36,13 @@ namespace Aop.Api.Domain
         public string ContactPhone { get; set; }
 
         /// <summary>
+        /// 门店营业时间，支持一周7天，支持1天内多时间段
+        /// </summary>
+        [XmlArray("new_business_time")]
+        [XmlArrayItem("complex_business_time")]
+        public List<ComplexBusinessTime> NewBusinessTime { get; set; }
+
+        /// <summary>
         /// 新版门店类目标准二级类目code.类目标准及与原shop_category映射关系参见<a href="https://gw.alipayobjects.com/os/bmw-prod/4b3f82df-e53e-4b84-bc41-fe025101e726.xlsx">文档</a>
         /// </summary>
         [XmlElement("new_shop_category")]

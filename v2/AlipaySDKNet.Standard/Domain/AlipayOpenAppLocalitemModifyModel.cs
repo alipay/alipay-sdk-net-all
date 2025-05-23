@@ -62,7 +62,7 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 商品模版类型：1. 团购 2. 代金券 3. 次卡 4. 日历房
+        /// 商品类型
         /// </summary>
         [XmlElement("item_type")]
         public string ItemType { get; set; }
@@ -84,6 +84,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("path")]
         public string Path { get; set; }
+
+        /// <summary>
+        /// 商品的售卖状态，默认：可售卖(AVAILABLE)。
+        /// </summary>
+        [XmlElement("sale_status")]
+        public string SaleStatus { get; set; }
 
         /// <summary>
         /// sku数组
