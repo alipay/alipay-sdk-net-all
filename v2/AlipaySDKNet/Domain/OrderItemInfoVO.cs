@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class OrderItemInfoVO : AopObject
     {
         /// <summary>
+        /// 商品69码
+        /// </summary>
+        [XmlElement("bar_code")]
+        public string BarCode { get; set; }
+
+        /// <summary>
         /// 商品类目ID
         /// </summary>
         [XmlElement("category_id")]

@@ -11,7 +11,19 @@ namespace Aop.Api.Response
     public class AlipayCommerceEcApprovalQueryResponse : AopResponse
     {
         /// <summary>
-        /// 审批结果，可选值： APPLYING-申请中；VALID-已生效；CANCELLED-已取消；REJECTED-已驳回
+        /// 申请单的结束时间
+        /// </summary>
+        [XmlElement("apply_finish_time")]
+        public string ApplyFinishTime { get; set; }
+
+        /// <summary>
+        /// 申请单的开始时间
+        /// </summary>
+        [XmlElement("apply_start_time")]
+        public string ApplyStartTime { get; set; }
+
+        /// <summary>
+        /// 审批结果（审批单状态）
         /// </summary>
         [XmlElement("approval_result")]
         public string ApprovalResult { get; set; }
@@ -31,6 +43,12 @@ namespace Aop.Api.Response
         public List<ApprovalTripDTO> ApprovalTripDtoList { get; set; }
 
         /// <summary>
+        /// 申请单类型
+        /// </summary>
+        [XmlElement("category")]
+        public string Category { get; set; }
+
+        /// <summary>
         /// 员工id
         /// </summary>
         [XmlElement("employee_id")]
@@ -43,6 +61,18 @@ namespace Aop.Api.Response
         public string EnterpriseId { get; set; }
 
         /// <summary>
+        /// 二级场景，更多枚举请见：
+        /// </summary>
+        [XmlElement("expense_type_sub_category")]
+        public string ExpenseTypeSubCategory { get; set; }
+
+        /// <summary>
+        /// 支付类型
+        /// </summary>
+        [XmlElement("payment_type")]
+        public string PaymentType { get; set; }
+
+        /// <summary>
         /// 外部平台审批单id
         /// </summary>
         [XmlElement("platform_approval_id")]
@@ -53,5 +83,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("purpose")]
         public string Purpose { get; set; }
+
+        /// <summary>
+        /// 一级场景，更多枚举请见：
+        /// </summary>
+        [XmlElement("scene")]
+        public string Scene { get; set; }
     }
 }

@@ -11,6 +11,24 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcApprovalModifyModel : AopObject
     {
         /// <summary>
+        /// 申请结束时间
+        /// </summary>
+        [XmlElement("apply_finish_time")]
+        public string ApplyFinishTime { get; set; }
+
+        /// <summary>
+        /// 申请单开始时间
+        /// </summary>
+        [XmlElement("apply_start_time")]
+        public string ApplyStartTime { get; set; }
+
+        /// <summary>
+        /// 申请单状态
+        /// </summary>
+        [XmlElement("approval_status")]
+        public string ApprovalStatus { get; set; }
+
+        /// <summary>
         /// 企业id
         /// </summary>
         [XmlElement("enterprise_id")]
@@ -43,7 +61,7 @@ namespace Aop.Api.Domain
         public List<ApprovalTravelerDTO> TravelerList { get; set; }
 
         /// <summary>
-        /// 行程信息列表
+        /// 行程信息列表（传入覆盖修改）
         /// </summary>
         [XmlArray("trip_info_list")]
         [XmlArrayItem("approval_trip_d_t_o")]

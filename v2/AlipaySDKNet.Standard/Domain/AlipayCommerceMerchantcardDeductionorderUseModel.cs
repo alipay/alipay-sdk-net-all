@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
+        /// 推荐填入，一般填写核销原因
+        /// </summary>
+        [XmlElement("use_desc")]
+        public string UseDesc { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

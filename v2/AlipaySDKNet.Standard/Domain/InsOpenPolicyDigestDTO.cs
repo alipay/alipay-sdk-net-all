@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("inst_policy_no")]
         public string InstPolicyNo { get; set; }
+
+        /// <summary>
+        /// 保单关联的责任摘要信息
+        /// </summary>
+        [XmlArray("liabilities")]
+        [XmlArrayItem("ins_open_policy_liability_digest_d_t_o")]
+        public List<InsOpenPolicyLiabilityDigestDTO> Liabilities { get; set; }
 
         /// <summary>
         /// 保单生效时间

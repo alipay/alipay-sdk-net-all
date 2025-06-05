@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ExternalShopId { get; set; }
 
         /// <summary>
+        /// 服务商密钥
+        /// </summary>
+        [XmlElement("isv_access_token")]
+        public string IsvAccessToken { get; set; }
+
+        /// <summary>
         /// 小写字母串_服务商PID
         /// </summary>
         [XmlElement("isv_device_version_tag")]

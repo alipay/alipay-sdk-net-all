@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string PrimaryClass { get; set; }
 
         /// <summary>
-        /// 一级分类名称code
+        /// 一级分类名称
         /// </summary>
         [XmlElement("primary_class_code")]
         public string PrimaryClassCode { get; set; }

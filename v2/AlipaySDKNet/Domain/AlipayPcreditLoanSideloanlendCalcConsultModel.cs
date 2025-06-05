@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string ApplyLoanAmount { get; set; }
 
         /// <summary>
+        /// 端上请求时间（时间戳，精确到毫秒）
+        /// </summary>
+        [XmlElement("calc_time")]
+        public string CalcTime { get; set; }
+
+        /// <summary>
         /// 营销卡券Code列表，传权益实例ID列表，试算接口从列表中可选的卡券进行试算
         /// </summary>
         [XmlArray("coupon_code_list")]

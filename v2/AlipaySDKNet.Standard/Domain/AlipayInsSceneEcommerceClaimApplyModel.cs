@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public EcomItemDTO Item { get; set; }
 
         /// <summary>
+        /// 蚂蚁保系统生成的责任编号
+        /// </summary>
+        [XmlElement("liability_no")]
+        public string LiabilityNo { get; set; }
+
+        /// <summary>
         /// 订单
         /// </summary>
         [XmlElement("order_dto")]

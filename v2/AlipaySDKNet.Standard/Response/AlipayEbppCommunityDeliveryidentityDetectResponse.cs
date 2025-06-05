@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("detect_result")]
         public bool DetectResult { get; set; }
+
+        /// <summary>
+        /// 骑手所属平台
+        /// </summary>
+        [XmlElement("platform")]
+        public string Platform { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 完全引用
+        /// null
         /// </summary>
         [XmlArray("weak_ref")]
         [XmlArrayItem("rainy_complex_types_the_fourth")]

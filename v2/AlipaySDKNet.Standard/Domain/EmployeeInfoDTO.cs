@@ -91,6 +91,12 @@ namespace Aop.Api.Domain
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// 员工收票邮箱
+        /// </summary>
+        [XmlElement("invoice_email")]
+        public string InvoiceEmail { get; set; }
+
+        /// <summary>
         /// 员工是否人脸在库
         /// </summary>
         [XmlElement("iot_face_status")]

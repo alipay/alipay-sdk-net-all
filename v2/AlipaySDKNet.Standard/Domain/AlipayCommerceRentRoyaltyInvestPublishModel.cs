@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string InvestId { get; set; }
 
         /// <summary>
+        /// 默认不用填写，需要走提前结清，则需要传入EARLY_SETTLE
+        /// </summary>
+        [XmlElement("operate_type")]
+        public string OperateType { get; set; }
+
+        /// <summary>
         /// 交易组件的业务订单Id
         /// </summary>
         [XmlElement("order_id")]
@@ -46,5 +52,11 @@ namespace Aop.Api.Domain
         [XmlArray("royalty_publish_detail")]
         [XmlArrayItem("rent_royalty_publish_detail_request")]
         public List<RentRoyaltyPublishDetailRequest> RoyaltyPublishDetail { get; set; }
+
+        /// <summary>
+        /// 汇总分账金额，单元为元；operate_type=EARLY_SETTLE的情况下，必填。
+        /// </summary>
+        [XmlElement("total_royalty_price")]
+        public string TotalRoyaltyPrice { get; set; }
     }
 }

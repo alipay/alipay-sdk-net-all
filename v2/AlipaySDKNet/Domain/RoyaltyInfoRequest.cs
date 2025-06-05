@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string RepayTime { get; set; }
 
         /// <summary>
+        /// 计息时间，到天维度即可，例如2025-05-12
+        /// </summary>
+        [XmlElement("royalty_interest_date")]
+        public string RoyaltyInterestDate { get; set; }
+
+        /// <summary>
         /// 分账利息，币种：人民币。
         /// </summary>
         [XmlElement("royalty_interest_price")]

@@ -42,6 +42,13 @@ namespace Aop.Api.Domain
         public GroupMessageVO MsgData { get; set; }
 
         /// <summary>
+        /// 群发复合消息内容模型
+        /// </summary>
+        [XmlArray("msg_data_list")]
+        [XmlArrayItem("group_message_v_o")]
+        public List<GroupMessageVO> MsgDataList { get; set; }
+
+        /// <summary>
         /// 该参数用于修改时传入创建得到的msgId字段，创建时无需传入，且只有定时发送消息在发送之前可以进行修改，立即发送不支持修改
         /// </summary>
         [XmlElement("msg_id")]

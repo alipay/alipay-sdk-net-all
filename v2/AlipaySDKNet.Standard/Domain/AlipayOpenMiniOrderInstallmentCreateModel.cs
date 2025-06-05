@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderInstallmentCreateModel : AopObject
     {
         /// <summary>
-        /// 续租场景分期数，当分期类型为RELET时，该字段必填
+        /// 续租场景分期数，当分期类型为RELET时，该字段必填，单位：期。
         /// </summary>
         [XmlElement("addon_period_num")]
         public long AddonPeriodNum { get; set; }
@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public string InstallmentNoType { get; set; }
 
         /// <summary>
-        /// 当分期类型为RENT，       期数为1时，分期金额=首期金额；       期数非1时，分期金额=每期金额，如果有尾期金额，最后一期分期金额=尾期金额；   当分期类型为BUYOUT，分期金额=买断价 buyout_price；    当分期类型为RELET，分期金额即续租金额；
+        /// 当分期类型为RENT，       期数为1时，分期金额=首期金额；       期数非1时，分期金额=每期金额，如果有尾期金额，最后一期分期金额=尾期金额；   当分期类型为BUYOUT，分期金额=买断价 buyout_price；    当分期类型为RELET，分期金额即续租金额； 单位：元。
         /// </summary>
         [XmlElement("installment_price")]
         public string InstallmentPrice { get; set; }

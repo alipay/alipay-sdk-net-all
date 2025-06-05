@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<BusinessItem> BusinessIsv { get; set; }
 
         /// <summary>
+        /// 停车场充电车位数 单位:个
+        /// </summary>
+        [XmlElement("charge_sum_space")]
+        public string ChargeSumSpace { get; set; }
+
+        /// <summary>
         /// 停车场详细计费规则详细说明
         /// </summary>
         [XmlArray("charging_rule")]
@@ -221,6 +227,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payment_mode")]
         public string PaymentMode { get; set; }
+
+        /// <summary>
+        /// 剩余车位数 单位：个
+        /// </summary>
+        [XmlElement("remain_space")]
+        public string RemainSpace { get; set; }
 
         /// <summary>
         /// 提供用户查看停车状态、缴费功能

@@ -42,10 +42,16 @@ namespace Aop.Api.Domain
         public string MsgId { get; set; }
 
         /// <summary>
-        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"。
+        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"，商品消息:GOODS。当发送消息类型为复合消息（send_batch为true时），返回结果为几种消息类型的组合，示例:["APP", "COUPON", "IMAGE"]
         /// </summary>
         [XmlElement("msg_type")]
         public string MsgType { get; set; }
+
+        /// <summary>
+        /// 描述发送的是单条消息还是复合消息
+        /// </summary>
+        [XmlElement("send_batch")]
+        public bool SendBatch { get; set; }
 
         /// <summary>
         /// 发送状态， 2:待发送,  3: 发送中,  4: 发送成功,  5: 发送失败,  6: 部分失败,  7: 重发,  8: 待撤回,  9: 撤回中,  10: 已撤回,  12: 部分撤回,  13: 部分成功,  14: 部分删除,  15: 部分发送中

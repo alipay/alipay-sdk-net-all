@@ -11,11 +11,23 @@ namespace Aop.Api.Domain
     public class AlipayOpenMiniOrderAftersaleCreateModel : AopObject
     {
         /// <summary>
+        /// 售后原因code
+        /// </summary>
+        [XmlElement("aftersale_reason_code")]
+        public string AftersaleReasonCode { get; set; }
+
+        /// <summary>
         /// 退换商品的信息
         /// </summary>
         [XmlArray("item_infos")]
         [XmlArrayItem("aftersale_item_info_d_t_o")]
         public List<AftersaleItemInfoDTO> ItemInfos { get; set; }
+
+        /// <summary>
+        /// 地址信息
+        /// </summary>
+        [XmlElement("merchant_address_info")]
+        public AftersaleAddressInfoDTO MerchantAddressInfo { get; set; }
 
         /// <summary>
         /// 用户的openId

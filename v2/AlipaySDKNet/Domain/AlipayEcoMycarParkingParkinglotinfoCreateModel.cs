@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<BusinessItem> BusinessIsv { get; set; }
 
         /// <summary>
+        /// 停车场充电车位数 单位:个
+        /// </summary>
+        [XmlElement("charge_sum_space")]
+        public string ChargeSumSpace { get; set; }
+
+        /// <summary>
         /// 停车场详细计费规则
         /// </summary>
         [XmlArray("charging_rule")]
@@ -163,7 +169,7 @@ namespace Aop.Api.Domain
         public string ParkingFeeDescriptionImg { get; set; }
 
         /// <summary>
-        /// 停车场类型，1为居民小区、2为商圈停车场（购物中心商业广场商场等）、3为路侧停车、4为公园景点（景点乐园公园老街古镇等）、5为商务楼宇（酒店写字楼商务楼园区等）、6为其他、7为交通枢纽（机场火车站汽车站码头港口等）、8为市政设施（体育场博物图书馆医院学校等）
+        /// 停车场类型，COMMUNITY为居民小区、BUSINESS_AREA为商圈停车场（购物中心商业广场商场等）、ROADSIDE为路侧停车、PARK_SCENIC为公园景点（景点乐园公园老街古镇等）、OFFICE_BUILDING为商务楼宇（酒店写字楼商务楼园区等）、OTHER为其他、TRANSPORTATION为交通枢纽（机场火车站汽车站码头港口等）、PUBLIC_FACILITIES为市政设施（体育场博物图书馆医院学校等）、TERRITORY独立园区（办公工业物流园区等）、BUSINESS_PLACE经营场所（4S店、门市餐饮等
         /// </summary>
         [XmlElement("parking_lot_type")]
         public string ParkingLotType { get; set; }

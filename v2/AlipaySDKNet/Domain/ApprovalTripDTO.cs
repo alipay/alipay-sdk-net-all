@@ -40,13 +40,13 @@ namespace Aop.Api.Domain
         public ApprovalCityDTO Origin { get; set; }
 
         /// <summary>
-        /// 行程模式，可选值： PLANE-飞机； TRAIN-火车； HOTEL-酒店
+        /// 行程模式，默认值为其他
         /// </summary>
         [XmlElement("trip_mode")]
         public string TripMode { get; set; }
 
         /// <summary>
-        /// 行程类型，可选值： 单程：SINGLE； 往返：RETURN； 多程：MULTI； 默认为 SINGLE
+        /// 行程类型
         /// </summary>
         [XmlElement("trip_way")]
         public string TripWay { get; set; }

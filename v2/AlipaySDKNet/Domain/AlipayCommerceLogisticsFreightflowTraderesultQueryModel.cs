@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Mode { get; set; }
 
         /// <summary>
+        /// 发起网商操作(如转账)时网商返回的操作单号
+        /// </summary>
+        [XmlElement("operate_no")]
+        public string OperateNo { get; set; }
+
+        /// <summary>
         /// 合作方机构号,如果mode为网商银行，则为网商银行分配
         /// </summary>
         [XmlElement("partner_id")]

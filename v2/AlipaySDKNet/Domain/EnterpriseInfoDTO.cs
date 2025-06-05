@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string EnterpriseAlias { get; set; }
 
         /// <summary>
+        /// 企业简称审核状态 PASSED： 通过 REJECTED： 驳回 AUDITING： 审核中
+        /// </summary>
+        [XmlElement("enterprise_alias_audit_status")]
+        public string EnterpriseAliasAuditStatus { get; set; }
+
+        /// <summary>
         /// 统一社会信用码
         /// </summary>
         [XmlElement("enterprise_code")]

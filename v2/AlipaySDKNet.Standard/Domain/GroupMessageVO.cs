@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public CouponMsgVO CouponMsgContent { get; set; }
 
         /// <summary>
+        /// 商品消息内容模型，当消息类型(msg_type)选 "GOODS" 的时候，这个内容必须得填充
+        /// </summary>
+        [XmlElement("goods_msg_content")]
+        public GoodsMsgVO GoodsMsgContent { get; set; }
+
+        /// <summary>
         /// 图片消息内容模型，当消息类型(msg_type)选 "IMAGE" 的时候，这个内容必须得填充
         /// </summary>
         [XmlElement("image_msg_content")]
@@ -28,7 +34,7 @@ namespace Aop.Api.Domain
         public LinkMsgVO LinkMsgContent { get; set; }
 
         /// <summary>
-        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"
+        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"，商品消息:"GOODS"
         /// </summary>
         [XmlElement("msg_type")]
         public string MsgType { get; set; }

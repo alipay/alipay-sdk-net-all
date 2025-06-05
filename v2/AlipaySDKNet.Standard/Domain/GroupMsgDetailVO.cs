@@ -66,10 +66,23 @@ namespace Aop.Api.Domain
         public GroupMessageVO MsgData { get; set; }
 
         /// <summary>
+        /// 复合消息数据详情
+        /// </summary>
+        [XmlArray("msg_data_list")]
+        [XmlArrayItem("group_message_v_o")]
+        public List<GroupMessageVO> MsgDataList { get; set; }
+
+        /// <summary>
         /// 消息id
         /// </summary>
         [XmlElement("msg_id")]
         public string MsgId { get; set; }
+
+        /// <summary>
+        /// 区分是单条消息发送还是复合消息发送
+        /// </summary>
+        [XmlElement("send_batch")]
+        public bool SendBatch { get; set; }
 
         /// <summary>
         /// 发送状态， 2:待发送, 3: 发送中, 4: 发送成功, 5: 发送失败, 6: 部分失败, 7: 重发, 8: 待撤回, 9: 撤回中, 10: 已撤回, 12: 部分撤回, 13: 部分成功, 14: 部分删除, 15: 部分发送中

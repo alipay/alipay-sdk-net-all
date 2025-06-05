@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public List<string> BusinessDistrictIds { get; set; }
 
         /// <summary>
-        /// 1024
+        /// 自定义触发词
         /// </summary>
         [XmlElement("custom_keywords")]
         public string CustomKeywords { get; set; }

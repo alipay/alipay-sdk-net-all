@@ -106,6 +106,12 @@ namespace Aop.Api.Domain
         public string RatedVoltage { get; set; }
 
         /// <summary>
+        /// 设备有二级品牌商，需要传二级品牌编号
+        /// </summary>
+        [XmlElement("s_brand_code")]
+        public string SBrandCode { get; set; }
+
+        /// <summary>
         /// 解绑时间，解绑必传
         /// </summary>
         [XmlElement("unbind_time")]

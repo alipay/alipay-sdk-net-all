@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string ChannelWaybillOperationScope { get; set; }
 
         /// <summary>
+        /// 身份标识
+        /// </summary>
+        [XmlElement("identity_tag")]
+        public string IdentityTag { get; set; }
+
+        /// <summary>
+        /// 身份类型
+        /// </summary>
+        [XmlElement("identity_type")]
+        public string IdentityType { get; set; }
+
+        /// <summary>
         /// 仓节点唯一id
         /// </summary>
         [XmlElement("lbx")]
@@ -34,7 +46,7 @@ namespace Aop.Api.Domain
         public string LogisticsCode { get; set; }
 
         /// <summary>
-        /// 用于标记支付宝用户在应用下的唯一标识
+        /// 用于标记支付宝用户在应用下的唯一标识 当前字段已废弃(文档升级，请使用identity_tag与identity_type)
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -52,7 +64,7 @@ namespace Aop.Api.Domain
         public string OutbizOrderId { get; set; }
 
         /// <summary>
-        /// 支付宝用户的userId。
+        /// 支付宝用户的userId。 当前字段已废弃(文档升级，请使用identity_tag与identity_type)
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }

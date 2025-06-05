@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayEbppCommunityDeliveryidentityDetectModel : AopObject
     {
         /// <summary>
+        /// 城市国标编码
+        /// </summary>
+        [XmlElement("city_code")]
+        public string CityCode { get; set; }
+
+        /// <summary>
         /// 城市名
         /// </summary>
         [XmlElement("city_name")]

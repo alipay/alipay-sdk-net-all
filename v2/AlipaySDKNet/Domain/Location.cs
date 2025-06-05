@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("lat")]
         public string Lat { get; set; }
+
+        /// <summary>
+        /// 位置扩展信息列表
+        /// </summary>
+        [XmlArray("location_ext_infos")]
+        [XmlArrayItem("transport_ext_info")]
+        public List<TransportExtInfo> LocationExtInfos { get; set; }
 
         /// <summary>
         /// 经度

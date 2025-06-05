@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayPcreditLoanSideloanrepayResultQueryResponse : AopResponse
     {
         /// <summary>
+        /// 还款失败的金额(单位元)。精确小数点后2位。主动还款部分成功部分失败时，此值必传
+        /// </summary>
+        [XmlElement("charge_back_amount")]
+        public string ChargeBackAmount { get; set; }
+
+        /// <summary>
         /// 还款失败原因编码
         /// </summary>
         [XmlElement("fail_reason_code")]

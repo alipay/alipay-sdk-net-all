@@ -22,10 +22,16 @@ namespace Aop.Api.Domain
         public string CardNo { get; set; }
 
         /// <summary>
-        /// 卡片状态。枚举值如下： *  FREEZE：冻结。 *  CANCEL：销卡。
+        /// 卡片状态。枚举值如下： *  FREEZE：冻结。 *  CANCEL：销卡。 MOVEOUT 迁出
         /// </summary>
         [XmlElement("card_status")]
         public string CardStatus { get; set; }
+
+        /// <summary>
+        /// NFC卡
+        /// </summary>
+        [XmlElement("card_type")]
+        public string CardType { get; set; }
 
         /// <summary>
         /// 字段
@@ -38,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("issue_org_no")]
         public string IssueOrgNo { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 签约升级：签约代扣协议 解约降级：解约代扣协议
