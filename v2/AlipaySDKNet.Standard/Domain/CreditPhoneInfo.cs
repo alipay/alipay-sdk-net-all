@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CreditPhoneInfo : AopObject
     {
         /// <summary>
+        /// 套餐编号
+        /// </summary>
+        [XmlElement("busi_id")]
+        public string BusiId { get; set; }
+
+        /// <summary>
         /// 单位是元。套餐每月保底金额
         /// </summary>
         [XmlElement("busi_level")]
@@ -26,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("busi_type")]
         public string BusiType { get; set; }
+
+        /// <summary>
+        /// 申请人备用手机号
+        /// </summary>
+        [XmlElement("contace_mobile_no")]
+        public string ContaceMobileNo { get; set; }
 
         /// <summary>
         /// 每个月份的逾期日期
@@ -50,6 +62,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("isp_abbr_cn")]
         public string IspAbbrCn { get; set; }
+
+        /// <summary>
+        /// 运营商订单号
+        /// </summary>
+        [XmlElement("isp_order_no")]
+        public string IspOrderNo { get; set; }
+
+        /// <summary>
+        /// 商品名称
+        /// </summary>
+        [XmlElement("item_name")]
+        public string ItemName { get; set; }
 
         /// <summary>
         /// 单位是元。单期最大扣款金额。注意单期最大扣款金额*分期数不得超过订单总金额
@@ -80,6 +104,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("province")]
         public string Province { get; set; }
+
+        /// <summary>
+        /// 省份账单日
+        /// </summary>
+        [XmlElement("province_bill_date")]
+        public long ProvinceBillDate { get; set; }
 
         /// <summary>
         /// 要求在网月数，单位 月

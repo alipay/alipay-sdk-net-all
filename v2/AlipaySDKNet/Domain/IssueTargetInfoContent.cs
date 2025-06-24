@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string IssueQuota { get; set; }
 
         /// <summary>
-        /// 切换open_id前请使用：owner类型为PHONE时该字段表示员工手机号，owner类型为EMPLOYEE时该字段表示为员工支付宝uid，owner类型为ENTERPRISE_PAY_UID时该字段表示为员工企业码id，owner类型为ENTERPRISE时可不填，如果填写仅支持填企业id
+        /// 切换open_id前请使用：owner类型为PHONE时该字段表示员工手机号，owner类型为EMPLOYEE时该字段表示为员工支付宝uid，owner类型为ENTERPRISE_PAY_UID时该字段表示为员工企业码id，owner类型为ENTERPRISE时可不填，如果填写仅支持填企业id，owner类型为INSTITUTION时可不填，默认为制度id
         /// </summary>
         [XmlElement("owner_id")]
         public string OwnerId { get; set; }

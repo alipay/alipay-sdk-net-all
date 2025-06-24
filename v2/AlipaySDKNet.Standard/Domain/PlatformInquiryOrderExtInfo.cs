@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string OrderPid { get; set; }
 
         /// <summary>
+        /// 订单原价，单位元，保留小数点2位
+        /// </summary>
+        [XmlElement("original_price")]
+        public string OriginalPrice { get; set; }
+
+        /// <summary>
         /// 加号扩展信息
         /// </summary>
         [XmlElement("plus_register_info")]
@@ -76,7 +82,7 @@ namespace Aop.Api.Domain
         public string RefundUrl { get; set; }
 
         /// <summary>
-        /// 枚举值： 支付宝问诊频道:ALIPAY_INQUIRY_CHANNEL 支付宝义诊频道:ALIPAY_PUBLIC_WELFARE_INQUIRY_CHANNEL 支付宝小程序:ALIPAY_MINI_APP 支付宝其他渠道:ALIPAY_OTHER_CHANNEL
+        /// 枚举值： 支付宝问诊频道:ALIPAY_INQUIRY_CHANNEL 支付宝义诊频道:ALIPAY_PUBLIC_WELFARE_INQUIRY_CHANNEL 支付宝小程序:ALIPAY_MINI_APP 支付宝其他渠道:ALIPAY_OTHER_CHANNEL 和PC,H5,PATIENT_APP,WECHAT_APP
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class SellerSyncRentItemExtInfo : AopObject
     {
         /// <summary>
+        /// 券后签约价格，币种：人民币，单位：元
+        /// </summary>
+        [XmlElement("after_coupon_price")]
+        public string AfterCouponPrice { get; set; }
+
+        /// <summary>
         /// 商品的品牌名称
         /// </summary>
         [XmlElement("item_brand")]

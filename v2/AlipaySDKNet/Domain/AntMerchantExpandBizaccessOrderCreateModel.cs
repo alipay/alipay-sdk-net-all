@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public CertificateInfoForEntry BenefitInfo { get; set; }
 
         /// <summary>
+        /// 关联外部单号
+        /// </summary>
+        [XmlElement("external_id")]
+        public string ExternalId { get; set; }
+
+        /// <summary>
         /// 服务商抽佣信息。本对象为空表示无需抽佣配置。一期只支持传入一个
         /// </summary>
         [XmlArray("isv_commission_info")]

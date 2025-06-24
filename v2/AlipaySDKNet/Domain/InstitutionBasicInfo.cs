@@ -56,5 +56,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("institution_name")]
         public string InstitutionName { get; set; }
+
+        /// <summary>
+        /// 制度下额度是否支持多人共享。如果支持，则制度下资产所有人共享；如果不支持，则制度下的资产为个人资产，成员之间不共享。
+        /// </summary>
+        [XmlElement("multi_employee_share_mode")]
+        public string MultiEmployeeShareMode { get; set; }
     }
 }

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAgentAppBindModel : AopObject
     {
         /// <summary>
+        /// 百灵智能体id
+        /// </summary>
+        [XmlElement("agent_id")]
+        public string AgentId { get; set; }
+
+        /// <summary>
         /// 智能体code
         /// </summary>
         [XmlElement("app_agentcode")]

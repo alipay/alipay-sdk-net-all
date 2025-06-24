@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string BuyoutFinancingAmount { get; set; }
 
         /// <summary>
+        /// 买断金的融资期数
+        /// </summary>
+        [XmlElement("buyout_financing_period")]
+        public RentPeriod BuyoutFinancingPeriod { get; set; }
+
+        /// <summary>
         /// 买断金还款方式
         /// </summary>
         [XmlElement("buyout_repayment_type")]
@@ -116,5 +122,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("repayment_type")]
         public string RepaymentType { get; set; }
+
+        /// <summary>
+        /// 租金融资起始期数，比如租赁有12期，租金融资想从第3期，开始融资，则此处设置为3
+        /// </summary>
+        [XmlElement("start_financing_period")]
+        public long StartFinancingPeriod { get; set; }
     }
 }

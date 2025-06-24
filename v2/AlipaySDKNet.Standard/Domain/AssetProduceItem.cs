@@ -264,6 +264,12 @@ namespace Aop.Api.Domain
         public string TemplateName { get; set; }
 
         /// <summary>
+        /// 加急单标识，Y是加急单 N非加急单
+        /// </summary>
+        [XmlElement("urgent_order_flag")]
+        public string UrgentOrderFlag { get; set; }
+
+        /// <summary>
         /// 动作
         /// </summary>
         [XmlElement("work_process")]

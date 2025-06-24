@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ParentId { get; set; }
 
         /// <summary>
+        /// 父位置名称
+        /// </summary>
+        [XmlElement("parent_name")]
+        public string ParentName { get; set; }
+
+        /// <summary>
         /// 位置标签
         /// </summary>
         [XmlElement("place_label")]

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,10 +11,34 @@ namespace Aop.Api.Domain
     public class VoucherConsultInfo : AopObject
     {
         /// <summary>
+        /// 开始时间，立减为活动开始时间，券为券生效时间
+        /// </summary>
+        [XmlElement("active_time")]
+        public string ActiveTime { get; set; }
+
+        /// <summary>
+        /// 资产优惠类型，用于区分不同优惠
+        /// </summary>
+        [XmlElement("asset_type")]
+        public string AssetType { get; set; }
+
+        /// <summary>
+        /// 资产编码
+        /// </summary>
+        [XmlElement("assets_code")]
+        public string AssetsCode { get; set; }
+
+        /// <summary>
         /// 封顶优惠金额，单位为元
         /// </summary>
         [XmlElement("ceiling_amount")]
         public string CeilingAmount { get; set; }
+
+        /// <summary>
+        /// 结束时间，立减为活动结束时间，券为券失效时间
+        /// </summary>
+        [XmlElement("expired_time")]
+        public string ExpiredTime { get; set; }
 
         /// <summary>
         /// 单品券商品优惠信息，仅针对单品券
@@ -46,13 +71,20 @@ namespace Aop.Api.Domain
         public string PromoType { get; set; }
 
         /// <summary>
+        /// 额度信息
+        /// </summary>
+        [XmlArray("quota_info_list")]
+        [XmlArrayItem("quota_info_d_t_o")]
+        public List<QuotaInfoDTO> QuotaInfoList { get; set; }
+
+        /// <summary>
         /// 满减金额，单位为元，仅针对代金券
         /// </summary>
         [XmlElement("reduction_amount")]
         public string ReductionAmount { get; set; }
 
         /// <summary>
-        /// 优惠额度，如3折券，返回0.7，仅针对折扣券
+        /// 优惠额度，小数表示，0.7 表示 30% 的折扣
         /// </summary>
         [XmlElement("reduction_ratio")]
         public string ReductionRatio { get; set; }

@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("rule_name")]
         public string RuleName { get; set; }
+
+        /// <summary>
+        /// 签到规则类型
+        /// </summary>
+        [XmlElement("rule_type")]
+        public string RuleType { get; set; }
     }
 }

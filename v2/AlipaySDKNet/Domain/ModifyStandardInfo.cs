@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<StandardConditionInfo> AddConditionList { get; set; }
 
         /// <summary>
+        /// 当前规则可使用的其他资产来源信息
+        /// </summary>
+        [XmlElement("asset_share_source_info")]
+        public AssetShareSourceInfo AssetShareSourceInfo { get; set; }
+
+        /// <summary>
         /// 消费模式
         /// </summary>
         [XmlElement("consume_mode")]

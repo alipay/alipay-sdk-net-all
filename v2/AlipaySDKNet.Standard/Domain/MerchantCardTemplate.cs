@@ -106,6 +106,12 @@ namespace Aop.Api.Domain
         public string MsgAppId { get; set; }
 
         /// <summary>
+        /// 用户购买该卡的时候是否需要签署购卡协议
+        /// </summary>
+        [XmlElement("need_order_agreement")]
+        public bool NeedOrderAgreement { get; set; }
+
+        /// <summary>
         /// 线上售卖表示。01标识已开启线上售卖。02标识未开启线上售卖.
         /// </summary>
         [XmlElement("online_sale_switch")]

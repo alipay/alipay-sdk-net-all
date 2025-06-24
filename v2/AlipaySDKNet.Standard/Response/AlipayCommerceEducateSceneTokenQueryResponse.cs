@@ -52,6 +52,18 @@ namespace Aop.Api.Response
         public string ParentUserId { get; set; }
 
         /// <summary>
+        /// 支付账户uid
+        /// </summary>
+        [XmlElement("pay_open_id")]
+        public string PayOpenId { get; set; }
+
+        /// <summary>
+        /// 支付账户uid
+        /// </summary>
+        [XmlElement("pay_uid")]
+        public string PayUid { get; set; }
+
+        /// <summary>
         /// 用户已签约的 PID 列表
         /// </summary>
         [XmlArray("payment_pid_list")]

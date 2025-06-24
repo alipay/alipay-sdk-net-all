@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AddressPoi : AopObject
     {
         /// <summary>
+        /// 区域形成编码
+        /// </summary>
+        [XmlElement("ad_code")]
+        public string AdCode { get; set; }
+
+        /// <summary>
         /// 城市编码
         /// </summary>
         [XmlElement("county_code")]

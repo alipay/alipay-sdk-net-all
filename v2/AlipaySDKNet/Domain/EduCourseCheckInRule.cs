@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -46,6 +47,12 @@ namespace Aop.Api.Domain
         public string CourseRuleName { get; set; }
 
         /// <summary>
+        /// 每周天次，用1-7分别表示周一到周日
+        /// </summary>
+        [XmlElement("day_of_week")]
+        public long DayOfWeek { get; set; }
+
+        /// <summary>
         /// 签到规则信息
         /// </summary>
         [XmlElement("edu_check_in_rule")]
@@ -70,6 +77,13 @@ namespace Aop.Api.Domain
         public bool ManualClose { get; set; }
 
         /// <summary>
+        /// 课时节次，即每天第几节课，与课时配置保持一致
+        /// </summary>
+        [XmlArray("period_no_list")]
+        [XmlArrayItem("number")]
+        public List<long> PeriodNoList { get; set; }
+
+        /// <summary>
         /// 刷新二维码频率（单位：秒）
         /// </summary>
         [XmlElement("refresh_qr_code_frequency")]
@@ -92,5 +106,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("semester_name")]
         public string SemesterName { get; set; }
+
+        /// <summary>
+        /// 学期周次列表，即课程在本学期的哪些周上课
+        /// </summary>
+        [XmlArray("week_list")]
+        [XmlArrayItem("number")]
+        public List<long> WeekList { get; set; }
     }
 }

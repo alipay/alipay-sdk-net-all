@@ -11,6 +11,12 @@ namespace Aop.Api.Response
         /// <summary>
         /// 安全驳回原因
         /// </summary>
+        [XmlElement("reject_reason")]
+        public string RejectReason { get; set; }
+
+        /// <summary>
+        /// 安全驳回原因
+        /// </summary>
         [XmlElement("reject_resion")]
         public string RejectResion { get; set; }
 

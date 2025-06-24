@@ -160,6 +160,12 @@ namespace Aop.Api.Domain
         public string Source { get; set; }
 
         /// <summary>
+        /// 指定开票金额
+        /// </summary>
+        [XmlElement("specify_apply_amount")]
+        public string SpecifyApplyAmount { get; set; }
+
+        /// <summary>
         /// 税收分类编码，非必填
         /// </summary>
         [XmlElement("tax_classification_code")]

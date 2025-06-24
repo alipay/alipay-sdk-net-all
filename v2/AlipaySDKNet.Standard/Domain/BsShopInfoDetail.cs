@@ -40,6 +40,18 @@ namespace Aop.Api.Domain
         public string DistrictName { get; set; }
 
         /// <summary>
+        /// 纬度
+        /// </summary>
+        [XmlElement("latitude")]
+        public string Latitude { get; set; }
+
+        /// <summary>
+        /// 经度
+        /// </summary>
+        [XmlElement("longitude")]
+        public string Longitude { get; set; }
+
+        /// <summary>
         /// 详细的门店名称
         /// </summary>
         [XmlElement("name")]

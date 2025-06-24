@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayOpenSpNordertagQrcodeurlQueryResponse : AopResponse
     {
         /// <summary>
-        /// 线圈信息返回值
+        /// 物料信息返回值
         /// </summary>
         [XmlElement("tag_info")]
         public NOrderTagQueryByCoilNoResp TagInfo { get; set; }

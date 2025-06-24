@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string InvestId { get; set; }
 
         /// <summary>
+        /// 放款总金额，单位为元
+        /// </summary>
+        [XmlElement("loan_amount")]
+        public string LoanAmount { get; set; }
+
+        /// <summary>
         /// 默认不用填写，需要走提前结清，则需要传入EARLY_SETTLE
         /// </summary>
         [XmlElement("operate_type")]

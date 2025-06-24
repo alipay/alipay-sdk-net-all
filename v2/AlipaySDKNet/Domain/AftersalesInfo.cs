@@ -70,5 +70,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reason")]
         public string Reason { get; set; }
+
+        /// <summary>
+        /// 当前售后的卡在购卡的时候是否签署了购卡协议
+        /// </summary>
+        [XmlElement("signed_order_agreement")]
+        public bool SignedOrderAgreement { get; set; }
     }
 }

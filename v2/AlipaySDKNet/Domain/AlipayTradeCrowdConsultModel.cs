@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }
+
+        /// <summary>
+        /// 表明着笔请求的场景，可以同时包含多个场景，目前支持 AAC潜客营销-aacProspectMarketing 未绑卡人群首绑营销-bindCard
+        /// </summary>
+        [XmlArray("scene_list")]
+        [XmlArrayItem("string")]
+        public List<string> SceneList { get; set; }
 
         /// <summary>
         /// 支付宝用户的userId。

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CompanyProduct : AopObject
     {
         /// <summary>
+        /// 企业信息查询会将校验失败的异常信息返回,无校验异常则返回空数组
+        /// </summary>
+        [XmlElement("check_error_list")]
+        public ProductInvoiceCheckResult CheckErrorList { get; set; }
+
+        /// <summary>
         /// 企业（商户）转账账户ID
         /// </summary>
         [XmlElement("company_account_id")]

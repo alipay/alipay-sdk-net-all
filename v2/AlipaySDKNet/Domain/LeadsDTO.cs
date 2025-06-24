@@ -88,6 +88,12 @@ namespace Aop.Api.Domain
         public string ObSaWorkNo { get; set; }
 
         /// <summary>
+        /// 商机或项目名称
+        /// </summary>
+        [XmlElement("project_name")]
+        public string ProjectName { get; set; }
+
+        /// <summary>
         /// 商机阶段CODE
         /// </summary>
         [XmlElement("project_phase")]

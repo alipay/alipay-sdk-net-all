@@ -22,10 +22,22 @@ namespace Aop.Api.Domain
         public string Area { get; set; }
 
         /// <summary>
+        /// 所在区县编码
+        /// </summary>
+        [XmlElement("area_code")]
+        public string AreaCode { get; set; }
+
+        /// <summary>
         /// 门店所处城市
         /// </summary>
         [XmlElement("city")]
         public string City { get; set; }
+
+        /// <summary>
+        /// 城市code
+        /// </summary>
+        [XmlElement("city_code")]
+        public string CityCode { get; set; }
 
         /// <summary>
         /// 物料快递收货地址，用于后续接收物料的快递
@@ -62,6 +74,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("province")]
         public string Province { get; set; }
+
+        /// <summary>
+        /// 省份编码
+        /// </summary>
+        [XmlElement("province_code")]
+        public string ProvinceCode { get; set; }
 
         /// <summary>
         /// 返佣pid，在带有门店信息下支持提前落位，否则仍然需要在后面铺设回传时传递

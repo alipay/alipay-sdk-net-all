@@ -10,7 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceTransportNdeviceEventSyncModel : AopObject
     {
         /// <summary>
-        /// 司机签到-driverSign
+        /// type为driverManualSign传入司机id
+        /// </summary>
+        [XmlElement("biz_event_identity")]
+        public string BizEventIdentity { get; set; }
+
+        /// <summary>
+        /// 司机签到-driverSign 司机人工签到-driverManualSign
         /// </summary>
         [XmlElement("biz_event_type")]
         public string BizEventType { get; set; }

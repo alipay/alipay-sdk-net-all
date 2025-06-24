@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ActualOrderTime { get; set; }
 
         /// <summary>
+        /// 买家备注信息
+        /// </summary>
+        [XmlElement("buyer_memo")]
+        public string BuyerMemo { get; set; }
+
+        /// <summary>
         /// 校园卡编号
         /// </summary>
         [XmlElement("campus_card")]

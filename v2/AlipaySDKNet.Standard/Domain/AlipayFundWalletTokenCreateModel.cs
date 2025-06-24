@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 业务拓展参数
+        /// </summary>
+        [XmlElement("business_params")]
+        public string BusinessParams { get; set; }
+
+        /// <summary>
         /// 如果是ALIPAY_USER_ID，则传用户账号；如果是ALIPAY_LOGON_ID，则传手机号
         /// </summary>
         [XmlElement("identity")]
@@ -80,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("skip_result")]
         public bool SkipResult { get; set; }
+
+        /// <summary>
+        /// 钱包开通时是否跳过结果页,true为跳过，false为不跳过。默认不跳过
+        /// </summary>
+        [XmlElement("skip_result_when_wallet_opened")]
+        public bool SkipResultWhenWalletOpened { get; set; }
 
         /// <summary>
         /// 场景钱包模版id

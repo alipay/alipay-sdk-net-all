@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public EnterpriseProfilesDTO Profiles { get; set; }
 
         /// <summary>
-        /// 企业注册模式，用于区分接口返回的企业注册链接是「企业自助注册」还是「服务商代企业注册」<br/> 不传默认为企业自入驻(NORMAL)
+        /// 企业注册模式，用于区分接口返回的企业注册页面流程<br/> 不传默认为企业自入驻(NORMAL)
         /// </summary>
         [XmlElement("register_mode")]
         public string RegisterMode { get; set; }

@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string AppName { get; set; }
 
         /// <summary>
-        /// 智能体提审版本号
+        /// 智能体开发包版本号
         /// </summary>
         [XmlElement("app_version")]
         public string AppVersion { get; set; }
@@ -75,7 +75,7 @@ namespace Aop.Api.Response
         public string Status { get; set; }
 
         /// <summary>
-        /// 版本备注
+        /// 智能体版本备注
         /// </summary>
         [XmlElement("version_desc")]
         public string VersionDesc { get; set; }

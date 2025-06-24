@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalStoreDeliverySyncModel : AopObject
     {
         /// <summary>
-        /// 配送范围集合，仅支持高德坐标系的经纬度集。坐标数上限：99；电子围栏首尾坐标需闭合。
+        /// 配送范围集合，仅支持高德坐标系的经纬度集。坐标数上限：200；电子围栏首尾坐标需闭合。
         /// </summary>
         [XmlArray("delivery_area_list")]
         [XmlArrayItem("delivery_point_d_t_o")]

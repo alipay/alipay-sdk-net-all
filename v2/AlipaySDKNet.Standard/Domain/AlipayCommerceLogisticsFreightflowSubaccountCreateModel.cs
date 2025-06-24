@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }
+
+        /// <summary>
+        /// 运企付开户时子户归属人信息,网货平台必填
+        /// </summary>
+        [XmlElement("sub_account_owner_info")]
+        public FreightFlowSubAccountOwnerInfo SubAccountOwnerInfo { get; set; }
     }
 }

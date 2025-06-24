@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,12 @@ namespace Aop.Api.Domain
     [Serializable]
     public class ItemsVO : AopObject
     {
+        /// <summary>
+        /// 商品优惠后总金额=商品总金额-商品优惠总金额，（商品优惠总金额= 商品优惠详情discount中优惠金额总和）单位：元
+        /// </summary>
+        [XmlElement("amount_discount_item")]
+        public string AmountDiscountItem { get; set; }
+
         /// <summary>
         /// 商品总价
         /// </summary>
@@ -20,6 +27,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("app_item_code")]
         public string AppItemCode { get; set; }
+
+        /// <summary>
+        /// 用户商品维度享受的优惠信息
+        /// </summary>
+        [XmlArray("discount")]
+        [XmlArrayItem("discount_v_o")]
+        public List<DiscountVO> Discount { get; set; }
 
         /// <summary>
         /// 是否医保商品

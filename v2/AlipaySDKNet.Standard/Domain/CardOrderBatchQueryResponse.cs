@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public AxfCardBindInfo AxfCardBindInfo { get; set; }
 
         /// <summary>
+        /// 订单备注信息
+        /// </summary>
+        [XmlElement("axf_order_memo_info")]
+        public AxfOrderMemoInfo AxfOrderMemoInfo { get; set; }
+
+        /// <summary>
         /// 用于区分订购单的取消类型
         /// </summary>
         [XmlElement("cancel_type")]

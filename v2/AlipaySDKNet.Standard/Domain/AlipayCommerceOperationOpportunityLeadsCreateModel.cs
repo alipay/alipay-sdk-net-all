@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public BsContactPersonInfo ContactPersonInfo { get; set; }
 
         /// <summary>
+        /// 设备数量
+        /// </summary>
+        [XmlElement("device_num")]
+        public long DeviceNum { get; set; }
+
+        /// <summary>
         /// 支付宝侧铺设设备类型
         /// </summary>
         [XmlElement("device_type")]
@@ -76,5 +82,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("shop_info")]
         public BsShopInfoDetail ShopInfo { get; set; }
+
+        /// <summary>
+        /// 饿了么渠道区分
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
     }
 }

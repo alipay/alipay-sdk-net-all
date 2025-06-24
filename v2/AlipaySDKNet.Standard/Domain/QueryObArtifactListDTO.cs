@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ArtifactVersion { get; set; }
 
         /// <summary>
+        /// OB制品产品ID
+        /// </summary>
+        [XmlElement("boss_id")]
+        public long BossId { get; set; }
+
+        /// <summary>
         /// 下载地址
         /// </summary>
         [XmlElement("download_url")]

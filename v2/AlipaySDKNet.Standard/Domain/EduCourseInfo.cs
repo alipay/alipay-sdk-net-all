@@ -73,6 +73,12 @@ namespace Aop.Api.Domain
         public string PlaceName { get; set; }
 
         /// <summary>
+        /// 位置外部唯一编号
+        /// </summary>
+        [XmlElement("place_out_biz_no")]
+        public string PlaceOutBizNo { get; set; }
+
+        /// <summary>
         /// 学期ID
         /// </summary>
         [XmlElement("semester_id")]
@@ -83,6 +89,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("semester_name")]
         public string SemesterName { get; set; }
+
+        /// <summary>
+        /// 老师学工号
+        /// </summary>
+        [XmlElement("teacher_employee_no")]
+        public string TeacherEmployeeNo { get; set; }
 
         /// <summary>
         /// 教师花名册ID

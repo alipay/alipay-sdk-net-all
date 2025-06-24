@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string OpenAssetRole { get; set; }
 
         /// <summary>
+        /// 是否单开户，默认为false。开通家长小荷包时必选
+        /// </summary>
+        [XmlElement("open_single_account")]
+        public bool OpenSingleAccount { get; set; }
+
+        /// <summary>
         /// 使用银行渠道。可选的字段枚举说明：{YES:使用银行渠道;NO:使用支付宝默认扣款顺序} 注意：当指定使用银行渠道时，务必提前联系您的BD配置对应学校的银行
         /// </summary>
         [XmlElement("use_bank_channel")]

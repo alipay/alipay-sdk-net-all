@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string ConfirmType { get; set; }
 
         /// <summary>
+        /// 放款总金额,单位：元
+        /// </summary>
+        [XmlElement("loan_amount")]
+        public string LoanAmount { get; set; }
+
+        /// <summary>
         /// 交易组件的业务订单Id
         /// </summary>
         [XmlElement("order_id")]

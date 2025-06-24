@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string ExecuteTime { get; set; }
 
         /// <summary>
+        /// 支付资金明细
+        /// </summary>
+        [XmlElement("payment_fund_info")]
+        public PaymentFundInfo PaymentFundInfo { get; set; }
+
+        /// <summary>
         /// 退款明细。仅充值退查询时，且退款单据成功且才会展示。
         /// </summary>
         [XmlArray("refund_payment_asset_infos")]

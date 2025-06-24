@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class BsExtraCredentials : AopObject
     {
         /// <summary>
+        /// 饿了么品牌pid
+        /// </summary>
+        [XmlElement("brand_id")]
+        public string BrandId { get; set; }
+
+        /// <summary>
         /// 品牌名称
         /// </summary>
         [XmlElement("brand_name")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("power_bank_img")]
         public string PowerBankImg { get; set; }
+
+        /// <summary>
+        /// 饿了么门店id
+        /// </summary>
+        [XmlElement("store_id")]
+        public string StoreId { get; set; }
 
         /// <summary>
         /// 资源服务商地推小二联系方式

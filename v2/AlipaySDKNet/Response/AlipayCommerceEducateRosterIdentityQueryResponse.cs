@@ -63,6 +63,12 @@ namespace Aop.Api.Response
         public string RoleType { get; set; }
 
         /// <summary>
+        /// 花名册ID
+        /// </summary>
+        [XmlElement("roster_id")]
+        public string RosterId { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

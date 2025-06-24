@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayPcreditLoanSideloansignCreditApplyResponse : AopResponse
     {
         /// <summary>
+        /// 冷静期类型
+        /// </summary>
+        [XmlElement("cool_off_type")]
+        public string CoolOffType { get; set; }
+
+        /// <summary>
         /// 授信申请状态
         /// </summary>
         [XmlElement("credit_status")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public ConsumeExtend ConsumeExtend { get; set; }
 
         /// <summary>
+        /// 如果存在大量入金笔数不出金场景，将该字段传为true。大量入金笔数且不出金场景，支付宝内部会有性能问题，一个钱包超过2000笔未核销笔数会阻断交易
+        /// </summary>
+        [XmlElement("has_large_details_scene")]
+        public bool HasLargeDetailsScene { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]

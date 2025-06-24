@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string BizData { get; set; }
 
         /// <summary>
-        /// 业务类型： 挂号记录(预约+当日):GHJL 门诊就诊记录:MZJZJL 停诊通知:TZTZ
+        /// 业务类型： 预约记录:YYJL 挂号记录(预约+当日):GHJL 门诊就诊记录:MZJZJL 停诊通知:TZTZ
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }

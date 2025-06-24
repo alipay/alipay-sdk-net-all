@@ -11,6 +11,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardPricepropertyCreateModel : AopObject
     {
         /// <summary>
+        /// 设置一客一价的具体违约金规则
+        /// </summary>
+        [XmlElement("break_costs")]
+        public BreakCosts BreakCosts { get; set; }
+
+        /// <summary>
+        /// 当break_costs存在且break_costs_type为REMAIN_RATE时，需要设置免违约金规则
+        /// </summary>
+        [XmlElement("break_costs_exempt_rule")]
+        public BreakCostsExemptRule BreakCostsExemptRule { get; set; }
+
+        /// <summary>
         /// 周期卡计费信息，周期卡一客一价需要修改扣款方式可传该字段，非周期卡不传
         /// </summary>
         [XmlElement("card_property_cycle")]

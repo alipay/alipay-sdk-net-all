@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string AccountName { get; set; }
 
         /// <summary>
+        /// 实体角色id
+        /// </summary>
+        [XmlElement("entity_role_id")]
+        public string EntityRoleId { get; set; }
+
+        /// <summary>
         /// true时，accountName为空 false时，accountName为实际注册使用账号
         /// </summary>
         [XmlElement("idempotent")]

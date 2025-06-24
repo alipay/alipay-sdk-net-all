@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenAgentVersionDetailQueryModel : AopObject
     {
         /// <summary>
-        /// 智能体提审版本号
+        /// 智能体开发包版本号
         /// </summary>
         [XmlElement("app_version")]
         public string AppVersion { get; set; }

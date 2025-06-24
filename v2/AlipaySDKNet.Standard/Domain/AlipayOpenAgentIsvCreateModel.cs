@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayOpenAgentIsvCreateModel : AopObject
     {
         /// <summary>
-        /// 智能体id
+        /// 编排平台提供的智能体id
         /// </summary>
         [XmlElement("agent_id")]
         public string AgentId { get; set; }
 
         /// <summary>
-        /// 智能体创建来源
+        /// 智能体开发包来源
         /// </summary>
         [XmlElement("agent_platform")]
         public string AgentPlatform { get; set; }

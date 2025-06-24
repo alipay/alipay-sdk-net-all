@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string InstId { get; set; }
 
         /// <summary>
+        /// 学期最大周数
+        /// </summary>
+        [XmlElement("max_week")]
+        public long MaxWeek { get; set; }
+
+        /// <summary>
         /// 修改时间
         /// </summary>
         [XmlElement("modified_time")]

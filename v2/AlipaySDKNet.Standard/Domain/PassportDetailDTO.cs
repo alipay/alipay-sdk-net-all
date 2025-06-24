@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class PassportDetailDTO : AopObject
     {
         /// <summary>
+        /// 用于返回关联企业名称
+        /// </summary>
+        [XmlElement("company_name")]
+        public string CompanyName { get; set; }
+
+        /// <summary>
         /// id
         /// </summary>
         [XmlElement("id")]

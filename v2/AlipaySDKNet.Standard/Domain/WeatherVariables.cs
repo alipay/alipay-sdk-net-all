@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 地面两米处的露点温度，单位 摄氏度
         /// </summary>
+        [XmlElement("dew_point_2_m")]
+        public string DewPoint2M { get; set; }
+
+        /// <summary>
+        /// 地面两米处的露点温度，单位 摄氏度 当前字段已废弃(网关SDK字段映射不一致)
+        /// </summary>
         [XmlElement("dew_point_2m")]
         public string DewPoint2m { get; set; }
 
@@ -72,6 +78,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 地面两米处的相对空气湿度，单位 %
         /// </summary>
+        [XmlElement("relative_humidity_2_m")]
+        public string RelativeHumidity2M { get; set; }
+
+        /// <summary>
+        /// 地面两米处的相对空气湿度，单位 % 当前字段已废弃(网关SDK字段映射不一致)
+        /// </summary>
         [XmlElement("relative_humidity_2m")]
         public string RelativeHumidity2m { get; set; }
 
@@ -90,6 +102,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 地面两米处的空气温度, 单位 摄氏度
         /// </summary>
+        [XmlElement("temperature_2_m")]
+        public string Temperature2M { get; set; }
+
+        /// <summary>
+        /// 地面两米处的空气温度, 单位 摄氏度 当前字段已废弃(网关SDK字段映射不一致)
+        /// </summary>
         [XmlElement("temperature_2m")]
         public string Temperature2m { get; set; }
 
@@ -102,11 +120,23 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 地面10米处风向，单位 °
         /// </summary>
+        [XmlElement("wind_direction_10_m")]
+        public string WindDirection10M { get; set; }
+
+        /// <summary>
+        /// 地面10米处风向，单位 ° 当前字段已废弃(网关SDK字段映射不一致)
+        /// </summary>
         [XmlElement("wind_direction_10m")]
         public string WindDirection10m { get; set; }
 
         /// <summary>
         /// 地面 120 米处风向，单位 °
+        /// </summary>
+        [XmlElement("wind_direction_120_m")]
+        public string WindDirection120M { get; set; }
+
+        /// <summary>
+        /// 地面 120 米处风向，单位 ° 当前字段已废弃(网关SDK字段映射不一致)
         /// </summary>
         [XmlElement("wind_direction_120m")]
         public string WindDirection120m { get; set; }
@@ -114,11 +144,23 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 地面80米处风向，单位°
         /// </summary>
+        [XmlElement("wind_direction_80_m")]
+        public string WindDirection80M { get; set; }
+
+        /// <summary>
+        /// 地面80米处风向，单位° 当前字段已废弃(网关SDK字段映射不一致)
+        /// </summary>
         [XmlElement("wind_direction_80m")]
         public string WindDirection80m { get; set; }
 
         /// <summary>
         /// 地面十米处风速，单位 km/h
+        /// </summary>
+        [XmlElement("wind_speed_10_m")]
+        public string WindSpeed10M { get; set; }
+
+        /// <summary>
+        /// 地面十米处风速，单位 km/h 当前字段已废弃(网关SDK字段映射不一致)
         /// </summary>
         [XmlElement("wind_speed_10m")]
         public string WindSpeed10m { get; set; }
@@ -126,11 +168,23 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 地面 120 米处风速，单位km/h
         /// </summary>
+        [XmlElement("wind_speed_120_m")]
+        public string WindSpeed120M { get; set; }
+
+        /// <summary>
+        /// 地面 120 米处风速，单位km/h 当前字段已废弃(网关SDK字段映射不一致)
+        /// </summary>
         [XmlElement("wind_speed_120m")]
         public string WindSpeed120m { get; set; }
 
         /// <summary>
         /// 地面80米处风速，单位 km/h
+        /// </summary>
+        [XmlElement("wind_speed_80_m")]
+        public string WindSpeed80M { get; set; }
+
+        /// <summary>
+        /// 地面80米处风速，单位 km/h 当前字段已废弃(网关SDK字段映射不一致)
         /// </summary>
         [XmlElement("wind_speed_80m")]
         public string WindSpeed80m { get; set; }

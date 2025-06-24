@@ -264,6 +264,12 @@ namespace Aop.Api.Domain
         public AssetDeliveryAddress ToAddress { get; set; }
 
         /// <summary>
+        /// 加急单的标识，Y是加急单 N非加急单
+        /// </summary>
+        [XmlElement("urgent_order_flag")]
+        public string UrgentOrderFlag { get; set; }
+
+        /// <summary>
         /// 动作
         /// </summary>
         [XmlElement("work_process")]

@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string BankRuleId { get; set; }
 
         /// <summary>
-        /// 车辆类型； CAR：客车 TRUCK：货车
+        /// 车辆类型； CAR：客车 TRUCK：货车 MOTO: 摩托车
         /// </summary>
         [XmlElement("car_type")]
         public string CarType { get; set; }

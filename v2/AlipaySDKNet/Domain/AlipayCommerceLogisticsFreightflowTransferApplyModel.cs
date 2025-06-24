@@ -68,5 +68,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("request_time")]
         public string RequestTime { get; set; }
+
+        /// <summary>
+        /// 交易用途
+        /// </summary>
+        [XmlElement("trans_purpose")]
+        public string TransPurpose { get; set; }
+
+        /// <summary>
+        /// 运单信息
+        /// </summary>
+        [XmlElement("waybill_info")]
+        public FreightFlowWaybillInfo WaybillInfo { get; set; }
     }
 }

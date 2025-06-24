@@ -11,6 +11,24 @@ namespace Aop.Api.Domain
     public class EduCheckInRule : AopObject
     {
         /// <summary>
+        /// 活动平台id
+        /// </summary>
+        [XmlElement("auth_activity_id")]
+        public string AuthActivityId { get; set; }
+
+        /// <summary>
+        /// 签到核身认证类型
+        /// </summary>
+        [XmlElement("authentication_type")]
+        public string AuthenticationType { get; set; }
+
+        /// <summary>
+        /// 课程签到扩展参数
+        /// </summary>
+        [XmlElement("course_config_ext")]
+        public EduCheckInRuleConfigExt CourseConfigExt { get; set; }
+
+        /// <summary>
         /// 规则生效状态
         /// </summary>
         [XmlElement("enable_status")]
@@ -33,6 +51,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("inst_id")]
         public string InstId { get; set; }
+
+        /// <summary>
+        /// 碰一下签到校验开关
+        /// </summary>
+        [XmlElement("nfc_check")]
+        public bool NfcCheck { get; set; }
 
         /// <summary>
         /// 是否启用拍照校验
@@ -70,6 +94,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("rule_name")]
         public string RuleName { get; set; }
+
+        /// <summary>
+        /// 签到类型
+        /// </summary>
+        [XmlElement("rule_type")]
+        public string RuleType { get; set; }
 
         /// <summary>
         /// 签到开始时间，格式：HH:mm:ss

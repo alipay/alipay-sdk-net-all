@@ -21,10 +21,22 @@ namespace Aop.Api.Response
         public string LongVerifySessionId { get; set; }
 
         /// <summary>
+        /// 校验结果描述
+        /// </summary>
+        [XmlElement("verify_code")]
+        public string VerifyCode { get; set; }
+
+        /// <summary>
         /// 核身渲染信息
         /// </summary>
         [XmlElement("verify_data")]
         public string VerifyData { get; set; }
+
+        /// <summary>
+        /// 校验过程中透出的文案
+        /// </summary>
+        [XmlElement("verify_message")]
+        public string VerifyMessage { get; set; }
 
         /// <summary>
         /// 核身校验是否通过

@@ -35,6 +35,13 @@ namespace Aop.Api.Domain
         public string CheckInType { get; set; }
 
         /// <summary>
+        /// 课程id列表
+        /// </summary>
+        [XmlArray("course_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> CourseIdList { get; set; }
+
+        /// <summary>
         /// 学号或工号
         /// </summary>
         [XmlElement("employee_no")]
@@ -77,5 +84,11 @@ namespace Aop.Api.Domain
         [XmlArray("place_id_list")]
         [XmlArrayItem("string")]
         public List<string> PlaceIdList { get; set; }
+
+        /// <summary>
+        /// 教师花名册id
+        /// </summary>
+        [XmlElement("teacher_roster_id")]
+        public string TeacherRosterId { get; set; }
     }
 }

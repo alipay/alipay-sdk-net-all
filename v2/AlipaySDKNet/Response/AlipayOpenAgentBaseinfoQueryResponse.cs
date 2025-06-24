@@ -29,7 +29,7 @@ namespace Aop.Api.Response
         public string AppLogo { get; set; }
 
         /// <summary>
-        /// 智能体应用名称
+        /// 智能体应用名称，要求名称长度为3-30个字符，一个中文字等于2个字符；名称可以由中文、数字、英文、下划线、+、-组成。
         /// </summary>
         [XmlElement("app_name")]
         public string AppName { get; set; }
@@ -81,6 +81,19 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("custom_card_id")]
         public string CustomCardId { get; set; }
+
+        /// <summary>
+        /// 默认问答模式
+        /// </summary>
+        [XmlElement("default_qa_mode")]
+        public string DefaultQaMode { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("leading_questions")]
+        [XmlArrayItem("string")]
+        public List<string> LeadingQuestions { get; set; }
 
         /// <summary>
         /// null

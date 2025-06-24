@@ -118,7 +118,7 @@ namespace Aop.Api.Domain
         public string ExpenseTypeSubCategory { get; set; }
 
         /// <summary>
-        /// 账单扩展信息，JsonMap格式，以下信息可组合返回，"SUMMARY_INFO"表示"账单汇总信息"，"MERCHANT_EXTEND_INFO"表示"商户信息"，"TERMINAL_INFO"表示"终端设备信息"，"BENEFIT_INFO"表示"员工优惠信息"，"CONSUMPTION_LOCATION"表示"消费上报位置"，"THIRD_PARTY_PAYMENT_INFO"表示"代收款详情"
+        /// 账单扩展信息，JsonMap格式，以下信息可组合返回，"SUMMARY_INFO"表示"账单汇总信息"，"MERCHANT_EXTEND_INFO"表示"商户信息"，"TERMINAL_INFO"表示"终端设备信息"，"BENEFIT_INFO"表示"员工优惠信息"，"CONSUMPTION_LOCATION"表示"消费上报位置"，"THIRD_PARTY_PAYMENT_INFO"表示"代收款详情"，"REIMBURSEMENT_INFO"表示"审批单信息"
         /// </summary>
         [XmlElement("ext_infos")]
         public string ExtInfos { get; set; }

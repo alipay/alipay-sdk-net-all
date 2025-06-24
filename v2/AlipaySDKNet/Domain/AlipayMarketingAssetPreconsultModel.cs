@@ -11,10 +11,28 @@ namespace Aop.Api.Domain
     public class AlipayMarketingAssetPreconsultModel : AopObject
     {
         /// <summary>
+        /// 作为内部交易号使用
+        /// </summary>
+        [XmlElement("biz_no")]
+        public string BizNo { get; set; }
+
+        /// <summary>
         /// 业务参数大字段，优惠咨询的控制参数，json格式；目前支持传入useBigAmountSkipOrderThold为N来控制不使用大金额跳过优惠的订单门槛检查；默认不传；
         /// </summary>
         [XmlElement("business_param")]
         public string BusinessParam { get; set; }
+
+        /// <summary>
+        /// 证件号码，例如身份证号
+        /// </summary>
+        [XmlElement("cert_no")]
+        public string CertNo { get; set; }
+
+        /// <summary>
+        /// 证件类型，支持传入身份证类型：IDENTITY_CARD
+        /// </summary>
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
 
         /// <summary>
         /// 商品咨询请求列表（当需要咨询单品券时必传，如果某商品不希望参与本次单品优惠咨询则不传递对应信息即可）
@@ -48,7 +66,7 @@ namespace Aop.Api.Domain
         public string PromoRule { get; set; }
 
         /// <summary>
-        /// 场景码：默认传：MULTIEND_ORDER_PRE_SCENE
+        /// 场景码，每个业务场景独立分配
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }
