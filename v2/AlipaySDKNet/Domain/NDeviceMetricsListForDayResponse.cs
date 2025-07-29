@@ -76,10 +76,28 @@ namespace Aop.Api.Domain
         public bool DoCheckIn { get; set; }
 
         /// <summary>
+        /// 有效开机标识,当日开机大于6h即为有效开机
+        /// </summary>
+        [XmlElement("effective_turnon_device")]
+        public bool EffectiveTurnonDevice { get; set; }
+
+        /// <summary>
         /// nfc是否动销
         /// </summary>
         [XmlElement("has_nfc_trade")]
         public bool HasNfcTrade { get; set; }
+
+        /// <summary>
+        /// leads门店名称
+        /// </summary>
+        [XmlElement("leads_location")]
+        public string LeadsLocation { get; set; }
+
+        /// <summary>
+        /// leads门店地址
+        /// </summary>
+        [XmlElement("leads_location_address")]
+        public string LeadsLocationAddress { get; set; }
 
         /// <summary>
         /// 作业人员uid

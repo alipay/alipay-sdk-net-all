@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AssetId { get; set; }
 
         /// <summary>
+        /// 带出业务参数
+        /// </summary>
+        [XmlElement("biz_param")]
+        public string BizParam { get; set; }
+
+        /// <summary>
         /// 业务类型
         /// </summary>
         [XmlElement("biz_type")]

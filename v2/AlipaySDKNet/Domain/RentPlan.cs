@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string RentPrice { get; set; }
 
         /// <summary>
+        /// 商户同步的支付信息
+        /// </summary>
+        [XmlElement("seller_sync_rent_pay_info")]
+        public SellerSyncRentPayInfo SellerSyncRentPayInfo { get; set; }
+
+        /// <summary>
         /// 代表第几阶段的还款计划，要配合period锁定第几期还款计划
         /// </summary>
         [XmlElement("stage")]

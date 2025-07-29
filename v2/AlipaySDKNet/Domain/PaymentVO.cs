@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,6 +33,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("amount_user")]
         public string AmountUser { get; set; }
+
+        /// <summary>
+        /// 此字段对应B站对账单中抽佣部分的交易单号
+        /// </summary>
+        [XmlArray("commission_trade_nos")]
+        [XmlArrayItem("string")]
+        public List<string> CommissionTradeNos { get; set; }
 
         /// <summary>
         /// 配送优惠金额

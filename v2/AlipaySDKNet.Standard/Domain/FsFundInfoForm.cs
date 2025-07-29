@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class FsFundInfoForm : AopObject
     {
         /// <summary>
+        /// 退款时为出资方退款金额，单位：元
+        /// </summary>
+        [XmlElement("amount")]
+        public string Amount { get; set; }
+
+        /// <summary>
         /// 出资方类型：平台出资，商户出资，第三方机构出资
         /// </summary>
         [XmlElement("fund_provider")]

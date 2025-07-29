@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -13,6 +14,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("has_to_check")]
         public bool HasToCheck { get; set; }
+
+        /// <summary>
+        /// 参数主要描述安全内部不透出对外的系统状态，相当于是标
+        /// </summary>
+        [XmlArray("inner_system_code")]
+        [XmlArrayItem("string")]
+        public List<string> InnerSystemCode { get; set; }
 
         /// <summary>
         /// 风险咨询情况下返回的风险等级，风险处理不会返回该值

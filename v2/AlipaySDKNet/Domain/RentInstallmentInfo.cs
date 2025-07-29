@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class RentInstallmentInfo : AopObject
     {
         /// <summary>
-        /// 当期购买金额。支持随时购买场景，回传当期购买金，当期购买金=当期购买价-截止到当期已支付租金
+        /// 当期购买金额。当期购买金=当期购买价-截止到当期已支付租金
         /// </summary>
         [XmlElement("buyout_price")]
         public string BuyoutPrice { get; set; }

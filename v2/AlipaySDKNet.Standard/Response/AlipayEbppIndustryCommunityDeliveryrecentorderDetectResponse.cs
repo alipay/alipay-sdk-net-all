@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayEbppIndustryCommunityDeliveryrecentorderDetectResponse : AopResponse
     {
         /// <summary>
-        /// 骑手平台
+        /// 与平台方合作，通过个人手机号或者身份信息，查询个人是否为该平台骑手身份以及在指定区域和时间范围内是否有订单。
         /// </summary>
         [XmlElement("delivery_platform")]
         public string DeliveryPlatform { get; set; }

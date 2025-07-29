@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string PaymentInst { get; set; }
 
         /// <summary>
-        /// 指定支付方式。app_pay-APP跳转支付方式。
+        /// 指定支付方式。 app_pay：指定机构钱包跳转支付方式； agent_pay：智能体SDK支付方式；
         /// </summary>
         [XmlElement("payment_type")]
         public string PaymentType { get; set; }

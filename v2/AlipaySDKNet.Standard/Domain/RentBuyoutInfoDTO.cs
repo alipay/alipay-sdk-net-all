@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("origin_order_id")]
         public string OriginOrderId { get; set; }
+
+        /// <summary>
+        /// 支付宝服务器主动通知商户服务器里指定的页面http/https路径
+        /// </summary>
+        [XmlElement("pay_notify_url")]
+        public string PayNotifyUrl { get; set; }
     }
 }

@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("device_info")]
         public EtcDeviceMsgInfo DeviceInfo { get; set; }
+
+        /// <summary>
+        /// 事件类型
+        /// </summary>
+        [XmlElement("event_type")]
+        public string EventType { get; set; }
     }
 }

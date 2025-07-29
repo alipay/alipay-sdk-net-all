@@ -64,7 +64,7 @@ namespace Aop.Api.Response
         public string PlanName { get; set; }
 
         /// <summary>
-        /// 计划状态         "PLAN_END",         "PLAN_DELETE",         "PLAN_EFFECTIVE",         "PLAN_PAUSE",         "PLAN_NOT_BEGIN"
+        /// 计划状态
         /// </summary>
         [XmlElement("plan_status")]
         public string PlanStatus { get; set; }
@@ -100,7 +100,7 @@ namespace Aop.Api.Response
         public string PromoteTargetAppType { get; set; }
 
         /// <summary>
-        /// RTB冻结单号
+        /// 冻结单id
         /// </summary>
         [XmlElement("rtb_freeze_order_id")]
         public string RtbFreezeOrderId { get; set; }

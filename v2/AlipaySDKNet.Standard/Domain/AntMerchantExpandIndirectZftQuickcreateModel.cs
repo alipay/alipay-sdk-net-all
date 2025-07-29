@@ -41,7 +41,7 @@ namespace Aop.Api.Domain
         public string AlipayLogonId { get; set; }
 
         /// <summary>
-        /// 签约支付宝账户。需使用实名认证支付宝账号，使用该支付宝账号签约直付通二级商户及后续服务，商户主体与该支付宝账号主体相同
+        /// 签约支付宝账户。需使用实名认证支付宝账号，使用该支付宝账号签约二级商户及后续服务，商户主体与该支付宝账号主体相同
         /// </summary>
         [XmlElement("binding_alipay_logon_id")]
         public string BindingAlipayLogonId { get; set; }

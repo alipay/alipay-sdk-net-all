@@ -76,6 +76,18 @@ namespace Aop.Api.Domain
         public string EquipTypeNo { get; set; }
 
         /// <summary>
+        /// 流量开始时间
+        /// </summary>
+        [XmlElement("network_data_begin_time")]
+        public string NetworkDataBeginTime { get; set; }
+
+        /// <summary>
+        /// 流量结束时间
+        /// </summary>
+        [XmlElement("network_data_end_time")]
+        public string NetworkDataEndTime { get; set; }
+
+        /// <summary>
         /// 运营商编码，一般为企业组织机构代码
         /// </summary>
         [XmlElement("operator_id")]

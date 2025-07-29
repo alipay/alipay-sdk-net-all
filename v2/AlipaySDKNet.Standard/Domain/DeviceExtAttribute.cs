@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DeviceExtAttribute : AopObject
     {
         /// <summary>
+        /// 设备外挂配件的SN号，仅设备有外挂配件时需要传
+        /// </summary>
+        [XmlElement("accessory_sn")]
+        public string AccessorySn { get; set; }
+
+        /// <summary>
         /// 商家编号，由服务商定义，需要保证在服务商下唯一
         /// </summary>
         [XmlElement("external_id")]

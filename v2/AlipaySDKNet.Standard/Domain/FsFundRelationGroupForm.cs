@@ -22,5 +22,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("fund_strategy")]
         public string FundStrategy { get; set; }
+
+        /// <summary>
+        /// 出资组ID
+        /// </summary>
+        [XmlElement("group_id")]
+        public string GroupId { get; set; }
     }
 }

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
+        /// 全局维度黑名单
+        /// </summary>
+        [XmlElement("scene_type")]
+        public string SceneType { get; set; }
+
+        /// <summary>
         /// 黑、白属性
         /// </summary>
         [XmlElement("type")]

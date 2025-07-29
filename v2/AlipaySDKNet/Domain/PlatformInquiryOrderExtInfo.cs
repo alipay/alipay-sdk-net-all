@@ -40,10 +40,34 @@ namespace Aop.Api.Domain
         public string Complaint { get; set; }
 
         /// <summary>
+        /// 医生职称中文描述
+        /// </summary>
+        [XmlElement("doctor_avatar")]
+        public string DoctorAvatar { get; set; }
+
+        /// <summary>
         /// 联系医生问诊链接
         /// </summary>
         [XmlElement("doctor_inquiry_link_page")]
         public string DoctorInquiryLinkPage { get; set; }
+
+        /// <summary>
+        /// 医生职称
+        /// </summary>
+        [XmlElement("doctor_title")]
+        public string DoctorTitle { get; set; }
+
+        /// <summary>
+        /// 医生类型
+        /// </summary>
+        [XmlElement("doctor_type")]
+        public string DoctorType { get; set; }
+
+        /// <summary>
+        /// 医院名称
+        /// </summary>
+        [XmlElement("hospital_name")]
+        public string HospitalName { get; set; }
 
         /// <summary>
         /// 订单开票入口
@@ -58,16 +82,34 @@ namespace Aop.Api.Domain
         public PlatformInquiryOrderEvaluateInfo MedicalInquiryOrderEvaluateInfo { get; set; }
 
         /// <summary>
+        /// 给好大夫定义的一个订单来源
+        /// </summary>
+        [XmlElement("order_from")]
+        public string OrderFrom { get; set; }
+
+        /// <summary>
         /// 订单所属pid
         /// </summary>
         [XmlElement("order_pid")]
         public string OrderPid { get; set; }
 
         /// <summary>
+        /// 订单商品的spu名
+        /// </summary>
+        [XmlElement("order_spu")]
+        public string OrderSpu { get; set; }
+
+        /// <summary>
         /// 订单原价，单位元，保留小数点2位
         /// </summary>
         [XmlElement("original_price")]
         public string OriginalPrice { get; set; }
+
+        /// <summary>
+        /// 外部业务单号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
 
         /// <summary>
         /// 加号扩展信息
@@ -82,7 +124,7 @@ namespace Aop.Api.Domain
         public string RefundUrl { get; set; }
 
         /// <summary>
-        /// 枚举值： 支付宝问诊频道:ALIPAY_INQUIRY_CHANNEL 支付宝义诊频道:ALIPAY_PUBLIC_WELFARE_INQUIRY_CHANNEL 支付宝小程序:ALIPAY_MINI_APP 支付宝其他渠道:ALIPAY_OTHER_CHANNEL 和PC,H5,PATIENT_APP,WECHAT_APP
+        /// 枚举值： 支付宝问诊频道:ALIPAY_INQUIRY_CHANNEL 支付宝义诊频道:ALIPAY_PUBLIC_WELFARE_INQUIRY_CHANNEL 支付宝小程序:ALIPAY_MINI_APP 支付宝其他渠道:ALIPAY_OTHER_CHANNEL H5页面:H5 患者端app:PATIENT_APP pc端:PC 微信小程序:WECHAT_APP 支付宝AQ:ALIPAY_AQ AQ-APP:AQ_APP AQ-小程序:AQ_MINI_APP
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }

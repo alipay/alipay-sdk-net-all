@@ -168,6 +168,13 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
+        /// 补充类别信息
+        /// </summary>
+        [XmlArray("supplement_category_list")]
+        [XmlArrayItem("supplement_category_info")]
+        public List<SupplementCategoryInfo> SupplementCategoryList { get; set; }
+
+        /// <summary>
         /// 是否需要补充信息或流水
         /// </summary>
         [XmlElement("supplement_info_flag")]

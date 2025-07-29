@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string ProcessLocation { get; set; }
 
         /// <summary>
-        /// 事项办理的时间。时间单位一般具体到上午、下午、小时
+        /// 事项办理的时间。
         /// </summary>
         [XmlElement("process_time")]
         public string ProcessTime { get; set; }

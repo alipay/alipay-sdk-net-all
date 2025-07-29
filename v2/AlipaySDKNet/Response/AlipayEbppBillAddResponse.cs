@@ -85,5 +85,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("sub_order_type")]
         public string SubOrderType { get; set; }
+
+        /// <summary>
+        /// 50新链路订单号
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
     }
 }

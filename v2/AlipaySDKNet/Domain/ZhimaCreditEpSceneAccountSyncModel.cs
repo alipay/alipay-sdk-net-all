@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,5 +33,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_status")]
         public string OpenStatus { get; set; }
+
+        /// <summary>
+        /// 同步平台账户在平台的相关操作
+        /// </summary>
+        [XmlArray("sync_content")]
+        [XmlArrayItem("string")]
+        public List<string> SyncContent { get; set; }
     }
 }

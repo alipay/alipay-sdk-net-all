@@ -108,5 +108,12 @@ namespace Aop.Api.Domain
         [XmlArray("supply_details")]
         [XmlArrayItem("asset_supply_detail")]
         public List<AssetSupplyDetail> SupplyDetails { get; set; }
+
+        /// <summary>
+        /// 物料版本信息
+        /// </summary>
+        [XmlArray("version_info_list")]
+        [XmlArrayItem("asset_item_version")]
+        public List<AssetItemVersion> VersionInfoList { get; set; }
     }
 }

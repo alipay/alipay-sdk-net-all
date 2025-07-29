@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string LoanTermUnit { get; set; }
 
         /// <summary>
+        /// 支用类型
+        /// </summary>
+        [XmlElement("loan_type")]
+        public string LoanType { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

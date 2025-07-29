@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string LogisticsCode { get; set; }
 
         /// <summary>
+        /// 物料类型
+        /// </summary>
+        [XmlElement("material_type")]
+        public string MaterialType { get; set; }
+
+        /// <summary>
         /// SCAN(用户扫码) SEND_ORDER(用户寄件下单) RECEIVE_SUCCESS（揽收成功）
         /// </summary>
         [XmlElement("operation_dynamic_sales_type")]

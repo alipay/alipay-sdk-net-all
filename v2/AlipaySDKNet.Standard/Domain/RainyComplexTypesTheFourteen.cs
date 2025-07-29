@@ -11,10 +11,28 @@ namespace Aop.Api.Domain
     public class RainyComplexTypesTheFourteen : AopObject
     {
         /// <summary>
+        /// case
+        /// </summary>
+        [XmlElement("demo")]
+        public string Demo { get; set; }
+
+        /// <summary>
         /// 复杂类型2.0新增的数据
         /// </summary>
         [XmlElement("demo_case")]
         public RainyComplexTypesRefWeakFirst DemoCase { get; set; }
+
+        /// <summary>
+        /// 测试数据
+        /// </summary>
+        [XmlElement("demo_empty")]
+        public string DemoEmpty { get; set; }
+
+        /// <summary>
+        /// case
+        /// </summary>
+        [XmlElement("demo_other_value")]
+        public string DemoOtherValue { get; set; }
 
         /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识

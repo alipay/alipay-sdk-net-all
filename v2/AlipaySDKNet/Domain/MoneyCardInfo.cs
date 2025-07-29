@@ -78,6 +78,13 @@ namespace Aop.Api.Domain
         public UseDuration UseDuration { get; set; }
 
         /// <summary>
+        /// 用户核销方式
+        /// </summary>
+        [XmlArray("use_method")]
+        [XmlArrayItem("card_use_method_info")]
+        public List<CardUseMethodInfo> UseMethod { get; set; }
+
+        /// <summary>
         /// 核销方式
         /// </summary>
         [XmlElement("use_type")]

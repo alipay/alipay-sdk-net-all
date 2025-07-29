@@ -15,5 +15,11 @@ namespace Aop.Api.Response
         [XmlArray("not_exist_employee_no_list")]
         [XmlArrayItem("string")]
         public List<string> NotExistEmployeeNoList { get; set; }
+
+        /// <summary>
+        /// 位置id
+        /// </summary>
+        [XmlElement("place_id")]
+        public string PlaceId { get; set; }
     }
 }

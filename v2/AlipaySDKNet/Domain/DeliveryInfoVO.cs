@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string DeliveryId { get; set; }
 
         /// <summary>
+        /// 首次发货时间
+        /// </summary>
+        [XmlElement("first_delivery_time")]
+        public string FirstDeliveryTime { get; set; }
+
+        /// <summary>
         /// 商品信息
         /// </summary>
         [XmlArray("item_info_list")]

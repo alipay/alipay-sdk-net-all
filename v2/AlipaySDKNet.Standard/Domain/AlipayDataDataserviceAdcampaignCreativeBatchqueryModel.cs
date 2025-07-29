@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public long GroupId { get; set; }
 
         /// <summary>
-        /// 二级营销目标code 注意事项：层级关系。 1.销售线索收集:tag000001，销售线索收集tag200600 2.自定义投放tag000004，自定义投放tag902001
+        /// 二级营销目标code
         /// </summary>
         [XmlElement("market_target_code")]
         public string MarketTargetCode { get; set; }

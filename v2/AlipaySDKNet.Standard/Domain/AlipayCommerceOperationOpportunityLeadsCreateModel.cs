@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public BsExtraCredentials ExtraCredentials { get; set; }
 
         /// <summary>
+        /// leads线索来源
+        /// </summary>
+        [XmlElement("leads_from")]
+        public string LeadsFrom { get; set; }
+
+        /// <summary>
         /// 门店关联的支付宝类目
         /// </summary>
         [XmlElement("mcc_info")]

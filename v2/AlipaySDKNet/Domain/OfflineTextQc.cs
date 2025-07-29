@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string CallerPhone { get; set; }
 
         /// <summary>
+        /// 渠道来源
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// 对话内容
         /// </summary>
         [XmlArray("content")]

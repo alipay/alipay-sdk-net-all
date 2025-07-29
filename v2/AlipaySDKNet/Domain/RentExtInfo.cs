@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public List<RentFinancingExtInfo> FinancingExtInfo { get; set; }
 
         /// <summary>
+        /// 历史资产融资扩展信息
+        /// </summary>
+        [XmlElement("historical_asset_financing_ext_info")]
+        public RentHistoricalAssetFinancingExtInfoDTO HistoricalAssetFinancingExtInfo { get; set; }
+
+        /// <summary>
         /// 商品扩展信息
         /// </summary>
         [XmlElement("item_ext_info")]

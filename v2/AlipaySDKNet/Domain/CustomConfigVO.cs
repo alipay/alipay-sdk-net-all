@@ -16,13 +16,13 @@ namespace Aop.Api.Domain
         public bool ConfigSwitch { get; set; }
 
         /// <summary>
-        /// 图片地址
+        /// 图片地址，当type=IMAGE时必选
         /// </summary>
         [XmlElement("image_url")]
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// 链接地址
+        /// 链接地址，当type=LINK时必选
         /// </summary>
         [XmlElement("link_url")]
         public string LinkUrl { get; set; }

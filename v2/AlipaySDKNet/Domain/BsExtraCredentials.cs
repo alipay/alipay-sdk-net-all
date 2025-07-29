@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string PowerBankImg { get; set; }
 
         /// <summary>
-        /// 饿了么门店id
+        /// 门店id
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }

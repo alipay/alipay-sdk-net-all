@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRentOrderCreateModel : AopObject
     {
         /// <summary>
+        /// 优惠前置咨询组件返回的优惠活动咨询ID
+        /// </summary>
+        [XmlElement("activity_consult_id")]
+        public string ActivityConsultId { get; set; }
+
+        /// <summary>
         /// 订单收货地址
         /// </summary>
         [XmlElement("address_info")]

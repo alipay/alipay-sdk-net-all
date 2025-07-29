@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string ConnectorId { get; set; }
 
         /// <summary>
+        /// 充电站纬度
+        /// </summary>
+        [XmlElement("latitude")]
+        public string Latitude { get; set; }
+
+        /// <summary>
+        /// 充电站经度
+        /// </summary>
+        [XmlElement("longitude")]
+        public string Longitude { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]
@@ -38,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("station_id")]
         public string StationId { get; set; }
+
+        /// <summary>
+        /// 互联互通充电站名称
+        /// </summary>
+        [XmlElement("station_name")]
+        public string StationName { get; set; }
 
         /// <summary>
         /// 订单标题

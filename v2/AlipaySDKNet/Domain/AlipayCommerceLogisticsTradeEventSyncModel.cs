@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string LogisticsCode { get; set; }
 
         /// <summary>
+        /// 物料类型
+        /// </summary>
+        [XmlElement("material_type")]
+        public string MaterialType { get; set; }
+
+        /// <summary>
         /// ALIPAY 支付宝操作渠道 OTHER 其他渠道
         /// </summary>
         [XmlElement("operation_source")]

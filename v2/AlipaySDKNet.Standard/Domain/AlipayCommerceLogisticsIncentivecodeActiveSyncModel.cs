@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceLogisticsIncentivecodeActiveSyncModel : AopObject
     {
         /// <summary>
+        /// 码值绑定时位置的区
+        /// </summary>
+        [XmlElement("active_area")]
+        public string ActiveArea { get; set; }
+
+        /// <summary>
+        /// 码值绑定时位置的城市
+        /// </summary>
+        [XmlElement("active_city")]
+        public string ActiveCity { get; set; }
+
+        /// <summary>
         /// 码值绑定主体对应的支付宝用户id
         /// </summary>
         [XmlElement("active_code_open_id")]
@@ -22,6 +34,12 @@ namespace Aop.Api.Domain
         public string ActiveCodeUserId { get; set; }
 
         /// <summary>
+        /// 码值绑定时位置的详细地址
+        /// </summary>
+        [XmlElement("active_detail_address")]
+        public string ActiveDetailAddress { get; set; }
+
+        /// <summary>
         /// 码值绑定时位置的纬度，单位：度
         /// </summary>
         [XmlElement("active_latitude")]
@@ -32,6 +50,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("active_longitude")]
         public string ActiveLongitude { get; set; }
+
+        /// <summary>
+        /// 码值绑定时位置的省份
+        /// </summary>
+        [XmlElement("active_province")]
+        public string ActiveProvince { get; set; }
+
+        /// <summary>
+        /// 码值绑定时位置的街道
+        /// </summary>
+        [XmlElement("active_street")]
+        public string ActiveStreet { get; set; }
 
         /// <summary>
         /// 用于传入的时间，标准时间格式：yyyy-MM-dd HH:mm:ss

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 原始订单金额
+        /// 原始订单金额，单位元
         /// </summary>
         [XmlElement("original_order_amount")]
         public string OriginalOrderAmount { get; set; }
@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_reason")]
         public string RefundReason { get; set; }
+
+        /// <summary>
+        /// 直付通结算模式，账期，请款，自动，详情参考直付通接入文档
+        /// </summary>
+        [XmlElement("settle_mode")]
+        public string SettleMode { get; set; }
     }
 }

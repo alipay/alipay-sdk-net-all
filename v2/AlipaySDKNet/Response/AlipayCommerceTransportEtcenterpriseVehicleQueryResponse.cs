@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string BizMsg { get; set; }
 
         /// <summary>
+        /// 用户ETC卡号
+        /// </summary>
+        [XmlElement("card_no")]
+        public string CardNo { get; set; }
+
+        /// <summary>
         /// 代扣签约状态
         /// </summary>
         [XmlElement("deduct_sign_status")]

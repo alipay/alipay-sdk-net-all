@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string EndStationTime { get; set; }
 
         /// <summary>
+        /// 商户侧运单号
+        /// </summary>
+        [XmlElement("out_waybill_no")]
+        public string OutWaybillNo { get; set; }
+
+        /// <summary>
+        /// 行程账单支付时间
+        /// </summary>
+        [XmlElement("pay_time")]
+        public string PayTime { get; set; }
+
+        /// <summary>
         /// 车牌颜色
         /// </summary>
         [XmlElement("plate_color")]
@@ -62,5 +74,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_id")]
         public string TradeId { get; set; }
+
+        /// <summary>
+        /// 支付宝运单号
+        /// </summary>
+        [XmlElement("waybill_no")]
+        public string WaybillNo { get; set; }
     }
 }

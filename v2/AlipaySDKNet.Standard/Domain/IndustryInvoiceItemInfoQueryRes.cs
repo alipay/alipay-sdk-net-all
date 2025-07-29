@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string InvoiceLineProperty { get; set; }
 
         /// <summary>
-        /// 开票金额（含税金额），单位：元
+        /// 开票金额：总位数20位，最多16位整数，最多2位小数，单位：元
         /// </summary>
         [XmlElement("item_amount")]
         public string ItemAmount { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
-        /// 商品数量
+        /// 商品数量：总位数26位，最多15整数,10小数
         /// </summary>
         [XmlElement("item_num")]
         public string ItemNum { get; set; }

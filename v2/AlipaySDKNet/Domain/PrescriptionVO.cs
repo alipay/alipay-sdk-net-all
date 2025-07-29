@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ReviewRejectNote { get; set; }
 
         /// <summary>
-        /// 商家侧药师审核处方的时间
+        /// 商家侧药师审核处方的日期，有年月日，时分秒，精确到秒
         /// </summary>
         [XmlElement("review_time")]
         public string ReviewTime { get; set; }

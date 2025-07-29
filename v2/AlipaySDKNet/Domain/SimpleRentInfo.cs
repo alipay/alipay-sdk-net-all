@@ -35,6 +35,24 @@ namespace Aop.Api.Domain
         public string BuyoutPrice { get; set; }
 
         /// <summary>
+        /// 本次分账金额，单位：元。此字段只有在分账成功才有值
+        /// </summary>
+        [XmlElement("current_royalty_amount")]
+        public string CurrentRoyaltyAmount { get; set; }
+
+        /// <summary>
+        /// 本次分账模式，此字段只有在分账成功才有值。
+        /// </summary>
+        [XmlElement("current_royalty_mode")]
+        public string CurrentRoyaltyMode { get; set; }
+
+        /// <summary>
+        /// 本次分账时间，此字段只有在分账成功才有值。
+        /// </summary>
+        [XmlElement("current_royalty_time")]
+        public string CurrentRoyaltyTime { get; set; }
+
+        /// <summary>
         /// 提前结清,true表示提前结清
         /// </summary>
         [XmlElement("early_settle")]

@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string Barcode { get; set; }
 
         /// <summary>
+        /// 商品业务模式，租赁业务模式包含（短租：0；长租：1）
+        /// </summary>
+        [XmlElement("business_model")]
+        public string BusinessModel { get; set; }
+
+        /// <summary>
         /// 平台类目，填写的类目必须在类目表列出，多级类目只填最后一级。商品类目 ID 及信息可通过<a href="https://opendocs.alipay.com/b/0a8xi8">商品类目表</a>获取。仅叶子类目支持创建商品。
         /// </summary>
         [XmlElement("category_id")]

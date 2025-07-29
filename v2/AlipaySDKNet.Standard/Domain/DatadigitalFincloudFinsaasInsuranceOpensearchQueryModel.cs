@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Domain { get; set; }
 
         /// <summary>
+        /// 多站点"｜"分割，最大支持个数为3
+        /// </summary>
+        [XmlElement("include_sites")]
+        public string IncludeSites { get; set; }
+
+        /// <summary>
         /// 不传默认10
         /// </summary>
         [XmlElement("page_size")]

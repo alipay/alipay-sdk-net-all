@@ -198,6 +198,19 @@ namespace Aop.Api.Domain
         public string OperateInfo { get; set; }
 
         /// <summary>
+        /// 是否有选配物料
+        /// </summary>
+        [XmlElement("optional_item_flag")]
+        public string OptionalItemFlag { get; set; }
+
+        /// <summary>
+        /// 是否有选配物料标识
+        /// </summary>
+        [XmlArray("optional_item_infos")]
+        [XmlArrayItem("optional_item_info")]
+        public List<OptionalItemInfo> OptionalItemInfos { get; set; }
+
+        /// <summary>
         /// 公司主体代码
         /// </summary>
         [XmlElement("ou_code")]

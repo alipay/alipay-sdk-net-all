@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -19,6 +21,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("biz_trace_id")]
         public string BizTraceId { get; set; }
+
+        /// <summary>
+        /// 预览发票数据
+        /// </summary>
+        [XmlArray("invoice_datas")]
+        [XmlArrayItem("pre_invoice_data")]
+        public List<PreInvoiceData> InvoiceDatas { get; set; }
 
         /// <summary>
         /// 消息

@@ -62,6 +62,11 @@ namespace Aop.Api.Request
         public FileItem FinancingRentProtocol { get; set; }
 
         /// <summary>
+        /// 历史资产融资扩展信息
+        /// </summary>
+        public RentHistoricalAssetFinancingExtInfoDTO HistoricalAssetFinancingExtInfo { get; set; }
+
+        /// <summary>
         /// 商品扩展信息
         /// </summary>
         public SellerSyncRentItemExtInfo ItemExtInfo { get; set; }
@@ -176,6 +181,7 @@ namespace Aop.Api.Request
             parameters.Add("buyer_open_id", this.BuyerOpenId);
             parameters.Add("delivery_ext_info", this.DeliveryExtInfo);
             parameters.Add("financing_ext_info", this.FinancingExtInfo);
+            parameters.Add("historical_asset_financing_ext_info", this.HistoricalAssetFinancingExtInfo);
             parameters.Add("item_ext_info", this.ItemExtInfo);
             parameters.Add("order_ext_info", this.OrderExtInfo);
             parameters.Add("order_id", this.OrderId);

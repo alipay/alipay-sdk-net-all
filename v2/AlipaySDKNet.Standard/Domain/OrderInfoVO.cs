@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string Note { get; set; }
 
         /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单的场景值   1:O2O订单，2:B2C订单
         /// </summary>
         [XmlElement("order_scene")]
@@ -134,6 +140,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_expect_start_time")]
         public string UserExpectStartTime { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的userId。
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
 
         /// <summary>
         /// 商品总重量，保留小数点后3位 + 单位， 单位固定两种（g和ml） 当前字段已废弃(商品总重量由items-weight_item汇总计算即可)

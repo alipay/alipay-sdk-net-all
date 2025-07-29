@@ -150,6 +150,19 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
+        /// 是否有选配物料标识
+        /// </summary>
+        [XmlElement("optional_item_flag")]
+        public string OptionalItemFlag { get; set; }
+
+        /// <summary>
+        /// 选配物料信息列表
+        /// </summary>
+        [XmlArray("optional_item_infos")]
+        [XmlArrayItem("optional_item_info")]
+        public List<OptionalItemInfo> OptionalItemInfos { get; set; }
+
+        /// <summary>
         /// 公司主体代码
         /// </summary>
         [XmlElement("ou_code")]

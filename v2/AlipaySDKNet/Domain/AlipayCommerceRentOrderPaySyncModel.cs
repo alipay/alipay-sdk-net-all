@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRentOrderPaySyncModel : AopObject
     {
         /// <summary>
+        /// 租赁售后单号
+        /// </summary>
+        [XmlElement("aftersale_id")]
+        public string AftersaleId { get; set; }
+
+        /// <summary>
         /// 交易组件订单号
         /// </summary>
         [XmlElement("order_id")]

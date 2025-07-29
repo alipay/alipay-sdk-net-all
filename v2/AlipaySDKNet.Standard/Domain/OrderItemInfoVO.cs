@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string ErpCode { get; set; }
 
         /// <summary>
+        /// 商品图片
+        /// </summary>
+        [XmlElement("head_img_url")]
+        public string HeadImgUrl { get; set; }
+
+        /// <summary>
         /// 商品名称
         /// </summary>
         [XmlElement("item_brand")]
@@ -57,6 +63,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
+
+        /// <summary>
+        /// 商品名称
+        /// </summary>
+        [XmlElement("item_name")]
+        public string ItemName { get; set; }
 
         /// <summary>
         /// 商品退款信息

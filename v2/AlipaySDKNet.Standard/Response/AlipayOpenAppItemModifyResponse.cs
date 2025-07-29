@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayOpenAppItemModifyResponse : AopResponse
     {
         /// <summary>
+        /// 商品业务模式，租赁业务模式包含（短租：0；长租：1；先租后买 ： 2）
+        /// </summary>
+        [XmlElement("business_model")]
+        public string BusinessModel { get; set; }
+
+        /// <summary>
         /// 支付宝平台侧spu ID，是支付宝平台侧商品的唯一标识，后续与平台交互，需要使用该 ID，建议持久化。
         /// </summary>
         [XmlElement("item_id")]

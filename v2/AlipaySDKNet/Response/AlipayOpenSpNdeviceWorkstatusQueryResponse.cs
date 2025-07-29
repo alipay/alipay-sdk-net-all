@@ -33,10 +33,28 @@ namespace Aop.Api.Response
         public string LeadsId { get; set; }
 
         /// <summary>
+        /// 操作人未脱敏支付宝登记的电话号码 - 绑定场景为作业人员电话号码 - 内部解绑场景为空 - 产品层解绑场景为解绑操作人员电话号码
+        /// </summary>
+        [XmlElement("operator_contact_number")]
+        public string OperatorContactNumber { get; set; }
+
+        /// <summary>
+        /// 操作人未脱敏名称 - 绑定场景为作业人员名称 - 内部解绑场景为SYSTEM - 产品层解绑场景为解绑操作人员名称
+        /// </summary>
+        [XmlElement("operator_name")]
+        public string OperatorName { get; set; }
+
+        /// <summary>
         /// 外部门店编号，门店leads上报时的外部门店编号
         /// </summary>
         [XmlElement("out_store_id")]
         public string OutStoreId { get; set; }
+
+        /// <summary>
+        /// 点位id
+        /// </summary>
+        [XmlElement("position_id")]
+        public string PositionId { get; set; }
 
         /// <summary>
         /// 关联设备sn唯一标识

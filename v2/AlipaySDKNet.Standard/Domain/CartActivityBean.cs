@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public long LimitCnt { get; set; }
 
         /// <summary>
-        /// 商品原价
+        /// 商品原价【人民币】
         /// </summary>
         [XmlElement("original_price")]
         public string OriginalPrice { get; set; }

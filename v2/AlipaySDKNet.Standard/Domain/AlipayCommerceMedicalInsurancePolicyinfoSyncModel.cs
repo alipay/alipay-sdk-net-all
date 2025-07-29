@@ -122,6 +122,12 @@ namespace Aop.Api.Domain
         public string PolicyNo { get; set; }
 
         /// <summary>
+        /// 保单类型（不填写默认健康险）
+        /// </summary>
+        [XmlElement("policy_type")]
+        public string PolicyType { get; set; }
+
+        /// <summary>
         /// 分期保费 单位：币种标准单位，如：人民币-元（保留2位小数） （新增必填）
         /// </summary>
         [XmlElement("premium")]

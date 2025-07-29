@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string Status { get; set; }
 
         /// <summary>
-        /// 交易号,查询支付结果时使用(status为SUCCESS时必填)
+        /// 当status=SUCCESS时必选
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }

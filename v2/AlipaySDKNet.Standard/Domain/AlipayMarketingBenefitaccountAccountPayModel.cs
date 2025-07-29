@@ -40,16 +40,40 @@ namespace Aop.Api.Domain
         public string ExtendInfo { get; set; }
 
         /// <summary>
+        /// 本次充值出资方
+        /// </summary>
+        [XmlElement("fund_provider")]
+        public string FundProvider { get; set; }
+
+        /// <summary>
         /// 出资账号用户ID
         /// </summary>
         [XmlElement("fund_user_id")]
         public string FundUserId { get; set; }
 
         /// <summary>
+        /// 是否他人代付
+        /// </summary>
+        [XmlElement("other_pay")]
+        public bool OtherPay { get; set; }
+
+        /// <summary>
+        /// 代付人支付宝账号
+        /// </summary>
+        [XmlElement("other_pay_fund_user_id")]
+        public string OtherPayFundUserId { get; set; }
+
+        /// <summary>
         /// 创建人用户ID
         /// </summary>
         [XmlElement("publisher_user_id")]
         public string PublisherUserId { get; set; }
+
+        /// <summary>
+        /// 充值类型
+        /// </summary>
+        [XmlElement("recharge_type")]
+        public string RechargeType { get; set; }
 
         /// <summary>
         /// 支付成功跳转url

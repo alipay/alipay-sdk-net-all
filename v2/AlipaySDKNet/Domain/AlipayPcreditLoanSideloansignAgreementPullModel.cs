@@ -58,5 +58,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 子授信模式，目前仅在签支合一的情况下传入
+        /// </summary>
+        [XmlElement("sub_credit_type")]
+        public string SubCreditType { get; set; }
     }
 }

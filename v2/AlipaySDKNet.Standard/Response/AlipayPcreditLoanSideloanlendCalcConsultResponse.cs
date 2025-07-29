@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayPcreditLoanSideloanlendCalcConsultResponse : AopResponse
     {
         /// <summary>
+        /// 试算是否准入
+        /// </summary>
+        [XmlElement("admit")]
+        public bool Admit { get; set; }
+
+        /// <summary>
         /// 本次试算使用的营销卡券列表
         /// </summary>
         [XmlArray("coupon_code_list")]
@@ -34,6 +40,18 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("extension")]
         public string Extension { get; set; }
+
+        /// <summary>
+        /// 拒绝必填，支用拒绝原因code
+        /// </summary>
+        [XmlElement("fail_reason_code")]
+        public string FailReasonCode { get; set; }
+
+        /// <summary>
+        /// 咨询不准入时拒绝原因描述
+        /// </summary>
+        [XmlElement("fail_reason_message")]
+        public string FailReasonMessage { get; set; }
 
         /// <summary>
         /// 放款机构

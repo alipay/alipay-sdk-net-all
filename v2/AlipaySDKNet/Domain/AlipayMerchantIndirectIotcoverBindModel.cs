@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// 碰音箱在商户绑定时上传的二维码地址,部分supplier_id该字段必传。
+        /// </summary>
+        [XmlElement("encode_url")]
+        public string EncodeUrl { get; set; }
+
+        /// <summary>
         /// 间连商户在支付宝体系内的唯一id,一般以2088开头。
         /// </summary>
         [XmlElement("smid")]

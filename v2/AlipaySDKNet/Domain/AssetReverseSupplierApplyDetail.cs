@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<AssetReverseSupplierApplyExpressSnDetails> ExpressSnDetails { get; set; }
 
         /// <summary>
+        /// 未妥投类型，默认REVERSE_SUPPLIER_WITH_SN 有SN未妥投
+        /// </summary>
+        [XmlElement("reverse_supplier_type")]
+        public string ReverseSupplierType { get; set; }
+
+        /// <summary>
         /// 发起未妥投供应商id
         /// </summary>
         [XmlElement("supplier_id")]

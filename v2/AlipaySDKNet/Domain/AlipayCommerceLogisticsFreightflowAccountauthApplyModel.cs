@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -44,6 +45,25 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("mode")]
         public string Mode { get; set; }
+
+        /// <summary>
+        /// 网商银行应用id,当mode为ANT_MYBANK时由网商提供给商户
+        /// </summary>
+        [XmlElement("mybank_app_id")]
+        public string MybankAppId { get; set; }
+
+        /// <summary>
+        /// 网商银行解决方案CODE,当mode为ANT_MYBANK时由网商提供给商户
+        /// </summary>
+        [XmlElement("mybank_scene_code")]
+        public string MybankSceneCode { get; set; }
+
+        /// <summary>
+        /// 授权操作的补充信息. 授权代付涉及到补充的操作信息，是必填的，需要填充代付收方的主体信息，支持多个
+        /// </summary>
+        [XmlArray("opposite_account_info")]
+        [XmlArrayItem("freight_flow_opposite_account_info")]
+        public List<FreightFlowOppositeAccountInfo> OppositeAccountInfo { get; set; }
 
         /// <summary>
         /// 如果mode为网商银行，则为网商银行分配

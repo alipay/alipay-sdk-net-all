@@ -28,6 +28,12 @@ namespace Aop.Api.Response
         public string CoolOffType { get; set; }
 
         /// <summary>
+        /// 默认放款卡，只有签支合一才有，可能会空
+        /// </summary>
+        [XmlElement("default_bank_card")]
+        public GrantBankCard DefaultBankCard { get; set; }
+
+        /// <summary>
         /// 扩展信息
         /// </summary>
         [XmlElement("extension")]

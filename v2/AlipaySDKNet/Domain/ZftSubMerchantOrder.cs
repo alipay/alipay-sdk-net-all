@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string Reason { get; set; }
 
         /// <summary>
+        /// 签约支付宝账号（脱敏）
+        /// </summary>
+        [XmlElement("safe_binding_logon_id")]
+        public string SafeBindingLogonId { get; set; }
+
+        /// <summary>
         /// 二级商户id。当总体申请状态status为99时，smid才算进件完成
         /// </summary>
         [XmlElement("smid")]

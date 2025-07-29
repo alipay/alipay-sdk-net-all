@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -13,6 +14,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("cool_off_type")]
         public string CoolOffType { get; set; }
+
+        /// <summary>
+        /// 签约奖品发放结果
+        /// </summary>
+        [XmlElement("coupon_send_result")]
+        public CouponSendResult CouponSendResult { get; set; }
 
         /// <summary>
         /// 授信成功后返回，授信总额度，单位元，保留两位小数

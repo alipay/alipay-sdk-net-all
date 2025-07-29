@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string FailReasonCode { get; set; }
 
         /// <summary>
-        /// fail
+        /// 业务失败原因描述
         /// </summary>
         [XmlElement("fail_reason_message")]
         public string FailReasonMessage { get; set; }

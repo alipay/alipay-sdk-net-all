@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,12 @@ namespace Aop.Api.Domain
     [Serializable]
     public class ApartmentContactInfo : AopObject
     {
+        /// <summary>
+        /// 联系人支付宝账号
+        /// </summary>
+        [XmlElement("contact_alipay_account")]
+        public string ContactAlipayAccount { get; set; }
+
         /// <summary>
         /// 联系人姓名
         /// </summary>
@@ -20,6 +27,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("contact_profile_pic")]
         public string ContactProfilePic { get; set; }
+
+        /// <summary>
+        /// 开通留资方式
+        /// </summary>
+        [XmlArray("enabled_lead_channels")]
+        [XmlArrayItem("string")]
+        public List<string> EnabledLeadChannels { get; set; }
 
         /// <summary>
         /// 商家IM支付宝端内的跳转链接

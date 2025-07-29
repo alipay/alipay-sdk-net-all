@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string MarketTargetCode { get; set; }
 
         /// <summary>
+        /// 营销目标配置
+        /// </summary>
+        [XmlElement("market_target_config")]
+        public MarketTargetConfiguration MarketTargetConfig { get; set; }
+
+        /// <summary>
         /// 计划id
         /// </summary>
         [XmlElement("plan_id")]
@@ -50,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("principal_tag")]
         public string PrincipalTag { get; set; }
+
+        /// <summary>
+        /// 冻结单id
+        /// </summary>
+        [XmlElement("rtb_freeze_order_id")]
+        public string RtbFreezeOrderId { get; set; }
 
         /// <summary>
         /// 计划开始投放日期，格式为yyyy-MM-dd，新增或者编辑时有改动必须大于等于今天

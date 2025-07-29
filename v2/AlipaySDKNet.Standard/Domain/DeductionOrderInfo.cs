@@ -157,10 +157,34 @@ namespace Aop.Api.Domain
         public string RedeemWay { get; set; }
 
         /// <summary>
+        /// 核销退款金额（单位分）
+        /// </summary>
+        [XmlElement("refund_amount")]
+        public long RefundAmount { get; set; }
+
+        /// <summary>
         /// 退款金额，单位：分
         /// </summary>
         [XmlElement("refund_cash")]
         public long RefundCash { get; set; }
+
+        /// <summary>
+        /// 核销退款时间
+        /// </summary>
+        [XmlElement("refund_time")]
+        public string RefundTime { get; set; }
+
+        /// <summary>
+        /// 售卖门店对应的外部门店编号
+        /// </summary>
+        [XmlElement("sell_rel_shop_id")]
+        public string SellRelShopId { get; set; }
+
+        /// <summary>
+        /// 售卖门店id
+        /// </summary>
+        [XmlElement("sell_shop_id")]
+        public string SellShopId { get; set; }
 
         /// <summary>
         /// 门店ID
@@ -179,6 +203,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }
+
+        /// <summary>
+        /// 核销金额，面额价，单位分
+        /// </summary>
+        [XmlElement("use_amount")]
+        public long UseAmount { get; set; }
+
+        /// <summary>
+        /// 核销门店对应的外部门店编号
+        /// </summary>
+        [XmlElement("use_rel_shop_id")]
+        public string UseRelShopId { get; set; }
+
+        /// <summary>
+        /// 核销门店名称
+        /// </summary>
+        [XmlElement("use_shop_name")]
+        public string UseShopName { get; set; }
 
         /// <summary>
         /// 支付宝用户的userId。

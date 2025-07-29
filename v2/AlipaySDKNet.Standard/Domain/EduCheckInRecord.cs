@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CheckInResult { get; set; }
 
         /// <summary>
+        /// 签到来源类型
+        /// </summary>
+        [XmlElement("check_in_source_type")]
+        public string CheckInSourceType { get; set; }
+
+        /// <summary>
         /// 签到时间
         /// </summary>
         [XmlElement("check_in_time")]
@@ -44,6 +50,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("inst_id")]
         public string InstId { get; set; }
+
+        /// <summary>
+        /// 纬度
+        /// </summary>
+        [XmlElement("latitude")]
+        public string Latitude { get; set; }
+
+        /// <summary>
+        /// 经度
+        /// </summary>
+        [XmlElement("longitude")]
+        public string Longitude { get; set; }
 
         /// <summary>
         /// 姓名

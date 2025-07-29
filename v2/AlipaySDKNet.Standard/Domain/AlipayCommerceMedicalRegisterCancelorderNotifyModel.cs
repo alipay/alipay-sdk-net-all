@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalRegisterCancelorderNotifyModel : AopObject
     {
         /// <summary>
+        /// 支付宝id(必填)
+        /// </summary>
+        [XmlElement("alipay_user_id")]
+        public string AlipayUserId { get; set; }
+
+        /// <summary>
+        /// 服务商code 微医
+        /// </summary>
+        [XmlElement("isv_code")]
+        public string IsvCode { get; set; }
+
+        /// <summary>
         /// 排版下具体号源信息id
         /// </summary>
         [XmlElement("number_no")]

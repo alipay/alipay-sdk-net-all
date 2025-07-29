@@ -18,6 +18,12 @@ namespace Aop.Api.Response
         public List<IsvBizOpenOrderFailReason> FailReasons { get; set; }
 
         /// <summary>
+        /// 商户号
+        /// </summary>
+        [XmlElement("merchant_pid")]
+        public string MerchantPid { get; set; }
+
+        /// <summary>
         /// 订单信息
         /// </summary>
         [XmlElement("order_content")]

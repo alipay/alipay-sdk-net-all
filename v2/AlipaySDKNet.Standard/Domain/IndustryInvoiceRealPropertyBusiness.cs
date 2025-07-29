@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public string RealPropertyAddress { get; set; }
 
         /// <summary>
-        /// 不动产使用面积，整数最长七位，小数最长六位
+        /// 不动产使用面积，整数最长15位，小数最长10位
         /// </summary>
         [XmlElement("real_property_area")]
         public string RealPropertyArea { get; set; }

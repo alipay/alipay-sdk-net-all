@@ -228,7 +228,13 @@ namespace Aop.Api.Domain
         public long SalePriceTotal { get; set; }
 
         /// <summary>
-        /// 购卡时的门店ID
+        /// 售卖门店对应的外部门店编号
+        /// </summary>
+        [XmlElement("sell_rel_shop_id")]
+        public string SellRelShopId { get; set; }
+
+        /// <summary>
+        /// 售卖时的门店ID
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }

@@ -97,6 +97,13 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 乘机人四要素加密信息列表，其中的certType证件号和手机号经过了对称加密密钥加密过
+        /// </summary>
+        [XmlArray("passenger_info_encrypted_list")]
+        [XmlArrayItem("traffic_air_ticket_passenger_encrypted_info")]
+        public List<TrafficAirTicketPassengerEncryptedInfo> PassengerInfoEncryptedList { get; set; }
+
+        /// <summary>
         /// 乘机人信息
         /// </summary>
         [XmlArray("passenger_info_list")]

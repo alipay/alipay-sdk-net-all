@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class OBCompanyDTO : AopObject
     {
         /// <summary>
+        /// 个人认证为用户身份证号码，企业认证为企业统一社会信用码
+        /// </summary>
+        [XmlElement("cert_no")]
+        public string CertNo { get; set; }
+
+        /// <summary>
         /// 合同列表
         /// </summary>
         [XmlArray("contract_list")]

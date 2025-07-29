@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AlipayLiveId { get; set; }
 
         /// <summary>
+        /// 评论发送给目标用户的ID，课代表角色发的评论这里指加密后的支付宝用户2088
+        /// </summary>
+        [XmlElement("alipay_target_id")]
+        public string AlipayTargetId { get; set; }
+
+        /// <summary>
         /// 评论内容
         /// </summary>
         [XmlElement("comment_text")]
@@ -62,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("tail_link_url")]
         public string TailLinkUrl { get; set; }
+
+        /// <summary>
+        /// 评论可见范围，ALL：所有人可见【默认】，ONLY_ONESELF
+        /// </summary>
+        [XmlElement("visible_scope")]
+        public string VisibleScope { get; set; }
     }
 }

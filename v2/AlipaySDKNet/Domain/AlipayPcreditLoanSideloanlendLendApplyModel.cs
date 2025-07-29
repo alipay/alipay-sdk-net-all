@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public List<string> CouponCodeList { get; set; }
 
         /// <summary>
+        /// 渠道侧授信申请单号
+        /// </summary>
+        [XmlElement("credit_apply_no")]
+        public string CreditApplyNo { get; set; }
+
+        /// <summary>
         /// 扩展字段JSON String
         /// </summary>
         [XmlElement("extension")]
@@ -64,6 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("loan_term_unit")]
         public string LoanTermUnit { get; set; }
+
+        /// <summary>
+        /// 支用类型
+        /// </summary>
+        [XmlElement("loan_type")]
+        public string LoanType { get; set; }
 
         /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识

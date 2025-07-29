@@ -66,6 +66,12 @@ namespace Aop.Api.Domain
         public string InvoiceKind { get; set; }
 
         /// <summary>
+        /// 红冲原因
+        /// </summary>
+        [XmlElement("invoice_red_reason")]
+        public string InvoiceRedReason { get; set; }
+
+        /// <summary>
         /// 发票类型
         /// </summary>
         [XmlElement("invoice_type")]

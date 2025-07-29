@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class EnterpriseProfilesDTO : AopObject
     {
         /// <summary>
+        /// 企业注册来源，仅特定场景需要传值
+        /// </summary>
+        [XmlElement("access_channel")]
+        public string AccessChannel { get; set; }
+
+        /// <summary>
         /// 是否需要自动创建企业人脸库，适用于对接团餐刷脸付、门禁刷脸通行等场景；<br/> 不传默认为 false，传 true 时会自动创建企业的 IOT 设备人脸库，人脸库创建失败会阻塞企业注册
         /// </summary>
         [XmlElement("create_iot_group")]

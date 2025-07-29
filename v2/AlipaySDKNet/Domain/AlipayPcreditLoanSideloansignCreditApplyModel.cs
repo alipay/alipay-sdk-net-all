@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayPcreditLoanSideloansignCreditApplyModel : AopObject
     {
         /// <summary>
+        /// 签约发奖的活动id，无发奖活动时可为空
+        /// </summary>
+        [XmlElement("activity_id")]
+        public string ActivityId { get; set; }
+
+        /// <summary>
         /// 支付宝用户id，客户在支付宝的身份证
         /// </summary>
         [XmlElement("alipay_user_id")]
@@ -64,6 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 子授信模式 AUTO_LOAN，签支合一自动支用
+        /// </summary>
+        [XmlElement("sub_credit_type")]
+        public string SubCreditType { get; set; }
 
         /// <summary>
         /// 大安全核身id

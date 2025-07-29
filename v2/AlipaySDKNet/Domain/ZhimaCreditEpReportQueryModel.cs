@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_no")]
         public string OrderNo { get; set; }
+
+        /// <summary>
+        /// 报告类型。可选PDF和H5，不传入默认PDF
+        /// </summary>
+        [XmlElement("report_type")]
+        public string ReportType { get; set; }
     }
 }

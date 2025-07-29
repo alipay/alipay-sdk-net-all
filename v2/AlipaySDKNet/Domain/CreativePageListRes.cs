@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AdName { get; set; }
 
         /// <summary>
+        /// 审核拒绝文案，由审核方填充。
+        /// </summary>
+        [XmlElement("audit_refuse_reason")]
+        public string AuditRefuseReason { get; set; }
+
+        /// <summary>
         /// 创意业务状态 PARTIALLY_ENABLE 代表有效-部分审核不通过状态
         /// </summary>
         [XmlElement("creative_biz_status")]
@@ -86,6 +92,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("punish_reason")]
         public string PunishReason { get; set; }
+
+        /// <summary>
+        /// 审核拒绝扩展信息
+        /// </summary>
+        [XmlElement("refuse_extend_info_res")]
+        public CreativeRefuseExtendInfoRes RefuseExtendInfoRes { get; set; }
 
         /// <summary>
         /// 创意处置。状态 0:正常,1:风控

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CorpVehicleId { get; set; }
 
         /// <summary>
+        /// 企业模式：高速费行程代扣使用企业代扣账户进行代扣，运单上送成功后，企业代扣即刻生效 个人模式：高速费行程代扣使用个人代扣账户进行代扣，运单需进行ETC免密代扣签约，默认为个人模式
+        /// </summary>
+        [XmlElement("deduct_type")]
+        public string DeductType { get; set; }
+
+        /// <summary>
         /// 高速通行费用，单位元，精确到两位小数
         /// </summary>
         [XmlElement("highway_fee")]

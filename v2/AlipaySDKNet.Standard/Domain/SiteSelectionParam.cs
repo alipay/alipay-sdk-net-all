@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class SiteSelectionParam : AopObject
     {
         /// <summary>
-        /// 全国统一城市编码
+        /// 全国统一城市编码（地级市级别），eg：北京市110100，杭州市330100
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string DateTo { get; set; }
 
         /// <summary>
-        /// 1. H3坐标网格编码；支持等级6-9的网格编码。 2. 若为预测场站价格时，请传入互联互通场站编码。
+        /// 1. H3坐标网格编码。 2. 若为预测场站价格时，请传入互联互通场站编码。
         /// </summary>
         [XmlArray("index_list")]
         [XmlArrayItem("string")]

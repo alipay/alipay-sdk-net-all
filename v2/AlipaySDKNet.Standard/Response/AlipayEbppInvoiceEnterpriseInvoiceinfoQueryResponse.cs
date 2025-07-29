@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -49,6 +50,19 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("file_type")]
         public string FileType { get; set; }
+
+        /// <summary>
+        /// 发票预览图地址
+        /// </summary>
+        [XmlElement("image_url")]
+        public string ImageUrl { get; set; }
+
+        /// <summary>
+        /// 特定行业信息，需要根据特定行业要素类型（specific_factor），获取<a href="https://opendocs.alipay.com/pre-open/07wr4t?pathHash=5d7c31e5#%E8%A1%8C%E4%B8%9A%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89">具体行业模型</a>
+        /// </summary>
+        [XmlArray("industry_specific_infos")]
+        [XmlArrayItem("string")]
+        public List<string> IndustrySpecificInfos { get; set; }
 
         /// <summary>
         /// 发票查验结果
@@ -183,10 +197,22 @@ namespace Aop.Api.Response
         public string PayerRegisterNo { get; set; }
 
         /// <summary>
+        /// 发票关联到账单时，该参数有值，为关联账单的交易号
+        /// </summary>
+        [XmlElement("related_pay_no")]
+        public string RelatedPayNo { get; set; }
+
+        /// <summary>
         /// 是否关联账单
         /// </summary>
         [XmlElement("related_to_consume")]
         public bool RelatedToConsume { get; set; }
+
+        /// <summary>
+        /// 特定行业要素类型
+        /// </summary>
+        [XmlElement("specific_factor")]
+        public string SpecificFactor { get; set; }
 
         /// <summary>
         /// 发票金额，单位元

@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("staff_name")]
         public string StaffName { get; set; }
+
+        /// <summary>
+        /// 店员用户ID
+        /// </summary>
+        [XmlElement("staff_user_id")]
+        public string StaffUserId { get; set; }
     }
 }

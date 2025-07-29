@@ -46,10 +46,22 @@ namespace Aop.Api.Domain
         public string Mode { get; set; }
 
         /// <summary>
+        /// 网商银行应用id,当mode为ANT_MYBANK时由网商提供给商户
+        /// </summary>
+        [XmlElement("mybank_app_id")]
+        public string MybankAppId { get; set; }
+
+        /// <summary>
         /// 网商银行分配的合作方机构号
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }
+
+        /// <summary>
+        /// 关单时间2024-06-18 15:12:36
+        /// </summary>
+        [XmlElement("pay_expire_time")]
+        public string PayExpireTime { get; set; }
 
         /// <summary>
         /// 收款方户名

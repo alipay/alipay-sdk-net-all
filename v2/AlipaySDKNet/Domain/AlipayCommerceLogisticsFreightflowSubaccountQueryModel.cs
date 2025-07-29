@@ -22,6 +22,30 @@ namespace Aop.Api.Domain
         public string Mode { get; set; }
 
         /// <summary>
+        /// 网商银行应用id,当mode为ANT_MYBANK时由网商提供给商户
+        /// </summary>
+        [XmlElement("mybank_app_id")]
+        public string MybankAppId { get; set; }
+
+        /// <summary>
+        /// 网商银行解决方案COED,当mode=ANT_MYBANK时必选
+        /// </summary>
+        [XmlElement("mybank_scene_code")]
+        public string MybankSceneCode { get; set; }
+
+        /// <summary>
+        /// 用于区分开户场景，映射解决方案实例配置。可与网商确认传入的必要性
+        /// </summary>
+        [XmlElement("mybank_scene_type")]
+        public string MybankSceneType { get; set; }
+
+        /// <summary>
+        /// 用于区分开户子场景，映射解决方案实例配置。可与网商确认传入的必要性
+        /// </summary>
+        [XmlElement("mybank_sub_scene")]
+        public string MybankSubScene { get; set; }
+
+        /// <summary>
         /// 如果mode为网商银行，则为网商银行分配
         /// </summary>
         [XmlElement("partner_id")]

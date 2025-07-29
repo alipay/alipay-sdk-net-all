@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ImageMaterialId { get; set; }
 
         /// <summary>
-        /// 品牌编号；参考此文档传入品牌编号：https://xfpzl.yuque.com/dgw58m/apg2ie/qlqvdv0dhsbldyhv#kIy4
+        /// 品牌编号；参考租赁行业空间品牌编号文档
         /// </summary>
         [XmlElement("item_brand")]
         public string ItemBrand { get; set; }

@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// 碰音箱在商户绑定时上传的二维码地址。
+        /// </summary>
+        [XmlElement("encode_url")]
+        public string EncodeUrl { get; set; }
+
+        /// <summary>
         /// 设备绑定的商户在支付宝体系内的唯一id,一般以2088开头。设备处于已绑定状态时会返回对应绑定商户id。如果设备没有绑定过或者已经解绑，该字段为空
         /// </summary>
         [XmlElement("smid")]

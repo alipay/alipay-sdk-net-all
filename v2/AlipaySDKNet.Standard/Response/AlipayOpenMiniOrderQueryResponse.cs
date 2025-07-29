@@ -53,6 +53,12 @@ namespace Aop.Api.Response
         public DeliveryDetailInfoVO DeliveryDetail { get; set; }
 
         /// <summary>
+        /// 扩展信息
+        /// </summary>
+        [XmlElement("ext_info")]
+        public MiniOrderExtInfoVO ExtInfo { get; set; }
+
+        /// <summary>
         /// 订单来源渠道信息
         /// </summary>
         [XmlElement("landing_channel_info")]

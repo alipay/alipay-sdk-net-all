@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
+        /// 物料版本号
+        /// </summary>
+        [XmlElement("item_version")]
+        public long ItemVersion { get; set; }
+
+        /// <summary>
         /// 物料发布状态
         /// </summary>
         [XmlElement("release_status")]

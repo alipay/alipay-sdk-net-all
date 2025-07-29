@@ -8,5 +8,10 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipaySocialAntforestFreeplantApplyResponse : AopResponse
     {
+        /// <summary>
+        /// 证书ID
+        /// </summary>
+        [XmlElement("certificate_id")]
+        public string CertificateId { get; set; }
     }
 }

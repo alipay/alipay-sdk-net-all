@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<AftersaleMediaInfoVO> AdditionalMediaList { get; set; }
 
         /// <summary>
-        /// 售后单号，可从售后通知消息（alipay.commerce.rent.order.aftersale.notify）中获取
+        /// 售后单号
         /// </summary>
         [XmlElement("aftersale_id")]
         public string AftersaleId { get; set; }
@@ -46,6 +46,25 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("operation_type")]
         public string OperationType { get; set; }
+
+        /// <summary>
+        /// 商户售后单号，要保证唯一性
+        /// </summary>
+        [XmlElement("out_aftersale_id")]
+        public string OutAftersaleId { get; set; }
+
+        /// <summary>
+        /// 支付金额，单位：元，精确到小数点后两位。 注意事项
+        /// </summary>
+        [XmlElement("pay_amount")]
+        public string PayAmount { get; set; }
+
+        /// <summary>
+        /// 订单费用项明细列表
+        /// </summary>
+        [XmlArray("pay_items")]
+        [XmlArrayItem("aftersale_pay_item_v_o")]
+        public List<AftersalePayItemVO> PayItems { get; set; }
 
         /// <summary>
         /// 操作原因类型

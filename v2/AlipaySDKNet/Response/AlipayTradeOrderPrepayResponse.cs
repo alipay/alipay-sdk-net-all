@@ -22,6 +22,12 @@ namespace Aop.Api.Response
         public string OutTradeNo { get; set; }
 
         /// <summary>
+        /// 预下单ID，后续通过该预下单ID唤起收银台支付
+        /// </summary>
+        [XmlElement("prepay_id")]
+        public string PrepayId { get; set; }
+
+        /// <summary>
         /// 账户机构唤端需要的订单唯一标识
         /// </summary>
         [XmlElement("tn")]

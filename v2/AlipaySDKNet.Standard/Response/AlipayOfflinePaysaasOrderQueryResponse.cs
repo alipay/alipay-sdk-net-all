@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string IsvOrderNo { get; set; }
 
         /// <summary>
+        /// 商户系统内唯一订单号，对isv为外部订单号
+        /// </summary>
+        [XmlElement("merchant_order_no")]
+        public string MerchantOrderNo { get; set; }
+
+        /// <summary>
         /// 收款订单状态，用于服务商收银机展示收款状态
         /// </summary>
         [XmlElement("order_status")]

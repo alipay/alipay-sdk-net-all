@@ -26,5 +26,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("mode")]
         public string Mode { get; set; }
+
+        /// <summary>
+        /// 网商银行应用id,当mode为ANT_MYBANK时由网商提供给商户
+        /// </summary>
+        [XmlElement("mybank_app_id")]
+        public string MybankAppId { get; set; }
+
+        /// <summary>
+        /// 网商解决方案CODE,当mode为ANT_MYBANK时由网商提供给商户
+        /// </summary>
+        [XmlElement("mybank_scene_code")]
+        public string MybankSceneCode { get; set; }
     }
 }

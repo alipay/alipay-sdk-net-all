@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string EndDate { get; set; }
 
         /// <summary>
-        /// 商家pid，非必填参数；type=AGENCY的情况可以传入
+        /// 商家pid，非必填参数；type=AGENCY的情况必须传入
         /// </summary>
         [XmlElement("m_pid")]
         public string MPid { get; set; }

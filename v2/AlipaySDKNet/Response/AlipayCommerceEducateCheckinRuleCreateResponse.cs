@@ -8,5 +8,10 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayCommerceEducateCheckinRuleCreateResponse : AopResponse
     {
+        /// <summary>
+        /// 签到规则id
+        /// </summary>
+        [XmlElement("rule_id")]
+        public string RuleId { get; set; }
     }
 }

@@ -85,7 +85,7 @@ namespace Aop.Api.Domain
         public List<ApprovalTravelerDTO> TravelerList { get; set; }
 
         /// <summary>
-        /// 行程信息列表
+        /// 行程信息列表 
         /// </summary>
         [XmlArray("trip_info_list")]
         [XmlArrayItem("approval_trip_d_t_o")]

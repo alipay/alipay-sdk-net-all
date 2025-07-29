@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// 下载链接
+        /// 数据下载链接地址；当状态为SUCCESS时，url为空表示无数据返回
         /// </summary>
         [XmlElement("download_url")]
         public string DownloadUrl { get; set; }

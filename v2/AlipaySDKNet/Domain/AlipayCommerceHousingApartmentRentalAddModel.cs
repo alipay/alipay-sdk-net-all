@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 校验码
+        /// 校验码 当前字段已废弃(业务对字段调整，废弃该参数)
         /// </summary>
         [XmlElement("verification_code")]
         public string VerificationCode { get; set; }

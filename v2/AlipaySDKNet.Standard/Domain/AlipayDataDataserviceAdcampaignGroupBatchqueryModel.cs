@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public List<string> GroupStatusList { get; set; }
 
         /// <summary>
-        /// 二级营销目标code。 注意事项：层级关系和投放平台层级关系保持一致。 1.销售线索收集（一级）:tag000001，销售线索收集（二级）tag200600 2.自定义投放（一级）tag000004，自定义投放（二级）tag902001
+        /// 二级营销目标code。
         /// </summary>
         [XmlElement("market_target_code")]
         public string MarketTargetCode { get; set; }

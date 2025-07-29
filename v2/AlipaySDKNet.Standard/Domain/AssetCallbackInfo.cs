@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public string ErrorDesc { get; set; }
 
         /// <summary>
+        /// 物料版本反馈信息
+        /// </summary>
+        [XmlElement("feedback_info")]
+        public AssetItemVersionFeedBackInfo FeedbackInfo { get; set; }
+
+        /// <summary>
         /// 是否处理成功
         /// </summary>
         [XmlElement("success")]

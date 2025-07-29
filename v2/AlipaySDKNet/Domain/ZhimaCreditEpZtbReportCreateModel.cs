@@ -40,16 +40,34 @@ namespace Aop.Api.Domain
         public string BiddingEpName { get; set; }
 
         /// <summary>
+        /// 合作方客户id
+        /// </summary>
+        [XmlElement("customer_id")]
+        public string CustomerId { get; set; }
+
+        /// <summary>
         /// 招标信息标题标的物，多个用,隔开
         /// </summary>
         [XmlElement("heading_object")]
         public string HeadingObject { get; set; }
 
         /// <summary>
+        /// 报告类型。不传入默认为EP_ZTB_REPORT
+        /// </summary>
+        [XmlElement("order_type")]
+        public string OrderType { get; set; }
+
+        /// <summary>
         /// 商户唯一业务流水号，由大小写字母和数字构成。
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 套餐类别
+        /// </summary>
+        [XmlElement("pack_type")]
+        public string PackType { get; set; }
 
         /// <summary>
         /// 招标项目所在省市区国标编码，若获取不到，默认给编码值000000
@@ -74,6 +92,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("project_name")]
         public string ProjectName { get; set; }
+
+        /// <summary>
+        /// 报告价格。单位人民币元
+        /// </summary>
+        [XmlElement("report_amount")]
+        public string ReportAmount { get; set; }
 
         /// <summary>
         /// 受理场景码，由蚂蚁企业信用方分发提供，配置有误会返回参数错误

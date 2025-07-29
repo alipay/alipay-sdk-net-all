@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceAcommunicationDistributionFloworderCreateModel : AopObject
     {
         /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("alipay_user_id")]
+        public string AlipayUserId { get; set; }
+
+        /// <summary>
         /// 机构订单id
         /// </summary>
         [XmlElement("inst_order_id")]
@@ -26,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("mobile")]
         public string Mobile { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 支付类型

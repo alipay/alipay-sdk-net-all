@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class CardUseMethodInfo : AopObject
     {
         /// <summary>
-        /// 用户使用方式类型
+        /// 用户核销方式类型
         /// </summary>
         [XmlElement("use_method_type")]
         public string UseMethodType { get; set; }

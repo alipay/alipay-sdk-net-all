@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 使用实体条件
+        /// </summary>
+        [XmlElement("entity_condition")]
+        public string EntityCondition { get; set; }
+
+        /// <summary>
         /// 当前页码
         /// </summary>
         [XmlElement("page_no")]

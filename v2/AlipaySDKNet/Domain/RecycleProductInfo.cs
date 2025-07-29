@@ -23,14 +23,14 @@ namespace Aop.Api.Domain
         public string CategoryCode { get; set; }
 
         /// <summary>
-        /// 实物金图片地址列表，图片url
+        /// 实物图片地址（公网图片地址）
         /// </summary>
         [XmlArray("entity_image_url_list")]
         [XmlArrayItem("string")]
         public List<string> EntityImageUrlList { get; set; }
 
         /// <summary>
-        /// 发票图片地址列表，图片url
+        /// 发票图片地址（公网图片地址）
         /// </summary>
         [XmlArray("invoice_image_url_list")]
         [XmlArrayItem("string")]
@@ -49,7 +49,7 @@ namespace Aop.Api.Domain
         public string ProductName { get; set; }
 
         /// <summary>
-        /// 商品重量。支持两位小数点。单位为克，在检测结果确认前传入预估克重。
+        /// 商品重量/数量。支持两位小数点。默认为1
         /// </summary>
         [XmlElement("quantity")]
         public string Quantity { get; set; }
@@ -67,13 +67,13 @@ namespace Aop.Api.Domain
         public string QuantityMin { get; set; }
 
         /// <summary>
-        /// 单位，默认为克
+        /// 单位，默认为piece
         /// </summary>
         [XmlElement("unit")]
         public string Unit { get; set; }
 
         /// <summary>
-        /// 商品价格，单位元。
+        /// 单位价格，支持两位小数点，价格单位为元
         /// </summary>
         [XmlElement("unit_price")]
         public string UnitPrice { get; set; }

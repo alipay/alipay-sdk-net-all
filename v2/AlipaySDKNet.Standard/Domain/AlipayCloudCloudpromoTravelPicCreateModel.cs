@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayCloudCloudpromoTravelPicCreateModel : AopObject
     {
         /// <summary>
+        /// 页脚标题
+        /// </summary>
+        [XmlElement("footer_title")]
+        public string FooterTitle { get; set; }
+
+        /// <summary>
+        /// 头像链接
+        /// </summary>
+        [XmlElement("logo")]
+        public string Logo { get; set; }
+
+        /// <summary>
         /// tab1图片
         /// </summary>
         [XmlElement("pic_1")]
@@ -32,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pic_4")]
         public string Pic4 { get; set; }
+
+        /// <summary>
+        /// 页面标题
+        /// </summary>
+        [XmlElement("share_desc")]
+        public string ShareDesc { get; set; }
 
         /// <summary>
         /// 模板ID

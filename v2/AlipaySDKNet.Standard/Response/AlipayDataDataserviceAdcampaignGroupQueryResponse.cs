@@ -194,7 +194,7 @@ namespace Aop.Api.Response
         public List<OpenLbsEntry> LbsList { get; set; }
 
         /// <summary>
-        /// 二级营销目标code
+        /// 二级营销目标
         /// </summary>
         [XmlElement("market_target_code")]
         public string MarketTargetCode { get; set; }
@@ -237,6 +237,12 @@ namespace Aop.Api.Response
         public long PrincipalId { get; set; }
 
         /// <summary>
+        /// 是否开启推荐流量开关.0关闭，1开启
+        /// </summary>
+        [XmlElement("referral_traffic_switch")]
+        public long ReferralTrafficSwitch { get; set; }
+
+        /// <summary>
         /// 地理位置-行政区域，行政区域编码和省市区县对应关系见<a href="https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html">文档</a>
         /// </summary>
         [XmlArray("region_list")]
@@ -256,10 +262,23 @@ namespace Aop.Api.Response
         public string SceneCode { get; set; }
 
         /// <summary>
+        /// 搜索词列表
+        /// </summary>
+        [XmlArray("search_word_list")]
+        [XmlArrayItem("search_word")]
+        public List<SearchWord> SearchWordList { get; set; }
+
+        /// <summary>
         /// 转化目标成本。单位：元【人民币】
         /// </summary>
         [XmlElement("target_cpa")]
         public string TargetCpa { get; set; }
+
+        /// <summary>
+        /// 目标ROI,单位：元【人民币】
+        /// </summary>
+        [XmlElement("target_roi")]
+        public string TargetRoi { get; set; }
 
         /// <summary>
         /// 行业主题人群

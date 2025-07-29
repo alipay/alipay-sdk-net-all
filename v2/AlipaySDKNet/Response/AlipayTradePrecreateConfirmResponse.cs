@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public string AcquiringMode { get; set; }
 
         /// <summary>
+        /// 该参数代表该笔交易购买者的资产渠道的路由标识，cngw代表走中国统一网关，空或者无改key则是网联
+        /// </summary>
+        [XmlElement("expect_channel_route")]
+        public string ExpectChannelRoute { get; set; }
+
+        /// <summary>
         /// 间联商户信息,若商户是间联商户则必选 格式为json
         /// </summary>
         [XmlElement("indirect_merchant_info")]

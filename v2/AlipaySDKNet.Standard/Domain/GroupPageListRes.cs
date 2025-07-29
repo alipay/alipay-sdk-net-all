@@ -122,5 +122,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("target_cpa")]
         public string TargetCpa { get; set; }
+
+        /// <summary>
+        /// 目标ROI，单位【元】，人民币。 bidType= ROI时候必填
+        /// </summary>
+        [XmlElement("target_roi")]
+        public string TargetRoi { get; set; }
     }
 }

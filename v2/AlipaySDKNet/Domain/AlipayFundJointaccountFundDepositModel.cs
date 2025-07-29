@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 订单标题，长度超长会拒绝交易，可包括数字、字母、空格、汉字，但不能包括特殊字符、emoji等
         /// </summary>
         [XmlElement("order_title")]

@@ -59,7 +59,7 @@ namespace Aop.Api.Response
         public string ImgFileUrl { get; set; }
 
         /// <summary>
-        /// 发票总金额
+        /// 发票总金额，单位：元
         /// </summary>
         [XmlElement("invoice_amount")]
         public string InvoiceAmount { get; set; }
@@ -75,6 +75,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("invoice_apply_id")]
         public string InvoiceApplyId { get; set; }
+
+        /// <summary>
+        /// 开票时间
+        /// </summary>
+        [XmlElement("invoice_date")]
+        public string InvoiceDate { get; set; }
 
         /// <summary>
         /// 开票异常错误码
@@ -108,6 +114,12 @@ namespace Aop.Api.Response
         public string InvoiceNo { get; set; }
 
         /// <summary>
+        /// 红冲原因
+        /// </summary>
+        [XmlElement("invoice_red_reason")]
+        public string InvoiceRedReason { get; set; }
+
+        /// <summary>
         /// 开票状态
         /// </summary>
         [XmlElement("invoice_status")]
@@ -118,6 +130,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("invoice_tax_amount")]
         public string InvoiceTaxAmount { get; set; }
+
+        /// <summary>
+        /// 发票类型
+        /// </summary>
+        [XmlElement("invoice_type")]
+        public string InvoiceType { get; set; }
 
         /// <summary>
         /// 外部开票申请ID
@@ -143,6 +161,12 @@ namespace Aop.Api.Response
         [XmlArray("real_property_business_list")]
         [XmlArrayItem("industry_invoice_real_property_business")]
         public List<IndustryInvoiceRealPropertyBusiness> RealPropertyBusinessList { get; set; }
+
+        /// <summary>
+        /// 关联蓝票发票号码
+        /// </summary>
+        [XmlElement("related_blue_invoice_no")]
+        public string RelatedBlueInvoiceNo { get; set; }
 
         /// <summary>
         /// 销售方名称

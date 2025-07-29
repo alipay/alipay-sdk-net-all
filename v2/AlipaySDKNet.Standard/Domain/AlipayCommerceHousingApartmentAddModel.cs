@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string ApartmentVr { get; set; }
 
         /// <summary>
+        /// 卫生间数量
+        /// </summary>
+        [XmlElement("bath_room")]
+        public string BathRoom { get; set; }
+
+        /// <summary>
         /// 居室，1居，2居，3居等 
         /// </summary>
         [XmlElement("bed_room")]
@@ -80,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
+
+        /// <summary>
+        /// 建筑年代
+        /// </summary>
+        [XmlElement("construction_year")]
+        public string ConstructionYear { get; set; }
 
         /// <summary>
         /// 张三 
@@ -161,6 +173,18 @@ namespace Aop.Api.Domain
         public string IntentionalApplication { get; set; }
 
         /// <summary>
+        /// 厨房数量
+        /// </summary>
+        [XmlElement("kitchen")]
+        public string Kitchen { get; set; }
+
+        /// <summary>
+        /// 客厅数量
+        /// </summary>
+        [XmlElement("living_room")]
+        public string LivingRoom { get; set; }
+
+        /// <summary>
         /// 朝向 
         /// </summary>
         [XmlElement("orientation")]
@@ -171,6 +195,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("other")]
         public string Other { get; set; }
+
+        /// <summary>
+        /// 所有者身份证
+        /// </summary>
+        [XmlElement("owner_id")]
+        public string OwnerId { get; set; }
+
+        /// <summary>
+        /// 所有者姓名
+        /// </summary>
+        [XmlElement("owner_name")]
+        public string OwnerName { get; set; }
 
         /// <summary>
         /// 小程序详情跳转地址，例如：page=pages/af-home/index?myKey%3DmyValue
@@ -250,6 +286,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("usable_area_start")]
         public string UsableAreaStart { get; set; }
+
+        /// <summary>
+        /// 校验码
+        /// </summary>
+        [XmlElement("verification_code")]
+        public string VerificationCode { get; set; }
 
         /// <summary>
         /// null

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string MaValue { get; set; }
 
         /// <summary>
+        /// 指定退款账户
+        /// </summary>
+        [XmlElement("refund_marketing_account_no")]
+        public string RefundMarketingAccountNo { get; set; }
+
+        /// <summary>
         /// 退营销金额，单位：元
         /// </summary>
         [XmlElement("refund_marketing_amount")]

@@ -16,5 +16,12 @@ namespace Aop.Api.Response
         [XmlArray("deduct_list")]
         [XmlArrayItem("recycle_deduct_query_v_o")]
         public List<RecycleDeductQueryVO> DeductList { get; set; }
+
+        /// <summary>
+        /// 二级商户代扣协议签约状态
+        /// </summary>
+        [XmlArray("sign_list")]
+        [XmlArrayItem("recycle_deduct_sign_v_o")]
+        public List<RecycleDeductSignVO> SignList { get; set; }
     }
 }
