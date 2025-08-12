@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string ItemFinenessGrade { get; set; }
 
         /// <summary>
-        /// 商品名称
+        /// 商品名称，用于支付宝小程序订单中心、芝麻租赁频道中对用户展示
         /// </summary>
         [XmlElement("item_name")]
         public string ItemName { get; set; }
@@ -88,13 +88,13 @@ namespace Aop.Api.Domain
         public string RentModel { get; set; }
 
         /// <summary>
-        /// 商品单价，单位：元，精确到小数点后两位，注：租赁商品请传入日租金，如10元/天
+        /// 商品平均日租金，单位：元，精确到小数点后两位，注：租赁商品请传入日租金，如10元/天
         /// </summary>
         [XmlElement("sale_price")]
         public string SalePrice { get; set; }
 
         /// <summary>
-        /// 是否监管机
+        /// 是否监管机，仅3C手机适用
         /// </summary>
         [XmlElement("supervised")]
         public bool Supervised { get; set; }

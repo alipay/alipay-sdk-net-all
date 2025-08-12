@@ -10,14 +10,14 @@ namespace Aop.Api.Response
     public class AlipayCommerceTransportTourAssetDeleteResponse : AopResponse
     {
         /// <summary>
-        /// 出库失败的订单号列表
+        /// 出库失败的订单号列表。 结构：outBizNo|outVoucherId
         /// </summary>
         [XmlArray("fail_out_biz_no")]
         [XmlArrayItem("string")]
         public List<string> FailOutBizNo { get; set; }
 
         /// <summary>
-        /// 出库成功的订单号列表
+        /// 出库成功的订单号列表 结构：outBizNo|outVoucherId
         /// </summary>
         [XmlArray("success_out_biz_no")]
         [XmlArrayItem("string")]

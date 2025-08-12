@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// 关单原因编码：<a href="https://xfpzl.yuque.com/dgw58m/apg2ie/rhxb4dml3erlgqmi?singleDoc#" target="_blank">租赁订单取消原因枚举值</a>
+        /// 租赁订单取消原因枚举值
         /// </summary>
         [XmlElement("reason_code")]
         public string ReasonCode { get; set; }

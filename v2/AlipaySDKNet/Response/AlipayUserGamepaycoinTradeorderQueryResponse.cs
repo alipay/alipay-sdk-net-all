@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayUserGamepaycoinTradeorderQueryResponse : AopResponse
     {
         /// <summary>
-        /// 交易订单钻石数量
+        /// 交易订单虚拟币数量(个)
         /// </summary>
         [XmlElement("bill_amount")]
         public long BillAmount { get; set; }
@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string GoodsName { get; set; }
 
         /// <summary>
-        /// 交易退款钻石数量，未发生退款时为0
+        /// 交易退款虚拟币数量(个)，未发生退款时为0
         /// </summary>
         [XmlElement("refund_amount")]
         public long RefundAmount { get; set; }

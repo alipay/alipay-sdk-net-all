@@ -18,7 +18,7 @@ namespace Aop.Api.Response
         public List<TourOrderSyncResponse> SuccessOrderList { get; set; }
 
         /// <summary>
-        /// 失败的订单id
+        /// 失败的订单凭证号。 结构： outBizNum|outVoucherId
         /// </summary>
         [XmlElement("un_sync_order_no_list")]
         public string UnSyncOrderNoList { get; set; }

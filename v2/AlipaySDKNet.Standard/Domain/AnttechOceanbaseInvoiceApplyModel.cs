@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
-        /// 业务类型，需要向OB申请业务接入分配业务类型
+        /// 业务类型，需要向OB申请业务接入分配业务类型，动态增加，不使用枚举
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }
@@ -39,6 +39,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("currency_code")]
         public string CurrencyCode { get; set; }
+
+        /// <summary>
+        /// 财务备注信息，当经过了财务审批时，财务会填写备注信息
+        /// </summary>
+        [XmlElement("finance_remarks")]
+        public string FinanceRemarks { get; set; }
 
         /// <summary>
         /// 开票金额,CNY币种下单位为元

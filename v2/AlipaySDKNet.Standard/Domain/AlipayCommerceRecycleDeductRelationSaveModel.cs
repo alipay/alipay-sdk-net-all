@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BindWalletId { get; set; }
 
         /// <summary>
+        /// 绑定的收款钱包信息Id 场景钱包:钱包id，余额：userId
+        /// </summary>
+        [XmlElement("bind_wallet_open_id")]
+        public string BindWalletOpenId { get; set; }
+
+        /// <summary>
         /// 代扣关系支付类型
         /// </summary>
         [XmlElement("bind_wallet_type")]
@@ -28,7 +34,7 @@ namespace Aop.Api.Domain
         public string HandleType { get; set; }
 
         /// <summary>
-        /// 二级商户openid
+        /// 二级商户pid
         /// </summary>
         [XmlElement("second_merchant_open_id")]
         public string SecondMerchantOpenId { get; set; }

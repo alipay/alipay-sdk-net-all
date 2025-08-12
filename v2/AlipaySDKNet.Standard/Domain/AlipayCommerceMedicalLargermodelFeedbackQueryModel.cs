@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string FeedbackChannel { get; set; }
 
         /// <summary>
-        /// 反馈场景: 常规问答：generalQA 深度思考：deepThinking 深入问答追问：depthQAFollowUp 多模态反馈（报告解读、药盒识别）：multimodal 云陪诊：cloudAccompaniedAiagnosis 深度思考+多模态反馈：deepThinkingAndMultimodal 云陪诊住院反馈:ypzHospitalized
+        /// 反馈场景: 常规问答：generalQA 深度思考：deepThinking 深入问答追问：depthQAFollowUp 多模态反馈（报告解读、药盒识别）：multimodal 云陪诊：cloudAccompaniedAiagnosis 深度思考+多模态反馈：deepThinkingAndMultimodal 云陪诊住院反馈:ypzHospitalized 云陪诊nps低分：ypzNpsLow 云陪诊nps中分：ypzNpsMid 云陪诊nps高分：ypzNpsHigh nps低分：npsLow nps中分：npsMid nps高分：npsHigh
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

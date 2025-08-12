@@ -50,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_biz_no")]
         public string RefundBizNo { get; set; }
+
+        /// <summary>
+        /// 退税人回乡证英文姓名
+        /// </summary>
+        [XmlElement("user_name")]
+        public string UserName { get; set; }
     }
 }

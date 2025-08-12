@@ -35,6 +35,13 @@ namespace Aop.Api.Domain
         public string ServiceEntityDesc { get; set; }
 
         /// <summary>
+        /// 商品上绑定的落地也相关信息
+        /// </summary>
+        [XmlArray("service_entity_landing_page")]
+        [XmlArrayItem("landing_type_dto")]
+        public List<LandingTypeDto> ServiceEntityLandingPage { get; set; }
+
+        /// <summary>
         /// 实体名称
         /// </summary>
         [XmlElement("service_entity_name")]

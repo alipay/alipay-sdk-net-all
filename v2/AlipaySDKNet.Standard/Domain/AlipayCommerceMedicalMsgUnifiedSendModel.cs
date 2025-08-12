@@ -28,10 +28,28 @@ namespace Aop.Api.Domain
         public string ApiService { get; set; }
 
         /// <summary>
+        /// 报表统计的维度属性，各业务部门新增
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 扩展参数
         /// </summary>
         [XmlElement("ext_params")]
         public string ExtParams { get; set; }
+
+        /// <summary>
+        /// 业务方的分院区编码，当有重复院区名称时用来定位
+        /// </summary>
+        [XmlElement("hospital_code")]
+        public string HospitalCode { get; set; }
+
+        /// <summary>
+        /// 具体到某个分院区的消息
+        /// </summary>
+        [XmlElement("hospital_name")]
+        public string HospitalName { get; set; }
 
         /// <summary>
         /// 订单状态
@@ -58,6 +76,12 @@ namespace Aop.Api.Domain
         public string OrderModifiedTime { get; set; }
 
         /// <summary>
+        /// 推送该消息的医院
+        /// </summary>
+        [XmlElement("org_name")]
+        public string OrgName { get; set; }
+
+        /// <summary>
         /// 商户订单id，请保持唯一
         /// </summary>
         [XmlElement("out_biz_no")]
@@ -74,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("template_code")]
         public string TemplateCode { get; set; }
+
+        /// <summary>
+        /// 发送消息主体的社会信用代码
+        /// </summary>
+        [XmlElement("uscc")]
+        public string Uscc { get; set; }
 
         /// <summary>
         /// 用户证件号

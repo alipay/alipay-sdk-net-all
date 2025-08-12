@@ -24,6 +24,13 @@ namespace Aop.Api.Domain
         public MiniReceiverAddressInfoDTO AddressInfo { get; set; }
 
         /// <summary>
+        /// 履约属性扩展信息
+        /// </summary>
+        [XmlArray("attr_ext_info_list")]
+        [XmlArrayItem("attr_ext_info_d_t_o")]
+        public List<AttrExtInfoDTO> AttrExtInfoList { get; set; }
+
+        /// <summary>
         /// 酒店预订信息
         /// </summary>
         [XmlElement("booking_info")]

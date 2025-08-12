@@ -1,6 +1,7 @@
 using System;
 using System.Xml.Serialization;
 using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -87,6 +88,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("invoice_date")]
         public string InvoiceDate { get; set; }
+
+        /// <summary>
+        /// 发票明细列表
+        /// </summary>
+        [XmlArray("invoice_item_list")]
+        [XmlArrayItem("enterprise_invoice_item_d_t_o")]
+        public List<EnterpriseInvoiceItemDTO> InvoiceItemList { get; set; }
 
         /// <summary>
         /// 发票种类

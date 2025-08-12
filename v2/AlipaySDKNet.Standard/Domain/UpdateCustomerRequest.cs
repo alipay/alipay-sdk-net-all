@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string CustomerIndustry { get; set; }
 
         /// <summary>
+        /// 客户常用名
+        /// </summary>
+        [XmlElement("customer_short_name")]
+        public string CustomerShortName { get; set; }
+
+        /// <summary>
         /// 客户来源
         /// </summary>
         [XmlElement("customer_source")]

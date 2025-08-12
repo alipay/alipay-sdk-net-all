@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string AuthenticationType { get; set; }
 
         /// <summary>
+        /// 寝室签到规则扩展
+        /// </summary>
+        [XmlElement("dormitory_config")]
+        public DormitoryConfig DormitoryConfig { get; set; }
+
+        /// <summary>
         /// 规则生效状态
         /// </summary>
         [XmlElement("enable_status")]

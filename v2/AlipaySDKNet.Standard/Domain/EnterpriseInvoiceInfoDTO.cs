@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -52,6 +53,13 @@ namespace Aop.Api.Domain
         public string FileType { get; set; }
 
         /// <summary>
+        /// 特定行业信息，需要根据特定行业要素类型（specific_factor），获取<a href="https://opendocs.alipay.com/pre-open/07wr4t?pathHash=5d7c31e5#%E8%A1%8C%E4%B8%9A%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89">具体行业模型</a>
+        /// </summary>
+        [XmlArray("industry_specific_infos")]
+        [XmlArrayItem("string")]
+        public List<string> IndustrySpecificInfos { get; set; }
+
+        /// <summary>
         /// 发票查验结果
         /// </summary>
         [XmlElement("invoice_check_result")]
@@ -74,6 +82,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_date")]
         public string InvoiceDate { get; set; }
+
+        /// <summary>
+        /// 发票明细列表
+        /// </summary>
+        [XmlArray("invoice_item_list")]
+        [XmlArrayItem("enterprise_invoice_item_d_t_o")]
+        public List<EnterpriseInvoiceItemDTO> InvoiceItemList { get; set; }
 
         /// <summary>
         /// 发票类型
@@ -188,6 +203,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("related_to_consume")]
         public bool RelatedToConsume { get; set; }
+
+        /// <summary>
+        /// 特定行业要素类型
+        /// </summary>
+        [XmlElement("specific_factor")]
+        public string SpecificFactor { get; set; }
 
         /// <summary>
         /// 发票金额，价税合计金额，单位元

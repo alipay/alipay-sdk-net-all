@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public FsAuthorizationInfoForm AuthorizationInfo { get; set; }
 
         /// <summary>
+        /// 开户来源场景，天猫国际，TMGJ
+        /// </summary>
+        [XmlElement("biz_from")]
+        public string BizFrom { get; set; }
+
+        /// <summary>
         /// 业务订单号-用于户号幂等，一个户号一个bizNo业务订单号
         /// </summary>
         [XmlElement("biz_no")]

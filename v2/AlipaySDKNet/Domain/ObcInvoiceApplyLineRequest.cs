@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("currency_code")]
         public string CurrencyCode { get; set; }
+
+        /// <summary>
+        /// 开票对象明细列表
+        /// </summary>
+        [XmlArray("details")]
+        [XmlArrayItem("obc_invoice_object_request")]
+        public List<ObcInvoiceObjectRequest> Details { get; set; }
 
         /// <summary>
         /// 金额的String类型，CNY币种下单位为元
@@ -40,7 +48,7 @@ namespace Aop.Api.Domain
         public string ProductName { get; set; }
 
         /// <summary>
-        /// 数量，小数点后最多保留4位，单价*数量=金额
+        /// 数量，小数点后最多保留4位，单价*数量=金额，数量的单位由接入方根据票面展示效果指定，不使用枚举
         /// </summary>
         [XmlElement("quantity")]
         public string Quantity { get; set; }
@@ -58,7 +66,7 @@ namespace Aop.Api.Domain
         public string TaxRate { get; set; }
 
         /// <summary>
-        /// 提供服务或商品的单位
+        /// 提供服务或商品的单位，个/位，等具体单位由发票开具票面想展示的为准
         /// </summary>
         [XmlElement("unit")]
         public string Unit { get; set; }

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public RentFile CertBackPic { get; set; }
 
         /// <summary>
+        /// 身份证有效期失效时间
+        /// </summary>
+        [XmlElement("cert_expire_time")]
+        public string CertExpireTime { get; set; }
+
+        /// <summary>
         /// 买家身份证正面照片
         /// </summary>
         [XmlElement("cert_font_pic")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
+
+        /// <summary>
+        /// 身份证有效期开始时间
+        /// </summary>
+        [XmlElement("cert_start_time")]
+        public string CertStartTime { get; set; }
 
         /// <summary>
         /// 买家活体检测照片

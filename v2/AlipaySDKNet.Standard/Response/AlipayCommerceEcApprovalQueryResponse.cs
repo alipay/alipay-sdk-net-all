@@ -61,10 +61,22 @@ namespace Aop.Api.Response
         public string EnterpriseId { get; set; }
 
         /// <summary>
+        /// 审批单相关的扩展信息，如花呗券ID和金额等
+        /// </summary>
+        [XmlElement("ex_json")]
+        public string ExJson { get; set; }
+
+        /// <summary>
         /// 二级场景，更多枚举请见：
         /// </summary>
         [XmlElement("expense_type_sub_category")]
         public string ExpenseTypeSubCategory { get; set; }
+
+        /// <summary>
+        /// 用于保存外部扩展信息内容，如差旅预估金额
+        /// </summary>
+        [XmlElement("out_ext")]
+        public string OutExt { get; set; }
 
         /// <summary>
         /// 支付类型

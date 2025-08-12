@@ -138,7 +138,7 @@ namespace Aop.Api.Domain
         public RentSubMerchantDTO SubMerchant { get; set; }
 
         /// <summary>
-        /// 租赁订单标题，用于支付宝小程序订单中心、芝麻租赁频道中对用户展示
+        /// 租赁订单标题
         /// </summary>
         [XmlElement("title")]
         public string Title { get; set; }

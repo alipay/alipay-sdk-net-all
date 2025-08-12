@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public List<string> InstitutionIdList { get; set; }
 
         /// <summary>
+        /// 用于保存外部扩展信息内容，如差旅预估金额
+        /// </summary>
+        [XmlElement("out_ext")]
+        public string OutExt { get; set; }
+
+        /// <summary>
         /// 支付类型
         /// </summary>
         [XmlElement("payment_type")]

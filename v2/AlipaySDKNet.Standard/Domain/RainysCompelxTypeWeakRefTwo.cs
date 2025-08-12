@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RainysCompelxTypeWeakRefTwo : AopObject
     {
         /// <summary>
+        /// test case
+        /// </summary>
+        [XmlElement("demo_emtpy_prod_vv")]
+        public string DemoEmtpyProdVv { get; set; }
+
+        /// <summary>
         /// case
         /// </summary>
         [XmlElement("demo_weak_empty")]

@@ -94,7 +94,7 @@ namespace Aop.Api.Domain
         public string OriginalPriceAfterDiscount { get; set; }
 
         /// <summary>
-        /// NCOME-收入 EXPENSE-支出
+        /// INCOME-收入 EXPENSE-支出
         /// </summary>
         [XmlElement("payment_type")]
         public string PaymentType { get; set; }

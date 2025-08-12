@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceFhyeduEvaluationSyncModel : AopObject
     {
         /// <summary>
-        /// 课后点评
+        /// 课后点评内容
         /// </summary>
         [XmlElement("assessment")]
         public string Assessment { get; set; }
@@ -27,6 +27,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("course_name")]
         public string CourseName { get; set; }
+
+        /// <summary>
+        /// 点评id
+        /// </summary>
+        [XmlElement("evaluation_id")]
+        public string EvaluationId { get; set; }
+
+        /// <summary>
+        /// 点评时间
+        /// </summary>
+        [XmlElement("evaluation_time")]
+        public string EvaluationTime { get; set; }
+
+        /// <summary>
+        /// 点评人
+        /// </summary>
+        [XmlElement("evaluator")]
+        public string Evaluator { get; set; }
 
         /// <summary>
         /// 机构id

@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
-        /// 商品的内存大小，如果是手机的时候需要设置，单位：GB/MB/KB
+        /// 商品的内存大小，手机需要设置，单位：GB/MB/KB
         /// </summary>
         [XmlElement("item_ram")]
         public string ItemRam { get; set; }

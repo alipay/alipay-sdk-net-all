@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -24,8 +25,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 物理门店列表
         /// </summary>
-        [XmlElement("physical_shop_list")]
-        public PhysicalShopInfo PhysicalShopList { get; set; }
+        [XmlArray("physical_shop_list")]
+        [XmlArrayItem("physical_shop_info")]
+        public List<PhysicalShopInfo> PhysicalShopList { get; set; }
 
         /// <summary>
         /// 总数

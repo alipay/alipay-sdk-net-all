@@ -58,5 +58,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("publisher_user_id")]
         public string PublisherUserId { get; set; }
+
+        /// <summary>
+        /// 退款策略，默认是业务分配退款策略，biz_alloc
+        /// </summary>
+        [XmlElement("refund_strategy")]
+        public string RefundStrategy { get; set; }
     }
 }

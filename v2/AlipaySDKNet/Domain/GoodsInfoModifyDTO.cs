@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class GoodsInfoModifyDTO : AopObject
     {
+        /// <summary>
+        /// 商品属性信息
+        /// </summary>
+        [XmlArray("attr_ext_info_list")]
+        [XmlArrayItem("attr_ext_info_d_t_o")]
+        public List<AttrExtInfoDTO> AttrExtInfoList { get; set; }
+
         /// <summary>
         /// 质检金额，单位为元
         /// </summary>

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AuthExpireTime { get; set; }
 
         /// <summary>
+        /// 出资授权校验规则条目
+        /// </summary>
+        [XmlElement("authorize_check_rule")]
+        public AuthorizeCheckRule AuthorizeCheckRule { get; set; }
+
+        /// <summary>
         /// 授权跳转类型，有限枚举：SHORT_URL
         /// </summary>
         [XmlElement("authorize_link_type")]

@@ -10,19 +10,25 @@ namespace Aop.Api.Domain
     public class AssetOutPutRequest : AopObject
     {
         /// <summary>
-        /// MD5加密或明文,落库会MD5加密
+        /// 身份证号
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 权益号
+        /// 订单号
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 景区id
+        /// 凭证号
+        /// </summary>
+        [XmlElement("out_voucher_id")]
+        public string OutVoucherId { get; set; }
+
+        /// <summary>
+        /// 项目id
         /// </summary>
         [XmlElement("project_id")]
         public string ProjectId { get; set; }

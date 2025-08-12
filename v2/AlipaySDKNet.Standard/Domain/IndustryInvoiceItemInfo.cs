@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string InvoiceAmount { get; set; }
 
         /// <summary>
-        /// 发票行性质，仅支持 正常行-NORMAL_LINE
+        /// 发票行性质
         /// </summary>
         [XmlElement("invoice_line_property")]
         public string InvoiceLineProperty { get; set; }

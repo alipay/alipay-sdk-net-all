@@ -67,6 +67,12 @@ namespace Aop.Api.Domain
         public string ElectronicPolicyUrl { get; set; }
 
         /// <summary>
+        /// 保司自定义扩展 Json 格式
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 首期应收保费 单位：币种标准单位，如：人民币-元（保留2位小数） （新增必填）
         /// </summary>
         [XmlElement("first_premium")]

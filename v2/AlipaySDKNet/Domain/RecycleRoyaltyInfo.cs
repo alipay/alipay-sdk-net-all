@@ -34,6 +34,18 @@ namespace Aop.Api.Domain
         public string TransIn { get; set; }
 
         /// <summary>
+        /// 转入方登录id
+        /// </summary>
+        [XmlElement("trans_in_login_id")]
+        public string TransInLoginId { get; set; }
+
+        /// <summary>
+        /// 转入方2088账户
+        /// </summary>
+        [XmlElement("trans_in_open_id")]
+        public string TransInOpenId { get; set; }
+
+        /// <summary>
         /// 接受分账金额的账户类型
         /// </summary>
         [XmlElement("trans_in_type")]

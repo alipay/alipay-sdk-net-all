@@ -41,6 +41,12 @@ namespace Aop.Api.Response
         public RentOrderDeliveryInfoVO DeliveryInfo { get; set; }
 
         /// <summary>
+        /// 人脸核身结果
+        /// </summary>
+        [XmlElement("face_verify_result")]
+        public string FaceVerifyResult { get; set; }
+
+        /// <summary>
         /// 商品详细信息。当前只会有单个商品
         /// </summary>
         [XmlArray("item_infos")]
@@ -94,6 +100,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("promo_info")]
         public RentPromoInfoVO PromoInfo { get; set; }
+
+        /// <summary>
+        /// 租赁支付单信息
+        /// </summary>
+        [XmlArray("rent_pay_infos")]
+        [XmlArrayItem("rent_order_pay_info_v_o")]
+        public List<RentOrderPayInfoVO> RentPayInfos { get; set; }
 
         /// <summary>
         /// 租赁计划信息

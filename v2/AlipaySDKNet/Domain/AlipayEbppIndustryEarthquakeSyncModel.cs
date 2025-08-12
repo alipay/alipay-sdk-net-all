@@ -66,6 +66,12 @@ namespace Aop.Api.Domain
         public List<MQTTHeaderParam> MqttHeader { get; set; }
 
         /// <summary>
+        /// ALARM 预警消息 QUICK_REPORT 速报消息
+        /// </summary>
+        [XmlElement("msg_type")]
+        public string MsgType { get; set; }
+
+        /// <summary>
         /// 地震发生时间
         /// </summary>
         [XmlElement("ori_time")]

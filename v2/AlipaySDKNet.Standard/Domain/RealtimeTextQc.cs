@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DialogId { get; set; }
 
         /// <summary>
+        /// 文本中的基本项，一般不需要填写
+        /// </summary>
+        [XmlElement("realtime_qc_dialog")]
+        public RealtimeQcDialog RealtimeQcDialog { get; set; }
+
+        /// <summary>
         /// 角色id
         /// </summary>
         [XmlElement("role")]
@@ -40,7 +46,7 @@ namespace Aop.Api.Domain
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 当前待检文本角色
+        /// 当前待检文本角色 格式为RealtimeQcDialog的list类型
         /// </summary>
         [XmlElement("text")]
         public string Text { get; set; }

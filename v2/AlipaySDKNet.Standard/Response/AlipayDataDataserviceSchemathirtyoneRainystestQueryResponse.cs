@@ -16,13 +16,19 @@ namespace Aop.Api.Response
         public string Demo { get; set; }
 
         /// <summary>
-        /// test case
+        /// test CASE FOR PRE
+        /// </summary>
+        [XmlElement("demo_empty_vv")]
+        public string DemoEmptyVv { get; set; }
+
+        /// <summary>
+        /// test case change the value
         /// </summary>
         [XmlElement("demo_emtpy")]
         public string DemoEmtpy { get; set; }
 
         /// <summary>
-        /// test case
+        /// test case change the empty
         /// </summary>
         [XmlElement("demo_other")]
         public string DemoOther { get; set; }

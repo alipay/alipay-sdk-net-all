@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -73,5 +74,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 白名单名称列表
+        /// </summary>
+        [XmlArray("white_name_list")]
+        [XmlArrayItem("string")]
+        public List<string> WhiteNameList { get; set; }
     }
 }

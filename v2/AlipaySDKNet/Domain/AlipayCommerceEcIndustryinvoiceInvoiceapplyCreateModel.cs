@@ -90,7 +90,7 @@ namespace Aop.Api.Domain
         public string ProductId { get; set; }
 
         /// <summary>
-        /// 不动产信息列表，暂时只支持一个
+        /// 不动产信息列表
         /// </summary>
         [XmlArray("real_property_business_list")]
         [XmlArrayItem("industry_invoice_real_property_business")]

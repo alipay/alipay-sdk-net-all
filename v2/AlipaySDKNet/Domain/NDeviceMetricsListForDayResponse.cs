@@ -160,6 +160,18 @@ namespace Aop.Api.Domain
         public string ProvinceName { get; set; }
 
         /// <summary>
+        /// 退款金额（追溯近60天）  单位元，精确到分
+        /// </summary>
+        [XmlElement("refund_order_amt")]
+        public string RefundOrderAmt { get; set; }
+
+        /// <summary>
+        /// 退款笔数（追溯近60天）
+        /// </summary>
+        [XmlElement("refund_order_cnt")]
+        public string RefundOrderCnt { get; set; }
+
+        /// <summary>
         /// 注册时间
         /// </summary>
         [XmlElement("register_time")]
@@ -182,6 +194,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }
+
+        /// <summary>
+        /// 首次点亮30天内碰交易大于等于2元用户数
+        /// </summary>
+        [XmlElement("trd_amt_2_n_user_cnt_fromlight_30_d")]
+        public string TrdAmt2NUserCntFromlight30D { get; set; }
 
         /// <summary>
         /// 碰一下用户数，单位为人，日维度已去重
