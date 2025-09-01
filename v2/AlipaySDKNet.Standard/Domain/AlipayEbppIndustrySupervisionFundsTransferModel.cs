@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayEbppIndustrySupervisionFundsTransferModel : AopObject
     {
         /// <summary>
+        /// 协议签约通知返回的授权合约号
+        /// </summary>
+        [XmlElement("agreement_no")]
+        public string AgreementNo { get; set; }
+
+        /// <summary>
         /// 资金划拨的金额。单位：分
         /// </summary>
         [XmlElement("amount")]

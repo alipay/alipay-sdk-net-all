@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRentOrderFulfillmentSendModel : AopObject
     {
         /// <summary>
+        /// 补充凭证
+        /// </summary>
+        [XmlArray("additional_media_list")]
+        [XmlArrayItem("fulfillment_media_info")]
+        public List<FulfillmentMediaInfo> AdditionalMediaList { get; set; }
+
+        /// <summary>
         /// 物流信息
         /// </summary>
         [XmlArray("delivery_list")]

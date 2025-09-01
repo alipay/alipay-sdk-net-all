@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
+        /// 税号
+        /// </summary>
+        [XmlElement("tax_register_no")]
+        public string TaxRegisterNo { get; set; }
+
+        /// <summary>
         /// 抬头ID
         /// </summary>
         [XmlElement("title_id")]

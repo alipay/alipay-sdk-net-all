@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 1000
+        /// 页码
         /// </summary>
         [XmlElement("page_num")]
         public long PageNum { get; set; }

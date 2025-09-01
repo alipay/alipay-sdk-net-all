@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 赔付支付参数信息
+        /// </summary>
+        [XmlElement("compensation_info")]
+        public AftersaleCompensationInfoVO CompensationInfo { get; set; }
+
+        /// <summary>
         /// 操作类型
         /// </summary>
         [XmlElement("operation_type")]

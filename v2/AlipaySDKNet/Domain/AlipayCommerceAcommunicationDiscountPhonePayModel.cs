@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
+        /// 用于表达使用商品不同的分层履约能力，同一个商品可能会涉及多个履约能力，这里包含了时长的不同等信息，调用方可根据需要发起调用，如果不需要分层溢价能力，可以不传该字段，默认3小时到账。
+        /// </summary>
+        [XmlElement("item_tag")]
+        public string ItemTag { get; set; }
+
+        /// <summary>
         /// 手机号
         /// </summary>
         [XmlElement("mobile")]

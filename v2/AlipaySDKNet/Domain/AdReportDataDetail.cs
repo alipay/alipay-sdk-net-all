@@ -11,6 +11,18 @@ namespace Aop.Api.Domain
     public class AdReportDataDetail : AopObject
     {
         /// <summary>
+        /// 查询素材数据，ALL层级透出
+        /// </summary>
+        [XmlElement("action_point")]
+        public string ActionPoint { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，ALL层级透出
+        /// </summary>
+        [XmlElement("action_point_id")]
+        public string ActionPointId { get; set; }
+
+        /// <summary>
         /// 代理商账号(只在代理商接口返回)
         /// </summary>
         [XmlElement("agent_alipay_account")]
@@ -84,6 +96,12 @@ namespace Aop.Api.Domain
         public string Cpm { get; set; }
 
         /// <summary>
+        /// 创意id
+        /// </summary>
+        [XmlElement("creative_id")]
+        public string CreativeId { get; set; }
+
+        /// <summary>
         /// 创意名称
         /// </summary>
         [XmlElement("creative_name")]
@@ -118,6 +136,78 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("impression")]
         public long Impression { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，非VIDEO层级透出
+        /// </summary>
+        [XmlElement("main_picture_height")]
+        public string MainPictureHeight { get; set; }
+
+        /// <summary>
+        /// 查询素材数据时，非VIDEO层级时透出
+        /// </summary>
+        [XmlElement("main_picture_id")]
+        public string MainPictureId { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，非VIDEO层级透出
+        /// </summary>
+        [XmlElement("main_picture_name")]
+        public string MainPictureName { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，非VIDEO层级透出
+        /// </summary>
+        [XmlElement("main_picture_url")]
+        public string MainPictureUrl { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，非VIDEO层级透出
+        /// </summary>
+        [XmlElement("main_picture_width")]
+        public string MainPictureWidth { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，ALL层级透出
+        /// </summary>
+        [XmlElement("main_title")]
+        public string MainTitle { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，ALL层级透出
+        /// </summary>
+        [XmlElement("main_title_id")]
+        public string MainTitleId { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，非PHOTO层级透出
+        /// </summary>
+        [XmlElement("main_video_height")]
+        public long MainVideoHeight { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，非PHOTO层级透出
+        /// </summary>
+        [XmlElement("main_video_id")]
+        public string MainVideoId { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，非PHOTO层级透出
+        /// </summary>
+        [XmlElement("main_video_name")]
+        public string MainVideoName { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，非PHOTO层级透出
+        /// </summary>
+        [XmlElement("main_video_url")]
+        public string MainVideoUrl { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，非PHOTO层级透出
+        /// </summary>
+        [XmlElement("main_video_width")]
+        public long MainVideoWidth { get; set; }
 
         /// <summary>
         /// 营销目标名称
@@ -172,5 +262,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scene_name")]
         public string SceneName { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，ALL层级透出
+        /// </summary>
+        [XmlElement("sub_title")]
+        public string SubTitle { get; set; }
+
+        /// <summary>
+        /// 查询素材数据，ALL层级透出
+        /// </summary>
+        [XmlElement("sub_title_id")]
+        public string SubTitleId { get; set; }
     }
 }

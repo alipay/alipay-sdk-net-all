@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string Smid { get; set; }
 
         /// <summary>
+        /// 播报内容配置，如不传时将使用默认播报内容。仅支持SDK模式音响类型设备，其他类型设备请勿传该字段。
+        /// </summary>
+        [XmlElement("speech_content")]
+        public IotSpeechContentConfig SpeechContent { get; set; }
+
+        /// <summary>
         /// 合约机模式必传设备sourceId号，千里传音模式必传设备的productKey，lite模式必传分配给服务商的设备型号编码
         /// </summary>
         [XmlElement("supplier_id")]

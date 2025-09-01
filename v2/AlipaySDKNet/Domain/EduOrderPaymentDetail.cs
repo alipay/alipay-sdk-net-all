@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class EduOrderPaymentDetail : AopObject
     {
         /// <summary>
-        /// 支付金额
+        /// 支付金额，单位：元。
         /// </summary>
         [XmlElement("pay_amount")]
         public string PayAmount { get; set; }

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string FqAmount { get; set; }
 
         /// <summary>
+        /// 提供分期服务的机构ID
+        /// </summary>
+        [XmlElement("fq_inst_id")]
+        public string FqInstId { get; set; }
+
+        /// <summary>
         /// 用户使用花呗分期支付的分期数
         /// </summary>
         [XmlElement("user_install_num")]

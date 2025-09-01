@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RecycleInspectProductVO : AopObject
     {
         /// <summary>
+        /// 3c行业质检扩展属性
+        /// </summary>
+        [XmlElement("digital_product_info")]
+        public RecycleInspectDigitalProductOpenVO DigitalProductInfo { get; set; }
+
+        /// <summary>
         /// 单个产品的质检金额
         /// </summary>
         [XmlElement("inspect_price")]

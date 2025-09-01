@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public ActivityInfoDTO ActivityInfo { get; set; }
 
         /// <summary>
+        /// 商品属性信息列表
+        /// </summary>
+        [XmlArray("attr_ext_info_list")]
+        [XmlArrayItem("attr_ext_info_d_t_o")]
+        public List<AttrExtInfoDTO> AttrExtInfoList { get; set; }
+
+        /// <summary>
         /// 商品描述信息
         /// </summary>
         [XmlElement("body")]

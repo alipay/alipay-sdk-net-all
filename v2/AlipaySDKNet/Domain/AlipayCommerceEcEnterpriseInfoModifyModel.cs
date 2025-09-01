@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("enterprise_name")]
         public string EnterpriseName { get; set; }
+
+        /// <summary>
+        /// 企业个性化信息，仅适用于可信渠道（如钉钉），普通场景请勿传此参数
+        /// </summary>
+        [XmlElement("reliable_profiles")]
+        public ReliableEnterpriseProfilesDTO ReliableProfiles { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("alipay_account")]
         public string AlipayAccount { get; set; }
+
+        /// <summary>
+        /// 订单扩展属性信息
+        /// </summary>
+        [XmlArray("attr_ext_info_list")]
+        [XmlArrayItem("attr_ext_info_d_t_o")]
+        public List<AttrExtInfoDTO> AttrExtInfoList { get; set; }
 
         /// <summary>
         /// 企业的统一社会信用代码，营业执照上有该信息，企业租赁业务需要传递该参数。

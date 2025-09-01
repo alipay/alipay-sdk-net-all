@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ItemNo { get; set; }
 
         /// <summary>
-        /// 商品单价。格式为2位小数，单位为元
+        /// 商品单价。单位为元
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }

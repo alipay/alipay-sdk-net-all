@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string BenefitAccountNo { get; set; }
 
         /// <summary>
+        /// 业务身份，支付宝分配
+        /// </summary>
+        [XmlElement("biz_identity")]
+        public string BizIdentity { get; set; }
+
+        /// <summary>
         /// 权益账户当前剩余可核销金额，单位：元
         /// </summary>
         [XmlElement("current_amount")]
@@ -59,6 +65,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 外标卡号
+        /// </summary>
+        [XmlElement("out_card_no")]
+        public string OutCardNo { get; set; }
 
         /// <summary>
         /// 有效

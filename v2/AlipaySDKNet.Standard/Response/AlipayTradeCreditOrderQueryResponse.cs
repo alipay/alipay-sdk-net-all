@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayTradeCreditOrderQueryResponse : AopResponse
     {
         /// <summary>
-        /// 信用服务订单中的垫资金额。
+        /// 信用服务订单中的垫资金额。单位：元
         /// </summary>
         [XmlElement("advance_total_fee")]
         public string AdvanceTotalFee { get; set; }
@@ -69,7 +69,7 @@ namespace Aop.Api.Response
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 信用支付逾期时间
+        /// 信用支付逾期时间。年-月-日 时-分-秒
         /// </summary>
         [XmlElement("overdue_time")]
         public string OverdueTime { get; set; }

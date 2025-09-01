@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("credit_biz_order_id")]
         public string CreditBizOrderId { get; set; }
+
+        /// <summary>
+        /// 外部交易号
+        /// </summary>
+        [XmlElement("out_trade_no")]
+        public string OutTradeNo { get; set; }
     }
 }

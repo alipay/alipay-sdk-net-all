@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public BsContactPersonInfo ContactPersonInfo { get; set; }
 
         /// <summary>
+        /// 自定义返佣金额
+        /// </summary>
+        [XmlElement("custom_pricing")]
+        public long CustomPricing { get; set; }
+
+        /// <summary>
         /// 设备数量
         /// </summary>
         [XmlElement("device_num")]

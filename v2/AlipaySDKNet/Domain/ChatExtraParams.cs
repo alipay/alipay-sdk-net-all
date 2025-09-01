@@ -68,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("phone_no")]
         public string PhoneNo { get; set; }
+
+        /// <summary>
+        /// 应用关联的插件调用环境，为空默认调用生产环境
+        /// </summary>
+        [XmlElement("plugin_env")]
+        public string PluginEnv { get; set; }
     }
 }

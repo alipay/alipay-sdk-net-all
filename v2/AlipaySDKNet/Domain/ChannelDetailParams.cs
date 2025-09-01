@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refuse_code")]
         public string RefuseCode { get; set; }
+
+        /// <summary>
+        /// 用户是否已签约
+        /// </summary>
+        [XmlElement("user_has_sign")]
+        public string UserHasSign { get; set; }
     }
 }

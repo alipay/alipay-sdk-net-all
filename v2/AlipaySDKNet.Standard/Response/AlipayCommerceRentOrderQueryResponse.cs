@@ -41,10 +41,22 @@ namespace Aop.Api.Response
         public RentOrderDeliveryInfoVO DeliveryInfo { get; set; }
 
         /// <summary>
+        /// 租赁订单拓展信息
+        /// </summary>
+        [XmlElement("extend_info")]
+        public RentOrderExtendInfoVO ExtendInfo { get; set; }
+
+        /// <summary>
         /// 人脸核身结果
         /// </summary>
         [XmlElement("face_verify_result")]
         public string FaceVerifyResult { get; set; }
+
+        /// <summary>
+        /// 极速审核信息
+        /// </summary>
+        [XmlElement("fast_audit_info")]
+        public RentFastAuditInfoVO FastAuditInfo { get; set; }
 
         /// <summary>
         /// 商品详细信息。当前只会有单个商品
@@ -102,6 +114,13 @@ namespace Aop.Api.Response
         public RentPromoInfoVO PromoInfo { get; set; }
 
         /// <summary>
+        /// 租赁售后单
+        /// </summary>
+        [XmlArray("rent_aftersale_orders")]
+        [XmlArrayItem("rent_aftersale_order_v_o")]
+        public List<RentAftersaleOrderVO> RentAftersaleOrders { get; set; }
+
+        /// <summary>
         /// 租赁支付单信息
         /// </summary>
         [XmlArray("rent_pay_infos")]
@@ -126,6 +145,12 @@ namespace Aop.Api.Response
         [XmlArray("rent_statement_infos")]
         [XmlArrayItem("rent_order_statement_info_v_o")]
         public List<RentOrderStatementInfoVO> RentStatementInfos { get; set; }
+
+        /// <summary>
+        /// 结算方式
+        /// </summary>
+        [XmlElement("settle_type")]
+        public string SettleType { get; set; }
 
         /// <summary>
         /// 订单状态

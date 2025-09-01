@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string ItemState { get; set; }
 
         /// <summary>
+        /// 官网价，单位：元。
+        /// </summary>
+        [XmlElement("official_price")]
+        public string OfficialPrice { get; set; }
+
+        /// <summary>
         /// 商品的供应商名称，例如：深圳爱租机苹果供应商
         /// </summary>
         [XmlElement("provider_name")]

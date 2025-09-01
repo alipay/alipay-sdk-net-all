@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BankMemo { get; set; }
 
         /// <summary>
+        /// 表示机构打款单号，一个 inst_serial_no 对应用户的一次打款。回传来账明细查询接口返回的 order_id 字段即可。
+        /// </summary>
+        [XmlElement("inst_order_id")]
+        public string InstOrderId { get; set; }
+
+        /// <summary>
         /// 备注 当前字段已废弃(不需要该参数了不需要该参数了)
         /// </summary>
         [XmlElement("memo")]
@@ -38,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("settle_mode")]
         public string SettleMode { get; set; }
+
+        /// <summary>
+        /// 用于指定收结易订单的附言，可用于对账
+        /// </summary>
+        [XmlElement("trans_memo")]
+        public string TransMemo { get; set; }
     }
 }

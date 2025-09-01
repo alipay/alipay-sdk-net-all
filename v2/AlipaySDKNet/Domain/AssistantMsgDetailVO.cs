@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public BenefitAssistantMsgContentVO BenefitContent { get; set; }
 
         /// <summary>
-        /// 小助手类型，目前支持 activity_recommend (自定义活动)、benefit_recommend（权益推荐）、goods_recommend（商品推荐）
+        /// 小助手类型，目前支持 activity_recommend (自定义活动)、benefit_recommend（权益推荐）、goods_recommend（商品推荐）、red_packet_recommend（红包推荐）
         /// </summary>
         [XmlElement("biz_type")]
         public string BizType { get; set; }
@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 红包推荐小助手内容
+        /// </summary>
+        [XmlElement("red_packet_content")]
+        public RedPacketAssistantMsgContentVO RedPacketContent { get; set; }
 
         /// <summary>
         /// 消息发送状态  INIT( 初始化), AUDITING (审核中), DENY (审核驳回), PENDING (待生效), VALID (生效), INVALID (下线), DELETED (删除);

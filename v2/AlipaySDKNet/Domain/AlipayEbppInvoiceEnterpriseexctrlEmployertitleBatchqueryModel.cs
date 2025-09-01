@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
+
+        /// <summary>
+        /// 税号
+        /// </summary>
+        [XmlElement("tax_register_no")]
+        public string TaxRegisterNo { get; set; }
     }
 }

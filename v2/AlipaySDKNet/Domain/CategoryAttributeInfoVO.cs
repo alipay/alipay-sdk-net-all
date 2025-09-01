@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string CustomInput { get; set; }
 
         /// <summary>
+        /// 是否决策属性
+        /// </summary>
+        [XmlElement("decided")]
+        public string Decided { get; set; }
+
+        /// <summary>
         /// 提报商品时该属性是否支持多选
         /// </summary>
         [XmlElement("multi_select")]

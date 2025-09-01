@@ -16,10 +16,16 @@ namespace Aop.Api.Domain
         public string AcquireMode { get; set; }
 
         /// <summary>
-        /// 订单同步金额，biz_type=PAY_SYNC时为支付金额，biz_type=REFUND_SYNC时为退款金额。
+        /// 订单同步金额，biz_type=PAY_SYNC时为支付金额，biz_type=REFUND_SYNC时为退款金额。以元为单位，人民币。
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
+
+        /// <summary>
+        /// 用于标识收结易的业务模式，不传为默认模式
+        /// </summary>
+        [XmlElement("biz_scene")]
+        public string BizScene { get; set; }
 
         /// <summary>
         /// 扩展字段

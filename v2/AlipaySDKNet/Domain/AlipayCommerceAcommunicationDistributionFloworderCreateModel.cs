@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 加密后手机号
+        /// </summary>
+        [XmlElement("encrypted_mobile")]
+        public string EncryptedMobile { get; set; }
+
+        /// <summary>
         /// 机构订单id
         /// </summary>
         [XmlElement("inst_order_id")]

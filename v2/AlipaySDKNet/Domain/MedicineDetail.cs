@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Description { get; set; }
 
         /// <summary>
+        /// 价格25.99元
+        /// </summary>
+        [XmlElement("discount_price")]
+        public string DiscountPrice { get; set; }
+
+        /// <summary>
         /// xx药品id
         /// </summary>
         [XmlElement("id")]

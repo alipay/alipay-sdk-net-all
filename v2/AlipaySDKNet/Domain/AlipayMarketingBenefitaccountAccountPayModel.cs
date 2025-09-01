@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ExtendInfo { get; set; }
 
         /// <summary>
+        /// 出资主体
+        /// </summary>
+        [XmlElement("fund_principal")]
+        public string FundPrincipal { get; set; }
+
+        /// <summary>
         /// 本次充值出资方
         /// </summary>
         [XmlElement("fund_provider")]

@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plate_no")]
         public string PlateNo { get; set; }
+
+        /// <summary>
+        /// 请求来源
+        /// </summary>
+        [XmlElement("request_channel")]
+        public string RequestChannel { get; set; }
     }
 }

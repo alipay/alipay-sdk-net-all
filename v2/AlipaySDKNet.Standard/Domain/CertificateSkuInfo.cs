@@ -10,13 +10,19 @@ namespace Aop.Api.Domain
     public class CertificateSkuInfo : AopObject
     {
         /// <summary>
+        /// 商品套餐
+        /// </summary>
+        [XmlElement("commodity")]
+        public string Commodity { get; set; }
+
+        /// <summary>
         /// 支付宝平台侧商品ID，是支付宝平台侧商品的唯一标识，后续与平台交互，需要使用该 ID，建议持久化。
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 商品模版类型： 1. 团购套餐 2. 代金券 此字段与使用alipay.open.app.localitem.create接口创建本地生活商品时传入的item_type字段值保持一致。
+        /// 商品模版类型： 1. 团购套餐 2. 代金券 3. 次卡 此字段与使用alipay.open.app.localitem.create接口创建本地生活商品时传入的item_type字段值保持一致。
         /// </summary>
         [XmlElement("item_type")]
         public string ItemType { get; set; }

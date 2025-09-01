@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizTime { get; set; }
 
         /// <summary>
+        /// 取消原因编码
+        /// </summary>
+        [XmlElement("cancel_code")]
+        public string CancelCode { get; set; }
+
+        /// <summary>
         /// 用户取消订单原因，在取消状态同步时必填
         /// </summary>
         [XmlElement("cancel_reason")]

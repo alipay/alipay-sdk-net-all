@@ -70,5 +70,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reason_desc")]
         public string ReasonDesc { get; set; }
+
+        /// <summary>
+        /// 二级商户信息
+        /// </summary>
+        [XmlElement("sub_merchant")]
+        public RentSubMerchantDTO SubMerchant { get; set; }
     }
 }

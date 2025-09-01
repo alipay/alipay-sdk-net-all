@@ -34,9 +34,27 @@ namespace Aop.Api.Domain
         public string IdCardNumber { get; set; }
 
         /// <summary>
+        /// 支付宝用户唯一开放ID
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 手机号码
         /// </summary>
         [XmlElement("phone_number")]
         public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// 支付宝用户唯一开放ID
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
+
+        /// <summary>
+        /// 用户信息来源
+        /// </summary>
+        [XmlElement("user_info_source")]
+        public string UserInfoSource { get; set; }
     }
 }

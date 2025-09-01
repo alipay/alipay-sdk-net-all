@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("benefit_account_no")]
         public string BenefitAccountNo { get; set; }
+
+        /// <summary>
+        /// 外标打款卡号
+        /// </summary>
+        [XmlElement("out_card_no")]
+        public string OutCardNo { get; set; }
     }
 }

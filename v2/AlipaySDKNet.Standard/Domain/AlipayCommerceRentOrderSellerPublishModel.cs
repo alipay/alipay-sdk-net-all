@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -22,10 +23,22 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 资方appid，可选，如果需要向非资商关系中的appid发送通知消息，可传递本参数
+        /// </summary>
+        [XmlElement("invest_app_id")]
+        public string InvestAppId { get; set; }
+
+        /// <summary>
         /// 资方pid，2088开头
         /// </summary>
         [XmlElement("invest_id")]
         public string InvestId { get; set; }
+
+        /// <summary>
+        /// 不传值时默认为create
+        /// </summary>
+        [XmlElement("operate_type")]
+        public string OperateType { get; set; }
 
         /// <summary>
         /// 交易组件订单Id，取值：租赁下单接口返回的orderId
@@ -34,9 +47,10 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 分账计划详情，可为空
+        /// null
         /// </summary>
-        [XmlElement("royalty_publish_detail")]
-        public RoyaltyPublishDetailInfo RoyaltyPublishDetail { get; set; }
+        [XmlArray("royalty_publish_detail")]
+        [XmlArrayItem("royalty_publish_detail_info")]
+        public List<RoyaltyPublishDetailInfo> RoyaltyPublishDetail { get; set; }
     }
 }

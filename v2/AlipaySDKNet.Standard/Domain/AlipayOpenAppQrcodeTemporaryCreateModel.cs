@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string QueryParam { get; set; }
 
         /// <summary>
-        /// 单位秒，最长为24*60*60（一天）
+        /// 单位秒，最长为2*60*60（2小时）
         /// </summary>
         [XmlElement("timeout")]
         public long Timeout { get; set; }

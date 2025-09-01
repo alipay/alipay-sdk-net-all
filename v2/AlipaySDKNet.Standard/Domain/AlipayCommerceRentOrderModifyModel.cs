@@ -10,6 +10,24 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRentOrderModifyModel : AopObject
     {
         /// <summary>
+        /// 订单收货地址
+        /// </summary>
+        [XmlElement("address_info")]
+        public RentOrderReceiverAddressInfoDTO AddressInfo { get; set; }
+
+        /// <summary>
+        /// 默认退货寄回地址
+        /// </summary>
+        [XmlElement("default_receiving_address")]
+        public RentOrderReceiverAddressInfoDTO DefaultReceivingAddress { get; set; }
+
+        /// <summary>
+        /// 订单履约信息
+        /// </summary>
+        [XmlElement("delivery_info")]
+        public RentOrderDeliveryInfoDTO DeliveryInfo { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

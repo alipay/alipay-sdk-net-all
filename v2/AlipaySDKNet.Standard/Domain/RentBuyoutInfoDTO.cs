@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pay_notify_url")]
         public string PayNotifyUrl { get; set; }
+
+        /// <summary>
+        /// true表示当前购买订单创建不需要自动创建支付宝trade_no。商户需自行处理收款后，通过alipay.commerce.rent.order.pay.sync接口进行同步。
+        /// </summary>
+        [XmlElement("sync_pay")]
+        public bool SyncPay { get; set; }
     }
 }

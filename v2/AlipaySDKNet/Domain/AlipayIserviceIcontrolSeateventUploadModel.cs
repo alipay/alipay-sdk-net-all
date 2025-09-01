@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayIserviceIcontrolSeateventUploadModel : AopObject
     {
         /// <summary>
+        /// 坐席类型，有呼入和呼出
+        /// </summary>
+        [XmlElement("channel_type")]
+        public string ChannelType { get; set; }
+
+        /// <summary>
         /// 客服呼入类坐席事件上报报文
         /// </summary>
         [XmlElement("ic_inbound_seat_event_payload")]

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -13,6 +14,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
+
+        /// <summary>
+        /// 退款金额操作明细
+        /// </summary>
+        [XmlElement("fund_infos")]
+        public BenefitAccountFsFundInfoDTO FundInfos { get; set; }
 
         /// <summary>
         /// 退款操作单号，可用于幂等

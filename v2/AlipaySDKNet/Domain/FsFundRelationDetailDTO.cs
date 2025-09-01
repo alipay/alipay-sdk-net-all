@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CeilingAmount { get; set; }
 
         /// <summary>
+        /// 出资主体
+        /// </summary>
+        [XmlElement("fund_principal")]
+        public string FundPrincipal { get; set; }
+
+        /// <summary>
         /// 优先级，按顺序出资时必填，值越小优先级越大
         /// </summary>
         [XmlElement("fund_priority")]

@@ -121,6 +121,13 @@ namespace Aop.Api.Domain
         public string ReasonCode { get; set; }
 
         /// <summary>
+        /// 在退款状态为31 or 32的时候才有值，对应B站对账单中退佣交易单号
+        /// </summary>
+        [XmlArray("refund_commission_nos")]
+        [XmlArrayItem("string")]
+        public List<string> RefundCommissionNos { get; set; }
+
+        /// <summary>
         /// 退款状态描述
         /// </summary>
         [XmlElement("refund_msg")]

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -40,6 +41,13 @@ namespace Aop.Api.Domain
         public string ModifyBy { get; set; }
 
         /// <summary>
+        /// 绑定的抬头ID列表
+        /// </summary>
+        [XmlArray("multi_title_list")]
+        [XmlArrayItem("ec_employee_title_modify_tax_no_and_title_id")]
+        public List<EcEmployeeTitleModifyTaxNoAndTitleId> MultiTitleList { get; set; }
+
+        /// <summary>
         /// 修改后的抬头id
         /// </summary>
         [XmlElement("new_title_id")]
@@ -56,6 +64,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 税号
+        /// </summary>
+        [XmlElement("tax_register_no")]
+        public string TaxRegisterNo { get; set; }
 
         /// <summary>
         /// 员工抬头关系标

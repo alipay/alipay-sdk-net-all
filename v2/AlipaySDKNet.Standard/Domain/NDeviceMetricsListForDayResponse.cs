@@ -58,6 +58,18 @@ namespace Aop.Api.Domain
         public string CityName { get; set; }
 
         /// <summary>
+        /// 设备连接电脑系统类型
+        /// </summary>
+        [XmlElement("device_system")]
+        public string DeviceSystem { get; set; }
+
+        /// <summary>
+        /// 设备类型
+        /// </summary>
+        [XmlElement("device_type")]
+        public string DeviceType { get; set; }
+
+        /// <summary>
         /// 区编码
         /// </summary>
         [XmlElement("district_code")]
@@ -76,6 +88,18 @@ namespace Aop.Api.Domain
         public bool DoCheckIn { get; set; }
 
         /// <summary>
+        /// 设备碰一下或扫码交易大于等于2元的支付笔数且一个用户同一天交易笔数最多为2笔
+        /// </summary>
+        [XmlElement("effective_alipay_transaction_count")]
+        public string EffectiveAlipayTransactionCount { get; set; }
+
+        /// <summary>
+        /// 设备碰一下交易大于等于2元的支付笔数且一个用户同一天交易笔数最多为2笔
+        /// </summary>
+        [XmlElement("effective_nfc_transaction_count")]
+        public string EffectiveNfcTransactionCount { get; set; }
+
+        /// <summary>
         /// 有效开机标识,当日开机大于6h即为有效开机
         /// </summary>
         [XmlElement("effective_turnon_device")]
@@ -86,6 +110,36 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("has_nfc_trade")]
         public bool HasNfcTrade { get; set; }
+
+        /// <summary>
+        /// 设备当日至少有一笔碰一下且交易金额大于等于2元，则为是
+        /// </summary>
+        [XmlElement("has_nfc_trade_greater_2")]
+        public bool HasNfcTradeGreater2 { get; set; }
+
+        /// <summary>
+        /// 点亮30天内打卡天数
+        /// </summary>
+        [XmlElement("last_30_checkin_days")]
+        public string Last30CheckinDays { get; set; }
+
+        /// <summary>
+        /// 点亮30天内动销≥2元天数
+        /// </summary>
+        [XmlElement("last_30_sales_over_2_days")]
+        public string Last30SalesOver2Days { get; set; }
+
+        /// <summary>
+        /// 点亮30天内有效开机天数
+        /// </summary>
+        [XmlElement("last_30_valid_boot_days")]
+        public string Last30ValidBootDays { get; set; }
+
+        /// <summary>
+        /// 点亮7天内打卡天数
+        /// </summary>
+        [XmlElement("last_7_checkin_days")]
+        public string Last7CheckinDays { get; set; }
 
         /// <summary>
         /// leads门店名称
@@ -130,10 +184,22 @@ namespace Aop.Api.Domain
         public string MetricsDate { get; set; }
 
         /// <summary>
+        /// 近7天小指令有活跃，不区分saas、免研小指令
+        /// </summary>
+        [XmlElement("micro_command_active_7_day")]
+        public bool MicroCommandActive7Day { get; set; }
+
+        /// <summary>
         /// nfc金额，单位元
         /// </summary>
         [XmlElement("nfc_amount")]
         public string NfcAmount { get; set; }
+
+        /// <summary>
+        /// 设备当日至少有一笔碰一下或扫码交易且交易金额大于等于2元，则为是
+        /// </summary>
+        [XmlElement("nfc_trade_greater_2")]
+        public bool NfcTradeGreater2 { get; set; }
 
         /// <summary>
         /// nfc笔数
@@ -158,6 +224,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("province_name")]
         public string ProvinceName { get; set; }
+
+        /// <summary>
+        /// 设备在统计当天所产生的用户碰一下实付金额总额（限定交易时间在统计当日） 单位元，精确到分
+        /// </summary>
+        [XmlElement("real_consume_fee")]
+        public string RealConsumeFee { get; set; }
+
+        /// <summary>
+        /// 设备在统计当天所发生的nfc交易实付退款金额（仅限定退款时间在当日）单位元，精确到分
+        /// </summary>
+        [XmlElement("real_refund_fee")]
+        public string RealRefundFee { get; set; }
 
         /// <summary>
         /// 退款金额（追溯近60天）  单位元，精确到分
@@ -190,10 +268,22 @@ namespace Aop.Api.Domain
         public string Sn { get; set; }
 
         /// <summary>
+        /// 最新门店首次大于等于1元动销时间
+        /// </summary>
+        [XmlElement("store_first_sale_1_yuan_date")]
+        public string StoreFirstSale1YuanDate { get; set; }
+
+        /// <summary>
         /// 外部门店号
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }
+
+        /// <summary>
+        /// 累计已点亮自然月
+        /// </summary>
+        [XmlElement("total_lighted_months")]
+        public string TotalLightedMonths { get; set; }
 
         /// <summary>
         /// 首次点亮30天内碰交易大于等于2元用户数
@@ -202,9 +292,21 @@ namespace Aop.Api.Domain
         public string TrdAmt2NUserCntFromlight30D { get; set; }
 
         /// <summary>
+        /// 大于等于2元碰一下交易的用户数，单位为人，日维度去重
+        /// </summary>
+        [XmlElement("trd_greater_2_nfc_device_usercnt")]
+        public string TrdGreater2NfcDeviceUsercnt { get; set; }
+
+        /// <summary>
         /// 碰一下用户数，单位为人，日维度已去重
         /// </summary>
         [XmlElement("trd_nfc_device_usercnt")]
         public string TrdNfcDeviceUsercnt { get; set; }
+
+        /// <summary>
+        /// 设备最近绑定门店的时间
+        /// </summary>
+        [XmlElement("update_register_time")]
+        public string UpdateRegisterTime { get; set; }
     }
 }

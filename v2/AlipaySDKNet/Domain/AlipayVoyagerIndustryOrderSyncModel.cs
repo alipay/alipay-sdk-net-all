@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public Buyer BuyerInfo { get; set; }
 
         /// <summary>
+        /// 优惠金额
+        /// </summary>
+        [XmlElement("discount_amount")]
+        public AmountDTO DiscountAmount { get; set; }
+
+        /// <summary>
         /// 扩展信息
         /// </summary>
         [XmlArray("ext_info")]
@@ -90,6 +96,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payment_no")]
         public string PaymentNo { get; set; }
+
+        /// <summary>
+        /// 来源APP
+        /// </summary>
+        [XmlElement("source_app")]
+        public string SourceApp { get; set; }
 
         /// <summary>
         /// 支付宝用户的userId，可传openid，不传userid。

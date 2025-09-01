@@ -62,6 +62,16 @@ namespace Aop.Api.Request
         public FileItem FinancingRentProtocol { get; set; }
 
         /// <summary>
+        /// 首租信息
+        /// </summary>
+        public SellerSyncRentHeadLeaseExtInfo HeadLeaseExtInfo { get; set; }
+
+        /// <summary>
+        /// 首租协议
+        /// </summary>
+        public FileItem HeadLeaseProtocol { get; set; }
+
+        /// <summary>
         /// 历史资产融资扩展信息
         /// </summary>
         public RentHistoricalAssetFinancingExtInfoDTO HistoricalAssetFinancingExtInfo { get; set; }
@@ -85,6 +95,11 @@ namespace Aop.Api.Request
         /// 外部业务单号，取值：业务方自己的单据号
         /// </summary>
         public string OutBizId { get; set; }
+
+        /// <summary>
+        /// 平台服务协议
+        /// </summary>
+        public FileItem PlatformServiceProtocol { get; set; }
 
         /// <summary>
         /// 同步场景(枚举值)
@@ -181,6 +196,7 @@ namespace Aop.Api.Request
             parameters.Add("buyer_open_id", this.BuyerOpenId);
             parameters.Add("delivery_ext_info", this.DeliveryExtInfo);
             parameters.Add("financing_ext_info", this.FinancingExtInfo);
+            parameters.Add("head_lease_ext_info", this.HeadLeaseExtInfo);
             parameters.Add("historical_asset_financing_ext_info", this.HistoricalAssetFinancingExtInfo);
             parameters.Add("item_ext_info", this.ItemExtInfo);
             parameters.Add("order_ext_info", this.OrderExtInfo);
@@ -216,6 +232,8 @@ namespace Aop.Api.Request
             parameters.Add("buyer_live_pic", this.BuyerLivePic);
             parameters.Add("delivery_received_pic", this.DeliveryReceivedPic);
             parameters.Add("financing_rent_protocol", this.FinancingRentProtocol);
+            parameters.Add("head_lease_protocol", this.HeadLeaseProtocol);
+            parameters.Add("platform_service_protocol", this.PlatformServiceProtocol);
             return parameters;
         }
 

@@ -62,11 +62,25 @@ namespace Aop.Api.Domain
         public List<string> HosGradeList { get; set; }
 
         /// <summary>
+        /// 针对医院机构搜索意图
+        /// </summary>
+        [XmlArray("hos_institution_code_list")]
+        [XmlArrayItem("string")]
+        public List<string> HosInstitutionCodeList { get; set; }
+
+        /// <summary>
         /// 意图识别医院名称列表
         /// </summary>
         [XmlArray("hos_name_list")]
         [XmlArrayItem("string")]
         public List<string> HosNameList { get; set; }
+
+        /// <summary>
+        /// 针对单医院院区搜索意图
+        /// </summary>
+        [XmlArray("hos_uniq_code_list")]
+        [XmlArrayItem("string")]
+        public List<string> HosUniqCodeList { get; set; }
 
         /// <summary>
         /// LBS纬度

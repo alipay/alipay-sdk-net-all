@@ -29,7 +29,7 @@ namespace Aop.Api.Response
         public RentRiskProVO HighRiskModels { get; set; }
 
         /// <summary>
-        /// BASIC-智安盾基础版，面向全量租赁商户； PRO-智安盾专业版，面向签约商户；
+        /// BASIC-租安盾基础版，面向全量租赁商户； PRO-租安盾专业版，面向签约商户；
         /// </summary>
         [XmlElement("product_edition")]
         public string ProductEdition { get; set; }

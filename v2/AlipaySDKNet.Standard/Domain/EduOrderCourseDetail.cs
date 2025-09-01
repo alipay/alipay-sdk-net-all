@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CourseStartDate { get; set; }
 
         /// <summary>
-        /// 直减金额/手续费/亏损费，度量单位人民币。
+        /// 直减金额/手续费/亏损费，度量单位人民币，单位：元。
         /// </summary>
         [XmlElement("deduction_amount")]
         public string DeductionAmount { get; set; }
@@ -82,13 +82,13 @@ namespace Aop.Api.Domain
         public string OriOrderId { get; set; }
 
         /// <summary>
-        /// 商品原金额/转出金额（含手续费）/转出金额（不含亏损费）
+        /// 商品原金额/转出金额（含手续费）/转出金额（不含亏损费），单位：元。
         /// </summary>
         [XmlElement("original_price")]
         public string OriginalPrice { get; set; }
 
         /// <summary>
-        /// 优惠后金额/转出金额（不含手续费）/转出金额（含亏损费）
+        /// 优惠后金额/转出金额（不含手续费）/转出金额（含亏损费），单位：元。
         /// </summary>
         [XmlElement("original_price_after_discount")]
         public string OriginalPriceAfterDiscount { get; set; }
@@ -118,7 +118,7 @@ namespace Aop.Api.Domain
         public string QuantityUnit { get; set; }
 
         /// <summary>
-        /// 商品规格价格
+        /// 商品规格价格，单位：元。
         /// </summary>
         [XmlElement("spec_current_price")]
         public string SpecCurrentPrice { get; set; }
@@ -148,7 +148,7 @@ namespace Aop.Api.Domain
         public string SuiteCommodityName { get; set; }
 
         /// <summary>
-        /// 欠费金额
+        /// 欠费金额，单位：元。
         /// </summary>
         [XmlElement("unpaid_amount")]
         public string UnpaidAmount { get; set; }

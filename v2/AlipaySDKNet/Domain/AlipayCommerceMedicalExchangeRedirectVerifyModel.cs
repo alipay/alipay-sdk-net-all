@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("phone")]
         public string Phone { get; set; }
+
+        /// <summary>
+        /// true 是续费 false是非续费
+        /// </summary>
+        [XmlElement("renew")]
+        public bool Renew { get; set; }
     }
 }

@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class QuotaInfoDTO : AopObject
     {
         /// <summary>
+        /// 总限额
+        /// </summary>
+        [XmlElement("limit_money")]
+        public string LimitMoney { get; set; }
+
+        /// <summary>
+        /// 总限次
+        /// </summary>
+        [XmlElement("limit_times")]
+        public string LimitTimes { get; set; }
+
+        /// <summary>
         /// 剩余额度
         /// </summary>
         [XmlElement("remain_money")]

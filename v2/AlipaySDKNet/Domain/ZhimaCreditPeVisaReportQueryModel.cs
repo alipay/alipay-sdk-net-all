@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 护照号，用做是否同人验证
+        /// </summary>
+        [XmlElement("passport_no")]
+        public string PassportNo { get; set; }
+
+        /// <summary>
         /// 申请场景，报告申请国家
         /// </summary>
         [XmlElement("scene_code")]

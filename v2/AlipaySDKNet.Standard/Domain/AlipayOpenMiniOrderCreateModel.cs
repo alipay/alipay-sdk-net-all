@@ -131,6 +131,12 @@ namespace Aop.Api.Domain
         public PromoDetailInfoDTO PromoDetailInfo { get; set; }
 
         /// <summary>
+        /// 描述分账信息
+        /// </summary>
+        [XmlElement("royalty_info")]
+        public RoyaltyInfo RoyaltyInfo { get; set; }
+
+        /// <summary>
         /// 卖家支付宝用户ID。收款账号优先级规则：门店绑定的收款账户>请求传入的seller_id>商户签约账号对应的支付宝用户ID；  注：直付通和机构间联场景下seller_id无需传入或者保持跟pid一致；  如果传入的seller_id与pid不一致，需要联系支付宝小二配置收款关系；本地商品无需填写
         /// </summary>
         [XmlElement("seller_id")]

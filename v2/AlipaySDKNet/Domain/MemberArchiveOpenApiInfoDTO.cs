@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public long Age { get; set; }
 
         /// <summary>
+        /// 档案编号
+        /// </summary>
+        [XmlElement("archive_no")]
+        public string ArchiveNo { get; set; }
+
+        /// <summary>
         /// 头像链接
         /// </summary>
         [XmlElement("avatar")]

@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string Checker { get; set; }
 
         /// <summary>
+        /// 发票归集来源
+        /// </summary>
+        [XmlElement("collect_source")]
+        public string CollectSource { get; set; }
+
+        /// <summary>
         /// 员工ID
         /// </summary>
         [XmlElement("employee_id")]

@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
-        /// 商品的内存大小，手机需要设置，单位：GB/MB/KB
+        /// 商品的内存大小，如果是手机的时候需要设置，单位：GB/MB/KB
         /// </summary>
         [XmlElement("item_ram")]
         public string ItemRam { get; set; }
@@ -56,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_state")]
         public string ItemState { get; set; }
+
+        /// <summary>
+        /// 官网价，单位：元。
+        /// </summary>
+        [XmlElement("official_price")]
+        public string OfficialPrice { get; set; }
 
         /// <summary>
         /// 商品的供应商名称，例如：深圳爱租机苹果供应商

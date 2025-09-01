@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceAdReportdataQueryModel : AopObject
     {
         /// <summary>
-        /// 数据维度： ORDER-订单； PLAN-计划； GROUP-单元； CREATIVE-创意； MARKET_TARGET-营销目标； PRINCIPAL-商家; 【不同数据维度决定了出参data_id代表的数据类型不一样分别为plan_id,group_id,order_id,creative_id，营销目标和商家维度时data_id为空且不返回conversion_data_list数据】
+        /// 数据维度： ORDER-订单； PLAN-计划； GROUP-单元； CREATIVE-创意； MARKET_TARGET-营销目标； PRINCIPAL-商家; MATERIAL-素材 （仅biz_version=2.0版本且为全域智投场景下支持素材层级数据） 【不同数据维度决定了出参data_id代表的数据类型不一样分别为plan_id,group_id,order_id,creative_id，营销目标和商家维度时data_id为空且不返回conversion_data_list数据】
         /// </summary>
         [XmlElement("ad_level")]
         public string AdLevel { get; set; }
@@ -29,13 +29,13 @@ namespace Aop.Api.Domain
         public string BizToken { get; set; }
 
         /// <summary>
-        /// 传值为2.0时入参：show_conv_data、conv_time_join_rule、query_type=HOUR，出参：cost_format、cpm、click_rate、cpc、conv_result、cvr、avg_conv_cost生效。
+        /// 传值为2.0时入参：show_conv_data、conv_time_join_rule、query_type=HOUR，出参：cost_format、cpm、click_rate、cpc、conv_result、cvr、avg_conv_cost生效。 仅2.0版本支持素材维度数据查询
         /// </summary>
         [XmlElement("biz_version")]
         public string BizVersion { get; set; }
 
         /// <summary>
-        /// 转化指标Code数组
+        /// 转化指标Code数组， 当ad_level= MATERIAL的时候，不传，默认输出9个基础指标数据，且最多查询50个； 其他ad_level层级时，不传默认全部，传入按实际传入指标出数据。 指标信息获取方式：alipay.data.dataservice.ad.reportmetric.query
         /// </summary>
         [XmlArray("conv_code_list")]
         [XmlArrayItem("string")]
@@ -80,6 +80,12 @@ namespace Aop.Api.Domain
         public List<string> GroupIdList { get; set; }
 
         /// <summary>
+        /// 素材维度，当ad_level= MATERIAL的时候，必填
+        /// </summary>
+        [XmlElement("material_level")]
+        public string MaterialLevel { get; set; }
+
+        /// <summary>
         /// 广告投放平台生成的订单ID，此为数据筛选条件不影响数据汇总纬度。
         /// </summary>
         [XmlArray("order_id_list")]
@@ -91,6 +97,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }
+
+        /// <summary>
+        /// 素材层级时，可以传入 广告投放平台生成的图片ID，此为数据筛选条件不影响数据汇总纬度
+        /// </summary>
+        [XmlArray("photo_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> PhotoIdList { get; set; }
 
         /// <summary>
         /// 广告投放平台生成的计划ID，此为数据筛选条件不影响数据汇总纬度。
@@ -128,5 +141,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("start_date")]
         public string StartDate { get; set; }
+
+        /// <summary>
+        /// 素材层级时，参数生效 广告投放平台生成的视频ID，此为数据筛选条件不影响数据汇总纬度
+        /// </summary>
+        [XmlArray("video_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> VideoIdList { get; set; }
     }
 }

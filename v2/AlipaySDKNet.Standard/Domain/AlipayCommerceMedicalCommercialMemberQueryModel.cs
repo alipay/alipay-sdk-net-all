@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string OutProductId { get; set; }
 
         /// <summary>
+        /// 会员卡skuId
+        /// </summary>
+        [XmlElement("sku_id")]
+        public string SkuId { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("user_id")]

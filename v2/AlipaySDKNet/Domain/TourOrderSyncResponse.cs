@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,7 +11,7 @@ namespace Aop.Api.Domain
     public class TourOrderSyncResponse : AopObject
     {
         /// <summary>
-        /// 用于标记支付宝用户在应用下的唯一标识。一码通场景必须保存
+        /// 用于标记支付宝用户在应用下的唯一标识。
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
@@ -28,7 +29,7 @@ namespace Aop.Api.Domain
         public string OutVoucherId { get; set; }
 
         /// <summary>
-        /// 支付宝用户的userId。 一码通场景必须保存
+        /// 下单用户的支付宝userId。
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
@@ -38,5 +39,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("vid")]
         public string Vid { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("vourcher_user_ids")]
+        [XmlArrayItem("string")]
+        public List<string> VourcherUserIds { get; set; }
     }
 }

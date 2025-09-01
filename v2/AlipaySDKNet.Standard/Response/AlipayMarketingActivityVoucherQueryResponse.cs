@@ -34,6 +34,12 @@ namespace Aop.Api.Response
         public string ActivityStatus { get; set; }
 
         /// <summary>
+        /// 审核结果信息
+        /// </summary>
+        [XmlElement("audit_result_info")]
+        public AuditResultInfo AuditResultInfo { get; set; }
+
+        /// <summary>
         /// 归属商户信息
         /// </summary>
         [XmlElement("belong_merchant_info")]

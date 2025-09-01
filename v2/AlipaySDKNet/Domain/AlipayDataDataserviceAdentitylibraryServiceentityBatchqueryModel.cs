@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string PrincipalTag { get; set; }
 
         /// <summary>
+        /// 商品所属的小程序appId
+        /// </summary>
+        [XmlElement("service_entity_app_id")]
+        public string ServiceEntityAppId { get; set; }
+
+        /// <summary>
         /// 用于表示实体来源
         /// </summary>
         [XmlElement("service_entity_out_source")]

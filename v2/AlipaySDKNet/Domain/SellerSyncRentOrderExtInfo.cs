@@ -10,10 +10,16 @@ namespace Aop.Api.Domain
     public class SellerSyncRentOrderExtInfo : AopObject
     {
         /// <summary>
-        /// 用户和租赁商合同上约定的租赁价格，单位为元
+        /// 用户和租赁商合同上约定的租赁价格，单位：元
         /// </summary>
         [XmlElement("order_sign_price")]
         public string OrderSignPrice { get; set; }
+
+        /// <summary>
+        /// 订单类型:HEAD_LEASE首租,LEASE_RENEWAL续租
+        /// </summary>
+        [XmlElement("order_type")]
+        public string OrderType { get; set; }
 
         /// <summary>
         /// 用户租赁的结束时间

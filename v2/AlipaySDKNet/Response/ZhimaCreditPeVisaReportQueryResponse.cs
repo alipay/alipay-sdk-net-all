@@ -10,6 +10,18 @@ namespace Aop.Api.Response
     public class ZhimaCreditPeVisaReportQueryResponse : AopResponse
     {
         /// <summary>
+        /// 签证报告中对应的姓名拼音
+        /// </summary>
+        [XmlElement("name_spell")]
+        public string NameSpell { get; set; }
+
+        /// <summary>
+        /// 签证报告对应的护照号，用于校验跟外部的护照号是否一致
+        /// </summary>
+        [XmlElement("passport_no")]
+        public string PassportNo { get; set; }
+
+        /// <summary>
         /// 用户签证报告申请状态，枚举字段： 生效中 VALID  已失效 INVALID  不存在 NOT_EXIST
         /// </summary>
         [XmlElement("report_apply_status")]
@@ -27,5 +39,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("user_permit_status")]
         public bool UserPermitStatus { get; set; }
+
+        /// <summary>
+        /// 签证报告有效期时间戳
+        /// </summary>
+        [XmlElement("valid_time")]
+        public string ValidTime { get; set; }
     }
 }

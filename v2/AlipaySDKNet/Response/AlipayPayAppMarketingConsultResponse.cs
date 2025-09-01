@@ -63,6 +63,13 @@ namespace Aop.Api.Response
         public List<string> ConfusedCipherList { get; set; }
 
         /// <summary>
+        /// 优惠额度信息
+        /// </summary>
+        [XmlArray("discount_quota_infos")]
+        [XmlArrayItem("discount_quota_info")]
+        public List<DiscountQuotaInfo> DiscountQuotaInfos { get; set; }
+
+        /// <summary>
         /// 已废弃不再使用
         /// </summary>
         [XmlElement("image")]

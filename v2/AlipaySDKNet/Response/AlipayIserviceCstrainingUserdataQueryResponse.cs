@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Response
 {
@@ -25,6 +26,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("result_list")]
         public string ResultList { get; set; }
+
+        /// <summary>
+        /// 返回学员学习信息统计数据数组格式
+        /// </summary>
+        [XmlArray("results_list")]
+        [XmlArrayItem("string")]
+        public List<string> ResultsList { get; set; }
 
         /// <summary>
         /// 总共数据数量

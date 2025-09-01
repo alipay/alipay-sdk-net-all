@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string SpecialBizInfo { get; set; }
 
         /// <summary>
-        /// status核销或确认场景使用，枚举值为S\C\R\N，正常核销或确认商品时传S、核销权益次数完结传C、拒绝核销或确认传入N、逆向核销回补使用次数时传递R。 不传默认为S
+        /// status核销或确认场景使用，枚举值为S\C\R\N，正常核销或确认商品时传S、核销权益次数完结传C、拒绝核销或确认传入N、逆向核销回补使用次数时传递R、权益占用时传递F、权益释放时传递U。 不传默认为S
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

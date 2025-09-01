@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayMsaasMediarecogAftscvpayTransactionInitializeModel : AopObject
     {
         /// <summary>
+        /// 仅明确指定该标志为 true 时开启识别，否则不开启识别，仅货柜 air 使用。  其他类型货柜（静态柜、货柜Lite）默认开始识别。
+        /// </summary>
+        [XmlElement("air_identify")]
+        public bool AirIdentify { get; set; }
+
+        /// <summary>
         /// 货柜类型
         /// </summary>
         [XmlElement("device_identify_type")]

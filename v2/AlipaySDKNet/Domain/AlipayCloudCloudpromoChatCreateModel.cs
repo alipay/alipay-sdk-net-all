@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public ChatExtraParams ExtraParams { get; set; }
 
         /// <summary>
+        /// 用于验证客户端身份的API-Key。你可以在百宝箱中生成API-Key，详细信息可参考<a href="https://alipaytbox.yuque.com/sxs0ba/huntb8/hhmpxnxaoxaulyil">链接</a>。
+        /// </summary>
+        [XmlElement("inc_access_id")]
+        public string IncAccessId { get; set; }
+
+        /// <summary>
         /// 压测标识。默认为 false。
         /// </summary>
         [XmlElement("load_test")]

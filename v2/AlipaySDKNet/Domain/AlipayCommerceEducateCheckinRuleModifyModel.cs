@@ -23,10 +23,46 @@ namespace Aop.Api.Domain
         public string AuthenticationType { get; set; }
 
         /// <summary>
+        /// 课程签到类型相关参数，签退结束分钟
+        /// </summary>
+        [XmlElement("check_out_end_minutes")]
+        public long CheckOutEndMinutes { get; set; }
+
+        /// <summary>
+        /// 课程签到类型相关参数，签退结束类型
+        /// </summary>
+        [XmlElement("check_out_end_type")]
+        public string CheckOutEndType { get; set; }
+
+        /// <summary>
+        /// 课程签到类型相关参数，签退开始分钟
+        /// </summary>
+        [XmlElement("check_out_start_minutes")]
+        public long CheckOutStartMinutes { get; set; }
+
+        /// <summary>
+        /// 课程签到类型相关参数，签退开始类型
+        /// </summary>
+        [XmlElement("check_out_start_type")]
+        public string CheckOutStartType { get; set; }
+
+        /// <summary>
         /// 寝室签到规则扩展
         /// </summary>
         [XmlElement("dormitory_config")]
         public DormitoryConfig DormitoryConfig { get; set; }
+
+        /// <summary>
+        /// 课程签到类型相关参数，是否开始签到开关，兜底为OFF
+        /// </summary>
+        [XmlElement("enable_check_in")]
+        public string EnableCheckIn { get; set; }
+
+        /// <summary>
+        /// 课程签到类型相关参数，是否开启签退开关，兜底为OFF
+        /// </summary>
+        [XmlElement("enable_check_out")]
+        public string EnableCheckOut { get; set; }
 
         /// <summary>
         /// 规则生效状态

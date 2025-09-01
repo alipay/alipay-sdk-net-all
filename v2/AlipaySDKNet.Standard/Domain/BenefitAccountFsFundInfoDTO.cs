@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CurrentAmount { get; set; }
 
         /// <summary>
+        /// 出资主体
+        /// </summary>
+        [XmlElement("fund_principal")]
+        public string FundPrincipal { get; set; }
+
+        /// <summary>
         /// 商户出资
         /// </summary>
         [XmlElement("fund_provider")]
@@ -38,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("fund_user_id")]
         public string FundUserId { get; set; }
+
+        /// <summary>
+        /// 还款账号信息
+        /// </summary>
+        [XmlElement("repay_bank_info")]
+        public BenefitAccountRepayBankInfoDTO RepayBankInfo { get; set; }
     }
 }

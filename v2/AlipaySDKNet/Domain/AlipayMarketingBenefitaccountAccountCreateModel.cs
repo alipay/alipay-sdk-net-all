@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BizFrom { get; set; }
 
         /// <summary>
+        /// 业务身份，由支付宝侧分配，目前权益账户传递benefit_account，信用红包传递credit_coupon
+        /// </summary>
+        [XmlElement("biz_identity")]
+        public string BizIdentity { get; set; }
+
+        /// <summary>
         /// 业务订单号-用于户号幂等，一个户号一个bizNo业务订单号
         /// </summary>
         [XmlElement("biz_no")]
@@ -71,5 +77,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("publisher_user_id")]
         public string PublisherUserId { get; set; }
+
+        /// <summary>
+        /// 核身口令
+        /// </summary>
+        [XmlElement("verify_id")]
+        public string VerifyId { get; set; }
     }
 }

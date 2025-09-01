@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DeviceType { get; set; }
 
         /// <summary>
+        /// 设备扩展信息
+        /// </summary>
+        [XmlElement("ext_info")]
+        public NRiskDeviceSnapshotExtInfo ExtInfo { get; set; }
+
+        /// <summary>
         /// 记录设备最后一次交易时间
         /// </summary>
         [XmlElement("last_trade_time")]

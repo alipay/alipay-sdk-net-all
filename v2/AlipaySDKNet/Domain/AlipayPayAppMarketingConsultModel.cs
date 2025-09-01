@@ -23,6 +23,18 @@ namespace Aop.Api.Domain
         public string BlindMobile { get; set; }
 
         /// <summary>
+        /// 身份证号
+        /// </summary>
+        [XmlElement("cert_no")]
+        public string CertNo { get; set; }
+
+        /// <summary>
+        /// 身份证类别
+        /// </summary>
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
+
+        /// <summary>
         /// 混淆后的手机号MD5值列表； 若接口调用采用morse匿名方式，此字段必须与盲化的原始手机号MD5值(blind_mobile)字段一起传入，二者缺一不可；
         /// </summary>
         [XmlArray("confused_mobile_list")]

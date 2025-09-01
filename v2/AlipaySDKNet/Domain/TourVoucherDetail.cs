@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 码信息。 一码通场景使用，碰一下场景可空。 其中seed代表码种子
+        /// 码信息。 一码通场景使用，碰一下场景可空。 其中seed代表商户码种子；codeToken可从扫码的码协议中获取
         /// </summary>
         [XmlElement("code_info")]
         public string CodeInfo { get; set; }

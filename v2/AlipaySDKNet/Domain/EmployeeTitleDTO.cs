@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 税号
+        /// </summary>
+        [XmlElement("tax_register_no")]
+        public string TaxRegisterNo { get; set; }
+
+        /// <summary>
         /// 抬头id
         /// </summary>
         [XmlElement("title_id")]

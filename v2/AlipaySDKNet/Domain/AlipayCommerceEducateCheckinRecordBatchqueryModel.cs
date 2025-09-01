@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string CheckInStartTime { get; set; }
 
         /// <summary>
+        /// 签到状态
+        /// </summary>
+        [XmlElement("check_in_status")]
+        public string CheckInStatus { get; set; }
+
+        /// <summary>
         /// 签到类型，由学生签到时，匹配到的签到规则决定
         /// </summary>
         [XmlElement("check_in_type")]

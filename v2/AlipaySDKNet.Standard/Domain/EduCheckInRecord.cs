@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CheckInSourceType { get; set; }
 
         /// <summary>
+        /// 签到状态
+        /// </summary>
+        [XmlElement("check_in_status")]
+        public string CheckInStatus { get; set; }
+
+        /// <summary>
         /// 签到时间
         /// </summary>
         [XmlElement("check_in_time")]
@@ -38,6 +44,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("check_in_type")]
         public string CheckInType { get; set; }
+
+        /// <summary>
+        /// 签退图片url
+        /// </summary>
+        [XmlElement("check_out_picture")]
+        public string CheckOutPicture { get; set; }
+
+        /// <summary>
+        /// 签退时间
+        /// </summary>
+        [XmlElement("check_out_time")]
+        public string CheckOutTime { get; set; }
 
         /// <summary>
         /// 学号或工号

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
+        /// 出资主体，信用红包下传递银行机构ID
+        /// </summary>
+        [XmlElement("fund_principal")]
+        public string FundPrincipal { get; set; }
+
+        /// <summary>
         /// 出资方类型：平台出资，商户出资，第三方机构出资
         /// </summary>
         [XmlElement("fund_provider")]
@@ -32,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("fund_user_id")]
         public string FundUserId { get; set; }
+
+        /// <summary>
+        /// 还款银行信息
+        /// </summary>
+        [XmlElement("repay_bank_info")]
+        public RepayBankInfo RepayBankInfo { get; set; }
     }
 }

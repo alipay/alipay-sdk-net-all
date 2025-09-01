@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string InstallationCode { get; set; }
 
         /// <summary>
+        /// 线索ID
+        /// </summary>
+        [XmlElement("leads_id")]
+        public string LeadsId { get; set; }
+
+        /// <summary>
         /// 商机id
         /// </summary>
         [XmlElement("opportunity_id")]
