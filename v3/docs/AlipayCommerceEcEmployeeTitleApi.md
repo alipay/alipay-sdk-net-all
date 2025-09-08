@@ -4,16 +4,16 @@ All URIs are relative to *https://openapi.alipay.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Create**](AlipayCommerceEcEmployeeTitleApi.md#create) | **POST** /v3/alipay/commerce/ec/employee/title | 新增员工抬头关系
-[**Delete**](AlipayCommerceEcEmployeeTitleApi.md#delete) | **POST** /v3/alipay/commerce/ec/employee/title/delete | 删除员工抬头信息
+[**Create**](AlipayCommerceEcEmployeeTitleApi.md#create) | **POST** /v3/alipay/commerce/ec/employee/title | 员工抬头：新增员工抬头关系
+[**Delete**](AlipayCommerceEcEmployeeTitleApi.md#delete) | **POST** /v3/alipay/commerce/ec/employee/title/delete | 员工抬头：失效员工抬头关系
 [**Modify**](AlipayCommerceEcEmployeeTitleApi.md#modify) | **PUT** /v3/alipay/commerce/ec/employee/title | 修改员工抬头信息
 
 
 <a name="create"></a>
 # **Create**
-> Object Create (AlipayCommerceEcEmployeeTitleCreateModel alipayCommerceEcEmployeeTitleCreateModel = null)
+> AlipayCommerceEcEmployeeTitleCreateResponseModel Create (AlipayCommerceEcEmployeeTitleCreateModel alipayCommerceEcEmployeeTitleCreateModel = null)
 
-新增员工抬头关系
+员工抬头：新增员工抬头关系
 
 批量新增员工抬头关系，单次新增最大一千条
 
@@ -55,8 +55,8 @@ namespace Example
 
             try
             {
-                // 新增员工抬头关系
-                Object result = apiInstance.Create(alipayCommerceEcEmployeeTitleCreateModel);
+                // 员工抬头：新增员工抬头关系
+                AlipayCommerceEcEmployeeTitleCreateResponseModel result = apiInstance.Create(alipayCommerceEcEmployeeTitleCreateModel);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**AlipayCommerceEcEmployeeTitleCreateResponseModel**
 
 ### Authorization
 
@@ -100,11 +100,11 @@ No authorization required
 
 <a name="delete"></a>
 # **Delete**
-> Object Delete (AlipayCommerceEcEmployeeTitleDeleteModel alipayCommerceEcEmployeeTitleDeleteModel = null)
+> AlipayCommerceEcEmployeeTitleDeleteResponseModel Delete (AlipayCommerceEcEmployeeTitleDeleteModel alipayCommerceEcEmployeeTitleDeleteModel = null)
 
-删除员工抬头信息
+员工抬头：失效员工抬头关系
 
-批量删除员工抬头信息，单次删除最大一百条
+对员工抬头关系做失效处理。
 
 ### Example
 ```csharp
@@ -144,8 +144,8 @@ namespace Example
 
             try
             {
-                // 删除员工抬头信息
-                Object result = apiInstance.Delete(alipayCommerceEcEmployeeTitleDeleteModel);
+                // 员工抬头：失效员工抬头关系
+                AlipayCommerceEcEmployeeTitleDeleteResponseModel result = apiInstance.Delete(alipayCommerceEcEmployeeTitleDeleteModel);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**AlipayCommerceEcEmployeeTitleDeleteResponseModel**
 
 ### Authorization
 

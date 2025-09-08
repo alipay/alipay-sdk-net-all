@@ -99,7 +99,7 @@ No authorization required
 
 <a name="query"></a>
 # **Query**
-> AlipayCommerceEcEmployeeInfoQueryResponseModel Query (string enterpriseId = null, string employeeId = null, string openId = null, string userId = null, string mobile = null)
+> AlipayCommerceEcEmployeeInfoQueryResponseModel Query (string enterpriseId = null, string openId = null, string userId = null, string employeeId = null, string mobile = null, string alipayLogonId = null, string employeeCertType = null, string employeeCertNo = null, string employeeEmail = null)
 
 查询员工详情
 
@@ -140,15 +140,19 @@ namespace Example
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
             var enterpriseId = 2088441363102941;  // string | 企业id (optional) 
-            var employeeId = 228420000000057942506;  // string | 员工id (optional) 
             var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 蚂蚁统一会员ID (optional) 
-            var userId = 2088501304519332;  // string | 蚂蚁统一会员ID (optional) 
+            var userId = 2088501304519332;  // string | 支付宝用户ID (optional) 
+            var employeeId = 2284200000000000;  // string | 员工id (optional) 
             var mobile = 134XXXX2526;  // string | 员工手机号码 (optional) 
+            var alipayLogonId = 134xxxx2526;  // string | 支付宝登录号（手机号或邮箱） (optional) 
+            var employeeCertType = IDENTITY_CARD;  // string | 员工证件类型 (optional) 
+            var employeeCertNo = 220000000000000000;  // string | 员工证件号码 (optional) 
+            var employeeEmail = 123@xxx.com;  // string | 员工邮箱 (optional) 
 
             try
             {
                 // 查询员工详情
-                AlipayCommerceEcEmployeeInfoQueryResponseModel result = apiInstance.Query(enterpriseId, employeeId, openId, userId, mobile);
+                AlipayCommerceEcEmployeeInfoQueryResponseModel result = apiInstance.Query(enterpriseId, openId, userId, employeeId, mobile, alipayLogonId, employeeCertType, employeeCertNo, employeeEmail);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -167,10 +171,14 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterpriseId** | **string**| 企业id | [optional] 
- **employeeId** | **string**| 员工id | [optional] 
  **openId** | **string**| 蚂蚁统一会员ID | [optional] 
- **userId** | **string**| 蚂蚁统一会员ID | [optional] 
+ **userId** | **string**| 支付宝用户ID | [optional] 
+ **employeeId** | **string**| 员工id | [optional] 
  **mobile** | **string**| 员工手机号码 | [optional] 
+ **alipayLogonId** | **string**| 支付宝登录号（手机号或邮箱） | [optional] 
+ **employeeCertType** | **string**| 员工证件类型 | [optional] 
+ **employeeCertNo** | **string**| 员工证件号码 | [optional] 
+ **employeeEmail** | **string**| 员工邮箱 | [optional] 
 
 ### Return type
 

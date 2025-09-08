@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **Query**
-> ZhimaCustomerJobworthInfoQueryResponseModel Query (string userName = null, string connKey = null, string certNo = null, string userId = null, string openId = null, string backUrl = null, string certType = null, string kaVisitorId = null, string visitorType = null, string visitorName = null, string companyCertificate = null, string visitorUrl = null, bool? hasButton = null, bool? hasNumber = null, bool? hasQrCode = null, bool? hasHtml = null, string jobId = null, string industryId = null, string cloudResumeScene = null)
+> ZhimaCustomerJobworthInfoQueryResponseModel Query (string connKey = null, string userName = null, string certNo = null, string userId = null, string openId = null, string backUrl = null, string certType = null, string kaVisitorId = null, string visitorType = null, string visitorName = null, string companyCertificate = null, string visitorUrl = null, bool? hasButton = null, bool? hasNumber = null, bool? hasQrCode = null, bool? hasHtml = null, string jobId = null, string industryId = null, string cloudResumeScene = null)
 
 职得工作证信息查询
 
@@ -49,8 +49,8 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var userName = 张三;  // string | 姓名 (optional) 
             var connKey = ttest11234;  // string | 外部订单号，zhima.credit.payafteruse.creditagreement.sign的入参 out_agreement_no智能简历场景支持只传该值 (optional) 
+            var userName = 张三;  // string | 姓名 (optional) 
             var certNo = 42011719880304XXXX;  // string | 证件号 ，根据cert_type类型设置对应证件号码，选择身份证校验时必传 (optional) 
             var userId = 2088XXXXXXXX;  // string | 蚂蚁统一会员ID ，为2088开头的唯一标识 选择支付宝uid检验时必传，支付宝uid或身份证+身份证类型 查询2选1，都设置时uid优先 (optional) 
             var openId = 074a1CcTG1LelxKe4xQC0zgNdId0nxi95b5lsNpazWYoCo5;  // string | 蚂蚁统一会员ID ，为2088开头的唯一标识 选择支付宝uid检验时必传，支付宝uid或身份证+身份证类型 查询2选1，都设置时uid优先 (optional) 
@@ -72,7 +72,7 @@ namespace Example
             try
             {
                 // 职得工作证信息查询
-                ZhimaCustomerJobworthInfoQueryResponseModel result = apiInstance.Query(userName, connKey, certNo, userId, openId, backUrl, certType, kaVisitorId, visitorType, visitorName, companyCertificate, visitorUrl, hasButton, hasNumber, hasQrCode, hasHtml, jobId, industryId, cloudResumeScene);
+                ZhimaCustomerJobworthInfoQueryResponseModel result = apiInstance.Query(connKey, userName, certNo, userId, openId, backUrl, certType, kaVisitorId, visitorType, visitorName, companyCertificate, visitorUrl, hasButton, hasNumber, hasQrCode, hasHtml, jobId, industryId, cloudResumeScene);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -90,8 +90,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userName** | **string**| 姓名 | [optional] 
  **connKey** | **string**| 外部订单号，zhima.credit.payafteruse.creditagreement.sign的入参 out_agreement_no智能简历场景支持只传该值 | [optional] 
+ **userName** | **string**| 姓名 | [optional] 
  **certNo** | **string**| 证件号 ，根据cert_type类型设置对应证件号码，选择身份证校验时必传 | [optional] 
  **userId** | **string**| 蚂蚁统一会员ID ，为2088开头的唯一标识 选择支付宝uid检验时必传，支付宝uid或身份证+身份证类型 查询2选1，都设置时uid优先 | [optional] 
  **openId** | **string**| 蚂蚁统一会员ID ，为2088开头的唯一标识 选择支付宝uid检验时必传，支付宝uid或身份证+身份证类型 查询2选1，都设置时uid优先 | [optional] 

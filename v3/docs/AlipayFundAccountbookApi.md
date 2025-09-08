@@ -142,7 +142,7 @@ namespace Example
             var accountBookId = 2088001409188095;  // string | 记账账簿id (optional) 
             var merchantUserId = 243893499;  // string | 商户会员的唯一标识，如果传入account_book_id此字段必传并比对一致性。 (optional) 
             var sceneCode = SATF_FUND_BOOK;  // string | 资金记账本的开通场景码 (optional) 
-            var extInfo = {"agreement_no":"2019000000000"};  // string | JSON格式，传递业务扩展参数 (optional) 
+            var extInfo = {"agreement_no":"2019000000000"};  // string | 传递业务扩展参数。 注意：ext_info字段本质上是String类型，所以传递 的是转义后的json字符串。 (optional) 
 
             try
             {
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
  **accountBookId** | **string**| 记账账簿id | [optional] 
  **merchantUserId** | **string**| 商户会员的唯一标识，如果传入account_book_id此字段必传并比对一致性。 | [optional] 
  **sceneCode** | **string**| 资金记账本的开通场景码 | [optional] 
- **extInfo** | **string**| JSON格式，传递业务扩展参数 | [optional] 
+ **extInfo** | **string**| 传递业务扩展参数。 注意：ext_info字段本质上是String类型，所以传递 的是转义后的json字符串。 | [optional] 
 
 ### Return type
 

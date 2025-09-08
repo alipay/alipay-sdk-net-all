@@ -191,7 +191,7 @@ No authorization required
 
 <a name="update"></a>
 # **Update**
-> Object Update (AlipayEcoMycarParkingParkinglotinfoUpdateModel alipayEcoMycarParkingParkinglotinfoUpdateModel = null)
+> AlipayEcoMycarParkingParkinglotinfoUpdateResponseModel Update (AlipayEcoMycarParkingParkinglotinfoUpdateModel alipayEcoMycarParkingParkinglotinfoUpdateModel = null)
 
 修改停车场信息
 
@@ -236,7 +236,7 @@ namespace Example
             try
             {
                 // 修改停车场信息
-                Object result = apiInstance.Update(alipayEcoMycarParkingParkinglotinfoUpdateModel);
+                AlipayEcoMycarParkingParkinglotinfoUpdateResponseModel result = apiInstance.Update(alipayEcoMycarParkingParkinglotinfoUpdateModel);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**AlipayEcoMycarParkingParkinglotinfoUpdateResponseModel**
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="modify"></a>
 # **Modify**
-> Object Modify (System.IO.Stream appLogo = null, AlipayOpenMiniBaseinfoModifyModel data = null)
+> AlipayOpenMiniBaseinfoModifyResponseModel Modify (System.IO.Stream appLogo = null, AlipayOpenMiniBaseinfoModifyModel data = null)
 
 小程序修改基础信息
 
@@ -56,7 +56,7 @@ namespace Example
             try
             {
                 // 小程序修改基础信息
-                Object result = apiInstance.Modify(appLogo, data);
+                AlipayOpenMiniBaseinfoModifyResponseModel result = apiInstance.Modify(appLogo, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**AlipayOpenMiniBaseinfoModifyResponseModel**
 
 ### Authorization
 
