@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 签约校园刷脸时的faceId
+        /// </summary>
+        [XmlElement("face_id")]
+        public string FaceId { get; set; }
+
+        /// <summary>
         /// 小荷包开户群主openId，用于查询该用户是否开通小荷包。master_user_id与master_open_id不能同时为空，如果同时传值需保证master_user_id和master_open_id的关联性。
         /// </summary>
         [XmlElement("master_open_id")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 开通时签约方式
+        /// </summary>
+        [XmlElement("school_sign_type")]
+        public string SchoolSignType { get; set; }
 
         /// <summary>
         /// 学生证件号，用于验证该学生是否已经加入到指定的小荷包，判断时会验证学生姓名、证件类型、证件号与支付宝侧预留的是否一致

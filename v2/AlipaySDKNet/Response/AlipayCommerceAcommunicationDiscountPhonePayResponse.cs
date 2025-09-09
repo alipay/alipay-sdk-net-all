@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -19,5 +20,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("alipay_trade_no")]
         public string AlipayTradeNo { get; set; }
+
+        /// <summary>
+        /// 客服信息
+        /// </summary>
+        [XmlElement("customer_service_info")]
+        public ToBDiscountCustomerServiceInfo CustomerServiceInfo { get; set; }
     }
 }

@@ -60,6 +60,13 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// 资金模式，预付或先享，新增时不传默认先享，编辑时不传默认不改变原值
+        /// </summary>
+        [XmlArray("funding_model")]
+        [XmlArrayItem("string")]
+        public List<string> FundingModel { get; set; }
+
+        /// <summary>
         /// 客服电话
         /// </summary>
         [XmlElement("hotline")]

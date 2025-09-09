@@ -25,5 +25,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("sales_entry_order_id")]
         public string SalesEntryOrderId { get; set; }
+
+        /// <summary>
+        /// 卖进预订单id
+        /// </summary>
+        [XmlElement("sales_entry_pre_order_id")]
+        public string SalesEntryPreOrderId { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 支付宝用户的userId。
+        /// 卖进任务子活动id
         /// </summary>
         [XmlElement("sub_activity_id")]
         public string SubActivityId { get; set; }

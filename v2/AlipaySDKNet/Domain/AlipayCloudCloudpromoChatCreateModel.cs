@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public bool Retry { get; set; }
 
         /// <summary>
+        /// 会话 ID，即会话的唯一标识。
+        /// </summary>
+        [XmlElement("session_id")]
+        public string SessionId { get; set; }
+
+        /// <summary>
         /// 标识当前与智能体对话的用户，由使用方自行定义、生成与维护。
         /// </summary>
         [XmlElement("user_id")]

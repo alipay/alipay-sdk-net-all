@@ -45,6 +45,12 @@ namespace Aop.Api.Response
         public string OutBizNo { get; set; }
 
         /// <summary>
+        /// 批签模式下，绑定后会直接生成任务，并返回任务id。
+        /// </summary>
+        [XmlElement("promo_activity_id")]
+        public string PromoActivityId { get; set; }
+
+        /// <summary>
         /// 卖进订单id，有参与卖进订单的一定有
         /// </summary>
         [XmlElement("sales_entry_order_id")]

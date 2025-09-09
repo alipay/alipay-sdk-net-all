@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 权益id
+        /// </summary>
+        [XmlElement("right_id")]
+        public string RightId { get; set; }
+
+        /// <summary>
         /// 场景码，如：antforest（蚂蚁森林）
         /// </summary>
         [XmlElement("scene_code")]

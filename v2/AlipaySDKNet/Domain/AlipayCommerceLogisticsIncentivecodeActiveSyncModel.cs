@@ -52,10 +52,22 @@ namespace Aop.Api.Domain
         public string ActiveLongitude { get; set; }
 
         /// <summary>
+        /// 碰一下物料铺设门店编码
+        /// </summary>
+        [XmlElement("active_out_shop_id")]
+        public string ActiveOutShopId { get; set; }
+
+        /// <summary>
         /// 码值绑定时位置的省份
         /// </summary>
         [XmlElement("active_province")]
         public string ActiveProvince { get; set; }
+
+        /// <summary>
+        /// 碰一下物料铺设门店名称
+        /// </summary>
+        [XmlElement("active_shop_name")]
+        public string ActiveShopName { get; set; }
 
         /// <summary>
         /// 码值绑定时位置的街道
@@ -86,5 +98,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("logistics_code")]
         public string LogisticsCode { get; set; }
+
+        /// <summary>
+        /// 物料类型
+        /// </summary>
+        [XmlElement("material_type")]
+        public string MaterialType { get; set; }
     }
 }

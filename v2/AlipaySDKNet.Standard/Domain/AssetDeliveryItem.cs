@@ -259,6 +259,31 @@ namespace Aop.Api.Domain
         public string RecordType { get; set; }
 
         /// <summary>
+        /// 父业务单据号下子业务单据数量，数量等于related_others_out_biz_no的列表数量+1
+        /// </summary>
+        [XmlElement("related_children_out_biz_no_count")]
+        public long RelatedChildrenOutBizNoCount { get; set; }
+
+        /// <summary>
+        /// 关联其它业务单据号，同一个父业务单据号的其它业务单据号（不包含related_out_biz_no）
+        /// </summary>
+        [XmlArray("related_others_out_biz_no")]
+        [XmlArrayItem("string")]
+        public List<string> RelatedOthersOutBizNo { get; set; }
+
+        /// <summary>
+        /// 关联的上游业务单号
+        /// </summary>
+        [XmlElement("related_out_biz_no")]
+        public string RelatedOutBizNo { get; set; }
+
+        /// <summary>
+        /// 父业务单据号（组合订单号），同related_out_biz_no形成父子关系
+        /// </summary>
+        [XmlElement("related_parent_out_biz_no")]
+        public string RelatedParentOutBizNo { get; set; }
+
+        /// <summary>
         /// 对应供应商pid
         /// </summary>
         [XmlElement("supplier_id")]

@@ -42,7 +42,7 @@ namespace Aop.Api.Response
         public List<RentRiskInfoVO> RiskInfos { get; set; }
 
         /// <summary>
-        /// 对赌实验命中的分组
+        /// 联营商户订单分组
         /// </summary>
         [XmlElement("vam_group")]
         public string VamGroup { get; set; }

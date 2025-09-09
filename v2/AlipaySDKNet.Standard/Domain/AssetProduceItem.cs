@@ -253,10 +253,29 @@ namespace Aop.Api.Domain
         public string ReceiverName { get; set; }
 
         /// <summary>
+        /// 同一组合订单号下所有业务单据号的总数量
+        /// </summary>
+        [XmlElement("related_children_out_biz_no_count")]
+        public long RelatedChildrenOutBizNoCount { get; set; }
+
+        /// <summary>
+        /// 关联的其它业务单据号，即相同组合订单号下除了当前业务单据号以外的剩余所有业务单据号
+        /// </summary>
+        [XmlArray("related_others_out_biz_no")]
+        [XmlArrayItem("string")]
+        public List<string> RelatedOthersOutBizNo { get; set; }
+
+        /// <summary>
         /// 关联的上游业务单号
         /// </summary>
         [XmlElement("related_out_biz_no")]
         public string RelatedOutBizNo { get; set; }
+
+        /// <summary>
+        /// 关联的上游组合订单号，一个组合订单号关联多个业务单据号，供应商可将该字段用作合单发货
+        /// </summary>
+        [XmlElement("related_parent_out_biz_no")]
+        public string RelatedParentOutBizNo { get; set; }
 
         /// <summary>
         /// 物料供应商PID，和调用方的供应商PID一致

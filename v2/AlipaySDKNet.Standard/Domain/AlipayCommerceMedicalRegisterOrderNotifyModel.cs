@@ -148,6 +148,12 @@ namespace Aop.Api.Domain
         public string OrderNo { get; set; }
 
         /// <summary>
+        /// 挂号订单属性
+        /// </summary>
+        [XmlElement("order_prop")]
+        public string OrderProp { get; set; }
+
+        /// <summary>
         /// 订单状态
         /// </summary>
         [XmlElement("order_status")]

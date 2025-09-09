@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string PatientAge { get; set; }
 
         /// <summary>
-        /// 患者年龄单位（day、month、year） ○ 小于30天：day-天  ○ 30天~1年：month-月  ○ 大于等于1年：year-岁
+        /// 患者年龄单位 ○ 小于30天：天  ○ 30天~1年：月  ○ 大于等于1年：岁
         /// </summary>
         [XmlElement("patient_age_unit")]
         public string PatientAgeUnit { get; set; }
