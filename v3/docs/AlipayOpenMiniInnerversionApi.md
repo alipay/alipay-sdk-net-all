@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**Online**](AlipayOpenMiniInnerversionApi.md#online) | **POST** /v3/alipay/open/mini/innerversion/online | 内部小程序-上架
 [**Sync**](AlipayOpenMiniInnerversionApi.md#sync) | **POST** /v3/alipay/open/mini/innerversion/sync | 小程序包信息推送
+[**Upgrade**](AlipayOpenMiniInnerversionApi.md#upgrade) | **POST** /v3/alipay/open/mini/innerversion/upgrade | 升级模板实例化小程序
 [**Upload**](AlipayOpenMiniInnerversionApi.md#upload) | **POST** /v3/alipay/open/mini/innerversion/upload | 内部小程序-打包构建
 
 
@@ -164,6 +165,95 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **alipayOpenMiniInnerversionSyncModel** | **AlipayOpenMiniInnerversionSyncModel**|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | common response |  -  |
+| **0** | 请求失败 |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+<a name="upgrade"></a>
+# **Upgrade**
+> Object Upgrade (AlipayOpenMiniInnerversionUpgradeModel alipayOpenMiniInnerversionUpgradeModel = null)
+
+升级模板实例化小程序
+
+升级基于模板实例化的小程序，升级后不需要重新提交审核；同步接口。
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using AlipaySDKNet.OpenAPI.Api;
+using AlipaySDKNet.OpenAPI.Client;
+using AlipaySDKNet.OpenAPI.Model;
+using AlipaySDKNet.OpenAPI.Util;
+using AlipaySDKNet.OpenAPI.Util.Model;
+
+namespace Example
+{
+    public class UpgradeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://openapi.alipay.com";
+            var apiInstance = new AlipayOpenMiniInnerversionApi(config);
+
+            // 设置alipayConfig参数
+            AlipayConfig alipayConfig = new AlipayConfig();
+            alipayConfig.AppId = "app_id";
+            alipayConfig.PrivateKey = "private_key";
+            // 密钥模式
+            alipayConfig.AlipayPublicKey = "alipay_public_key";
+            // 证书模式
+            // alipayConfig.AppCertPath = "../appCertPublicKey.crt";
+            // alipayConfig.AlipayPublicCertPath = "../alipayCertPublicKey_RSA2.crt";
+            // alipayConfig.RootCertPath = "../alipayRootCert.crt";
+            alipayConfig.EncryptKey = "encrypt_key";
+            AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
+            apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
+
+            var alipayOpenMiniInnerversionUpgradeModel = new AlipayOpenMiniInnerversionUpgradeModel(); // AlipayOpenMiniInnerversionUpgradeModel |  (optional) 
+
+            try
+            {
+                // 升级模板实例化小程序
+                Object result = apiInstance.Upgrade(alipayOpenMiniInnerversionUpgradeModel);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling AlipayOpenMiniInnerversionApi.Upgrade: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **alipayOpenMiniInnerversionUpgradeModel** | **AlipayOpenMiniInnerversionUpgradeModel**|  | [optional] 
 
 ### Return type
 
