@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public string TransMemo { get; set; }
 
         /// <summary>
-        /// 账务记录的类型，仅供参考
+        /// 账务记录的类型，仅供参考（可能会变化）
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 租赁订单支付及信用产品签约信息（不传表示复用创建订单时传的数据）
+        /// 租赁订单支付及信用产品签约信息
         /// </summary>
         [XmlElement("rent_sign_info")]
         public RentDoSignInfoDTO RentSignInfo { get; set; }

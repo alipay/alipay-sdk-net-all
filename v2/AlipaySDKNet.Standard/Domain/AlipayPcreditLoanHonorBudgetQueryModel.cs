@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string OutTraceId { get; set; }
 
         /// <summary>
+        /// 渠道产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
         /// 用户输入的还款试算金额，若不传则返回用户应还总额，传了则返回分摊后的总额，单位分。
         /// </summary>
         [XmlElement("repay_amount")]

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Account { get; set; }
 
         /// <summary>
-        /// 金额
+        /// 金额，人民币元
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string OrderNo { get; set; }
 
         /// <summary>
-        /// 服务费金额
+        /// 服务费金额，人民币元
         /// </summary>
         [XmlElement("service_fee")]
         public string ServiceFee { get; set; }

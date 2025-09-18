@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DeviceType { get; set; }
 
         /// <summary>
+        /// 门店关联的商户信息
+        /// </summary>
+        [XmlElement("merchant_info")]
+        public AlipayMerchantInfo MerchantInfo { get; set; }
+
+        /// <summary>
         /// 商户联系电话
         /// </summary>
         [XmlElement("merchant_phone")]

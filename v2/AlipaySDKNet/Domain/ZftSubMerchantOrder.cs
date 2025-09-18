@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 申请单处理失败时，通过此此段返回具体的失败理由；与kf_audit_memo和kz_audit_memo配合使用
+        /// 申请单处理失败时，通过此字段返回具体的失败理由；与fk_audit_memo和kz_audit_memo配合使用
         /// </summary>
         [XmlElement("reason")]
         public string Reason { get; set; }

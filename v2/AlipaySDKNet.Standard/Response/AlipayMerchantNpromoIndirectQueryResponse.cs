@@ -24,7 +24,7 @@ namespace Aop.Api.Response
         public List<PromoAgreementInfo> PopAgreementList { get; set; }
 
         /// <summary>
-        /// 弹窗中部图片URL
+        /// 活动信息图片URL
         /// </summary>
         [XmlElement("pop_body_img")]
         public string PopBodyImg { get; set; }
@@ -52,6 +52,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("pop_url")]
         public string PopUrl { get; set; }
+
+        /// <summary>
+        /// 本次请求的额外信息，例如请求传入的绑定关系与支付宝不匹配
+        /// </summary>
+        [XmlElement("remark")]
+        public string Remark { get; set; }
 
         /// <summary>
         /// 当前内容的业务场景编码 设备申请场景：DVC_APPLY 营销活动场景：PROMO_ACTIVITY

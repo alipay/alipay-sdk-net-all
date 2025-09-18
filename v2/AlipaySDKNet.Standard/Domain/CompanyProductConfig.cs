@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CompanyProductConfig : AopObject
     {
         /// <summary>
+        /// 字段为Y时，扫码关联的订单在自然人确认后，会邀约自然人成为供应商，前提自然人非当前企业的供应商 字段默认为N
+        /// </summary>
+        [XmlElement("invite_suppliers_after_order_confirm")]
+        public string InviteSuppliersAfterOrderConfirm { get; set; }
+
+        /// <summary>
         /// 票种
         /// </summary>
         [XmlElement("invoice_kind")]

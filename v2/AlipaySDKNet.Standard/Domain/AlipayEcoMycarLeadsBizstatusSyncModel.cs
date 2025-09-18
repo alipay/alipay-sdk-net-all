@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string LeadsBizCode { get; set; }
 
         /// <summary>
-        /// 线索id
+        /// 线索id（当source_channel和scene_code为空时必选，有线索id时优先通过线索id唯一定位线索）
         /// </summary>
         [XmlElement("leads_id")]
         public string LeadsId { get; set; }
@@ -32,6 +32,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("remark")]
         public string Remark { get; set; }
+
+        /// <summary>
+        /// 线索场景码（当leads_id为空时必选）
+        /// </summary>
+        [XmlElement("scene_code")]
+        public string SceneCode { get; set; }
+
+        /// <summary>
+        /// 线索渠道（当leads_id为空时必选）
+        /// </summary>
+        [XmlElement("source_channel")]
+        public string SourceChannel { get; set; }
 
         /// <summary>
         /// 支付宝用户的userId。

@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayEbppIndustryOfflinelaborRegisterModifyRequest : IAopRequest<AlipayEbppIndustryOfflinelaborRegisterModifyResponse>
     {
         /// <summary>
-        /// 通过该接口实现用户在安心登记卡报名后在服务商侧完成入职等状态的变更
+        /// 用户报名登记记录状态同步（客户→支付宝） 通过该接口实现用户在安心登记卡报名登记后，客户在自身系统或者在服务商侧操作入职等状态的变更，并通过该接口同步到支付宝
         /// </summary>
         public string BizContent { get; set; }
 

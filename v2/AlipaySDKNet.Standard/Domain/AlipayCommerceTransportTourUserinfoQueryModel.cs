@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("code_token")]
         public string CodeToken { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("identity_type_list")]
+        [XmlArrayItem("string")]
+        public List<string> IdentityTypeList { get; set; }
 
         /// <summary>
         /// 新商户建议使用open_id替代该字段。对于新商户，user_id字段未来计划逐步回收，存量商户可继续使用。如使用open_id，请确认 应用-开发配置-openid配置管理 已启用。无该配置项，可查看openid配置申请：<a href="https://opendocs.alipay.com/mini/0ai9ok?pathHash=de631c06">alipay.commerce.transport.tour.userinfo.query</a>。 

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 资产id，如小荷包accountId
+        /// </summary>
+        [XmlElement("asset_id")]
+        public string AssetId { get; set; }
+
+        /// <summary>
         /// 变更状态。可选的字段枚举说明：{SUCCESS:变更成功;FAIL:变更失败}
         /// </summary>
         [XmlElement("status")]

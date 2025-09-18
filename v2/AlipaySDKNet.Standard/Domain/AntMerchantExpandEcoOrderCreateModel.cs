@@ -47,6 +47,25 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// 数组，商品图片file_key，就是在订单上传之前需要先上传订单对应的商品图片，上传成功之后返回的oss_key
+        /// </summary>
+        [XmlArray("product_image_file_keys")]
+        [XmlArrayItem("string")]
+        public List<string> ProductImageFileKeys { get; set; }
+
+        /// <summary>
+        /// 商品名称
+        /// </summary>
+        [XmlElement("product_name")]
+        public string ProductName { get; set; }
+
+        /// <summary>
+        /// 商品规格
+        /// </summary>
+        [XmlElement("product_specifications")]
+        public string ProductSpecifications { get; set; }
+
+        /// <summary>
         /// osskey数组,将文件上传的返回的osskey一并上传
         /// </summary>
         [XmlArray("qrcode_imgs")]

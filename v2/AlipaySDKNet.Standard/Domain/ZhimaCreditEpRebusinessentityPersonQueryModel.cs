@@ -17,6 +17,18 @@ namespace Aop.Api.Domain
         public string PersonCertNo { get; set; }
 
         /// <summary>
+        /// 法人证件号md5值
+        /// </summary>
+        [XmlElement("person_cert_no_md_5")]
+        public string PersonCertNoMd5 { get; set; }
+
+        /// <summary>
+        /// 法人证件号（身份证号含护照等其他证件）SHA256加密的密文
+        /// </summary>
+        [XmlElement("person_cert_no_sha_256")]
+        public string PersonCertNoSha256 { get; set; }
+
+        /// <summary>
         /// 法人姓名
         /// </summary>
         [XmlElement("person_name")]

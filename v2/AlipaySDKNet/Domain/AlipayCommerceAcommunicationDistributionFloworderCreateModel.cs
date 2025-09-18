@@ -68,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sms_code")]
         public string SmsCode { get; set; }
+
+        /// <summary>
+        /// 目标账号
+        /// </summary>
+        [XmlElement("target_account")]
+        public string TargetAccount { get; set; }
     }
 }

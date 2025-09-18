@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string OutTraceId { get; set; }
 
         /// <summary>
+        /// 渠道产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
         /// 还款方式，枚举值： 1-等额本息(灵活还)， 2-等额本金(灵活还)， 3-先息后本(灵活还)， 4-等额本息(按期还)
         /// </summary>
         [XmlElement("repay_method")]

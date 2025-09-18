@@ -53,10 +53,16 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 项目id。由支付宝分配
+        /// 项目id，由支付宝分配
         /// </summary>
         [XmlElement("project_id")]
         public string ProjectId { get; set; }
+
+        /// <summary>
+        /// 凭证可用的场景类型，场景code（sceneCodes）为一码通（qrcode）时必须填写该参数，不传时默认为「免证登记」场景。
+        /// </summary>
+        [XmlElement("scene_type")]
+        public string SceneType { get; set; }
 
         /// <summary>
         /// 下单用户手机号

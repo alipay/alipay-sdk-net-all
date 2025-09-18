@@ -28,13 +28,19 @@ namespace Aop.Api.Domain
         public ImageMsgVO ImageMsgContent { get; set; }
 
         /// <summary>
+        /// 图文消息内容模型，当消息类型(msg_type)选 "IMAGE_TEXT" 的时候，这个内容必须得填充
+        /// </summary>
+        [XmlElement("image_text_msg_content")]
+        public ImageTextMsgVO ImageTextMsgContent { get; set; }
+
+        /// <summary>
         /// 链接消息内容模型，当消息类型(msg_type) 选择"LINK"的时候，必须填充这个内容
         /// </summary>
         [XmlElement("link_msg_content")]
         public LinkMsgVO LinkMsgContent { get; set; }
 
         /// <summary>
-        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"，商品消息:"GOODS"
+        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"，商品消息:"GOODS"，图文消息:"IMAGE_TEXT"。
         /// </summary>
         [XmlElement("msg_type")]
         public string MsgType { get; set; }

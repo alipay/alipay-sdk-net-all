@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayEbppIndustryOfflinelaborProjectQueryRequest : IAopRequest<AlipayEbppIndustryOfflinelaborProjectQueryResponse>
     {
         /// <summary>
-        /// 线下用工项目查询
+        /// 项目和岗位查询
         /// </summary>
         public string BizContent { get; set; }
 

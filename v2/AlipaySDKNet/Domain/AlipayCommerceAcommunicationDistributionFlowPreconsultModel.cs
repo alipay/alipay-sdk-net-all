@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("request_id")]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 目标账号
+        /// </summary>
+        [XmlElement("target_account")]
+        public string TargetAccount { get; set; }
     }
 }

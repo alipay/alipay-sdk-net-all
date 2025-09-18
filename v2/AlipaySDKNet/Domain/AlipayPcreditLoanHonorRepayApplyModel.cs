@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string OutTraceId { get; set; }
 
         /// <summary>
+        /// 渠道产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
         /// 用户申请的还款金额，单位：分
         /// </summary>
         [XmlElement("repay_amount")]

@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string CertType { get; set; }
 
         /// <summary>
+        /// 身份类型验证结果通过：true，其余unknow
+        /// </summary>
+        [XmlElement("identity_check_result")]
+        public string IdentityCheckResult { get; set; }
+
+        /// <summary>
         /// 用户姓名
         /// </summary>
         [XmlElement("name")]

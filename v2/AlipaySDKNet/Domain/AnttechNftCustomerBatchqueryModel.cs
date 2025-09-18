@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public long Page { get; set; }
 
         /// <summary>
-        /// 分页大小-上限10
+        /// 分页大小
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

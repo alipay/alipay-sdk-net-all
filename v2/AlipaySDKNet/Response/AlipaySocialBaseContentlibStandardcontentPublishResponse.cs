@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("content_id")]
         public string ContentId { get; set; }
+
+        /// <summary>
+        /// 用于提示发文成功后的一些提示信息，例如：内容挂载的POI位置信息不合法，请前往内容后台进行修改等
+        /// </summary>
+        [XmlElement("extra_msg")]
+        public string ExtraMsg { get; set; }
     }
 }

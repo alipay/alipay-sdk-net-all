@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string OutTraceId { get; set; }
 
         /// <summary>
+        /// 渠道产品码
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
         /// 首页HOME、支用表单页LEND、其他OTHERS
         /// </summary>
         [XmlElement("query_scene")]

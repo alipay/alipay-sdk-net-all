@@ -28,6 +28,24 @@ namespace Aop.Api.Domain
         public string BuyerOpenId { get; set; }
 
         /// <summary>
+        /// 当期对应的买断金的应还日
+        /// </summary>
+        [XmlElement("buyout_repay_time")]
+        public string BuyoutRepayTime { get; set; }
+
+        /// <summary>
+        /// 当期对应的买断分账利息，单位：元。
+        /// </summary>
+        [XmlElement("buyout_royalty_interest_price")]
+        public string BuyoutRoyaltyInterestPrice { get; set; }
+
+        /// <summary>
+        /// 本期阶梯买断分账本金，单位：元。
+        /// </summary>
+        [XmlElement("buyout_royalty_principal_price")]
+        public string BuyoutRoyaltyPrincipalPrice { get; set; }
+
+        /// <summary>
         /// 当前期数改账中的买断分账金，单位：元
         /// </summary>
         [XmlElement("current_buyout_after_price")]

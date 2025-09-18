@@ -28,10 +28,16 @@ namespace Aop.Api.Domain
         public string InvoiceLineProperty { get; set; }
 
         /// <summary>
-        /// 开票金额：总位数20位，最多16位整数，最多2位小数，单位：元
+        /// 开票金额：总位数20位，最多16位整数，最多2位小数，单位：元 开票金额与不含税金额必须二选一传入，不传入则系统自行计算，传入则只做校验 更多计算、校验、进位规则详情见： <a href="https://opendocs.alipay.com/mini/0i3ikm">https://opendocs.alipay.com/mini/0i3ikm</a>
         /// </summary>
         [XmlElement("item_amount")]
         public string ItemAmount { get; set; }
+
+        /// <summary>
+        /// 不含税金额：总位数20位，最多16位整数，最多2位小数，单位：元 不含税金额与开票金额必须二选一传入 不传入则系统自行计算，传入则只做校验
+        /// </summary>
+        [XmlElement("item_amount_without_tax")]
+        public string ItemAmountWithoutTax { get; set; }
 
         /// <summary>
         /// 商品配置编码
@@ -46,7 +52,7 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
-        /// 商品数量：总27位数，最多15位整数，最多10位小数
+        /// 商品数量：总27位数，最多17位整数，最多13位小数 不传入则系统自行计算，传入则只做校验
         /// </summary>
         [XmlElement("item_num")]
         public string ItemNum { get; set; }
@@ -56,6 +62,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_spec")]
         public string ItemSpec { get; set; }
+
+        /// <summary>
+        /// 商品税额：总位数20位，最多16位整数，最多2位小数，单位：元 不传入则系统自行计算，传入则只做校验
+        /// </summary>
+        [XmlElement("item_tax_amount")]
+        public string ItemTaxAmount { get; set; }
 
         /// <summary>
         /// 商品税率，小数介于(0, 1)，小数部分最多保留四位
@@ -68,6 +80,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_unit")]
         public string ItemUnit { get; set; }
+
+        /// <summary>
+        /// 不含税单价：总27位数，最多17位整数，最多13位小数 单位：元 不传入则系统自行计算，传入则只做校验
+        /// </summary>
+        [XmlElement("item_unit_amount")]
+        public string ItemUnitAmount { get; set; }
 
         /// <summary>
         /// 关联蓝票明细行序号

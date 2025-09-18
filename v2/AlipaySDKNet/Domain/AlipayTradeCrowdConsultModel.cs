@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AlipayTradeCrowdConsultModel : AopObject
     {
         /// <summary>
-        /// 用于标记支付宝用户在应用下的唯一标识 当前字段已废弃(无需open_id)
+        /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }

@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string PreConsultId { get; set; }
 
         /// <summary>
+        /// SL_PD_SALE_CODE-HONOR
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
         /// 请求来源
         /// </summary>
         [XmlElement("request_source")]

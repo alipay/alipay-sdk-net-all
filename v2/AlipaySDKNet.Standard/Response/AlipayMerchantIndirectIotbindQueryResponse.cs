@@ -33,10 +33,22 @@ namespace Aop.Api.Response
         public string EncodeUrl { get; set; }
 
         /// <summary>
+        /// 商家名称
+        /// </summary>
+        [XmlElement("merchant_name")]
+        public string MerchantName { get; set; }
+
+        /// <summary>
         /// 最近一次预投的非支付宝交易到账播报语料ID。
         /// </summary>
         [XmlElement("msg_id")]
         public string MsgId { get; set; }
+
+        /// <summary>
+        /// 屏幕收款二维码链接
+        /// </summary>
+        [XmlElement("screen_pay_qr_link")]
+        public string ScreenPayQrLink { get; set; }
 
         /// <summary>
         /// 设备绑定的商户在支付宝体系内的唯一id,一般以2088开头。设备处于已绑定状态时会返回对应绑定商户id。如果设备没有绑定过或者已经解绑，该字段为空

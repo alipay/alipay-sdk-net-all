@@ -43,6 +43,13 @@ namespace Aop.Api.Domain
         /// <summary>
         /// null
         /// </summary>
+        [XmlArray("voucher_user_ids")]
+        [XmlArrayItem("string")]
+        public List<string> VoucherUserIds { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
         [XmlArray("vourcher_user_ids")]
         [XmlArrayItem("string")]
         public List<string> VourcherUserIds { get; set; }

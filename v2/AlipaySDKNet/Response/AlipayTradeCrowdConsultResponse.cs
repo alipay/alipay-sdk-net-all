@@ -1,6 +1,7 @@
 using System;
 using System.Xml.Serialization;
 using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -21,5 +22,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("promoted_user")]
         public string PromotedUser { get; set; }
+
+        /// <summary>
+        /// 场景对应的执行结果
+        /// </summary>
+        [XmlElement("scene_result")]
+        public SceneResult SceneResult { get; set; }
     }
 }

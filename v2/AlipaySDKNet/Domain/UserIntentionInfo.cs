@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CityName { get; set; }
 
         /// <summary>
+        /// 期望岗位编码
+        /// </summary>
+        [XmlElement("expect_job_code")]
+        public string ExpectJobCode { get; set; }
+
+        /// <summary>
         /// 期望工作类型
         /// </summary>
         [XmlElement("expect_job_type")]

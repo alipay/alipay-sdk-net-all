@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,6 +33,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("image_url")]
         public string ImageUrl { get; set; }
+
+        /// <summary>
+        /// 文字链接组合
+        /// </summary>
+        [XmlArray("text_link_list")]
+        [XmlArrayItem("text_link_v_o")]
+        public List<TextLinkVO> TextLinkList { get; set; }
 
         /// <summary>
         /// 推送的消息文案标题（参考：好物分享来咯！）

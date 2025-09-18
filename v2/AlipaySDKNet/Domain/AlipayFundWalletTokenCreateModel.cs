@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public bool NeedCheckIdentity { get; set; }
 
         /// <summary>
+        /// 是否引导开通自动充
+        /// </summary>
+        [XmlElement("need_guide_auto_deposit")]
+        public string NeedGuideAutoDeposit { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]

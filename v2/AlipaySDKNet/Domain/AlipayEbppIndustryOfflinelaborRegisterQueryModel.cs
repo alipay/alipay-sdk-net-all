@@ -28,16 +28,28 @@ namespace Aop.Api.Domain
         public string JobName { get; set; }
 
         /// <summary>
-        /// 外部登记号
+        /// 外部登记号 当前字段已废弃(字段名称调整,新增 out_register_id 字段替代)
         /// </summary>
         [XmlElement("out_regist_id")]
         public string OutRegistId { get; set; }
 
         /// <summary>
-        /// 外部登记号 当前字段已废弃(字段名称调整,新增out_regist_id字段替代)
+        /// 外部登记号 当前字段已废弃(字段名称调整,新增 out_register_id 字段替代)
         /// </summary>
         [XmlElement("out_regist_no")]
         public string OutRegistNo { get; set; }
+
+        /// <summary>
+        /// 外部登记号
+        /// </summary>
+        [XmlElement("out_register_id")]
+        public string OutRegisterId { get; set; }
+
+        /// <summary>
+        /// 外部登记号 当前字段已废弃(字段名称调整,新增 out_register_id 字段替代)
+        /// </summary>
+        [XmlElement("out_register_no")]
+        public string OutRegisterNo { get; set; }
 
         /// <summary>
         /// 页码（从 1 开始）

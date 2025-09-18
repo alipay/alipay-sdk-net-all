@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string AgreementProductCode { get; set; }
 
         /// <summary>
-        /// 支付宝订单号，通过支付宝订单号精确查询相关的流水明细，商户订单号与支付宝订单号互斥
+        /// 支付宝订单号，通过支付宝订单号精确查询相关的流水明细。支付宝订单号和商户订单号互斥。选择支付宝订单号时，不可选商户订单号。
         /// </summary>
         [XmlElement("alipay_order_no")]
         public string AlipayOrderNo { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 商户订单号，通过商户订单号精确查询相关的流水明细，商户订单号与支付宝订单号互斥
+        /// 商户订单号，通过商户订单号精确查询相关的流水明细。支付宝订单号和商户订单号互斥。选择商户订单号时，不可选支付宝订单号。
         /// </summary>
         [XmlElement("merchant_order_no")]
         public string MerchantOrderNo { get; set; }

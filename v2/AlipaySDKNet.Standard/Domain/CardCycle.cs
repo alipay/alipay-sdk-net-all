@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CycleChargeType { get; set; }
 
         /// <summary>
+        /// 表示固定周期扣费的步长，比如28表示每隔28个自然日扣费。
+        /// </summary>
+        [XmlElement("cycle_range")]
+        public long CycleRange { get; set; }
+
+        /// <summary>
         /// 指定周期付的周期单位
         /// </summary>
         [XmlElement("cycle_type")]

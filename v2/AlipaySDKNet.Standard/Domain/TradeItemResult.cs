@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
-        /// 商家优惠金额
+        /// 商家优惠金额，人民币元
         /// </summary>
         [XmlElement("net_mdiscount")]
         public string NetMdiscount { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string OtherAccount { get; set; }
 
         /// <summary>
-        /// 订单退款金额
+        /// 订单退款金额，人民币元
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }
@@ -88,7 +88,7 @@ namespace Aop.Api.Domain
         public string StoreNo { get; set; }
 
         /// <summary>
-        /// 订单金额
+        /// 订单金额，人民币元
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

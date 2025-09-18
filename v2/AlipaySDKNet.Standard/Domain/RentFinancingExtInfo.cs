@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string BuyoutRepaymentType { get; set; }
 
         /// <summary>
-        /// 需要融资的金额，币种：人民币
+        /// 需要融资的金额，币种：人民币，单位：元。
         /// </summary>
         [XmlElement("financing_amount")]
         public string FinancingAmount { get; set; }

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class QualityDetectDetail : AopObject
     {
         /// <summary>
+        /// 线圈烧录的UTC时间戳
+        /// </summary>
+        [XmlElement("burning_time_stamp")]
+        public long BurningTimeStamp { get; set; }
+
+        /// <summary>
         /// 品检详情信息，其中每个key代表需要品检的字段，value则是供应商品检过程中识别到的物料实体信息值
         /// </summary>
         [XmlElement("detect_detail")]

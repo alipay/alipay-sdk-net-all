@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public string EncodeUrl { get; set; }
 
         /// <summary>
+        /// 商家名称
+        /// </summary>
+        [XmlElement("merchant_name")]
+        public string MerchantName { get; set; }
+
+        /// <summary>
+        /// 商家的屏幕收款二维码链接
+        /// </summary>
+        [XmlElement("screen_pay_qr_link")]
+        public string ScreenPayQrLink { get; set; }
+
+        /// <summary>
         /// 间连商户在支付宝体系内的唯一id,一般以2088开头。
         /// </summary>
         [XmlElement("smid")]

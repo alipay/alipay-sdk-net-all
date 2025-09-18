@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public long PaidPeriod { get; set; }
 
         /// <summary>
-        /// 已还租金
+        /// 已还租金，单位：元。
         /// </summary>
         [XmlElement("paid_price")]
         public string PaidPrice { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public long UnpaidPeriod { get; set; }
 
         /// <summary>
-        /// 剩余未还租金
+        /// 剩余未还租金，单位：元。
         /// </summary>
         [XmlElement("unpaid_price")]
         public string UnpaidPrice { get; set; }

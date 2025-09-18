@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class RentCarRefundItem : AopObject
     {
         /// <summary>
+        /// 用于对账，对应业务账单中的商家订单号字段
+        /// </summary>
+        [XmlElement("bill_merchant_order_id")]
+        public string BillMerchantOrderId { get; set; }
+
+        /// <summary>
+        /// 用于对账，对应业务账单中的退款批次号字段
+        /// </summary>
+        [XmlElement("bill_refund_batch_no")]
+        public string BillRefundBatchNo { get; set; }
+
+        /// <summary>
         /// 当前退款请求在此支付流水中退款的金额，单位分
         /// </summary>
         [XmlElement("refund_amount")]

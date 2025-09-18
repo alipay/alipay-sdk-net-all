@@ -18,6 +18,13 @@ namespace Aop.Api.Response
         public List<TourOrderSyncResponse> SuccessOrderList { get; set; }
 
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("sync_failure_detail_list")]
+        [XmlArrayItem("tour_order_sync_failure_detail")]
+        public List<TourOrderSyncFailureDetail> SyncFailureDetailList { get; set; }
+
+        /// <summary>
         /// 失败的订单凭证号。 结构： outBizNum|outVoucherId
         /// </summary>
         [XmlElement("un_sync_order_no_list")]

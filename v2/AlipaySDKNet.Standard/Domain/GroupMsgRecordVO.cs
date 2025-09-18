@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public string MsgId { get; set; }
 
         /// <summary>
-        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"，商品消息:GOODS。当发送消息类型为复合消息（send_batch为true时），返回结果为几种消息类型的组合，示例:["APP", "COUPON", "IMAGE"]
+        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"，商品消息:"GOODS"，图文消息:"IMAGE_TEXT"，组合消息:"COMBINE"。当发送消息类型为复合消息（send_batch为true时），返回结果为几种消息类型的组合，示例:["APP", "COUPON", "IMAGE"]
         /// </summary>
         [XmlElement("msg_type")]
         public string MsgType { get; set; }
