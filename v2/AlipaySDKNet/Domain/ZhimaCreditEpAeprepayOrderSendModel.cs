@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string ReferenceCode { get; set; }
 
         /// <summary>
-        /// AE侧商家登陆id
+        /// AE侧商家登录id
         /// </summary>
         [XmlElement("seller_login_id")]
         public string SellerLoginId { get; set; }

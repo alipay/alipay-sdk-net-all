@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayFundWalletTemplateCreateModel : AopObject
     {
         /// <summary>
+        /// 业务身份
+        /// </summary>
+        [XmlElement("biz_identity")]
+        public string BizIdentity { get; set; }
+
+        /// <summary>
         /// 开户场景
         /// </summary>
         [XmlElement("biz_scene")]
@@ -38,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 是否支持钱包核销规则
+        /// </summary>
+        [XmlElement("support_wallet_use_rule_define")]
+        public string SupportWalletUseRuleDefine { get; set; }
 
         /// <summary>
         /// 钱包名字

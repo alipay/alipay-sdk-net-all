@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string CrowdCode { get; set; }
 
         /// <summary>
+        /// 人群类型
+        /// </summary>
+        [XmlElement("crowd_type")]
+        public string CrowdType { get; set; }
+
+        /// <summary>
         /// 该字段用于描述本群发消息是否使用券包样式, 若为true, 则群发消息展示使用券包样式, 否则使用普通样式
         /// </summary>
         [XmlElement("multi_coupon")]

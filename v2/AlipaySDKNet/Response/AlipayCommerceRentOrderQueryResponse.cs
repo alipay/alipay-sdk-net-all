@@ -134,6 +134,13 @@ namespace Aop.Api.Response
         public RentPlanInfoVO RentPlanInfo { get; set; }
 
         /// <summary>
+        /// 如果通过行业退款接口发起了退款，并在query_options中传入refund_info后，才会返回退款信息
+        /// </summary>
+        [XmlArray("rent_refund_infos")]
+        [XmlArrayItem("rent_refund_info_v_o")]
+        public List<RentRefundInfoVO> RentRefundInfos { get; set; }
+
+        /// <summary>
         /// 租赁订单支付产品、信用产品签约信息
         /// </summary>
         [XmlElement("rent_sign_info")]

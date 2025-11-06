@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CallTime { get; set; }
 
         /// <summary>
-        /// 呼叫类型，人机协同呼叫，人工呼叫，智能呼叫，客户呼入
+        /// 呼叫类型，人机协同呼叫，人工呼叫，智能呼叫，客户呼入，呼入，手动外呼，机器人外呼，双向外呼，内呼，预测式外呼
         /// </summary>
         [XmlElement("call_type")]
         public string CallType { get; set; }
@@ -128,6 +128,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
+
+        /// <summary>
+        /// 本通电话的摘要信息
+        /// </summary>
+        [XmlElement("summary")]
+        public string Summary { get; set; }
 
         /// <summary>
         /// 通话时长，单位秒

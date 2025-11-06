@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOfflineNbinteractSceneUnbindModel : AopObject
     {
         /// <summary>
-        /// 碰一下互动跳转链接所属类型
+        /// 碰一下互动跳转链接所属类型,从枚举中选择
         /// </summary>
         [XmlElement("link_url_type")]
         public string LinkUrlType { get; set; }

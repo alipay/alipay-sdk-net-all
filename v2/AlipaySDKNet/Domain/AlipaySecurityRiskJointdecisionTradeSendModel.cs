@@ -16,10 +16,28 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
+        /// 付款方账户（商户侧账户信息）
+        /// </summary>
+        [XmlElement("payee_account")]
+        public string PayeeAccount { get; set; }
+
+        /// <summary>
+        /// 付款方账户（商户侧账户信息）
+        /// </summary>
+        [XmlElement("payee_account_open_id")]
+        public string PayeeAccountOpenId { get; set; }
+
+        /// <summary>
         /// 商户pid
         /// </summary>
         [XmlElement("pid")]
         public string Pid { get; set; }
+
+        /// <summary>
+        /// 根据商户回传的风险类型场景，可由商户自定义填写
+        /// </summary>
+        [XmlElement("risk_custom_info")]
+        public string RiskCustomInfo { get; set; }
 
         /// <summary>
         /// 01：暂停发货；02：延迟结算；03：关停账户；04：暂停发货+关停账户；05：延迟结算+关停账户；06：订单拦截中；07：订单已退款；08：订单已履约交付无法退款；09：其他

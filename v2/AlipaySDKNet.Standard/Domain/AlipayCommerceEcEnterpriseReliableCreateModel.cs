@@ -16,10 +16,16 @@ namespace Aop.Api.Domain
         public ReliableEnterpriseBaseInfoDTO BaseInfo { get; set; }
 
         /// <summary>
-        /// 企业管理员身份唯一标识，搭配 identity_type 传参：<br/> 1. 当identity_type=ENTERPRISE_EMAIL时，identity传企业邮箱；
+        /// 企业管理员身份唯一标识，搭配 identity_type 传参：<br/> 1. 当identity_type=ENTERPRISE_EMAIL时，identity传企业邮箱； <br/> 2. identity_type=ALIPAY_USER_ID时，identity传支付宝会员uid（此时可与identity_open_id二选一）； <br/> 3. 当identity_type=ALIPAY_LOGON_ID时，identity传已注册支付宝且可以登录支付宝的手机号或邮箱
         /// </summary>
         [XmlElement("identity")]
         public string Identity { get; set; }
+
+        /// <summary>
+        /// 企业管理员身份标识openId
+        /// </summary>
+        [XmlElement("identity_open_id")]
+        public string IdentityOpenId { get; set; }
 
         /// <summary>
         /// 企业管理员身份类型

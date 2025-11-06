@@ -31,5 +31,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }
+
+        /// <summary>
+        /// 支付宝交易号。
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
     }
 }

@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRecycleItemSyncModel : AopObject
     {
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("delivery_configs")]
+        [XmlArrayItem("recycle_delivery_config_d_t_o")]
+        public List<RecycleDeliveryConfigDTO> DeliveryConfigs { get; set; }
+
+        /// <summary>
         /// 回收商进行产品（商品）变更时需要传入唯一的流水号
         /// </summary>
         [XmlElement("out_biz_id")]

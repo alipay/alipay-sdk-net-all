@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string Avatar { get; set; }
 
         /// <summary>
+        /// 0-未实名 1-已实名
+        /// </summary>
+        [XmlElement("is_real_name_verified")]
+        public long IsRealNameVerified { get; set; }
+
+        /// <summary>
         /// 中文名称
         /// </summary>
         [XmlElement("nick_name")]

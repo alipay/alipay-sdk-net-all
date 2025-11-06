@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public bool DefaultCreditPricing { get; set; }
 
         /// <summary>
+        /// 资金利率，如为8%，则为0.08
+        /// </summary>
+        [XmlElement("funding_rate")]
+        public string FundingRate { get; set; }
+
+        /// <summary>
         /// 年利率，如为8%，则为0.08
         /// </summary>
         [XmlElement("int_rate")]
@@ -44,5 +50,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("repay_type")]
         public string RepayType { get; set; }
+
+        /// <summary>
+        /// 担保费率，如为8%，则为0.08
+        /// </summary>
+        [XmlElement("serv_rate")]
+        public string ServRate { get; set; }
     }
 }

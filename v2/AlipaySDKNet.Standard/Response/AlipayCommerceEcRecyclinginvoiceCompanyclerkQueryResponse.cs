@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string ClerkRole { get; set; }
 
         /// <summary>
+        /// 营业员状态
+        /// </summary>
+        [XmlElement("clerk_status")]
+        public string ClerkStatus { get; set; }
+
+        /// <summary>
         /// 企业（商户）营业员ID
         /// </summary>
         [XmlElement("company_clerk_id")]

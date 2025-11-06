@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public string AlipayLogonId { get; set; }
 
         /// <summary>
+        /// 合作方入驻账号
+        /// </summary>
+        [XmlElement("alipay_partner")]
+        public string AlipayPartner { get; set; }
+
+        /// <summary>
         /// 服务商代入驻申请单状态枚举
         /// </summary>
         [XmlElement("biz_status")]

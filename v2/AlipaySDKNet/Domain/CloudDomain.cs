@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Cname { get; set; }
 
         /// <summary>
+        /// 备案状态 - CONNECTED：已备案已接入 - UNCONNECT：已备案未接入
+        /// </summary>
+        [XmlElement("connect_status")]
+        public string ConnectStatus { get; set; }
+
+        /// <summary>
         /// 是否为强制HTTPS
         /// </summary>
         [XmlElement("force_https")]

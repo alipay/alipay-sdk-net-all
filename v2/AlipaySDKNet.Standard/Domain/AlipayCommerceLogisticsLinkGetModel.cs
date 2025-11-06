@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceLogisticsLinkGetModel : AopObject
     {
         /// <summary>
+        /// 小件员和驿站结算的支付宝账号
+        /// </summary>
+        [XmlElement("expressman_alipay_logon_id")]
+        public string ExpressmanAlipayLogonId { get; set; }
+
+        /// <summary>
         /// 物流产品配置生成，用于标识物流业务场景以及执行的动作
         /// </summary>
         [XmlElement("logistics_biz_scene_action")]

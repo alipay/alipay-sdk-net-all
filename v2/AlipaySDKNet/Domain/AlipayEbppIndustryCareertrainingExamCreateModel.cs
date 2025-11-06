@@ -50,7 +50,7 @@ namespace Aop.Api.Domain
         public string ExamName { get; set; }
 
         /// <summary>
-        /// 考试时间描述
+        /// 考试时间描述，建议输入开始时间和结束时间，逗号分隔。例如：yyyy-MM-dd HH:mm,yyyy-MM-dd HH:mm
         /// </summary>
         [XmlElement("exam_time_notes")]
         public string ExamTimeNotes { get; set; }

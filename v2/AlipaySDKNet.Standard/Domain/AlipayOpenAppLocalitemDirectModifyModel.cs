@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppLocalitemDirectModifyModel : AopObject
     {
         /// <summary>
+        /// 店铺id
+        /// </summary>
+        [XmlElement("a_store_id")]
+        public string AStoreId { get; set; }
+
+        /// <summary>
         /// 商品属性列表
         /// </summary>
         [XmlArray("attrs")]

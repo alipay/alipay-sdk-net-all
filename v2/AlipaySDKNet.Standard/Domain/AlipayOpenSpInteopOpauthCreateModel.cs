@@ -17,10 +17,10 @@ namespace Aop.Api.Domain
         public string InteopOrderNo { get; set; }
 
         /// <summary>
-        /// 产品信息
+        /// 授权产品信息
         /// </summary>
-        [XmlArray("product_codes")]
-        [XmlArrayItem("string")]
-        public List<string> ProductCodes { get; set; }
+        [XmlArray("inteop_product_info")]
+        [XmlArrayItem("inteop_op_auth_product_info")]
+        public List<InteopOpAuthProductInfo> InteopProductInfo { get; set; }
     }
 }

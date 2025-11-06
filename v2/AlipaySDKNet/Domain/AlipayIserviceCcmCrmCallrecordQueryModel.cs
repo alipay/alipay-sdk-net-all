@@ -22,7 +22,13 @@ namespace Aop.Api.Domain
         public string DataId { get; set; }
 
         /// <summary>
-        /// 页大小，可选，默认:10
+        /// dataId的数据类型
+        /// </summary>
+        [XmlElement("data_type")]
+        public string DataType { get; set; }
+
+        /// <summary>
+        /// 页大小，可选，默认:10（单位：条）
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("credit_confirm_receive_goods_time")]
         public string CreditConfirmReceiveGoodsTime { get; set; }
+
+        /// <summary>
+        /// 确认收货后，计划首次发起履约扣款的时间
+        /// </summary>
+        [XmlElement("credit_task_first_exec_time")]
+        public string CreditTaskFirstExecTime { get; set; }
     }
 }

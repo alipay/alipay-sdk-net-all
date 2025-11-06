@@ -83,6 +83,18 @@ namespace Aop.Api.Domain
         public string LoanTime { get; set; }
 
         /// <summary>
+        /// 商家下单APPID
+        /// </summary>
+        [XmlElement("merchant_app_id")]
+        public string MerchantAppId { get; set; }
+
+        /// <summary>
+        /// 商家统一社会信用代码
+        /// </summary>
+        [XmlElement("merchant_uscc")]
+        public string MerchantUscc { get; set; }
+
+        /// <summary>
         /// 商户订单号
         /// </summary>
         [XmlElement("out_order_id")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ReliableEnterpriseBaseInfoDTO : AopObject
     {
         /// <summary>
-        /// 企业认证状态，不传默认为NO_AUTH
+        /// 企业认证状态
         /// </summary>
         [XmlElement("auth_status")]
         public string AuthStatus { get; set; }

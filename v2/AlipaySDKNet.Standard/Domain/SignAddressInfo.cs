@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class SignAddressInfo : AopObject
     {
         /// <summary>
-        /// 城市编码。请按照<a href="https://gw.alipayobjects.com/os/basement_prod/253c4dcb-b8a4-4a1e-8be2-79e191a9b6db.xlsx">表格</a> 中内容填写。 （参考资料： <a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/">参考资料</a>）
+        /// 城市编码。请按照<a href="https://mdn.alipayobjects.com/huamei_sm7gq8/afts/file/A*blT9RqSR9_gAAAAAAAAAAAAADuKQAQ/2022%E8%9A%82%E8%9A%81%E9%87%91%E6%9C%8D%E5%9C%B0%E5%8C%BA%E7%A0%81.xlsx">地区码表格</a> 中内容填写。 （参考资料： <a href="https://www.mca.gov.cn/n156/n186/index.html">参考资料</a>）
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string DetailAddress { get; set; }
 
         /// <summary>
-        /// 区县编码。请按照<a href="https://gw.alipayobjects.com/os/basement_prod/253c4dcb-b8a4-4a1e-8be2-79e191a9b6db.xlsx">表格</a> 中内容填写。 （参考资料： <a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/">参考资料</a>）
+        /// 区县编码。请按照<a href="https://mdn.alipayobjects.com/huamei_sm7gq8/afts/file/A*blT9RqSR9_gAAAAAAAAAAAAADuKQAQ/2022%E8%9A%82%E8%9A%81%E9%87%91%E6%9C%8D%E5%9C%B0%E5%8C%BA%E7%A0%81.xlsx">地区码表格</a> 中内容填写。 （参考资料： <a href="https://www.mca.gov.cn/n156/n186/index.html">参考资料</a>）
         /// </summary>
         [XmlElement("district_code")]
         public string DistrictCode { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
-        /// 省份编码。请按照<a href="https://gw.alipayobjects.com/os/basement_prod/253c4dcb-b8a4-4a1e-8be2-79e191a9b6db.xlsx">表格</a> 中内容填写。 （参考资料： <a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/">参考资料</a>）
+        /// 省份编码。请按照<a href="https://mdn.alipayobjects.com/huamei_sm7gq8/afts/file/A*blT9RqSR9_gAAAAAAAAAAAAADuKQAQ/2022%E8%9A%82%E8%9A%81%E9%87%91%E6%9C%8D%E5%9C%B0%E5%8C%BA%E7%A0%81.xlsx">地区码表格</a> 中内容填写。 （参考资料： <a href="https://www.mca.gov.cn/n156/n186/index.html">参考资料</a>）
         /// </summary>
         [XmlElement("province_code")]
         public string ProvinceCode { get; set; }

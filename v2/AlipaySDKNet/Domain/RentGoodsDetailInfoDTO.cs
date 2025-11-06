@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -16,10 +17,23 @@ namespace Aop.Api.Domain
         public string Body { get; set; }
 
         /// <summary>
+        /// 商品图，线下租赁场景使用
+        /// </summary>
+        [XmlArray("goods_picture_ids")]
+        [XmlArrayItem("string")]
+        public List<string> GoodsPictureIds { get; set; }
+
+        /// <summary>
         /// 商品图片，用于小程序订单中心展示，可通过 alipay.merchant.item.file.upload 接口上传素材获取素材id。默认使用已上报的商品库素材信息。
         /// </summary>
         [XmlElement("image_material_id")]
         public string ImageMaterialId { get; set; }
+
+        /// <summary>
+        /// imei
+        /// </summary>
+        [XmlElement("imei")]
+        public string Imei { get; set; }
 
         /// <summary>
         /// 品牌编号；参考租赁行业空间品牌编号文档

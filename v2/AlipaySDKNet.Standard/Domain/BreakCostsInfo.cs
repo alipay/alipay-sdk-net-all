@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string DamagesType { get; set; }
 
         /// <summary>
+        /// 该字段含义根据违约金模式的值来确定，当违约金模式=固定违约金时，表示的是固定违约金的金额（单位元）
+        /// </summary>
+        [XmlElement("damages_value")]
+        public string DamagesValue { get; set; }
+
+        /// <summary>
         /// 用于设置是否支持免违约金规则
         /// </summary>
         [XmlElement("no_break_costs_flag")]

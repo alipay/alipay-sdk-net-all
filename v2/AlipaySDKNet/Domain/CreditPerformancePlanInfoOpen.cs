@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public string Times { get; set; }
 
         /// <summary>
-        /// 总金额
+        /// 履约计划总金额，中文币种CNY，比如10.00元
         /// </summary>
         [XmlElement("total_actual_amount")]
         public string TotalActualAmount { get; set; }

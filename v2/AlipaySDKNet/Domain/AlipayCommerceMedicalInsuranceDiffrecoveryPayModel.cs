@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalInsuranceDiffrecoveryPayModel : AopObject
     {
         /// <summary>
-        /// 标识一次垫付申请，最近一次的垫付申请。
+        /// 垫付/直付申请号（试算流水号），唯一标识一次垫付申请或直付试算申请
         /// </summary>
         [XmlElement("advance_apply_no")]
         public string AdvanceApplyNo { get; set; }

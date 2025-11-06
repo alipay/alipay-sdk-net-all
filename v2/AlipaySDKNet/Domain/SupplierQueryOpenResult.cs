@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string SupplierAccountNo { get; set; }
 
         /// <summary>
+        /// 供应商ID
+        /// </summary>
+        [XmlElement("supplier_id")]
+        public string SupplierId { get; set; }
+
+        /// <summary>
         /// 供应商姓名
         /// </summary>
         [XmlElement("supplier_name")]

@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public List<SourceMediaInfo> SourceMediaInfos { get; set; }
 
         /// <summary>
+        /// 音乐code，仅发布短图文类型内容时有效，传递值为 random 时表示在已上架的音乐库里随机选择一首音乐
+        /// </summary>
+        [XmlElement("source_music_code")]
+        public string SourceMusicCode { get; set; }
+
+        /// <summary>
         /// 内容关联服务，1个内容最多关联1个服务；offerId为关联的服务ID，支持小程序/小程序服务/优惠券活动/商品/小游戏
         /// </summary>
         [XmlArray("source_offers")]
@@ -73,7 +79,7 @@ namespace Aop.Api.Domain
         public string SourceSummary { get; set; }
 
         /// <summary>
-        /// 内容标题
+        /// 内容标题，标题长度的最大字数为30个字
         /// </summary>
         [XmlElement("source_title")]
         public string SourceTitle { get; set; }

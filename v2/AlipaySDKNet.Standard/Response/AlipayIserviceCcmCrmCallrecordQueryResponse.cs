@@ -24,7 +24,7 @@ namespace Aop.Api.Response
         public long CurrentPage { get; set; }
 
         /// <summary>
-        /// 页大小
+        /// 页大小（单位：条）
         /// </summary>
         [XmlElement("page_size")]
         public string PageSize { get; set; }

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ReqMsgId { get; set; }
 
         /// <summary>
-        /// 租户id
+        /// 租户id(该字段已废弃)
         /// </summary>
         [XmlElement("tenant_id")]
         public string TenantId { get; set; }

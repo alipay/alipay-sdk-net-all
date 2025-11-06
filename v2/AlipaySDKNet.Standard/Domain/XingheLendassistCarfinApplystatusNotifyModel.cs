@@ -66,7 +66,7 @@ namespace Aop.Api.Domain
         public string FinOrg { get; set; }
 
         /// <summary>
-        /// 资金利率
+        /// 资金利率，如：1%传0.01
         /// </summary>
         [XmlElement("fund_rate")]
         public string FundRate { get; set; }
@@ -179,6 +179,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("supplement_info_flag")]
         public bool SupplementInfoFlag { get; set; }
+
+        /// <summary>
+        /// 需要补充的原因
+        /// </summary>
+        [XmlElement("supplement_reason")]
+        public string SupplementReason { get; set; }
+
+        /// <summary>
+        /// 是否支持先放后抵
+        /// </summary>
+        [XmlElement("support_lend_before_mortgage")]
+        public bool SupportLendBeforeMortgage { get; set; }
 
         /// <summary>
         /// 用户类别

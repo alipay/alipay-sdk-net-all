@@ -39,13 +39,13 @@ namespace Aop.Api.Response
         public string FileDownloadUrl { get; set; }
 
         /// <summary>
-        /// 文件类型： jpg:发票图片;pdf:发票PDF文件;
+        /// 文件类型： jpg:发票图片;pdf:发票PDF文件;ofd:发票OFD文件
         /// </summary>
         [XmlElement("file_type")]
         public string FileType { get; set; }
 
         /// <summary>
-        /// 发票查验结果: INVOICE_CORRECT:发票正确;INVOICE_MISTAKE:发票信息错误;INVOICE_HAS_RED_INVOICE:发票存在红冲;INVOICE_CANCELLED:发票已作废
+        /// 发票查验结果:REAL_INVOICE：查验为真；CHECK_INCONSISTENT：不一致；INVOICE_REVERSE：发票已冲红；INVOICE_CANCELLED：发票已作废；INVOICE_NOT_EXIST：发票不存在
         /// </summary>
         [XmlElement("invoice_check_result")]
         public string InvoiceCheckResult { get; set; }
@@ -69,7 +69,7 @@ namespace Aop.Api.Response
         public string InvoiceDate { get; set; }
 
         /// <summary>
-        /// 发票种类: E_SPECIALTY:增值税电子专用发票; E_PLAN:增值税电子普通发票;ALL_ELECTRONIC_SPECIAL:电子发票(增值税专用发票);ALL_ELECTRONIC_GENERAL:电子发票(普通发票);SPECIAL:增值税专用发票;PLAIN_INVOICE:增值税普通发票
+        /// 发票种类: PLAIN:增值税电子普通发票; ALL_ELECTRONIC_GENERAL:电子发票（普通发票）;ALL_ELECTRONIC_SPECIAL:电子发票(增值税专用发票);SPECIAL:增值税专用发票;PLAIN_INVOICE:增值税普通发票;PAPER_INVOICE:增值税普通发票(卷式);SALSE_INVOICE:SALSE_INVOICE;TRANSPORT_INVOICE:货物运输业增值税专用发票;FINANCIAL_ELECTRONIC_BILL:财政电子票据
         /// </summary>
         [XmlElement("invoice_kind")]
         public string InvoiceKind { get; set; }

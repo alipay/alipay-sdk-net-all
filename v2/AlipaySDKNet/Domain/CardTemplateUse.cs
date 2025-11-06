@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public List<CardPeriodPrice> PeriodPriceList { get; set; }
 
         /// <summary>
+        /// 购卡须知信息，可以设置适用人群，适用人数，预约规则，用于卡详情展示。
+        /// </summary>
+        [XmlElement("purchase_notice")]
+        public CardPurchaseNotice PurchaseNotice { get; set; }
+
+        /// <summary>
         /// 周期付场景下预约链接，填写小程序地址。当card_type= PERIOD_PAY时生效。
         /// </summary>
         [XmlElement("reservation_url")]

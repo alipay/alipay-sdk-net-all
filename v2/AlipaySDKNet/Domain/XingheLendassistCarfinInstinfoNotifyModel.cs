@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public CarInfo CarInfo { get; set; }
 
         /// <summary>
+        /// 车管所所在区
+        /// </summary>
+        [XmlElement("dmv_location")]
+        public DMVLocation DmvLocation { get; set; }
+
+        /// <summary>
         /// 文件列表
         /// </summary>
         [XmlArray("file_list")]

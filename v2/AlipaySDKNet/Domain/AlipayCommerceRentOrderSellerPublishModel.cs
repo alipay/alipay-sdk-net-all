@@ -52,5 +52,11 @@ namespace Aop.Api.Domain
         [XmlArray("royalty_publish_detail")]
         [XmlArrayItem("royalty_publish_detail_info")]
         public List<RoyaltyPublishDetailInfo> RoyaltyPublishDetail { get; set; }
+
+        /// <summary>
+        /// 二级商户信息 
+        /// </summary>
+        [XmlElement("sub_merchant")]
+        public RentSubMerchant SubMerchant { get; set; }
     }
 }

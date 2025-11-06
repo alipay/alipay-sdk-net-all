@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string BizId { get; set; }
 
         /// <summary>
+        /// 描述数据来源渠道
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// 用于记录面试地点信息
         /// </summary>
         [XmlElement("inter_address")]

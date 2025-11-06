@@ -22,6 +22,24 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 兑换码
+        /// </summary>
+        [XmlElement("exchange_code")]
+        public string ExchangeCode { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 外部开卡开始时间
+        /// </summary>
+        [XmlElement("out_service_start_time")]
+        public string OutServiceStartTime { get; set; }
+
+        /// <summary>
         /// 电话号码
         /// </summary>
         [XmlElement("phone")]
@@ -32,5 +50,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("renew")]
         public bool Renew { get; set; }
+
+        /// <summary>
+        /// 会员卡结束时间戳
+        /// </summary>
+        [XmlElement("service_end_time")]
+        public string ServiceEndTime { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的userId。
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

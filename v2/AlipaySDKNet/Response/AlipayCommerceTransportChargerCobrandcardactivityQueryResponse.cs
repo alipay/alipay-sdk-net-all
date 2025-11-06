@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -18,8 +19,9 @@ namespace Aop.Api.Response
         /// <summary>
         /// 活动阶段
         /// </summary>
-        [XmlElement("activity_phases")]
-        public ActivityPhase ActivityPhases { get; set; }
+        [XmlArray("activity_phases")]
+        [XmlArrayItem("activity_phase")]
+        public List<ActivityPhase> ActivityPhases { get; set; }
 
         /// <summary>
         /// 当前查询用户完成的订单笔数

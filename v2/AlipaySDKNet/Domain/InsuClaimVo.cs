@@ -30,7 +30,13 @@ namespace Aop.Api.Domain
         public List<string> AttachmentUrl { get; set; }
 
         /// <summary>
-        /// claim_attachment_vo+不唯一+供应商查询未提交给理赔公司的，理赔状态为进行中的理赔报案数据+枚举值(无)+员工申请理赔+特殊说明(无)
+        /// 该参数是同学在提交理赔时上传的理赔材料信息，其中包含病历、发票，需要同步给供应商报案使用，后续逐步替换claim_attachment_vo参数
+        /// </summary>
+        [XmlElement("claim_attachment_url_vo")]
+        public ClaimAttachmentUrlVo ClaimAttachmentUrlVo { get; set; }
+
+        /// <summary>
+        /// claim_attachment_vo+不唯一+供应商查询未提交给理赔公司的，理赔状态为进行中的理赔报案数据+枚举值(无)+员工申请理赔+特殊说明(无) 当前字段已废弃(原文件存储方式变更，需替换到claim_attachment_url_vo参数中)
         /// </summary>
         [XmlElement("claim_attachment_vo")]
         public InsuClaimAttachmentVo ClaimAttachmentVo { get; set; }
@@ -156,7 +162,7 @@ namespace Aop.Api.Domain
         public string RelateSex { get; set; }
 
         /// <summary>
-        /// insurant_birthday+不唯一+供应商查询未提交给理赔公司的，理赔状态为进行中的理赔报案数据+枚举值(无)+员工申请理赔+特殊说明(无)
+        /// 该参数供应商查询未提交给理赔公司的，理赔状态为进行中的理赔报案数据中的理赔金额，单位采用人民币。
         /// </summary>
         [XmlElement("report_amount")]
         public string ReportAmount { get; set; }

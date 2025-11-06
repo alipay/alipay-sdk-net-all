@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -20,5 +21,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("delivery_detail_position")]
         public DeliveryDetailPositionVO DeliveryDetailPosition { get; set; }
+
+        /// <summary>
+        /// 投放流水线配置，下发后消费方根据流水线配置就行处理
+        /// </summary>
+        [XmlArray("delivery_detail_position_pipeline_config")]
+        [XmlArrayItem("delivery_detail_position_pipeline_config_v_o")]
+        public List<DeliveryDetailPositionPipelineConfigVO> DeliveryDetailPositionPipelineConfig { get; set; }
     }
 }

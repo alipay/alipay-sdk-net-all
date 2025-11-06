@@ -53,7 +53,7 @@ namespace Aop.Api.Domain
         public string EquipSn { get; set; }
 
         /// <summary>
-        /// 设备类型
+        /// 充电桩的设备类型。智能开关是指与无联网功能充电桩配套使用的可以联网控制充放电的开关
         /// </summary>
         [XmlElement("equip_type")]
         public string EquipType { get; set; }
@@ -72,37 +72,37 @@ namespace Aop.Api.Domain
         public List<string> Modes { get; set; }
 
         /// <summary>
-        /// 流量开始时间
+        /// 充电桩设备的联网流量生效时间，一般指4G流量卡或者物联网有效的起始时间
         /// </summary>
         [XmlElement("network_data_begin_time")]
         public string NetworkDataBeginTime { get; set; }
 
         /// <summary>
-        /// 流量结束时间
+        /// 充电桩设备的联网流量失效时间，一般指4G流量卡或者物联网的失效时间
         /// </summary>
         [XmlElement("network_data_end_time")]
         public string NetworkDataEndTime { get; set; }
 
         /// <summary>
-        /// 额定电流
+        /// 充电桩的额定电流，单位为安倍（A），请传入转换单位后的数值
         /// </summary>
         [XmlElement("rated_current")]
         public string RatedCurrent { get; set; }
 
         /// <summary>
-        /// 额定功率，单位KW
+        /// 充电桩的额定功率，单位为千瓦（kW），请传入转换单位后的数值
         /// </summary>
         [XmlElement("rated_power")]
         public string RatedPower { get; set; }
 
         /// <summary>
-        /// 额定电压
+        /// 充电桩的额定电压，单位为伏特（V），请传入转换单位后的数值
         /// </summary>
         [XmlElement("rated_voltage")]
         public string RatedVoltage { get; set; }
 
         /// <summary>
-        /// 设备有二级品牌商，需要传二级品牌编号
+        /// 充电桩设备的关联二级品牌商编号，一般指生产商或制造商。若需要关联二级品牌商，则需要传入
         /// </summary>
         [XmlElement("s_brand_code")]
         public string SBrandCode { get; set; }

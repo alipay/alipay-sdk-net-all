@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayCommerceRentRiskConsultRequest : IAopRequest<AlipayCommerceRentRiskConsultResponse>
     {
         /// <summary>
-        /// 租赁行业风险咨询接口，通过商家侧唯一订单号 out_biz_no、uid/openid，查询当前订单用户的共租风险等级、综合风险等级等数据信息。
+        /// 租赁行业风险咨询接口，通过商家侧唯一订单号 out_biz_no、uid/openid，查询当前订单用户的共租风险等级、租安盾综合风险等级等数据信息。 <a href="https://opendocs.alipay.com/pre-open/repo-03lpa5" target="_blank"> 租安盾接入指南</a>
         /// </summary>
         public string BizContent { get; set; }
 

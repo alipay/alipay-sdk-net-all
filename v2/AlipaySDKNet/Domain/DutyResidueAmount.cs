@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("duty_residue_amount")]
         public string DutyResidueAmount_ { get; set; }
+
+        /// <summary>
+        /// 等待期
+        /// </summary>
+        [XmlElement("waiting_period")]
+        public string WaitingPeriod { get; set; }
     }
 }

@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string MerchantProcessUrl { get; set; }
 
         /// <summary>
+        /// 商户可通过支付产品接口回传订单或外部账户相关数据（敏感数据可加密后回传），结合支付宝内部已有的数据，可以有效提升对风险交易的识别及对可信交易的保护。支付宝针对风险交易的管控包括但不限于：交易提醒、交易拦截等；针对可信账户、可信渠道、可信交易等将重点保障支付体验。
+        /// </summary>
+        [XmlElement("out_risk_info")]
+        public string OutRiskInfo { get; set; }
+
+        /// <summary>
         /// 业务透传参数
         /// </summary>
         [XmlElement("pass_params")]

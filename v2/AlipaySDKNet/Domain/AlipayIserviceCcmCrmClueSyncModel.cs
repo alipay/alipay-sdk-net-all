@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// 业务方的客户ID，保证全局唯一(幂等处理)，示例值：1278789a
+        /// 由业务方定义并传入，业务方的ID，保证全局唯一(幂等处理)，且作为同业务方数据的唯一关联，示例值：1278789a
         /// </summary>
         [XmlElement("external_contact_id")]
         public string ExternalContactId { get; set; }
 
         /// <summary>
-        /// 客资线索所对应的手机号码，明文
+        /// 客资线索所对应的手机号码，可以为明文，也可以是密文，如欧派租户
         /// </summary>
         [XmlElement("mobile_phone")]
         public string MobilePhone { get; set; }

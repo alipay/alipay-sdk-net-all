@@ -72,6 +72,12 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
+        /// 线下租赁信息
+        /// </summary>
+        [XmlElement("offline_shopping_info")]
+        public RentOfflineShoppingDTO OfflineShoppingInfo { get; set; }
+
+        /// <summary>
         /// 订单类型
         /// </summary>
         [XmlElement("order_type")]

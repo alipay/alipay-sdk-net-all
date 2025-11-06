@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizActiveTime { get; set; }
 
         /// <summary>
+        /// 设备碰激活时间
+        /// </summary>
+        [XmlElement("biz_touch_active_time")]
+        public string BizTouchActiveTime { get; set; }
+
+        /// <summary>
         /// 设备模式
         /// </summary>
         [XmlElement("coop_mode")]

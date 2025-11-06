@@ -25,7 +25,7 @@ namespace Aop.Api.Domain
         public List<string> CityCodeList { get; set; }
 
         /// <summary>
-        /// 课程封面视频 生活号视频id,非URL。获取方式见：<a href="https://adccloud.yuque.com/adccloud/abilitywarehouse/cggokr7us69cxxo8?singleDoc#" target="_blank">链接</a>
+        /// 课程封面视频 生活号视频id,非URL。
         /// </summary>
         [XmlElement("course_cover_video")]
         public string CourseCoverVideo { get; set; }

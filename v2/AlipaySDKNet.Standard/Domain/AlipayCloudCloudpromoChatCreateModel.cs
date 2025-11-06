@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -50,6 +51,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("load_test")]
         public bool LoadTest { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("media_contents")]
+        [XmlArrayItem("media_content")]
+        public List<MediaContent> MediaContents { get; set; }
 
         /// <summary>
         /// 用户发给智能体的问题内容。

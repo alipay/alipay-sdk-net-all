@@ -76,6 +76,12 @@ namespace Aop.Api.Domain
         public string PayerUserId { get; set; }
 
         /// <summary>
+        /// 付款方支付宝用户id
+        /// </summary>
+        [XmlElement("payer_user_openid")]
+        public string PayerUserOpenid { get; set; }
+
+        /// <summary>
         /// 支付宝模板id,跟资产id二选一
         /// </summary>
         [XmlElement("template_id")]

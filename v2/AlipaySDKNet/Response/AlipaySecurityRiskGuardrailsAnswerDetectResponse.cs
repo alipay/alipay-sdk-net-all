@@ -47,7 +47,7 @@ namespace Aop.Api.Response
         public string SessionAction { get; set; }
 
         /// <summary>
-        /// 处置建议：pass、review、block
+        /// 处置建议：pass、review、block等
         /// </summary>
         [XmlElement("suggestion")]
         public string Suggestion { get; set; }

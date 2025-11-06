@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class RecycleItemDTO : AopObject
     {
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("delivery_configs")]
+        [XmlArrayItem("recycle_delivery_config_d_t_o")]
+        public List<RecycleDeliveryConfigDTO> DeliveryConfigs { get; set; }
+
+        /// <summary>
         /// 产品code，用来描述商品的SPU_ID
         /// </summary>
         [XmlElement("product_code")]

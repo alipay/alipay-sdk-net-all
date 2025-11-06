@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string CreditRiskInfo { get; set; }
 
         /// <summary>
+        /// 国家贴息
+        /// </summary>
+        [XmlElement("gov_subsidy")]
+        public string GovSubsidy { get; set; }
+
+        /// <summary>
+        /// 银行贴息
+        /// </summary>
+        [XmlElement("inst_subsidy")]
+        public string InstSubsidy { get; set; }
+
+        /// <summary>
         /// 芝麻人群标签
         /// </summary>
         [XmlElement("marketing_flag")]

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CrowdCode { get; set; }
 
         /// <summary>
+        /// 人群类型
+        /// </summary>
+        [XmlElement("crowd_type")]
+        public string CrowdType { get; set; }
+
+        /// <summary>
         /// 活动描述，可以不填
         /// </summary>
         [XmlElement("desc")]

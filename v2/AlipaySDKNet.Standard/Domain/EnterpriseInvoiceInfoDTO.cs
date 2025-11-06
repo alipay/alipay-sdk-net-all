@@ -205,6 +205,12 @@ namespace Aop.Api.Domain
         public string PayerRegisterNo { get; set; }
 
         /// <summary>
+        /// 报销状态：REIMBURSE_WAIT：待报销；REIMBURSE_APPLY：报销已提交；REIMBURSE_FINISH：报销完成
+        /// </summary>
+        [XmlElement("reimburse_status")]
+        public string ReimburseStatus { get; set; }
+
+        /// <summary>
         /// 是否关联到账单
         /// </summary>
         [XmlElement("related_to_consume")]

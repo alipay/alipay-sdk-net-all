@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
+        /// 核销账号
+        /// </summary>
+        [XmlElement("use_account")]
+        public string UseAccount { get; set; }
+
+        /// <summary>
         /// 凭证归属支付宝用户id
         /// </summary>
         [XmlElement("user_id")]

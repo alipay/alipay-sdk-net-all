@@ -70,6 +70,12 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// 退款同步时可选传入，包括退款相关的具体属性
+        /// </summary>
+        [XmlElement("refund_info")]
+        public UnifiedSettleRefundInfo RefundInfo { get; set; }
+
+        /// <summary>
         /// 同步流水的类型，支付为PAY_SYNC，退款为REFUND_SYNC
         /// </summary>
         [XmlElement("request_type")]

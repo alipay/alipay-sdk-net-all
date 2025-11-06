@@ -79,7 +79,7 @@ namespace Aop.Api.Domain
         public string MerchantUserId { get; set; }
 
         /// <summary>
-        /// 已废弃不支持
+        /// 已废弃不支持 当前字段已废弃(不支持手机明文传输,废弃该字段)
         /// </summary>
         [XmlElement("mobile")]
         public string Mobile { get; set; }
@@ -119,6 +119,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }
+
+        /// <summary>
+        /// 外部商户咨询场景参数
+        /// </summary>
+        [XmlElement("proconsult_scene")]
+        public string ProconsultScene { get; set; }
 
         /// <summary>
         /// 销售产品码，商家和支付宝签约的产品码

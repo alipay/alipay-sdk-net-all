@@ -48,7 +48,7 @@ namespace Aop.Api.Domain
         public string ProductName { get; set; }
 
         /// <summary>
-        /// 数量，小数点后最多保留4位，单价*数量=金额，数量的单位由接入方根据票面展示效果指定，不使用枚举
+        /// 数量，小数点后最多保留4位，单价*数量=金额；单位由单位字段unit决定
         /// </summary>
         [XmlElement("quantity")]
         public string Quantity { get; set; }

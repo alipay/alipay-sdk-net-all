@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string CardNo { get; set; }
 
         /// <summary>
+        /// 返回给外部，所开卡的到期时间
+        /// </summary>
+        [XmlElement("expire_time")]
+        public string ExpireTime { get; set; }
+
+        /// <summary>
         /// 可以开通 true 、不能开通 false
         /// </summary>
         [XmlElement("open")]

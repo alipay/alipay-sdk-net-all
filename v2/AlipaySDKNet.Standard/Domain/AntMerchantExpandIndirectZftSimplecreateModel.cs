@@ -119,6 +119,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 是否需要发送待办
+        /// </summary>
+        [XmlElement("need_send_todo_notify")]
+        public bool NeedSendTodoNotify { get; set; }
+
+        /// <summary>
         /// 门头照，使用当面付服务时必填。其值为使用ant.merchant.expand.indirect.image.upload上传图片得到的一串oss key。
         /// </summary>
         [XmlElement("out_door_images")]
@@ -155,6 +161,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_phone")]
         public string ServicePhone { get; set; }
+
+        /// <summary>
+        /// 签约确认方式
+        /// </summary>
+        [XmlElement("sign_confirm_type")]
+        public string SignConfirmType { get; set; }
 
         /// <summary>
         /// 二级商户与服务商的签约时间。

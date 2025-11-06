@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppLocalitemQueryModel : AopObject
     {
         /// <summary>
+        /// 店铺id
+        /// </summary>
+        [XmlElement("a_store_id")]
+        public string AStoreId { get; set; }
+
+        /// <summary>
         /// 支付平台侧商品id。与商家侧商品id不能同时为空，如果都提供，优先使用商家侧商品id
         /// </summary>
         [XmlElement("item_id")]

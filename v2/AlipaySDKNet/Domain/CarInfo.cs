@@ -22,10 +22,22 @@ namespace Aop.Api.Domain
         public string CarBrand { get; set; }
 
         /// <summary>
+        /// 车辆品牌id
+        /// </summary>
+        [XmlElement("car_brand_id")]
+        public string CarBrandId { get; set; }
+
+        /// <summary>
         /// 车牌号
         /// </summary>
         [XmlElement("car_license")]
         public string CarLicense { get; set; }
+
+        /// <summary>
+        /// 车型来源（车型id的来源）
+        /// </summary>
+        [XmlElement("car_model_source")]
+        public string CarModelSource { get; set; }
 
         /// <summary>
         /// 车辆车系
@@ -34,10 +46,22 @@ namespace Aop.Api.Domain
         public string CarSeries { get; set; }
 
         /// <summary>
+        /// 车辆车系id
+        /// </summary>
+        [XmlElement("car_series_id")]
+        public string CarSeriesId { get; set; }
+
+        /// <summary>
         /// 车辆型号
         /// </summary>
         [XmlElement("car_type")]
         public string CarType { get; set; }
+
+        /// <summary>
+        /// 车辆型号id
+        /// </summary>
+        [XmlElement("car_type_id")]
+        public string CarTypeId { get; set; }
 
         /// <summary>
         /// 车架号（车辆识别代码）

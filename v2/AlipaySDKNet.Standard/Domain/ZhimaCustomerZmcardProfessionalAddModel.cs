@@ -11,6 +11,18 @@ namespace Aop.Api.Domain
     public class ZhimaCustomerZmcardProfessionalAddModel : AopObject
     {
         /// <summary>
+        /// 真实姓名
+        /// </summary>
+        [XmlElement("cert_name")]
+        public string CertName { get; set; }
+
+        /// <summary>
+        /// 用户身份号
+        /// </summary>
+        [XmlElement("cert_no")]
+        public string CertNo { get; set; }
+
+        /// <summary>
         /// 证书列表，相同证书每次传入是更新
         /// </summary>
         [XmlArray("certification_list")]
@@ -18,10 +30,16 @@ namespace Aop.Api.Domain
         public List<ZmCardPictureInfo> CertificationList { get; set; }
 
         /// <summary>
-        /// 商户请求受理台时传入的外部授权单号，用于验证用户是否授权
+        /// 商户请求受理台时传入的外部授权单号，用于验证用户是否授权，非车主名片订单及评论信息时必传
         /// </summary>
         [XmlElement("conn_key")]
         public string ConnKey { get; set; }
+
+        /// <summary>
+        /// 芝麻车主名片顺风车主评价信息
+        /// </summary>
+        [XmlElement("evaluate_info")]
+        public ZmCarOwnerEvaluateInfo EvaluateInfo { get; set; }
 
         /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
@@ -30,11 +48,23 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 合作方提供芝麻车主名片的顺风车主订单信息
+        /// </summary>
+        [XmlElement("order_info")]
+        public ZmCarOwnerOrderInfo OrderInfo { get; set; }
+
+        /// <summary>
         /// 照片列表
         /// </summary>
         [XmlArray("picture_list")]
         [XmlArrayItem("zm_card_picture_info")]
         public List<ZmCardPictureInfo> PictureList { get; set; }
+
+        /// <summary>
+        /// 芝麻名片角色类型
+        /// </summary>
+        [XmlElement("role_type")]
+        public string RoleType { get; set; }
 
         /// <summary>
         /// 职业人员擅长的领域，如减脂塑形、饮食管理、体能训练、增肌、瑜伽、普拉提、功能性训练、康复训练、体能抗阻、体态调整、理疗、格斗拳击、青少年体适能、其他。

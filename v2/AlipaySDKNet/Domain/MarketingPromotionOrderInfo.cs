@@ -154,5 +154,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("unit_type")]
         public string UnitType { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的userId。
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

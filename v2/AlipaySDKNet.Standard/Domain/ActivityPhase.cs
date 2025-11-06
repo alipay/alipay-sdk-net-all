@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,7 +11,7 @@ namespace Aop.Api.Domain
     public class ActivityPhase : AopObject
     {
         /// <summary>
-        /// 0:无领取； 1:可领取； 2:已领取。
+        /// 0:未发放； 1:发放中； 2:已发放。
         /// </summary>
         [XmlElement("award_status")]
         public long AwardStatus { get; set; }
@@ -26,6 +27,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ldp_code")]
         public string LdpCode { get; set; }
+
+        /// <summary>
+        /// 权限奖品列表
+        /// </summary>
+        [XmlArray("rewards")]
+        [XmlArrayItem("activity_reward")]
+        public List<ActivityReward> Rewards { get; set; }
 
         /// <summary>
         /// 目标计数

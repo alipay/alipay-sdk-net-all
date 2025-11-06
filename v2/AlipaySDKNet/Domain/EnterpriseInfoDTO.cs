@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string IotLogicGroupId { get; set; }
 
         /// <summary>
+        /// 服务商生成的请求唯一流水号/业务幂等号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 外部平台code
         /// </summary>
         [XmlElement("platform_code")]

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string CityCode { get; set; }
 
         /// <summary>
+        /// 预览的请求必填，正式的不用填
+        /// </summary>
+        [XmlElement("config_id")]
+        public string ConfigId { get; set; }
+
+        /// <summary>
         /// 纬度
         /// </summary>
         [XmlElement("latitude")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRentOrderSignModel : AopObject
     {
         /// <summary>
+        /// 芝麻信用拓展信息
+        /// </summary>
+        [XmlElement("credit_ext_info")]
+        public RentCreditExtInfoDTO CreditExtInfo { get; set; }
+
+        /// <summary>
         /// 是否需要人脸核身 true ：（默认）需要人脸核身 false：无需人脸核身
         /// </summary>
         [XmlElement("need_face_validate_flag")]

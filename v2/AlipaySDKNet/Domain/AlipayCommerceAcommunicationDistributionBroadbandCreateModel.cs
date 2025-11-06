@@ -62,5 +62,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("province_code")]
         public string ProvinceCode { get; set; }
+
+        /// <summary>
+        /// 区分具体分省运营商
+        /// </summary>
+        [XmlElement("scene")]
+        public string Scene { get; set; }
+
+        /// <summary>
+        /// 验证码
+        /// </summary>
+        [XmlElement("sms_code")]
+        public string SmsCode { get; set; }
     }
 }

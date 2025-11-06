@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// 处理状态   * INIT - 初始化   * PROCESS - 处理中   * SUCCESS - 成功   * FAIL - 失败
+        /// 处理状态 INIT - 初始化 PROCESS - 处理中 SUCCESS - 成功 FAIL - 失败
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string LandingId { get; set; }
 
         /// <summary>
+        /// 服务商L1L2落地页标识，L1表示非通投，L2表示可以通投
+        /// </summary>
+        [XmlElement("landing_level")]
+        public string LandingLevel { get; set; }
+
+        /// <summary>
         /// 落地页名称，同一个商品的落地页名称唯一。
         /// </summary>
         [XmlElement("landing_name")]

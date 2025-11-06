@@ -71,6 +71,18 @@ namespace Aop.Api.Domain
         public string InvestPid { get; set; }
 
         /// <summary>
+        /// 商家下单APPID
+        /// </summary>
+        [XmlElement("merchant_app_id")]
+        public string MerchantAppId { get; set; }
+
+        /// <summary>
+        /// 商家统一社会信用代码
+        /// </summary>
+        [XmlElement("merchant_uscc")]
+        public string MerchantUscc { get; set; }
+
+        /// <summary>
         /// 订单信息，包含订单信息、商品信息、收货人信息以及价格信息
         /// </summary>
         [XmlElement("order_info")]

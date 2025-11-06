@@ -28,5 +28,23 @@ namespace Aop.Api.Response
         [XmlArray("inteop_sub_order_infos")]
         [XmlArrayItem("inte_op_sub_order_info")]
         public List<InteOpSubOrderInfo> InteopSubOrderInfos { get; set; }
+
+        /// <summary>
+        /// 待办二维码跳转链接
+        /// </summary>
+        [XmlElement("wp_qr_code")]
+        public string WpQrCode { get; set; }
+
+        /// <summary>
+        /// 待办二维码图片链接
+        /// </summary>
+        [XmlElement("wp_qr_code_img_url")]
+        public string WpQrCodeImgUrl { get; set; }
+
+        /// <summary>
+        /// 待办web页面链接
+        /// </summary>
+        [XmlElement("wp_web_link")]
+        public string WpWebLink { get; set; }
     }
 }

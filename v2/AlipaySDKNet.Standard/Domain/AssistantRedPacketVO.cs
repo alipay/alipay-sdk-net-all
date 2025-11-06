@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AssistantRedPacketVO : AopObject
     {
         /// <summary>
+        /// 人群类型
+        /// </summary>
+        [XmlElement("crowd_type")]
+        public string CrowdType { get; set; }
+
+        /// <summary>
         /// 用于填写红包id
         /// </summary>
         [XmlElement("red_packet_id")]

@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string Calorie { get; set; }
 
         /// <summary>
+        /// 支付宝客户端步数
+        /// </summary>
+        [XmlElement("client_step")]
+        public string ClientStep { get; set; }
+
+        /// <summary>
+        /// 支付宝客户端步频(步/min)
+        /// </summary>
+        [XmlElement("client_step_frequency")]
+        public string ClientStepFrequency { get; set; }
+
+        /// <summary>
         /// 运动距离，单位米（可能为小数）
         /// </summary>
         [XmlElement("distance")]
@@ -32,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("duration")]
         public string Duration { get; set; }
+
+        /// <summary>
+        /// 运动结束步数
+        /// </summary>
+        [XmlElement("end_step")]
+        public string EndStep { get; set; }
 
         /// <summary>
         /// 结束时人脸核验通过
@@ -116,6 +134,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("start_face_verify_pass")]
         public bool StartFaceVerifyPass { get; set; }
+
+        /// <summary>
+        /// 运动开始步数
+        /// </summary>
+        [XmlElement("start_step")]
+        public string StartStep { get; set; }
 
         /// <summary>
         /// 运动开始时间

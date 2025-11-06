@@ -11,6 +11,24 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalInsuranceClaimreportModifyModel : AopObject
     {
         /// <summary>
+        /// 保司理赔申请号
+        /// </summary>
+        [XmlElement("apply_no")]
+        public string ApplyNo { get; set; }
+
+        /// <summary>
+        /// 支付宝生成的业务流水号
+        /// </summary>
+        [XmlElement("biz_no")]
+        public string BizNo { get; set; }
+
+        /// <summary>
+        /// 是否是赔案重开
+        /// </summary>
+        [XmlElement("case_reopened")]
+        public bool CaseReopened { get; set; }
+
+        /// <summary>
         /// 证件号
         /// </summary>
         [XmlElement("cert_no")]
@@ -21,6 +39,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
+
+        /// <summary>
+        /// claim_no 保司报案号
+        /// </summary>
+        [XmlElement("claim_no")]
+        public string ClaimNo { get; set; }
 
         /// <summary>
         /// 报案号
@@ -35,10 +59,35 @@ namespace Aop.Api.Domain
         public string ClaimStatus { get; set; }
 
         /// <summary>
+        /// 保司类型
+        /// </summary>
+        [XmlElement("company_type")]
+        public string CompanyType { get; set; }
+
+        /// <summary>
+        /// 申请材料
+        /// </summary>
+        [XmlArray("identity_materials")]
+        [XmlArrayItem("identity_materials")]
+        public List<IdentityMaterials> IdentityMaterials { get; set; }
+
+        /// <summary>
+        /// 补材场景
+        /// </summary>
+        [XmlElement("lack_materials_sense")]
+        public string LackMaterialsSense { get; set; }
+
+        /// <summary>
         /// 姓名
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 理赔通知书
+        /// </summary>
+        [XmlElement("note_url")]
+        public string NoteUrl { get; set; }
 
         /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
@@ -47,7 +96,13 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// ?付宝?成的业务流?号
+        /// 立案失败原因或拒赔原因
+        /// </summary>
+        [XmlElement("reject_reason")]
+        public string RejectReason { get; set; }
+
+        /// <summary>
+        /// 支付宝生成的流水号
         /// </summary>
         [XmlElement("report_no")]
         public string ReportNo { get; set; }

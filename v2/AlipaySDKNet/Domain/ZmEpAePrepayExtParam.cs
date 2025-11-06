@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ship_time")]
         public string ShipTime { get; set; }
+
+        /// <summary>
+        /// 站点信息
+        /// </summary>
+        [XmlElement("tenant_site")]
+        public string TenantSite { get; set; }
     }
 }

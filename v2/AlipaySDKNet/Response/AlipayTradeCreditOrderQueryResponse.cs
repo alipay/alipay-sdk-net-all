@@ -27,7 +27,7 @@ namespace Aop.Api.Response
         public string CreditBizOrderId { get; set; }
 
         /// <summary>
-        /// 信用服务订单中信用支付金额，不包含支付宝营销金额
+        /// 信用服务订单中信用支付金额，不包含支付宝营销金额。单位：元
         /// </summary>
         [XmlElement("credit_pay_fee")]
         public string CreditPayFee { get; set; }
@@ -45,13 +45,19 @@ namespace Aop.Api.Response
         public string CreditQuotaPayTime { get; set; }
 
         /// <summary>
-        /// 信用支付退款金额
+        /// 信用支付退款金额。单位：元
         /// </summary>
         [XmlElement("credit_refund_fee")]
         public string CreditRefundFee { get; set; }
 
         /// <summary>
-        /// 信用服务订单中的订单金额，包含营销。
+        /// 确认收货后，计划首次发起履约扣款的时间，未确认收货前则不返回
+        /// </summary>
+        [XmlElement("credit_task_first_exec_time")]
+        public string CreditTaskFirstExecTime { get; set; }
+
+        /// <summary>
+        /// 信用服务订单中的订单金额，包含营销。单位：元
         /// </summary>
         [XmlElement("credit_total_fee")]
         public string CreditTotalFee { get; set; }

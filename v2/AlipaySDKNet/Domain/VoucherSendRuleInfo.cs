@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public long Quantity { get; set; }
 
         /// <summary>
+        /// 每人每日可领取数量限制，填0或者不填表示不限制。
+        /// </summary>
+        [XmlElement("quantity_day_limit_per_user")]
+        public long QuantityDayLimitPerUser { get; set; }
+
+        /// <summary>
         /// 每人领取限制。 默认按照支付宝账号进行领取限制; 不填写或填入0表示没有领取限制.
         /// </summary>
         [XmlElement("quantity_limit_per_user")]
@@ -62,6 +68,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("quantity_limit_per_user_period_type")]
         public string QuantityLimitPerUserPeriodType { get; set; }
+
+        /// <summary>
+        /// 每人每月可领取数量限制，填0或者不填表示不限制
+        /// </summary>
+        [XmlElement("quantity_month_limit_per_user")]
+        public long QuantityMonthLimitPerUser { get; set; }
+
+        /// <summary>
+        /// 每人每周可领取数量限制，填0或者不填表示不限制
+        /// </summary>
+        [XmlElement("quantity_week_limit_per_user")]
+        public long QuantityWeekLimitPerUser { get; set; }
 
         /// <summary>
         /// 限制支付宝实名用户才能领取支付券,默认为false表示不限制 枚举值 true\false

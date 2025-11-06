@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("file_id")]
         public string FileId { get; set; }
+
+        /// <summary>
+        /// true表示使用安全链接，即返回的下载链接为https。 非true值的情况下，统一为false，使用http链接。
+        /// </summary>
+        [XmlElement("secure")]
+        public string Secure { get; set; }
     }
 }

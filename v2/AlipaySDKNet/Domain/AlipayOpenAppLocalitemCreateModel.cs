@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppLocalitemCreateModel : AopObject
     {
         /// <summary>
+        /// 店铺id
+        /// </summary>
+        [XmlElement("a_store_id")]
+        public string AStoreId { get; set; }
+
+        /// <summary>
         /// 商品属性，通过alipay.open.app.localitem.template.query获取本地商品模板信息接口得到商品属性key，is_required=1时属性必填
         /// </summary>
         [XmlArray("attrs")]

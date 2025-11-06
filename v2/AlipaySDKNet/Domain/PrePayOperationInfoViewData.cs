@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string OperationBankcardType { get; set; }
 
         /// <summary>
-        /// 运营主体
+        /// 营销出资主体 建议operation_tip和operation_desc两个字段同时解析做拼接
         /// </summary>
         [XmlElement("operation_desc")]
         public string OperationDesc { get; set; }
@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string OperationInstId { get; set; }
 
         /// <summary>
-        /// 运营文案描述
+        /// 营销文案描述
         /// </summary>
         [XmlElement("operation_tip")]
         public string OperationTip { get; set; }

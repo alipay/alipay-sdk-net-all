@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOfflineNbinteractSceneQueryModel : AopObject
     {
         /// <summary>
-        /// 碰一下互动跳转链接所属类型,从枚举中选择,不填写则查询该设备所有互动绑定关系
+        /// 碰一下互动跳转链接所属类型,从枚举中选择,不填写默认返回最新的
         /// </summary>
         [XmlElement("link_url_type")]
         public string LinkUrlType { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Sn { get; set; }
 
         /// <summary>
-        /// 设备供应商 ID：supplierId，如意生态版AMX设备请填写“201901111100635561”
+        /// 设备供应商 ID
         /// </summary>
         [XmlElement("supplier_id")]
         public string SupplierId { get; set; }

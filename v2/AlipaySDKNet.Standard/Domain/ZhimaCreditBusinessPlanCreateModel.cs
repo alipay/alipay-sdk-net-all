@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
-        /// 计划信息
+        /// 履约计划信息
         /// </summary>
         [XmlElement("plan_info")]
         public CreditPerformancePlanInfoOpen PlanInfo { get; set; }

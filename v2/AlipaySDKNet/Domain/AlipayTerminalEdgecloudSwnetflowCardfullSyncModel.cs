@@ -88,6 +88,12 @@ namespace Aop.Api.Domain
         public string PoolId { get; set; }
 
         /// <summary>
+        /// 卡剩余流量， 单位KB
+        /// </summary>
+        [XmlElement("rest_flow_amount")]
+        public string RestFlowAmount { get; set; }
+
+        /// <summary>
         /// 用户查询尚闻订单唯一表示标识
         /// </summary>
         [XmlElement("sw_order_id")]
@@ -98,6 +104,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("total_flow_amount")]
         public string TotalFlowAmount { get; set; }
+
+        /// <summary>
+        /// 卡使用流量，单位KB。
+        /// </summary>
+        [XmlElement("used_flow_amount")]
+        public string UsedFlowAmount { get; set; }
 
         /// <summary>
         /// 卡运营商

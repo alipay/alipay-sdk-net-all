@@ -64,5 +64,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refund_strategy")]
         public string RefundStrategy { get; set; }
+
+        /// <summary>
+        /// 核身口令
+        /// </summary>
+        [XmlElement("verify_id")]
+        public string VerifyId { get; set; }
     }
 }

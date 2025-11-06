@@ -42,5 +42,12 @@ namespace Aop.Api.Domain
         [XmlArray("item_name_list")]
         [XmlArrayItem("string")]
         public List<string> ItemNameList { get; set; }
+
+        /// <summary>
+        /// 查询时预选药品信息列表
+        /// </summary>
+        [XmlArray("pre_select_drug_list")]
+        [XmlArrayItem("drug_d_t_o")]
+        public List<DrugDTO> PreSelectDrugList { get; set; }
     }
 }

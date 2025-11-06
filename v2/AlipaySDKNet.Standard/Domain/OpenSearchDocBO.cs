@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Channel { get; set; }
 
         /// <summary>
+        /// 原网页文本chunk
+        /// </summary>
+        [XmlElement("chunk")]
+        public string Chunk { get; set; }
+
+        /// <summary>
         /// 搜索的原文内容
         /// </summary>
         [XmlElement("doc")]
@@ -80,6 +86,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("scale_score")]
         public string ScaleScore { get; set; }
+
+        /// <summary>
+        /// 摘要组
+        /// </summary>
+        [XmlElement("search_doc_abstract")]
+        public SearchDocAbstractBO SearchDocAbstract { get; set; }
+
+        /// <summary>
+        /// 分数组
+        /// </summary>
+        [XmlElement("search_score_info")]
+        public SearchScoreInfoBO SearchScoreInfo { get; set; }
 
         /// <summary>
         /// 来源信息

@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string MaterialType { get; set; }
 
         /// <summary>
+        /// true 代表仅记录，不激励快递员 false 代表正常记录，并激励快递员  默认false
+        /// </summary>
+        [XmlElement("only_record")]
+        public bool OnlyRecord { get; set; }
+
+        /// <summary>
         /// ALIPAY 支付宝操作渠道 OTHER 其他渠道
         /// </summary>
         [XmlElement("operation_source")]

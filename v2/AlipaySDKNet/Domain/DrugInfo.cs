@@ -70,6 +70,18 @@ namespace Aop.Api.Domain
         public string GenericName { get; set; }
 
         /// <summary>
+        /// 购药风险确认
+        /// </summary>
+        [XmlElement("risk_confirm")]
+        public bool RiskConfirm { get; set; }
+
+        /// <summary>
+        /// 风险等级
+        /// </summary>
+        [XmlElement("risk_level")]
+        public string RiskLevel { get; set; }
+
+        /// <summary>
         /// 规格  例：75mg*30粒
         /// </summary>
         [XmlElement("spec")]

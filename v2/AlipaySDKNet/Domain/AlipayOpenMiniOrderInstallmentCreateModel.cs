@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public long AddonPeriodNum { get; set; }
 
         /// <summary>
+        /// 订单扩展属性信息
+        /// </summary>
+        [XmlArray("attr_ext_info_list")]
+        [XmlArrayItem("attr_ext_info_d_t_o")]
+        public List<AttrExtInfoDTO> AttrExtInfoList { get; set; }
+
+        /// <summary>
         /// 当前分期数，与installment_no_info_list二选一
         /// </summary>
         [XmlElement("installment_no")]

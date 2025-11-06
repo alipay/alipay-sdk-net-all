@@ -42,6 +42,13 @@ namespace Aop.Api.Response
         public List<RentRiskInfoVO> RiskInfos { get; set; }
 
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("ship_goods_risk_models")]
+        [XmlArrayItem("ship_goods_risk_v_o")]
+        public List<ShipGoodsRiskVO> ShipGoodsRiskModels { get; set; }
+
+        /// <summary>
         /// 联营商户订单分组
         /// </summary>
         [XmlElement("vam_group")]

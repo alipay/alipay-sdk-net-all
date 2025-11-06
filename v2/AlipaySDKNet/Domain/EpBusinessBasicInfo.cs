@@ -174,6 +174,12 @@ namespace Aop.Api.Domain
         public string RegistrationCapital { get; set; }
 
         /// <summary>
+        /// 企业注册地信息
+        /// </summary>
+        [XmlElement("registration_place")]
+        public ZmEpRegistrationPlaceInfo RegistrationPlace { get; set; }
+
+        /// <summary>
         /// 吊销日期
         /// </summary>
         [XmlElement("revocation_date")]

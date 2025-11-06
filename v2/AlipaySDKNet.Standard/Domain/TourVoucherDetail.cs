@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -22,10 +23,17 @@ namespace Aop.Api.Domain
         public string CodeInfo { get; set; }
 
         /// <summary>
+        /// 用于自定义门票适用人群的标识名称，如“学生票”“老人票”“优待票”等，可根据实际需求自由填写，便于用户快速识别适用对象。
+        /// </summary>
+        [XmlElement("identity_name")]
+        public string IdentityName { get; set; }
+
+        /// <summary>
         /// 特殊人群。即凭证所适用的人群类型，比如：学生票，教师票，老人票等等。当该凭证为特殊人群凭证时必须填写，不填写时默认该凭证为普通成人票，枚举值详见对接文档。
         /// </summary>
-        [XmlElement("identity_type")]
-        public string IdentityType { get; set; }
+        [XmlArray("identity_type")]
+        [XmlArrayItem("string")]
+        public List<string> IdentityType { get; set; }
 
         /// <summary>
         /// 游客姓名
