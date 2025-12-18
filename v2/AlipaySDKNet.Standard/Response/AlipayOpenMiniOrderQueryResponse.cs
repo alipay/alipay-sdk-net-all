@@ -156,6 +156,12 @@ namespace Aop.Api.Response
         public string Status { get; set; }
 
         /// <summary>
+        /// 店铺信息
+        /// </summary>
+        [XmlElement("store_info")]
+        public BizUnitInfoVO StoreInfo { get; set; }
+
+        /// <summary>
         /// 支付单号，支付成功后会该字段会有值
         /// </summary>
         [XmlElement("trade_no")]

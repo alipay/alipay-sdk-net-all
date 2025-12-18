@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string OutBizType { get; set; }
 
         /// <summary>
+        /// 指定发放的红包金额大小，单位：分
+        /// </summary>
+        [XmlElement("send_price")]
+        public long SendPrice { get; set; }
+
+        /// <summary>
         /// 是否跳过发奖流水中的券信息补充，默认不跳过
         /// </summary>
         [XmlElement("skip_voucher_info")]

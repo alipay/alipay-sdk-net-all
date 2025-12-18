@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string ApplyStartTime { get; set; }
 
         /// <summary>
-        /// 审批单类型
+        /// 申请单类型
         /// </summary>
         [XmlElement("category")]
         public string Category { get; set; }
@@ -47,14 +47,14 @@ namespace Aop.Api.Domain
         public string ExpenseTypeSubCategory { get; set; }
 
         /// <summary>
-        /// 审批单关联制度列表，当企业出资方式为企业出资且设置此字段非空时，会查询最优制度并发放额度至该最优制度关联的员工
+        /// 申请单关联制度列表，当企业出资方式为企业出资且设置此字段非空时，会查询最优制度并发放额度至该最优制度关联的员工
         /// </summary>
         [XmlArray("institution_id_list")]
         [XmlArrayItem("string")]
         public List<string> InstitutionIdList { get; set; }
 
         /// <summary>
-        /// 用于保存外部扩展信息内容，如差旅预估金额
+        /// 用于保存外部扩展信息内容，如差旅预估金额（元）
         /// </summary>
         [XmlElement("out_ext")]
         public string OutExt { get; set; }
@@ -66,7 +66,7 @@ namespace Aop.Api.Domain
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// 外部平台审批单id
+        /// 外部平台申请单id（幂等ID）
         /// </summary>
         [XmlElement("platform_approval_id")]
         public string PlatformApprovalId { get; set; }

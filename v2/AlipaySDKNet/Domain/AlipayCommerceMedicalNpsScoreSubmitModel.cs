@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string OrgId { get; set; }
 
         /// <summary>
+        /// 机构名称
+        /// </summary>
+        [XmlElement("org_name")]
+        public string OrgName { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("out_user_id")]
@@ -70,7 +76,7 @@ namespace Aop.Api.Domain
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// 评分 1 - 10
+        /// 评分
         /// </summary>
         [XmlElement("score")]
         public long Score { get; set; }

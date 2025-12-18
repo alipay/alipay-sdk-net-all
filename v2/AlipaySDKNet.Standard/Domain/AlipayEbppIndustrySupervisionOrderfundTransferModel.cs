@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
-        /// 交易币种
+        /// 交易币种，默认CNY
         /// </summary>
         [XmlElement("currency")]
         public string Currency { get; set; }

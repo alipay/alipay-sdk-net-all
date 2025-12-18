@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string OutRequestNo { get; set; }
 
         /// <summary>
+        /// 资金退款时间。对齐Z50退款查询接口响应参数中的gmt_refund_pay退款时间字段。
+        /// </summary>
+        [XmlElement("real_refund_time")]
+        public string RealRefundTime { get; set; }
+
+        /// <summary>
         /// 退款请求的退款金额。单位：元。商户reduction扣减不包含在内
         /// </summary>
         [XmlElement("refund_amount")]

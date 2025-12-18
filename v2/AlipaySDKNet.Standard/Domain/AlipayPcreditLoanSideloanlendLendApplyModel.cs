@@ -23,6 +23,13 @@ namespace Aop.Api.Domain
         public string BankCardId { get; set; }
 
         /// <summary>
+        /// 候选授信机构列表
+        /// </summary>
+        [XmlArray("candidate_credit_fund_supplier_list")]
+        [XmlArrayItem("institution_v_o")]
+        public List<InstitutionVO> CandidateCreditFundSupplierList { get; set; }
+
+        /// <summary>
         /// 营销卡券Code列表,不能超过100个
         /// </summary>
         [XmlArray("coupon_code_list")]
@@ -40,6 +47,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("extension")]
         public string Extension { get; set; }
+
+        /// <summary>
+        /// 支用扩展处理(目前有支用拒绝转签TRANSFER_CREDIT)
+        /// </summary>
+        [XmlElement("loan_additional_process")]
+        public string LoanAdditionalProcess { get; set; }
 
         /// <summary>
         /// 贷款金额（单位：元）保留小数点后两位

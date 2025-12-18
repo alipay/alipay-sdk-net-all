@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string RelationUid { get; set; }
 
         /// <summary>
+        /// 签约确认状态
+        /// </summary>
+        [XmlElement("sign_confirm")]
+        public string SignConfirm { get; set; }
+
+        /// <summary>
         /// 进件状态
         /// </summary>
         [XmlElement("status")]

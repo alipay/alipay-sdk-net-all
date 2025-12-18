@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceEcIndustryinvoiceItemBatchqueryResponse : AopResponse
     {
         /// <summary>
-        /// 当前页实际数据大小
+        /// 当前页实际数据大小，单位：条
         /// </summary>
         [XmlElement("curr_page_size")]
         public long CurrPageSize { get; set; }
@@ -30,7 +30,7 @@ namespace Aop.Api.Response
         public long PageNum { get; set; }
 
         /// <summary>
-        /// 页大小
+        /// 页大小，单位：条
         /// </summary>
         [XmlElement("page_size")]
         public long PageSize { get; set; }

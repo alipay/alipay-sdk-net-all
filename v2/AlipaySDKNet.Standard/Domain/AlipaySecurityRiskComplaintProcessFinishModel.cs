@@ -35,5 +35,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("remark")]
         public string Remark { get; set; }
+
+        /// <summary>
+        /// 该功能为在客诉工单完结对客留言，切勿出现带有辱骂词语。
+        /// </summary>
+        [XmlElement("reply_content")]
+        public string ReplyContent { get; set; }
     }
 }

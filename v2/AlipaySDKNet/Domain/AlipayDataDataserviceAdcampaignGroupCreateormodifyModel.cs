@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string FilterConvertedTimeRange { get; set; }
 
         /// <summary>
+        /// 排除品牌广告人群时间，单位：【天】
+        /// </summary>
+        [XmlElement("filter_taobao_alliance_crowd_time_range")]
+        public string FilterTaobaoAllianceCrowdTimeRange { get; set; }
+
+        /// <summary>
         /// 性别,允许值： GENDER_FEMALE、 GENDER_MALE
         /// </summary>
         [XmlArray("gender_list")]
@@ -129,6 +135,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("group_inherit")]
         public long GroupInherit { get; set; }
+
+        /// <summary>
+        /// 单元继承开关。 1.入参CUSTOMER 时继承单元ID必须填写， 2.若填写了继承单元ID，单元继承开关只能入参CUSTOMER或空， 没有入参单元继承开关 自动回填为CUSTOMER 3.入参SYSTEM,OFF时继承单元ID必须为空
+        /// </summary>
+        [XmlElement("group_inherit_switch")]
+        public string GroupInheritSwitch { get; set; }
 
         /// <summary>
         /// 单元名称
@@ -171,7 +183,7 @@ namespace Aop.Api.Domain
         public List<string> OsList { get; set; }
 
         /// <summary>
-        /// 计划id
+        /// 计划id,当前单元所需关联的计划
         /// </summary>
         [XmlElement("plan_id")]
         public long PlanId { get; set; }

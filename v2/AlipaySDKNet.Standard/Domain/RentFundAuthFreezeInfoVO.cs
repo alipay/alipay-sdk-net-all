@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string FreezeNotifyUrl { get; set; }
 
         /// <summary>
+        /// 预授权场景
+        /// </summary>
+        [XmlElement("fund_auth_scene")]
+        public string FundAuthScene { get; set; }
+
+        /// <summary>
         /// 收款账户的支付宝用户号。 以2088开头的16位纯数字
         /// </summary>
         [XmlElement("payee_user_id")]

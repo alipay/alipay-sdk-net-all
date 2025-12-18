@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("complain_id")]
         public string ComplainId { get; set; }
+
+        /// <summary>
+        /// 主键ID
+        /// </summary>
+        [XmlElement("record_id")]
+        public long RecordId { get; set; }
     }
 }

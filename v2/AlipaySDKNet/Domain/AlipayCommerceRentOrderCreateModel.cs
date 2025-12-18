@@ -90,6 +90,12 @@ namespace Aop.Api.Domain
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// 端外订单来源
+        /// </summary>
+        [XmlElement("outer_order_source")]
+        public string OuterOrderSource { get; set; }
+
+        /// <summary>
         /// 原始租赁订单号。订单类型为续租、租转售时必传
         /// </summary>
         [XmlElement("parent_order_id")]
@@ -142,6 +148,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sub_merchant")]
         public RentSubMerchantDTO SubMerchant { get; set; }
+
+        /// <summary>
+        /// 订单补录信息
+        /// </summary>
+        [XmlElement("supplementary_info")]
+        public RentSupplementaryInfoDTO SupplementaryInfo { get; set; }
 
         /// <summary>
         /// 租赁订单标题

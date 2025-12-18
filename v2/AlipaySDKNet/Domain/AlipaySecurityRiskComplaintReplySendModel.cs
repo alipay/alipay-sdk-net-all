@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ComplaintId { get; set; }
 
         /// <summary>
+        /// 本次进行留言回复的投诉id（主表主键）
+        /// </summary>
+        [XmlElement("record_id")]
+        public long RecordId { get; set; }
+
+        /// <summary>
         /// 商户留言内容。
         /// </summary>
         [XmlElement("reply_content")]

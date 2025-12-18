@@ -30,6 +30,12 @@ namespace Aop.Api.Response
         public List<InteOpSubOrderInfo> InteopSubOrderInfos { get; set; }
 
         /// <summary>
+        /// 商户号
+        /// </summary>
+        [XmlElement("merchant_oid")]
+        public string MerchantOid { get; set; }
+
+        /// <summary>
         /// 待办二维码跳转链接
         /// </summary>
         [XmlElement("wp_qr_code")]

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string DepartmentName { get; set; }
 
         /// <summary>
+        /// 出院时间
+        /// </summary>
+        [XmlElement("discharge_date")]
+        public string DischargeDate { get; set; }
+
+        /// <summary>
         /// 就诊医院
         /// </summary>
         [XmlElement("hospital_name")]
@@ -40,7 +46,7 @@ namespace Aop.Api.Domain
         public string InDate { get; set; }
 
         /// <summary>
-        /// 出院时间
+        /// 出院时间 当前字段已废弃(字段类型更改， 最新使用改为使用discharge_date的字段)
         /// </summary>
         [XmlElement("recovery_date")]
         public string RecoveryDate { get; set; }

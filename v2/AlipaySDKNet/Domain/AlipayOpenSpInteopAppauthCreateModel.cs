@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("isv_app_id")]
         public string IsvAppId { get; set; }
+
+        /// <summary>
+        /// 代调用授权成功之后会在授权通知里携带此值
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
     }
 }

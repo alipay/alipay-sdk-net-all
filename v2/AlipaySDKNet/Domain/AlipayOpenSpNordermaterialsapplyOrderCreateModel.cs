@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Channel { get; set; }
 
         /// <summary>
+        /// 组合单号，基于此单号创建的所有申请单都在一个组合单下，可以统一提交
+        /// </summary>
+        [XmlElement("combined_order_no")]
+        public string CombinedOrderNo { get; set; }
+
+        /// <summary>
         /// 与支付宝约定模版样式后，提供模版编号，接口传入
         /// </summary>
         [XmlElement("materials_template_code")]

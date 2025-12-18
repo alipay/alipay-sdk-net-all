@@ -65,7 +65,7 @@ namespace Aop.Api.Response
         public string InvoiceAmount { get; set; }
 
         /// <summary>
-        /// 发票不含税金额
+        /// 发票不含税金额（单位：元）
         /// </summary>
         [XmlElement("invoice_amount_without_tax")]
         public string InvoiceAmountWithoutTax { get; set; }
@@ -126,7 +126,7 @@ namespace Aop.Api.Response
         public string InvoiceStatus { get; set; }
 
         /// <summary>
-        /// 发票税额
+        /// 发票税额（单位：元）
         /// </summary>
         [XmlElement("invoice_tax_amount")]
         public string InvoiceTaxAmount { get; set; }

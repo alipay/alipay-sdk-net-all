@@ -24,6 +24,12 @@ namespace Aop.Api.Response
         public List<ActivityPhase> ActivityPhases { get; set; }
 
         /// <summary>
+        /// 开卡权益信息
+        /// </summary>
+        [XmlElement("card_open_reward_info")]
+        public CardOpenRewardInfo CardOpenRewardInfo { get; set; }
+
+        /// <summary>
         /// 当前查询用户完成的订单笔数
         /// </summary>
         [XmlElement("current_count")]

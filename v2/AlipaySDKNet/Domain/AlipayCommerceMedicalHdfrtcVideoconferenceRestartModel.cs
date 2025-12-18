@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalHdfrtcVideoconferenceRestartModel : AopObject
     {
         /// <summary>
+        /// 手机型号
+        /// </summary>
+        [XmlElement("device_model")]
+        public string DeviceModel { get; set; }
+
+        /// <summary>
+        /// 设备来源
+        /// </summary>
+        [XmlElement("device_source")]
+        public string DeviceSource { get; set; }
+
+        /// <summary>
         /// 角色类型
         /// </summary>
         [XmlElement("role")]

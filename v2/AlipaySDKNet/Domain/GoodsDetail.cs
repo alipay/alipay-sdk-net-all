@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string GoodsCategory { get; set; }
 
         /// <summary>
+        /// 商品69条码
+        /// </summary>
+        [XmlElement("goods_ean_id")]
+        public string GoodsEanId { get; set; }
+
+        /// <summary>
         /// 商品的编号，该参数传入支付券上绑定商品goods_id, 倘若无支付券需要消费，该字段传入商品最小粒度的商品ID（如：若商品有sku粒度，则传商户sku粒度的ID）
         /// </summary>
         [XmlElement("goods_id")]

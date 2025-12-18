@@ -49,7 +49,7 @@ namespace Aop.Api.Domain
         public string ProductName { get; set; }
 
         /// <summary>
-        /// 商品重量/数量。支持两位小数点。默认为1
+        /// 商品重量/数量。支持两位小数点。默认为1，单位由unit属性决定
         /// </summary>
         [XmlElement("quantity")]
         public string Quantity { get; set; }

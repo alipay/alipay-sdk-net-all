@@ -344,6 +344,12 @@ namespace Aop.Api.Domain
         public string SignProbability { get; set; }
 
         /// <summary>
+        /// 站点
+        /// </summary>
+        [XmlElement("site")]
+        public string Site { get; set; }
+
+        /// <summary>
         /// 软件订阅时长乘以十，主要为了解决0.5年的问题 下游预测订单消费了商机本体的订阅时长，暂时重构工作量大，消费场景下，需要自行 / 10
         /// </summary>
         [XmlElement("software_subscription_years_expand_ten")]

@@ -18,6 +18,12 @@ namespace Aop.Api.Response
         public List<EpSearchBasicInfo> BasicInfoModels { get; set; }
 
         /// <summary>
+        /// 查得标记
+        /// </summary>
+        [XmlElement("data_found")]
+        public bool DataFound { get; set; }
+
+        /// <summary>
         /// 分页中是否有下一页
         /// </summary>
         [XmlElement("has_next")]

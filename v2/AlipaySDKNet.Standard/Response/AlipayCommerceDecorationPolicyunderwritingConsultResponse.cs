@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string OrderNo { get; set; }
 
         /// <summary>
+        /// 外部订单号。不可重复,幂等字段
+        /// </summary>
+        [XmlElement("out_order_no")]
+        public string OutOrderNo { get; set; }
+
+        /// <summary>
         /// 保障截止日期 格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("policy_end_date")]
@@ -45,6 +51,18 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("premium")]
         public long Premium { get; set; }
+
+        /// <summary>
+        /// 保险计划code 家财: JiaCai 团意1:TuanYi1 团意2:TuanYi2
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 项目编号或合同编号
+        /// </summary>
+        [XmlElement("project_id")]
+        public string ProjectId { get; set; }
 
         /// <summary>
         /// 子订单列表

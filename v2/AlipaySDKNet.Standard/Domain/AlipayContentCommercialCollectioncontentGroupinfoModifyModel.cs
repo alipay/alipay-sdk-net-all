@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string CollectionSecondCategory { get; set; }
 
         /// <summary>
-        /// 是否已完结； 已完结：1 未完结：2
+        /// 是否已完结； 已完结：1 未完结：0
         /// </summary>
         [XmlElement("completed_status")]
         public string CompletedStatus { get; set; }

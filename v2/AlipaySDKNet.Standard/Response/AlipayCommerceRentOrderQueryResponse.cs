@@ -72,6 +72,12 @@ namespace Aop.Api.Response
         public string Memo { get; set; }
 
         /// <summary>
+        /// 线下租赁信息
+        /// </summary>
+        [XmlElement("offline_shopping_info")]
+        public RentOfflineShoppingVO OfflineShoppingInfo { get; set; }
+
+        /// <summary>
         /// 订单创建时间
         /// </summary>
         [XmlElement("order_create_time")]
@@ -94,6 +100,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_order_id")]
         public string OutOrderId { get; set; }
+
+        /// <summary>
+        /// 端外订单来源
+        /// </summary>
+        [XmlElement("outer_order_source")]
+        public string OuterOrderSource { get; set; }
 
         /// <summary>
         /// 租赁订单页面地址信息

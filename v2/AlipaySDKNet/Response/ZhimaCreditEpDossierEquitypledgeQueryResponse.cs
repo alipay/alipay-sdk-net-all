@@ -14,5 +14,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("data")]
         public EpEquityPledgeDataInfo Data { get; set; }
+
+        /// <summary>
+        /// 查得标记
+        /// </summary>
+        [XmlElement("data_found")]
+        public bool DataFound { get; set; }
     }
 }

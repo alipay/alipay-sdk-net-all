@@ -106,6 +106,12 @@ namespace Aop.Api.Domain
         public string RegisterTime { get; set; }
 
         /// <summary>
+        /// 描述社会风险信息
+        /// </summary>
+        [XmlElement("social_risk_desc")]
+        public string SocialRiskDesc { get; set; }
+
+        /// <summary>
         /// 社会风险信息
         /// </summary>
         [XmlElement("social_risk_info")]

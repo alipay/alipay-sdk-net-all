@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string MatchType { get; set; }
 
         /// <summary>
-        /// 词出价
+        /// 词出价，单位【元】
         /// </summary>
         [XmlElement("price")]
         public string Price { get; set; }

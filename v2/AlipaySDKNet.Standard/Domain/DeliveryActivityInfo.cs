@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string BankName { get; set; }
 
         /// <summary>
+        /// 信用卡分期
+        /// </summary>
+        [XmlElement("delivery_card_type")]
+        public string DeliveryCardType { get; set; }
+
+        /// <summary>
         /// USER_VOUCHER
         /// </summary>
         [XmlElement("delivery_prefer_type")]

@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string SettleMode { get; set; }
 
         /// <summary>
+        /// 支付宝交易号，用于支付宝退款准备入金的相关校验
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
+
+        /// <summary>
         /// 用于指定收结易订单的附言，可用于对账
         /// </summary>
         [XmlElement("trans_memo")]

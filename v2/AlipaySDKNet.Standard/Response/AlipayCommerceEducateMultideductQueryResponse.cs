@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string Asset { get; set; }
 
         /// <summary>
+        /// 如果有配置阈值信息，返回小荷包id，和余额是否充足
+        /// </summary>
+        [XmlElement("asset_info")]
+        public string AssetInfo { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandAstoreshopSettleAddModel : AopObject
     {
         /// <summary>
-        /// 银行卡信息（特殊可选），结算到卡时必填
+        /// 银行卡信息（特殊可选），结算到卡时必填 当前字段已废弃(银行卡信息字段位置转入门店结算信息字段中)
         /// </summary>
         [XmlElement("bank_cards")]
         public ShopBankCard BankCards { get; set; }

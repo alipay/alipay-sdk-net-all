@@ -214,6 +214,12 @@ namespace Aop.Api.Domain
         public string PayType { get; set; }
 
         /// <summary>
+        /// 取号截止时间
+        /// </summary>
+        [XmlElement("pickup_end_time")]
+        public string PickupEndTime { get; set; }
+
+        /// <summary>
         /// 平台编码
         /// </summary>
         [XmlElement("platform_code")]

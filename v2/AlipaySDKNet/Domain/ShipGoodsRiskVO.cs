@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ShipGoodsRiskVO : AopObject
     {
         /// <summary>
-        /// true-建议发货 false-不建议发货
+        /// true-建议发货 false-建议根据用户其他风险情况进行综合评估
         /// </summary>
         [XmlElement("can_ship_flag")]
         public bool CanShipFlag { get; set; }

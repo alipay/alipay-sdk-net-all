@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Budget { get; set; }
 
         /// <summary>
+        /// 1.CPM不支持搜索场景 2.默认CPC
+        /// </summary>
+        [XmlElement("charge_type")]
+        public string ChargeType { get; set; }
+
+        /// <summary>
         /// 计划结束投放日期，格式为yyyy-MM-dd，新增或者编辑时有改动必须大于等于今天；结束日期必须大于等于开始日期
         /// </summary>
         [XmlElement("end_date")]
@@ -52,7 +58,7 @@ namespace Aop.Api.Domain
         public string PlanUnlimitedBudgetSwitch { get; set; }
 
         /// <summary>
-        /// 商家标志,唯一值,在广告投放平台商家详情获取
+        /// 灯火广告商家tag标识,在广告投放平台商家详情获取
         /// </summary>
         [XmlElement("principal_tag")]
         public string PrincipalTag { get; set; }

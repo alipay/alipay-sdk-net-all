@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("real_sells")]
         public long RealSells { get; set; }
+
+        /// <summary>
+        /// 虚拟销量范围，模糊提供的销量信息，单位件。
+        /// </summary>
+        [XmlElement("virtual_sells_range")]
+        public string VirtualSellsRange { get; set; }
     }
 }

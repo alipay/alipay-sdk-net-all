@@ -35,11 +35,11 @@ namespace Aop.Api.Domain
         public string LicenseName { get; set; }
 
         /// <summary>
-        /// 资质凭证图片链接,通过调用 ant.merchant.expand.indirect.image.upload(图片上传)接口返回的image_id作为参数
+        /// 资质凭证图片,通过调用 ant.merchant.expand.indirect.image.upload(图片上传)接口返回的image_id作为参数
         /// </summary>
-        [XmlArray("license_urls")]
+        [XmlArray("license_pics")]
         [XmlArrayItem("string")]
-        public List<string> LicenseUrls { get; set; }
+        public List<string> LicensePics { get; set; }
 
         /// <summary>
         /// 注册地址

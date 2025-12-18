@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,7 +11,7 @@ namespace Aop.Api.Domain
     public class PrscVO : AopObject
     {
         /// <summary>
-        /// 订单渠道
+        /// 订单渠道,类型有O2O、B2C
         /// </summary>
         [XmlElement("channel")]
         public string Channel { get; set; }
@@ -22,10 +23,35 @@ namespace Aop.Api.Domain
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// 耳喉鼻科
+        /// </summary>
+        [XmlElement("depart_name")]
+        public string DepartName { get; set; }
+
+        /// <summary>
+        /// 诊断
+        /// </summary>
+        [XmlElement("diagnosis")]
+        public string Diagnosis { get; set; }
+
+        /// <summary>
+        /// 药品信息
+        /// </summary>
+        [XmlArray("drug_info_list")]
+        [XmlArrayItem("drug_info_v_o")]
+        public List<DrugInfoVO> DrugInfoList { get; set; }
+
+        /// <summary>
         /// 用药人性别,1-男 2-女
         /// </summary>
         [XmlElement("gender")]
         public long Gender { get; set; }
+
+        /// <summary>
+        /// 补充说明
+        /// </summary>
+        [XmlElement("instruction")]
+        public string Instruction { get; set; }
 
         /// <summary>
         /// 用药人年龄,单位  天/月/岁

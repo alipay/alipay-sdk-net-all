@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public ExtendStrategy ExtendStrategy { get; set; }
 
         /// <summary>
+        /// 商户收费规则
+        /// </summary>
+        [XmlElement("merchant_charging_rule")]
+        public MerchantChargingRule MerchantChargingRule { get; set; }
+
+        /// <summary>
         /// 提现标题
         /// </summary>
         [XmlElement("order_title")]

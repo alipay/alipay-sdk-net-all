@@ -25,15 +25,15 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 证件图片类型
         /// </summary>
-        [XmlElement("cert_pic_url_type")]
-        public string CertPicUrlType { get; set; }
+        [XmlElement("cert_pic_type")]
+        public string CertPicType { get; set; }
 
         /// <summary>
-        /// 证件图片地址
+        /// 证件图片,通过调用 ant.merchant.expand.indirect.image.upload(图片上传)接口返回的image_id作为参数
         /// </summary>
-        [XmlArray("cert_pic_urls")]
+        [XmlArray("cert_pics")]
         [XmlArrayItem("string")]
-        public List<string> CertPicUrls { get; set; }
+        public List<string> CertPics { get; set; }
 
         /// <summary>
         /// 证件类型

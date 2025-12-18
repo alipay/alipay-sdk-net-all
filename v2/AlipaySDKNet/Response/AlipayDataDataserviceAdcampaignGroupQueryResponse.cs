@@ -18,7 +18,7 @@ namespace Aop.Api.Response
         public List<string> AgeList { get; set; }
 
         /// <summary>
-        /// 资产类型
+        /// 资产类型（前置转化资产openAPI接口获取）转化类型获取接口：alipay.data.dataservice.adconversion.conversiontype.query
         /// </summary>
         [XmlElement("asset")]
         public string Asset { get; set; }
@@ -118,6 +118,12 @@ namespace Aop.Api.Response
         public string FilterConvertedTimeRange { get; set; }
 
         /// <summary>
+        /// 空则表示不限。单位【天】
+        /// </summary>
+        [XmlElement("filter_taobao_alliance_crowd_time_range")]
+        public string FilterTaobaoAllianceCrowdTimeRange { get; set; }
+
+        /// <summary>
         /// 性别
         /// </summary>
         [XmlArray("gender_list")]
@@ -153,6 +159,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("group_inherit")]
         public long GroupInherit { get; set; }
+
+        /// <summary>
+        /// 单元继承开关。不支持修改。不支持搜索场景  1.入参CUSTOMER 时继承单元ID必须填写， 2.若填写了继承单元ID，单元继承开关只能入参CUSTOMER或空， 没有入参单元继承开关 自动回填为CUSTOMER 3.入参SYSTEM,OFF时继承单元ID必须为空
+        /// </summary>
+        [XmlElement("group_inherit_switch")]
+        public string GroupInheritSwitch { get; set; }
 
         /// <summary>
         /// 单元名称

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Diacrisis { get; set; }
 
         /// <summary>
-        /// 处置
+        /// 处置 当前字段已废弃(HDFMedicalSummary字段不需要传执行项)
         /// </summary>
         [XmlElement("idea")]
         public string Idea { get; set; }

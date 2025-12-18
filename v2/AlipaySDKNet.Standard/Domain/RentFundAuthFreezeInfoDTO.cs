@@ -10,10 +10,22 @@ namespace Aop.Api.Domain
     public class RentFundAuthFreezeInfoDTO : AopObject
     {
         /// <summary>
+        /// 商家外部传入的预授权单号
+        /// </summary>
+        [XmlElement("auth_no")]
+        public string AuthNo { get; set; }
+
+        /// <summary>
         /// 预授权成功消息通知地址，商户可通过指定该地址监听支付宝侧预授权消息
         /// </summary>
         [XmlElement("freeze_notify_url")]
         public string FreezeNotifyUrl { get; set; }
+
+        /// <summary>
+        /// 预授权场景； 默认空：将进行预授权签约，不会取商家传入authNo 商家预授权：不会进行预授权签约，直接取商家传入authNo；
+        /// </summary>
+        [XmlElement("fund_auth_scene")]
+        public string FundAuthScene { get; set; }
 
         /// <summary>
         /// 收款账户的支付宝用户号。 以2088开头的16位纯数字，如果传入则会校验该账号是否具备当前商户收款权限

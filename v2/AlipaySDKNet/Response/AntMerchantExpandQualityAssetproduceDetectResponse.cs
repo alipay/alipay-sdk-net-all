@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AntMerchantExpandQualityAssetproduceDetectResponse : AopResponse
     {
         /// <summary>
+        /// 品检内容
+        /// </summary>
+        [XmlElement("detect_content_info")]
+        public ContentInfo DetectContentInfo { get; set; }
+
+        /// <summary>
         /// 品检错误码信息
         /// </summary>
         [XmlElement("detect_error_code")]

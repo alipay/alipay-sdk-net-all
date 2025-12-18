@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public string OutSkuId { get; set; }
 
         /// <summary>
+        /// sku名称
+        /// </summary>
+        [XmlElement("sku_name")]
+        public string SkuName { get; set; }
+
+        /// <summary>
         /// 平台SPUID
         /// </summary>
         [XmlElement("spu_id")]

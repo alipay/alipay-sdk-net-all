@@ -100,7 +100,7 @@ namespace Aop.Api.Domain
         public string ExpenseRuleGroupId { get; set; }
 
         /// <summary>
-        /// 费用场景
+        /// 费用场景/一级场景
         /// </summary>
         [XmlElement("expense_scene_code")]
         public string ExpenseSceneCode { get; set; }
@@ -112,7 +112,7 @@ namespace Aop.Api.Domain
         public string ExpenseType { get; set; }
 
         /// <summary>
-        /// 费用类型子类目
+        /// 费用类型子类目/二级场景
         /// </summary>
         [XmlElement("expense_type_sub_category")]
         public string ExpenseTypeSubCategory { get; set; }
@@ -212,6 +212,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("peer_pay_amount")]
         public string PeerPayAmount { get; set; }
+
+        /// <summary>
+        /// 实际出资人名称
+        /// </summary>
+        [XmlElement("peer_payer_card_name")]
+        public string PeerPayerCardName { get; set; }
 
         /// <summary>
         /// 实际出资支付宝账号

@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string AftersaleId { get; set; }
 
         /// <summary>
+        /// 业务扩展参数
+        /// </summary>
+        [XmlElement("extend_params")]
+        public RentPayExtendParamsDTO ExtendParams { get; set; }
+
+        /// <summary>
         /// 交易组件订单号
         /// </summary>
         [XmlElement("order_id")]

@@ -96,7 +96,7 @@ namespace Aop.Api.Domain
         public List<PostPayment> PostPayments { get; set; }
 
         /// <summary>
-        /// 销售产品码。 支付宝预授权产品固定为 PRE_AUTH_ONLINE
+        /// 销售产品码。 预授权支付产品固定为 PREAUTH_PAY
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }

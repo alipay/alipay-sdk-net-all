@@ -10,10 +10,22 @@ namespace Aop.Api.Domain
     public class AlipayFundAllocSignAddModel : AopObject
     {
         /// <summary>
+        /// 授权签约业务扩展参数
+        /// </summary>
+        [XmlElement("alloc_sign_biz_param")]
+        public AllocSignBizParam AllocSignBizParam { get; set; }
+
+        /// <summary>
         /// 产品码由支付宝分配
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
+
+        /// <summary>
+        /// pc -返回pc签约跳转链接，h5 -返回h5签约跳转地址，未传默认返回pc跳转地址
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
 
         /// <summary>
         /// 1、identity_type为ALIPAY_USER_ID时，该字段需填写开户企业的支付宝会员ID（2088开头的16位数字字符串）； 2、identity_type是ALIPAY_LOGON_ID该字段需填写开户企业的的支付宝登录号。 3、identity_type是ALIPAY_OPEN_ID该字段需填写支付宝的opneId

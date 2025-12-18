@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalNpsStatusQueryModel : AopObject
     {
         /// <summary>
+        /// 用于区分入口是云陪诊详情还是消息进对话
+        /// </summary>
+        [XmlElement("entrance_type")]
+        public string EntranceType { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

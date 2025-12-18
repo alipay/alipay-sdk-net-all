@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string EmployeeId { get; set; }
 
         /// <summary>
-        /// 员工开通IOT企业刷脸付的唯一流水号
+        /// 员工开通IoT企业刷脸付的唯一流水号
         /// </summary>
         [XmlElement("iot_unique_id")]
         public string IotUniqueId { get; set; }

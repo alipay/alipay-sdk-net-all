@@ -78,6 +78,12 @@ namespace Aop.Api.Domain
         public string ItemName { get; set; }
 
         /// <summary>
+        /// 租赁的商品类型
+        /// </summary>
+        [XmlElement("item_type")]
+        public string ItemType { get; set; }
+
+        /// <summary>
         /// 商品总价值，单位：元，精确到小数点后两位。
         /// </summary>
         [XmlElement("item_value")]

@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string SubScene { get; set; }
 
         /// <summary>
-        /// 高速通行费用总金额，单位:元。
+        /// 高速通行费用总金额，单位:分。
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

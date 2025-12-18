@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AlipayOrderId { get; set; }
 
         /// <summary>
+        /// 渠道编码
+        /// </summary>
+        [XmlElement("channel_code")]
+        public string ChannelCode { get; set; }
+
+        /// <summary>
         /// 外部自有用户id，无特殊校验
         /// </summary>
         [XmlElement("merchant_user_id")]
@@ -56,5 +62,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("recall_reason")]
         public string RecallReason { get; set; }
+
+        /// <summary>
+        /// 场景编码
+        /// </summary>
+        [XmlElement("scene_code")]
+        public string SceneCode { get; set; }
     }
 }

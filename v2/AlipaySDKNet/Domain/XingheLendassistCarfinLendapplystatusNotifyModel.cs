@@ -38,6 +38,12 @@ namespace Aop.Api.Domain
         public List<LendDrawdown> DrawdownList { get; set; }
 
         /// <summary>
+        /// 担保机构信息
+        /// </summary>
+        [XmlElement("guarantee_inst")]
+        public CarfinGuaranteeInst GuaranteeInst { get; set; }
+
+        /// <summary>
         /// 支用申请单号
         /// </summary>
         [XmlElement("lend_apply_no")]

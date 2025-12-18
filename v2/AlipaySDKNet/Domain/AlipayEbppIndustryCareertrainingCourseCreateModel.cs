@@ -19,9 +19,22 @@ namespace Aop.Api.Domain
         /// <summary>
         /// null
         /// </summary>
+        [XmlArray("category_id_list")]
+        [XmlArrayItem("number")]
+        public List<long> CategoryIdList { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
         [XmlArray("certificate_code_list")]
         [XmlArrayItem("string")]
         public List<string> CertificateCodeList { get; set; }
+
+        /// <summary>
+        /// 是否认证课程，默认true
+        /// </summary>
+        [XmlElement("certification_course")]
+        public bool CertificationCourse { get; set; }
 
         /// <summary>
         /// null
@@ -98,6 +111,12 @@ namespace Aop.Api.Domain
         [XmlArray("details_image_list")]
         [XmlArrayItem("string")]
         public List<string> DetailsImageList { get; set; }
+
+        /// <summary>
+        /// 是否试听，默认false
+        /// </summary>
+        [XmlElement("has_trial")]
+        public bool HasTrial { get; set; }
 
         /// <summary>
         /// null

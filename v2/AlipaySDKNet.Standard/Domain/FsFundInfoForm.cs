@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string FundUserId { get; set; }
 
         /// <summary>
+        /// 该出资方指定回收账号的信息,主要用于店铺过户，账号换绑，账号销户
+        /// </summary>
+        [XmlElement("recycle_info")]
+        public RecycleInfoForm RecycleInfo { get; set; }
+
+        /// <summary>
         /// 还款银行信息
         /// </summary>
         [XmlElement("repay_bank_info")]

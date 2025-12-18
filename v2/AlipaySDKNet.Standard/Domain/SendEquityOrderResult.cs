@@ -58,5 +58,17 @@ namespace Aop.Api.Domain
         [XmlArray("send_sub_order_result")]
         [XmlArrayItem("send_sub_order_result")]
         public List<SendSubOrderResult> SendSubOrderResult { get; set; }
+
+        /// <summary>
+        /// 支付宝券实例id
+        /// </summary>
+        [XmlElement("voucher_id")]
+        public string VoucherId { get; set; }
+
+        /// <summary>
+        /// 支付宝券详情页url，唤端打开的h5 url
+        /// </summary>
+        [XmlElement("voucher_url")]
+        public string VoucherUrl { get; set; }
     }
 }

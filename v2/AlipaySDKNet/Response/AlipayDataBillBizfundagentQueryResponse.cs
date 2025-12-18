@@ -24,7 +24,7 @@ namespace Aop.Api.Response
         public string PageNo { get; set; }
 
         /// <summary>
-        /// 页面大小，最大2000
+        /// 页面大小，最大2000条
         /// </summary>
         [XmlElement("page_size")]
         public string PageSize { get; set; }

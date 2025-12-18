@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public bool AutoMarketingDelivery { get; set; }
 
         /// <summary>
+        /// 精品池自动提报标志，默认false，不提报；true表示提报
+        /// </summary>
+        [XmlElement("auto_premium_pool")]
+        public bool AutoPremiumPool { get; set; }
+
+        /// <summary>
         /// 条形码
         /// </summary>
         [XmlElement("barcode")]

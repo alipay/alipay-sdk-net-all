@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string AccountType { get; set; }
 
         /// <summary>
-        /// 联行号
+        /// 联行号 当前字段已废弃(联行号暂不消费，客户无需传入)
         /// </summary>
         [XmlElement("bank_code")]
         public string BankCode { get; set; }

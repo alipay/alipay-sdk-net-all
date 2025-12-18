@@ -35,10 +35,16 @@ namespace Aop.Api.Domain
         public string SourceAuthor { get; set; }
 
         /// <summary>
-        /// 内容正文。类型为短图文/视频，正文必须填写，理解为短图文/视频的文本部分，仅支持纯文本
+        /// 内容正文。类型为短图文/视频，正文必须填写，理解为短图文/视频的文本部分，仅支持纯文本。正文长度限制为不超过 1000 个字
         /// </summary>
         [XmlElement("source_content")]
         public string SourceContent { get; set; }
+
+        /// <summary>
+        /// 内容在支付宝平台的首发声明，通过首发审核的内容在视频播放页显示首发标识。取值为：0/1，其中 1 表示声明为首发，仅发布短视频内容时有效
+        /// </summary>
+        [XmlElement("source_content_debut")]
+        public string SourceContentDebut { get; set; }
 
         /// <summary>
         /// 来源文章的原始链接地址

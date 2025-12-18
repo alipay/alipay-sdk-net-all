@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ItemSpec { get; set; }
 
         /// <summary>
-        /// 商品税率
+        /// 商品税率，小数值，如13%则传值为0.13
         /// </summary>
         [XmlElement("item_tax_rate")]
         public string ItemTaxRate { get; set; }
@@ -38,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_unit")]
         public string ItemUnit { get; set; }
+
+        /// <summary>
+        /// 含税单价，总位数30位，最多17位整数，最多13位小数，单位：元
+        /// </summary>
+        [XmlElement("item_unit_amount_with_tax")]
+        public string ItemUnitAmountWithTax { get; set; }
 
         /// <summary>
         /// 外部商品ID

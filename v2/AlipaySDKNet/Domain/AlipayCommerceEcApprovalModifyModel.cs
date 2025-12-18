@@ -35,14 +35,14 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 审批单关联制度列表，当企业出资方式为企业出资且设置此字段非空时，会查询最优制度并发放额度至该最优制度关联的员工
+        /// 申请单关联制度列表，当企业出资方式为企业出资且设置此字段非空时，会查询最优制度并发放额度至该最优制度关联的员工
         /// </summary>
         [XmlArray("institution_id_list")]
         [XmlArrayItem("string")]
         public List<string> InstitutionIdList { get; set; }
 
         /// <summary>
-        /// 外部平台审批单id
+        /// 外部平台申请单id
         /// </summary>
         [XmlElement("platform_approval_id")]
         public string PlatformApprovalId { get; set; }

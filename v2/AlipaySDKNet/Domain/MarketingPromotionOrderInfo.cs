@@ -132,6 +132,12 @@ namespace Aop.Api.Domain
         public string PromoId { get; set; }
 
         /// <summary>
+        /// 推广类型，direct直接推广带来订单，indirect非实时归因带来的订单
+        /// </summary>
+        [XmlElement("promo_type")]
+        public string PromoType { get; set; }
+
+        /// <summary>
         /// 二级推广员工ID
         /// </summary>
         [XmlElement("second_level_emp_id")]

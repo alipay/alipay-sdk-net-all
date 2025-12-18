@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
+        /// 个人商户的城市名称
+        /// </summary>
+        [XmlElement("city_name")]
+        public string CityName { get; set; }
+
+        /// <summary>
         /// 在本业务中，ContactInfo对象中联系人姓名，手机号必填，其他选填
         /// </summary>
         [XmlArray("contact_infos")]
@@ -66,10 +72,22 @@ namespace Aop.Api.Domain
         public string Mcc { get; set; }
 
         /// <summary>
+        /// 用于区分C2C场景下的商户类型，属于个人商户还是个人用户
+        /// </summary>
+        [XmlElement("merchant_type_forc")]
+        public string MerchantTypeForc { get; set; }
+
+        /// <summary>
         /// 用户名称。若传入签约支付宝账号，该字段无效
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 个人商户省份的名称
+        /// </summary>
+        [XmlElement("province_name")]
+        public string ProvinceName { get; set; }
 
         /// <summary>
         /// 商户使用服务, 固定传（jsapi支付、app支付、wap支付、电脑支付、小程序支付）

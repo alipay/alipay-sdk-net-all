@@ -114,7 +114,7 @@ namespace Aop.Api.Response
         public string SingleQuota { get; set; }
 
         /// <summary>
-        /// 协议当前状态  1. TEMP：暂存，协议未生效过；  2. NORMAL：正常；  3. STOP：暂停
+        /// 协议当前状态 1. TEMP：协议未生效，可以重新签约； 2. NORMAL：协议生效
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

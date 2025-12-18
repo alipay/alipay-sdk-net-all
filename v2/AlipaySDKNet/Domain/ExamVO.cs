@@ -105,13 +105,13 @@ namespace Aop.Api.Domain
         public string RegistrationEndDate { get; set; }
 
         /// <summary>
-        /// 富文本
+        /// 报考须知
         /// </summary>
         [XmlElement("registration_notes")]
         public string RegistrationNotes { get; set; }
 
         /// <summary>
-        /// 报考要求：大json，key/value 机构自己定
+        /// 报考要求
         /// </summary>
         [XmlElement("registration_requirement")]
         public string RegistrationRequirement { get; set; }

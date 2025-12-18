@@ -52,6 +52,18 @@ namespace Aop.Api.Domain
         public string MybankAppId { get; set; }
 
         /// <summary>
+        /// 外部平台创建交易单的来源，微信小程序场景必填：WX_MINI_PRO
+        /// </summary>
+        [XmlElement("order_source_channel")]
+        public string OrderSourceChannel { get; set; }
+
+        /// <summary>
+        /// 订单数据大字段，用于安全防控
+        /// </summary>
+        [XmlElement("order_sup_info")]
+        public FreightFlowOrderSupInfo OrderSupInfo { get; set; }
+
+        /// <summary>
         /// 网商银行分配的合作方机构号
         /// </summary>
         [XmlElement("partner_id")]
@@ -74,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payee_id")]
         public string PayeeId { get; set; }
+
+        /// <summary>
+        /// 示例内的三个参数必填：appid 和 callbackFn 会跳回到上一个小程序页面。appid 和 path 会跳回到指定地址。
+        /// </summary>
+        [XmlElement("result_callback_url")]
+        public string ResultCallbackUrl { get; set; }
 
         /// <summary>
         /// 订单总金额,单位:分

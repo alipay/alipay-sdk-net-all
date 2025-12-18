@@ -280,6 +280,12 @@ namespace Aop.Api.Response
         public string PreAuthPayAmount { get; set; }
 
         /// <summary>
+        /// 支付宝钱包跨境支付交易的购汇主体，ALIPAYHK-境外香港购汇实体，3008境内购汇实体
+        /// </summary>
+        [XmlElement("purchase_entity")]
+        public string PurchaseEntity { get; set; }
+
+        /// <summary>
         /// 实收金额，单位为元，两位小数。该金额为本笔交易，商户账户能够实际收到的金额
         /// </summary>
         [XmlElement("receipt_amount")]

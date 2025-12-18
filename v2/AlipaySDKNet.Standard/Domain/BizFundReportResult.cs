@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// 2020xxx
+        /// 银行单据号
         /// </summary>
         [XmlElement("instruction_id")]
         public string InstructionId { get; set; }

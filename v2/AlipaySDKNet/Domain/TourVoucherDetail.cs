@@ -11,13 +11,19 @@ namespace Aop.Api.Domain
     public class TourVoucherDetail : AopObject
     {
         /// <summary>
-        /// 游客身份证号。必须与手机号选一必填
+        /// 游客证件号码。一码通场景，凭证状态未使用时，证件号与手机号二选一必填。
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 码信息。 一码通场景使用，碰一下场景可空。 其中seed代表商户码种子；codeToken可从扫码的码协议中获取
+        /// 证件类型，身份证：IDENTITY_CARD。传入时需要传入证件号，不传默认填充身份证。
+        /// </summary>
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
+
+        /// <summary>
+        /// 码信息。 一码通场景必填，碰一下场景可空。 codeToken可从扫码的码协议中获取，且一码通场景该字段必填。
         /// </summary>
         [XmlElement("code_info")]
         public string CodeInfo { get; set; }
@@ -48,13 +54,13 @@ namespace Aop.Api.Domain
         public string OutVercherId { get; set; }
 
         /// <summary>
-        /// 凭证号
+        /// 凭证号，请保证凭证号唯一。
         /// </summary>
         [XmlElement("out_voucher_id")]
         public string OutVoucherId { get; set; }
 
         /// <summary>
-        /// 支付宝景点id。如果是多个景区，则以逗号形式分隔id
+        /// 支付宝景点id。一码通场景必填。如果是多个景区，则以逗号形式分隔id
         /// </summary>
         [XmlElement("scenic_id")]
         public string ScenicId { get; set; }
@@ -72,7 +78,7 @@ namespace Aop.Api.Domain
         public string Status { get; set; }
 
         /// <summary>
-        /// 游客手机号。必须与身份证号选一必填
+        /// 游客手机号。一码通场景，凭证状态未使用时，证件号与手机号二选一必填。
         /// </summary>
         [XmlElement("tele_no")]
         public string TeleNo { get; set; }

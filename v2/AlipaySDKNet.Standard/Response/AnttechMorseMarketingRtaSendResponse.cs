@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public string CampaignId { get; set; }
 
         /// <summary>
+        /// 外部交易号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 发奖权益结果列表
         /// </summary>
         [XmlArray("send_equity_order_list")]

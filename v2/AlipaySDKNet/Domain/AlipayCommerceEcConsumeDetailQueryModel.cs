@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 蚂蚁门店ID，不可单独用于查询条件，需要配合企业ID和交易号使用
+        /// </summary>
+        [XmlElement("ant_shop_id")]
+        public string AntShopId { get; set; }
+
+        /// <summary>
         /// 企业ID
         /// </summary>
         [XmlElement("enterprise_id")]

@@ -10,16 +10,52 @@ namespace Aop.Api.Domain
     public class NDeviceMetricsListForDayResponse : AopObject
     {
         /// <summary>
+        /// 当日小指令是否活跃，示例0-否，1-是，不支持小指令接入
+        /// </summary>
+        [XmlElement("act_instructions_dvc")]
+        public string ActInstructionsDvc { get; set; }
+
+        /// <summary>
+        /// 迈进方案，例如:完成任务得设备,收款送设备 ,售卖（全额付）,服务商免投,先采后返,其他,全额付-299.00元等
+        /// </summary>
+        [XmlElement("advance_plan")]
+        public string AdvancePlan { get; set; }
+
+        /// <summary>
         /// 支付宝金额，单位元
         /// </summary>
         [XmlElement("alipay_amount")]
         public string AlipayAmount { get; set; }
 
         /// <summary>
+        /// 有效支付宝笔数
+        /// </summary>
+        [XmlElement("alipay_amt_2_restrict_2_order_cnt")]
+        public string AlipayAmt2Restrict2OrderCnt { get; set; }
+
+        /// <summary>
         /// 支付宝笔数
         /// </summary>
         [XmlElement("alipay_transaction_count")]
         public long AlipayTransactionCount { get; set; }
+
+        /// <summary>
+        /// 免研小指令是否活跃，true-是，false-否
+        /// </summary>
+        [XmlElement("be_access_my_tiny_cmd_td")]
+        public bool BeAccessMyTinyCmdTd { get; set; }
+
+        /// <summary>
+        /// 是否维保换机, true-是，false-否
+        /// </summary>
+        [XmlElement("be_change_device")]
+        public bool BeChangeDevice { get; set; }
+
+        /// <summary>
+        /// 是否高TPV门店,true-是，false-否
+        /// </summary>
+        [XmlElement("be_high_tpv_shop")]
+        public bool BeHighTpvShop { get; set; }
 
         /// <summary>
         /// 点亮标识
@@ -34,16 +70,40 @@ namespace Aop.Api.Domain
         public bool BeRegister { get; set; }
 
         /// <summary>
+        /// 是否特殊门店，true-是，false-否
+        /// </summary>
+        [XmlElement("be_special_shop")]
+        public bool BeSpecialShop { get; set; }
+
+        /// <summary>
         /// 开机标识
         /// </summary>
         [XmlElement("be_turnon_device")]
         public bool BeTurnonDevice { get; set; }
 
         /// <summary>
+        /// 是否统收，true-是，false-否
+        /// </summary>
+        [XmlElement("be_unified_collect")]
+        public bool BeUnifiedCollect { get; set; }
+
+        /// <summary>
         /// 门店名称
         /// </summary>
         [XmlElement("binding_location")]
         public string BindingLocation { get; set; }
+
+        /// <summary>
+        /// 换机前SN
+        /// </summary>
+        [XmlElement("change_device_sn")]
+        public string ChangeDeviceSn { get; set; }
+
+        /// <summary>
+        /// 换机时间，格式为yyyy-MM-dd HH:mm:ss，精确到秒
+        /// </summary>
+        [XmlElement("change_device_time")]
+        public string ChangeDeviceTime { get; set; }
 
         /// <summary>
         /// 市编码
@@ -58,6 +118,18 @@ namespace Aop.Api.Domain
         public string CityName { get; set; }
 
         /// <summary>
+        /// 最近连续未开机天数
+        /// </summary>
+        [XmlElement("cont_non_turnon_days_mtd")]
+        public string ContNonTurnonDaysMtd { get; set; }
+
+        /// <summary>
+        /// 绑定状态
+        /// </summary>
+        [XmlElement("cur_bind_status")]
+        public string CurBindStatus { get; set; }
+
+        /// <summary>
         /// 设备连接电脑系统类型
         /// </summary>
         [XmlElement("device_system")]
@@ -68,6 +140,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("device_type")]
         public string DeviceType { get; set; }
+
+        /// <summary>
+        /// 数字化门店ID
+        /// </summary>
+        [XmlElement("digital_poi_id")]
+        public string DigitalPoiId { get; set; }
 
         /// <summary>
         /// 区编码
@@ -118,6 +196,12 @@ namespace Aop.Api.Domain
         public bool HasNfcTradeGreater2 { get; set; }
 
         /// <summary>
+        /// 小指令作业时间，格式为yyyy-MM-dd HH:mm:ss.SSS，精确到毫秒
+        /// </summary>
+        [XmlElement("instructions_work_time")]
+        public string InstructionsWorkTime { get; set; }
+
+        /// <summary>
         /// 点亮30天内打卡天数
         /// </summary>
         [XmlElement("last_30_checkin_days")]
@@ -152,6 +236,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("leads_location_address")]
         public string LeadsLocationAddress { get; set; }
+
+        /// <summary>
+        /// leads门店ID
+        /// </summary>
+        [XmlElement("leads_poi_id")]
+        public string LeadsPoiId { get; set; }
 
         /// <summary>
         /// 作业人员uid
@@ -196,6 +286,24 @@ namespace Aop.Api.Domain
         public string NfcAmount { get; set; }
 
         /// <summary>
+        /// 绑定30天内碰动销大于等于2元天数
+        /// </summary>
+        [XmlElement("nfc_amt_2_days_last_bind_30_d")]
+        public string NfcAmt2DaysLastBind30D { get; set; }
+
+        /// <summary>
+        /// 有效碰一下笔数
+        /// </summary>
+        [XmlElement("nfc_amt_2_restrict_2_order_cnt")]
+        public string NfcAmt2Restrict2OrderCnt { get; set; }
+
+        /// <summary>
+        /// 绑定30天内碰交易大于等于2元去重用户数
+        /// </summary>
+        [XmlElement("nfc_amt_2_user_cnt_last_bind_30_d")]
+        public string NfcAmt2UserCntLastBind30D { get; set; }
+
+        /// <summary>
         /// 设备当日至少有一笔碰一下或扫码交易且交易金额大于等于2元，则为是
         /// </summary>
         [XmlElement("nfc_trade_greater_2")]
@@ -212,6 +320,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 门店首次打卡时间
+        /// </summary>
+        [XmlElement("poi_first_sign_time")]
+        public string PoiFirstSignTime { get; set; }
 
         /// <summary>
         /// 省编码
@@ -262,6 +376,18 @@ namespace Aop.Api.Domain
         public string ShippingTime { get; set; }
 
         /// <summary>
+        /// 绑定30天内打卡天数
+        /// </summary>
+        [XmlElement("sign_days_last_bind_30_d")]
+        public string SignDaysLastBind30D { get; set; }
+
+        /// <summary>
+        /// 绑定7天内打卡天数
+        /// </summary>
+        [XmlElement("sign_days_last_bind_7_d")]
+        public string SignDaysLastBind7D { get; set; }
+
+        /// <summary>
         /// 设备sn
         /// </summary>
         [XmlElement("sn")]
@@ -292,6 +418,18 @@ namespace Aop.Api.Domain
         public string TrdAmt2NUserCntFromlight30D { get; set; }
 
         /// <summary>
+        /// 交易大于等于2元用户数
+        /// </summary>
+        [XmlElement("trd_amt_2_user_cnt")]
+        public string TrdAmt2UserCnt { get; set; }
+
+        /// <summary>
+        /// 交易大于等于3元用户数
+        /// </summary>
+        [XmlElement("trd_amt_3_user_cnt")]
+        public string TrdAmt3UserCnt { get; set; }
+
+        /// <summary>
         /// 大于等于2元碰一下交易的用户数，单位为人，日维度去重
         /// </summary>
         [XmlElement("trd_greater_2_nfc_device_usercnt")]
@@ -308,5 +446,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("update_register_time")]
         public string UpdateRegisterTime { get; set; }
+
+        /// <summary>
+        /// 绑定30天内有效开机天数
+        /// </summary>
+        [XmlElement("valid_open_days_last_bind_30_d")]
+        public string ValidOpenDaysLastBind30D { get; set; }
     }
 }

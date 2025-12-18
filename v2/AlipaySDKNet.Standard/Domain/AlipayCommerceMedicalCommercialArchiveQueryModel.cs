@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalCommercialArchiveQueryModel : AopObject
     {
         /// <summary>
+        /// 业务身份
+        /// </summary>
+        [XmlElement("biz_identity")]
+        public string BizIdentity { get; set; }
+
+        /// <summary>
+        /// 会员卡id 当前字段已废弃(会员卡id，参数废弃)
+        /// </summary>
+        [XmlElement("card_id")]
+        public string CardId { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

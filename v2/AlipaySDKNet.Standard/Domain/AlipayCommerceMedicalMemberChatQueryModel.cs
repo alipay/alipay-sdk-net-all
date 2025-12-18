@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 查询医生问诊消息类型
+        /// </summary>
+        [XmlElement("query_type")]
+        public string QueryType { get; set; }
+
+        /// <summary>
         /// 来源类型
         /// </summary>
         [XmlElement("source")]

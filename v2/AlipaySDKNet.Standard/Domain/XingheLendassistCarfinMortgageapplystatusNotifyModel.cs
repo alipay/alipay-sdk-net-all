@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class XingheLendassistCarfinMortgageapplystatusNotifyModel : AopObject
     {
         /// <summary>
+        /// 交科所的抵押订单序号
+        /// </summary>
+        [XmlElement("jksxh")]
+        public string Jksxh { get; set; }
+
+        /// <summary>
         /// 星河侧唯一抵押订单号
         /// </summary>
         [XmlElement("mortgage_no")]
@@ -21,6 +27,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_mortgage_no")]
         public string OutMortgageNo { get; set; }
+
+        /// <summary>
+        /// 提交抵押预受理需要的信息
+        /// </summary>
+        [XmlElement("pre_mortgage_info")]
+        public CarfinPreMortgageInfo PreMortgageInfo { get; set; }
 
         /// <summary>
         /// 代理人不合法的文件列表

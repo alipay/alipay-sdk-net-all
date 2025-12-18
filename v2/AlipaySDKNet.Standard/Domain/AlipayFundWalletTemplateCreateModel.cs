@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }
+
+        /// <summary>
+        /// 商户收费信息列表
+        /// </summary>
+        [XmlArray("charge_info_list")]
+        [XmlArrayItem("wallet_merchant_charge_info")]
+        public List<WalletMerchantChargeInfo> ChargeInfoList { get; set; }
 
         /// <summary>
         /// 商户确认开通场景钱包能力扩展参数
@@ -44,6 +52,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 是否支持商户收费
+        /// </summary>
+        [XmlElement("support_merchant_charge")]
+        public string SupportMerchantCharge { get; set; }
 
         /// <summary>
         /// 是否支持钱包核销规则

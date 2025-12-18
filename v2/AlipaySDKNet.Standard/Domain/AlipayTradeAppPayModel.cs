@@ -84,7 +84,7 @@ namespace Aop.Api.Domain
         public string OutTradeNo { get; set; }
 
         /// <summary>
-        /// 公用回传参数。 如果请求时传递了该参数，支付宝会在异步通知时将该参数原样返回。 本参数必须进行UrlEncode之后才可以发送给支付宝。
+        /// 公用回传参数。如果请求时传递了该参数，则会在支付结果异步通知中将该参数原样返回。本参数必须进行UrlEncode之后才可以发送给支付宝。
         /// </summary>
         [XmlElement("passback_params")]
         public string PassbackParams { get; set; }

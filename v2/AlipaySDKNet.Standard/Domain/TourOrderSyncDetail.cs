@@ -17,10 +17,16 @@ namespace Aop.Api.Domain
         public string BizSourceNum { get; set; }
 
         /// <summary>
-        /// 下单用户身份证号
+        /// 下单用户证件号。碰入园场景下，身份证和手机号二选一必填。
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
+
+        /// <summary>
+        /// 证件类型，身份证：IDENTITY_CARD。传入时需要传入证件号，不传默认填充身份证。
+        /// </summary>
+        [XmlElement("cert_type")]
+        public string CertType { get; set; }
 
         /// <summary>
         /// 下单用户姓名
@@ -53,7 +59,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 项目id，由支付宝分配
+        /// 项目id，由支付宝分配。碰入园场景必填（取值由配置线圈的BD获取），一码通场景无需填写。
         /// </summary>
         [XmlElement("project_id")]
         public string ProjectId { get; set; }
@@ -65,7 +71,7 @@ namespace Aop.Api.Domain
         public string SceneType { get; set; }
 
         /// <summary>
-        /// 下单用户手机号
+        /// 下单用户手机号。碰入园场景下，身份证和手机号二选一必填。
         /// </summary>
         [XmlElement("tele_no")]
         public string TeleNo { get; set; }

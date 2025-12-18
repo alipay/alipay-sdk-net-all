@@ -130,7 +130,7 @@ namespace Aop.Api.Domain
         public SpecifiedChannelParam SpecifiedSortChannelParams { get; set; }
 
         /// <summary>
-        /// 此参数用于传递子商户信息，无特殊需求时不用关注。目前商户代扣、海外代扣、淘旅行信用住产品支持传入该参数（在销售方案中“是否允许自定义子商户信息”需要选是）。
+        /// 此参数用于传递子商户信息，直付通商户二级商户发起签约时必须传入该参数。目前商户代扣、海外代扣、淘旅行信用住产品支持传入该参数（在销售方案中“是否允许自定义子商户信息”需要选是）。
         /// </summary>
         [XmlElement("sub_merchant")]
         public SubMerchantParams SubMerchant { get; set; }

@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class AlipayDataDataserviceAdcampaignPlanBatchqueryModel : AopObject
     {
         /// <summary>
+        /// 计费方式
+        /// </summary>
+        [XmlArray("charge_type_list")]
+        [XmlArrayItem("string")]
+        public List<string> ChargeTypeList { get; set; }
+
+        /// <summary>
         /// 当前页（最小为1）
         /// </summary>
         [XmlElement("current")]

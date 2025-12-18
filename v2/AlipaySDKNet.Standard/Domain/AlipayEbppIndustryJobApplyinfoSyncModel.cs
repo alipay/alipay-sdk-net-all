@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string OutApplyId { get; set; }
 
         /// <summary>
-        /// 服务商侧应聘岗位的唯一标识。请确保已经提前将岗位信息同步给支付宝就业
+        /// 服务商侧应聘岗位的唯一标识。请确保已经提前将岗位信息同步给支付宝就业。（通过安心工作投递的记录，当岗位信息没有同步给支付宝时不填，当岗位同步过支付宝时必填）
         /// </summary>
         [XmlElement("out_job_id")]
         public string OutJobId { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class MultiCurrencyMoneyOpenApi : AopObject
     {
         /// <summary>
-        /// 分
+        /// 表示金额中的分，为该货币的最小单位, 如人民币中的分、美元中的美分, 韩元日元中的元等, 具体换算比例在多币种类MultiCurrencyMoney中有字段digits
         /// </summary>
         [XmlElement("cent")]
         public long Cent { get; set; }

@@ -132,6 +132,12 @@ namespace Aop.Api.Response
         public string PaymentCurrency { get; set; }
 
         /// <summary>
+        /// 批量转账付款资金单id
+        /// </summary>
+        [XmlElement("prepare_fund_order_id")]
+        public string PrepareFundOrderId { get; set; }
+
+        /// <summary>
         /// 业务产品码。不同产品值不同，具体值联系支付宝确认。
         /// </summary>
         [XmlElement("product_code")]

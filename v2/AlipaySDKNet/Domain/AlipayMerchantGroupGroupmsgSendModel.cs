@@ -67,6 +67,12 @@ namespace Aop.Api.Domain
         public string SendTime { get; set; }
 
         /// <summary>
+        /// 消息是否同步群管理员，不传默认false(不需要同步群管理员)
+        /// </summary>
+        [XmlElement("send_to_admin")]
+        public bool SendToAdmin { get; set; }
+
+        /// <summary>
         /// 推送的消息文案标题（参考：好物分享来咯！）
         /// </summary>
         [XmlElement("title")]

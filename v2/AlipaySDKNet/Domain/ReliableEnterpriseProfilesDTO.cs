@@ -62,5 +62,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("tax_no")]
         public string TaxNo { get; set; }
+
+        /// <summary>
+        /// 具体流量内容区分，如推荐码、推荐人、推荐服务商名称等。由渠道侧自定义
+        /// </summary>
+        [XmlElement("utm_content")]
+        public string UtmContent { get; set; }
+
+        /// <summary>
+        /// 渠道侧流量来源，由渠道侧自定义
+        /// </summary>
+        [XmlElement("utm_source")]
+        public string UtmSource { get; set; }
     }
 }

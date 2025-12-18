@@ -28,21 +28,21 @@ namespace Aop.Api.Domain
         public BizOpenCertificateInfoForEntry LegalInfo { get; set; }
 
         /// <summary>
-        /// 法人登录号
-        /// </summary>
-        [XmlElement("legal_person_logon_id")]
-        public string LegalPersonLogonId { get; set; }
-
-        /// <summary>
         /// 主体证照信息
         /// </summary>
         [XmlElement("license_info")]
         public BizOpenCommonMerchantLicenseInfo LicenseInfo { get; set; }
 
         /// <summary>
-        /// 01普通企业  07个体工商户
+        /// 商户类型
         /// </summary>
         [XmlElement("merchant_type")]
         public string MerchantType { get; set; }
+
+        /// <summary>
+        /// 用于接收入驻待办通知的经办人支付宝登录账号
+        /// </summary>
+        [XmlElement("operator_login_id")]
+        public string OperatorLoginId { get; set; }
     }
 }

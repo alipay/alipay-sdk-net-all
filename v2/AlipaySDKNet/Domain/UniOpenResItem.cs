@@ -12,6 +12,12 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 开通项结果详情
         /// </summary>
+        [XmlElement("detail_info")]
+        public string DetailInfo { get; set; }
+
+        /// <summary>
+        /// 开通项结果详情（废弃）
+        /// </summary>
         [XmlElement("detail_infos")]
         public UniOpenResItemDetailInfos DetailInfos { get; set; }
 

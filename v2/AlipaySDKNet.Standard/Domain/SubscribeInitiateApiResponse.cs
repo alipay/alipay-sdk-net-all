@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class SubscribeInitiateApiResponse : AopObject
     {
         /// <summary>
+        /// 订阅链接对应二维码图片链接
+        /// </summary>
+        [XmlElement("qr_code_image_url")]
+        public string QrCodeImageUrl { get; set; }
+
+        /// <summary>
         /// 订阅付费凭证
         /// </summary>
         [XmlElement("subscribe_token")]

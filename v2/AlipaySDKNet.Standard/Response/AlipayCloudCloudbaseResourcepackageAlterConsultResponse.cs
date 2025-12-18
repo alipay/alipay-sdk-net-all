@@ -21,7 +21,19 @@ namespace Aop.Api.Response
         public string Currency { get; set; }
 
         /// <summary>
-        /// 支付方向  - RECEIVABLE  - REFUNDABLE  - CURR_SPEC_HAS_PAY  - WAIT_DOWN_STARTED  - CURR_SPEC_CANT_DOWN
+        /// 支付方向  - RECEIVABLE(应收) - REFUNDABLE(应退) - CURR_SPEC_HAS_PAY(当前规格已购) - WAIT_DOWN_STARTED(降配待生效) - CURR_SPEC_CANT_DOWN(当前规格无法降配,剩余生效周期不足一个月)
+        /// </summary>
+        [XmlElement("original_payment_direction")]
+        public string OriginalPaymentDirection { get; set; }
+
+        /// <summary>
+        /// 原价差额(分)
+        /// </summary>
+        [XmlElement("original_total_amount")]
+        public string OriginalTotalAmount { get; set; }
+
+        /// <summary>
+        /// 支付方向  - RECEIVABLE  - REFUNDABLE  - CURR_SPEC_HAS_PAY  - WAIT_DOWN_STARTED  - CURR_SPEC_CANT_DOWN  - INSTANCE_IS_BEING_AMORTIZED
         /// </summary>
         [XmlElement("payment_direction")]
         public string PaymentDirection { get; set; }

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizTime { get; set; }
 
         /// <summary>
+        /// 退款流水号标识一次退款请求。
+        /// </summary>
+        [XmlElement("out_order_no")]
+        public string OutOrderNo { get; set; }
+
+        /// <summary>
         /// 退款面额，单位：分
         /// </summary>
         [XmlElement("refund_amount")]

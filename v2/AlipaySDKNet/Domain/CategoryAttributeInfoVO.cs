@@ -66,6 +66,18 @@ namespace Aop.Api.Domain
         public string Decided { get; set; }
 
         /// <summary>
+        /// 属性的业务特征信息
+        /// </summary>
+        [XmlElement("feature_info")]
+        public FeatureMapVO FeatureInfo { get; set; }
+
+        /// <summary>
+        /// 度量衡信息，仅度量衡属性返回
+        /// </summary>
+        [XmlElement("measure_info")]
+        public MeasureInfoVO MeasureInfo { get; set; }
+
+        /// <summary>
         /// 提报商品时该属性是否支持多选
         /// </summary>
         [XmlElement("multi_select")]

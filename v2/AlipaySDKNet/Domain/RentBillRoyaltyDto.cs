@@ -10,6 +10,24 @@ namespace Aop.Api.Domain
     public class RentBillRoyaltyDto : AopObject
     {
         /// <summary>
+        /// 实际分账买断金利息，单位元
+        /// </summary>
+        [XmlElement("actual_royalty_buyout_interest_price")]
+        public string ActualRoyaltyBuyoutInterestPrice { get; set; }
+
+        /// <summary>
+        /// 实际分账买断金，单位元
+        /// </summary>
+        [XmlElement("actual_royalty_buyout_price")]
+        public string ActualRoyaltyBuyoutPrice { get; set; }
+
+        /// <summary>
+        /// 实际分账买断金本金，单位元
+        /// </summary>
+        [XmlElement("actual_royalty_buyout_principal_price")]
+        public string ActualRoyaltyBuyoutPrincipalPrice { get; set; }
+
+        /// <summary>
         /// 分账利息，单位元
         /// </summary>
         [XmlElement("actual_royalty_interest_price")]
@@ -26,6 +44,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("actual_royalty_principal_price")]
         public string ActualRoyaltyPrincipalPrice { get; set; }
+
+        /// <summary>
+        /// 实际分账租金利息，单位元
+        /// </summary>
+        [XmlElement("actual_royalty_rent_interest_price")]
+        public string ActualRoyaltyRentInterestPrice { get; set; }
+
+        /// <summary>
+        /// 实际分账租金，单位元
+        /// </summary>
+        [XmlElement("actual_royalty_rent_price")]
+        public string ActualRoyaltyRentPrice { get; set; }
+
+        /// <summary>
+        /// 实际分账租金本金，单位元
+        /// </summary>
+        [XmlElement("actual_royalty_rent_principal_price")]
+        public string ActualRoyaltyRentPrincipalPrice { get; set; }
 
         /// <summary>
         /// 当前期数对应的阶梯买断分账金，单位元

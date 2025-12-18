@@ -62,5 +62,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("remaining_distance_km")]
         public string RemainingDistanceKm { get; set; }
+
+        /// <summary>
+        /// 门店纬度
+        /// </summary>
+        [XmlElement("shop_latitude")]
+        public string ShopLatitude { get; set; }
+
+        /// <summary>
+        /// 门店经度
+        /// </summary>
+        [XmlElement("shop_longitude")]
+        public string ShopLongitude { get; set; }
     }
 }

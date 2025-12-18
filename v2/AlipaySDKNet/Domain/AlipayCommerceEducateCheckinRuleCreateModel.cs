@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string AuthenticationType { get; set; }
 
         /// <summary>
+        /// 作弊软件校验开关
+        /// </summary>
+        [XmlElement("cheat_check")]
+        public bool CheatCheck { get; set; }
+
+        /// <summary>
         /// 课程签到类型相关参数，签退结束分钟
         /// </summary>
         [XmlElement("check_out_end_minutes")]

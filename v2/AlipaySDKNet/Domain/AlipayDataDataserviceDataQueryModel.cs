@@ -53,7 +53,7 @@ namespace Aop.Api.Domain
         public string Seats { get; set; }
 
         /// <summary>
-        /// 注意事项
+        /// 注意事项-修改
         /// </summary>
         [XmlArray("test_g_one")]
         [XmlArrayItem("string")]

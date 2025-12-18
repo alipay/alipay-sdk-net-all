@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OutDoctorId { get; set; }
 
         /// <summary>
+        /// 提供方ID
+        /// </summary>
+        [XmlElement("provider_id")]
+        public string ProviderId { get; set; }
+
+        /// <summary>
         /// 角色类型：医生、医助
         /// </summary>
         [XmlElement("provider_type")]

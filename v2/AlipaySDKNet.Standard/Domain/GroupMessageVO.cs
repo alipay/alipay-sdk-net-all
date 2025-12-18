@@ -40,10 +40,16 @@ namespace Aop.Api.Domain
         public LinkMsgVO LinkMsgContent { get; set; }
 
         /// <summary>
-        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"，商品消息:"GOODS"，图文消息:"IMAGE_TEXT"。
+        /// 群消息类型枚举，小程序消息:"APP"，图片消息:"IMAGE"，链接消息:"LINK"，纯文本消息:"TEXT"，优惠券消息:"COUPON"，商品消息:"GOODS"，图文消息:"IMAGE_TEXT"，红包消息："RED_PACKET"。
         /// </summary>
         [XmlElement("msg_type")]
         public string MsgType { get; set; }
+
+        /// <summary>
+        /// 红包消息内容模型，当消息类型(msg_type)选 "RED_PACKET" 的时候，这个内容必须得填充
+        /// </summary>
+        [XmlElement("red_packet_msg_content")]
+        public RedPacketMsgVO RedPacketMsgContent { get; set; }
 
         /// <summary>
         /// 纯文本消息内容模型，当消息类型(msg_type)选 "TEXT" 的时候，这个内容必须得填充

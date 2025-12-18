@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string Avatar { get; set; }
 
         /// <summary>
+        /// 医生接诊状态
+        /// </summary>
+        [XmlElement("doctor_inquiry_status")]
+        public string DoctorInquiryStatus { get; set; }
+
+        /// <summary>
         /// 用户没有查看到的医生消息
         /// </summary>
         [XmlElement("doctor_message")]
@@ -25,6 +31,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("doctor_url")]
         public string DoctorUrl { get; set; }
+
+        /// <summary>
+        /// 意图来源
+        /// </summary>
+        [XmlElement("intention_source")]
+        public string IntentionSource { get; set; }
 
         /// <summary>
         /// 健康师的昵称

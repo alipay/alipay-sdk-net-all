@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceEcApprovalQueryModel : AopObject
     {
         /// <summary>
-        /// 审批单唯一ID，用于唯一标识一条审批单记录
+        /// 企业码申请单单唯一ID
         /// </summary>
         [XmlElement("approval_id")]
         public string ApprovalId { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 外部平台审批单id
+        /// 外部平台申请单id
         /// </summary>
         [XmlElement("platform_approval_id")]
         public string PlatformApprovalId { get; set; }

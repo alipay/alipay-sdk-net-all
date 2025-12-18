@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public string AlipayOrderId { get; set; }
 
         /// <summary>
+        /// 权益到账的用户id
+        /// </summary>
+        [XmlElement("alipay_user_id")]
+        public string AlipayUserId { get; set; }
+
+        /// <summary>
         /// 该订单已产生的业务消息
         /// </summary>
         [XmlArray("biz_order_message_list")]
@@ -34,6 +40,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("inst_order_id")]
         public string InstOrderId { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
 
         /// <summary>
         /// 订单状态

@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string SpuId { get; set; }
 
         /// <summary>
+        /// 直降金额，单位 元
+        /// </summary>
+        [XmlElement("total_bonus")]
+        public string TotalBonus { get; set; }
+
+        /// <summary>
         /// 用户姓名
         /// </summary>
         [XmlElement("user_name")]

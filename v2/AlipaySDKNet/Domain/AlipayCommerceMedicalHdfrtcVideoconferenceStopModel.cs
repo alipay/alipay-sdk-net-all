@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalHdfrtcVideoconferenceStopModel : AopObject
     {
         /// <summary>
+        /// 手机型号
+        /// </summary>
+        [XmlElement("device_model")]
+        public string DeviceModel { get; set; }
+
+        /// <summary>
+        /// 设备来源
+        /// </summary>
+        [XmlElement("device_source")]
+        public string DeviceSource { get; set; }
+
+        /// <summary>
         /// 视频结束类型 (ManualEnd:手动结束 TimeoutEnd:超时结束)
         /// </summary>
         [XmlElement("end_type")]

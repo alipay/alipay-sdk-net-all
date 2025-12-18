@@ -19,9 +19,22 @@ namespace Aop.Api.Response
         /// <summary>
         /// null
         /// </summary>
+        [XmlArray("category_id_list")]
+        [XmlArrayItem("number")]
+        public List<long> CategoryIdList { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
         [XmlArray("certificate_code_list")]
         [XmlArrayItem("string")]
         public List<string> CertificateCodeList { get; set; }
+
+        /// <summary>
+        /// 是否认证课程，默认true
+        /// </summary>
+        [XmlElement("certification_course")]
+        public bool CertificationCourse { get; set; }
 
         /// <summary>
         /// null
@@ -31,7 +44,7 @@ namespace Aop.Api.Response
         public List<string> CityCodeList { get; set; }
 
         /// <summary>
-        /// 课程封面视频 生活号视频id,非URL。获取方式见：<a href="https://adccloud.yuque.com/adccloud/abilitywarehouse/cggokr7us69cxxo8?singleDoc#" target="_blank">链接</a>
+        /// 课程封面视频 生活号视频id,非URL。
         /// </summary>
         [XmlElement("course_cover_video")]
         public string CourseCoverVideo { get; set; }
@@ -110,6 +123,12 @@ namespace Aop.Api.Response
         [XmlArray("details_image_list")]
         [XmlArrayItem("string")]
         public List<string> DetailsImageList { get; set; }
+
+        /// <summary>
+        /// 是否试听，默认false
+        /// </summary>
+        [XmlElement("has_trial")]
+        public bool HasTrial { get; set; }
 
         /// <summary>
         /// null

@@ -58,6 +58,24 @@ namespace Aop.Api.Domain
         public string LastBindMerchantId { get; set; }
 
         /// <summary>
+        /// 市名
+        /// </summary>
+        [XmlElement("merchant_city_name")]
+        public string MerchantCityName { get; set; }
+
+        /// <summary>
+        /// 地区名
+        /// </summary>
+        [XmlElement("merchant_district_name")]
+        public string MerchantDistrictName { get; set; }
+
+        /// <summary>
+        /// 省名
+        /// </summary>
+        [XmlElement("merchant_province_name")]
+        public string MerchantProvinceName { get; set; }
+
+        /// <summary>
         /// 当月营销播报次数
         /// </summary>
         [XmlElement("monthly_marketing_count")]
@@ -74,6 +92,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("monthly_tx_count_above_2")]
         public long MonthlyTxCountAbove2 { get; set; }
+
+        /// <summary>
+        /// 支付宝笔数且当月碰笔数是否达标
+        /// </summary>
+        [XmlElement("pay_count_and_current_month_n_pay_count_standard")]
+        public string PayCountAndCurrentMonthNPayCountStandard { get; set; }
+
+        /// <summary>
+        /// 支付宝笔数且次月碰笔数是否达标
+        /// </summary>
+        [XmlElement("pay_count_and_next_month_n_pay_count_standard")]
+        public string PayCountAndNextMonthNPayCountStandard { get; set; }
+
+        /// <summary>
+        /// 支付宝笔数是否达标
+        /// </summary>
+        [XmlElement("pay_count_standard")]
+        public string PayCountStandard { get; set; }
 
         /// <summary>
         /// 设备外部补充ID

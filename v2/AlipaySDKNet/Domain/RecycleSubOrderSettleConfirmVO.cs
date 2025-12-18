@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string SubOrderId { get; set; }
 
         /// <summary>
+        /// 子单质检金额，币种：人民币，单位：元
+        /// </summary>
+        [XmlElement("sub_order_inspect_price")]
+        public string SubOrderInspectPrice { get; set; }
+
+        /// <summary>
         /// 商家的子单号
         /// </summary>
         [XmlElement("sub_out_order_id")]

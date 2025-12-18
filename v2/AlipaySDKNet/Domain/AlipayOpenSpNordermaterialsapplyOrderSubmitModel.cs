@@ -14,5 +14,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("apply_id")]
         public string ApplyId { get; set; }
+
+        /// <summary>
+        /// 组合单号，基于此单号创建的所有申请单都在一个组合单下，可以统一提交。 与apply_id参数必传一个
+        /// </summary>
+        [XmlElement("combined_order_no")]
+        public string CombinedOrderNo { get; set; }
     }
 }

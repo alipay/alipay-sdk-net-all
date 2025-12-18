@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string EnterpriseId { get; set; }
 
         /// <summary>
-        /// 外部平台审批单id
+        /// 外部平台申请单id
         /// </summary>
         [XmlElement("platform_approval_id")]
         public string PlatformApprovalId { get; set; }

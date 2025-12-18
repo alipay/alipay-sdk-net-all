@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public List<RentPayItemDTO> PayItems { get; set; }
 
         /// <summary>
+        /// 支付时间，特指主动同步、非支付宝渠道下可以传入用户支付完成的时间
+        /// </summary>
+        [XmlElement("pay_time")]
+        public string PayTime { get; set; }
+
+        /// <summary>
         /// 对应支付渠道的支付单号，ALIPAY时必传
         /// </summary>
         [XmlElement("trade_no")]

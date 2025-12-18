@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AlipayOrderId { get; set; }
 
         /// <summary>
+        /// 渠道编码
+        /// </summary>
+        [XmlElement("channel_code")]
+        public string ChannelCode { get; set; }
+
+        /// <summary>
         /// 消息内容：文本-内容、图片-url、语音-url、视频-url、定制卡片
         /// </summary>
         [XmlElement("content")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_user_id")]
         public string MerchantUserId { get; set; }
+
+        /// <summary>
+        /// 消息发送时间戳
+        /// </summary>
+        [XmlElement("msg_time")]
+        public long MsgTime { get; set; }
 
         /// <summary>
         /// 消息类型
@@ -68,6 +80,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("provider_type")]
         public string ProviderType { get; set; }
+
+        /// <summary>
+        /// 场景编码
+        /// </summary>
+        [XmlElement("scene_code")]
+        public string SceneCode { get; set; }
 
         /// <summary>
         /// 服务提供者:医生/医助姓名

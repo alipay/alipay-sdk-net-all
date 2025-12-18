@@ -152,7 +152,7 @@ namespace Aop.Api.Domain
         public string SaleStatus { get; set; }
 
         /// <summary>
-        /// 商品销量信息，realSells为商品真实销量，customerSells为商品用户自填销量，displaySells为商品展示销量
+        /// 商品销量信息，realSells为商品真实销量，customerSells为商品用户自填销量，displaySells为商品展示销量，virtualSellsRange为虚拟销量范围。
         /// </summary>
         [XmlElement("sells_info")]
         public SellsInfo SellsInfo { get; set; }

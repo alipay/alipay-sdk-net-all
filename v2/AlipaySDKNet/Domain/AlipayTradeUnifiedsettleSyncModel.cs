@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayTradeUnifiedsettleSyncModel : AopObject
     {
         /// <summary>
-        /// 收单模式，目前仅支持PLATFORM_BUSINESS
+        /// 收单模式，譬如 PLATFORM_BUSINESS/DANBAO
         /// </summary>
         [XmlElement("acquire_mode")]
         public string AcquireMode { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
-        /// 用于标识收结易的业务模式，不传为默认模式
+        /// 用于标识收结易的业务模式，不传为默认模式，可选RECHARGE_SINGLE、REFUND_SINGLE 等
         /// </summary>
         [XmlElement("biz_scene")]
         public string BizScene { get; set; }

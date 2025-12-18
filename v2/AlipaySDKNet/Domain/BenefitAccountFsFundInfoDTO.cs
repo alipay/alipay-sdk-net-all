@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string FundUserId { get; set; }
 
         /// <summary>
+        /// 出资方指定的回收账号信息
+        /// </summary>
+        [XmlElement("recycle_info")]
+        public BenefitAccountRecycleInfoDTO RecycleInfo { get; set; }
+
+        /// <summary>
         /// 还款账号信息
         /// </summary>
         [XmlElement("repay_bank_info")]

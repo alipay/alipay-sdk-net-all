@@ -127,6 +127,12 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
+        /// 对应的原始扣款单
+        /// </summary>
+        [XmlElement("original_deduction_order_id")]
+        public string OriginalDeductionOrderId { get; set; }
+
+        /// <summary>
         /// 支付交易流水号
         /// </summary>
         [XmlElement("payment_no")]

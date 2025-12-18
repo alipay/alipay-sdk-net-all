@@ -52,6 +52,24 @@ namespace Aop.Api.Domain
         public string CensorInfo { get; set; }
 
         /// <summary>
+        /// 充值协议协议code,订单状态为审核通过、激活时回传
+        /// </summary>
+        [XmlElement("charge_agreement_code")]
+        public string ChargeAgreementCode { get; set; }
+
+        /// <summary>
+        /// 在储值卡场景下,充值协议id,订单状态为审核通过、激活时回传
+        /// </summary>
+        [XmlElement("charge_agreement_no")]
+        public string ChargeAgreementNo { get; set; }
+
+        /// <summary>
+        /// 充值协议签约pid,订单状态为审核通过、激活时回传
+        /// </summary>
+        [XmlElement("charge_agreement_pid")]
+        public string ChargeAgreementPid { get; set; }
+
+        /// <summary>
         /// 企业订单对应支付宝企业id，当order_type为ALIPAY_CORP时必选
         /// </summary>
         [XmlElement("corp_id")]
@@ -128,6 +146,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("plate_no")]
         public string PlateNo { get; set; }
+
+        /// <summary>
+        /// 在储值卡场景下,通行费代扣协议场景码,审核通过节点必须回传,仅第一次审核通过接收.
+        /// </summary>
+        [XmlElement("trip_pay_agreement_code")]
+        public string TripPayAgreementCode { get; set; }
+
+        /// <summary>
+        /// 在储值卡场景下,通行费代扣协议id,审核通过时必须回传.
+        /// </summary>
+        [XmlElement("trip_pay_agreement_no")]
+        public string TripPayAgreementNo { get; set; }
+
+        /// <summary>
+        /// 在储值卡场景下,通行费代扣协议签约pid,订单状体为审核通过时必须回传
+        /// </summary>
+        [XmlElement("trip_pay_agreement_pid")]
+        public string TripPayAgreementPid { get; set; }
 
         /// <summary>
         /// 蚂蚁统一会员ID，当order_type非ALIPAY_CORP时必选

@@ -17,6 +17,13 @@ namespace Aop.Api.Response
         public RentRiskProVO ComprehensiveRiskModels { get; set; }
 
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("consult_fail_reason")]
+        [XmlArrayItem("consult_fail_reason")]
+        public List<ConsultFailReason> ConsultFailReason { get; set; }
+
+        /// <summary>
         /// Boolean类型结果，true-命中极低风险 false-未命中极低风险
         /// </summary>
         [XmlElement("extremely_low_risk_models")]
@@ -33,6 +40,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("product_edition")]
         public string ProductEdition { get; set; }
+
+        /// <summary>
+        /// 风控基础信息
+        /// </summary>
+        [XmlElement("risk_basic_info")]
+        public RiskBasicInfoVO RiskBasicInfo { get; set; }
 
         /// <summary>
         /// null

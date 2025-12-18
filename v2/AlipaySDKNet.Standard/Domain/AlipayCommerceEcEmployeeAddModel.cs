@@ -97,7 +97,7 @@ namespace Aop.Api.Domain
         public string Identity { get; set; }
 
         /// <summary>
-        /// 当身份类型为支付宝会员ID(identity_type=ALIPAY_USER_ID)时，传入user_id对应的open_id
+        /// 当身份类型为支付宝用户ID(identity_type=ALIPAY_USER_ID)时，传入user_id对应的open_id
         /// </summary>
         [XmlElement("identity_open_id")]
         public string IdentityOpenId { get; set; }

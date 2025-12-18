@@ -16,6 +16,12 @@ namespace Aop.Api.Response
         public string Asset { get; set; }
 
         /// <summary>
+        /// 在配置阈值时，返回是否超过阈值，和小荷包id
+        /// </summary>
+        [XmlElement("asset_info")]
+        public string AssetInfo { get; set; }
+
+        /// <summary>
         /// 业务场景类型标识
         /// </summary>
         [XmlElement("biz_code")]

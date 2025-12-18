@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("memo")]
         public string Memo { get; set; }
+
+        /// <summary>
+        /// 一体化作业商户门店信息
+        /// </summary>
+        [XmlArray("shop_infos")]
+        [XmlArrayItem("inte_op_shop_info_v_o")]
+        public List<InteOpShopInfoVO> ShopInfos { get; set; }
 
         /// <summary>
         /// 一体化作业子项单号

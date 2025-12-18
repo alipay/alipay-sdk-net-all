@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRentOrderRentplaninfoAppendModel : AopObject
     {
         /// <summary>
+        /// 取消续租信息
+        /// </summary>
+        [XmlElement("cancel_info")]
+        public RentPlanCancelInfo CancelInfo { get; set; }
+
+        /// <summary>
         /// 租金分期计划
         /// </summary>
         [XmlArray("installments")]
@@ -40,6 +46,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("rent_end_time")]
         public string RentEndTime { get; set; }
+
+        /// <summary>
+        /// 用于区分追加或者取消追加租赁计划的能力
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
 
         /// <summary>
         /// 支付宝用户的userId。

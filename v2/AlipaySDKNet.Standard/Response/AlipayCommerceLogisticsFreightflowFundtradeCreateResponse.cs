@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 可参照线下提供的文档进行解析
+        /// </summary>
+        [XmlElement("channel_pay_info")]
+        public string ChannelPayInfo { get; set; }
+
+        /// <summary>
         /// 订单支付URL,平台可据此生成二维码(Base64格式，使用前先解码)
         /// </summary>
         [XmlElement("order_pay_url")]
