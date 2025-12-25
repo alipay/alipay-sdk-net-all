@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalInsuranceClaimreportModifyModel : AopObject
     {
         /// <summary>
+        /// 账号信息
+        /// </summary>
+        [XmlElement("account_info")]
+        public PolicyAccountInfoModel AccountInfo { get; set; }
+
+        /// <summary>
         /// 保司理赔申请号
         /// </summary>
         [XmlElement("apply_no")]
@@ -29,6 +35,12 @@ namespace Aop.Api.Domain
         public bool CaseReopened { get; set; }
 
         /// <summary>
+        /// 理赔撤销状态下，结算数据是否允许重新提交
+        /// </summary>
+        [XmlElement("case_setl_reapply")]
+        public bool CaseSetlReapply { get; set; }
+
+        /// <summary>
         /// 证件号
         /// </summary>
         [XmlElement("cert_no")]
@@ -41,10 +53,23 @@ namespace Aop.Api.Domain
         public string CertType { get; set; }
 
         /// <summary>
+        /// 理赔详情结构化数据字符串，用于支付宝商保码前端用户展示
+        /// </summary>
+        [XmlElement("claim_detail")]
+        public string ClaimDetail { get; set; }
+
+        /// <summary>
         /// claim_no 保司报案号
         /// </summary>
         [XmlElement("claim_no")]
         public string ClaimNo { get; set; }
+
+        /// <summary>
+        /// 理赔关联保单号列表
+        /// </summary>
+        [XmlArray("claim_rel_policy_no_list")]
+        [XmlArrayItem("string")]
+        public List<string> ClaimRelPolicyNoList { get; set; }
 
         /// <summary>
         /// 报案号
@@ -84,6 +109,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 理赔通知书获取类型
+        /// </summary>
+        [XmlElement("note_type")]
+        public string NoteType { get; set; }
+
+        /// <summary>
         /// 理赔通知书
         /// </summary>
         [XmlElement("note_url")]
@@ -121,7 +152,7 @@ namespace Aop.Api.Domain
         public string Source { get; set; }
 
         /// <summary>
-        /// 理赔总金额
+        /// 理赔总金额，单位：元
         /// </summary>
         [XmlElement("total_claim_amount")]
         public string TotalClaimAmount { get; set; }

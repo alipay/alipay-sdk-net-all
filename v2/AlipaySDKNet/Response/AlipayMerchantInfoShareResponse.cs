@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string Area { get; set; }
 
         /// <summary>
+        /// 营业执照链接
+        /// </summary>
+        [XmlElement("business_license_url")]
+        public string BusinessLicenseUrl { get; set; }
+
+        /// <summary>
         /// 经营范围，partner_type非个人时存在
         /// </summary>
         [XmlElement("business_scope")]
@@ -61,6 +67,24 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("is_certified")]
         public bool IsCertified { get; set; }
+
+        /// <summary>
+        /// 法人身份证件号码，和 legal_person_cert_type 组合使用
+        /// </summary>
+        [XmlElement("legal_person_cert_no")]
+        public string LegalPersonCertNo { get; set; }
+
+        /// <summary>
+        /// 法人身份证件类型
+        /// </summary>
+        [XmlElement("legal_person_cert_type")]
+        public string LegalPersonCertType { get; set; }
+
+        /// <summary>
+        /// yyyyMMdd或者"长期"
+        /// </summary>
+        [XmlElement("legal_person_expire_date")]
+        public string LegalPersonExpireDate { get; set; }
 
         /// <summary>
         /// 个人无，单位为证件上登记的法定代表人/负责人姓名

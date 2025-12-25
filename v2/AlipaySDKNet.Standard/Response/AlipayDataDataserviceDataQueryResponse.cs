@@ -8,10 +8,5 @@ namespace Aop.Api.Response
     /// </summary>
     public class AlipayDataDataserviceDataQueryResponse : AopResponse
     {
-        /// <summary>
-        /// 11
-        /// </summary>
-        [XmlElement("amount")]
-        public long Amount { get; set; }
     }
 }

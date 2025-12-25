@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string BusinessKey { get; set; }
 
         /// <summary>
+        /// 手机号，可密文
+        /// </summary>
+        [XmlElement("cell")]
+        public string Cell { get; set; }
+
+        /// <summary>
+        /// 姓名，可密文
+        /// </summary>
+        [XmlElement("name")]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 产品码
         /// </summary>
         [XmlElement("product_code")]

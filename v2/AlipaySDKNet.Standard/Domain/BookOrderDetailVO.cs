@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class BookOrderDetailVO : AopObject
     {
         /// <summary>
+        /// 订单扩展信息
+        /// </summary>
+        [XmlElement("attr_info")]
+        public BooKAttributesDTO AttrInfo { get; set; }
+
+        /// <summary>
         /// 预约信息
         /// </summary>
         [XmlArray("book_infos")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OrderCode { get; set; }
 
         /// <summary>
+        /// 订单总金额，单位：元
+        /// </summary>
+        [XmlElement("order_price")]
+        public string OrderPrice { get; set; }
+
+        /// <summary>
         /// 履约方的支付状态
         /// </summary>
         [XmlElement("pay_status")]
@@ -38,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reserve_status")]
         public long ReserveStatus { get; set; }
+
+        /// <summary>
+        /// 用户预约的检验检查时间
+        /// </summary>
+        [XmlElement("reserve_time")]
+        public string ReserveTime { get; set; }
 
         /// <summary>
         /// 好大夫侧的单号

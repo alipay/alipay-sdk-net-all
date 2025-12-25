@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class SeltInfoList : AopObject
     {
         /// <summary>
-        /// 商保码理赔?额 单位：元 保留俩位?数
+        /// 商保码理赔金额 单位：元 保留俩位小数
         /// </summary>
         [XmlElement("advance_pay")]
         public string AdvancePay { get; set; }
 
         /// <summary>
-        /// 报销金额
+        /// 报销金额 单位：元 保留俩位小数
         /// </summary>
         [XmlElement("claim_amount")]
         public string ClaimAmount { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string FundOpstOrgNm { get; set; }
 
         /// <summary>
-        /// 个?理赔?额 单位：元 保留俩位?数
+        /// 个人理赔金额 单位：元 保留俩位小数
         /// </summary>
         [XmlElement("personal_pay")]
         public string PersonalPay { get; set; }

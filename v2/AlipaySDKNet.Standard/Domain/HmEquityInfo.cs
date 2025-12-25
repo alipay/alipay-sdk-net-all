@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string EquityName { get; set; }
 
         /// <summary>
+        /// 权益包编码
+        /// </summary>
+        [XmlElement("equity_package_code")]
+        public string EquityPackageCode { get; set; }
+
+        /// <summary>
         /// 权益的计费类型
         /// </summary>
         [XmlElement("equity_type")]
@@ -50,5 +56,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("valid_date")]
         public string ValidDate { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("valid_date_end")]
+        public string ValidDateEnd { get; set; }
+
+        /// <summary>
+        /// 有效期开始时间（yyyy-MM-dd HH:mm:ss）
+        /// </summary>
+        [XmlElement("valid_date_start")]
+        public string ValidDateStart { get; set; }
     }
 }

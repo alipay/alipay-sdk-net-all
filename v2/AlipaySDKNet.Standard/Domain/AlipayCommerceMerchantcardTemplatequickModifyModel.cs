@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OnlineSaleSwitch { get; set; }
 
         /// <summary>
+        /// 该字段作用于阵地页线上商城展示
+        /// </summary>
+        [XmlElement("online_show_switch")]
+        public string OnlineShowSwitch { get; set; }
+
+        /// <summary>
         /// 售卖信息
         /// </summary>
         [XmlElement("sale_info")]

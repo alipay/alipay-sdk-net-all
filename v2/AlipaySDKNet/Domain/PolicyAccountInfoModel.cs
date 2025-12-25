@@ -22,10 +22,34 @@ namespace Aop.Api.Domain
         public string AlipayAccount { get; set; }
 
         /// <summary>
+        /// 开户行所在市
+        /// </summary>
+        [XmlElement("bank_account_city")]
+        public string BankAccountCity { get; set; }
+
+        /// <summary>
+        /// 开户行所在市编码
+        /// </summary>
+        [XmlElement("bank_account_city_id")]
+        public string BankAccountCityId { get; set; }
+
+        /// <summary>
         /// 银行卡账户名
         /// </summary>
         [XmlElement("bank_account_name")]
         public string BankAccountName { get; set; }
+
+        /// <summary>
+        /// 开户行所在省
+        /// </summary>
+        [XmlElement("bank_account_province")]
+        public string BankAccountProvince { get; set; }
+
+        /// <summary>
+        /// 开户行所在省编码
+        /// </summary>
+        [XmlElement("bank_account_province_id")]
+        public string BankAccountProvinceId { get; set; }
 
         /// <summary>
         /// 账户类型是bankcard时，取此字段。所属银行
@@ -38,5 +62,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bank_card_account")]
         public string BankCardAccount { get; set; }
+
+        /// <summary>
+        /// 开户银行对应机构编码
+        /// </summary>
+        [XmlElement("bank_inst_code")]
+        public string BankInstCode { get; set; }
+
+        /// <summary>
+        /// 开户银行
+        /// </summary>
+        [XmlElement("bank_name")]
+        public string BankName { get; set; }
     }
 }

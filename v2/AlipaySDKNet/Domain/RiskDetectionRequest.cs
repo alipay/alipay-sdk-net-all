@@ -55,6 +55,13 @@ namespace Aop.Api.Domain
         public List<RiskDetectionMap> RiskDetectionParameters { get; set; }
 
         /// <summary>
+        /// 允许指定风险点进行检测，可支持输入多个，不输入的情况下默认检测该阶段下所有的风险点
+        /// </summary>
+        [XmlArray("risk_point_codes")]
+        [XmlArrayItem("string")]
+        public List<string> RiskPointCodes { get; set; }
+
+        /// <summary>
         /// 二级业务环节枚举 BILL_INVOICE_CORRELATION-VPC老账票关联 PAYMENT_RECEIPT_CREATE-VPC老付款单创建 INVOICE_RELATE-VPC新账票关联 PAYMENT_APPLY-VPC新付款单创建 PAYMENT_SUBMIT-VPC新付款单提交
         /// </summary>
         [XmlElement("second_level_business_link")]

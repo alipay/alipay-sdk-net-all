@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_no")]
         public string ServiceNo { get; set; }
+
+        /// <summary>
+        /// 当前租赁服务是否有效
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
     }
 }

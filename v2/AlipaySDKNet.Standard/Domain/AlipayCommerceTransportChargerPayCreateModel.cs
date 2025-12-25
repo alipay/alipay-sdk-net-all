@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string ServiceMoney { get; set; }
 
         /// <summary>
-        /// 电池剩余电量，两位小数；当订单类型为即插即充时，必传
+        /// 电池剩余电量，两位小数，单位为%；当订单类型为即插即充时，必传
         /// </summary>
         [XmlElement("soc")]
         public string Soc { get; set; }

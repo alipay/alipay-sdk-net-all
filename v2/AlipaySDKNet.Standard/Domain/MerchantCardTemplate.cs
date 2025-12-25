@@ -119,10 +119,16 @@ namespace Aop.Api.Domain
         public bool NeedOrderAgreement { get; set; }
 
         /// <summary>
-        /// 线上售卖表示。01标识已开启线上售卖。02标识未开启线上售卖.
+        /// 线上售卖标识。 01表示已开启线上售卖；02表示未开启线上售卖。
         /// </summary>
         [XmlElement("online_sale_switch")]
         public string OnlineSaleSwitch { get; set; }
+
+        /// <summary>
+        /// 该字段作用于阵地页线上商城展示
+        /// </summary>
+        [XmlElement("online_show_switch")]
+        public string OnlineShowSwitch { get; set; }
 
         /// <summary>
         /// 外部卡ID

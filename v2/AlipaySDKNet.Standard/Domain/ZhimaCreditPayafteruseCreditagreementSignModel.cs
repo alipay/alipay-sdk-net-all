@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class ZhimaCreditPayafteruseCreditagreementSignModel : AopObject
     {
         /// <summary>
-        /// 当用户进入信用服务开通/授权页面后，点击左上角的回退按钮，中断开通流程，跳转回商户的页面地址。支持scheme协议。不传该链接时，默认返回上一级页面，由外部app唤起支付宝的情况，会返回支付宝首页。
+        /// 当用户进入信用服务开通/授权页面后，点击左上角的回退按钮，中断开通流程，跳转回商户的页面地址。支持scheme协议。不传该链接时，默认返回上一级页面，由外部app唤起支付宝的情况，会返回支付宝首页。身份验证场景即ZHIMA_AUTH中此字段无效。
         /// </summary>
         [XmlElement("cancel_back_link")]
         public string CancelBackLink { get; set; }
@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// 用户信用服务开通流程结束后，不区分用户开通成功/失败，跳转回商家页面，该字段代表跳转回商家的页面地址。支持scheme协议。不传该链接时，默认返回上一级页面，由外部app唤起支付宝的情况，会返回支付宝首页。
+        /// 用户信用服务开通流程结束后，不区分用户开通成功/失败，跳转回商家页面，该字段代表跳转回商家的页面地址。支持scheme协议。不传该链接时，默认返回上一级页面，由外部app唤起支付宝的情况，会返回支付宝首页。身份验证场景即ZHIMA_AUTH中此字段无效。
         /// </summary>
         [XmlElement("return_back_link")]
         public string ReturnBackLink { get; set; }
