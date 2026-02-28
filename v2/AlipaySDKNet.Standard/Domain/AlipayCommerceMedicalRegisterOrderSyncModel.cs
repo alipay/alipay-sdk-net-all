@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AppointPart { get; set; }
 
         /// <summary>
+        /// 加班门诊
+        /// </summary>
+        [XmlElement("buss_type")]
+        public string BussType { get; set; }
+
+        /// <summary>
         /// 取消原因
         /// </summary>
         [XmlElement("cancel_reason")]
@@ -64,6 +70,18 @@ namespace Aop.Api.Domain
         public string ClinicTime { get; set; }
 
         /// <summary>
+        /// 疾病描述
+        /// </summary>
+        [XmlElement("disease_description")]
+        public string DiseaseDescription { get; set; }
+
+        /// <summary>
+        /// 所患疾病
+        /// </summary>
+        [XmlElement("disease_name")]
+        public string DiseaseName { get; set; }
+
+        /// <summary>
         /// 医生ID
         /// </summary>
         [XmlElement("doctor_id")]
@@ -80,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("fee")]
         public string Fee { get; set; }
+
+        /// <summary>
+        /// 提示语
+        /// </summary>
+        [XmlElement("hint_message")]
+        public string HintMessage { get; set; }
 
         /// <summary>
         /// 医院号源编码
@@ -220,6 +244,12 @@ namespace Aop.Api.Domain
         public string PickupEndTime { get; set; }
 
         /// <summary>
+        /// 取号截止时间描述
+        /// </summary>
+        [XmlElement("pickup_end_time_desc")]
+        public string PickupEndTimeDesc { get; set; }
+
+        /// <summary>
         /// 平台编码
         /// </summary>
         [XmlElement("platform_code")]
@@ -232,10 +262,22 @@ namespace Aop.Api.Domain
         public string RegisterDate { get; set; }
 
         /// <summary>
+        /// 不需要评价
+        /// </summary>
+        [XmlElement("register_evaluate")]
+        public string RegisterEvaluate { get; set; }
+
+        /// <summary>
         /// 排班ID
         /// </summary>
         [XmlElement("register_id")]
         public string RegisterId { get; set; }
+
+        /// <summary>
+        /// 取号凭证
+        /// </summary>
+        [XmlElement("register_ticket")]
+        public string RegisterTicket { get; set; }
 
         /// <summary>
         /// 场景编码，枚举值 管家APP: HEALTH_BUTLER_APP  管家小程序：HEALTH_BUTLER 安诊儿APP: AN_ZHEN_ER_APP 安诊儿小程序 AN_ZHEN_ER 挂号频道小程序 CHANNEL_SEARCH_REGISTER SINGLE_HOS_NFYKDZJ_APP_SCENE  珠江医院（扁鹊单院版APP） SINGLE_HOS_NFYKDZJ_SCENE  珠江医院（扁鹊单院版小程序）
@@ -248,6 +290,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("shift_type")]
         public string ShiftType { get; set; }
+
+        /// <summary>
+        /// 订单状态描述/原因
+        /// </summary>
+        [XmlElement("status_reason")]
+        public string StatusReason { get; set; }
 
         /// <summary>
         /// 子场景编码

@@ -10,7 +10,7 @@
     <RootNamespace>AlipaySDKNet</RootNamespace>
     <AssemblyName>AlipaySDKNet</AssemblyName>
     <PackageId>AlipaySDKNet</PackageId>
-    <PackageVersion>4.9.1034</PackageVersion>
+    <PackageVersion>4.9.1036</PackageVersion>
     <Authors>antopen</Authors>
     <NeutralLanguage>zh</NeutralLanguage>
     <Description>支付宝开放平台官方SDK，支持.Net Framework 3.5(SP1)及其以上版本。</Description>
@@ -8484,9 +8484,12 @@
     <Compile Include="Response\AlipayCommerceOperationTaskbenefitcenterTaskCompleteResponse.cs" />
     <Compile Include="Response\AlipayCommerceOperationTaskbenefitcenterPointprizeQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceOperationTaskbenefitcenterPointModifyResponse.cs" />
+    <Compile Include="Response\AlipayCommerceOperationTagClaimModifyResponse.cs" />
+    <Compile Include="Response\AlipayCommerceOperationTagClaimAddResponse.cs" />
     <Compile Include="Response\AlipayCommerceOperationShangouTalkingGetResponse.cs" />
     <Compile Include="Response\AlipayCommerceOperationShangouStoreandgoodsRecommendResponse.cs" />
     <Compile Include="Response\AlipayCommerceOperationShangouAuthinfoQueryResponse.cs" />
+    <Compile Include="Response\AlipayCommerceOperationPromoRecordQueryResponse.cs" />
     <Compile Include="Response\AlipayCommerceOperationPromoActivitySignupResponse.cs" />
     <Compile Include="Response\AlipayCommerceOperationCarservicesaastldcAuthenticationQuerystatusResponse.cs" />
     <Compile Include="Response\AlipayCommerceOperationCarservicesaastldcAuthenticationQueryResponse.cs" />
@@ -8528,6 +8531,7 @@
     <Compile Include="Response\AlipayCommerceMedicalInsuranceTparecoverySyncResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalInsuranceTpapreauthstatusNotifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalInsuranceTpaeventSyncResponse.cs" />
+    <Compile Include="Response\AlipayCommerceMedicalInsuranceTpadirectpaystatusSyncResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalInsuranceTpaclaimstatusNotifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalInsuranceTpaappointmentstatusNotifyResponse.cs" />
     <Compile Include="Response\AlipayCommerceMedicalInsuranceHkmedicalSigninResponse.cs" />
@@ -10841,6 +10845,7 @@
     <Compile Include="Domain\RecycleSkuAttrDTO.cs" />
     <Compile Include="Domain\RecycleRoyaltyRelationVO.cs" />
     <Compile Include="Domain\RecycleRoyaltyQueryVO.cs" />
+    <Compile Include="Domain\RecycleRoyaltyMsgInfo.cs" />
     <Compile Include="Domain\RecycleRoyaltyInfo.cs" />
     <Compile Include="Domain\RecycleQuetion.cs" />
     <Compile Include="Domain\RecycleQuestionOptionInfo.cs" />
@@ -23513,6 +23518,7 @@
     <Compile Include="Domain\AlipayCommerceHousingApartmentOnlineModel.cs" />
     <Compile Include="Domain\TourOrderSyncDetail.cs" />
     <Compile Include="Domain\AlipayCommerceTransportParkingAssistantQueryModel.cs" />
+    <Compile Include="Domain\AlipayCommerceMedicalInsuranceTpadirectpaystatusSyncModel.cs" />
     <Compile Include="Domain\AlipayEbppIndustryCareertrainingUsercertificateSaveModel.cs" />
     <Compile Include="Domain\AlipayCommercePropertyCheckinConfigSetModel.cs" />
     <Compile Include="Domain\AlipayCommercePropertyCommunitySaveModel.cs" />
@@ -23809,6 +23815,7 @@
     <Compile Include="Domain\RentRiskInfoVO.cs" />
     <Compile Include="Domain\AlipayPcreditSdkQueryModel.cs" />
     <Compile Include="Domain\AntMerchantExpandBizaccessOrderCancelModel.cs" />
+    <Compile Include="Domain\InsuranceMedicineInfo.cs" />
     <Compile Include="Domain\AlipayDataDataserviceSchemathirtyoneRainystestQueryModel.cs" />
     <Compile Include="Domain\AlipayOpenDataquerytwoJianhuiQueryModel.cs" />
     <Compile Include="Domain\AlipayPayInstructOpencardTriggerModel.cs" />
@@ -24015,6 +24022,7 @@
     <Compile Include="Domain\AlipayCommerceLogisticsPointWorkModifyModel.cs" />
     <Compile Include="Domain\AlipayCommercePropertyCommunityQueryModel.cs" />
     <Compile Include="Domain\RoyaltyPublishDetailInfo.cs" />
+    <Compile Include="Domain\AlipayCommerceOperationTagClaimAddModel.cs" />
     <Compile Include="Domain\SameTypeReportInfoDTO.cs" />
     <Compile Include="Domain\MQTTHeaderParam.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalHdfinspectionCompleteModel.cs" />
@@ -24057,6 +24065,7 @@
     <Compile Include="Domain\AlipayCommerceHousingNewhouseLayoutSaveModel.cs" />
     <Compile Include="Domain\EnumModelDTO.cs" />
     <Compile Include="Domain\PBCScanParam.cs" />
+    <Compile Include="Domain\AlipayCommerceOperationTagClaimModifyModel.cs" />
     <Compile Include="Domain\VisitorConfigQueryVO.cs" />
     <Compile Include="Domain\AnttechOceanbaseObglobalEmployeeSyncModel.cs" />
     <Compile Include="Domain\InsurancePreAuthInfo.cs" />
@@ -24092,6 +24101,7 @@
     <Compile Include="Domain\AlipayCommerceAftersaleorderConfirmtimeoutModifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceLogisticsWalletAutodepositstatusGetModel.cs" />
     <Compile Include="Domain\AlipayDataDataserviceSchemacomplexthirdRainystestQueryModel.cs" />
+    <Compile Include="Domain\ActSignUpRecord.cs" />
     <Compile Include="Domain\ChatResponseData.cs" />
     <Compile Include="Domain\InsuredInfo.cs" />
     <Compile Include="Domain\AlipayOpenAgentVersionPreviewModel.cs" />
@@ -24099,6 +24109,7 @@
     <Compile Include="Domain\VaccinationHistory.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalHdfrtcConferenceforadminQueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceRentOrderSellerPublishModel.cs" />
+    <Compile Include="Domain\OutletInfo.cs" />
     <Compile Include="Domain\AlipayCommerceFhyeduRollcallSyncModel.cs" />
     <Compile Include="Domain\AlipayMerchantGroupGroupcontrolBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayCloudCloudpromoKnowledgeDocumentUnbindModel.cs" />
@@ -24228,6 +24239,7 @@
     <Compile Include="Domain\AlipaySecurityHqschemaQueryModel.cs" />
     <Compile Include="Domain\AlipayEbppIndustryEarthquakeSyncModel.cs" />
     <Compile Include="Domain\CardApplyTaskInfo.cs" />
+    <Compile Include="Domain\AlipayCommerceOperationPromoRecordQueryModel.cs" />
     <Compile Include="Domain\GroupScheduleMsgVO.cs" />
     <Compile Include="Domain\AlipayDataDataserviceSchemaapififthRainystestQueryModel.cs" />
     <Compile Include="Domain\VehiclePromoResult.cs" />
@@ -32780,9 +32792,12 @@
     <Compile Include="Request\AlipayCommerceOperationTaskbenefitcenterTaskCompleteRequest.cs" />
     <Compile Include="Request\AlipayCommerceOperationTaskbenefitcenterPointprizeQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceOperationTaskbenefitcenterPointModifyRequest.cs" />
+    <Compile Include="Request\AlipayCommerceOperationTagClaimModifyRequest.cs" />
+    <Compile Include="Request\AlipayCommerceOperationTagClaimAddRequest.cs" />
     <Compile Include="Request\AlipayCommerceOperationShangouTalkingGetRequest.cs" />
     <Compile Include="Request\AlipayCommerceOperationShangouStoreandgoodsRecommendRequest.cs" />
     <Compile Include="Request\AlipayCommerceOperationShangouAuthinfoQueryRequest.cs" />
+    <Compile Include="Request\AlipayCommerceOperationPromoRecordQueryRequest.cs" />
     <Compile Include="Request\AlipayCommerceOperationPromoActivitySignupRequest.cs" />
     <Compile Include="Request\AlipayCommerceOperationCarservicesaastldcAuthenticationQuerystatusRequest.cs" />
     <Compile Include="Request\AlipayCommerceOperationCarservicesaastldcAuthenticationQueryRequest.cs" />
@@ -32824,6 +32839,7 @@
     <Compile Include="Request\AlipayCommerceMedicalInsuranceTparecoverySyncRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalInsuranceTpapreauthstatusNotifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalInsuranceTpaeventSyncRequest.cs" />
+    <Compile Include="Request\AlipayCommerceMedicalInsuranceTpadirectpaystatusSyncRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalInsuranceTpaclaimstatusNotifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalInsuranceTpaappointmentstatusNotifyRequest.cs" />
     <Compile Include="Request\AlipayCommerceMedicalInsuranceHkmedicalSigninRequest.cs" />
