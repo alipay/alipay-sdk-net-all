@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string DistrictCode { get; set; }
 
         /// <summary>
-        /// 地址维度
+        /// 地址纬度
         /// </summary>
         [XmlElement("latitude")]
         public string Latitude { get; set; }

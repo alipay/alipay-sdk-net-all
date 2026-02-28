@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string QueryType { get; set; }
 
         /// <summary>
-        /// 区分当前对话场景意图 待分配后传入固定值
+        /// 区分当前对话场景意图
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }

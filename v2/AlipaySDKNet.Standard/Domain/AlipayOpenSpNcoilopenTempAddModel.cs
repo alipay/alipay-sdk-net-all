@@ -70,5 +70,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reference_id")]
         public string ReferenceId { get; set; }
+
+        /// <summary>
+        /// 业务自定义扩展信息
+        /// </summary>
+        [XmlElement("temp_business_ext_info")]
+        public TempBusinessExtInfo TempBusinessExtInfo { get; set; }
     }
 }

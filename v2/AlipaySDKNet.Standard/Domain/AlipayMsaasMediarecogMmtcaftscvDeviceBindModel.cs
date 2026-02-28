@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// 0-否 1-是
+        /// </summary>
+        [XmlElement("dynamic_device")]
+        public string DynamicDevice { get; set; }
+
+        /// <summary>
         /// 设备所属商户pid
         /// </summary>
         [XmlElement("isv_pid")]
@@ -26,5 +32,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("isv_tid")]
         public string IsvTid { get; set; }
+
+        /// <summary>
+        /// 设备注册类型
+        /// </summary>
+        [XmlElement("register_type")]
+        public string RegisterType { get; set; }
+
+        /// <summary>
+        /// 0-否 1-是
+        /// </summary>
+        [XmlElement("weight_device")]
+        public string WeightDevice { get; set; }
     }
 }

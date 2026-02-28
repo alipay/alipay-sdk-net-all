@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 手机号
+        /// </summary>
+        [XmlElement("phone_number")]
+        public string PhoneNumber { get; set; }
+
+        /// <summary>
         /// 活动单号
         /// </summary>
         [XmlElement("project_id")]

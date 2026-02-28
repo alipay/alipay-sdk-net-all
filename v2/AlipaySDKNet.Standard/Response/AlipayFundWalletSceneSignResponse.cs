@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 钱包外部账户ID
+        /// </summary>
+        [XmlElement("external_account_no")]
+        public string ExternalAccountNo { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]

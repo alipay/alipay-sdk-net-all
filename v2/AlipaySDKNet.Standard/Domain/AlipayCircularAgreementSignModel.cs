@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BindWalletType { get; set; }
 
         /// <summary>
+        /// 扣款支付宝账户
+        /// </summary>
+        [XmlElement("binding_alipay_logon_id")]
+        public string BindingAlipayLogonId { get; set; }
+
+        /// <summary>
         /// 扣款账户所属openid
         /// </summary>
         [XmlElement("relation_openid")]

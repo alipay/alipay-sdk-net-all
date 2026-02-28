@@ -58,5 +58,23 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("solution_code")]
         public string SolutionCode { get; set; }
+
+        /// <summary>
+        /// 指定开通用户支付宝登录号 需要指定开通用户时，与target_user_id、target_user_open_id三选一
+        /// </summary>
+        [XmlElement("target_logon_id")]
+        public string TargetLogonId { get; set; }
+
+        /// <summary>
+        /// 指定开通用户支付宝唯一用户号 需要指定开通用户时，与target_logon_id、target_user_open_id三选一
+        /// </summary>
+        [XmlElement("target_user_id")]
+        public string TargetUserId { get; set; }
+
+        /// <summary>
+        /// 指定开通用户支付宝openId。为了标记支付宝用户在应用下的唯一标识 需要指定开通用户时，与target_user_id、target_logon_id三选一
+        /// </summary>
+        [XmlElement("target_user_open_id")]
+        public string TargetUserOpenId { get; set; }
     }
 }

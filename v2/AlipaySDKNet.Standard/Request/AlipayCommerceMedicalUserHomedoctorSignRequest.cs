@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayCommerceMedicalUserHomedoctorSignRequest : IAopRequest<AlipayCommerceMedicalUserHomedoctorSignResponse>
     {
         /// <summary>
-        /// AQ用户医生签约状态同步
+        /// 蚂蚁健康用户医生签约状态同步
         /// </summary>
         public string BizContent { get; set; }
 

@@ -95,6 +95,12 @@ namespace Aop.Api.Domain
         public string IndustryCategory { get; set; }
 
         /// <summary>
+        /// 伙伴政策生效状态，控制政策同步是增加还是删除
+        /// </summary>
+        [XmlElement("is_effective")]
+        public string IsEffective { get; set; }
+
+        /// <summary>
         /// 所属地区
         /// </summary>
         [XmlElement("location")]

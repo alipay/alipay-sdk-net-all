@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("term_principal")]
         public string TermPrincipal { get; set; }
+
+        /// <summary>
+        /// 本期还款违约金，单位：分
+        /// </summary>
+        [XmlElement("term_violate_fee")]
+        public string TermViolateFee { get; set; }
     }
 }

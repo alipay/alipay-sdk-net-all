@@ -29,11 +29,17 @@ namespace Aop.Api.Response
         public AddressInfo BusinessAddress { get; set; }
 
         /// <summary>
-        /// 店铺经营时间。
+        /// 门店经营时间。
         /// </summary>
         [XmlArray("business_time")]
         [XmlArrayItem("shop_business_time")]
         public List<ShopBusinessTime> BusinessTime { get; set; }
+
+        /// <summary>
+        /// 银行卡号
+        /// </summary>
+        [XmlElement("card_account_no")]
+        public string CardAccountNo { get; set; }
 
         /// <summary>
         /// 营业执照图片url。返回值为一个有访问时限的链接
@@ -67,13 +73,13 @@ namespace Aop.Api.Response
         public List<ContactInfo> ContactInfos { get; set; }
 
         /// <summary>
-        /// 店铺联系手机
+        /// 门店联系手机
         /// </summary>
         [XmlElement("contact_mobile")]
         public string ContactMobile { get; set; }
 
         /// <summary>
-        /// 店铺的联系固话
+        /// 门店的联系固话
         /// </summary>
         [XmlElement("contact_phone")]
         public string ContactPhone { get; set; }
@@ -169,13 +175,13 @@ namespace Aop.Api.Response
         public string SettleAlipayLogonId { get; set; }
 
         /// <summary>
-        /// 店铺类目，取值参见文件中的三级门店类目<a herf="https://mif-pub.alipayobjects.com/ShopCategory.xlsx"></a>
+        /// 门店类目，取值参见文件中的三级门店类目<a herf="https://mif-pub.alipayobjects.com/ShopCategory.xlsx"></a>
         /// </summary>
         [XmlElement("shop_category")]
         public string ShopCategory { get; set; }
 
         /// <summary>
-        /// 支付宝侧蚂蚁店铺 id
+        /// 支付宝侧蚂蚁门店 id
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }
@@ -187,13 +193,13 @@ namespace Aop.Api.Response
         public string ShopInfoStatus { get; set; }
 
         /// <summary>
-        /// 主要针对医疗行业门店主体类型进件使用，不同门店认证主体需要相应的主体资质证书。  企业营业执照: ENTERPRISE;  事业单位法人证书: INST_RGST_CTF;  民办非企业单位登记证书 PRIVATE_NON_ENTERPRISE
+        /// 主要针对医疗行业门店主体类型进件使用，不同门店认证主体需要相应的主体资质证书。  企业营业执照：ENTERPRISE;  事业单位法人证书：INST_RGST_CTF;  民办非企业单位登记证书：PRIVATE_NON_ENTERPRISE; 企业（澳门）：AOMEN_ENTERPRISE
         /// </summary>
         [XmlElement("shop_main_type")]
         public string ShopMainType { get; set; }
 
         /// <summary>
-        /// 店铺名称。
+        /// 门店名称。
         /// </summary>
         [XmlElement("shop_name")]
         public string ShopName { get; set; }
@@ -205,7 +211,7 @@ namespace Aop.Api.Response
         public ShopRecommendInfo ShopRecommendInfo { get; set; }
 
         /// <summary>
-        /// 店铺经营类型
+        /// 门店经营类型
         /// </summary>
         [XmlElement("shop_type")]
         public string ShopType { get; set; }

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string Code { get; set; }
 
         /// <summary>
-        /// 订单号。通过退款前向商户确认是否可以退款spi入参获取
+        /// 订单号。通过退款前向商户确认是否可以退款spi入参获取 当前字段已废弃(请使用新参数refund_order_id退款订单号)
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
@@ -32,6 +32,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reason")]
         public string Reason { get; set; }
+
+        /// <summary>
+        /// 凭证退款订单号
+        /// </summary>
+        [XmlElement("refund_order_id")]
+        public string RefundOrderId { get; set; }
 
         /// <summary>
         /// 退款前向商户确认退款结果

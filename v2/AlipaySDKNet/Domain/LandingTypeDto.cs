@@ -11,6 +11,13 @@ namespace Aop.Api.Domain
     public class LandingTypeDto : AopObject
     {
         /// <summary>
+        /// 聚合落地页中的图片地址，landing_type值为3的时候必填，至少一张图片地址
+        /// </summary>
+        [XmlArray("aggregated_info_list")]
+        [XmlArrayItem("string")]
+        public List<string> AggregatedInfoList { get; set; }
+
+        /// <summary>
         /// 活动列表
         /// </summary>
         [XmlArray("landing_act")]

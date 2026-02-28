@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string Domain { get; set; }
 
         /// <summary>
-        /// 域名服务商  - aliyun  - cloudflare  - dnspod  - godaddy
+        /// 域名服务商  - aliyun  - cloudflare  - dnspod  - godaddy  - west
         /// </summary>
         [XmlElement("domain_provider")]
         public string DomainProvider { get; set; }
 
         /// <summary>
-        /// 域名状态  - DOMAIN_UNVALID  - CERT_INIT  - CERT_SUCCESS
+        /// 域名状态  - DOMAIN_UNVALID  - CERT_INIT  - CERT_SUCCESS  - CERT_FAIL  - CERT_FAIL
         /// </summary>
         [XmlElement("domain_status")]
         public string DomainStatus { get; set; }

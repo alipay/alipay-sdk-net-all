@@ -344,6 +344,12 @@ namespace Aop.Api.Domain
         public string SignProbability { get; set; }
 
         /// <summary>
+        /// 财年签约预测评估
+        /// </summary>
+        [XmlElement("sign_probability_year")]
+        public string SignProbabilityYear { get; set; }
+
+        /// <summary>
         /// 站点
         /// </summary>
         [XmlElement("site")]

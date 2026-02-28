@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalUserHomedoctorSyncModel : AopObject
     {
         /// <summary>
-        /// AQ用户的openId
+        /// 蚂蚁健康用户的openId
         /// </summary>
         [XmlElement("aq_open_id")]
         public string AqOpenId { get; set; }

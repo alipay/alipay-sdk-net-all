@@ -104,6 +104,12 @@ namespace Aop.Api.Response
         public string Path { get; set; }
 
         /// <summary>
+        /// 响应方式为url，包含具体的可用门店id列表，示例："门店1id,门店2id"，多值使用逗号分隔
+        /// </summary>
+        [XmlElement("poi_ids")]
+        public string PoiIds { get; set; }
+
+        /// <summary>
         /// 商品有冻结、驳回时，展示对应的具体问题
         /// </summary>
         [XmlArray("risk_info")]

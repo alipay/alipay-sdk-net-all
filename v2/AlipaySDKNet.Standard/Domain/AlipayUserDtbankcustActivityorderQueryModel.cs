@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayUserDtbankcustActivityorderQueryModel : AopObject
     {
         /// <summary>
-        /// 数字分行活动id，activity_order_id为空时必填
+        /// 数字分行活动id
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }

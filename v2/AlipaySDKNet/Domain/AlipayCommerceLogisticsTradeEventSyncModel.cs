@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string IncentiveCode { get; set; }
 
         /// <summary>
+        /// json字符串格式扩展字段，用于扩展业务字段场景 {"key1":"value1","key2":"value2","key3":value3} key：expressman_role_type(快递员角色类型) value：EXPRESSMAN(快递员)/THIRD_MERCHANT(三方商户)
+        /// </summary>
+        [XmlElement("log_ext_info")]
+        public string LogExtInfo { get; set; }
+
+        /// <summary>
         /// 商户标识（接口调用方的渠道编码，由支付宝分配）
         /// </summary>
         [XmlElement("logistics_code")]

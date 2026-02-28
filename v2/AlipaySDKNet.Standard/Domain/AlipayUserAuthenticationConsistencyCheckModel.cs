@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizFrom { get; set; }
 
         /// <summary>
+        /// 明文营业执照号，1688场景针对个体户的法人一致性核验，需要基于明文营业执照去调用数据枢纽的接口进行核验
+        /// </summary>
+        [XmlElement("cert_code")]
+        public string CertCode { get; set; }
+
+        /// <summary>
         /// 【证件类型】0:身份证 1:护照 2:军官证 3:士兵证 4:回乡证 5:临时身份证 6:户口簿 7:警官证 8:台胞证 9:营业执照10:其它证件 11:港澳居民来往内地通行证 12:台湾居民来往大陆通行证 13:台湾居民居住证 14:港澳居民居住证 15:港澳身份证 16:外国人永久居住证。注意：用户类型为企业或公司用户时可以不填本字段
         /// </summary>
         [XmlElement("cert_type")]
@@ -52,7 +58,7 @@ namespace Aop.Api.Domain
         public string UserId { get; set; }
 
         /// <summary>
-        /// 用户类型（1/2） 1代表公司账户2代表个人账户
+        /// 用户类型（1/2） 1代表公司账户2代表个人账户0代表未知(仅1688场景使用)
         /// </summary>
         [XmlElement("user_type")]
         public string UserType { get; set; }

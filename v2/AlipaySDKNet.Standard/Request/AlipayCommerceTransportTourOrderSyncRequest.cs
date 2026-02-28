@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayCommerceTransportTourOrderSyncRequest : IAopRequest<AlipayCommerceTransportTourOrderSyncResponse>
     {
         /// <summary>
-        /// 文旅订单同步接口
+        /// 文旅订单同步接口。 调用要求：接口具备幂等能力，接入方必须具备调用异常的重试能力。
         /// </summary>
         public string BizContent { get; set; }
 

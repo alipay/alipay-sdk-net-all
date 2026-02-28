@@ -124,7 +124,7 @@ namespace Aop.Api.Domain
         public string RefundUrl { get; set; }
 
         /// <summary>
-        /// 枚举值： 支付宝问诊频道:ALIPAY_INQUIRY_CHANNEL 支付宝义诊频道:ALIPAY_PUBLIC_WELFARE_INQUIRY_CHANNEL 支付宝小程序:ALIPAY_MINI_APP 支付宝其他渠道:ALIPAY_OTHER_CHANNEL H5页面:H5 患者端app:PATIENT_APP pc端:PC 微信小程序:WECHAT_APP 支付宝AQ:ALIPAY_AQ AQ-APP:AQ_APP AQ-小程序:AQ_MINI_APP
+        /// 枚举值： 支付宝问诊频道:ALIPAY_INQUIRY_CHANNEL 支付宝义诊频道:ALIPAY_PUBLIC_WELFARE_INQUIRY_CHANNEL 支付宝小程序:ALIPAY_MINI_APP 支付宝其他渠道:ALIPAY_OTHER_CHANNEL H5页面:H5 患者端app:PATIENT_APP pc端:PC 微信小程序:WECHAT_APP 支付宝AQ:ALIPAY_AQ AQ-APP:AQ_APP AQ-小程序:AQ_MINI_APP 香港支付宝app:ALIPAY_HK
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }

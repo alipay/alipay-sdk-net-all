@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 荣耀
+        /// </summary>
+        [XmlElement("channel")]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// 兑换码
         /// </summary>
         [XmlElement("exchange_code")]

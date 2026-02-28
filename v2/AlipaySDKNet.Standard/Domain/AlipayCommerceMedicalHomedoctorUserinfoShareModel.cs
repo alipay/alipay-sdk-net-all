@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalHomedoctorUserinfoShareModel : AopObject
     {
         /// <summary>
-        /// AQ访问令牌。通过该令牌调用需要授权类接口
+        /// 蚂蚁健康访问令牌。通过该令牌调用需要授权接口
         /// </summary>
         [XmlElement("aq_access_token")]
         public string AqAccessToken { get; set; }
 
         /// <summary>
-        /// 用户对外开放openid
+        /// 蚂蚁健康用户对外开放OPEN_ID
         /// </summary>
         [XmlElement("aq_open_id")]
         public string AqOpenId { get; set; }

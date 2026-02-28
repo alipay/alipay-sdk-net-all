@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -34,6 +35,12 @@ namespace Aop.Api.Domain
         public string CampaignId { get; set; }
 
         /// <summary>
+        /// 拓展信息，instId（银行简称）; cardType（卡类型,多个以","分隔）:CC:信用卡，DC:借记卡 ; cardBin（ 活动卡bin信息，多个以","分隔）;campaignType（活动类型）:INEXACT:饿了么非精准活动
+        /// </summary>
+        [XmlElement("consult_extend_info")]
+        public ConsultExtendInfo ConsultExtendInfo { get; set; }
+
+        /// <summary>
         /// 创意文案信息标识命中活动露出的创意文案信息，可以通过管理平台配置并露出给调用方，自定义信息，一般是json格式，配置自定义创意时必选
         /// </summary>
         [XmlElement("idea_content")]
@@ -62,6 +69,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("min_amount")]
         public string MinAmount { get; set; }
+
+        /// <summary>
+        /// 用于返回多渠道信息，当consult_extend_info.campaignType=INEXACT时不为空
+        /// </summary>
+        [XmlArray("multiple_campaign_channel")]
+        [XmlArrayItem("multiple_campaign_channel")]
+        public List<MultipleCampaignChannel> MultipleCampaignChannel { get; set; }
 
         /// <summary>
         /// 优惠门槛金额类型，标识订单金额需要满此金额才能享受优惠，配置权益时必选

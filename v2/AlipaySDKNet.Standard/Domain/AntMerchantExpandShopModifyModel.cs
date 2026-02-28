@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public AddressInfo BusinessAddress { get; set; }
 
         /// <summary>
-        /// 店铺经营时间。若无需更新本信息项，可以不填写
+        /// 门店经营时间。若无需更新本信息项，可以不填写
         /// </summary>
         [XmlArray("business_time")]
         [XmlArrayItem("shop_business_time")]
@@ -49,7 +49,7 @@ namespace Aop.Api.Domain
         public string CertName { get; set; }
 
         /// <summary>
-        /// 证件号码。请填写店铺营业执照号。
+        /// 证件号码。请填写门店营业执照号。
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
@@ -67,13 +67,13 @@ namespace Aop.Api.Domain
         public ContactInfo ContactInfos { get; set; }
 
         /// <summary>
-        /// 店铺联系手机
+        /// 门店联系手机
         /// </summary>
         [XmlElement("contact_mobile")]
         public string ContactMobile { get; set; }
 
         /// <summary>
-        /// 店铺的联系固话
+        /// 门店的联系固话
         /// </summary>
         [XmlElement("contact_phone")]
         public string ContactPhone { get; set; }
@@ -85,7 +85,7 @@ namespace Aop.Api.Domain
         public string Cover { get; set; }
 
         /// <summary>
-        /// 扩展信息列表。key值需要向对应行业的bd进行申请。传入本项时，按key进行更新或补充
+        /// 扩展信息列表。key值需要向对应行业的bd进行申请。传入本项时，按key进行更新或补充。 如果是针对神券团购门店的操作，该值必传，且无需向bd申请。
         /// </summary>
         [XmlArray("ext_infos")]
         [XmlArrayItem("shop_ext_info")]
@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public List<ShopIndustryLicense> IndustryLicense { get; set; }
 
         /// <summary>
-        /// 商户角色id，表示将要修改的店属于哪个商户角色，和store_id一起定位待修改的门店。对于直连场景，填写商户pid；对于间连场景（线上、线下、直付通），填写商户smid。本信息项不可修改
+        /// 商户角色id，表示将要修改的门店属于哪个商户角色，和store_id一起定位待修改的门店。对于直连场景，填写商户pid；对于间连场景（线上、线下、直付通），填写商户smid。本信息项不可修改
         /// </summary>
         [XmlElement("ip_role_id")]
         public string IpRoleId { get; set; }
@@ -175,19 +175,19 @@ namespace Aop.Api.Domain
         public string ShopCategory { get; set; }
 
         /// <summary>
-        /// 蚂蚁店铺id，用于查出待修改的门店。填写本参数的话，store_id和ip_role_id可以不填。本信息项不可修改
+        /// 蚂蚁门店id，用于查出待修改的门店。填写本参数的话，store_id和ip_role_id可以不填。本信息项不可修改
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }
 
         /// <summary>
-        /// 主要针对医疗行业门店主体类型进件使用，不同门店认证主体需要相应的主体资质证书。  企业营业执照: ENTERPRISE;  事业单位法人证书: INST_RGST_CTF;  民办非企业单位登记证书 PRIVATE_NON_ENTERPRISE
+        /// 主要针对医疗行业门店主体类型进件使用，不同门店认证主体需要相应的主体资质证书。  企业营业执照：ENTERPRISE;  事业单位法人证书：INST_RGST_CTF;  民办非企业单位登记证书：PRIVATE_NON_ENTERPRISE; 企业（澳门）：AOMEN_ENTERPRISE
         /// </summary>
         [XmlElement("shop_main_type")]
         public string ShopMainType { get; set; }
 
         /// <summary>
-        /// 店铺名称。直连开店要保证全局店铺名称+地址唯一，间连开店要保证服务商pid下店铺名称+地址唯一。若无需更新本信息项，可以不填写
+        /// 门店名称。直连开店要保证全局门店名称+地址唯一，间连开店要保证服务商pid下门店名称+地址唯一。若无需更新本信息项，可以不填写
         /// </summary>
         [XmlElement("shop_name")]
         public string ShopName { get; set; }

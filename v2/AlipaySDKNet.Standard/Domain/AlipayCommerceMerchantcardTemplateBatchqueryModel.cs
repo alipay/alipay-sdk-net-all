@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CardTemplateName { get; set; }
 
         /// <summary>
+        /// 商品状态，不传默认查已发布的
+        /// </summary>
+        [XmlElement("card_template_status")]
+        public string CardTemplateStatus { get; set; }
+
+        /// <summary>
         /// 卡类型。需要查询次卡周期付时不用传。查询金额卡必传AXF_MONEY_CARD
         /// </summary>
         [XmlElement("card_type")]

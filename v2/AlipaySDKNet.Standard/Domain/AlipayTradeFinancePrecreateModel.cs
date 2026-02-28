@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AlipayAccount { get; set; }
 
         /// <summary>
-        /// 卖家账户类型 支付宝账号对应的支付宝唯一用户号: userId 支付宝登录号: loginName
+        /// 卖家账户类型 支付宝账号对应的支付宝唯一用户号: userId 支付宝登录号: loginName （当投保道具安全险时必传）
         /// </summary>
         [XmlElement("alipay_account_type")]
         public string AlipayAccountType { get; set; }

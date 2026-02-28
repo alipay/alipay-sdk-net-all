@@ -51,10 +51,22 @@ namespace Aop.Api.Response
         public string TransferId { get; set; }
 
         /// <summary>
+        /// 用于透传汇款支付单号
+        /// </summary>
+        [XmlElement("transfer_payment_order_id")]
+        public string TransferPaymentOrderId { get; set; }
+
+        /// <summary>
         /// 报价信息json对象
         /// </summary>
         [XmlElement("transfer_quote")]
         public string TransferQuote { get; set; }
+
+        /// <summary>
+        /// 汇款退款单号
+        /// </summary>
+        [XmlElement("transfer_refund_order_id")]
+        public string TransferRefundOrderId { get; set; }
 
         /// <summary>
         /// transferResult的json对象

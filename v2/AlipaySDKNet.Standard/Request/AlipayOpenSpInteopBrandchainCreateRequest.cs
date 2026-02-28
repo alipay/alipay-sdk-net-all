@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayOpenSpInteopBrandchainCreateRequest : IAopRequest<AlipayOpenSpInteopBrandchainCreateResponse>
     {
         /// <summary>
-        /// 服务商一体化作业品牌连锁saas解决方案开通作业子项
+        /// 服务商一体化作业，代商户开通“连锁品牌”解决方案
         /// </summary>
         public string BizContent { get; set; }
 

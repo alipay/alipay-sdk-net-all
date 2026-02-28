@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCloudCloudbaseResourcepackageTopostpaidConsultResponse : AopResponse
     {
         /// <summary>
+        /// 原始待退款金额（分）
+        /// </summary>
+        [XmlElement("origin_refund_amount")]
+        public string OriginRefundAmount { get; set; }
+
+        /// <summary>
         /// 待退款金额（分）
         /// </summary>
         [XmlElement("refund_amount")]

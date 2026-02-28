@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceDecorationPolicystatusQueryResponse : AopResponse
     {
         /// <summary>
+        /// 保司保单号
+        /// </summary>
+        [XmlElement("inst_policy_no")]
+        public string InstPolicyNo { get; set; }
+
+        /// <summary>
         /// 订单号
         /// </summary>
         [XmlElement("order_no")]

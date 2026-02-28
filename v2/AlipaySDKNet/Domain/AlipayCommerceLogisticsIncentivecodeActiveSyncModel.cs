@@ -82,7 +82,7 @@ namespace Aop.Api.Domain
         public string ActiveTime { get; set; }
 
         /// <summary>
-        /// EXPRESSMAN 代表快递员 STATION 代表驿站
+        /// EXPRESSMAN 代表快递员 STATION 代表驿站 THIRD_MERCHANT 代表三方商户
         /// </summary>
         [XmlElement("active_type")]
         public string ActiveType { get; set; }
@@ -92,6 +92,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("incentive_code")]
         public string IncentiveCode { get; set; }
+
+        /// <summary>
+        /// json字符串格式扩展字段，用于扩展业务字段场景 {"key1":"value1","key2":"value2","key3":value3}
+        /// </summary>
+        [XmlElement("log_ext_info")]
+        public string LogExtInfo { get; set; }
 
         /// <summary>
         /// 商户标识（接口调用方的渠道编码，由支付宝分配）

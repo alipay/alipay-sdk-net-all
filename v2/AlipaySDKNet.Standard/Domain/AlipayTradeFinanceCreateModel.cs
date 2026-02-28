@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizDate { get; set; }
 
         /// <summary>
+        /// 用于传递特殊业务信息的拓展信息
+        /// </summary>
+        [XmlElement("business_params")]
+        public string BusinessParams { get; set; }
+
+        /// <summary>
         /// 外部订单号, 外部的业务单据号，例如xx平台交易订单id
         /// </summary>
         [XmlElement("out_order_no")]

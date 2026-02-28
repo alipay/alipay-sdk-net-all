@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ContractAmount { get; set; }
 
         /// <summary>
+        /// 商机预订单币种
+        /// </summary>
+        [XmlElement("leads_predict_order_currency")]
+        public string LeadsPredictOrderCurrency { get; set; }
+
+        /// <summary>
         /// 软件订阅年限，输入1则为1年
         /// </summary>
         [XmlElement("software_subscription_years")]

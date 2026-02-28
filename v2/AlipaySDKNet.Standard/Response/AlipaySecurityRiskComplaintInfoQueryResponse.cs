@@ -73,6 +73,18 @@ namespace Aop.Api.Response
         public string GmtRiskFinishTime { get; set; }
 
         /// <summary>
+        /// 升级投诉时间
+        /// </summary>
+        [XmlElement("gmt_upgrade")]
+        public string GmtUpgrade { get; set; }
+
+        /// <summary>
+        /// 升级投诉推送时间
+        /// </summary>
+        [XmlElement("gmt_upgrade_risk_finish_time")]
+        public string GmtUpgradeRiskFinishTime { get; set; }
+
+        /// <summary>
         /// 投诉主表的主键id，查询详情时使用本id进行查询
         /// </summary>
         [XmlElement("id")]
@@ -138,5 +150,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }
+
+        /// <summary>
+        /// 用户升级投诉内容
+        /// </summary>
+        [XmlElement("upgrade_content")]
+        public string UpgradeContent { get; set; }
     }
 }

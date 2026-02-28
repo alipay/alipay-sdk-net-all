@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string NonpaymentAmount { get; set; }
 
         /// <summary>
+        /// 结算外部业务账单号
+        /// </summary>
+        [XmlElement("out_bill_no")]
+        public string OutBillNo { get; set; }
+
+        /// <summary>
         /// 业务流水号（受理幂等字段之一）
         /// </summary>
         [XmlElement("out_business_no")]
@@ -148,6 +154,12 @@ namespace Aop.Api.Domain
         public string RealAmount { get; set; }
 
         /// <summary>
+        /// 关联外部账单号，如果是单独的退款/退费账单，则传其对应的正向交易/收费账单号
+        /// </summary>
+        [XmlElement("rel_out_bill_no")]
+        public string RelOutBillNo { get; set; }
+
+        /// <summary>
         /// 外部业务关联单据号
         /// </summary>
         [XmlElement("rel_out_business_no")]
@@ -158,6 +170,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_amount")]
         public long ServiceAmount { get; set; }
+
+        /// <summary>
+        /// 业务发生金额
+        /// </summary>
+        [XmlElement("service_amount_new")]
+        public string ServiceAmountNew { get; set; }
 
         /// <summary>
         /// 业务唯一标识（受理幂等字段之一）

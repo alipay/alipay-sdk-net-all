@@ -124,7 +124,7 @@ namespace Aop.Api.Domain
         public string CheckDate { get; set; }
 
         /// <summary>
-        /// 计费服务量
+        /// 计费服务量,单位：次
         /// </summary>
         [XmlElement("clcn_basic_amount")]
         public string ClcnBasicAmount { get; set; }
@@ -400,37 +400,37 @@ namespace Aop.Api.Domain
         public string SummaryDmsn1 { get; set; }
 
         /// <summary>
-        /// 1
+        /// 分析维度2
         /// </summary>
         [XmlElement("summary_dmsn_2")]
         public string SummaryDmsn2 { get; set; }
 
         /// <summary>
-        /// 3
+        /// 分析维度3
         /// </summary>
         [XmlElement("summary_dmsn_3")]
         public string SummaryDmsn3 { get; set; }
 
         /// <summary>
-        /// 1
+        /// 分析维度4
         /// </summary>
         [XmlElement("summary_dmsn_4")]
         public string SummaryDmsn4 { get; set; }
 
         /// <summary>
-        /// 1
+        /// 分析维度5
         /// </summary>
         [XmlElement("summary_dmsn_5")]
         public string SummaryDmsn5 { get; set; }
 
         /// <summary>
-        /// 1
+        /// 分析维度6
         /// </summary>
         [XmlElement("summary_dmsn_6")]
         public string SummaryDmsn6 { get; set; }
 
         /// <summary>
-        /// 1
+        /// 分析维度7
         /// </summary>
         [XmlElement("summary_dmsn_7")]
         public string SummaryDmsn7 { get; set; }
@@ -448,7 +448,7 @@ namespace Aop.Api.Domain
         public MultiCurrencyMoneyOpenApi TaxAmount { get; set; }
 
         /// <summary>
-        /// 税率
+        /// 税率,小数, 0.1表示10%
         /// </summary>
         [XmlElement("tax_rate")]
         public string TaxRate { get; set; }

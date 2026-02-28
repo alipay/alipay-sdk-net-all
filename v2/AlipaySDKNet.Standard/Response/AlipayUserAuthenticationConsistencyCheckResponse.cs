@@ -25,5 +25,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("not_certify_msg")]
         public string NotCertifyMsg { get; set; }
+
+        /// <summary>
+        /// 1688场景核验不一致的错误码
+        /// </summary>
+        [XmlElement("not_match_code")]
+        public string NotMatchCode { get; set; }
+
+        /// <summary>
+        /// 1688场景核验不一致的错误原因
+        /// </summary>
+        [XmlElement("not_match_msg")]
+        public string NotMatchMsg { get; set; }
     }
 }

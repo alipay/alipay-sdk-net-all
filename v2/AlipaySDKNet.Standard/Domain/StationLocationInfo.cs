@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
+        /// 站点名
+        /// </summary>
+        [XmlElement("nick_name")]
+        public string NickName { get; set; }
+
+        /// <summary>
         /// 站点Id
         /// </summary>
         [XmlElement("station_id")]

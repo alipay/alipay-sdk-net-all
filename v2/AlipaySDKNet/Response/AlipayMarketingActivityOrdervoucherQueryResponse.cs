@@ -40,6 +40,12 @@ namespace Aop.Api.Response
         public string ActivityStatus { get; set; }
 
         /// <summary>
+        /// 活动审核信息 audit_type：审核类型，例：UNIFY_ACCESS_CHECK统一中台审核 audit_result：审核结果，例：SUBMIT,APPROVE,REJECT audit_reason：审核内容信息
+        /// </summary>
+        [XmlElement("audit_result_info")]
+        public AuditResultInfo AuditResultInfo { get; set; }
+
+        /// <summary>
         /// 活动所属的商户信息
         /// </summary>
         [XmlElement("belong_merchant_info")]

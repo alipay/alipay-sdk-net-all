@@ -10,25 +10,25 @@ namespace Aop.Api.Domain
     public class CarLeasingOrder : AopObject
     {
         /// <summary>
-        /// 身份证号
+        /// 身份证号（支持AES加密）
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 车辆合格证（Vehicle Certificate of Conformity）文件链接
+        /// 车辆合格证（Vehicle Certificate of Conformity）文件链接（支持AES加密）
         /// </summary>
         [XmlElement("coc_file")]
         public string CocFile { get; set; }
 
         /// <summary>
-        /// 企业名称
+        /// 企业名称（支持AES加密）
         /// </summary>
         [XmlElement("company_name")]
         public string CompanyName { get; set; }
 
         /// <summary>
-        /// 经销商企业名称
+        /// 经销商企业名称（支持AES加密）
         /// </summary>
         [XmlElement("dealer_company_name")]
         public string DealerCompanyName { get; set; }
@@ -46,25 +46,25 @@ namespace Aop.Api.Domain
         public long InstallmentPeriods { get; set; }
 
         /// <summary>
-        /// 保险保单文件链接
+        /// 保险保单文件链接（支持AES加密）
         /// </summary>
         [XmlElement("insurance_policy_file")]
         public string InsurancePolicyFile { get; set; }
 
         /// <summary>
-        /// 发票文件链接
+        /// 发票文件链接（支持AES加密）
         /// </summary>
         [XmlElement("invoice_file")]
         public string InvoiceFile { get; set; }
 
         /// <summary>
-        /// 法人代表身份证号
+        /// 法人代表身份证号（支持AES加密）
         /// </summary>
         [XmlElement("legal_representative_cert_no")]
         public string LegalRepresentativeCertNo { get; set; }
 
         /// <summary>
-        /// 法人代表姓名
+        /// 法人代表姓名（支持AES加密）
         /// </summary>
         [XmlElement("legal_representative_name")]
         public string LegalRepresentativeName { get; set; }
@@ -76,13 +76,13 @@ namespace Aop.Api.Domain
         public string LoanAmount { get; set; }
 
         /// <summary>
-        /// 手机号
+        /// 手机号（支持AES加密）
         /// </summary>
         [XmlElement("mobile")]
         public string Mobile { get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 姓名（支持AES加密）
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
@@ -94,7 +94,7 @@ namespace Aop.Api.Domain
         public string Remark { get; set; }
 
         /// <summary>
-        /// 购销合同影像文件链接
+        /// 购销合同影像文件链接（支持AES加密）
         /// </summary>
         [XmlElement("sales_contract_file")]
         public string SalesContractFile { get; set; }
@@ -106,7 +106,7 @@ namespace Aop.Api.Domain
         public string SalesContractId { get; set; }
 
         /// <summary>
-        /// 统一社会信用代码（Unified Social Credit Code）
+        /// 统一社会信用代码（Unified Social Credit Code）（支持AES加密）
         /// </summary>
         [XmlElement("uscc")]
         public string Uscc { get; set; }
@@ -124,7 +124,7 @@ namespace Aop.Api.Domain
         public string VehPrice { get; set; }
 
         /// <summary>
-        /// VIN码
+        /// VIN码（支持AES加密）
         /// </summary>
         [XmlElement("vin")]
         public string Vin { get; set; }

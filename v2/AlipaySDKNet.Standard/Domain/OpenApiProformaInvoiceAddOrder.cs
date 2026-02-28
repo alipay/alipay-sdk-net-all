@@ -47,25 +47,31 @@ namespace Aop.Api.Domain
         public string BuyerInstId { get; set; }
 
         /// <summary>
+        /// 收款币种, 非必填 查询销方银行账户信息时使用, 不传则默认使用priceCcy
+        /// </summary>
+        [XmlElement("collect_ccy")]
+        public string CollectCcy { get; set; }
+
+        /// <summary>
         /// 可选, 是否免税 默认N TaxInvoice+0税率+免税 = debitNote, 即票面不展示税额行 TaxInvoice+0税率+不免税, 票面会展示0税额行
         /// </summary>
         [XmlElement("duty_free")]
         public string DutyFree { get; set; }
 
         /// <summary>
-        /// 费用结束日期  格式(yyyyMMdd)
+        /// 费用结束日期  格式(yyyyMMdd), 若传入则与费用开始日期必须同时存在,  优先级比外部的格式化费用期间feeIntervalFormatStr低 三者都不传则默认取当月
         /// </summary>
         [XmlElement("fee_end_dt")]
         public string FeeEndDt { get; set; }
 
         /// <summary>
-        /// 外部单据传入的用于票面显示的费用期间, 多区间格式化字符串, 使用空格连接 与费用开始结束时间二选一
+        /// 外部单据传入的用于票面显示的费用期间, 多区间格式化字符串, 使用空格连接 优先级比 费用开始与结束时间高, 都不传则默认当月
         /// </summary>
         [XmlElement("fee_interval_format_str")]
         public string FeeIntervalFormatStr { get; set; }
 
         /// <summary>
-        /// 费用开始日期  格式(yyyyMMdd), 若传入则与费用结束日期必须同时存在 与外部的格式化费用期间二选一
+        /// 费用开始日期  格式(yyyyMMdd), 若传入则与费用结束日期必须同时存在,  优先级比外部的格式化费用期间feeIntervalFormatStr低 三者都不传则默认取当月
         /// </summary>
         [XmlElement("fee_start_dt")]
         public string FeeStartDt { get; set; }
@@ -89,7 +95,7 @@ namespace Aop.Api.Domain
         public string InvoiceType { get; set; }
 
         /// <summary>
-        /// 当地本地, 计价币种与当地币种不一致的时候, 需要进行汇率换算, 符合条件的OU会展示税金折算在票面上
+        /// 本地币种, 非必填, 不传时由发票根据ou进行查询 计价币种与当地币种不一致的时候, 需要进行汇率换算, 符合条件的OU会展示税金折算在票面上
         /// </summary>
         [XmlElement("local_ccy")]
         public string LocalCcy { get; set; }

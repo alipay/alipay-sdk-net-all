@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceMedicalHomedoctorUserinfoShareResponse : AopResponse
     {
         /// <summary>
-        /// 用户对外开放openid
+        /// 蚂蚁健康用户对外开放OPEN_ID
         /// </summary>
         [XmlElement("aq_open_id")]
         public string AqOpenId { get; set; }

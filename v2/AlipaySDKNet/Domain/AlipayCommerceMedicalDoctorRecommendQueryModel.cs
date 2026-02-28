@@ -67,10 +67,40 @@ namespace Aop.Api.Domain
         public long Limit { get; set; }
 
         /// <summary>
+        /// 是否补充病例信息
+        /// </summary>
+        [XmlElement("need_case")]
+        public bool NeedCase { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 是否接受手术治疗
+        /// </summary>
+        [XmlElement("operation")]
+        public bool Operation { get; set; }
+
+        /// <summary>
+        /// 患者年龄，单位为天，如10岁，可以传3650。
+        /// </summary>
+        [XmlElement("patient_age")]
+        public long PatientAge { get; set; }
+
+        /// <summary>
+        /// 患者性别
+        /// </summary>
+        [XmlElement("patient_sex")]
+        public string PatientSex { get; set; }
+
+        /// <summary>
+        /// 患者是否怀孕
+        /// </summary>
+        [XmlElement("pregnant_receive")]
+        public bool PregnantReceive { get; set; }
 
         /// <summary>
         /// 价格范围单位元

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string MerchantId { get; set; }
 
         /// <summary>
+        /// 支付宝二级商户编号。 间连受理商户的支付宝商户编号，通过间连商户入驻接口后由支付宝生成。 直付通和机构间连业务场景下必传
+        /// </summary>
+        [XmlElement("merchant_openid")]
+        public string MerchantOpenid { get; set; }
+
+        /// <summary>
         /// 二级商户编号类型。 目前仅支持alipay，默认可以不传
         /// </summary>
         [XmlElement("merchant_type")]

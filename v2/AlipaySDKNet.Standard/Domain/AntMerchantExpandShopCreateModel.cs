@@ -30,7 +30,7 @@ namespace Aop.Api.Domain
         public AddressInfo BusinessAddress { get; set; }
 
         /// <summary>
-        /// 店铺经营时间。
+        /// 门店经营时间。
         /// </summary>
         [XmlArray("business_time")]
         [XmlArrayItem("shop_business_time")]
@@ -49,10 +49,16 @@ namespace Aop.Api.Domain
         public string CertName { get; set; }
 
         /// <summary>
-        /// 证件号码，请填写店铺营业执照号。
+        /// 证件号码，请填写门店营业执照号。
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
+
+        /// <summary>
+        /// 营业执照的开始时间
+        /// </summary>
+        [XmlElement("cert_start_expire_time")]
+        public string CertStartExpireTime { get; set; }
 
         /// <summary>
         /// 证件类型
@@ -68,13 +74,13 @@ namespace Aop.Api.Domain
         public List<ContactInfo> ContactInfos { get; set; }
 
         /// <summary>
-        /// 店铺联系手机号
+        /// 门店联系手机号
         /// </summary>
         [XmlElement("contact_mobile")]
         public string ContactMobile { get; set; }
 
         /// <summary>
-        /// 店铺的联系固定电话
+        /// 门店的联系固定电话
         /// </summary>
         [XmlElement("contact_phone")]
         public string ContactPhone { get; set; }
@@ -86,11 +92,54 @@ namespace Aop.Api.Domain
         public string Cover { get; set; }
 
         /// <summary>
-        /// 扩展信息列表。key值需要向对应行业的bd进行申请。
+        /// 营业执照过期时间
+        /// </summary>
+        [XmlElement("expire_time")]
+        public string ExpireTime { get; set; }
+
+        /// <summary>
+        /// 扩展信息列表。key值需要向对应行业的bd进行申请。 如果是针对神券团购门店的操作，该值必传，且无需向bd申请。
         /// </summary>
         [XmlArray("ext_infos")]
         [XmlArrayItem("shop_ext_info")]
         public List<ShopExtInfo> ExtInfos { get; set; }
+
+        /// <summary>
+        /// 需传入<a href="https://opendocs.alipay.com/apis/api_1*ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。
+        /// </summary>
+        [XmlArray("fund_proofs")]
+        [XmlArrayItem("string")]
+        public List<string> FundProofs { get; set; }
+
+        /// <summary>
+        /// 资金关系说明
+        /// </summary>
+        [XmlElement("fund_type")]
+        public string FundType { get; set; }
+
+        /// <summary>
+        /// 需传入<a href="https://opendocs.alipay.com/apis/api_1*ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。
+        /// </summary>
+        [XmlElement("identity_back_url")]
+        public string IdentityBackUrl { get; set; }
+
+        /// <summary>
+        /// 身份证有效结束时间,国徽面信息
+        /// </summary>
+        [XmlElement("identity_end_time")]
+        public string IdentityEndTime { get; set; }
+
+        /// <summary>
+        /// 需传入<a href="https://opendocs.alipay.com/apis/api_1*ant.merchant.expand.indirect.image.upload">ant.merchant.expand.indirect.image.upload</a> 接口上传图片后得到的 image_id。
+        /// </summary>
+        [XmlElement("identity_front_url")]
+        public string IdentityFrontUrl { get; set; }
+
+        /// <summary>
+        /// 身份证的有效开始时间，国徽面信息
+        /// </summary>
+        [XmlElement("identity_start_time")]
+        public string IdentityStartTime { get; set; }
 
         /// <summary>
         /// 行业信息，例如所属集团、特殊标签
@@ -107,7 +156,7 @@ namespace Aop.Api.Domain
         public List<ShopIndustryLicense> IndustryLicense { get; set; }
 
         /// <summary>
-        /// 当前门店归属的商户角色 ID，表示当前进件的店铺的归属商户。对于直连开店场景，填写商户 PID。对于间连开店场景（线上、线下、直付通），商户SMID
+        /// 当前门店归属的商户角色 ID，表示当前进件的门店的归属商户。对于直连开店场景，填写商户 PID。对于间连开店场景（线上、线下、直付通），商户SMID
         /// </summary>
         [XmlElement("ip_role_id")]
         public string IpRoleId { get; set; }
@@ -176,19 +225,19 @@ namespace Aop.Api.Domain
         public string ShopCategory { get; set; }
 
         /// <summary>
-        /// 主要针对医疗行业门店主体类型进件使用，不同门店认证主体需要相应的主体资质证书。  企业营业执照: ENTERPRISE;  事业单位法人证书: INST_RGST_CTF;  民办非企业单位登记证书 PRIVATE_NON_ENTERPRISE
+        /// 主要针对医疗行业门店主体类型进件使用，不同门店认证主体需要相应的主体资质证书。  企业营业执照：ENTERPRISE;  事业单位法人证书：INST_RGST_CTF;  民办非企业单位登记证书：PRIVATE_NON_ENTERPRISE; 企业（澳门）：AOMEN_ENTERPRISE
         /// </summary>
         [XmlElement("shop_main_type")]
         public string ShopMainType { get; set; }
 
         /// <summary>
-        /// 店铺名称, 由商户定义在支付宝内的店铺名称
+        /// 门店名称, 由商户定义在支付宝内的门店名称
         /// </summary>
         [XmlElement("shop_name")]
         public string ShopName { get; set; }
 
         /// <summary>
-        /// 店铺经营类型，01表示直营，02表示加盟
+        /// 门店经营类型，01表示直营，02表示加盟
         /// </summary>
         [XmlElement("shop_type")]
         public string ShopType { get; set; }

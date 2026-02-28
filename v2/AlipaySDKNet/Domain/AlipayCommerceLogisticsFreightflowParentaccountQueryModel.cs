@@ -38,5 +38,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("mybank_scene_code")]
         public string MybankSceneCode { get; set; }
+
+        /// <summary>
+        /// 如果mode为网商银行，则为网商银行分配,网商银行可不填。 如果mode为浦发银行，则为浦发APP对应的X-SPDB-Client-ID
+        /// </summary>
+        [XmlElement("partner_id")]
+        public string PartnerId { get; set; }
+
+        /// <summary>
+        /// 浦发银行特定场景参数,当mode=SPDB时必选
+        /// </summary>
+        [XmlElement("spdb_spec_params")]
+        public FreightFlowSpdbSpecParams SpdbSpecParams { get; set; }
     }
 }

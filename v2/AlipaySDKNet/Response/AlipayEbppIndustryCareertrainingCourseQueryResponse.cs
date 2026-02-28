@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayEbppIndustryCareertrainingCourseQueryResponse : AopResponse
     {
         /// <summary>
+        /// 行业审核状态
+        /// </summary>
+        [XmlElement("audit_status")]
+        public string AuditStatus { get; set; }
+
+        /// <summary>
         /// 支付宝商品类目
         /// </summary>
         [XmlElement("category_id")]
@@ -136,6 +142,12 @@ namespace Aop.Api.Response
         [XmlArray("head_image_list")]
         [XmlArrayItem("string")]
         public List<string> HeadImageList { get; set; }
+
+        /// <summary>
+        /// 行业展示状态
+        /// </summary>
+        [XmlElement("industry_show_status")]
+        public string IndustryShowStatus { get; set; }
 
         /// <summary>
         /// 课程提交机构编码

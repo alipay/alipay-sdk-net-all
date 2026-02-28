@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DrivingLicenseInfo : AopObject
     {
         /// <summary>
+        /// 行驶证上的地址
+        /// </summary>
+        [XmlElement("address")]
+        public string Address { get; set; }
+
+        /// <summary>
         /// 发动机编号
         /// </summary>
         [XmlElement("engine_number")]

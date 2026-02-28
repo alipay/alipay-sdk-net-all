@@ -92,5 +92,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("request_source")]
         public string RequestSource { get; set; }
+
+        /// <summary>
+        /// 预算时返回的违约金（还款试算不传金额时返回的罚息）
+        /// </summary>
+        [XmlElement("total_violate_fee")]
+        public string TotalViolateFee { get; set; }
     }
 }

@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public GFAOpenAPIReverseBillAcceptance BillAcceptance { get; set; }
 
         /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 16位。支付宝UID或者2088000000000XX0，倒数2、3位数字用来决策LDC ZoneUid和分库位
         /// </summary>
         [XmlElement("principal_id")]

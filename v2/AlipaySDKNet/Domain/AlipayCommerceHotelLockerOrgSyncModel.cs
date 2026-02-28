@@ -112,7 +112,7 @@ namespace Aop.Api.Domain
         public string ProvinceCode { get; set; }
 
         /// <summary>
-        /// 场景类型：学校-SCHOOL，酒店-HOTEL
+        /// 场景类型：学校-SCHOOL，酒店-HOTEL，企业-COMPANY
         /// </summary>
         [XmlElement("scene_type")]
         public string SceneType { get; set; }

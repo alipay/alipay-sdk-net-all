@@ -44,5 +44,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("open_time")]
         public string OpenTime { get; set; }
+
+        /// <summary>
+        /// 跳转链接
+        /// </summary>
+        [XmlElement("redirect_url")]
+        public string RedirectUrl { get; set; }
     }
 }

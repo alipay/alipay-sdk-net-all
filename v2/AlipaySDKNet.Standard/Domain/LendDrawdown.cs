@@ -94,6 +94,12 @@ namespace Aop.Api.Domain
         public string ServiceFeeRate { get; set; }
 
         /// <summary>
+        /// 服务类型信息
+        /// </summary>
+        [XmlElement("service_info")]
+        public CarfinLendServiceInfo ServiceInfo { get; set; }
+
+        /// <summary>
         /// 车辆估值，单位分
         /// </summary>
         [XmlElement("valuate_price")]

@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public AccessParams AccessParams { get; set; }
 
         /// <summary>
-        /// 商户签约号，代扣协议中标示用户的唯一签约号（确保在商户系统中唯一）。 格式规则：支持大写小写字母和数字，最长32位。 商户系统按需自定义传入，用于区分用户在同一产品码、同一签约场景下，签订的多份代扣协议。
+        /// 商户签约号，AI付协议中标示用户的唯一签约号（确保在商户系统中唯一）。 格式规则：支持大写小写字母和数字，最长32位。 商户系统按需自定义传入，用于区分用户在同一产品码、同一签约场景下，签订的多份AI付协议。
         /// </summary>
         [XmlElement("external_agreement_no")]
         public string ExternalAgreementNo { get; set; }

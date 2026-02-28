@@ -77,6 +77,12 @@ namespace Aop.Api.Response
         public string TransferOutAmount { get; set; }
 
         /// <summary>
+        /// 订单解冻金额（整数,单位：分）
+        /// </summary>
+        [XmlElement("un_frozen_amount")]
+        public string UnFrozenAmount { get; set; }
+
+        /// <summary>
         /// 待缴金额（整数，单位：分）
         /// </summary>
         [XmlElement("unpaid_amount")]

@@ -51,6 +51,12 @@ namespace Aop.Api.Response
         public string InPlaceTime { get; set; }
 
         /// <summary>
+        /// 车牌号
+        /// </summary>
+        [XmlElement("license_plate_no")]
+        public string LicensePlateNo { get; set; }
+
+        /// <summary>
         /// 停车时长，单位会自动转换成x小时x分钟
         /// </summary>
         [XmlElement("park_duration_time")]
@@ -75,7 +81,7 @@ namespace Aop.Api.Response
         public string PayUrl { get; set; }
 
         /// <summary>
-        /// 停车费金额
+        /// 停车费金额，人民币
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }

@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayCommerceMedicalHomedoctorOauthCreateRequest : IAopRequest<AlipayCommerceMedicalHomedoctorOauthCreateResponse>
     {
         /// <summary>
-        /// 用于AQ用户换取授权访问令牌和openID
+        /// 用于蚂蚁健康用户换取授权访问令牌和OPEN_ID
         /// </summary>
         public string BizContent { get; set; }
 

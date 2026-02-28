@@ -175,5 +175,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("title")]
         public string Title { get; set; }
+
+        /// <summary>
+        /// 商品素材视频物料信息
+        /// </summary>
+        [XmlArray("video_list")]
+        [XmlArrayItem("video_info")]
+        public List<VideoInfo> VideoList { get; set; }
     }
 }

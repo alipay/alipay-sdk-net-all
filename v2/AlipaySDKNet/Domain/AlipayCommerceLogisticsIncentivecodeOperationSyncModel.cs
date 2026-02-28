@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string IncentiveCode { get; set; }
 
         /// <summary>
+        /// json字符串格式扩展字段，用于扩展业务字段场景 {"key1":"value1","key2":"value2","key3":value3}
+        /// </summary>
+        [XmlElement("log_ext_info")]
+        public string LogExtInfo { get; set; }
+
+        /// <summary>
         /// 商户标识（接口调用方的渠道编码，由支付宝分配）
         /// </summary>
         [XmlElement("logistics_code")]
@@ -40,7 +46,7 @@ namespace Aop.Api.Domain
         public string MaterialType { get; set; }
 
         /// <summary>
-        /// SCAN(用户扫码) SEND_ORDER(用户寄件下单) RECEIVE_SUCCESS（揽收成功）
+        /// SCAN(用户扫码) SEND_ORDER(用户寄件下单) RECEIVE_SUCCESS（揽收成功） EXPRESS_DELIVERY(快递装车)
         /// </summary>
         [XmlElement("operation_dynamic_sales_type")]
         public string OperationDynamicSalesType { get; set; }
@@ -100,7 +106,7 @@ namespace Aop.Api.Domain
         public string PayUrl { get; set; }
 
         /// <summary>
-        /// 运单号 当前字段已废弃(支付成功相关参数，迁移到alipay.commerce.logistics.trade.event.sync接口)
+        /// 运单号
         /// </summary>
         [XmlElement("waybill_no")]
         public string WaybillNo { get; set; }

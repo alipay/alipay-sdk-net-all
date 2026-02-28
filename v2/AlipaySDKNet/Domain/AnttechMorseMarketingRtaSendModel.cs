@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ExtendParams { get; set; }
 
         /// <summary>
+        /// 用户登陆id
+        /// </summary>
+        [XmlElement("login_id")]
+        public string LoginId { get; set; }
+
+        /// <summary>
         /// 支付宝登录账号，唯一确定发奖的支付宝账号信息，采用登录名用encryption_type加密方式加密获取的值，login_id_encryption、cert_encryption、mobile_encryption不能同时为空，优先级依次递减
         /// </summary>
         [XmlElement("login_id_encryption")]
@@ -68,5 +74,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_pass_time")]
         public string UserPassTime { get; set; }
+
+        /// <summary>
+        /// 券金额，单位分
+        /// </summary>
+        [XmlElement("voucher_amount")]
+        public long VoucherAmount { get; set; }
     }
 }

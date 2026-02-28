@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -28,7 +29,14 @@ namespace Aop.Api.Domain
         public string CommissionRatio { get; set; }
 
         /// <summary>
-        /// 抽佣关系列表
+        /// null
+        /// </summary>
+        [XmlArray("commission_relation_info_list")]
+        [XmlArrayItem("commission_relation_d_t_o")]
+        public List<CommissionRelationDTO> CommissionRelationInfoList { get; set; }
+
+        /// <summary>
+        /// 抽佣关系列表 当前字段已废弃(数据结构定义需要调整为数组)
         /// </summary>
         [XmlElement("commission_relation_list")]
         public CommissionRelationDTO CommissionRelationList { get; set; }

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DesignatedDriverInfo : AopObject
     {
         /// <summary>
+        /// 某个服务商传参异常，此字段用于兜底。正确的需要使用contact_phone字段
+        /// </summary>
+        [XmlElement("concat_phone")]
+        public string ConcatPhone { get; set; }
+
+        /// <summary>
         /// 司机电话 明文传输，不允许为固定电话或其他格式的电话
         /// </summary>
         [XmlElement("contact_phone")]

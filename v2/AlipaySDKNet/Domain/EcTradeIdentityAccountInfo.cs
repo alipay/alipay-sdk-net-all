@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class EcTradeIdentityAccountInfo : AopObject
     {
         /// <summary>
+        /// 门店间连收单账号认证绑定的UID
+        /// </summary>
+        [XmlElement("bind_uid")]
+        public string BindUid { get; set; }
+
+        /// <summary>
         /// 门店收单在企业码业务场景不可用原因
         /// </summary>
         [XmlElement("invalid_reason")]

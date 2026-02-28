@@ -42,6 +42,12 @@ namespace Aop.Api.Domain
         public List<string> ProxyInvalidFileList { get; set; }
 
         /// <summary>
+        /// 绿本收件人地址
+        /// </summary>
+        [XmlElement("receiver_info")]
+        public XhExpressPostInfo ReceiverInfo { get; set; }
+
+        /// <summary>
         /// 拒绝原因
         /// </summary>
         [XmlElement("refuse_msg")]

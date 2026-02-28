@@ -166,6 +166,13 @@ namespace Aop.Api.Response
         public List<RentOrderStatementInfoVO> RentStatementInfos { get; set; }
 
         /// <summary>
+        /// 服务单列表
+        /// </summary>
+        [XmlArray("service_ticket_infos")]
+        [XmlArrayItem("rent_service_ticket_info")]
+        public List<RentServiceTicketInfo> ServiceTicketInfos { get; set; }
+
+        /// <summary>
         /// 结算方式
         /// </summary>
         [XmlElement("settle_type")]

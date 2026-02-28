@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string ProductId { get; set; }
 
         /// <summary>
+        /// TPA编号
+        /// </summary>
+        [XmlElement("tpa_id")]
+        public string TpaId { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

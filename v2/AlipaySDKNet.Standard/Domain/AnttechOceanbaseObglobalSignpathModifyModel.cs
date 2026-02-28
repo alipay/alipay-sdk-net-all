@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string ObSignOtherPartySubjectName { get; set; }
 
         /// <summary>
+        /// 我方签约主体
+        /// </summary>
+        [XmlElement("our_sign_subject")]
+        public string OurSignSubject { get; set; }
+
+        /// <summary>
         /// 签约路径枚举
         /// </summary>
         [XmlElement("sign_path")]

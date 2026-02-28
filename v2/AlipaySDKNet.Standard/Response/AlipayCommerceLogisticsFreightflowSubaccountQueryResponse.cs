@@ -13,5 +13,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("account_balance")]
         public string AccountBalance { get; set; }
+
+        /// <summary>
+        /// 可用余额,单位为分.
+        /// </summary>
+        [XmlElement("actual_balance")]
+        public string ActualBalance { get; set; }
+
+        /// <summary>
+        /// 冻结金额,单位为分
+        /// </summary>
+        [XmlElement("freeze_amt")]
+        public string FreezeAmt { get; set; }
     }
 }

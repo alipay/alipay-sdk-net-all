@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public string AlipayLogonId { get; set; }
 
         /// <summary>
-        /// 代扣协议中标示用户的唯一签约号(确保在商户系统中 唯一)。 格式规则:支持大写小写字母和数字，最长 32 位。
+        /// AI付协议中标示用户的唯一签约号(确保在商户系统中 唯一)。 格式规则:支持大写小写字母和数字，最长 32 位。
         /// </summary>
         [XmlElement("external_agreement_no")]
         public string ExternalAgreementNo { get; set; }
@@ -43,6 +43,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("invalid_time")]
         public string InvalidTime { get; set; }
+
+        /// <summary>
+        /// 授权主体信息
+        /// </summary>
+        [XmlElement("principal_id")]
+        public string PrincipalId { get; set; }
 
         /// <summary>
         /// 协议当前状态 1. TEMP：暂存，协议未生效过； 2. NORMAL：正常； 3. STOP：暂停

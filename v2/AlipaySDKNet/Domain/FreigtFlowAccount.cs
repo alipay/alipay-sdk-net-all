@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class FreigtFlowAccount : AopObject
     {
         /// <summary>
-        /// 银行类型，如果为网商银行则传 ANT_MYBANK(网商银行)
+        /// 银行类型
         /// </summary>
         [XmlElement("bank_id")]
         public string BankId { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BankName { get; set; }
 
         /// <summary>
-        /// 网商结算户账号
+        /// mode为网商银行时网商结算户账号, mode为浦发银行为对应的监管账户
         /// </summary>
         [XmlElement("parent_id")]
         public string ParentId { get; set; }

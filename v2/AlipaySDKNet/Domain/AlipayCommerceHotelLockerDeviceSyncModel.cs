@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string DeviceIsvCode { get; set; }
 
         /// <summary>
+        /// 蓝牙mac地址
+        /// </summary>
+        [XmlElement("device_mac")]
+        public string DeviceMac { get; set; }
+
+        /// <summary>
         /// 设备名称
         /// </summary>
         [XmlElement("device_name")]
@@ -76,7 +82,7 @@ namespace Aop.Api.Domain
         public bool Effective { get; set; }
 
         /// <summary>
-        /// 房间楼层
+        /// 房间楼层，例如1楼，-1楼
         /// </summary>
         [XmlElement("floor")]
         public string Floor { get; set; }

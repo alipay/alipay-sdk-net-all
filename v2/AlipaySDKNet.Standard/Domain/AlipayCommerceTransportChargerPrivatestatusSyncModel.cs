@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string OperatorUid { get; set; }
 
         /// <summary>
-        /// 设备状态
+        /// 设备状态，当设备类型为智能开关时，设备状态只有02、03、99
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

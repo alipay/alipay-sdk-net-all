@@ -46,7 +46,7 @@ namespace Aop.Api.Domain
         public string ItemUnit { get; set; }
 
         /// <summary>
-        /// 单价（元，整数最长七位，小数最长六位）
+        /// 单价（元，整数最长七位，小数最长八位）
         /// </summary>
         [XmlElement("item_unit_amount")]
         public string ItemUnitAmount { get; set; }

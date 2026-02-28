@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public bool NeedBlockCheck { get; set; }
 
         /// <summary>
-        /// 默认手机号-MOBILE 会员id-MEMBER_ID 支付宝openid-OPEN_ID
+        /// 默认手机号-MOBILE 会员id-MEMBER_ID 支付宝openid-OPEN_ID，支付宝userid-USER_ID
         /// </summary>
         [XmlElement("user_relate_type")]
         public string UserRelateType { get; set; }

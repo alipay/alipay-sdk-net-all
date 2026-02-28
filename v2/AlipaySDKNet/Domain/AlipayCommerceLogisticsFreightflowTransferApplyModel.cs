@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string Memo { get; set; }
 
         /// <summary>
-        /// 银行管理模式  ANT_MYBANK(网商银行模式)
+        /// 银行管理模式
         /// </summary>
         [XmlElement("mode")]
         public string Mode { get; set; }
@@ -82,13 +82,19 @@ namespace Aop.Api.Domain
         public string RequestTime { get; set; }
 
         /// <summary>
-        /// 交易用途
+        /// 浦发银行特定场景参数,当mode=SPDB时必选
+        /// </summary>
+        [XmlElement("spdb_spec_params")]
+        public FreightFlowSpdbSpecParams SpdbSpecParams { get; set; }
+
+        /// <summary>
+        /// 当与运企付约定了需要传递安全字段时,交易用途字段必传
         /// </summary>
         [XmlElement("trans_purpose")]
         public string TransPurpose { get; set; }
 
         /// <summary>
-        /// 运单信息
+        /// 当约定了需要传递安全字段时,运单信息字段必传
         /// </summary>
         [XmlElement("waybill_info")]
         public FreightFlowWaybillInfo WaybillInfo { get; set; }

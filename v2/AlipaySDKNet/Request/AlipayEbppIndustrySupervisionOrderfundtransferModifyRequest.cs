@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayEbppIndustrySupervisionOrderfundtransferModifyRequest : IAopRequest<AlipayEbppIndustrySupervisionOrderfundtransferModifyResponse>
     {
         /// <summary>
-        /// 用户未确前、提供可修改划拨单金额的能力
+        /// 用户未确认前、提供可修改划拨单金额的能力
         /// </summary>
         public string BizContent { get; set; }
 

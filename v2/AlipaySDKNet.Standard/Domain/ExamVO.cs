@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class ExamVO : AopObject
     {
         /// <summary>
+        /// 行业审核状态
+        /// </summary>
+        [XmlElement("audit_status")]
+        public string AuditStatus { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("certificate_code_list")]
@@ -73,6 +79,12 @@ namespace Aop.Api.Domain
         [XmlArray("head_image_list")]
         [XmlArrayItem("string")]
         public List<string> HeadImageList { get; set; }
+
+        /// <summary>
+        /// 行业展示状态
+        /// </summary>
+        [XmlElement("industry_show_status")]
+        public string IndustryShowStatus { get; set; }
 
         /// <summary>
         /// 考试定价最大值,单位:分 599元需填写的值为59900 maxPrice和minPrice都填写时, minPrice<=maxPrice

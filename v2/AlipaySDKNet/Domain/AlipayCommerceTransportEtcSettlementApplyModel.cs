@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string CarType { get; set; }
 
         /// <summary>
-        /// 1、收费站出口名称 2、格式为省份+收费站名，比如“黑龙江瓦盆窑西站”
+        /// 1、收费站出口名称 2、格式为省份+收费站名，比如“黑龙江瓦盆窑西站” 3、直辖市格式为市名+收费站名，比如“北京市瓦盆窑西站”
         /// </summary>
         [XmlElement("end_station_name")]
         public string EndStationName { get; set; }
@@ -78,7 +78,7 @@ namespace Aop.Api.Domain
         public string SellerId { get; set; }
 
         /// <summary>
-        /// 1、收费站入口名称 2、格式为省份+收费站名，比如“黑龙江瓦盆窑西站”
+        /// 1、收费站入口名称 2、格式为省份+收费站名，比如“黑龙江瓦盆窑西站” 3、直辖市格式为市名+收费站名，比如“北京市瓦盆窑西站”
         /// </summary>
         [XmlElement("start_station_name")]
         public string StartStationName { get; set; }

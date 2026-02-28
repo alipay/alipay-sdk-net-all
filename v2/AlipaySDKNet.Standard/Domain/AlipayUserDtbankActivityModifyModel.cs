@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayUserDtbankActivityModifyModel : AopObject
     {
         /// <summary>
-        /// 数字分行活动唯一id
+        /// 数字分行活动唯一id，支持天天减和智银管家
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string ModifyType { get; set; }
 
         /// <summary>
-        /// 追加金额：单位分； 活动结束时间：精确到秒，格式为2020-01-01 00:00:00
+        /// 追加金额：单位分，解决方案最低追加0.1元，其他活动类型最低追加0.01元；活动结束时间：精确到秒，格式为2020-01-01 00:00:00
         /// </summary>
         [XmlElement("modify_value")]
         public string ModifyValue { get; set; }

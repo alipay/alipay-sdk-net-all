@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string CertPicType { get; set; }
 
         /// <summary>
-        /// 证件图片,通过调用 ant.merchant.expand.indirect.image.upload(图片上传)接口返回的image_id作为参数
+        /// 证件图片,通过调用 <a href="https://isp-fe-tern.alipay.com/legacy/my/openApiDetailAndApply?apiId=24075&operateType=detail">ant.merchant.expand.indirect.image.upload</a>(图片上传)接口返回的image_id作为参数
         /// </summary>
         [XmlArray("cert_pics")]
         [XmlArrayItem("string")]

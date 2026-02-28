@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string InspectQuantity { get; set; }
 
         /// <summary>
+        /// 产品类目编码
+        /// </summary>
+        [XmlElement("product_category_code")]
+        public string ProductCategoryCode { get; set; }
+
+        /// <summary>
         /// 回收商品单位
         /// </summary>
         [XmlElement("unit_type")]

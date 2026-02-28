@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public bool EarlyRepay { get; set; }
 
         /// <summary>
+        /// 按期还，提前还款手续费率：4【即4%】
+        /// </summary>
+        [XmlElement("fee_rate")]
+        public string FeeRate { get; set; }
+
+        /// <summary>
         /// 还款方式，枚举值：1-等额本息(灵活还)，2-等额本金(灵活还)，3-先息后本(灵活还)，4-等额本息(按期还)
         /// </summary>
         [XmlElement("repay_method")]

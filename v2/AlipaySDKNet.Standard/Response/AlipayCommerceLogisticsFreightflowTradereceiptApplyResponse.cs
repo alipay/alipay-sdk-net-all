@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("pdf_download_url")]
         public string PdfDownloadUrl { get; set; }
+
+        /// <summary>
+        /// 电子回单下载的文件是否已生成
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
     }
 }

@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public DMVLocation DmvLocation { get; set; }
 
         /// <summary>
+        /// 行驶证信息
+        /// </summary>
+        [XmlElement("driving_license_info")]
+        public DrivingLicenseInfo DrivingLicenseInfo { get; set; }
+
+        /// <summary>
         /// 文件列表
         /// </summary>
         [XmlArray("file_list")]
@@ -47,6 +53,18 @@ namespace Aop.Api.Domain
         [XmlArray("postback_list")]
         [XmlArrayItem("string")]
         public List<string> PostbackList { get; set; }
+
+        /// <summary>
+        /// 回传场景，默认为空
+        /// </summary>
+        [XmlElement("postback_scene")]
+        public string PostbackScene { get; set; }
+
+        /// <summary>
+        /// 登记证信息
+        /// </summary>
+        [XmlElement("registration_info")]
+        public CarfinRegistrationInfo RegistrationInfo { get; set; }
 
         /// <summary>
         /// 车辆估值信息，详情见下面ValuationInfo参数

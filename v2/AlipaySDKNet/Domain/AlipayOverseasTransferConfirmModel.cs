@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string PayerPaymentMethod { get; set; }
 
         /// <summary>
+        /// 收款人收款渠道，后续汇款接入以code进行区分
+        /// </summary>
+        [XmlElement("receipt_channel_code")]
+        public string ReceiptChannelCode { get; set; }
+
+        /// <summary>
         /// 汇款用户汇款的金额
         /// </summary>
         [XmlElement("transfer_from_amount")]

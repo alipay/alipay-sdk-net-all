@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,13 +11,20 @@ namespace Aop.Api.Domain
     public class AntMerchantExpandShopCloseModel : AopObject
     {
         /// <summary>
+        /// 扩展信息列表。key值需要向对应行业的bd进行申请。 如果是针对神券团购门店的操作，该值必传，且无需向bd申请。
+        /// </summary>
+        [XmlArray("ext_infos")]
+        [XmlArrayItem("shop_ext_info")]
+        public List<ShopExtInfo> ExtInfos { get; set; }
+
+        /// <summary>
         /// 商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid。若未传入shop_id 则本参数与store_id均必填。
         /// </summary>
         [XmlElement("ip_role_id")]
         public string IpRoleId { get; set; }
 
         /// <summary>
-        /// 支付宝侧蚂蚁店铺 id。传入本参数后可不填 store_id 及 ip_role_id。
+        /// 支付宝侧蚂蚁门店 id。传入本参数后可不填 store_id 及 ip_role_id。
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }

@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string UserCertNo { get; set; }
 
         /// <summary>
-        /// 学生或教职工的证件类型。可选的字段枚举说明：{1:居民身份证; RP_HK_MC:港澳居民居住证; RP_TAIWAN:台湾居民居住证}。OPEN_SMALL_POUCH时可选，其他情况必填
+        /// 学生或教职工的证件类型。可选的字段枚举说明：{1:居民身份证; RP_HK_MC:港澳居民居住证; RP_TAIWAN:台湾居民居住证；A:护照；X:学工号}。OPEN_SMALL_POUCH时可选，其他情况必填
         /// </summary>
         [XmlElement("user_cert_type")]
         public string UserCertType { get; set; }

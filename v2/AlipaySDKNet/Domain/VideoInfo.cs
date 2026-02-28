@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public long Duration { get; set; }
 
         /// <summary>
+        /// 商品视频首帧图片链接
+        /// </summary>
+        [XmlElement("first_frame_url")]
+        public string FirstFrameUrl { get; set; }
+
+        /// <summary>
         /// 视频高度
         /// </summary>
         [XmlElement("height")]

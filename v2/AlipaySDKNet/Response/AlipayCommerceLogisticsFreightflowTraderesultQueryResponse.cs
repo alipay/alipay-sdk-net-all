@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -43,6 +44,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("request_time")]
         public string RequestTime { get; set; }
+
+        /// <summary>
+        /// 浦发银行交易结果明细复杂对象
+        /// </summary>
+        [XmlElement("spdb_trade_query_result_detail")]
+        public FreightFlowSpdbTradeQueryResultDetail SpdbTradeQueryResultDetail { get; set; }
 
         /// <summary>
         /// 状态(成功, 失败, 处理中)

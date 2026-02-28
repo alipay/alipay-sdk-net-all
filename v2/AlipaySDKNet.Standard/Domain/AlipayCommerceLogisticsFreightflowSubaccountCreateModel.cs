@@ -70,13 +70,19 @@ namespace Aop.Api.Domain
         public FreigtFlowAccount ParentInfo { get; set; }
 
         /// <summary>
-        /// 如果mode为网商银行，则为网商银行分配
+        /// 如果mode为网商银行，则为网商银行分配。 如果mode为浦发银行，则为浦发APP对应的X-SPDB-Client-ID
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }
 
         /// <summary>
-        /// 运企付开户时子户归属人信息,网货平台必填
+        /// 浦发银行特定场景参数,当mode=SPDB时必选
+        /// </summary>
+        [XmlElement("spdb_spec_params")]
+        public FreightFlowSpdbSpecParams SpdbSpecParams { get; set; }
+
+        /// <summary>
+        /// mode为网商银行时,且物流商为网货平台时,需要传入子户归属人
         /// </summary>
         [XmlElement("sub_account_owner_info")]
         public FreightFlowSubAccountOwnerInfo SubAccountOwnerInfo { get; set; }

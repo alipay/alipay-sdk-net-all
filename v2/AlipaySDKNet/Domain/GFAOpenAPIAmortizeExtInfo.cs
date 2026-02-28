@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string GmtValid { get; set; }
 
         /// <summary>
+        /// 退摊销金额
+        /// </summary>
+        [XmlElement("refund_amortize_amount")]
+        public string RefundAmortizeAmount { get; set; }
+
+        /// <summary>
         /// 同 out_business_no 下业财已受理的总摊销金额（单位：各币种的“元”单位，精确到小数点后两位）
         /// </summary>
         [XmlElement("total_amortize_amount")]

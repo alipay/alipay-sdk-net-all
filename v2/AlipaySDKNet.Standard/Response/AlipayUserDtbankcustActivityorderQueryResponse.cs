@@ -31,5 +31,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 券平台唯一id
+        /// </summary>
+        [XmlElement("voucher_id")]
+        public string VoucherId { get; set; }
     }
 }

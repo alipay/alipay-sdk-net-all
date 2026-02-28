@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string SessionId { get; set; }
 
         /// <summary>
+        /// 可以直接使用的前端协议内容
+        /// </summary>
+        [XmlElement("show_contents")]
+        public string ShowContents { get; set; }
+
+        /// <summary>
         /// 推送轮次
         /// </summary>
         [XmlElement("turn")]

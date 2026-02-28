@@ -83,6 +83,13 @@ namespace Aop.Api.Domain
         public List<string> HosUniqCodeList { get; set; }
 
         /// <summary>
+        /// 原始科室名称
+        /// </summary>
+        [XmlArray("hospital_depart_name_list")]
+        [XmlArrayItem("string")]
+        public List<string> HospitalDepartNameList { get; set; }
+
+        /// <summary>
         /// LBS纬度
         /// </summary>
         [XmlElement("latitude")]
@@ -99,6 +106,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 挂号订单属性
+        /// </summary>
+        [XmlElement("order_prop")]
+        public string OrderProp { get; set; }
 
         /// <summary>
         /// 分页key

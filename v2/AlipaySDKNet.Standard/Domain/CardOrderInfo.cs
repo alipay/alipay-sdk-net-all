@@ -138,6 +138,12 @@ namespace Aop.Api.Domain
         public string GmtExpired { get; set; }
 
         /// <summary>
+        /// 最近一次延期的延期单
+        /// </summary>
+        [XmlElement("latest_expand_order_info")]
+        public CardExpandOrderInfo LatestExpandOrderInfo { get; set; }
+
+        /// <summary>
         /// merchant_pid
         /// </summary>
         [XmlElement("merchant_pid")]

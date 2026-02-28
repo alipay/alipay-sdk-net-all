@@ -71,5 +71,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }
+
+        /// <summary>
+        /// 查询条件：筛选升级投诉任务
+        /// </summary>
+        [XmlElement("upgrade")]
+        public bool Upgrade { get; set; }
     }
 }

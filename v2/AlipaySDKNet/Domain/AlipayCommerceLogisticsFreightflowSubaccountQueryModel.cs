@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string LogisticsCode { get; set; }
 
         /// <summary>
-        /// 银行管理模式。 本期： ANT_MYBANK(网商银行模式)
+        /// 银行管理模式。  ANT_MYBANK(网商银行模式) SPDB(浦发银行模式)
         /// </summary>
         [XmlElement("mode")]
         public string Mode { get; set; }
@@ -50,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }
+
+        /// <summary>
+        /// 浦发银行特定场景参数,当mode=SPDB时必选
+        /// </summary>
+        [XmlElement("spdb_spec_params")]
+        public FreightFlowSpdbSpecParams SpdbSpecParams { get; set; }
 
         /// <summary>
         /// 子户卡号

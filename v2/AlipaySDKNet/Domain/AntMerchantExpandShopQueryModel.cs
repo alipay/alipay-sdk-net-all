@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AddressVersion { get; set; }
 
         /// <summary>
+        /// 团购门店业务类型来源
+        /// </summary>
+        [XmlElement("biz_source")]
+        public string BizSource { get; set; }
+
+        /// <summary>
         /// 商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid
         /// </summary>
         [XmlElement("ip_role_id")]
@@ -40,10 +46,16 @@ namespace Aop.Api.Domain
         public string NeedRecommend { get; set; }
 
         /// <summary>
-        /// 蚂蚁店铺id
+        /// 蚂蚁门店id
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }
+
+        /// <summary>
+        /// 门店经营类型，01表示直营，02表示加盟
+        /// </summary>
+        [XmlElement("shop_type")]
+        public string ShopType { get; set; }
 
         /// <summary>
         /// 门店编号，表示该门店在该商户角色id(直连pid，间连smid)下，由商户自己定义的外部门店编号

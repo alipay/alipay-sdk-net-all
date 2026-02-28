@@ -60,7 +60,7 @@ namespace Aop.Api.Domain
         public string PayNotifyUrl { get; set; }
 
         /// <summary>
-        /// 从交易创建时间开始计算。 该笔支付允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。 租赁代扣默认值为5m、JSAPI支付默认值30m
+        /// 从交易创建时间开始计算。 该笔支付允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。 租赁代扣和预授权支付默认值为5m、JSAPI支付默认值30m
         /// </summary>
         [XmlElement("pay_timeout_express")]
         public string PayTimeoutExpress { get; set; }

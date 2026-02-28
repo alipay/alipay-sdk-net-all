@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类型，身份证：IDENTITY_CARD。传入时需要传入证件号，不传默认填充身份证。
+        /// 证件类型，传入证件号的同时需要传入证件类型，不传默认填充身份证。 身份证：IDENTITY_CARD 护照：PASSPORT 港澳居民通行证：HOME_VISIT_PERMIT_HK_MC 台湾居民通行证：HOME_VISIT_PERMIT_TAIWAN 港澳居民居住证：RESIDENCE_PERMIT_HK_MC 台湾居民居住证：RESIDENCE_PERMIT_TAIWAN 外国人永久居留证：PERMANENT_RESIDENCE_FOREIGNER
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }

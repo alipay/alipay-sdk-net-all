@@ -181,6 +181,12 @@ namespace Aop.Api.Domain
         public string ShowUrl { get; set; }
 
         /// <summary>
+        /// 购物车下单页商品维度回调信息，传入一个json化的mp
+        /// </summary>
+        [XmlElement("submit_order_callback_item_ext_str")]
+        public string SubmitOrderCallbackItemExtStr { get; set; }
+
+        /// <summary>
         /// 演出票务信息
         /// </summary>
         [XmlElement("ticket_info")]

@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayDataDataserviceBillDownloadurlQueryResponse : AopResponse
     {
         /// <summary>
-        /// 账单下载地址链接，获取连接后30秒后未下载，链接地址失效。
+        /// 当账单可获取时，返回账单下载地址链接，获取链接后30秒后未下载，链接地址失效。
         /// </summary>
         [XmlElement("bill_download_url")]
         public string BillDownloadUrl { get; set; }

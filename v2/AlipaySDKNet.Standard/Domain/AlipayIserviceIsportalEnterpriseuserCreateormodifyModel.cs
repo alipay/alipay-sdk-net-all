@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayIserviceIsportalEnterpriseuserCreateormodifyModel : AopObject
     {
         /// <summary>
-        /// 用户账号
+        /// 用户账号信息： tntInstId(租户id) account(账号) status(用户状态) orgId(组织架构id)
         /// </summary>
         [XmlElement("account")]
         public string Account { get; set; }

@@ -162,6 +162,12 @@ namespace Aop.Api.Domain
         public string ServiceFeeRate { get; set; }
 
         /// <summary>
+        /// 服务类型
+        /// </summary>
+        [XmlElement("service_info")]
+        public CarfinLendServiceInfo ServiceInfo { get; set; }
+
+        /// <summary>
         /// CANCEL_FAIL: 取消失败（适用于客户挽回成功的场景，经联系后客户愿意继续办理） CANCEL_SUC: 取消成功（适用于客户确定放弃的场景，机构侧后续不能联系客户）
         /// </summary>
         [XmlElement("status")]

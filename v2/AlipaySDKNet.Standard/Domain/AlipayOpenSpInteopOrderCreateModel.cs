@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenSpInteopOrderCreateModel : AopObject
     {
         /// <summary>
-        /// 账号
+        /// 商户支付宝账号。如果作业子项中包含代商户入驻，则不传递此参数
         /// </summary>
         [XmlElement("account")]
         public string Account { get; set; }

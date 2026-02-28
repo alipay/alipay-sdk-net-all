@@ -11,6 +11,24 @@ namespace Aop.Api.Domain
     public class MerchantCardTemplate : AopObject
     {
         /// <summary>
+        /// 不传时默认卡商品类型
+        /// </summary>
+        [XmlElement("ax_item_type")]
+        public string AxItemType { get; set; }
+
+        /// <summary>
+        /// 最晚改约时限。最晚提前x小时可改约。取值范围[1, 24]，整数
+        /// </summary>
+        [XmlElement("booking_cancel_deadline")]
+        public string BookingCancelDeadline { get; set; }
+
+        /// <summary>
+        /// 预约模式。
+        /// </summary>
+        [XmlElement("booking_mode")]
+        public string BookingMode { get; set; }
+
+        /// <summary>
         /// 违约金信息
         /// </summary>
         [XmlElement("break_costs_info")]
@@ -30,19 +48,19 @@ namespace Aop.Api.Domain
         public string CardTemplateAppId { get; set; }
 
         /// <summary>
-        /// 支付宝侧卡ID，创建接口不需要传
+        /// 支付宝侧商品ID，创建接口不需要传
         /// </summary>
         [XmlElement("card_template_id")]
         public string CardTemplateId { get; set; }
 
         /// <summary>
-        /// 卡名称（当card_type=AXF_MONEY_CARD时，查询会返回）
+        /// 商品名称（当card_type=AXF_MONEY_CARD时，查询会返回）
         /// </summary>
         [XmlElement("card_template_name")]
         public string CardTemplateName { get; set; }
 
         /// <summary>
-        /// 卡状态，创建接口不需要传
+        /// 商品状态，创建接口不需要传
         /// </summary>
         [XmlElement("card_template_status")]
         public string CardTemplateStatus { get; set; }
@@ -99,6 +117,19 @@ namespace Aop.Api.Domain
         [XmlArray("image_url_list")]
         [XmlArrayItem("string")]
         public List<string> ImageUrlList { get; set; }
+
+        /// <summary>
+        /// 商品属性。具体所需属性见类目模版查询接口
+        /// </summary>
+        [XmlArray("item_attrs")]
+        [XmlArrayItem("axf_item_attr")]
+        public List<AxfItemAttr> ItemAttrs { get; set; }
+
+        /// <summary>
+        /// 商品类目，具体可使用类目见类目查询接口。
+        /// </summary>
+        [XmlElement("item_category_code")]
+        public string ItemCategoryCode { get; set; }
 
         /// <summary>
         /// 金额卡的必要参数。其他卡类型无需传入

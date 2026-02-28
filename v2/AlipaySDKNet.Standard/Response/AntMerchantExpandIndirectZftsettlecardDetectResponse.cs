@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("consistent")]
         public bool Consistent { get; set; }
+
+        /// <summary>
+        /// 结算信息核对不一致的原因
+        /// </summary>
+        [XmlElement("inconsistency_reason")]
+        public string InconsistencyReason { get; set; }
     }
 }

@@ -56,37 +56,37 @@ namespace Aop.Api.Domain
         public string BusinessDimension1 { get; set; }
 
         /// <summary>
-        /// 见分析维度1描述
+        /// 智科业务是：外部合约号outContractId，前端给到参数“outContractId=XXXX”
         /// </summary>
         [XmlElement("business_dimension_2")]
         public string BusinessDimension2 { get; set; }
 
         /// <summary>
-        /// 见分析维度1描述
+        /// 智科业务是：外部合约号outContractId，前端给到参数“outContractId=XXXX”
         /// </summary>
         [XmlElement("business_dimension_3")]
         public string BusinessDimension3 { get; set; }
 
         /// <summary>
-        /// 见分析维度1描述
+        /// 智科业务是：外部合约号outContractId，前端给到参数“outContractId=XXXX”
         /// </summary>
         [XmlElement("business_dimension_4")]
         public string BusinessDimension4 { get; set; }
 
         /// <summary>
-        /// 见分析维度1描述
+        /// 智科业务是：外部合约号outContractId，前端给到参数“outContractId=XXXX”
         /// </summary>
         [XmlElement("business_dimension_5")]
         public string BusinessDimension5 { get; set; }
 
         /// <summary>
-        /// 见分析维度1描述
+        /// 智科业务是：外部合约号outContractId，前端给到参数“outContractId=XXXX”
         /// </summary>
         [XmlElement("business_dimension_6")]
         public string BusinessDimension6 { get; set; }
 
         /// <summary>
-        /// 见分析维度1描述
+        /// 智科业务是：外部合约号outContractId，前端给到参数“outContractId=XXXX”
         /// </summary>
         [XmlElement("business_dimension_7")]
         public string BusinessDimension7 { get; set; }

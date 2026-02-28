@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string CarModelId { get; set; }
 
         /// <summary>
+        /// 车辆标签
+        /// </summary>
+        [XmlElement("lable")]
+        public string Lable { get; set; }
+
+        /// <summary>
         /// 车级名称
         /// </summary>
         [XmlElement("name")]
