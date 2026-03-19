@@ -1,6 +1,7 @@
 using System;
 using System.Xml.Serialization;
 using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Response
     /// </summary>
     public class ZhimaCreditEpAssistantMembershippackageCreateResponse : AopResponse
     {
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("license_detail_list")]
+        [XmlArrayItem("assistant_license_info")]
+        public List<AssistantLicenseInfo> LicenseDetailList { get; set; }
+
         /// <summary>
         /// null
         /// </summary>

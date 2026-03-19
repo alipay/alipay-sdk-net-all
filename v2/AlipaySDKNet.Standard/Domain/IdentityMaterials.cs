@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class IdentityMaterials : AopObject
     {
         /// <summary>
+        /// 材料补充类型
+        /// </summary>
+        [XmlElement("content_type")]
+        public string ContentType { get; set; }
+
+        /// <summary>
         /// 补充材料话术
         /// </summary>
         [XmlElement("description")]

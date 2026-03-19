@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("agent_voice_sid")]
         public string AgentVoiceSid { get; set; }
+
+        /// <summary>
+        /// 流式语音初始化信息，用于后续调用支付SDK做流式建连
+        /// </summary>
+        [XmlElement("stream_voice_init_info")]
+        public string StreamVoiceInitInfo { get; set; }
     }
 }

@@ -136,13 +136,19 @@ namespace Aop.Api.Domain
         public bool Notice { get; set; }
 
         /// <summary>
-        /// 实付金额
+        /// 问诊订单商品名称
+        /// </summary>
+        [XmlElement("product_name")]
+        public string ProductName { get; set; }
+
+        /// <summary>
+        /// 实付金额，单位：元
         /// </summary>
         [XmlElement("real_amount")]
         public string RealAmount { get; set; }
 
         /// <summary>
-        /// 退款金额
+        /// 退款金额，单位：元
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }

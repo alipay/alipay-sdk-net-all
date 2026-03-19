@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BindStatus { get; set; }
 
         /// <summary>
+        /// 线圈编号
+        /// </summary>
+        [XmlElement("coil_no")]
+        public string CoilNo { get; set; }
+
+        /// <summary>
         /// 点位id
         /// </summary>
         [XmlElement("position_id")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayPayAgentVoiceUploadRequest : IAopRequest<AlipayPayAgentVoiceUploadResponse>
     {
         /// <summary>
-        /// 智能体商户将用户语音上传，用于后续智能体代理支付流程中的语音核验，进行声纹核身支付
+        /// 批式语音场景：智能体商户将用户语音上传，用于后续智能体代理支付流程中的语音核验，进行声纹核身支付 流式语音场景：智能体商户进行流式语音初始化，用于后续智能体代理支付的建连和支付中声纹核身支付
         /// </summary>
         public string BizContent { get; set; }
 

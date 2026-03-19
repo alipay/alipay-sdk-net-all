@@ -48,6 +48,12 @@ namespace Aop.Api.Response
         public List<string> CardBinList { get; set; }
 
         /// <summary>
+        /// 组合券包优惠信息
+        /// </summary>
+        [XmlElement("combine_prize_discount_info")]
+        public CombinePrizeDiscountInfo CombinePrizeDiscountInfo { get; set; }
+
+        /// <summary>
         /// 红包发放之后的生效时间配置
         /// </summary>
         [XmlElement("coupon_effect_time")]

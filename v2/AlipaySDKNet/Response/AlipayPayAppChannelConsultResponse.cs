@@ -18,6 +18,12 @@ namespace Aop.Api.Response
         public List<ChannelInfo> ChannelInfoList { get; set; }
 
         /// <summary>
+        /// 该参数为Map结构，用于在二方前置咨询返回一些基于特殊业务场景可选返回的参数
+        /// </summary>
+        [XmlElement("ext_info")]
+        public BizExtInfo ExtInfo { get; set; }
+
+        /// <summary>
         /// 前置咨询id
         /// </summary>
         [XmlElement("pre_consult_id")]

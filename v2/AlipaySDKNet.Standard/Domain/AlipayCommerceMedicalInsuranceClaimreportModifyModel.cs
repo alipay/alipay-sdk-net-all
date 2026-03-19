@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string BizNo { get; set; }
 
         /// <summary>
+        /// 业务发生时间
+        /// </summary>
+        [XmlElement("biz_time")]
+        public string BizTime { get; set; }
+
+        /// <summary>
         /// 是否是赔案重开
         /// </summary>
         [XmlElement("case_reopened")]
@@ -97,6 +103,12 @@ namespace Aop.Api.Domain
         public List<IdentityMaterials> IdentityMaterials { get; set; }
 
         /// <summary>
+        /// 影像件批次流水号
+        /// </summary>
+        [XmlElement("image_batch_no")]
+        public string ImageBatchNo { get; set; }
+
+        /// <summary>
         /// 补材场景
         /// </summary>
         [XmlElement("lack_materials_sense")]
@@ -127,6 +139,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 外部业务单号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
+
+        /// <summary>
         /// 立案失败原因或拒赔原因
         /// </summary>
         [XmlElement("reject_reason")]
@@ -146,10 +164,28 @@ namespace Aop.Api.Domain
         public List<SeltInfoList> SeltInfoList { get; set; }
 
         /// <summary>
+        /// 结算列表
+        /// </summary>
+        [XmlElement("settle_ids")]
+        public string SettleIds { get; set; }
+
+        /// <summary>
         /// 交易来源
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }
+
+        /// <summary>
+        /// 密算结果
+        /// </summary>
+        [XmlElement("sscr")]
+        public string Sscr { get; set; }
+
+        /// <summary>
+        /// 提交流水号
+        /// </summary>
+        [XmlElement("submit_no")]
+        public string SubmitNo { get; set; }
 
         /// <summary>
         /// 理赔总金额，单位：元

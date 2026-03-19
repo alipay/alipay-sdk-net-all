@@ -58,6 +58,12 @@ namespace Aop.Api.Response
         public DtBankBudgetInfo BudgetInfo { get; set; }
 
         /// <summary>
+        /// 组合券包优惠信息
+        /// </summary>
+        [XmlElement("combine_prize_discount_info")]
+        public CombinePrizeDiscountInfo CombinePrizeDiscountInfo { get; set; }
+
+        /// <summary>
         /// 计次信息
         /// </summary>
         [XmlElement("count_limit")]

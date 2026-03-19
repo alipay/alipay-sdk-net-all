@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string MainDeptId { get; set; }
 
         /// <summary>
+        /// 汇报对象工号
+        /// </summary>
+        [XmlElement("reporting_to")]
+        public string ReportingTo { get; set; }
+
+        /// <summary>
         /// 二级部门id
         /// </summary>
         [XmlElement("second_dept_id")]

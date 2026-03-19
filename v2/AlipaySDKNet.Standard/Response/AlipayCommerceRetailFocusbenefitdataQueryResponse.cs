@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string DataList { get; set; }
 
         /// <summary>
+        /// 分页查询游标
+        /// </summary>
+        [XmlElement("digest")]
+        public string Digest { get; set; }
+
+        /// <summary>
         /// 页码
         /// </summary>
         [XmlElement("page_index")]

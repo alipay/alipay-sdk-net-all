@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string NumberNo { get; set; }
 
         /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 预约订单id
         /// </summary>
         [XmlElement("order_id")]

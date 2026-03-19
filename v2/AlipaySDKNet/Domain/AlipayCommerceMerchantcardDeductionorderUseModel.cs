@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMerchantcardDeductionorderUseModel : AopObject
     {
         /// <summary>
-        /// 幂等号
+        /// 幂等号（平台侧交易单号），预约场景下填写预约单号
         /// </summary>
         [XmlElement("biz_id")]
         public string BizId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 商家发起核销需要服务商回传外部交易订单号，商户开启了用户核销免授权确认，参数必传。
+        /// 商家发起核销需要服务商回传外部交易订单号，商户开启了用户核销免授权确认，参数必传。 预约场景下填写预约单号
         /// </summary>
         [XmlElement("out_biz_id")]
         public string OutBizId { get; set; }

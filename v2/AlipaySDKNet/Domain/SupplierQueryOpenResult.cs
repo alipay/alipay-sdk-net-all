@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("supplier_phone")]
         public string SupplierPhone { get; set; }
+
+        /// <summary>
+        /// 供应商状态
+        /// </summary>
+        [XmlElement("supplier_status")]
+        public string SupplierStatus { get; set; }
     }
 }

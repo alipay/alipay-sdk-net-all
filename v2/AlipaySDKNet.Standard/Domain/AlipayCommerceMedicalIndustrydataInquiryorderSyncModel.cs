@@ -172,13 +172,13 @@ namespace Aop.Api.Domain
         public string PlatformCode { get; set; }
 
         /// <summary>
-        /// 实际支付金额
+        /// 实际支付金额，单元：元
         /// </summary>
         [XmlElement("real_amount")]
         public string RealAmount { get; set; }
 
         /// <summary>
-        /// 退款金额
+        /// 退款金额，单位：元
         /// </summary>
         [XmlElement("refund_amount")]
         public string RefundAmount { get; set; }

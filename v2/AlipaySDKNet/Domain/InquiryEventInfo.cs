@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string DoctorName { get; set; }
 
         /// <summary>
+        /// 体检报告详情链接
+        /// </summary>
+        [XmlElement("medical_report_url")]
+        public string MedicalReportUrl { get; set; }
+
+        /// <summary>
         /// 患者姓名
         /// </summary>
         [XmlElement("patient_name")]

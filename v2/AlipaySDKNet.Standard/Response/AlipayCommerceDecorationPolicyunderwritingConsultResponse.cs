@@ -41,7 +41,7 @@ namespace Aop.Api.Response
         public string PolicyStartDate { get; set; }
 
         /// <summary>
-        /// 保单状态 PENDING-核保受理  UNDERWRITING_SUCCESS-核保成功 UNDERWRITING_FAILURE-核保失败 POLICY_ISSUED_SUCCESS-承保成功 POLICY_ISSUED_FAILURE-承保失败
+        /// 枚举值： 核保受理 :PENDING 核保成功:UNDERWRITING_SUCCESS 核保失败 :UNDERWRITING_FAILURE 承保成功:POLICY_ISSUED_SUCCESS 承保失败:POLICY_ISSUED_FAILURE 已退保:POLICY_CANCELLED 退保受理:SURRENDER_PENDING 退保失败:SURRENDER_ FAILURE
         /// </summary>
         [XmlElement("policy_status")]
         public string PolicyStatus { get; set; }

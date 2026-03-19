@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BankCode { get; set; }
 
         /// <summary>
+        /// 关联业务单据号，用于上游业务根据自己定义的单据号到资金结算中心查询(页面) 
+        /// </summary>
+        [XmlElement("biz_ref_no")]
+        public string BizRefNo { get; set; }
+
+        /// <summary>
         /// 收款行本地清算分支行号
         /// </summary>
         [XmlElement("branch_code")]
@@ -118,6 +124,12 @@ namespace Aop.Api.Domain
         public string CreditorInstAbbr { get; set; }
 
         /// <summary>
+        /// 收款金融机构所在城市（境内使用，比如北京市、上海市，目前主要是代发在使用）
+        /// </summary>
+        [XmlElement("creditor_inst_city")]
+        public string CreditorInstCity { get; set; }
+
+        /// <summary>
         /// 收款银行两位国家代码；收款渠道为银行必填
         /// </summary>
         [XmlElement("creditor_inst_country_code")]
@@ -128,6 +140,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("creditor_inst_name")]
         public string CreditorInstName { get; set; }
+
+        /// <summary>
+        /// 收款金融机构所在省份（境内使用），比如湖南、湖北，目前主要是代发在使用
+        /// </summary>
+        [XmlElement("creditor_inst_province")]
+        public string CreditorInstProvince { get; set; }
 
         /// <summary>
         /// 收款人邮编

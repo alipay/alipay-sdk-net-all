@@ -195,6 +195,12 @@ namespace Aop.Api.Domain
         public string PrincipalTag { get; set; }
 
         /// <summary>
+        /// 0-关闭大促放量；1-开启大促放量;
+        /// </summary>
+        [XmlElement("promotion_open_traffic_switch")]
+        public string PromotionOpenTrafficSwitch { get; set; }
+
+        /// <summary>
         /// 是否开启推荐流量开关.1打开，0关闭
         /// </summary>
         [XmlElement("referral_traffic_switch")]

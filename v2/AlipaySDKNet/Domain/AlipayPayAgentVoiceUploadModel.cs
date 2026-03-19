@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string DeviceName { get; set; }
 
         /// <summary>
+        /// 语音模式，目前支持流式语音初始化和批式语音上传。不填默认为voiceUpload
+        /// </summary>
+        [XmlElement("mode")]
+        public string Mode { get; set; }
+
+        /// <summary>
         /// 业务场景，由支付宝分配，用于调用管控和定制化处理
         /// </summary>
         [XmlElement("scene")]

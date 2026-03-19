@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<string> BookingRuleIds { get; set; }
 
         /// <summary>
+        /// 酒店品牌code
+        /// </summary>
+        [XmlElement("brand_code")]
+        public string BrandCode { get; set; }
+
+        /// <summary>
         /// 取消规则v2，新增商户对接该字段
         /// </summary>
         [XmlArray("cancel_rules")]
@@ -35,6 +41,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("customer_type")]
         public string CustomerType { get; set; }
+
+        /// <summary>
+        /// 酒店归属集团短名称
+        /// </summary>
+        [XmlElement("group_short_name")]
+        public string GroupShortName { get; set; }
+
+        /// <summary>
+        /// 是否有会员权益
+        /// </summary>
+        [XmlElement("has_member_right")]
+        public bool HasMemberRight { get; set; }
 
         /// <summary>
         /// 证件数量类型：       0：无特殊要求（下单不用证件）      *1：整个订单需一个证件      *2：订单中每个房间需一个证件
@@ -87,6 +105,12 @@ namespace Aop.Api.Domain
         public string PkgProductIds { get; set; }
 
         /// <summary>
+        /// BRAND_MEMBER_PRICE：集团会员价
+        /// </summary>
+        [XmlElement("price_type")]
+        public string PriceType { get; set; }
+
+        /// <summary>
         /// 价格计划id
         /// </summary>
         [XmlElement("rate_plan_id")]
@@ -129,6 +153,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public bool Status { get; set; }
+
+        /// <summary>
+        /// 商户卖家id
+        /// </summary>
+        [XmlElement("supplier_seller_id")]
+        public string SupplierSellerId { get; set; }
+
+        /// <summary>
+        /// 商户卖家名称
+        /// </summary>
+        [XmlElement("supplier_seller_name")]
+        public string SupplierSellerName { get; set; }
 
         /// <summary>
         /// 供应商信息

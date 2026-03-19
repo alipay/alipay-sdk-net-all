@@ -9,6 +9,11 @@ namespace Aop.Api.Request
     /// </summary>
     public class AlipayDataDataexchangeSchematestapiRainystestQueryRequest : IAopRequest<AlipayDataDataexchangeSchematestapiRainystestQueryResponse>
     {
+        /// <summary>
+        /// Schema模型openApi的测试接口260128
+        /// </summary>
+        public string BizContent { get; set; }
+
         #region IAopRequest Members
         private bool  needEncrypt=false;
         private string apiVersion = "1.0";
@@ -94,6 +99,7 @@ namespace Aop.Api.Request
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
+            parameters.Add("biz_content", this.BizContent);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);

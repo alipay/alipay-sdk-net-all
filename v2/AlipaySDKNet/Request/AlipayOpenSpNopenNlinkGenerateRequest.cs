@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayOpenSpNopenNlinkGenerateRequest : IAopRequest<AlipayOpenSpNopenNlinkGenerateResponse>
     {
         /// <summary>
-        /// 生成碰一下链接
+        /// N模组链接释放和上位机绑定
         /// </summary>
         public string BizContent { get; set; }
 

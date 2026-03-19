@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalLargermodelFeedbackQueryModel : AopObject
     {
         /// <summary>
+        /// 智能体的名称，主要用于识别区分不同智能体，根据智能体名称返回相应智能体的反馈信息配置
+        /// </summary>
+        [XmlElement("agent_name")]
+        public string AgentName { get; set; }
+
+        /// <summary>
         /// 反馈渠道： ● 安诊儿app：azeApp ● 安诊儿小程序：azeMiniProgram ● 健康管家app：healthManagerApp ● 健康管家小程序：healthManagerMiniProgram
         /// </summary>
         [XmlElement("feedback_channel")]

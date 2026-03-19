@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -25,6 +26,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("activity_order_id")]
         public string ActivityOrderId { get; set; }
+
+        /// <summary>
+        /// 组合券包发奖结果，如果是组合券包发奖，所有需要的出参都在这个复杂对象中
+        /// </summary>
+        [XmlElement("combine_prize_result")]
+        public CombinePrizeResult CombinePrizeResult { get; set; }
 
         /// <summary>
         /// 优惠门槛金额 比喻: A.满5元减3元，则值是500 B.满10元随机立减1元到3元,则值是1000 整数类型，以分为单位。

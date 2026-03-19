@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalNpsStatusQueryModel : AopObject
     {
         /// <summary>
-        /// 用于区分入口是云陪诊详情还是消息进对话
+        /// 用于区分请求的入口，由调用方传入
         /// </summary>
         [XmlElement("entrance_type")]
         public string EntranceType { get; set; }
@@ -20,6 +20,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 智能体所属机构id，由调用方传入
+        /// </summary>
+        [XmlElement("org_id")]
+        public string OrgId { get; set; }
 
         /// <summary>
         /// 用户id

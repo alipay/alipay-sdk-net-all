@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string FulfillmentOrderId { get; set; }
 
         /// <summary>
+        /// 体检报告详情链接
+        /// </summary>
+        [XmlElement("medical_report_url")]
+        public string MedicalReportUrl { get; set; }
+
+        /// <summary>
         /// 主单的状态
         /// </summary>
         [XmlElement("order_status")]

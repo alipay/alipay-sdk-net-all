@@ -61,10 +61,28 @@ namespace Aop.Api.Domain
         public List<CreativeMaterial> MaterialList { get; set; }
 
         /// <summary>
+        /// 是否原生创意
+        /// </summary>
+        [XmlElement("native_flag")]
+        public bool NativeFlag { get; set; }
+
+        /// <summary>
+        /// 视频发布在主页是否隐藏。1不隐藏，2隐藏。为空则是不隐藏
+        /// </summary>
+        [XmlElement("permission_level")]
+        public long PermissionLevel { get; set; }
+
+        /// <summary>
         /// 委托人标识
         /// </summary>
         [XmlElement("principal_tag")]
         public string PrincipalTag { get; set; }
+
+        /// <summary>
+        /// 生活号ID，查询接口： alipay.data.dataservice.adpublic.creativetool.query
+        /// </summary>
+        [XmlElement("public_id")]
+        public string PublicId { get; set; }
 
         /// <summary>
         /// true打开/false关闭

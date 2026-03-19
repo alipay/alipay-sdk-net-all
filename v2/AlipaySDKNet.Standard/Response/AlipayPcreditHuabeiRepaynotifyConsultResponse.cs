@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayPcreditHuabeiRepaynotifyConsultResponse : AopResponse
     {
         /// <summary>
+        /// 咨询编号
+        /// </summary>
+        [XmlElement("consult_code")]
+        public string ConsultCode { get; set; }
+
+        /// <summary>
         /// true表示打电话
         /// </summary>
         [XmlElement("do_call")]
@@ -19,6 +25,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("phone")]
         public string Phone { get; set; }
+
+        /// <summary>
+        /// Y-执行重试
+        /// </summary>
+        [XmlElement("re_consult")]
+        public string ReConsult { get; set; }
 
         /// <summary>
         /// 校验不通过原因

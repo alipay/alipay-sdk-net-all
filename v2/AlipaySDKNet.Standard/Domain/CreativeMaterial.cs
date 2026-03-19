@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Key { get; set; }
 
         /// <summary>
+        /// 是否原生
+        /// </summary>
+        [XmlElement("native_flag")]
+        public bool NativeFlag { get; set; }
+
+        /// <summary>
         /// 素材文件类型 IMG:图片 VIDEO:视频 TITLE:标题/副标题 DESC:描述 来区分文案和素材库Id
         /// </summary>
         [XmlElement("type")]

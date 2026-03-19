@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -19,6 +20,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("activity_order_id")]
         public string ActivityOrderId { get; set; }
+
+        /// <summary>
+        /// 组合券包发奖结果，包含所有需要消费的字段
+        /// </summary>
+        [XmlElement("combine_prize_result")]
+        public CombinePrizeResult CombinePrizeResult { get; set; }
 
         /// <summary>
         /// 外部唯一业务幂等号

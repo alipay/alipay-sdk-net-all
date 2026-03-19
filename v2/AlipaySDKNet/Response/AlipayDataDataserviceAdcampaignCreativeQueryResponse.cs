@@ -97,6 +97,18 @@ namespace Aop.Api.Response
         public List<CreativeMaterial> MaterialList { get; set; }
 
         /// <summary>
+        /// 是否原生创意
+        /// </summary>
+        [XmlElement("native_flag")]
+        public bool NativeFlag { get; set; }
+
+        /// <summary>
+        /// 视频发布在主页是否隐藏。1不隐藏，2隐藏。为空则是不隐藏
+        /// </summary>
+        [XmlElement("permission_level")]
+        public long PermissionLevel { get; set; }
+
+        /// <summary>
         /// 所属计划id
         /// </summary>
         [XmlElement("plan_id")]
@@ -113,6 +125,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("principal_id")]
         public long PrincipalId { get; set; }
+
+        /// <summary>
+        /// 生活号ID
+        /// </summary>
+        [XmlElement("public_id")]
+        public string PublicId { get; set; }
 
         /// <summary>
         /// 处置理由

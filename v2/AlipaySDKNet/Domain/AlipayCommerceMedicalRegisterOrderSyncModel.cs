@@ -34,6 +34,18 @@ namespace Aop.Api.Domain
         public string BussType { get; set; }
 
         /// <summary>
+        /// 浙江省杭州市上城区小营街道解放路88号
+        /// </summary>
+        [XmlElement("campus_address")]
+        public string CampusAddress { get; set; }
+
+        /// <summary>
+        /// 解放路院区
+        /// </summary>
+        [XmlElement("campus_name")]
+        public string CampusName { get; set; }
+
+        /// <summary>
         /// 取消原因
         /// </summary>
         [XmlElement("cancel_reason")]

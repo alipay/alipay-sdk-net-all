@@ -16,7 +16,13 @@ namespace Aop.Api.Domain
         public string AqOpenId { get; set; }
 
         /// <summary>
-        /// 签约医生的身份证号
+        /// 签约地-区编码(签约状态为居民已完成、医生签署中、医生已完成的必填)
+        /// </summary>
+        [XmlElement("district_code")]
+        public string DistrictCode { get; set; }
+
+        /// <summary>
+        /// 签约医生的身份证号(签约状态为居民已完成、医生签署中、医生已完成的必填)
         /// </summary>
         [XmlElement("doctor_cert_no")]
         public string DoctorCertNo { get; set; }
@@ -28,7 +34,7 @@ namespace Aop.Api.Domain
         public string DoctorCertNoEncrypt { get; set; }
 
         /// <summary>
-        /// 签约医生团队
+        /// 签约医生团队(签约状态为居民已完成、医生签署中、医生已完成的，签约医生姓名和签约团队二选一必填)
         /// </summary>
         [XmlElement("doctor_group")]
         public string DoctorGroup { get; set; }
@@ -40,19 +46,19 @@ namespace Aop.Api.Domain
         public string DoctorId { get; set; }
 
         /// <summary>
-        /// 签约医生机构
+        /// 签约医生机构(签约状态为居民已完成、医生签署中、医生已完成的必填)
         /// </summary>
         [XmlElement("doctor_organization")]
         public string DoctorOrganization { get; set; }
 
         /// <summary>
-        /// 签约医生机构id
+        /// 签约医生机构id(签约状态为居民已完成、医生签署中、医生已完成的必填)
         /// </summary>
         [XmlElement("doctor_organization_id")]
         public string DoctorOrganizationId { get; set; }
 
         /// <summary>
-        /// 签约医生的真实姓名
+        /// 签约医生的真实姓名(签约状态为居民已完成、医生签署中、医生已完成的，签约医生姓名和签约团队二选一必填)
         /// </summary>
         [XmlElement("doctor_real_name")]
         public string DoctorRealName { get; set; }
@@ -82,13 +88,19 @@ namespace Aop.Api.Domain
         public string SignBizType { get; set; }
 
         /// <summary>
-        /// 用户签约结束日期
+        /// 签约时间  (签约状态为居民已完成、医生签署中、医生已完成的必填)
+        /// </summary>
+        [XmlElement("sign_date")]
+        public string SignDate { get; set; }
+
+        /// <summary>
+        /// 用户签约结束日期(签约状态为医生已完成的必填)
         /// </summary>
         [XmlElement("sign_end_date")]
         public string SignEndDate { get; set; }
 
         /// <summary>
-        /// 用户签约开始日期
+        /// 用户签约开始日期(签约状态为医生已完成的必填)
         /// </summary>
         [XmlElement("sign_start_date")]
         public string SignStartDate { get; set; }
@@ -104,6 +116,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
+
+        /// <summary>
+        /// 签约地-街道编码(签约状态为居民已完成、医生签署中、医生已完成的必填)
+        /// </summary>
+        [XmlElement("street_code")]
+        public string StreetCode { get; set; }
 
         /// <summary>
         /// 用户身份证号

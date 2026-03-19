@@ -118,6 +118,12 @@ namespace Aop.Api.Domain
         public PlatformPlusRegisterInfo PlusRegisterInfo { get; set; }
 
         /// <summary>
+        /// 订单的商品名称
+        /// </summary>
+        [XmlElement("product_name")]
+        public string ProductName { get; set; }
+
+        /// <summary>
         /// 订单退款入口
         /// </summary>
         [XmlElement("refund_url")]
@@ -128,5 +134,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("source")]
         public string Source { get; set; }
+
+        /// <summary>
+        /// 用户类型，如阿福类型
+        /// </summary>
+        [XmlElement("user_type")]
+        public string UserType { get; set; }
     }
 }

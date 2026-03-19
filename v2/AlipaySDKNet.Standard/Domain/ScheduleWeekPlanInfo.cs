@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class ScheduleWeekPlanInfo : AopObject
     {
+        /// <summary>
+        /// 午休时间
+        /// </summary>
+        [XmlArray("break_time")]
+        [XmlArrayItem("string")]
+        public List<string> BreakTime { get; set; }
+
         /// <summary>
         /// 每天可排期的结束时间 格式24小时制 21:30
         /// </summary>

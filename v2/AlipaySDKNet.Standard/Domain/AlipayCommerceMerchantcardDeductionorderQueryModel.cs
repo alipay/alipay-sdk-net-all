@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
-        /// 核销订单id
+        /// 核销订单id，和外部订单号二选一，优先使用核销单号查询
         /// </summary>
         [XmlElement("deduction_order_id")]
         public string DeductionOrderId { get; set; }
@@ -26,6 +26,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 外部单号
+        /// </summary>
+        [XmlElement("out_biz_no")]
+        public string OutBizNo { get; set; }
 
         /// <summary>
         /// 支付宝用户的userId。

@@ -108,6 +108,12 @@ namespace Aop.Api.Domain
         public string PassbackParams { get; set; }
 
         /// <summary>
+        /// 指定支付方式 agent_pay：智能体SDK支付方式；
+        /// </summary>
+        [XmlElement("payment_type")]
+        public string PaymentType { get; set; }
+
+        /// <summary>
         /// 产品码。 商家和支付宝签约的产品码。 枚举值（点击查看签约情况）： <a target="_blank" href="https://opensupport.alipay.com/support/codelab/detail/486/487">FACE_TO_FACE_PAYMENT</a>：当面付产品； 默认值为FACE_TO_FACE_PAYMENT。
         /// </summary>
         [XmlElement("product_code")]

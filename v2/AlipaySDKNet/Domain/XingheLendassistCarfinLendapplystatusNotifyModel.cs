@@ -24,6 +24,13 @@ namespace Aop.Api.Domain
         public string ApplyNo { get; set; }
 
         /// <summary>
+        /// 需要替换的审核文件列表
+        /// </summary>
+        [XmlArray("approve_file_list")]
+        [XmlArrayItem("carfin_mortgage_received_file")]
+        public List<CarfinMortgageReceivedFile> ApproveFileList { get; set; }
+
+        /// <summary>
         /// 授信信息列表 （支用审批未通过时可传）
         /// </summary>
         [XmlArray("credit_list")]
