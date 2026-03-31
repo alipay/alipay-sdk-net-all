@@ -108,6 +108,12 @@ namespace Aop.Api.Domain
         public string StartTime { get; set; }
 
         /// <summary>
+        /// 场馆规则扩展配置
+        /// </summary>
+        [XmlElement("venue_config")]
+        public VenueConfigModel VenueConfig { get; set; }
+
+        /// <summary>
         /// 周天列表，数字1-7分别表示周一到周日。
         /// </summary>
         [XmlArray("week_day_list")]

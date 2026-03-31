@@ -29,6 +29,18 @@ namespace Aop.Api.Domain
         public string DataSource { get; set; }
 
         /// <summary>
+        /// 文件类型 PDF/PIC
+        /// </summary>
+        [XmlElement("file_type")]
+        public string FileType { get; set; }
+
+        /// <summary>
+        /// 原始文件地址
+        /// </summary>
+        [XmlElement("file_url")]
+        public string FileUrl { get; set; }
+
+        /// <summary>
         /// 医院名称
         /// </summary>
         [XmlElement("hospital_name")]

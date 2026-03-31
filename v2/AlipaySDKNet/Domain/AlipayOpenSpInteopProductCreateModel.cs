@@ -67,10 +67,17 @@ namespace Aop.Api.Domain
         public InteOpShopInfo InteopShopInfo { get; set; }
 
         /// <summary>
-        /// 特殊行业资质信息
+        /// 特殊行业资质信息 当前字段已废弃(特殊资质类型升级该参数为数组)
         /// </summary>
         [XmlElement("inteop_special_license_info")]
         public InteOpSpecialLicenseInfo InteopSpecialLicenseInfo { get; set; }
+
+        /// <summary>
+        /// 特殊行业资质信息
+        /// </summary>
+        [XmlArray("inteop_special_license_infos")]
+        [XmlArrayItem("inte_op_special_license_info")]
+        public List<InteOpSpecialLicenseInfo> InteopSpecialLicenseInfos { get; set; }
 
         /// <summary>
         /// 网站信息

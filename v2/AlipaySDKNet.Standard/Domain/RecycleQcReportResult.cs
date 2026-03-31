@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class RecycleQcReportResult : AopObject
     {
         /// <summary>
+        /// true：是 false：不是
+        /// </summary>
+        [XmlElement("defect_option")]
+        public bool DefectOption { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("image_id_list")]

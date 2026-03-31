@@ -10,7 +10,7 @@ namespace Aop.Api.Request
     public class AlipayOfflineProviderNpassporterVerifyconfigQueryRequest : IAopRequest<AlipayOfflineProviderNpassporterVerifyconfigQueryResponse>
     {
         /// <summary>
-        /// N核审配置查询
+        /// N核身方案配置查询
         /// </summary>
         public string BizContent { get; set; }
 

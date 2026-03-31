@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ItemId { get; set; }
 
         /// <summary>
-        /// mcu的uuid
+        /// 模组的mcu_id
         /// </summary>
         [XmlElement("mcu_id")]
         public string McuId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string PublicKey { get; set; }
 
         /// <summary>
-        /// se的uuid（16进制的字符串，没有0x前缀）
+        /// 模组的se_uuid（16进制的字符串，没有0x前缀）
         /// </summary>
         [XmlElement("se_uuid")]
         public string SeUuid { get; set; }
@@ -46,13 +46,13 @@ namespace Aop.Api.Domain
         public string Sn { get; set; }
 
         /// <summary>
-        /// 厂商ID
+        /// 模组供应商ID
         /// </summary>
         [XmlElement("supplier_id")]
         public string SupplierId { get; set; }
 
         /// <summary>
-        /// license类型
+        /// 环境类型
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

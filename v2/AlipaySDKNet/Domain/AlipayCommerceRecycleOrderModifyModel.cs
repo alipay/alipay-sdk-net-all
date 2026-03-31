@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public RecycleModifyAddressInfo AddressInfo { get; set; }
 
         /// <summary>
+        /// 竞拍履约信息
+        /// </summary>
+        [XmlElement("auction_delivery_info")]
+        public RecycleAuctionDeliveryInfoVO AuctionDeliveryInfo { get; set; }
+
+        /// <summary>
         /// 修改原因
         /// </summary>
         [XmlElement("modify_reason")]

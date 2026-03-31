@@ -25,6 +25,13 @@ namespace Aop.Api.Domain
         public List<FulfillmentDeliveryInfo> DeliveryList { get; set; }
 
         /// <summary>
+        /// 设备信息列表
+        /// </summary>
+        [XmlArray("device_list")]
+        [XmlArrayItem("fulfillment_device_info")]
+        public List<FulfillmentDeviceInfo> DeviceList { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

@@ -32,5 +32,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("personal_product_code")]
         public string PersonalProductCode { get; set; }
+
+        /// <summary>
+        /// 根据支付宝提供的秘钥信息，对手机号或者联登支付宝账号进行加密后的字符串；
+        /// </summary>
+        [XmlElement("user_token")]
+        public string UserToken { get; set; }
+
+        /// <summary>
+        /// 如果加密的是手机号，传固定值 encrypt_phone，如果加密的是联登账号，传固定值encrypt_uid
+        /// </summary>
+        [XmlElement("user_token_type")]
+        public string UserTokenType { get; set; }
     }
 }

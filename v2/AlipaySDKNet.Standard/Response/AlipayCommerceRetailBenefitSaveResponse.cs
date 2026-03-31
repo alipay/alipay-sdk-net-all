@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("activity_id")]
         public string ActivityId { get; set; }
+
+        /// <summary>
+        /// 副本审核id
+        /// </summary>
+        [XmlElement("copy_edit_id")]
+        public string CopyEditId { get; set; }
     }
 }

@@ -23,10 +23,24 @@ namespace Aop.Api.Domain
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// 商品变更影响交易
+        /// </summary>
+        [XmlArray("effect_transaction_ids")]
+        [XmlArrayItem("string")]
+        public List<string> EffectTransactionIds { get; set; }
+
+        /// <summary>
         /// 存放扩展信息, 用于未来接口信息的扩展
         /// </summary>
         [XmlElement("external_info")]
         public string ExternalInfo { get; set; }
+
+        /// <summary>
+        /// 商品清单信息
+        /// </summary>
+        [XmlArray("goods_infos")]
+        [XmlArrayItem("good_info")]
+        public List<GoodInfo> GoodsInfos { get; set; }
 
         /// <summary>
         /// 清单中商品的算法id的数组
@@ -42,10 +56,22 @@ namespace Aop.Api.Domain
         public string IsvPid { get; set; }
 
         /// <summary>
+        /// 单pad双门柜标识
+        /// </summary>
+        [XmlElement("single_pad_door_pos")]
+        public string SinglePadDoorPos { get; set; }
+
+        /// <summary>
         /// 清单提交时间
         /// </summary>
         [XmlElement("submit_time")]
         public string SubmitTime { get; set; }
+
+        /// <summary>
+        /// 行业商品清单唯一ID
+        /// </summary>
+        [XmlElement("template_id")]
+        public string TemplateId { get; set; }
 
         /// <summary>
         /// 用来未来业务扩展. 目前为动态补货类型 DYNAMIC_ADDING

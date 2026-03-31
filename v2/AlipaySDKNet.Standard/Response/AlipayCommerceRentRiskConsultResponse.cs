@@ -11,7 +11,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceRentRiskConsultResponse : AopResponse
     {
         /// <summary>
-        /// Tn_Level类型结果，risk_level字段取值范围T1-T10（T1 ~ T4: 低风险；T5 ~ T6: 中风险；T7 ~ T8: 高风险；T9 ~ T10: 极高风险）
+        /// 长租/汽车订阅：Tn_Level类型结果，risk_level字段取值范围T1-T10（T1 ~ T4: 低风险；T5 ~ T6: 中风险；T7 ~ T8: 高风险；T9 ~ T10: 极高风险） 短租：Sn_Level类型结果, risk_level字段取值范围S1-S5 （S1-S3：低风险，S4：中风险，S5：高风险）
         /// </summary>
         [XmlElement("comprehensive_risk_models")]
         public RentRiskProVO ComprehensiveRiskModels { get; set; }

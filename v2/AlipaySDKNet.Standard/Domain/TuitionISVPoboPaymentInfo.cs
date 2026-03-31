@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string Cvv { get; set; }
 
         /// <summary>
+        /// cvv加密。使用rsa3072加密算法进行加密。理论长度为512个字符
+        /// </summary>
+        [XmlElement("cvv_encrypted")]
+        public string CvvEncrypted { get; set; }
+
+        /// <summary>
         /// 机构推单的单号
         /// </summary>
         [XmlElement("pre_order_id")]

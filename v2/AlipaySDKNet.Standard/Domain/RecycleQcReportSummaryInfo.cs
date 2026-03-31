@@ -24,6 +24,13 @@ namespace Aop.Api.Domain
         public string InconsistentText { get; set; }
 
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("product_real_image_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> ProductRealImageIdList { get; set; }
+
+        /// <summary>
         /// 报告总结文本内容
         /// </summary>
         [XmlElement("text")]

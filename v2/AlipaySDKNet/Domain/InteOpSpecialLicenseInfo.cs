@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string SpecialLicensePic { get; set; }
 
         /// <summary>
-        /// 合约特殊资质的类型，枚举值，默认可以传99
+        /// 合约特殊资质的类型，默认可以传99
         /// </summary>
         [XmlElement("special_license_type")]
         public string SpecialLicenseType { get; set; }

@@ -11,6 +11,19 @@ namespace Aop.Api.Domain
     public class AlipayTradeCrowdConsultModel : AopObject
     {
         /// <summary>
+        /// 单位元
+        /// </summary>
+        [XmlElement("average_amount")]
+        public string AverageAmount { get; set; }
+
+        /// <summary>
+        /// 定义咨询人群场景，如花呗、Z1
+        /// </summary>
+        [XmlArray("consult_crowd_list")]
+        [XmlArrayItem("string")]
+        public List<string> ConsultCrowdList { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

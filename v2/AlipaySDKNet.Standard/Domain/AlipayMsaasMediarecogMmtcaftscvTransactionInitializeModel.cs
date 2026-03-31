@@ -42,10 +42,23 @@ namespace Aop.Api.Domain
         public string ReqId { get; set; }
 
         /// <summary>
+        /// 右柜商品清单(仅单pad双门柜)
+        /// </summary>
+        [XmlArray("right_goods_infos")]
+        [XmlArrayItem("good_info")]
+        public List<GoodInfo> RightGoodsInfos { get; set; }
+
+        /// <summary>
         /// 标识是什么场景下的视觉识别请求，visionPay,putInOrder,queryAll
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }
+
+        /// <summary>
+        /// 单pad左右柜标识
+        /// </summary>
+        [XmlElement("single_pad_door_pos")]
+        public string SinglePadDoorPos { get; set; }
 
         /// <summary>
         /// 二级商户ID

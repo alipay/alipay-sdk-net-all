@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("modifier")]
         public string Modifier { get; set; }
+
+        /// <summary>
+        /// 商机的来源
+        /// </summary>
+        [XmlElement("source")]
+        public string Source { get; set; }
     }
 }

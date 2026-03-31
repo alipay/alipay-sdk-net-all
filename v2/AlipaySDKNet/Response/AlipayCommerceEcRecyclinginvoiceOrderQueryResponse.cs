@@ -53,6 +53,12 @@ namespace Aop.Api.Response
         public string OrderAmount { get; set; }
 
         /// <summary>
+        /// 订单交易资金的电子回单
+        /// </summary>
+        [XmlElement("order_electronic_receipt")]
+        public OrderElectronicReceipt OrderElectronicReceipt { get; set; }
+
+        /// <summary>
         /// 订单号
         /// </summary>
         [XmlElement("order_id")]

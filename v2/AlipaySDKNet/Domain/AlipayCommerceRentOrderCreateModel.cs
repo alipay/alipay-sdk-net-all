@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public RentOrderReceiverAddressInfoDTO AddressInfo { get; set; }
 
         /// <summary>
+        /// 订单业务身份
+        /// </summary>
+        [XmlElement("biz_identity")]
+        public string BizIdentity { get; set; }
+
+        /// <summary>
         /// 买家支付宝用户id，小程序场景下获取用户ID请参考：用户授权; 其它场景下获取用户ID请参考：网页授权获取用户信息。
         /// </summary>
         [XmlElement("buyer_id")]

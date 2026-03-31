@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string DoctorName { get; set; }
 
         /// <summary>
+        /// 视频时长，单位：秒
+        /// </summary>
+        [XmlElement("duration")]
+        public long Duration { get; set; }
+
+        /// <summary>
         /// 医院名称
         /// </summary>
         [XmlElement("hospital_name")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayMsaasMediarecogMmtcaftscvDeviceBindModel : AopObject
     {
         /// <summary>
+        /// 柜门类型
+        /// </summary>
+        [XmlElement("device_door_type")]
+        public string DeviceDoorType { get; set; }
+
+        /// <summary>
         /// IOT统一设备id
         /// </summary>
         [XmlElement("device_id")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("isv_tid")]
         public string IsvTid { get; set; }
+
+        /// <summary>
+        /// 位置
+        /// </summary>
+        [XmlElement("position")]
+        public string Position { get; set; }
 
         /// <summary>
         /// 设备注册类型

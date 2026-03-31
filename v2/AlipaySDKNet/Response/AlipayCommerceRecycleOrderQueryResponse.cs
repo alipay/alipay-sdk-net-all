@@ -11,6 +11,18 @@ namespace Aop.Api.Response
     public class AlipayCommerceRecycleOrderQueryResponse : AopResponse
     {
         /// <summary>
+        /// 回收竞拍信息
+        /// </summary>
+        [XmlElement("auction_info")]
+        public RecycleAuctionInfoVO AuctionInfo { get; set; }
+
+        /// <summary>
+        /// 商家的名称
+        /// </summary>
+        [XmlElement("merchant_alias")]
+        public string MerchantAlias { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceIotDeviceTradevoiceSendModel : AopObject
     {
         /// <summary>
-        /// 播报的金额，必须大于0
+        /// 播报的金额，单位元 必须大于0
         /// </summary>
         [XmlElement("amount")]
         public string Amount { get; set; }
@@ -28,13 +28,19 @@ namespace Aop.Api.Domain
         public string MsgId { get; set; }
 
         /// <summary>
+        /// 支付宝外部订单号，即商家订单号。当交易类型为ALIPAY_TRADE时，和支付宝订单号trade_id两者选其中之一传，为OTHER时out_order_no不用传，trade_id必传
+        /// </summary>
+        [XmlElement("out_order_no")]
+        public string OutOrderNo { get; set; }
+
+        /// <summary>
         /// 间连商户id
         /// </summary>
         [XmlElement("smid")]
         public string Smid { get; set; }
 
         /// <summary>
-        /// 交易订单id,生产环境必传。 工厂验收设备的时候可不传，通过白名单管控。
+        /// 交易订单id,生产环境交易类型为OTHER必传。 为ALIPAY_TARDE时和out_order_no两者选一传 工厂验收设备的时候可不传，通过白名单管控。
         /// </summary>
         [XmlElement("trade_id")]
         public string TradeId { get; set; }

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string BrandAppId { get; set; }
 
         /// <summary>
-        /// 商户营业执照信息
+        /// 【重要提示】申请特殊费率时，请务必提供营业执照以提升审核通过率。
         /// </summary>
         [XmlElement("business_license_info")]
         public BusinessLicenseInfo BusinessLicenseInfo { get; set; }

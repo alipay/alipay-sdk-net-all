@@ -174,6 +174,12 @@ namespace Aop.Api.Domain
         public string StartType { get; set; }
 
         /// <summary>
+        /// 场馆签到规则扩展
+        /// </summary>
+        [XmlElement("venue_config")]
+        public VenueConfigModel VenueConfig { get; set; }
+
+        /// <summary>
         /// 周天列表，数字1-7分别表示周一到周日。
         /// </summary>
         [XmlArray("week_day_list")]

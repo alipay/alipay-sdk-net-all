@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类型
+        /// 证件类型。特定商户(具体咨询开发者)必选时可传值为：【枚举值】 护照: PASSPORT 港澳居民来往内地通行证: HOME_VISIT_PERMIT_HK_MC 台湾居民来往大陆通行证: HOME_VISIT_PERMIT_TAIWAN
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
 
         /// <summary>
-        /// 退税申请单总金额
+        /// 退税申请单总金额，单位元
         /// </summary>
         [XmlElement("invoice_amount")]
         public string InvoiceAmount { get; set; }

@@ -28,5 +28,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("question_code")]
         public string QuestionCode { get; set; }
+
+        /// <summary>
+        /// 问卷问题类型
+        /// </summary>
+        [XmlElement("question_type")]
+        public string QuestionType { get; set; }
     }
 }

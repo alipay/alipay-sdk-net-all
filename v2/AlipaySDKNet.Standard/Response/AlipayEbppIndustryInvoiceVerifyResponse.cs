@@ -84,11 +84,29 @@ namespace Aop.Api.Response
         public List<InvoiceItemDTO> ItemList { get; set; }
 
         /// <summary>
+        /// 机动车销售统一发票明细
+        /// </summary>
+        [XmlElement("motor_vehicle_sales")]
+        public MotorVehicleSales MotorVehicleSales { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("passenger_list")]
         [XmlArrayItem("invoice_passenger")]
         public List<InvoicePassenger> PassengerList { get; set; }
+
+        /// <summary>
+        /// 代开发票标志
+        /// </summary>
+        [XmlElement("proxy_issued")]
+        public bool ProxyIssued { get; set; }
+
+        /// <summary>
+        /// 二手车销售统一发票专用明细
+        /// </summary>
+        [XmlElement("second_vehicle_sales")]
+        public SecondVehicleSales SecondVehicleSales { get; set; }
 
         /// <summary>
         /// 销售方地址

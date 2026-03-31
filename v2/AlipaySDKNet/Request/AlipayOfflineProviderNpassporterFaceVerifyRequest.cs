@@ -40,6 +40,11 @@ namespace Aop.Api.Request
         /// </summary>
         public string SolutionType { get; set; }
 
+        /// <summary>
+        /// 接入方传入具体活动场次唯一ID即可，此字段作为密算证件号的关键信息，即同一场次下的人群传统一ID即可，若不填写默认以“projectID”字段作为密算计算信息。接入方调用支付宝传入的场次ID，需跟自己按密算规则传入的ID保持一致，否则会出现两侧密算后信息无法匹配。
+        /// </summary>
+        public string SubProjectId { get; set; }
+
         #region IAopRequest Members
 		private bool needEncrypt=false;
 		private string apiVersion = "1.0";
@@ -130,6 +135,7 @@ namespace Aop.Api.Request
             parameters.Add("photo_url", this.PhotoUrl);
             parameters.Add("project_id", this.ProjectId);
             parameters.Add("solution_type", this.SolutionType);
+            parameters.Add("sub_project_id", this.SubProjectId);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);

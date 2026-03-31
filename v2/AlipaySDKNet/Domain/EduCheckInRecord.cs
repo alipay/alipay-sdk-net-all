@@ -82,6 +82,12 @@ namespace Aop.Api.Domain
         public string Longitude { get; set; }
 
         /// <summary>
+        /// 最小停留时长，单位是分钟，默认30分钟
+        /// </summary>
+        [XmlElement("min_stay_minutes")]
+        public long MinStayMinutes { get; set; }
+
+        /// <summary>
         /// 姓名
         /// </summary>
         [XmlElement("name")]

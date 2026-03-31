@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string NotifyType { get; set; }
 
         /// <summary>
+        /// 号源id维度停诊，支持批量.numberIds 逗号分隔
+        /// </summary>
+        [XmlElement("number_ids")]
+        public string NumberIds { get; set; }
+
+        /// <summary>
         /// 平台 code
         /// </summary>
         [XmlElement("platform_code")]
@@ -50,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("register_ids")]
         public string RegisterIds { get; set; }
+
+        /// <summary>
+        /// 停诊属性
+        /// </summary>
+        [XmlElement("stop_prop")]
+        public string StopProp { get; set; }
 
         /// <summary>
         /// 排班类型 上午

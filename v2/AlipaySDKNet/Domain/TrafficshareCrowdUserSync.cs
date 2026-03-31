@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DeviceNumber { get; set; }
 
         /// <summary>
+        /// 商户自己侧保存的用户信息
+        /// </summary>
+        [XmlElement("merchant_user_identity")]
+        public string MerchantUserIdentity { get; set; }
+
+        /// <summary>
         /// 同步类型，枚举。目前支持：增加-add；删除-delete。如果是人群用户新增，传入"add"。如果是对已同步新增人群用户做删除，传入"delete"
         /// </summary>
         [XmlElement("operation_type")]

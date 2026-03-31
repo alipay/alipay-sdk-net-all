@@ -76,6 +76,12 @@ namespace Aop.Api.Domain
         public string OutPlaceId { get; set; }
 
         /// <summary>
+        /// 作业租户码
+        /// </summary>
+        [XmlElement("tenant_code")]
+        public string TenantCode { get; set; }
+
+        /// <summary>
         /// 变更后的铺设点地址。
         /// </summary>
         [XmlElement("work_place_address")]

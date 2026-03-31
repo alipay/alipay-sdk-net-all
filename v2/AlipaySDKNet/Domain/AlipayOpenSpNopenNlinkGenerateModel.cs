@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOpenSpNopenNlinkGenerateModel : AopObject
     {
         /// <summary>
-        /// 设备adid
+        /// 设备device_ad_id
         /// </summary>
         [XmlElement("device_ad_id")]
         public string DeviceAdId { get; set; }
@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string DeviceBizTid { get; set; }
 
         /// <summary>
-        /// 设备itemId
+        /// 设备item_Id
         /// </summary>
         [XmlElement("device_item_id")]
         public string DeviceItemId { get; set; }
@@ -34,25 +34,25 @@ namespace Aop.Api.Domain
         public string DeviceSn { get; set; }
 
         /// <summary>
-        /// 模组itemId
+        /// 模组item_id
         /// </summary>
         [XmlElement("item_id")]
         public string ItemId { get; set; }
 
         /// <summary>
-        /// 模组mcuid
+        /// 模组的mcu_id
         /// </summary>
         [XmlElement("mcu_id")]
         public string McuId { get; set; }
 
         /// <summary>
-        /// 链接模版
+        /// 模组链接模版
         /// </summary>
         [XmlElement("n_link_template_code")]
         public string NLinkTemplateCode { get; set; }
 
         /// <summary>
-        /// 模组se芯片id
+        /// 模组的se_uuid
         /// </summary>
         [XmlElement("se_uuid")]
         public string SeUuid { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string Sn { get; set; }
 
         /// <summary>
-        /// 供应商ID
+        /// 模组的供应商ID
         /// </summary>
         [XmlElement("supplier_id")]
         public string SupplierId { get; set; }

@@ -43,6 +43,12 @@ namespace Aop.Api.Domain
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// 产品ID
+        /// </summary>
+        [XmlElement("product_id")]
+        public string ProductId { get; set; }
+
+        /// <summary>
         /// 产品名称
         /// </summary>
         [XmlElement("product_name")]
