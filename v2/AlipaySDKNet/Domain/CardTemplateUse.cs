@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class CardTemplateUse : AopObject
     {
         /// <summary>
+        /// 日历价格
+        /// </summary>
+        [XmlElement("calendar_price")]
+        public LifeserviceItemCalendarPrice CalendarPrice { get; set; }
+
+        /// <summary>
         /// 周期付需要配置周期信息
         /// </summary>
         [XmlElement("cycle_info")]
@@ -34,6 +40,12 @@ namespace Aop.Api.Domain
         [XmlArray("period_price_list")]
         [XmlArrayItem("card_period_price")]
         public List<CardPeriodPrice> PeriodPriceList { get; set; }
+
+        /// <summary>
+        /// 价格模式。默认阶梯价格
+        /// </summary>
+        [XmlElement("price_mode")]
+        public string PriceMode { get; set; }
 
         /// <summary>
         /// 购卡须知信息，可以设置适用人群，适用人数，预约规则，用于卡详情展示。

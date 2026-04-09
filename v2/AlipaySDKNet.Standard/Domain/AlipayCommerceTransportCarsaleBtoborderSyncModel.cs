@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CarCityCode { get; set; }
 
         /// <summary>
+        /// 服务费，单位：分
+        /// </summary>
+        [XmlElement("charge_amount")]
+        public long ChargeAmount { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

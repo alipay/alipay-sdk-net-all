@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AuthStatus { get; set; }
 
         /// <summary>
-        /// 企业注册页面需要回显的统一社会信用代码，只能是数字和字母组成
+        /// 企业营业执照中的统一社会信用代码，只能是数字和字母组成
         /// </summary>
         [XmlElement("enterprise_code")]
         public string EnterpriseCode { get; set; }

@@ -20,5 +20,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("course_id")]
         public string CourseId { get; set; }
+
+        /// <summary>
+        /// 蚂蚁门店id
+        /// </summary>
+        [XmlElement("shop_id")]
+        public string ShopId { get; set; }
     }
 }

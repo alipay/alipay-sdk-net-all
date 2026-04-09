@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string FundAccountType { get; set; }
 
         /// <summary>
+        /// 不同资金来源时需要填写补充信息
+        /// </summary>
+        [XmlElement("fund_constraint")]
+        public FundConstraints FundConstraint { get; set; }
+
+        /// <summary>
         /// 企业因公代付的资金来源
         /// </summary>
         [XmlElement("fund_source")]
@@ -52,7 +58,7 @@ namespace Aop.Api.Domain
         public string SignerCategory { get; set; }
 
         /// <summary>
-        /// 限定出资的银行卡号
+        /// 限定出资的银行卡号 当前字段已废弃(请使用fund_constraint进行设置)
         /// </summary>
         [XmlElement("specified_bank_card_no")]
         public string SpecifiedBankCardNo { get; set; }

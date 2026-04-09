@@ -76,7 +76,7 @@ namespace Aop.Api.Domain
         public string ViRegisterDate { get; set; }
 
         /// <summary>
-        /// 车辆类型，OCR识别信息，例如小型普通客车
+        /// 车辆类型，OCR识别信息，例如小型普通客车,
         /// </summary>
         [XmlElement("vi_type")]
         public string ViType { get; set; }

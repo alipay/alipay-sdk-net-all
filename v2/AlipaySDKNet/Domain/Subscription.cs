@@ -47,7 +47,7 @@ namespace Aop.Api.Domain
         public string CustomerId { get; set; }
 
         /// <summary>
-        /// 订阅项目信息
+        /// null
         /// </summary>
         [XmlArray("items")]
         [XmlArrayItem("subscription_query_item")]

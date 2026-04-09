@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string Context { get; set; }
 
         /// <summary>
+        /// 机构侧消息id
+        /// </summary>
+        [XmlElement("inst_message_id")]
+        public string InstMessageId { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
         /// 哈希后的手机号，行业侧保存和用户的对应关系
         /// </summary>
         [XmlElement("to_mobile_hash")]
@@ -26,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trigger_condition")]
         public string TriggerCondition { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的userId。
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
     }
 }

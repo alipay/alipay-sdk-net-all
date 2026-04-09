@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class SpecialLicenseInfo : AopObject
     {
         /// <summary>
-        /// 【描述】企业特殊资质图片，可参考 商家经营类目 中的“需要的特殊资质证书”。 【必选条件】根据商家类目判断是否需要资质，资质信息见 商家经营类目2.0。 传入使用 alipay.open.file.upload接口上传图片获取的file_id。
+        /// 【描述】企业特殊资质图片，可参考 商家经营类目 中的“需要的特殊资质证书”。 【必选条件】根据商家类目判断是否需要资质，资质信息见  <a href="https://opendocs.alipay.com/common/02khjv">商家经营类目2.0</a> 。 传入使用 alipay.open.file.upload接口上传图片获取的file_id。
         /// </summary>
         [XmlElement("special_license_pic")]
         public string SpecialLicensePic { get; set; }

@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string CertificateId { get; set; }
 
         /// <summary>
-        /// 三方码
+        /// 三方码或支付宝平台券码
         /// </summary>
         [XmlElement("code")]
         public string Code { get; set; }

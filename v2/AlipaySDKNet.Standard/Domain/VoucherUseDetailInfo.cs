@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class VoucherUseDetailInfo : AopObject
     {
         /// <summary>
+        /// 核销优惠金额, 单位:元
+        /// </summary>
+        [XmlElement("voucher_use_amount")]
+        public string VoucherUseAmount { get; set; }
+
+        /// <summary>
         /// 本次核销次数（不包含撤销核销的次数）
         /// </summary>
         [XmlElement("voucher_use_times")]

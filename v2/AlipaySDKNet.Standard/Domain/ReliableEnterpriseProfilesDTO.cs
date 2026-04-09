@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string TaxNo { get; set; }
 
         /// <summary>
+        /// 用于标识企业入驻链路
+        /// </summary>
+        [XmlElement("utm_chain")]
+        public string UtmChain { get; set; }
+
+        /// <summary>
         /// 具体流量内容区分，如推荐码、推荐人、推荐服务商名称等。由渠道侧自定义
         /// </summary>
         [XmlElement("utm_content")]

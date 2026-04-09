@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DcmealDishDetail : AopObject
     {
         /// <summary>
+        /// 菜品描述
+        /// </summary>
+        [XmlElement("desc")]
+        public string Desc { get; set; }
+
+        /// <summary>
         /// 智盘平台菜品id
         /// </summary>
         [XmlElement("dish_id")]
@@ -32,5 +38,29 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("dish_sale_amount")]
         public string DishSaleAmount { get; set; }
+
+        /// <summary>
+        /// "nutrition"
+        /// </summary>
+        [XmlElement("nutrition")]
+        public string Nutrition { get; set; }
+
+        /// <summary>
+        /// unit
+        /// </summary>
+        [XmlElement("unit")]
+        public string Unit { get; set; }
+
+        /// <summary>
+        /// 商品重量，单位为g
+        /// </summary>
+        [XmlElement("weight")]
+        public string Weight { get; set; }
+
+        /// <summary>
+        /// 菜品类型
+        /// </summary>
+        [XmlElement("weight_type")]
+        public string WeightType { get; set; }
     }
 }

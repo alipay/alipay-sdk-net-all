@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class BusinessLicenseInfo : AopObject
     {
         /// <summary>
-        /// 上传非经营者本人（签约账号）的营业执照时必填，填写营业执照法人支付宝账号对应的手机号。
+        /// 上传非经营者本人（签约账号）的营业执照时必填，填写营业执照法人的手机号
         /// </summary>
         [XmlElement("business_license_mobile")]
         public string BusinessLicenseMobile { get; set; }

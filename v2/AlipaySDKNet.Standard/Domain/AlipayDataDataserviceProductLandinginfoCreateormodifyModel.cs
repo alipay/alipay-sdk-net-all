@@ -28,5 +28,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_item_id")]
         public string OutItemId { get; set; }
+
+        /// <summary>
+        /// 商品视频信息
+        /// </summary>
+        [XmlArray("video_info_list")]
+        [XmlArrayItem("video_info")]
+        public List<VideoInfo> VideoInfoList { get; set; }
     }
 }

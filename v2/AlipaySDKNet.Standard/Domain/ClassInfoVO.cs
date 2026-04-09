@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ScheduleDescription { get; set; }
 
         /// <summary>
+        /// 蚂蚁门店id
+        /// </summary>
+        [XmlElement("shop_id")]
+        public string ShopId { get; set; }
+
+        /// <summary>
         /// 开班日期
         /// </summary>
         [XmlElement("start_date")]

@@ -126,6 +126,12 @@ namespace Aop.Api.Domain
         public string IsCombinationOrder { get; set; }
 
         /// <summary>
+        /// is_kit_pack为Y，则组合单维度下，多个子物料需要打包到一起进行发货，related_kit_item_id和related_kit_item_name不为空
+        /// </summary>
+        [XmlElement("is_kit_pack")]
+        public string IsKitPack { get; set; }
+
+        /// <summary>
         /// 物流公司代码
         /// </summary>
         [XmlElement("logistics_code")]
@@ -257,6 +263,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("related_children_out_biz_no_count")]
         public long RelatedChildrenOutBizNoCount { get; set; }
+
+        /// <summary>
+        /// 组合单维度下，多个子物料需要打包到一起进行发货，套组物料id和套组名称，作为打包的标签
+        /// </summary>
+        [XmlElement("related_kit_item_id")]
+        public string RelatedKitItemId { get; set; }
+
+        /// <summary>
+        /// 组合单维度下，多个子物料需要打包到一起进行发货，套组物料id和套组名称，作为打包的标签
+        /// </summary>
+        [XmlElement("related_kit_item_name")]
+        public string RelatedKitItemName { get; set; }
 
         /// <summary>
         /// 关联的其它业务单据号，即相同组合订单号下除了当前业务单据号以外的剩余所有业务单据号

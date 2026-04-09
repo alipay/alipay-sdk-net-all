@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Code { get; set; }
 
         /// <summary>
+        /// 预计结算时间
+        /// </summary>
+        [XmlElement("et_settle_time")]
+        public string EtSettleTime { get; set; }
+
+        /// <summary>
         /// 商品ID
         /// </summary>
         [XmlElement("item_id")]
@@ -56,6 +62,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("merchant_discount")]
         public string MerchantDiscount { get; set; }
+
+        /// <summary>
+        /// 商家应得。单位：元。
+        /// </summary>
+        [XmlElement("net_income")]
+        public string NetIncome { get; set; }
 
         /// <summary>
         /// 平台订单号，表示券售卖订单ID
@@ -100,7 +112,7 @@ namespace Aop.Api.Domain
         public string SettleAccount { get; set; }
 
         /// <summary>
-        /// 表示凭证核销后订单结算金额，未扣除平台技术服务费、三方交易佣金。单位：元
+        /// 表示凭证核销后订单结算金额，未扣除平台技术服务费、三方交易佣金，当status=01时，表示预计结算金额。单位：元
         /// </summary>
         [XmlElement("settle_amount")]
         public string SettleAmount { get; set; }
@@ -118,13 +130,19 @@ namespace Aop.Api.Domain
         public string SettleType { get; set; }
 
         /// <summary>
-        /// 第三方交易佣金，如服务商代运营佣金。单位：元
+        /// 结算状态
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 第三方交易佣金，如服务商代运营佣金，当status=01时，表示预计交易分佣金额。单位：元
         /// </summary>
         [XmlElement("total_alloc_amount")]
         public string TotalAllocAmount { get; set; }
 
         /// <summary>
-        /// 平台技术服务费。单位：元
+        /// 平台技术服务费，当status=01时，表示预计平台服务费金额。单位：元
         /// </summary>
         [XmlElement("total_commission_amount")]
         public string TotalCommissionAmount { get; set; }
