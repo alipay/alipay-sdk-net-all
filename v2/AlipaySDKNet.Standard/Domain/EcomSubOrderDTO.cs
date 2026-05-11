@@ -44,5 +44,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_end_time")]
         public string TradeEndTime { get; set; }
+
+        /// <summary>
+        /// 观演人
+        /// </summary>
+        [XmlElement("watch_man")]
+        public InsOpenUserDTO WatchMan { get; set; }
     }
 }

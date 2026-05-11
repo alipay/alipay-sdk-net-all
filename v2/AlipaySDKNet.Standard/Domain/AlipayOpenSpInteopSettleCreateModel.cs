@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -10,10 +11,23 @@ namespace Aop.Api.Domain
     public class AlipayOpenSpInteopSettleCreateModel : AopObject
     {
         /// <summary>
+        /// 银行账户信息。个体工商户、普通企业必填。 个体工商户支持对公账户、个人储蓄卡。 普通企业，只支持对公账户。
+        /// </summary>
+        [XmlElement("bank_card_info")]
+        public SettleBankCardInfo BankCardInfo { get; set; }
+
+        /// <summary>
         /// 受益人证照
         /// </summary>
         [XmlElement("benefit_info")]
         public BizOpenCertificateInfoForEntry BenefitInfo { get; set; }
+
+        /// <summary>
+        /// 多受益人证照信息
+        /// </summary>
+        [XmlArray("benefit_infos")]
+        [XmlArrayItem("biz_open_certificate_info_for_entry")]
+        public List<BizOpenCertificateInfoForEntry> BenefitInfos { get; set; }
 
         /// <summary>
         /// 业务开通主单号，用于一体化作业过程的申请单串联

@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string Recipient { get; set; }
 
         /// <summary>
-        /// 收款方身份证号
+        /// 收款方身份证号,到户需要填
         /// </summary>
         [XmlElement("recipient_id")]
         public string RecipientId { get; set; }

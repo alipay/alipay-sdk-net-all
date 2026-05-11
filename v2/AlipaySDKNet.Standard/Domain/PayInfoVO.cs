@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class PayInfoVO : AopObject
     {
         /// <summary>
+        /// 苹果IAP支付API类型
+        /// </summary>
+        [XmlElement("apple_iap_api")]
+        public string AppleIapApi { get; set; }
+
+        /// <summary>
         /// 支付渠道列表
         /// </summary>
         [XmlArray("pay_channels")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceFundBindCreateModel : AopObject
     {
         /// <summary>
+        /// 用于指定绑定某一张银行卡进行绑定
+        /// </summary>
+        [XmlElement("bank_card_no")]
+        public string BankCardNo { get; set; }
+
+        /// <summary>
         /// 绑卡用户的证件号，需要和cert_type联合使用
         /// </summary>
         [XmlElement("cert_no")]

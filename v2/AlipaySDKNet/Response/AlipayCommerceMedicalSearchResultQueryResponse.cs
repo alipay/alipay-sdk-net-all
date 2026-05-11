@@ -41,10 +41,11 @@ namespace Aop.Api.Response
         public SimpleHospitalInfo HospitalList { get; set; }
 
         /// <summary>
-        /// 缓存key信息
+        /// null
         /// </summary>
-        [XmlElement("key_list")]
-        public KeyInfo KeyList { get; set; }
+        [XmlArray("key_list")]
+        [XmlArrayItem("key_info")]
+        public List<KeyInfo> KeyList { get; set; }
 
         /// <summary>
         /// 就诊记录信息

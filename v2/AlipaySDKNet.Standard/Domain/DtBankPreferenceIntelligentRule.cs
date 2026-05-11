@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,19 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("avg_discount_amount")]
         public long AvgDiscountAmount { get; set; }
+
+        /// <summary>
+        /// 优惠均价类型
+        /// </summary>
+        [XmlElement("avg_discount_amount_type")]
+        public string AvgDiscountAmountType { get; set; }
+
+        /// <summary>
+        /// 指定周期均价配置列表，活动为指定周期均价配置时才会有返回值。
+        /// </summary>
+        [XmlArray("cycle_avg_discount_amount_config_list")]
+        [XmlArrayItem("cycle_avg_discount_amount_config")]
+        public List<CycleAvgDiscountAmountConfig> CycleAvgDiscountAmountConfigList { get; set; }
 
         /// <summary>
         /// 最大优惠金额，单位分

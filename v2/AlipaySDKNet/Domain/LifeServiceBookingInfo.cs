@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class LifeServiceBookingInfo : AopObject
     {
         /// <summary>
+        /// 商家已经发起了核销，此时在待用户确认状态。如果用户一直没确认，会在yyyy-MM-dd HH:mm:ss自动确认核销
+        /// </summary>
+        [XmlElement("auto_confirm_deduction_time")]
+        public string AutoConfirmDeductionTime { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("booking_attrs")]
@@ -30,10 +36,22 @@ namespace Aop.Api.Domain
         public string BookingDate { get; set; }
 
         /// <summary>
+        /// 预约单对应的核销单状态。not_start表示没有发起核销，此时没有核销单id。wait_user_confirm对应核销单状态的FROZEN，表示商家已经发起核销，等待用户确认。done表示已经核销完成。processing表示核销正在处理中。
+        /// </summary>
+        [XmlElement("booking_deduction_status")]
+        public string BookingDeductionStatus { get; set; }
+
+        /// <summary>
         /// 预约单id
         /// </summary>
         [XmlElement("booking_id")]
         public string BookingId { get; set; }
+
+        /// <summary>
+        /// 核销单id
+        /// </summary>
+        [XmlElement("deduction_order_id")]
+        public string DeductionOrderId { get; set; }
 
         /// <summary>
         /// 预约结束时间 yyyy-MM-dd HH:mm:ss

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class TourTicketInfo : AopObject
     {
         /// <summary>
+        /// 门票id
+        /// </summary>
+        [XmlElement("ticket_id")]
+        public string TicketId { get; set; }
+
+        /// <summary>
         /// 门票信息
         /// </summary>
         [XmlElement("ticket_name")]

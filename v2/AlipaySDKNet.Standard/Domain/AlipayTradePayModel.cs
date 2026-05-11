@@ -211,7 +211,7 @@ namespace Aop.Api.Domain
         public SubMerchant SubMerchant { get; set; }
 
         /// <summary>
-        /// 订单标题。 注意：不可使用特殊字符，如 /，=，& 等。
+        /// 订单标题。 注意：256个字符以内，不可使用特殊字符，如 /，=，& 等。
         /// </summary>
         [XmlElement("subject")]
         public string Subject { get; set; }

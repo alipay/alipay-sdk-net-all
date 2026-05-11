@@ -10,6 +10,30 @@ namespace Aop.Api.Domain
     public class CarInsuranceRenewalOrderInfo : AopObject
     {
         /// <summary>
+        /// 地级市的城市码
+        /// </summary>
+        [XmlElement("city_code")]
+        public string CityCode { get; set; }
+
+        /// <summary>
+        /// 商业险金额（单位：元，精确到分）
+        /// </summary>
+        [XmlElement("commercial_insurance_amount")]
+        public string CommercialInsuranceAmount { get; set; }
+
+        /// <summary>
+        /// 交强险金额（单位：元，精确到分）
+        /// </summary>
+        [XmlElement("compulsory_insurance_amount")]
+        public string CompulsoryInsuranceAmount { get; set; }
+
+        /// <summary>
+        /// 车辆能源类型，新能源包含纯电、插电混合、增程
+        /// </summary>
+        [XmlElement("energy_type")]
+        public string EnergyType { get; set; }
+
+        /// <summary>
         /// 发动机号
         /// </summary>
         [XmlElement("engine_no")]
@@ -22,7 +46,7 @@ namespace Aop.Api.Domain
         public string InsuranceCompanyName { get; set; }
 
         /// <summary>
-        /// 订单金额（单位：元，精确到分）
+        /// 订单金额（单位：元，精确到分） 应为交强险金额+商业险金额
         /// </summary>
         [XmlElement("order_amount")]
         public string OrderAmount { get; set; }

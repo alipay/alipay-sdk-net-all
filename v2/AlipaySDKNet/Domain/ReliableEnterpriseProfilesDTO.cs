@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string PlatformGmtCreate { get; set; }
 
         /// <summary>
+        /// 机构id
+        /// </summary>
+        [XmlElement("sign_fund_inst_id")]
+        public string SignFundInstId { get; set; }
+
+        /// <summary>
         /// 企业纳税人识别号，适用于未三证合一的企业
         /// </summary>
         [XmlElement("tax_no")]

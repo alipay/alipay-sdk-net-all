@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class AlipayCommerceRentOrderFulfillmentReceiveModel : AopObject
     {
+        /// <summary>
+        /// 补充凭证
+        /// </summary>
+        [XmlArray("additional_media_list")]
+        [XmlArrayItem("fulfillment_additional_media_info")]
+        public List<FulfillmentAdditionalMediaInfo> AdditionalMediaList { get; set; }
+
         /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>

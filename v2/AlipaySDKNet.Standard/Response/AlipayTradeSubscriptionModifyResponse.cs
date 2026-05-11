@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string AlipaySchema { get; set; }
 
         /// <summary>
+        /// 订阅支付单ID
+        /// </summary>
+        [XmlElement("order_no")]
+        public string OrderNo { get; set; }
+
+        /// <summary>
         /// 支付金额，单位分
         /// </summary>
         [XmlElement("pay_amount")]

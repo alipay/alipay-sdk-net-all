@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceOperationPromoActivitySignupResponse : AopResponse
     {
         /// <summary>
-        /// 报名返回
+        /// 报名结果信息
         /// </summary>
         [XmlElement("sign_up_data")]
         public string SignUpData { get; set; }

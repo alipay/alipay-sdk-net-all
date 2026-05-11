@@ -78,6 +78,12 @@ namespace Aop.Api.Domain
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// 履约类型，默认到店服务
+        /// </summary>
+        [XmlElement("fulfillment_type")]
+        public string FulfillmentType { get; set; }
+
+        /// <summary>
         /// 资金模式，预付或先享，新增时不传默认先享，编辑时不传默认不改变原值
         /// </summary>
         [XmlArray("funding_model")]
@@ -130,6 +136,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_category_code")]
         public string ItemCategoryCode { get; set; }
+
+        /// <summary>
+        /// 商品自定义属性。可分组传入，如果不需要分组，group_name设空即可
+        /// </summary>
+        [XmlArray("item_custom_attrs")]
+        [XmlArrayItem("ls_item_custom_attr")]
+        public List<LsItemCustomAttr> ItemCustomAttrs { get; set; }
 
         /// <summary>
         /// 金额卡的必要参数。其他卡类型无需传入

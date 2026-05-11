@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalPromoEventNotifyModel : AopObject
     {
         /// <summary>
+        /// 客户端来源
+        /// </summary>
+        [XmlElement("app_source")]
+        public string AppSource { get; set; }
+
+        /// <summary>
         /// 营销返佣服务的事件编码
         /// </summary>
         [XmlElement("event_code")]

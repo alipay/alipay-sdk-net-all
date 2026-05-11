@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string ArtifactVersion { get; set; }
 
         /// <summary>
+        /// 产品编码
+        /// </summary>
+        [XmlElement("boss_code")]
+        public string BossCode { get; set; }
+
+        /// <summary>
         /// OB制品产品ID
         /// </summary>
         [XmlElement("boss_id")]

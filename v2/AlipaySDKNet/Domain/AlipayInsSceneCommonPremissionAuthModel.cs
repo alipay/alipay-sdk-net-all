@@ -36,6 +36,12 @@ namespace Aop.Api.Domain
         public string LoginUserId { get; set; }
 
         /// <summary>
+        /// 主订单
+        /// </summary>
+        [XmlElement("order_dto")]
+        public EcomOrderDTO OrderDto { get; set; }
+
+        /// <summary>
         /// 外部sessionid
         /// </summary>
         [XmlElement("out_session_id")]

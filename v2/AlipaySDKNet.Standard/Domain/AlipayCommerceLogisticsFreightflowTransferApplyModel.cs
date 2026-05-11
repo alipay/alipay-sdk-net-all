@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string Currency { get; set; }
 
         /// <summary>
+        /// 约定的拓展字段. 当mode为网商银行时,无需传入！！！  当mode为浦发银行(SPDB)且收款方为支付宝(钱包/余额)时必传cnl_id的属性值为151,,其余参数需根据银行要求进行具体确认
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 物流公司编码
         /// </summary>
         [XmlElement("logistics_code")]

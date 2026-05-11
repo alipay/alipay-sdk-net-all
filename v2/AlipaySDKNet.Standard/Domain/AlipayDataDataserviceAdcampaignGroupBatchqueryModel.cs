@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BidType { get; set; }
 
         /// <summary>
+        /// 作用于和bid_type组合查询，精准查询出单元的出价方式。
+        /// </summary>
+        [XmlElement("charge_type")]
+        public string ChargeType { get; set; }
+
+        /// <summary>
         /// 当前页（最小为1）
         /// </summary>
         [XmlElement("current")]

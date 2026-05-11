@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ClaimDutyName { get; set; }
 
         /// <summary>
+        /// 100%赔付次数
+        /// </summary>
+        [XmlElement("claim_times_100_percent")]
+        public string ClaimTimes100Percent { get; set; }
+
+        /// <summary>
         /// 单位：元 保留俩位小数
         /// </summary>
         [XmlElement("duty_deductible_excess")]
@@ -58,6 +64,12 @@ namespace Aop.Api.Domain
         public string ExtInfo { get; set; }
 
         /// <summary>
+        /// 单项年度免赔额剩余
+        /// </summary>
+        [XmlElement("item_self_annual_payment_remain")]
+        public string ItemSelfAnnualPaymentRemain { get; set; }
+
+        /// <summary>
         /// 父责任节点
         /// </summary>
         [XmlElement("parent_claim_duty_code")]
@@ -74,6 +86,36 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("remark_en")]
         public string RemarkEn { get; set; }
+
+        /// <summary>
+        /// 自付比例
+        /// </summary>
+        [XmlElement("self_ratio")]
+        public string SelfRatio { get; set; }
+
+        /// <summary>
+        /// 单次自付额
+        /// </summary>
+        [XmlElement("single_deductible")]
+        public string SingleDeductible { get; set; }
+
+        /// <summary>
+        /// 次限额
+        /// </summary>
+        [XmlElement("sub_quota")]
+        public string SubQuota { get; set; }
+
+        /// <summary>
+        /// 单位
+        /// </summary>
+        [XmlElement("unit")]
+        public string Unit { get; set; }
+
+        /// <summary>
+        /// 已使用次数
+        /// </summary>
+        [XmlElement("used_times")]
+        public string UsedTimes { get; set; }
 
         /// <summary>
         /// 等待期,单位：天。

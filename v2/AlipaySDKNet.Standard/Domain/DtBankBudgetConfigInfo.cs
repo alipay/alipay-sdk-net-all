@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public long DailyBudgetValue { get; set; }
 
         /// <summary>
+        /// 天天减活动的实时剩余可报名人数
+        /// </summary>
+        [XmlElement("daily_discount_remaining_register_count")]
+        public long DailyDiscountRemainingRegisterCount { get; set; }
+
+        /// <summary>
         /// 活动最小发放数量，立减活动此参数为空。
         /// </summary>
         [XmlElement("min_send_count")]

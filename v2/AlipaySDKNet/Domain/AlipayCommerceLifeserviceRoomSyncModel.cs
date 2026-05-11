@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<LifeServiceAttr> RoomAttrs { get; set; }
 
         /// <summary>
-        /// 场地种类
+        /// 所属类目code，建议code和商品保持一致 仅支持传入叶子类目 
         /// </summary>
         [XmlElement("room_category")]
         public string RoomCategory { get; set; }

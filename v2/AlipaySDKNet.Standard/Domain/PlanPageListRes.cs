@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string StartDate { get; set; }
 
         /// <summary>
+        /// 计划子状态。2-表示计划不在投放时间段。仅在计划状态为有效的情况下透出
+        /// </summary>
+        [XmlElement("sub_status")]
+        public string SubStatus { get; set; }
+
+        /// <summary>
         /// 投放时段 全时段投放-位null 不返回该字段
         /// </summary>
         [XmlElement("time_schema")]

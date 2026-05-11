@@ -23,6 +23,12 @@ namespace Aop.Api.Response
         public RentInfo RentInfo { get; set; }
 
         /// <summary>
+        /// 优惠信息，包含分期优惠
+        /// </summary>
+        [XmlElement("rent_promo_info")]
+        public RentPromoInfoVO RentPromoInfo { get; set; }
+
+        /// <summary>
         /// 租赁风控信息
         /// </summary>
         [XmlArray("rent_risk_info")]

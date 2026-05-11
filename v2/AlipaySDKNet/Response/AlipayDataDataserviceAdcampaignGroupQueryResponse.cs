@@ -61,6 +61,12 @@ namespace Aop.Api.Response
         public string BoostStartDate { get; set; }
 
         /// <summary>
+        /// 计划的计费方式
+        /// </summary>
+        [XmlElement("charge_type")]
+        public string ChargeType { get; set; }
+
+        /// <summary>
         /// 地理位置-城市等级
         /// </summary>
         [XmlArray("city_level_list")]
@@ -216,6 +222,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("market_target_name")]
         public string MarketTargetName { get; set; }
+
+        /// <summary>
+        /// 做为target_roi的拓展字段，含义与target_roi一样，支持4位小数。优先级高于target_roi
+        /// </summary>
+        [XmlElement("new_target_roi")]
+        public string NewTargetRoi { get; set; }
 
         /// <summary>
         /// 起量状态

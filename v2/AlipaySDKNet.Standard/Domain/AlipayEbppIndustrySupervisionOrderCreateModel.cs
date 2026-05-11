@@ -60,6 +60,18 @@ namespace Aop.Api.Domain
         public string OrderTitle { get; set; }
 
         /// <summary>
+        /// 外部合同号
+        /// </summary>
+        [XmlElement("out_contract_no")]
+        public string OutContractNo { get; set; }
+
+        /// <summary>
+        /// 外部合同类型
+        /// </summary>
+        [XmlElement("out_contract_type")]
+        public string OutContractType { get; set; }
+
+        /// <summary>
         /// 外部商户订单
         /// </summary>
         [XmlElement("out_order_no")]

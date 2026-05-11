@@ -10,10 +10,40 @@ namespace Aop.Api.Domain
     public class SkuUpdateInfoParam : AopObject
     {
         /// <summary>
+        /// 仅支持问诊商品, 唯一key用于打破spu商品唯一性, 创建后不可更新
+        /// </summary>
+        [XmlElement("external_key")]
+        public string ExternalKey { get; set; }
+
+        /// <summary>
+        /// 问诊类商品信息
+        /// </summary>
+        [XmlElement("inquiry_info")]
+        public InquiryInfoParam InquiryInfo { get; set; }
+
+        /// <summary>
+        /// 检查检验类商品信息
+        /// </summary>
+        [XmlElement("inspect_info")]
+        public InspectInfoParam InspectInfo { get; set; }
+
+        /// <summary>
+        /// SKU名称
+        /// </summary>
+        [XmlElement("name")]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 店内货架码, 厂商自行维护
         /// </summary>
         [XmlElement("shelf_code")]
         public string ShelfCode { get; set; }
+
+        /// <summary>
+        /// 是否对用户展示
+        /// </summary>
+        [XmlElement("show_to_customer")]
+        public string ShowToCustomer { get; set; }
 
         /// <summary>
         /// OMS厂商商品sku编码, 厂商自行维护

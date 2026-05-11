@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string OriginalPrice { get; set; }
 
         /// <summary>
+        /// 第三方优惠金额
+        /// </summary>
+        [XmlElement("other_discount_amount")]
+        public string OtherDiscountAmount { get; set; }
+
+        /// <summary>
         /// 用户实付金额，单位为元
         /// </summary>
         [XmlElement("pay_amount")]

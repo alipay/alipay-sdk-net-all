@@ -34,5 +34,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("question_type")]
         public string QuestionType { get; set; }
+
+        /// <summary>
+        /// 质检模版的类型
+        /// </summary>
+        [XmlElement("template_type")]
+        public string TemplateType { get; set; }
     }
 }

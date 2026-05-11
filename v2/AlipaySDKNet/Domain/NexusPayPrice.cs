@@ -61,6 +61,6 @@ namespace Aop.Api.Domain
         /// 单位金额，单位：分
         /// </summary>
         [XmlElement("unit_amount")]
-        public long UnitAmount { get; set; }
+        public string UnitAmount { get; set; }
     }
 }

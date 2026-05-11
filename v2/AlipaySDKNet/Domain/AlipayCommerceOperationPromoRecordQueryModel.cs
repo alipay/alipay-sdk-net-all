@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceOperationPromoRecordQueryModel : AopObject
     {
         /// <summary>
-        /// 活动编码
+        /// 活动编码，固定值
         /// </summary>
         [XmlElement("activity_code")]
         public string ActivityCode { get; set; }
@@ -34,13 +34,13 @@ namespace Aop.Api.Domain
         public string QueryData { get; set; }
 
         /// <summary>
-        /// 主体ID
+        /// 主体ID，支持按照报名接口返回的ID传值，也可以传对应的支付宝账号
         /// </summary>
         [XmlElement("subject_id")]
         public string SubjectId { get; set; }
 
         /// <summary>
-        /// 主体类型
+        /// 主体类型，支持按照报名接口返回的类型，也可以传对应的支付宝账号类型
         /// </summary>
         [XmlElement("subject_type")]
         public string SubjectType { get; set; }

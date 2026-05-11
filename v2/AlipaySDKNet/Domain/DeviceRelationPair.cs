@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DeviceRelationPair : AopObject
     {
         /// <summary>
+        /// 设备类型
+        /// </summary>
+        [XmlElement("device_type")]
+        public string DeviceType { get; set; }
+
+        /// <summary>
         /// 设备绑定的SMID或PID
         /// </summary>
         [XmlElement("merchant_id")]

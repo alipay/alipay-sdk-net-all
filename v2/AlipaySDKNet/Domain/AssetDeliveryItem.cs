@@ -210,6 +210,12 @@ namespace Aop.Api.Domain
         public LogisticsInfo LogisticsInfo { get; set; }
 
         /// <summary>
+        /// 主要用于供应商区分发货模式
+        /// </summary>
+        [XmlElement("logistics_mode")]
+        public string LogisticsMode { get; set; }
+
+        /// <summary>
         /// 备注
         /// </summary>
         [XmlElement("memo")]

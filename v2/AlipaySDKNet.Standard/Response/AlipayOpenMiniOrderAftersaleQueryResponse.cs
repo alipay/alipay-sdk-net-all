@@ -67,10 +67,22 @@ namespace Aop.Api.Response
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// 返回优惠总金额用于，用于信息展示，单位元，默认为空
+        /// </summary>
+        [XmlElement("discount_amount")]
+        public string DiscountAmount { get; set; }
+
+        /// <summary>
         /// 最终退款金额，单位：元,精确到小数点后两位
         /// </summary>
         [XmlElement("finally_refund_amount")]
         public string FinallyRefundAmount { get; set; }
+
+        /// <summary>
+        /// 用于返回售后资金明细信息数据，从oc_aftersale_funds_detail表中获取，默认为空，其中金额的单位为元
+        /// </summary>
+        [XmlElement("funds_details")]
+        public AftersaleFundsDetailItem FundsDetails { get; set; }
 
         /// <summary>
         /// 物流单详情

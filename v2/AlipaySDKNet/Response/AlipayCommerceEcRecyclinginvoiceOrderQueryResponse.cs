@@ -128,6 +128,18 @@ namespace Aop.Api.Response
         public string ProductId { get; set; }
 
         /// <summary>
+        /// 收款即开票（代卖人）页面支付宝URL 在支付宝里打开的自然人缴税并收款页面，可从企业（商户）/服务商自有APP/小程序页面打开  订单为代卖人订单返回  未安装支付宝或使用受限目标容器时可能无法打开
+        /// </summary>
+        [XmlElement("proxy_seller_invoice_page_alipay_url")]
+        public string ProxySellerInvoicePageAlipayUrl { get; set; }
+
+        /// <summary>
+        /// 收款即开票页面URL（代卖人端） 在支付宝里打开的代卖人收款页面，可从企业（商户）/服务商自有APP/小程序页面打开 订单为代卖人订单返回
+        /// </summary>
+        [XmlElement("proxy_seller_invoice_page_url")]
+        public string ProxySellerInvoicePageUrl { get; set; }
+
+        /// <summary>
         /// 卖家名称
         /// </summary>
         [XmlElement("seller_name")]

@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class ShopIndustryLicense : AopObject
     {
         /// <summary>
+        /// 证件过期时间
+        /// </summary>
+        [XmlElement("expire_time")]
+        public string ExpireTime { get; set; }
+
+        /// <summary>
+        /// 资质证件编号
+        /// </summary>
+        [XmlElement("license_no")]
+        public string LicenseNo { get; set; }
+
+        /// <summary>
         /// 资质图片信息
         /// </summary>
         [XmlElement("license_pic")]

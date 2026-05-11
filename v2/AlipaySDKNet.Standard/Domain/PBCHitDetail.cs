@@ -68,5 +68,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reference_id")]
         public string ReferenceId { get; set; }
+
+        /// <summary>
+        /// 扫描请求事件ID
+        /// </summary>
+        [XmlElement("scan_event_id")]
+        public string ScanEventId { get; set; }
     }
 }

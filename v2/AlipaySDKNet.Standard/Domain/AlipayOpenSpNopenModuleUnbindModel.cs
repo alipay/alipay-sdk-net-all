@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string McuId { get; set; }
 
         /// <summary>
+        /// 是否删除已生成的N链接，请求Y表示删除，请求N或不传表示不删除
+        /// </summary>
+        [XmlElement("regenerate_link")]
+        public string RegenerateLink { get; set; }
+
+        /// <summary>
         /// 模组有 se_uuid 必传
         /// </summary>
         [XmlElement("se_uuid")]

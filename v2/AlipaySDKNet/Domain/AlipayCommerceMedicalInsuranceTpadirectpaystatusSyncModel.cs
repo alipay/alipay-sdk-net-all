@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalInsuranceTpadirectpaystatusSyncModel : AopObject
     {
         /// <summary>
+        /// 订单信息回传必传 
+        /// </summary>
+        [XmlElement("claim_application")]
+        public string ClaimApplication { get; set; }
+
+        /// <summary>
         /// 直付码值
         /// </summary>
         [XmlElement("code_data")]
@@ -42,6 +48,12 @@ namespace Aop.Api.Domain
         public List<InsuranceMedicineInfo> MedicineList { get; set; }
 
         /// <summary>
+        /// 是否需要自费
+        /// </summary>
+        [XmlElement("need_self_pay")]
+        public bool NeedSelfPay { get; set; }
+
+        /// <summary>
         /// 支付宝用户id
         /// </summary>
         [XmlElement("open_id")]
@@ -66,6 +78,12 @@ namespace Aop.Api.Domain
         public string OrderTime { get; set; }
 
         /// <summary>
+        /// 线上：online 线下：offline
+        /// </summary>
+        [XmlElement("order_type")]
+        public string OrderType { get; set; }
+
+        /// <summary>
         /// 门店参数
         /// </summary>
         [XmlElement("outlet_info")]
@@ -76,6 +94,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("policy_no")]
         public string PolicyNo { get; set; }
+
+        /// <summary>
+        /// 发票回传状态必传
+        /// </summary>
+        [XmlElement("recipe_image")]
+        public string RecipeImage { get; set; }
 
         /// <summary>
         /// 退款金额(单位：元，保留2位小数，退款为负数）

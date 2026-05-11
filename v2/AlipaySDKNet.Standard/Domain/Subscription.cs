@@ -29,13 +29,13 @@ namespace Aop.Api.Domain
         public string Created { get; set; }
 
         /// <summary>
-        /// 当前周期结束时间
+        /// 最近一个扣款周期结束时间
         /// </summary>
         [XmlElement("current_period_end")]
         public string CurrentPeriodEnd { get; set; }
 
         /// <summary>
-        /// 当前周期开始时间
+        /// 最近一个扣款周期开始时间
         /// </summary>
         [XmlElement("current_period_start")]
         public string CurrentPeriodStart { get; set; }
@@ -52,6 +52,19 @@ namespace Aop.Api.Domain
         [XmlArray("items")]
         [XmlArrayItem("subscription_query_item")]
         public List<SubscriptionQueryItem> Items { get; set; }
+
+        /// <summary>
+        /// 订阅元数据，订阅创建时传入
+        /// </summary>
+        [XmlElement("metadata")]
+        public string Metadata { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("pending_items")]
+        [XmlArrayItem("subscription_query_pending_item")]
+        public List<SubscriptionQueryPendingItem> PendingItems { get; set; }
 
         /// <summary>
         /// 订阅开始日期

@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string PurchaseTime { get; set; }
 
         /// <summary>
-        /// 场景ID: 1:（charging）充电
+        /// 场景ID: 1：公充联名会员 2：车企联名会员
         /// </summary>
         [XmlElement("scene_id")]
         public long SceneId { get; set; }

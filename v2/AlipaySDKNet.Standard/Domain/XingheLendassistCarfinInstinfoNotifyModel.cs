@@ -71,5 +71,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("valuation_info")]
         public ValuationInfo ValuationInfo { get; set; }
+
+        /// <summary>
+        /// 人车核验信息
+        /// </summary>
+        [XmlElement("vehicle_verification_info")]
+        public CarfinVehicleVerificationInfo VehicleVerificationInfo { get; set; }
     }
 }

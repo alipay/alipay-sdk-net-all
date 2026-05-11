@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CardId { get; set; }
 
         /// <summary>
+        /// 过期时间延期原因
+        /// </summary>
+        [XmlElement("expand_reason")]
+        public string ExpandReason { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

@@ -170,6 +170,12 @@ namespace Aop.Api.Domain
         public List<OpenLbsEntry> LbsList { get; set; }
 
         /// <summary>
+        /// 做为target_roi的拓展字段，含义与target_roi一样，支持4为小数。优先级高于target_roi
+        /// </summary>
+        [XmlElement("new_target_roi")]
+        public string NewTargetRoi { get; set; }
+
+        /// <summary>
         /// 仅出价方式bidType=OCPX时才可开启一键起量 ENABLE: 开启 MANUAL_DISABLE：手动关闭
         /// </summary>
         [XmlElement("one_boost_status")]

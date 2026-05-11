@@ -86,5 +86,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("request_time")]
         public string RequestTime { get; set; }
+
+        /// <summary>
+        /// 子功能，默认是代付，涉及到同人账户的资金划拨/资金释放等操作需要选择划拨 ●代付： ENTRUST_AUTH_PAY ●划拨：ENTRUST_ALLOCATE
+        /// </summary>
+        [XmlElement("sub_function")]
+        public string SubFunction { get; set; }
     }
 }

@@ -77,5 +77,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reason_code")]
         public string ReasonCode { get; set; }
+
+        /// <summary>
+        /// 退款项明细列表
+        /// </summary>
+        [XmlArray("refund_items")]
+        [XmlArrayItem("aftersale_refund_item_v_o")]
+        public List<AftersaleRefundItemVO> RefundItems { get; set; }
     }
 }

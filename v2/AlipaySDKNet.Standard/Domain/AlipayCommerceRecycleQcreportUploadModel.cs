@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public RecycleQcReportProductInfo ProductInfo { get; set; }
 
         /// <summary>
+        /// 质检报告确认
+        /// </summary>
+        [XmlElement("report_confirm")]
+        public bool ReportConfirm { get; set; }
+
+        /// <summary>
         /// 报告总结
         /// </summary>
         [XmlElement("summary")]

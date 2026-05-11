@@ -10,19 +10,19 @@ namespace Aop.Api.Domain
     public class OrderElectronicReceipt : AopObject
     {
         /// <summary>
-        /// 下载链接。status为SUCCESS时返回。用户可以使用此http链接下载文件内容。有效时间20s。 生成的文件是zip格式。需要解压后获取电子回单pdf内容
+        /// 下载链接。status为SUCCESS时返回。用户可以使用此http链接下载文件内容，电子回单文件为pdf格式。
         /// </summary>
         [XmlElement("download_url")]
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// 如果生成失败，则会返回失败原因
+        /// 状态为FAILED，可联系业务人员处理
         /// </summary>
         [XmlElement("error_message")]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// 处理状态 INIT - 初始化 PROCESS - 处理中 SUCCESS - 成功 FAIL - 失败
+        /// 处理状态 INIT - 初始化 PROCESSING - 处理中 SUCCESS - 成功 FAILED - 失败
         /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }

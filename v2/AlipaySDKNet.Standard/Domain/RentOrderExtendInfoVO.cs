@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string PromisedSendTime { get; set; }
 
         /// <summary>
+        /// 租赁派单ID，唯一标识一次派单请求
+        /// </summary>
+        [XmlElement("rent_dispatch_id")]
+        public string RentDispatchId { get; set; }
+
+        /// <summary>
         /// 定义参考 <a href="https://opendocs.alipay.com/mini/0dfcde" target="_blank">公域场景标识</a>
         /// </summary>
         [XmlElement("scene_id")]

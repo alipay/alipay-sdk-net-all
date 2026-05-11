@@ -11,6 +11,18 @@ namespace Aop.Api.Domain
     public class PromoInfoVO : AopObject
     {
         /// <summary>
+        /// 政府补贴详情
+        /// </summary>
+        [XmlElement("government_promo_detail")]
+        public GovernmentPromoDetailInfoVO GovernmentPromoDetail { get; set; }
+
+        /// <summary>
+        /// 政府补贴汇总
+        /// </summary>
+        [XmlElement("government_total_amount")]
+        public string GovernmentTotalAmount { get; set; }
+
+        /// <summary>
         /// 商家优惠详情
         /// </summary>
         [XmlElement("merchant_promo_detail")]

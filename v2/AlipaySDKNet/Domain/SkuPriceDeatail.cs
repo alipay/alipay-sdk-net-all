@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class SkuPriceDeatail : AopObject
     {
         /// <summary>
+        /// 耗材费用，单位元。币种 ：人民币。
+        /// </summary>
+        [XmlElement("consumables_price")]
+        public string ConsumablesPrice { get; set; }
+
+        /// <summary>
+        /// 药品费用，单位元。币种 ：人民币。
+        /// </summary>
+        [XmlElement("drug_price")]
+        public string DrugPrice { get; set; }
+
+        /// <summary>
         /// 价格，单位元。币种 ：人民币。
         /// </summary>
         [XmlElement("price")]

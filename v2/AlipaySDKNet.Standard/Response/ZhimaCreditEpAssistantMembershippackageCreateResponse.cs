@@ -11,6 +11,18 @@ namespace Aop.Api.Response
     public class ZhimaCreditEpAssistantMembershippackageCreateResponse : AopResponse
     {
         /// <summary>
+        /// 会员包生效时间
+        /// </summary>
+        [XmlElement("begin_time")]
+        public string BeginTime { get; set; }
+
+        /// <summary>
+        /// 会员包失效时间
+        /// </summary>
+        [XmlElement("end_time")]
+        public string EndTime { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("license_detail_list")]

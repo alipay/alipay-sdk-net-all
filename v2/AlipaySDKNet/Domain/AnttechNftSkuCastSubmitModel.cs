@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string CreationTime { get; set; }
 
         /// <summary>
+        /// 自定义藏品基模 true-基模，其他值为否
+        /// </summary>
+        [XmlElement("custom_flag")]
+        public string CustomFlag { get; set; }
+
+        /// <summary>
         /// 发行藏品的自然人或公司
         /// </summary>
         [XmlElement("issuer")]

@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -19,5 +21,19 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_aftersale_id")]
         public string OutAftersaleId { get; set; }
+
+        /// <summary>
+        /// 费用项明细列表
+        /// </summary>
+        [XmlArray("pay_items")]
+        [XmlArrayItem("aftersale_pay_item_v_o")]
+        public List<AftersalePayItemVO> PayItems { get; set; }
+
+        /// <summary>
+        /// 退款费用项明细
+        /// </summary>
+        [XmlArray("refund_items")]
+        [XmlArrayItem("aftersale_refund_item_v_o")]
+        public List<AftersaleRefundItemVO> RefundItems { get; set; }
     }
 }

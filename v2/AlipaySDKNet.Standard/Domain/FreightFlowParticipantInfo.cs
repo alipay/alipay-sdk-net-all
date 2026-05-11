@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string ParticipantName { get; set; }
 
         /// <summary>
-        /// 网商参与者类型：  网商活期：CURRENT  子户：SUB_ACCOUNT  外部银行卡：EXTEND_BANK_CARD  支付宝账户：ALIPAY_ACCOUNT 浦发参与者类型： 虚拟子户:VIRTUAL_SUB_ACCOUNT 银行卡:BANK_CARD_NO
+        /// 网商参与者类型：  网商活期：CURRENT  子户：SUB_ACCOUNT  外部银行卡：EXTEND_BANK_CARD  支付宝账户：ALIPAY_ACCOUNT  浦发参与者类型： 虚拟子户:VIRTUAL_SUB_ACCOUNT 银行卡:BANK_CARD_NO 支付宝钱包:ALIPAY_WALLET 支付宝余额:ALIPAY_BALANCE
         /// </summary>
         [XmlElement("participant_type")]
         public string ParticipantType { get; set; }

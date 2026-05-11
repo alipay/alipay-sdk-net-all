@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public long Current { get; set; }
 
         /// <summary>
+        /// 对应灯火侧B端页面的商品查询逻辑
+        /// </summary>
+        [XmlElement("goods_id")]
+        public string GoodsId { get; set; }
+
+        /// <summary>
+        /// 对应灯火侧B端页面的商品查询逻辑
+        /// </summary>
+        [XmlElement("goods_name")]
+        public string GoodsName { get; set; }
+
+        /// <summary>
         /// 灯火定义的营销目标对应的code值
         /// </summary>
         [XmlElement("market_target_code")]

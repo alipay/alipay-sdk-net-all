@@ -11,6 +11,11 @@ namespace Aop.Api.Request
     public class AlipayMarketingVerificationTradeAuditRequest : IAopUploadRequest<AlipayMarketingVerificationTradeAuditResponse>
     {
         /// <summary>
+        /// 激活照片（3c必填）转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem ActivateContent { get; set; }
+
+        /// <summary>
         /// 支付宝交易号，用于识别交易信息
         /// </summary>
         public string AlipayTradeNo { get; set; }
@@ -36,6 +41,36 @@ namespace Aop.Api.Request
         public FileItem InvoiceContent { get; set; }
 
         /// <summary>
+        /// 产品送达现场照或自提现场照片（家电必传），转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem OnSiteContent { get; set; }
+
+        /// <summary>
+        /// 其他辅助材料1，转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem OtherContent1 { get; set; }
+
+        /// <summary>
+        /// 其他辅助材料2,转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem OtherContent2 { get; set; }
+
+        /// <summary>
+        /// 其他辅助材料3，转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem OtherContent3 { get; set; }
+
+        /// <summary>
+        /// 其他辅助材料4，转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem OtherContent4 { get; set; }
+
+        /// <summary>
+        /// 其他辅助材料5，转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem OtherContent5 { get; set; }
+
+        /// <summary>
         /// 外部订单号
         /// </summary>
         public string OutTradeNo { get; set; }
@@ -49,6 +84,16 @@ namespace Aop.Api.Request
         /// 支付宝分配的场景编码，用于识别活动场景及区域等信息
         /// </summary>
         public string SceneCode { get; set; }
+
+        /// <summary>
+        /// 机身SN照（家电必传），转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem SnBodyContent { get; set; }
+
+        /// <summary>
+        /// 商品SN照转为字节流传递，要求为jpg、jpeg、png格式
+        /// </summary>
+        public FileItem SnContent { get; set; }
 
         #region IAopRequest Members
 		private bool needEncrypt=false;
@@ -163,10 +208,19 @@ namespace Aop.Api.Request
         public IDictionary<string, FileItem> GetFileParameters()
         {
             IDictionary<string, FileItem> parameters = new Dictionary<string, FileItem>();
+            parameters.Add("activate_content", this.ActivateContent);
             parameters.Add("delivery_list_content", this.DeliveryListContent);
             parameters.Add("evidentiary_content", this.EvidentiaryContent);
             parameters.Add("invoice_content", this.InvoiceContent);
+            parameters.Add("on_site_content", this.OnSiteContent);
+            parameters.Add("other_content_1", this.OtherContent1);
+            parameters.Add("other_content_2", this.OtherContent2);
+            parameters.Add("other_content_3", this.OtherContent3);
+            parameters.Add("other_content_4", this.OtherContent4);
+            parameters.Add("other_content_5", this.OtherContent5);
             parameters.Add("sales_list_content", this.SalesListContent);
+            parameters.Add("sn_body_content", this.SnBodyContent);
+            parameters.Add("sn_content", this.SnContent);
             return parameters;
         }
 

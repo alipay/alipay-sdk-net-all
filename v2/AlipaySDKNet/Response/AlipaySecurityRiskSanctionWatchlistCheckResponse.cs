@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class AlipaySecurityRiskSanctionWatchlistCheckResponse : AopResponse
     {
         /// <summary>
+        /// 可追溯响应ID
+        /// </summary>
+        [XmlElement("open_trace_id")]
+        public string OpenTraceId { get; set; }
+
+        /// <summary>
         /// 人行制裁扫描返回结果
         /// </summary>
         [XmlElement("pbc_scan_result")]

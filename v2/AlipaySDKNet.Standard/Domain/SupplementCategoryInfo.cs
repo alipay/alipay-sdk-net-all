@@ -28,5 +28,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("supplement_payment_amt")]
         public long SupplementPaymentAmt { get; set; }
+
+        /// <summary>
+        /// 给坐席看的回退原因
+        /// </summary>
+        [XmlElement("supplement_reason_for_customer_service")]
+        public string SupplementReasonForCustomerService { get; set; }
     }
 }

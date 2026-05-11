@@ -22,16 +22,28 @@ namespace Aop.Api.Domain
         public string CheckPlace { get; set; }
 
         /// <summary>
-        /// 打卡配置模板类型
+        /// 打卡模板
         /// </summary>
         [XmlElement("check_template_type")]
         public string CheckTemplateType { get; set; }
+
+        /// <summary>
+        /// 自定义外部标识
+        /// </summary>
+        [XmlElement("external_place_mark")]
+        public string ExternalPlaceMark { get; set; }
 
         /// <summary>
         /// open_id
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 请求来源（请求方）
+        /// </summary>
+        [XmlElement("request_src")]
+        public string RequestSrc { get; set; }
 
         /// <summary>
         /// 方案配置code

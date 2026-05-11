@@ -66,5 +66,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("vam_group")]
         public string VamGroup { get; set; }
+
+        /// <summary>
+        /// 【注意事项】此字段返回需要满足以下条件 1.3C租赁场景需签约租安盾产品  2.订单需要完成代扣或免押签约后，才会返回值。  3.租安盾产品订单——免押场景下需要配置租安盾策略且拉起免押受理台的策略是租安盾策略； 4.使用的风控策略类型为芝麻租赁租安盾长租策略: risk_policy_value=zhimazulin_zuandun 5.接口查询参数请求中?consult_risk_types=VERTICAL_RENT_RISK 其他信息可参考租安盾产品接入指南。
+        /// </summary>
+        [XmlElement("vertical_risk_models")]
+        public VerticalRiskVO VerticalRiskModels { get; set; }
     }
 }

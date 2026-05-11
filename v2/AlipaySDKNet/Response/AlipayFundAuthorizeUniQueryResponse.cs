@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -13,6 +14,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("agreement_no")]
         public string AgreementNo { get; set; }
+
+        /// <summary>
+        /// 用户授权信息：用户完成授权后，会将授权信息通过此字段以供外部查询
+        /// </summary>
+        [XmlElement("auth_user_info")]
+        public BankAuthUserInfo AuthUserInfo { get; set; }
 
         /// <summary>
         /// true（已授权电子回单）

@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public List<InsuredVO> InsuredList { get; set; }
 
         /// <summary>
+        /// 部分产品需校验冻资金额，需传入开通家装宝pid
+        /// </summary>
+        [XmlElement("open_jzb_pid")]
+        public string OpenJzbPid { get; set; }
+
+        /// <summary>
         /// 订单金额,分为单位
         /// </summary>
         [XmlElement("order_amount")]
@@ -60,10 +66,16 @@ namespace Aop.Api.Domain
         public string PolicyStartDate { get; set; }
 
         /// <summary>
-        /// 家财: JiaCai 团意1:TuanYi1 团意2:TuanYi2
+        /// 家财:JiaCai 团意1:TuanYi1 团意2:TuanYi2
         /// </summary>
         [XmlElement("product_code")]
         public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 取值为文件上传接口对应DECORATION_CONTRACT场景的bizFileId
+        /// </summary>
+        [XmlElement("project_file_id")]
+        public string ProjectFileId { get; set; }
 
         /// <summary>
         /// 项目编号或合同编号

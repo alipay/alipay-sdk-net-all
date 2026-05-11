@@ -22,6 +22,24 @@ namespace Aop.Api.Domain
         public string EventAction { get; set; }
 
         /// <summary>
+        /// {"reason":"xxx"}
+        /// </summary>
+        [XmlElement("ext_data")]
+        public string ExtData { get; set; }
+
+        /// <summary>
+        /// 医院分院医院
+        /// </summary>
+        [XmlElement("hospital_branch_code")]
+        public string HospitalBranchCode { get; set; }
+
+        /// <summary>
+        /// 医院分院医院
+        /// </summary>
+        [XmlElement("hospital_branch_name")]
+        public string HospitalBranchName { get; set; }
+
+        /// <summary>
         /// 医院编码
         /// </summary>
         [XmlElement("hospital_code")]

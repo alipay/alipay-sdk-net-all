@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<LifeServiceAttr> RoomAttrs { get; set; }
 
         /// <summary>
-        /// 场地种类
+        /// 场地所属类目
         /// </summary>
         [XmlElement("room_category")]
         public string RoomCategory { get; set; }

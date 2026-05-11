@@ -138,6 +138,12 @@ namespace Aop.Api.Domain
         public string LogisticsCode { get; set; }
 
         /// <summary>
+        /// 物流模式
+        /// </summary>
+        [XmlElement("logistics_mode")]
+        public string LogisticsMode { get; set; }
+
+        /// <summary>
         /// 收钱码吊牌和贴纸类型不为空
         /// </summary>
         [XmlElement("logistics_name")]

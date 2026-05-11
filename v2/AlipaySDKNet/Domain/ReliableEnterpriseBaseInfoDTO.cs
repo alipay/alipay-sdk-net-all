@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("enterprise_name")]
         public string EnterpriseName { get; set; }
+
+        /// <summary>
+        /// 企业所属行业
+        /// </summary>
+        [XmlElement("industry")]
+        public string Industry { get; set; }
     }
 }

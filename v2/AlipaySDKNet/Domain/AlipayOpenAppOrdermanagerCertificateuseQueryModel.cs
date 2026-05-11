@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayOpenAppOrdermanagerCertificateuseQueryModel : AopObject
     {
         /// <summary>
+        /// 商家在支付宝平台内创建的一种营销业务的载体，可以支持发品、配券以及活动报名的id,它的来源是SAAS服务商来进件的时候,创建团购店铺的时候,生成的。
+        /// </summary>
+        [XmlElement("a_store_id")]
+        public string AStoreId { get; set; }
+
+        /// <summary>
         /// 分页页码
         /// </summary>
         [XmlElement("page_num")]
@@ -23,7 +29,7 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 需传入商家在支付宝侧生成的店铺id
+        /// 需传入商家在支付宝侧生成的店铺id 当前字段已废弃(店铺id字段请使用a_store_id，与商品、店铺保持一致)
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }

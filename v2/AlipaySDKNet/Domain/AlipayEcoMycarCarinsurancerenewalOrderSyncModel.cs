@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
+        /// 备注信息
+        /// </summary>
+        [XmlElement("remark")]
+        public string Remark { get; set; }
+
+        /// <summary>
         /// 来源渠道
         /// </summary>
         [XmlElement("source_channel")]

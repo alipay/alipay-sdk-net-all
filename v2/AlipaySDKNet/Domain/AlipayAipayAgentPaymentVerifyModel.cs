@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayAipayAgentPaymentVerifyModel : AopObject
     {
         /// <summary>
+        /// 客户端会话标识，用于校验买家安全性、真实性
+        /// </summary>
+        [XmlElement("client_session")]
+        public string ClientSession { get; set; }
+
+        /// <summary>
         /// 支付凭证
         /// </summary>
         [XmlElement("payment_proof")]

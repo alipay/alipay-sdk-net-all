@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class XingheLendassistCarfinMortgageapplystatusNotifyModel : AopObject
     {
         /// <summary>
+        /// ENDORSE_ING：线下窗口受理成功 MORTGAGE_SUC：抵押办理成功 MORTGAGE_FAIL：抵押办理失败
+        /// </summary>
+        [XmlElement("current_status")]
+        public string CurrentStatus { get; set; }
+
+        /// <summary>
         /// 交科所的抵押订单序号
         /// </summary>
         [XmlElement("jksxh")]

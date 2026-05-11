@@ -46,7 +46,13 @@ namespace Aop.Api.Domain
         public string ItemType { get; set; }
 
         /// <summary>
-        /// 仅当商家通过请求门店创建接口同步门店信息时，非空
+        /// 商家商品ID
+        /// </summary>
+        [XmlElement("m_item_id")]
+        public string MItemId { get; set; }
+
+        /// <summary>
+        /// 商家门店ID
         /// </summary>
         [XmlElement("m_shop_id")]
         public string MShopId { get; set; }
@@ -118,7 +124,7 @@ namespace Aop.Api.Domain
         public string SettleAmount { get; set; }
 
         /// <summary>
-        /// settle_type 为“USE”：代表“结算时间” settle_type 为“REFUND”：代表“退结算时间”
+        /// settle_type 为“USE”：代表“结算时间”； settle_type 为“REFUND”：代表“退结算时间”
         /// </summary>
         [XmlElement("settle_time")]
         public string SettleTime { get; set; }
@@ -148,22 +154,46 @@ namespace Aop.Api.Domain
         public string TotalCommissionAmount { get; set; }
 
         /// <summary>
-        /// settle_type 为“USE”：代表“核销时间” settle_type为“REFUND”：代表“退款时间” 当前字段已废弃(字段废弃，不建议使用)
+        /// settle_type 为“USE”：代表“核销时间”； settle_type为“REFUND”：代表“退款时间” 当前字段已废弃(字段废弃，不建议使用)
         /// </summary>
         [XmlElement("trade_time")]
         public string TradeTime { get; set; }
 
         /// <summary>
-        /// 券核销的蚂蚁门店ID
+        /// 门店ID
         /// </summary>
         [XmlElement("use_shop_id")]
         public string UseShopId { get; set; }
 
         /// <summary>
-        /// 券核销的蚂蚁门店名称
+        /// 门店名称
         /// </summary>
         [XmlElement("use_shop_name")]
         public string UseShopName { get; set; }
+
+        /// <summary>
+        /// 核销人账号，格式：wsj***@alitest.xyz
+        /// </summary>
+        [XmlElement("verify_op")]
+        public string VerifyOp { get; set; }
+
+        /// <summary>
+        /// 核销人名称
+        /// </summary>
+        [XmlElement("verify_op_name")]
+        public string VerifyOpName { get; set; }
+
+        /// <summary>
+        /// 核销点ID
+        /// </summary>
+        [XmlElement("verify_point_id")]
+        public string VerifyPointId { get; set; }
+
+        /// <summary>
+        /// 核销点名称
+        /// </summary>
+        [XmlElement("verify_point_name")]
+        public string VerifyPointName { get; set; }
 
         /// <summary>
         /// 商家请求凭证核销接口时传入的时间，即同步凭证核销状态接口中的请求参数biz_dt
