@@ -31,6 +31,11 @@ namespace Aop.Api.Request
         public string PhotoUrl { get; set; }
 
         /// <summary>
+        /// true: photoUrl字段为RSA加密后Base64编码的密文，false或不传: photoUrl字段为明文URL（向后兼容）
+        /// </summary>
+        public Nullable<bool> PhotoUrlEncrypted { get; set; }
+
+        /// <summary>
         /// 项目ID
         /// </summary>
         public string ProjectId { get; set; }
@@ -133,6 +138,7 @@ namespace Aop.Api.Request
             parameters.Add("alipay_id", this.AlipayId);
             parameters.Add("open_id", this.OpenId);
             parameters.Add("photo_url", this.PhotoUrl);
+            parameters.Add("photo_url_encrypted", this.PhotoUrlEncrypted);
             parameters.Add("project_id", this.ProjectId);
             parameters.Add("solution_type", this.SolutionType);
             parameters.Add("sub_project_id", this.SubProjectId);

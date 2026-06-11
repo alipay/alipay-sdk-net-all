@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string TradeNo { get; set; }
 
         /// <summary>
-        /// 当mode为MY_BANK时： 授权代付:ENTRUST_AUTH_PAY 授权划转:ENTRUST_ALLOCATE 转账:TRANSFER 充值收款/退款/退汇:SETTLE_ACCOUNT_RECEIPT 收银支付:CASHIER_PAY  当mode为SPDB时： 05-入金单笔回单 06-出金单笔回单 07-子账户互转单笔回单
+        /// 当mode为MY_BANK时： 授权代付:ENTRUST_AUTH_PAY 授权划转:ENTRUST_ALLOCATE 转账:TRANSFER 充值收款/退款/退汇:SETTLE_ACCOUNT_RECEIPT 收银支付:CASHIER_PAY 调拨：ALLOCATE  当mode为SPDB时： 05-入金单笔回单 06-出金单笔回单 07-子账户互转单笔回单
         /// </summary>
         [XmlElement("trade_type")]
         public string TradeType { get; set; }

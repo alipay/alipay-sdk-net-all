@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string OutMerchantNo { get; set; }
 
         /// <summary>
-        /// 参与类型，参与类型，支持PARTNER_ID 、LOGON_ID等
+        /// 参与类型，参与类型，支持PARTNER_ID 、LOGON_ID、SHOP_ID等
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }

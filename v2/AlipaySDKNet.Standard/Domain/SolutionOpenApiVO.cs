@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string SolutionCode { get; set; }
 
         /// <summary>
+        /// 方案配置code
+        /// </summary>
+        [XmlElement("solution_config_code")]
+        public string SolutionConfigCode { get; set; }
+
+        /// <summary>
         /// 方案名称
         /// </summary>
         [XmlElement("solution_name")]

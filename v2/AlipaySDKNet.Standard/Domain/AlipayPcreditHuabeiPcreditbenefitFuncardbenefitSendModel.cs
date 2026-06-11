@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AlipayUserId { get; set; }
 
         /// <summary>
-        /// 发放的花呗金数量，花呗金单位 个，1个花呗金等价于1分
+        /// 直发花呗金场景：发放的花呗金数量，花呗金单位 个，1个花呗金等价于1分，飞猪场景可以传飞猪履约金额用于发奖定价
         /// </summary>
         [XmlElement("amount")]
         public long Amount { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 业务场景
+        /// 业务场景，飞猪可以填入履约场景，枚举可以飞猪给出后续进行扩展
         /// </summary>
         [XmlElement("scene")]
         public string Scene { get; set; }

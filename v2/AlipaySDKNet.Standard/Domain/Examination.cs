@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public ExaminationBookInfo BookInfo { get; set; }
 
         /// <summary>
+        /// 1 用户主动取消订单 2 未支付自动取消 3 商家超时未接单自动取消 4 用户补方超时自动取消 5 医生拒方取消订单 6 医生开方超时自动取消（处方侧） 7 医生开方超时自动取消（订单侧） 8 药店审方驳回取消订单 9 药店审方超时自动取消订单（处方侧） 10 药店审方超时自动取消订单（订单侧） 11 处方已作废
+        /// </summary>
+        [XmlElement("cancel_type")]
+        public long CancelType { get; set; }
+
+        /// <summary>
         /// 检测信息
         /// </summary>
         [XmlElement("check_info")]

@@ -53,6 +53,12 @@ namespace Aop.Api.Domain
         public bool Optimal { get; set; }
 
         /// <summary>
+        /// 预咨询ID
+        /// </summary>
+        [XmlElement("pre_consult_id")]
+        public string PreConsultId { get; set; }
+
+        /// <summary>
         /// 优惠总金额，单位为元
         /// </summary>
         [XmlElement("promo_amount")]
@@ -100,6 +106,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("threshold_amount")]
         public string ThresholdAmount { get; set; }
+
+        /// <summary>
+        /// 券详情信息
+        /// </summary>
+        [XmlElement("voucher_detail")]
+        public VoucherDetailModel VoucherDetail { get; set; }
 
         /// <summary>
         /// 券id

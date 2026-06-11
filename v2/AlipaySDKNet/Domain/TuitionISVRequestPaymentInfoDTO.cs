@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class TuitionISVRequestPaymentInfoDTO : AopObject
     {
         /// <summary>
-        /// 170
+        /// 账户id
         /// </summary>
         [XmlElement("account_id")]
         public string AccountId { get; set; }

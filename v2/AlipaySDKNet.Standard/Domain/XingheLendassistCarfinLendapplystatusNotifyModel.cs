@@ -69,10 +69,22 @@ namespace Aop.Api.Domain
         public bool NeedChangeBindCard { get; set; }
 
         /// <summary>
+        /// 是否需要重签协议
+        /// </summary>
+        [XmlElement("need_resign_agreement")]
+        public bool NeedResignAgreement { get; set; }
+
+        /// <summary>
         /// 是否需要加急办理
         /// </summary>
         [XmlElement("need_urgent_processing")]
         public bool NeedUrgentProcessing { get; set; }
+
+        /// <summary>
+        /// 其他信息
+        /// </summary>
+        [XmlElement("other")]
+        public CarfinLendApplyStatusNotifyOther Other { get; set; }
 
         /// <summary>
         /// 机构侧唯一业务编号

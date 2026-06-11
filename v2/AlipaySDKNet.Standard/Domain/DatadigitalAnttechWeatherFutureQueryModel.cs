@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AgreementCode { get; set; }
 
         /// <summary>
-        /// 需要预测的天数,为 0 到 14 之间的整数
+        /// 以今天为起点的需要预测天数,范围为 1 到 15 之间的整数，输入1则表示仅查询今天预测数据
         /// </summary>
         [XmlElement("forecast_days")]
         public long ForecastDays { get; set; }

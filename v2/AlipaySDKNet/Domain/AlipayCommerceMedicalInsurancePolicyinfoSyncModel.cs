@@ -122,6 +122,12 @@ namespace Aop.Api.Domain
         public List<RelatedPerson> PersonList { get; set; }
 
         /// <summary>
+        /// 保单主体类型
+        /// </summary>
+        [XmlElement("policy_entity_type")]
+        public string PolicyEntityType { get; set; }
+
+        /// <summary>
         /// 保单号【用户ID-保司类型-保单号】保持唯一，修改场景此类字段必传
         /// </summary>
         [XmlElement("policy_no")]

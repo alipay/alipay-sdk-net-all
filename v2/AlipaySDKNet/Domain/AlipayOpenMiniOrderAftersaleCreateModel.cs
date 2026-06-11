@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string AftersaleReasonCode { get; set; }
 
         /// <summary>
+        /// 店铺ID
+        /// </summary>
+        [XmlElement("astore_id")]
+        public string AstoreId { get; set; }
+
+        /// <summary>
         /// 需要退款的凭证信息
         /// </summary>
         [XmlArray("certificate_infos")]

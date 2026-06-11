@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string BookStartTime { get; set; }
 
         /// <summary>
+        /// 市
+        /// </summary>
+        [XmlElement("city")]
+        public string City { get; set; }
+
+        /// <summary>
+        /// 区县
+        /// </summary>
+        [XmlElement("district")]
+        public string District { get; set; }
+
+        /// <summary>
         /// 患者性别
         /// </summary>
         [XmlElement("gender")]
@@ -40,6 +52,12 @@ namespace Aop.Api.Domain
         public string IdType { get; set; }
 
         /// <summary>
+        /// 详细地址
+        /// </summary>
+        [XmlElement("location")]
+        public string Location { get; set; }
+
+        /// <summary>
         /// 患者姓名
         /// </summary>
         [XmlElement("name")]
@@ -50,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("phone")]
         public string Phone { get; set; }
+
+        /// <summary>
+        /// 省
+        /// </summary>
+        [XmlElement("province")]
+        public string Province { get; set; }
 
         /// <summary>
         /// 预约门店地址

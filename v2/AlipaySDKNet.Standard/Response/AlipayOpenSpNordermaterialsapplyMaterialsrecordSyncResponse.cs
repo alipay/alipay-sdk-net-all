@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public long RemainRetryCount { get; set; }
 
         /// <summary>
+        /// 门店业务ID
+        /// </summary>
+        [XmlElement("shop_biz_id")]
+        public string ShopBizId { get; set; }
+
+        /// <summary>
         /// 铺设状态
         /// </summary>
         [XmlElement("status")]

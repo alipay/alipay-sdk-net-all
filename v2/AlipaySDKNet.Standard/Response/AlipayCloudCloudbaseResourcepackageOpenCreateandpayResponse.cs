@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("env_id")]
         public string EnvId { get; set; }
+
+        /// <summary>
+        /// 订单号
+        /// </summary>
+        [XmlElement("order_no")]
+        public string OrderNo { get; set; }
     }
 }

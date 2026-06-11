@@ -25,6 +25,12 @@ namespace Aop.Api.Domain
         public List<FulfillmentDeliveryInfo> DeliveryList { get; set; }
 
         /// <summary>
+        /// 订单履约类型，当发货类型为USER_DELIVERY_SEND时传入
+        /// </summary>
+        [XmlElement("delivery_type")]
+        public string DeliveryType { get; set; }
+
+        /// <summary>
         /// 设备信息列表
         /// </summary>
         [XmlArray("device_list")]

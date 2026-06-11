@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string FailReason { get; set; }
 
         /// <summary>
+        /// 如果参数传递了 out_activity_id，报名失败时会设置传入的out_activity_id，方便查看
+        /// </summary>
+        [XmlElement("out_activity_id")]
+        public string OutActivityId { get; set; }
+
+        /// <summary>
         /// 类型对应值，传入报名对象的返回值
         /// </summary>
         [XmlElement("value")]

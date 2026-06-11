@@ -21,7 +21,7 @@ namespace Aop.Api.Response
         public long IsRealNameVerified { get; set; }
 
         /// <summary>
-        /// 中文名称
+        /// 昵称
         /// </summary>
         [XmlElement("nick_name")]
         public string NickName { get; set; }

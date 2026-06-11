@@ -10,16 +10,34 @@ namespace Aop.Api.Domain
     public class AlipayCommerceAcommunicationDistributionFloworderCreateModel : AopObject
     {
         /// <summary>
+        /// 触达渠道
+        /// </summary>
+        [XmlElement("access_channel")]
+        public string AccessChannel { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("alipay_user_id")]
         public string AlipayUserId { get; set; }
 
         /// <summary>
+        /// 客户端ip
+        /// </summary>
+        [XmlElement("client_ip")]
+        public string ClientIp { get; set; }
+
+        /// <summary>
         /// 加密后手机号
         /// </summary>
         [XmlElement("encrypted_mobile")]
         public string EncryptedMobile { get; set; }
+
+        /// <summary>
+        /// 一级投流平台
+        /// </summary>
+        [XmlElement("first_channel")]
+        public string FirstChannel { get; set; }
 
         /// <summary>
         /// 机构订单id
@@ -46,6 +64,18 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// APP名称
+        /// </summary>
+        [XmlElement("package_name")]
+        public string PackageName { get; set; }
+
+        /// <summary>
+        /// 应用包名（bundleId）
+        /// </summary>
+        [XmlElement("package_route")]
+        public string PackageRoute { get; set; }
+
+        /// <summary>
         /// 支付类型
         /// </summary>
         [XmlElement("pay_type")]
@@ -64,6 +94,24 @@ namespace Aop.Api.Domain
         public string ProtocolSequenceId { get; set; }
 
         /// <summary>
+        /// 订购页URL
+        /// </summary>
+        [XmlElement("proxy_order_url")]
+        public string ProxyOrderUrl { get; set; }
+
+        /// <summary>
+        /// sdk凭证
+        /// </summary>
+        [XmlElement("sdk_voucher")]
+        public string SdkVoucher { get; set; }
+
+        /// <summary>
+        /// 二级投流平台
+        /// </summary>
+        [XmlElement("second_channel")]
+        public string SecondChannel { get; set; }
+
+        /// <summary>
         /// 短信验证码
         /// </summary>
         [XmlElement("sms_code")]
@@ -74,5 +122,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("target_account")]
         public string TargetAccount { get; set; }
+
+        /// <summary>
+        /// 浏览器用户标识
+        /// </summary>
+        [XmlElement("user_agent")]
+        public string UserAgent { get; set; }
     }
 }

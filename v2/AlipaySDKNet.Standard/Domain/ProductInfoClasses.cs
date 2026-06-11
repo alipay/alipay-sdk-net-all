@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class ProductInfoClasses : AopObject
     {
         /// <summary>
+        /// 经营品类
+        /// </summary>
+        [XmlElement("business_category")]
+        public string BusinessCategory { get; set; }
+
+        /// <summary>
         /// 产品介绍文件集合
         /// </summary>
         [XmlArray("file_list")]

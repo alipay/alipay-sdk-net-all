@@ -132,6 +132,13 @@ namespace Aop.Api.Domain
         public string OuterApplyId { get; set; }
 
         /// <summary>
+        /// 旅客运输信息列表，包含乘车人信息、行程信息等
+        /// </summary>
+        [XmlArray("passenger_transport_list")]
+        [XmlArrayItem("industry_invoice_passenger_transport")]
+        public List<IndustryInvoicePassengerTransport> PassengerTransportList { get; set; }
+
+        /// <summary>
         /// 收款人
         /// </summary>
         [XmlElement("payee")]

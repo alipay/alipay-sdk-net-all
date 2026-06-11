@@ -82,10 +82,22 @@ namespace Aop.Api.Domain
         public string PatientId { get; set; }
 
         /// <summary>
+        /// 用户身份证号
+        /// </summary>
+        [XmlElement("patient_id_no")]
+        public string PatientIdNo { get; set; }
+
+        /// <summary>
         /// 患者姓名
         /// </summary>
         [XmlElement("patient_name")]
         public string PatientName { get; set; }
+
+        /// <summary>
+        /// 就诊人手机号
+        /// </summary>
+        [XmlElement("patient_phone_num")]
+        public string PatientPhoneNum { get; set; }
 
         /// <summary>
         /// 妊娠 1-是 2-否

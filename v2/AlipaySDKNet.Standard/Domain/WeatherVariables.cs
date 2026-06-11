@@ -88,6 +88,12 @@ namespace Aop.Api.Domain
         public string DirectRadiationInstant { get; set; }
 
         /// <summary>
+        /// 该条数据的预测批次时间
+        /// </summary>
+        [XmlElement("forecast_batch_time")]
+        public string ForecastBatchTime { get; set; }
+
+        /// <summary>
         /// 降水量（包含所有形式） mm
         /// </summary>
         [XmlElement("precipitation")]
@@ -122,6 +128,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("relative_humidity_2m")]
         public string RelativeHumidity2m { get; set; }
+
+        /// <summary>
+        /// 分钟级降水（临近预报），支持未来2小时降雨预报数据，单位：毫米。
+        /// </summary>
+        [XmlElement("short_term_rain")]
+        public string ShortTermRain { get; set; }
 
         /// <summary>
         /// 短波辐照，单位 W/m^2

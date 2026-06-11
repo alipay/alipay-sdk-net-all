@@ -110,6 +110,12 @@ namespace Aop.Api.Response
         public string OwnerType { get; set; }
 
         /// <summary>
+        /// 费控制度出资类型
+        /// </summary>
+        [XmlElement("payment_mode")]
+        public string PaymentMode { get; set; }
+
+        /// <summary>
         /// 因公场景
         /// </summary>
         [XmlElement("scene_type")]

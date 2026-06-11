@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AppointmentStatusMsg { get; set; }
 
         /// <summary>
+        /// 扩展信息
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 失败原因
         /// </summary>
         [XmlElement("fail_reason")]
@@ -38,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 垫资方ID
+        /// </summary>
+        [XmlElement("tpa_id")]
+        public string TpaId { get; set; }
 
         /// <summary>
         /// 支付宝用户的唯一ID

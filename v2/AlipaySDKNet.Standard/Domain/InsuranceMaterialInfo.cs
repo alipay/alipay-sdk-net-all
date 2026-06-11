@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class InsuranceMaterialInfo : AopObject
     {
         /// <summary>
+        /// 材料扩展数据
+        /// </summary>
+        [XmlElement("ext_data")]
+        public string ExtData { get; set; }
+
+        /// <summary>
         /// 材料内容
         /// </summary>
         [XmlElement("material_content")]
@@ -26,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("material_type")]
         public string MaterialType { get; set; }
+
+        /// <summary>
+        /// 材料链接
+        /// </summary>
+        [XmlElement("material_url")]
+        public string MaterialUrl { get; set; }
     }
 }

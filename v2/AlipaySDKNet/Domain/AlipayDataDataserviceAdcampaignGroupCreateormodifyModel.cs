@@ -163,6 +163,12 @@ namespace Aop.Api.Domain
         public List<string> InterestList { get; set; }
 
         /// <summary>
+        /// ROI出价周期，归因时间窗口。
+        /// </summary>
+        [XmlElement("join_window_code")]
+        public string JoinWindowCode { get; set; }
+
+        /// <summary>
         /// 地理点位设置
         /// </summary>
         [XmlArray("lbs_list")]

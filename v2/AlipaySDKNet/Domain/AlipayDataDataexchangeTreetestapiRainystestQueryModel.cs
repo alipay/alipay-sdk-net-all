@@ -14,5 +14,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("demo")]
         public string Demo { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的userId。
+        /// </summary>
+        [XmlElement("demo_0521")]
+        public string Demo0521 { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的测试。
+        /// </summary>
+        [XmlElement("demo_0525")]
+        public string Demo0525 { get; set; }
     }
 }

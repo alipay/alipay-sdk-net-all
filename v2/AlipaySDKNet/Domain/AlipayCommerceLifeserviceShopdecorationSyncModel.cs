@@ -20,6 +20,13 @@ namespace Aop.Api.Domain
         /// <summary>
         /// null
         /// </summary>
+        [XmlArray("shop_category_images")]
+        [XmlArrayItem("shop_category_image")]
+        public List<ShopCategoryImage> ShopCategoryImages { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
         [XmlArray("shop_commercial_tags")]
         [XmlArrayItem("string")]
         public List<string> ShopCommercialTags { get; set; }
@@ -38,7 +45,7 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
-        /// 门店logo头像文件id 来源于alipay.open.file.upload支付宝文件上传接口
+        /// 门店logo头像，尺寸要求750px*750px，大小800k以内 文件id 来源于alipay.open.file.upload支付宝文件上传接口
         /// </summary>
         [XmlElement("shop_logo")]
         public string ShopLogo { get; set; }

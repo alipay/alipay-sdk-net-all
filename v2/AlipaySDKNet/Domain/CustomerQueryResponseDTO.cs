@@ -16,6 +16,18 @@ namespace Aop.Api.Domain
         public string Bid { get; set; }
 
         /// <summary>
+        /// 海图客户编码
+        /// </summary>
+        [XmlElement("cid")]
+        public string Cid { get; set; }
+
+        /// <summary>
+        /// 客户一二级行业
+        /// </summary>
+        [XmlElement("customer_industry")]
+        public string CustomerIndustry { get; set; }
+
+        /// <summary>
         /// 海图客户社会统一信用代码
         /// </summary>
         [XmlElement("ep_cert_no")]

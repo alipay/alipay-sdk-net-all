@@ -10,7 +10,7 @@ namespace Aop.Api.Response
     public class AlipayCommerceMedicalUserInfoQueryResponse : AopResponse
     {
         /// <summary>
-        /// 结果数据
+        /// 用户信息
         /// </summary>
         [XmlElement("user_query_info")]
         public UserQueryInfo UserQueryInfo { get; set; }

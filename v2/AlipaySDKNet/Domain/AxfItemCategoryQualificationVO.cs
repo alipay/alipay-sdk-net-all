@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("qualification_type")]
         public string QualificationType { get; set; }
+
+        /// <summary>
+        /// 是否必填
+        /// </summary>
+        [XmlElement("required")]
+        public bool Required { get; set; }
     }
 }

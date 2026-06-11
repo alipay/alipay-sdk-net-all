@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string EmployeeNo { get; set; }
 
         /// <summary>
+        /// 男：10 女：20
+        /// </summary>
+        [XmlElement("gender")]
+        public string Gender { get; set; }
+
+        /// <summary>
         /// 客服工作手机号
         /// </summary>
         [XmlElement("mobile")]

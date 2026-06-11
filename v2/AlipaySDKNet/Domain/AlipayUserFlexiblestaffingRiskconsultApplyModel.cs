@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -50,5 +51,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("risk_scene")]
         public string RiskScene { get; set; }
+
+        /// <summary>
+        /// 限额子场景，仅Account Limit Risk 限权风险咨询场景可选传参，其他场景无需传参
+        /// </summary>
+        [XmlArray("special_check_items")]
+        [XmlArrayItem("string")]
+        public List<string> SpecialCheckItems { get; set; }
     }
 }

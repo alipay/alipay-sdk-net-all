@@ -34,9 +34,21 @@ namespace Aop.Api.Domain
         public bool NeedSignUrl { get; set; }
 
         /// <summary>
+        /// 需要跳转订单详情页的企业码订单ID，可以从订单详情接口获得
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
         /// 供给id
         /// </summary>
         [XmlElement("service_id")]
         public string ServiceId { get; set; }
+
+        /// <summary>
+        /// 跳转URL类型
+        /// </summary>
+        [XmlElement("url_type")]
+        public string UrlType { get; set; }
     }
 }

@@ -229,7 +229,7 @@ namespace Aop.Api.Domain
         public List<EpStockInfoClasses> ShanghaiShenzhenStockList { get; set; }
 
         /// <summary>
-        /// 企业简称 多个使用,隔开
+        /// 企业简称 多个使用;隔开
         /// </summary>
         [XmlElement("site_info_abbreviation")]
         public string SiteInfoAbbreviation { get; set; }
@@ -239,6 +239,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("site_info_business_location")]
         public string SiteInfoBusinessLocation { get; set; }
+
+        /// <summary>
+        /// 联系方式
+        /// </summary>
+        [XmlElement("site_info_contact_information")]
+        public string SiteInfoContactInformation { get; set; }
 
         /// <summary>
         /// 企业实力证明文件

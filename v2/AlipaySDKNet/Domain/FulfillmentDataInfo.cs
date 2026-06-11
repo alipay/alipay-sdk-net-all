@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class FulfillmentDataInfo : AopObject
     {
         /// <summary>
+        /// 顾问数据
+        /// </summary>
+        [XmlElement("advisor")]
+        public AdvisorParam Advisor { get; set; }
+
+        /// <summary>
         /// 问诊类数据
         /// </summary>
         [XmlElement("consultation")]
@@ -20,5 +26,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("examination")]
         public ExaminationParam Examination { get; set; }
+
+        /// <summary>
+        /// 陪护数据
+        /// </summary>
+        [XmlElement("inpatient_nursing_fulfillment_detail_data")]
+        public InpatientNursingFulfillmentDetailData InpatientNursingFulfillmentDetailData { get; set; }
+
+        /// <summary>
+        /// 陪诊数据
+        /// </summary>
+        [XmlElement("offline_escort_fulfillment_detail_data")]
+        public OfflineEscortFulfillmentDetailData OfflineEscortFulfillmentDetailData { get; set; }
     }
 }

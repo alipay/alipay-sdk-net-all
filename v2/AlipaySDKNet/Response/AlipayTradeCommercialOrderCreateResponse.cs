@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string OrderNo { get; set; }
 
         /// <summary>
+        /// 本次支付的二维码链接，有效期2小时
+        /// </summary>
+        [XmlElement("qr_code")]
+        public string QrCode { get; set; }
+
+        /// <summary>
         /// 本次订单的状态
         /// </summary>
         [XmlElement("status")]

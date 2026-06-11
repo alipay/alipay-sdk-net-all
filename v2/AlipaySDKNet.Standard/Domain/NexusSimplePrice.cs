@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public bool Active { get; set; }
 
         /// <summary>
+        /// 自定义单价，当 unit_amount 为空时必选
+        /// </summary>
+        [XmlElement("custom_unit_amount")]
+        public CustomUnitAmount CustomUnitAmount { get; set; }
+
+        /// <summary>
         /// 价格id
         /// </summary>
         [XmlElement("id")]

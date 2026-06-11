@@ -122,6 +122,12 @@ namespace Aop.Api.Domain
         public string OwnerType { get; set; }
 
         /// <summary>
+        /// 费控制度的出资类型
+        /// </summary>
+        [XmlElement("payment_mode")]
+        public string PaymentMode { get; set; }
+
+        /// <summary>
         /// 因公场景 当前字段已废弃(该字段将废弃，不建议使用)
         /// </summary>
         [XmlElement("scene_type")]

@@ -22,5 +22,12 @@ namespace Aop.Api.Response
         [XmlArray("search_docs")]
         [XmlArrayItem("open_search_doc_b_o")]
         public List<OpenSearchDocBO> SearchDocs { get; set; }
+
+        /// <summary>
+        /// 当参数contentType=llmWholeImage时，search_images字段返回
+        /// </summary>
+        [XmlArray("search_images")]
+        [XmlArrayItem("open_search_image_b_o")]
+        public List<OpenSearchImageBO> SearchImages { get; set; }
     }
 }

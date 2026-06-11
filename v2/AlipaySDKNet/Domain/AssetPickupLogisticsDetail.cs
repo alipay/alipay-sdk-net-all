@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BatchNo { get; set; }
 
         /// <summary>
+        /// 上门取件失败
+        /// </summary>
+        [XmlElement("fail_reason")]
+        public string FailReason { get; set; }
+
+        /// <summary>
         /// 物流信息
         /// </summary>
         [XmlElement("logistics_infos")]

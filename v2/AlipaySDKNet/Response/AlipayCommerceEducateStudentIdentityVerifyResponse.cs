@@ -57,6 +57,12 @@ namespace Aop.Api.Response
         public string SchoolName { get; set; }
 
         /// <summary>
+        /// 非学生0/待入学新生1/在校大学生2
+        /// </summary>
+        [XmlElement("student_status")]
+        public string StudentStatus { get; set; }
+
+        /// <summary>
         /// 时间戳
         /// </summary>
         [XmlElement("time_stamp")]

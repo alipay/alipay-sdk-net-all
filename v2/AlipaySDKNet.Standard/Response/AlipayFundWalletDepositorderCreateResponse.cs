@@ -25,5 +25,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }
+
+        /// <summary>
+        /// 钱包订单id
+        /// </summary>
+        [XmlElement("wallet_order_id")]
+        public string WalletOrderId { get; set; }
     }
 }

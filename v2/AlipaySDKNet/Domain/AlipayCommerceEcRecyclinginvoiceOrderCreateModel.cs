@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string ProductId { get; set; }
 
         /// <summary>
+        /// 商品经营地行政区划代码
+        /// </summary>
+        [XmlElement("product_origin_code")]
+        public string ProductOriginCode { get; set; }
+
+        /// <summary>
         /// 代卖人证件号码（身份证号码）
         /// </summary>
         [XmlElement("proxy_seller_cert_no")]

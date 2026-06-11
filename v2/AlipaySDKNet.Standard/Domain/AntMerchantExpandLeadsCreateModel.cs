@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string BusinessLicenseKey { get; set; }
 
         /// <summary>
-        /// 城市编码。 请按照蚂蚁店铺地区码 表格中填写表格中内容填写。
+        /// 城市编码。 请按照<a href="https://mdn.alipayobjects.com/huamei_sm7gq8/afts/file/A*blT9RqSR9_gAAAAAAAAAAAAADuKQAQ/2022%E8%9A%82%E8%9A%81%E9%87%91%E6%9C%8D%E5%9C%B0%E5%8C%BA%E7%A0%81.xlsx">蚂蚁店铺地区码</a>表格中填写表格中内容填写。
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string DeviceType { get; set; }
 
         /// <summary>
-        /// 区县编码。 请按照蚂蚁店铺地区码 表格中填写。
+        /// 区县编码。 请按照<a href="https://mdn.alipayobjects.com/huamei_sm7gq8/afts/file/A*blT9RqSR9_gAAAAAAAAAAAAADuKQAQ/2022%E8%9A%82%E8%9A%81%E9%87%91%E6%9C%8D%E5%9C%B0%E5%8C%BA%E7%A0%81.xlsx">蚂蚁店铺地区码</a>表格中填写表格中内容填写。
         /// </summary>
         [XmlElement("district_code")]
         public string DistrictCode { get; set; }
@@ -124,7 +124,13 @@ namespace Aop.Api.Domain
         public string OutDoorPicOssKey { get; set; }
 
         /// <summary>
-        /// 省份编码。 请按照蚂蚁店铺地区码 表格中填写。
+        /// leads的所属责任BD工号
+        /// </summary>
+        [XmlElement("owner_id")]
+        public string OwnerId { get; set; }
+
+        /// <summary>
+        /// 省份编码。 请按照<a href="https://mdn.alipayobjects.com/huamei_sm7gq8/afts/file/A*blT9RqSR9_gAAAAAAAAAAAAADuKQAQ/2022%E8%9A%82%E8%9A%81%E9%87%91%E6%9C%8D%E5%9C%B0%E5%8C%BA%E7%A0%81.xlsx">蚂蚁店铺地区码</a>表格中填写表格中内容填写。
         /// </summary>
         [XmlElement("province_code")]
         public string ProvinceCode { get; set; }

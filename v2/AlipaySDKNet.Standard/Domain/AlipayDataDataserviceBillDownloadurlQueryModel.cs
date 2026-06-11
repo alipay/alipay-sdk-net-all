@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BillType { get; set; }
 
         /// <summary>
+        /// true表示使用安全链接，即返回的下载链接为https。 非true值的情况下，统一为false，使用http链接。
+        /// </summary>
+        [XmlElement("secure")]
+        public string Secure { get; set; }
+
+        /// <summary>
         /// 二级商户smid，这个参数只在bill_type是trade_zft_merchant时才能使用
         /// </summary>
         [XmlElement("smid")]

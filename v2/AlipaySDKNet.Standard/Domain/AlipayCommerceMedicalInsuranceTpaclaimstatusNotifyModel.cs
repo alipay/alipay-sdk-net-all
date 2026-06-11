@@ -95,6 +95,12 @@ namespace Aop.Api.Domain
         public string DplanName { get; set; }
 
         /// <summary>
+        /// tpa_claim_type：REIMBURSEMENT标识 事后理赔  tpa_claim_type：DIRECT_PAYMENT(直付理赔
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 被保人证件号
         /// </summary>
         [XmlElement("insured_cert_no")]

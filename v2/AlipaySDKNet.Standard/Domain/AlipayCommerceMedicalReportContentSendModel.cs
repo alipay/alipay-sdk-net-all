@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ContentType { get; set; }
 
         /// <summary>
+        /// 可选值 none(默认），time_bound_aes
+        /// </summary>
+        [XmlElement("encrypt_type")]
+        public string EncryptType { get; set; }
+
+        /// <summary>
         /// 扩展参数
         /// </summary>
         [XmlElement("ext_params")]

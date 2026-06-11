@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string AgreementNo { get; set; }
 
         /// <summary>
+        /// 修改余额对应的额度时是否允许修改为负数，true表示允许，false表示不允许。默认允许
+        /// </summary>
+        [XmlElement("allow_negative")]
+        public bool AllowNegative { get; set; }
+
+        /// <summary>
         /// 变更的金额/余额，日元或者韩元以（元）为单位，其他币种以（分）为单位，当变更的资产类型为次卡时，单位为次
         /// </summary>
         [XmlElement("amount")]

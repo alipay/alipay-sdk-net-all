@@ -10,6 +10,24 @@ namespace Aop.Api.Domain
     public class AlipayTradePriceCreateModel : AopObject
     {
         /// <summary>
+        /// 自定义单价，当 unit_amount 为空时必选
+        /// </summary>
+        [XmlElement("custom_unit_amount")]
+        public CustomUnitAmount CustomUnitAmount { get; set; }
+
+        /// <summary>
+        /// 满足了eligibility_type的身份购买后，失效的时间。如3d = 3天， 3m = 3月
+        /// </summary>
+        [XmlElement("eligibility_expire_time")]
+        public string EligibilityExpireTime { get; set; }
+
+        /// <summary>
+        /// 只有满足该类型的身份才可以购买。具体的枚举值待支付宝侧分配
+        /// </summary>
+        [XmlElement("eligibility_type")]
+        public string EligibilityType { get; set; }
+
+        /// <summary>
         /// 商户需要保存在价格模型中的元数据
         /// </summary>
         [XmlElement("metadata")]

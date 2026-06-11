@@ -46,13 +46,13 @@ namespace Aop.Api.Domain
         public string ItemType { get; set; }
 
         /// <summary>
-        /// 商家商品ID
+        /// 商家商品编码
         /// </summary>
         [XmlElement("m_item_id")]
         public string MItemId { get; set; }
 
         /// <summary>
-        /// 商家门店ID
+        /// 商品门店编号
         /// </summary>
         [XmlElement("m_shop_id")]
         public string MShopId { get; set; }
@@ -64,10 +64,16 @@ namespace Aop.Api.Domain
         public string MUseOrderId { get; set; }
 
         /// <summary>
-        /// 表示商家出资补贴的优惠金额。单位：元
+        /// 表示商家出资补贴金额。单位：元
         /// </summary>
         [XmlElement("merchant_discount")]
         public string MerchantDiscount { get; set; }
+
+        /// <summary>
+        /// 表示商家设置的商品优惠，无实际出资，且不计入结算金额。
+        /// </summary>
+        [XmlElement("merchant_promo")]
+        public string MerchantPromo { get; set; }
 
         /// <summary>
         /// 商家应得。单位：元。
@@ -82,34 +88,40 @@ namespace Aop.Api.Domain
         public string OrderId { get; set; }
 
         /// <summary>
-        /// 券的原售价，单位：元
+        /// 券商品售价，单位：元
         /// </summary>
         [XmlElement("origin_price")]
         public string OriginPrice { get; set; }
 
         /// <summary>
-        /// 表示平台出资补贴的优惠金额。单位：元
+        /// 表示平台出资补贴金额。单位：元
         /// </summary>
         [XmlElement("platform_discount")]
         public string PlatformDiscount { get; set; }
 
         /// <summary>
-        /// 不包含商家、平台出资补贴优惠。单位：元
+        /// 用户实付，指用户支付金额，不含商家、平台出资补贴。单位：元。
         /// </summary>
         [XmlElement("real_pay")]
         public string RealPay { get; set; }
 
         /// <summary>
-        /// 券的销售价格，单位：元
+        /// 券商品售价，单位：元
         /// </summary>
         [XmlElement("sale_price")]
         public string SalePrice { get; set; }
 
         /// <summary>
-        /// 券售卖场景
+        /// 订单场景
         /// </summary>
         [XmlElement("scene_name")]
         public string SceneName { get; set; }
+
+        /// <summary>
+        /// 次卡业务中表示唯一的一笔核销次序号。
+        /// </summary>
+        [XmlElement("serial_no")]
+        public string SerialNo { get; set; }
 
         /// <summary>
         /// 当商家结算方式=结算到户，格式：支付宝账户|abc@alipay.com 当商家结算方式=结算到银行卡，格式：工商银行|****卡号末4位

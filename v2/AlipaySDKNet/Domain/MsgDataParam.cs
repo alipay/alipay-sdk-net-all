@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -74,5 +75,19 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("redirect_url")]
         public string RedirectUrl { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("redirect_url_params")]
+        [XmlArrayItem("redirect_url_param")]
+        public List<RedirectUrlParam> RedirectUrlParams { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("redirect_urls")]
+        [XmlArrayItem("string")]
+        public List<string> RedirectUrls { get; set; }
     }
 }

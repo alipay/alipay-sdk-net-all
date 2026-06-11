@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string SumInsured { get; set; }
 
         /// <summary>
+        /// 等待期天数
+        /// </summary>
+        [XmlElement("wait_period_day")]
+        public string WaitPeriodDay { get; set; }
+
+        /// <summary>
         /// 等待期结束时间 YYYY-MM-DD HH:MM:SS
         /// </summary>
         [XmlElement("wait_period_end")]

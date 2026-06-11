@@ -60,10 +60,29 @@ namespace Aop.Api.Domain
         public string GmtRiskFinishTime { get; set; }
 
         /// <summary>
+        /// 升级投诉时间
+        /// </summary>
+        [XmlElement("gmt_upgrade")]
+        public string GmtUpgrade { get; set; }
+
+        /// <summary>
+        /// 升级投诉推送时间
+        /// </summary>
+        [XmlElement("gmt_upgrade_risk_finish_time")]
+        public string GmtUpgradeRiskFinishTime { get; set; }
+
+        /// <summary>
         /// 投诉主表的主键id，查询详情时使用本id进行查询
         /// </summary>
         [XmlElement("id")]
         public long Id { get; set; }
+
+        /// <summary>
+        /// 投诉记录的生效标签名称列表
+        /// </summary>
+        [XmlArray("label_tag_list")]
+        [XmlArrayItem("string")]
+        public List<string> LabelTagList { get; set; }
 
         /// <summary>
         /// 投诉单中被投诉方的名称
@@ -125,5 +144,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("trade_no")]
         public string TradeNo { get; set; }
+
+        /// <summary>
+        /// 用户升级投诉内容
+        /// </summary>
+        [XmlElement("upgrade_content")]
+        public string UpgradeContent { get; set; }
     }
 }

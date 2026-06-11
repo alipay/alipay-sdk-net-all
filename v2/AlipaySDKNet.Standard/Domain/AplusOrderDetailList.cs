@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string MerchantDiscount { get; set; }
 
         /// <summary>
+        /// 商家减收优惠金额，单位：元
+        /// </summary>
+        [XmlElement("merchant_no_fund_amount")]
+        public string MerchantNoFundAmount { get; set; }
+
+        /// <summary>
         /// 商家实收金额，单位：元
         /// </summary>
         [XmlElement("merchant_real_receipt_amount")]

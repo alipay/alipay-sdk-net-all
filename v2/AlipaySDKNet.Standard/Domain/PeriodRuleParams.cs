@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string ExecuteTime { get; set; }
 
         /// <summary>
+        /// 若签约中传该参数，且值为 Y ，则表示本次签约有试用期。若传值为 N 或不传该参数，则表示本次签约无试用期。
+        /// </summary>
+        [XmlElement("is_trial_mode")]
+        public string IsTrialMode { get; set; }
+
+        /// <summary>
         /// 周期数period是周期扣款产品必填。与另一参数period_type组合使用确定扣款周期，例如period_type为DAY，period=90，则扣款周期为90天。
         /// </summary>
         [XmlElement("period")]

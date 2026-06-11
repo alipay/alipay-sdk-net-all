@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string ProductId { get; set; }
 
         /// <summary>
+        /// 密钥，加密时使用
+        /// </summary>
+        [XmlElement("secret_key")]
+        public string SecretKey { get; set; }
+
+        /// <summary>
         /// TPA编号
         /// </summary>
         [XmlElement("tpa_id")]

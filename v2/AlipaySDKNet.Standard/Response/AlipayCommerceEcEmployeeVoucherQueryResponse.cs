@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -32,5 +33,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("voucher_info_list")]
         public VoucherInfoResponse VoucherInfoList { get; set; }
+
+        /// <summary>
+        /// 券列表
+        /// </summary>
+        [XmlArray("voucher_info_response_list")]
+        [XmlArrayItem("voucher_info_response")]
+        public List<VoucherInfoResponse> VoucherInfoResponseList { get; set; }
     }
 }

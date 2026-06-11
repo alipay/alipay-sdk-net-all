@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -44,5 +45,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("insured_status")]
         public string InsuredStatus { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("policy_info_list")]
+        [XmlArrayItem("policy_mode_info")]
+        public List<PolicyModeInfo> PolicyInfoList { get; set; }
     }
 }

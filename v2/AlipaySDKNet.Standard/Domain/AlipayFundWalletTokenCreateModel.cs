@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public bool SkipResultWhenWalletOpened { get; set; }
 
         /// <summary>
+        /// 唯一id，用于控制幂等
+        /// </summary>
+        [XmlElement("unique_id")]
+        public string UniqueId { get; set; }
+
+        /// <summary>
         /// 场景钱包模版id
         /// </summary>
         [XmlElement("wallet_template_id")]

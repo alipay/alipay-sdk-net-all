@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public string BizDt { get; set; }
 
         /// <summary>
+        /// 撤销核销明细，一次调用最多传入10个核销单
+        /// </summary>
+        [XmlArray("certificate_reverse_info_list")]
+        [XmlArrayItem("certificate_reverse_info")]
+        public List<CertificateReverseInfo> CertificateReverseInfoList { get; set; }
+
+        /// <summary>
         /// 已核销待冲正的三方码。取值为支付宝调用三方凭证发放spi时商户返回的三方码 当前字段已废弃(指定凭证id做单次核销撤回)
         /// </summary>
         [XmlElement("code")]
@@ -41,7 +48,7 @@ namespace Aop.Api.Domain
         public string OutBizNo { get; set; }
 
         /// <summary>
-        /// 核销接口返回的核销操作单号，撤销orderNo对应的核销操作
+        /// 核销接口返回的核销操作单号，撤销orderNo对应的核销操作 当前字段已废弃(升级为certificate_reverse_info_list)
         /// </summary>
         [XmlArray("use_order_no_list")]
         [XmlArrayItem("string")]

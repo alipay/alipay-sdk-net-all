@@ -24,6 +24,13 @@ namespace Aop.Api.Response
         public List<RentBillOrderDetailDto> OrderDetailList { get; set; }
 
         /// <summary>
+        /// 还款明细数据
+        /// </summary>
+        [XmlArray("repayment_detail_list")]
+        [XmlArrayItem("repayment_detail_dto")]
+        public List<RepaymentDetailDto> RepaymentDetailList { get; set; }
+
+        /// <summary>
         /// 订单关联分账明细列表
         /// </summary>
         [XmlArray("royalty_detail_list")]

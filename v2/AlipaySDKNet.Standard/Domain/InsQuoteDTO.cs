@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class InsQuoteDTO : AopObject
     {
         /// <summary>
+        /// 基础保障额度，单位：分
+        /// </summary>
+        [XmlElement("basic_sum_insured")]
+        public long BasicSumInsured { get; set; }
+
+        /// <summary>
         /// 折扣率
         /// </summary>
         [XmlElement("discount_rate")]
@@ -92,5 +98,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sum_insured")]
         public long SumInsured { get; set; }
+
+        /// <summary>
+        /// 保障比例
+        /// </summary>
+        [XmlElement("sum_insured_rate")]
+        public string SumInsuredRate { get; set; }
     }
 }

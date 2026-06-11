@@ -16,6 +16,24 @@ namespace Aop.Api.Response
         public bool Active { get; set; }
 
         /// <summary>
+        /// 自定义单价，当 unit_amount 为空时必选
+        /// </summary>
+        [XmlElement("custom_unit_amount")]
+        public CustomUnitAmount CustomUnitAmount { get; set; }
+
+        /// <summary>
+        /// 满足了eligibility_type的身份购买后，失效的时间。如3d = 3天， 3m = 3月
+        /// </summary>
+        [XmlElement("eligibility_expire_time")]
+        public string EligibilityExpireTime { get; set; }
+
+        /// <summary>
+        /// 只有满足该类型的身份才可以购买。具体的枚举值待支付宝侧分配
+        /// </summary>
+        [XmlElement("eligibility_type")]
+        public string EligibilityType { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [XmlElement("gmt_create")]
@@ -58,7 +76,7 @@ namespace Aop.Api.Response
         public string Type { get; set; }
 
         /// <summary>
-        /// 单位金额，单位：分
+        /// 单位金额，单位：分，当 custom_unit_amount 为空时必选
         /// </summary>
         [XmlElement("unit_amount")]
         public long UnitAmount { get; set; }

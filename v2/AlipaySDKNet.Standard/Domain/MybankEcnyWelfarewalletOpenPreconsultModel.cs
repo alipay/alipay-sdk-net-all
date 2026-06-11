@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string PhoneNo { get; set; }
 
         /// <summary>
+        /// 透传给钱包开立/注销的消息通知里，用于外部关联使用
+        /// </summary>
+        [XmlElement("relation_id")]
+        public string RelationId { get; set; }
+
+        /// <summary>
         /// 用户的2088编码
         /// </summary>
         [XmlElement("uid")]

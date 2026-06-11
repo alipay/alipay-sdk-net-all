@@ -10,31 +10,31 @@ namespace Aop.Api.Domain
     public class AlipayCommerceOperationPromoAwardQueryModel : AopObject
     {
         /// <summary>
-        /// 活动编码
+        /// 活动编码，点餐B侧激励活动，编码固定
         /// </summary>
         [XmlElement("activity_code")]
         public string ActivityCode { get; set; }
 
         /// <summary>
-        /// 查询截止时间
+        /// 查询截止时间（时间跨度90天以内）
         /// </summary>
         [XmlElement("end_time")]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// 查询起始时间
+        /// 查询起始时间（时间跨度90天以内）
         /// </summary>
         [XmlElement("start_time")]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 主体ID
+        /// 主体ID，参考报名接口返回的subject_id
         /// </summary>
         [XmlElement("subject_id")]
         public string SubjectId { get; set; }
 
         /// <summary>
-        /// 主体类型，枚举值：ALPAY_USER（商户）、SMID（二级商户）、POIMID（门店）、LEADS_ID（leadsId）、BIZ_TID、TAG_ID、SN、EMAIL、PHONE、APP
+        /// 主体类型，参考报名接口返回的subject_type
         /// </summary>
         [XmlElement("subject_type")]
         public string SubjectType { get; set; }

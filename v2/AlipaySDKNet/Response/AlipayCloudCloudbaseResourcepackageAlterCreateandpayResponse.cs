@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCloudCloudbaseResourcepackageAlterCreateandpayResponse : AopResponse
     {
         /// <summary>
+        /// 订单号
+        /// </summary>
+        [XmlElement("order_no")]
+        public string OrderNo { get; set; }
+
+        /// <summary>
         /// 变配下单并支付结果
         /// </summary>
         [XmlElement("result")]

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -32,6 +33,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("shop_ids")]
+        [XmlArrayItem("string")]
+        public List<string> ShopIds { get; set; }
 
         /// <summary>
         /// 开班日期

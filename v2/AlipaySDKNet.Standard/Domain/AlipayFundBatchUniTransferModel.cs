@@ -86,7 +86,8 @@ namespace Aop.Api.Domain
         /// <summary>
         /// 转账场景信息，包含转账场景信息类型和转账场景信息描述。需按该笔转账使用的转账场景准确填写
         /// </summary>
-        [XmlElement("transfer_scene_report_infos")]
-        public TransferSceneReportInfo TransferSceneReportInfos { get; set; }
+        [XmlArray("transfer_scene_report_infos")]
+        [XmlArrayItem("transfer_scene_report_info")]
+        public List<TransferSceneReportInfo> TransferSceneReportInfos { get; set; }
     }
 }

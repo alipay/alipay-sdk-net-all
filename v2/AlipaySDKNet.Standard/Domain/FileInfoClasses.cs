@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class FileInfoClasses : AopObject
     {
         /// <summary>
+        /// orc识别文件内容markdown格式
+        /// </summary>
+        [XmlElement("agent_recognized_content")]
+        public string AgentRecognizedContent { get; set; }
+
+        /// <summary>
         /// 文件产品描述
         /// </summary>
         [XmlElement("description")]

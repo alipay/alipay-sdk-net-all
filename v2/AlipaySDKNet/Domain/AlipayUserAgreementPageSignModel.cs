@@ -64,6 +64,12 @@ namespace Aop.Api.Domain
         public string MerchantProcessUrl { get; set; }
 
         /// <summary>
+        /// 原协议号，适用于自动续购等签约完成时需要解约原协议号的场景，需要与sign_sub_operate_type等字段联合使用
+        /// </summary>
+        [XmlElement("ori_agreement_no")]
+        public string OriAgreementNo { get; set; }
+
+        /// <summary>
         /// 商户可通过支付产品接口回传订单或外部账户相关数据（敏感数据可加密后回传），结合支付宝内部已有的数据，可以有效提升对风险交易的识别及对可信交易的保护。支付宝针对风险交易的管控包括但不限于：交易提醒、交易拦截等；针对可信账户、可信渠道、可信交易等将重点保障支付体验。
         /// </summary>
         [XmlElement("out_risk_info")]
@@ -112,6 +118,12 @@ namespace Aop.Api.Domain
         public string SignScene { get; set; }
 
         /// <summary>
+        /// 签约子操作类型，通用签约能力能力扩展字段
+        /// </summary>
+        [XmlElement("sign_sub_operate_type")]
+        public string SignSubOperateType { get; set; }
+
+        /// <summary>
         /// 当前用户签约请求的协议有效周期。  整形数字加上时间单位的协议有效期，从发起签约请求的时间开始算起。  目前支持的时间单位：  1. d：天  2. m：月  如果未传入，默认为长期有效。
         /// </summary>
         [XmlElement("sign_validity_period")]
@@ -122,6 +134,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("specified_asset")]
         public SpecifiedAsset SpecifiedAsset { get; set; }
+
+        /// <summary>
+        /// 商户签约指定代扣规则信息，自动续购场景使用
+        /// </summary>
+        [XmlElement("specified_deduct_rule_params")]
+        public SpecifiedDeductRuleParams SpecifiedDeductRuleParams { get; set; }
 
         /// <summary>
         /// 商户指定优先扣款渠道

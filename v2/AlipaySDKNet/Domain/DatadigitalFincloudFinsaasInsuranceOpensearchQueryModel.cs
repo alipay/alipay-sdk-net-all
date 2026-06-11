@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class DatadigitalFincloudFinsaasInsuranceOpensearchQueryModel : AopObject
     {
         /// <summary>
+        /// 类型目前仅包括llmWholeImage和不传，传则代表文搜图，不传则默认搜索网页
+        /// </summary>
+        [XmlElement("content_type")]
+        public string ContentType { get; set; }
+
+        /// <summary>
         /// 搜索的领域值，默认为all 全网搜索
         /// </summary>
         [XmlElement("domain")]

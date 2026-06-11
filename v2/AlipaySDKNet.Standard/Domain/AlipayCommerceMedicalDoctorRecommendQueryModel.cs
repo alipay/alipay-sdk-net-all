@@ -54,6 +54,12 @@ namespace Aop.Api.Domain
         public string HdfDiseaseName { get; set; }
 
         /// <summary>
+        /// 好大夫id
+        /// </summary>
+        [XmlElement("hdf_id")]
+        public string HdfId { get; set; }
+
+        /// <summary>
         /// 好大夫医生标签id列表
         /// </summary>
         [XmlArray("hdf_tag_code")]

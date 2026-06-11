@@ -58,6 +58,12 @@ namespace Aop.Api.Domain
         public string PrincipalTag { get; set; }
 
         /// <summary>
+        /// 是否查询全部商家
+        /// </summary>
+        [XmlElement("query_all_principal")]
+        public bool QueryAllPrincipal { get; set; }
+
+        /// <summary>
         /// 全域智投-INTELLIGENT 搜索推广-SEARCH 品牌整合营销-BRAND 展示推广-APP 户外推广-OOH
         /// </summary>
         [XmlElement("scene_type")]

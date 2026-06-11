@@ -19,5 +19,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("inst_id")]
         public string InstId { get; set; }
+
+        /// <summary>
+        /// 银行预留手机号
+        /// </summary>
+        [XmlElement("mobile")]
+        public string Mobile { get; set; }
     }
 }

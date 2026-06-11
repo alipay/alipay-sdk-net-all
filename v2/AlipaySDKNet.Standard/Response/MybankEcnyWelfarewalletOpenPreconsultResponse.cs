@@ -31,5 +31,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("refuse_reason")]
         public string RefuseReason { get; set; }
+
+        /// <summary>
+        /// 福利钱包id
+        /// </summary>
+        [XmlElement("wallet_id")]
+        public string WalletId { get; set; }
     }
 }

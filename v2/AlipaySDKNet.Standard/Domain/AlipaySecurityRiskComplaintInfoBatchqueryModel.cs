@@ -41,6 +41,12 @@ namespace Aop.Api.Domain
         public string GmtProcessStart { get; set; }
 
         /// <summary>
+        /// 查询条件：筛选高风险标签工单
+        /// </summary>
+        [XmlElement("high_risk_tag")]
+        public bool HighRiskTag { get; set; }
+
+        /// <summary>
         /// 分页查询每次查询的数据量，不传则默认为10，取值单位为条
         /// </summary>
         [XmlElement("page_size")]

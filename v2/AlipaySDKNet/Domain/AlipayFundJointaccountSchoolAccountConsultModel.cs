@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizScene { get; set; }
 
         /// <summary>
+        /// 小荷包id
+        /// </summary>
+        [XmlElement("entity_id")]
+        public string EntityId { get; set; }
+
+        /// <summary>
         /// 签约校园刷脸时的faceId
         /// </summary>
         [XmlElement("face_id")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("master_user_id")]
         public string MasterUserId { get; set; }
+
+        /// <summary>
+        /// 仅需要实体信息
+        /// </summary>
+        [XmlElement("only_need_entity_info")]
+        public bool OnlyNeedEntityInfo { get; set; }
 
         /// <summary>
         /// 产品码

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class TuitionISVStudentInfoDTO : AopObject
     {
         /// <summary>
+        /// 学生的生日信息，格式为yyyyMMdd
+        /// </summary>
+        [XmlElement("birth_date")]
+        public string BirthDate { get; set; }
+
+        /// <summary>
         /// 电子邮箱
         /// </summary>
         [XmlElement("email")]
@@ -28,10 +34,22 @@ namespace Aop.Api.Domain
         public string FirstName { get; set; }
 
         /// <summary>
+        /// 学生信息中的身份地址信息，用于ECHECK收款方式
+        /// </summary>
+        [XmlElement("identity_address")]
+        public IndrISVAddressDTO IdentityAddress { get; set; }
+
+        /// <summary>
         /// 学生身份证号
         /// </summary>
         [XmlElement("identity_card_number")]
         public string IdentityCardNumber { get; set; }
+
+        /// <summary>
+        /// 学生的证件类型
+        /// </summary>
+        [XmlElement("identity_type")]
+        public string IdentityType { get; set; }
 
         /// <summary>
         /// 名
@@ -52,7 +70,7 @@ namespace Aop.Api.Domain
         public string StudentName { get; set; }
 
         /// <summary>
-        /// 20100120
+        /// 学号
         /// </summary>
         [XmlElement("student_number")]
         public string StudentNumber { get; set; }

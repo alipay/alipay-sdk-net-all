@@ -10,9 +10,15 @@ namespace Aop.Api.Domain
     public class AlipayOpenSpNordermaterialsapplyMaterialsrecordQueryModel : AopObject
     {
         /// <summary>
-        /// 铺设记录ID
+        /// 门店业务ID
         /// </summary>
         [XmlElement("record_id")]
         public string RecordId { get; set; }
+
+        /// <summary>
+        /// 门店业务ID
+        /// </summary>
+        [XmlElement("shop_biz_id")]
+        public string ShopBizId { get; set; }
     }
 }

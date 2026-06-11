@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRecycleOrderDelegateQueryModel : AopObject
     {
         /// <summary>
-        /// 淘宝品牌店铺：BRAND
+        /// 淘宝品牌店铺：BRAND, 租赁服务商：RENT_PROVIDER
         /// </summary>
         [XmlElement("delegate_type")]
         public string DelegateType { get; set; }

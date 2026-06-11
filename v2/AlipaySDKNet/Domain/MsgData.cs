@@ -100,6 +100,12 @@ namespace Aop.Api.Domain
         public string RedirectUrl { get; set; }
 
         /// <summary>
+        /// 跳转URL对象列表
+        /// </summary>
+        [XmlElement("redirect_url_params")]
+        public RedirectUrlParam RedirectUrlParams { get; set; }
+
+        /// <summary>
         /// 服务包过期时间，格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("service_end_time")]

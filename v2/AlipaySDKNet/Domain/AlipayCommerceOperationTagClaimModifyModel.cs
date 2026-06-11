@@ -22,13 +22,13 @@ namespace Aop.Api.Domain
         public string OldAlipayAccount { get; set; }
 
         /// <summary>
-        /// 商户在支付宝认证的门店ID
+        /// 商户在支付宝认证的门店ID，参考报名接口返回的subject_id
         /// </summary>
         [XmlElement("store_id")]
         public string StoreId { get; set; }
 
         /// <summary>
-        /// 商户在支付宝认证的门店ID的类型
+        /// 商户在支付宝认证的门店ID的类型，参考报名接口返回的subject_type
         /// </summary>
         [XmlElement("store_id_type")]
         public string StoreIdType { get; set; }

@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public string CustomerId { get; set; }
 
         /// <summary>
+        /// 有限枚举，托管扣款类型。1.SUBSCRIBE_DEDUCT：托管模式（支付宝自动扣款，默认）；2.MERCHANT_DEDUCT：非托管模式（商户自助扣款）
+        /// </summary>
+        [XmlElement("deduct_type")]
+        public string DeductType { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("items")]
@@ -89,5 +95,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("subscription_status")]
         public string SubscriptionStatus { get; set; }
+
+        /// <summary>
+        /// 试用期结束时间
+        /// </summary>
+        [XmlElement("trial_end")]
+        public string TrialEnd { get; set; }
+
+        /// <summary>
+        /// 试用期开始时间
+        /// </summary>
+        [XmlElement("trial_start")]
+        public string TrialStart { get; set; }
     }
 }

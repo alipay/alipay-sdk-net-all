@@ -17,6 +17,18 @@ namespace Aop.Api.Domain
         public string CustomerId { get; set; }
 
         /// <summary>
+        /// 有限枚举，托管扣款类型，默认为SUBSCRIBE_DEDUCT。1.SUBSCRIBE_DEDUCT：托管模式（支付宝自动扣款，默认）；2.MERCHANT_DEDUCT：非托管模式（商户自助扣款）
+        /// </summary>
+        [XmlElement("deduct_type")]
+        public string DeductType { get; set; }
+
+        /// <summary>
+        /// 扩展参数，用于订阅特殊能力的传参，使用方式详见具体场景接入指南
+        /// </summary>
+        [XmlElement("extend_params")]
+        public string ExtendParams { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("items")]
@@ -36,9 +48,21 @@ namespace Aop.Api.Domain
         public long PayAmount { get; set; }
 
         /// <summary>
-        /// 用于自定义展示购买时的标题，若不传，默认使用商品名称作为标题
+        /// 订单标题，若无特殊需求，无需使用该字段，默认使用商品名称
         /// </summary>
         [XmlElement("subscribe_title")]
         public string SubscribeTitle { get; set; }
+
+        /// <summary>
+        /// 用于签约页展示，若不传该字段，则展示默认文案。 低价试用场景文案："{pay_amount}元试用{trial_period_days}天"；免费试用场景文案："免费试用{trial_period_days}天
+        /// </summary>
+        [XmlElement("trial_desc")]
+        public string TrialDesc { get; set; }
+
+        /// <summary>
+        /// 试用期天数：试用期天数设置为正整数，通常建议试用期天数3-7天
+        /// </summary>
+        [XmlElement("trial_period_days")]
+        public long TrialPeriodDays { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -34,9 +35,10 @@ namespace Aop.Api.Domain
         public string ParentCategoryCode { get; set; }
 
         /// <summary>
-        /// 所需资质信息
+        /// null
         /// </summary>
-        [XmlElement("required_qualifications")]
-        public AxfItemCategoryQualificationVO RequiredQualifications { get; set; }
+        [XmlArray("required_qualifications")]
+        [XmlArrayItem("axf_item_category_qualification_v_o")]
+        public List<AxfItemCategoryQualificationVO> RequiredQualifications { get; set; }
     }
 }

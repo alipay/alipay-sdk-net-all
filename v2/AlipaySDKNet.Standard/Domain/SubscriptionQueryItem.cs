@@ -10,10 +10,22 @@ namespace Aop.Api.Domain
     public class SubscriptionQueryItem : AopObject
     {
         /// <summary>
+        /// 优惠编码
+        /// </summary>
+        [XmlElement("coupon_id")]
+        public string CouponId { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [XmlElement("created")]
         public string Created { get; set; }
+
+        /// <summary>
+        /// 折扣优惠金额,单位分
+        /// </summary>
+        [XmlElement("discount_amount")]
+        public string DiscountAmount { get; set; }
 
         /// <summary>
         /// 订阅id

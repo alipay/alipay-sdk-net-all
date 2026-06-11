@@ -40,6 +40,18 @@ namespace Aop.Api.Domain
         public string OutBizId { get; set; }
 
         /// <summary>
+        /// 兑换码，兑换品必填。当填了兑换码，可以不用传card_id和user_id / open_id
+        /// </summary>
+        [XmlElement("redemption_code")]
+        public string RedemptionCode { get; set; }
+
+        /// <summary>
+        /// 兑换说明链接，用户兑换完成后，进行跳转到商家小程序订单页或使用说明页
+        /// </summary>
+        [XmlElement("redemption_guide_url")]
+        public string RedemptionGuideUrl { get; set; }
+
+        /// <summary>
         /// 门店id
         /// </summary>
         [XmlElement("shop_id")]

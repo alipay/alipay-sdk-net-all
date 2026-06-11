@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string SerialNo { get; set; }
 
         /// <summary>
+        /// 次序号核销的门店id，次序号已核销后才会返回该值
+        /// </summary>
+        [XmlElement("shop_id")]
+        public string ShopId { get; set; }
+
+        /// <summary>
         /// 次序号状态
         /// </summary>
         [XmlElement("status")]

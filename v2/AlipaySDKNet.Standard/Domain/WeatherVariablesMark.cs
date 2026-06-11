@@ -112,6 +112,12 @@ namespace Aop.Api.Domain
         public bool RelativeHumidity2m { get; set; }
 
         /// <summary>
+        /// 分钟级降水量（临近预报）,支持未来2小时的降雨预报数据。
+        /// </summary>
+        [XmlElement("short_term_rain")]
+        public bool ShortTermRain { get; set; }
+
+        /// <summary>
         /// 短波辐照的标记，true表示查询，默认false
         /// </summary>
         [XmlElement("shortwave_radiation")]

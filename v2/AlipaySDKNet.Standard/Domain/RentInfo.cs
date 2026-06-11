@@ -89,6 +89,12 @@ namespace Aop.Api.Domain
         public SimpleOrderInfo OrderInfo { get; set; }
 
         /// <summary>
+        /// 订单资商通类型
+        /// </summary>
+        [XmlElement("order_zst_type")]
+        public string OrderZstType { get; set; }
+
+        /// <summary>
         /// 商户订单号
         /// </summary>
         [XmlElement("out_order_id")]

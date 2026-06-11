@@ -91,6 +91,13 @@ namespace Aop.Api.Response
         public long Id { get; set; }
 
         /// <summary>
+        /// 投诉记录的生效标签名称列表
+        /// </summary>
+        [XmlArray("label_tag_list")]
+        [XmlArrayItem("string")]
+        public List<string> LabelTagList { get; set; }
+
+        /// <summary>
         /// 投诉单中被投诉方的名称
         /// </summary>
         [XmlElement("opposite_name")]

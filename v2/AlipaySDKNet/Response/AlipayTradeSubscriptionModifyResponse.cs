@@ -9,19 +9,19 @@ namespace Aop.Api.Response
     public class AlipayTradeSubscriptionModifyResponse : AopResponse
     {
         /// <summary>
-        /// 长链，适用于跳转拉起支付宝端
+        /// 长链，适用于跳转拉起支付宝端，升级/降级/取消后撤销场景会返回
         /// </summary>
         [XmlElement("alipay_jump_schema")]
         public string AlipayJumpSchema { get; set; }
 
         /// <summary>
-        /// 短链，适用于生成二维码
+        /// 短链，适用于生成二维码 升级/降级/取消后撤销场景会返回
         /// </summary>
         [XmlElement("alipay_schema")]
         public string AlipaySchema { get; set; }
 
         /// <summary>
-        /// 订阅支付单ID
+        /// 升级订阅时生成的支付请求单号
         /// </summary>
         [XmlElement("order_no")]
         public string OrderNo { get; set; }
@@ -33,7 +33,25 @@ namespace Aop.Api.Response
         public long PayAmount { get; set; }
 
         /// <summary>
-        /// 订阅id
+        /// 订阅修改时若传入优惠，生成的优惠信息
+        /// </summary>
+        [XmlElement("promotion_info")]
+        public string PromotionInfo { get; set; }
+
+        /// <summary>
+        /// 退款金额，单位分，取消并退款场景下生成
+        /// </summary>
+        [XmlElement("refund_amount")]
+        public long RefundAmount { get; set; }
+
+        /// <summary>
+        /// 退款业务单号，取消并退款场景下生成
+        /// </summary>
+        [XmlElement("refund_order_id")]
+        public string RefundOrderId { get; set; }
+
+        /// <summary>
+        /// 订阅id，订阅唯一标识
         /// </summary>
         [XmlElement("subscription_id")]
         public string SubscriptionId { get; set; }

@@ -96,10 +96,22 @@ namespace Aop.Api.Domain
         public string IdNo { get; set; }
 
         /// <summary>
+        /// 官方医院名称
+        /// </summary>
+        [XmlElement("official_hos_name")]
+        public string OfficialHosName { get; set; }
+
+        /// <summary>
         /// 执医年限，单位年
         /// </summary>
         [XmlElement("practice_year")]
         public string PracticeYear { get; set; }
+
+        /// <summary>
+        /// 医生执业证书上对应的科室名称
+        /// </summary>
+        [XmlElement("practicing_department_name")]
+        public string PracticingDepartmentName { get; set; }
 
         /// <summary>
         /// 医生执医许可证编号（医生执医许可证编号和身份证号至少填一项）
