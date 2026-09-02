@@ -11,12 +11,6 @@ namespace Aop.Api.Response
     public class AlipayCommerceTransportUservoucherQueryResponse : AopResponse
     {
         /// <summary>
-        /// 优惠力度最大的单张券
-        /// </summary>
-        [XmlElement("best_voucher")]
-        public UserAvailableVoucher BestVoucher { get; set; }
-
-        /// <summary>
         /// null
         /// </summary>
         [XmlArray("user_available_voucher_list")]

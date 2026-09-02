@@ -16,12 +16,6 @@ namespace Aop.Api.Domain
         public string Name { get; set; }
 
         /// <summary>
-        /// 是否开启传输加密：不传=不处理；N=关闭；Y=打开（须配 encrypt_app_id）
-        /// </summary>
-        [XmlElement("need_encrypt")]
-        public string NeedEncrypt { get; set; }
-
-        /// <summary>
         /// 参数类型
         /// </summary>
         [XmlElement("type")]

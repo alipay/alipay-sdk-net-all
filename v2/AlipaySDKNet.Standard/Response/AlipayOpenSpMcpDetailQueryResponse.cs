@@ -23,12 +23,6 @@ namespace Aop.Api.Response
         public string AbilityVersion { get; set; }
 
         /// <summary>
-        /// 传输加密关联的加密应用。由调用方（服务商）入参指定其名下应用；推荐使用三方应用
-        /// </summary>
-        [XmlElement("encrypt_app_id")]
-        public string EncryptAppId { get; set; }
-
-        /// <summary>
         /// Header参数列表
         /// </summary>
         [XmlElement("header_list")]
