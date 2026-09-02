@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class CardPeriodPrice : AopObject
     {
         /// <summary>
+        /// 阶梯价格的新客价，单位分，表示这一期的新客价。新客价需是所有价格中最低的价格。
+        /// </summary>
+        [XmlElement("new_customer_price")]
+        public long NewCustomerPrice { get; set; }
+
+        /// <summary>
         /// 原价，单位分。 字段值需要大于或等于sale_price。
         /// </summary>
         [XmlElement("original_price")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Response
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// 投放模式，手动投放/自动投放
+        /// </summary>
+        [XmlElement("delivery_mode")]
+        public string DeliveryMode { get; set; }
+
+        /// <summary>
         /// 计划投放结束日期
         /// </summary>
         [XmlElement("end_date")]

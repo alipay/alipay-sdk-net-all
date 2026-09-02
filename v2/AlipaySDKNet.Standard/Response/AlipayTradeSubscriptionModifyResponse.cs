@@ -51,6 +51,12 @@ namespace Aop.Api.Response
         public string RefundOrderId { get; set; }
 
         /// <summary>
+        /// 签约链接有效期截止时间，格式 yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [XmlElement("schema_effective_end")]
+        public string SchemaEffectiveEnd { get; set; }
+
+        /// <summary>
         /// 订阅id，订阅唯一标识
         /// </summary>
         [XmlElement("subscription_id")]

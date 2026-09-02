@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RecyclingFarmerItemResult : AopObject
     {
         /// <summary>
+        /// 产粮记录ID
+        /// </summary>
+        [XmlElement("farmer_item_id")]
+        public string FarmerItemId { get; set; }
+
+        /// <summary>
         /// 数量
         /// </summary>
         [XmlElement("item_num")]

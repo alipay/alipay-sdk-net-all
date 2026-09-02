@@ -34,5 +34,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_proxy_no")]
         public string OutProxyNo { get; set; }
+
+        /// <summary>
+        /// 快递信息
+        /// </summary>
+        [XmlElement("return_express_info")]
+        public CarfinExpressInfo ReturnExpressInfo { get; set; }
     }
 }

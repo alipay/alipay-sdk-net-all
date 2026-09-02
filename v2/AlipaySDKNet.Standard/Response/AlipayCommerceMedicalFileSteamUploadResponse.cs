@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceMedicalFileSteamUploadResponse : AopResponse
     {
         /// <summary>
+        /// 文件id
+        /// </summary>
+        [XmlElement("file_id")]
+        public string FileId { get; set; }
+
+        /// <summary>
         /// 文件访问url
         /// </summary>
         [XmlElement("file_url")]

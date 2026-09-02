@@ -16,13 +16,19 @@ namespace Aop.Api.Domain
         public string ActivityCode { get; set; }
 
         /// <summary>
+        /// 指定期次报名场景必传
+        /// </summary>
+        [XmlElement("round_id")]
+        public string RoundId { get; set; }
+
+        /// <summary>
         /// 场景编码，固定值
         /// </summary>
         [XmlElement("scene_code")]
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// 报名信息，需传入JSON转义后的字符串
+        /// 报名信息，需传入JSON转义后的字符串；点餐激励场景必填！
         /// </summary>
         [XmlElement("sign_up_info")]
         public string SignUpInfo { get; set; }

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string Address { get; set; }
 
         /// <summary>
-        /// 门店结算银行卡信息
+        /// 门店结算银行卡信息 当前字段已废弃(业务变更，参数结构不再使用)
         /// </summary>
         [XmlArray("bank_cards")]
         [XmlArrayItem("group_purchase_bank_card")]
@@ -104,10 +104,17 @@ namespace Aop.Api.Domain
         public GroupPurchaseProofInfo ProofInfo { get; set; }
 
         /// <summary>
-        /// 门店结算信息
+        /// 门店结算信息 当前字段已废弃(业务变更，参数结构变更)
         /// </summary>
         [XmlArray("settle_infos")]
         [XmlArrayItem("group_purchase_settle_info")]
         public List<GroupPurchaseSettleInfo> SettleInfos { get; set; }
+
+        /// <summary>
+        /// 门店结算信息
+        /// </summary>
+        [XmlArray("shop_settle_infos")]
+        [XmlArrayItem("group_purchase_shop_settle_info")]
+        public List<GroupPurchaseShopSettleInfo> ShopSettleInfos { get; set; }
     }
 }

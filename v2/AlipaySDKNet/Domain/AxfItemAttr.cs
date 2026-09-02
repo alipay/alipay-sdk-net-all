@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("show_text")]
         public string ShowText { get; set; }
+
+        /// <summary>
+        /// 用于说明属性单位。结合attr_value使用，如1月，1天，1年
+        /// </summary>
+        [XmlElement("unit")]
+        public string Unit { get; set; }
     }
 }

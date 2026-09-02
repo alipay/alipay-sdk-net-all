@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AccessChannel { get; set; }
 
         /// <summary>
+        /// 引流页截图≤500K
+        /// </summary>
+        [XmlElement("advertorial_img")]
+        public string AdvertorialImg { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("alipay_user_id")]
@@ -38,6 +44,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("first_channel")]
         public string FirstChannel { get; set; }
+
+        /// <summary>
+        /// 固定点位
+        /// </summary>
+        [XmlElement("fixed_position_code")]
+        public string FixedPositionCode { get; set; }
 
         /// <summary>
         /// 机构订单id
@@ -76,6 +88,12 @@ namespace Aop.Api.Domain
         public string PackageRoute { get; set; }
 
         /// <summary>
+        /// 页面标识
+        /// </summary>
+        [XmlElement("page_id")]
+        public string PageId { get; set; }
+
+        /// <summary>
         /// 支付类型
         /// </summary>
         [XmlElement("pay_type")]
@@ -98,6 +116,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("proxy_order_url")]
         public string ProxyOrderUrl { get; set; }
+
+        /// <summary>
+        /// 报备素材编号
+        /// </summary>
+        [XmlElement("report_materials_no")]
+        public string ReportMaterialsNo { get; set; }
+
+        /// <summary>
+        /// 营销图片≤500K
+        /// </summary>
+        [XmlElement("sales_img")]
+        public string SalesImg { get; set; }
 
         /// <summary>
         /// sdk凭证
@@ -128,5 +158,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_agent")]
         public string UserAgent { get; set; }
+
+        /// <summary>
+        /// 二确页图片≤500K
+        /// </summary>
+        [XmlElement("verify_again_img")]
+        public string VerifyAgainImg { get; set; }
     }
 }

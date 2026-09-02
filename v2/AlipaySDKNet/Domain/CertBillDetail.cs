@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string EtSettleTime { get; set; }
 
         /// <summary>
+        /// 表示政府出资补贴金额。单位：元
+        /// </summary>
+        [XmlElement("gov_consumption_subsidy")]
+        public string GovConsumptionSubsidy { get; set; }
+
+        /// <summary>
         /// 商品ID
         /// </summary>
         [XmlElement("item_id")]

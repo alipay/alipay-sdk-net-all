@@ -17,6 +17,18 @@ namespace Aop.Api.Response
         public string AssetCode { get; set; }
 
         /// <summary>
+        /// 券模板业务编码，用于确定模板业务使用范围
+        /// </summary>
+        [XmlElement("biz_code")]
+        public string BizCode { get; set; }
+
+        /// <summary>
+        /// 业务信息,
+        /// </summary>
+        [XmlElement("biz_info")]
+        public VcpBizInfo BizInfo { get; set; }
+
+        /// <summary>
         /// 资金信息列表，其中fundType=FUND_SCHEME时fundAccount对应资金池id，其余情况对应出资账号
         /// </summary>
         [XmlArray("fund_infos")]

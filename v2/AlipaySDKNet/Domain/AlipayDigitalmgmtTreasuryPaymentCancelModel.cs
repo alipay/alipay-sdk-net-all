@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("tnt_inst_id")]
         public string TntInstId { get; set; }
+
+        /// <summary>
+        /// 交易本方OU，付款为付款方OU，收款为收款OU
+        /// </summary>
+        [XmlElement("trans_inst_id")]
+        public string TransInstId { get; set; }
     }
 }

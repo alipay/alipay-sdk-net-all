@@ -53,6 +53,12 @@ namespace Aop.Api.Domain
         public string DeductType { get; set; }
 
         /// <summary>
+        /// 枚举值：IMMEDIATE_EFFECTIVE（默认）。传入 SCHEDULED_EFFECTIVE 时表示「订阅预约生效模式」
+        /// </summary>
+        [XmlElement("effective_type")]
+        public string EffectiveType { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("items")]

@@ -15,7 +15,7 @@ namespace Aop.Api.Response
         public string AvailableAmount { get; set; }
 
         /// <summary>
-        /// 08-每月8号 10-每月10号
+        /// 还款日，08表示每月8号，10表示每月10号
         /// </summary>
         [XmlElement("repay_date")]
         public string RepayDate { get; set; }
@@ -25,5 +25,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("total_amount")]
         public string TotalAmount { get; set; }
+
+        /// <summary>
+        /// 花呗联名卡产品账户，后续可以基于该参数查询和关闭联名卡
+        /// </summary>
+        [XmlElement("user_prod_account_no")]
+        public string UserProdAccountNo { get; set; }
     }
 }

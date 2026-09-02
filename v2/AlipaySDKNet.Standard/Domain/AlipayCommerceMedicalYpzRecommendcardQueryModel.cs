@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CardCode { get; set; }
 
         /// <summary>
+        /// 查看病例详情url
+        /// </summary>
+        [XmlElement("case_details_url")]
+        public string CaseDetailsUrl { get; set; }
+
+        /// <summary>
         /// 渠道信息
         /// </summary>
         [XmlElement("ch_info")]
@@ -52,10 +58,28 @@ namespace Aop.Api.Domain
         public string DoctorName { get; set; }
 
         /// <summary>
+        /// 院区代码
+        /// </summary>
+        [XmlElement("hos_code")]
+        public string HosCode { get; set; }
+
+        /// <summary>
         /// 医院名称
         /// </summary>
         [XmlElement("hospital_name")]
         public string HospitalName { get; set; }
+
+        /// <summary>
+        /// 服务商编码
+        /// </summary>
+        [XmlElement("isv_code")]
+        public string IsvCode { get; set; }
+
+        /// <summary>
+        /// 小程序ID
+        /// </summary>
+        [XmlElement("mini_app_id")]
+        public string MiniAppId { get; set; }
 
         /// <summary>
         /// 平台openid
@@ -74,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("org_name")]
         public string OrgName { get; set; }
+
+        /// <summary>
+        /// 就诊人id
+        /// </summary>
+        [XmlElement("patient_id")]
+        public string PatientId { get; set; }
 
         /// <summary>
         /// 投放渠道

@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// 查询的车牌号
+        /// 车牌号，与停车事件唯一编码二选一必填
         /// </summary>
         [XmlElement("license_plate_no")]
         public string LicensePlateNo { get; set; }
@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("request_channel")]
         public string RequestChannel { get; set; }
+
+        /// <summary>
+        /// 停车事件唯一编码，与车牌号二选一必填
+        /// </summary>
+        [XmlElement("serial_no")]
+        public string SerialNo { get; set; }
     }
 }

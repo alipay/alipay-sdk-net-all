@@ -58,7 +58,7 @@ namespace Aop.Api.Domain
         public string CreditorAccountName { get; set; }
 
         /// <summary>
-        /// 非空，付款方账号
+        /// 收款方账号
         /// </summary>
         [XmlElement("creditor_account_no")]
         public string CreditorAccountNo { get; set; }
@@ -130,7 +130,7 @@ namespace Aop.Api.Domain
         public string CreditorInstCity { get; set; }
 
         /// <summary>
-        /// 收款银行两位国家代码；收款渠道为银行必填
+        /// 收款银行两位国家代码
         /// </summary>
         [XmlElement("creditor_inst_country_code")]
         public string CreditorInstCountryCode { get; set; }
@@ -182,6 +182,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("expect_payment_date")]
         public string ExpectPaymentDate { get; set; }
+
+        /// <summary>
+        /// 中间业务单据号，如：付款通知单- PN
+        /// </summary>
+        [XmlElement("middle_biz_ref_no")]
+        public string MiddleBizRefNo { get; set; }
 
         /// <summary>
         /// 银行渠道中国资金出境需要填写的 国际收支平衡表

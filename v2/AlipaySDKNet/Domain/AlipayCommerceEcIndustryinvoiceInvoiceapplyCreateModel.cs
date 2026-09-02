@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string BuyerAddress { get; set; }
 
         /// <summary>
+        /// 购方支付宝登录id
+        /// </summary>
+        [XmlElement("buyer_alipay_login_id")]
+        public string BuyerAlipayLoginId { get; set; }
+
+        /// <summary>
         /// 购买方银行账号
         /// </summary>
         [XmlElement("buyer_bank_account")]
@@ -51,6 +57,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("buyer_tel")]
         public string BuyerTel { get; set; }
+
+        /// <summary>
+        /// 渠道场景相关信息
+        /// </summary>
+        [XmlElement("channel_info")]
+        public IndustryInvoiceChannelInfo ChannelInfo { get; set; }
 
         /// <summary>
         /// 复核人
@@ -143,6 +155,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("payee")]
         public string Payee { get; set; }
+
+        /// <summary>
+        /// 发票产品码，与productId二选一
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
 
         /// <summary>
         /// 发票产品ID

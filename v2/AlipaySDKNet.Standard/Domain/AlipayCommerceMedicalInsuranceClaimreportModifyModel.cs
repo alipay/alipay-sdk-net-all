@@ -96,6 +96,12 @@ namespace Aop.Api.Domain
         public string CompanyType { get; set; }
 
         /// <summary>
+        /// 企业编码
+        /// </summary>
+        [XmlElement("enterprise_id")]
+        public string EnterpriseId { get; set; }
+
+        /// <summary>
         /// 申请材料
         /// </summary>
         [XmlArray("identity_materials")]

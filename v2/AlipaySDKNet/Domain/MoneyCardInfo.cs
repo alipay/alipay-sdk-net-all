@@ -89,5 +89,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("use_type")]
         public string UseType { get; set; }
+
+        /// <summary>
+        /// 直付通可核销smid范围
+        /// </summary>
+        [XmlArray("zft_smid_list")]
+        [XmlArrayItem("string")]
+        public List<string> ZftSmidList { get; set; }
     }
 }

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string OutItemId { get; set; }
 
         /// <summary>
+        /// 外部商品编码
+        /// </summary>
+        [XmlElement("out_product_id")]
+        public string OutProductId { get; set; }
+
+        /// <summary>
         /// 商家侧sku ID，APPID 下全局唯一。
         /// </summary>
         [XmlElement("out_sku_id")]

@@ -46,10 +46,28 @@ namespace Aop.Api.Domain
         public string EntName { get; set; }
 
         /// <summary>
+        /// true代表是新注册商户， false代表不是新注册商户
+        /// </summary>
+        [XmlElement("new_reg_merchant")]
+        public bool NewRegMerchant { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 身份证号码
+        /// </summary>
+        [XmlElement("operator_id_no")]
+        public string OperatorIdNo { get; set; }
+
+        /// <summary>
+        /// 经营者姓名
+        /// </summary>
+        [XmlElement("operator_name")]
+        public string OperatorName { get; set; }
 
         /// <summary>
         /// 蚂蚁统一会员ID

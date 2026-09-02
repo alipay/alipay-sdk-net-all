@@ -28,7 +28,31 @@ namespace Aop.Api.Domain
         public string OriginPeerPayAmount { get; set; }
 
         /// <summary>
-        /// 企业码门店ID
+        /// 企业码服务id，服务商在企业码生态中展业的业务标识
+        /// </summary>
+        [XmlElement("service_id")]
+        public string ServiceId { get; set; }
+
+        /// <summary>
+        /// 抽佣结算失败错误码
+        /// </summary>
+        [XmlElement("settle_failed_code")]
+        public string SettleFailedCode { get; set; }
+
+        /// <summary>
+        /// 结算失败原因
+        /// </summary>
+        [XmlElement("settle_failed_msg")]
+        public string SettleFailedMsg { get; set; }
+
+        /// <summary>
+        /// 结算失败解决方案
+        /// </summary>
+        [XmlElement("settle_failed_solution")]
+        public string SettleFailedSolution { get; set; }
+
+        /// <summary>
+        /// 企业码门店ID，门店代运营开放场景同蚂蚁门店ID
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }

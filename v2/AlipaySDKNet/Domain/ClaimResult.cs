@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public ClaimResultPolicyInfo PolicyInfo { get; set; }
 
         /// <summary>
-        /// 报案状态(true，false)
+        /// 报案状态字段。非枚举类型
         /// </summary>
         [XmlElement("report_status")]
         public string ReportStatus { get; set; }

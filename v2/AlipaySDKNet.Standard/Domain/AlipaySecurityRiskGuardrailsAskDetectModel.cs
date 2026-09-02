@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string ModelCode { get; set; }
 
         /// <summary>
-        /// 当前提问内容，最大长度10000个字符。
+        /// 默认限制10000字符；特殊场景到20000字符
         /// </summary>
         [XmlElement("question")]
         public string Question { get; set; }

@@ -1,6 +1,7 @@
 using System;
 using System.Xml.Serialization;
 using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -20,6 +21,13 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("has_risk")]
         public bool HasRisk { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("key_actions")]
+        [XmlArrayItem("a_i_retail_risk_key_event")]
+        public List<AIRetailRiskKeyEvent> KeyActions { get; set; }
 
         /// <summary>
         /// null

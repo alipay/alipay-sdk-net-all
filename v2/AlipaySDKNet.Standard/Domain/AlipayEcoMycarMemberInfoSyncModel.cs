@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string IssuanceDate { get; set; }
 
         /// <summary>
+        /// ALIPAY：支付宝渠道会员 WECHAT：微信渠道会员 OTHER：其他渠道
+        /// </summary>
+        [XmlElement("member_channel")]
+        public string MemberChannel { get; set; }
+
+        /// <summary>
         /// 业务发生时间，即同步会员信息的时间
         /// </summary>
         [XmlElement("occur_time")]

@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public string BookingId { get; set; }
 
         /// <summary>
+        /// 拒绝理由
+        /// </summary>
+        [XmlElement("reject_reason")]
+        public string RejectReason { get; set; }
+
+        /// <summary>
         /// 蚂蚁门店id
         /// </summary>
         [XmlElement("shop_id")]

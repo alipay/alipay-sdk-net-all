@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ProductId { get; set; }
 
         /// <summary>
+        /// 查询选项。多个选项以逗号分隔，如 "BIZ_TRANSFER"；传 "BIZ_TRANSFER" 时返回业务转账信息
+        /// </summary>
+        [XmlElement("query_options")]
+        public string QueryOptions { get; set; }
+
+        /// <summary>
         /// 企业（商户）税号
         /// </summary>
         [XmlElement("tax_no")]

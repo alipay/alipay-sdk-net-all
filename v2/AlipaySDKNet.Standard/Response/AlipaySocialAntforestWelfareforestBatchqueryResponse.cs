@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipaySocialAntforestWelfareforestBatchqueryResponse : AopResponse
     {
         /// <summary>
+        /// 会返回当前系统日期的时间戳
+        /// </summary>
+        [XmlElement("current_timestamp")]
+        public long CurrentTimestamp { get; set; }
+
+        /// <summary>
         /// 用于页面展示使用的图片等信息
         /// </summary>
         [XmlElement("global_display_info")]

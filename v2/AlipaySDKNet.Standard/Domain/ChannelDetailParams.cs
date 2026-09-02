@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CreditRiskInfo { get; set; }
 
         /// <summary>
+        /// 是否先采后付垫资版,用于先采后付前置咨询
+        /// </summary>
+        [XmlElement("fund_loan_sign")]
+        public string FundLoanSign { get; set; }
+
+        /// <summary>
         /// 国家贴息
         /// </summary>
         [XmlElement("gov_subsidy")]
@@ -56,5 +62,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_has_sign")]
         public string UserHasSign { get; set; }
+
+        /// <summary>
+        /// "true"：芝麻分大于等于800分 "false":  芝麻分小于800分
+        /// </summary>
+        [XmlElement("zm_score_gte_800")]
+        public string ZmScoreGte800 { get; set; }
     }
 }

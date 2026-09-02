@@ -11,6 +11,24 @@ namespace Aop.Api.Domain
     public class AlipayCommerceResaleOrderPayModel : AopObject
     {
         /// <summary>
+        /// 分期渠道
+        /// </summary>
+        [XmlElement("fq_channels")]
+        public string FqChannels { get; set; }
+
+        /// <summary>
+        /// 分期数
+        /// </summary>
+        [XmlElement("fq_num")]
+        public string FqNum { get; set; }
+
+        /// <summary>
+        /// 卖家分期手续费比例
+        /// </summary>
+        [XmlElement("fq_seller_percent")]
+        public string FqSellerPercent { get; set; }
+
+        /// <summary>
         /// 用户id
         /// </summary>
         [XmlElement("open_id")]

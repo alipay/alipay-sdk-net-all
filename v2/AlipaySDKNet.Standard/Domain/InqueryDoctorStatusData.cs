@@ -23,7 +23,7 @@ namespace Aop.Api.Domain
         public string DoctorPlatformStatus { get; set; }
 
         /// <summary>
-        /// 医生评价分数
+        /// 医生评价分数（10分制）
         /// </summary>
         [XmlElement("evaluation_score")]
         public string EvaluationScore { get; set; }

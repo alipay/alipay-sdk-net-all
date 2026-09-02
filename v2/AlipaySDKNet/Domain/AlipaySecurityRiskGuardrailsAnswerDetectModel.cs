@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipaySecurityRiskGuardrailsAnswerDetectModel : AopObject
     {
         /// <summary>
-        /// 当前回答内容，最大长度10000个字符。回答时必传
+        /// 当前回答内容，默认最大长度10000个字符。特殊场景20000字符
         /// </summary>
         [XmlElement("answer")]
         public string Answer { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string ModelCode { get; set; }
 
         /// <summary>
-        /// 当前提问内容，最大长度800个字符。
+        /// 当前提问。默认最大长度10000字符，特殊场景20000字符
         /// </summary>
         [XmlElement("question")]
         public string Question { get; set; }

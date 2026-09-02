@@ -135,6 +135,12 @@ namespace Aop.Api.Response
         public string SubOrderStatus { get; set; }
 
         /// <summary>
+        /// 支付宝支付子单资金流水号，当二阶段主子单场景时需要使用该单号去下载电子回单
+        /// </summary>
+        [XmlElement("sub_pay_fund_order_id")]
+        public string SubPayFundOrderId { get; set; }
+
+        /// <summary>
         /// 转账单据子状态，SUCCESS：二阶段转账领取成功；REFUNDED：二阶段转账退款
         /// </summary>
         [XmlElement("sub_status")]

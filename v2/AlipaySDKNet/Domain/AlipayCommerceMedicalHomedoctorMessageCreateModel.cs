@@ -10,13 +10,13 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalHomedoctorMessageCreateModel : AopObject
     {
         /// <summary>
-        /// 消息发送批次
+        /// 消息发送批次，当消息业务类型为AI语音随访时（message_biz_type='AI_FOLLOW_UP'）请传入创建AI随访任务的biz_id
         /// </summary>
         [XmlElement("message_batch_no")]
         public string MessageBatchNo { get; set; }
 
         /// <summary>
-        /// [{"name":"宣教","value":"EDUCATION"},{"name":"体检通知","value":"HEALTH_CHECK"},{"name":"女性早筛","value":"FEMALE_EARLY_SCREENING"},{"name":"孕产妇通知","value":"PREGNANT_CARE"},{"name":"新生儿检查","value":"NEWBORN_CHECK"},{"name":"问卷","value":"QUESTIONNAIRE"}]
+        /// [{"name":"宣教","value":"EDUCATION"},{"name":"体检通知","value":"HEALTH_CHECK"},{"name":"女性早筛","value":"FEMALE_EARLY_SCREENING"},{"name":"孕产妇通知","value":"PREGNANT_CARE"},{"name":"新生儿检查","value":"NEWBORN_CHECK"},{"name":"问卷","value":"QUESTIONNAIRE"},{"name":"AI语音随访","value":"AI_FOLLOW_UP"}]
         /// </summary>
         [XmlElement("message_biz_type")]
         public string MessageBizType { get; set; }

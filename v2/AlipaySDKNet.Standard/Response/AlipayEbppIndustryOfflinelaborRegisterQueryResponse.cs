@@ -1,6 +1,5 @@
 using System;
 using System.Xml.Serialization;
-using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -23,11 +22,10 @@ namespace Aop.Api.Response
         public long PageSize { get; set; }
 
         /// <summary>
-        /// null
+        /// 项目登记记录
         /// </summary>
-        [XmlArray("record_list")]
-        [XmlArrayItem("offline_labor_project_regist_record")]
-        public List<OfflineLaborProjectRegistRecord> RecordList { get; set; }
+        [XmlElement("record_list")]
+        public OfflineLaborProjectRegistRecord RecordList { get; set; }
 
         /// <summary>
         /// 匹配总记录数

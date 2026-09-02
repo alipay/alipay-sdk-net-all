@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalHealthArchiveSyncModel : AopObject
     {
         /// <summary>
+        /// 阿福用户openid
+        /// </summary>
+        [XmlElement("aq_open_id")]
+        public string AqOpenId { get; set; }
+
+        /// <summary>
         /// 以Map形式返回具体内容
         /// </summary>
         [XmlElement("content_data")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 数据保存来源 枚举值参考 ArchiveSaveFromEnum
+        /// </summary>
+        [XmlElement("save_from")]
+        public string SaveFrom { get; set; }
 
         /// <summary>
         /// 同步状态

@@ -234,6 +234,12 @@ namespace Aop.Api.Domain
         public string PartnerName { get; set; }
 
         /// <summary>
+        /// 平台账号id
+        /// </summary>
+        [XmlElement("platform_uid_id")]
+        public string PlatformUidId { get; set; }
+
+        /// <summary>
         /// 产品家族
         /// </summary>
         [XmlElement("product_family")]

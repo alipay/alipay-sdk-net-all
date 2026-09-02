@@ -121,6 +121,12 @@ namespace Aop.Api.Domain
         public long MaximumPower { get; set; }
 
         /// <summary>
+        /// 碰一下线圈id
+        /// </summary>
+        [XmlElement("nfc_tagid")]
+        public string NfcTagid { get; set; }
+
+        /// <summary>
         /// 支付方式
         /// </summary>
         [XmlElement("pay_type")]
@@ -137,6 +143,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("province")]
         public string Province { get; set; }
+
+        /// <summary>
+        /// 设备sn号
+        /// </summary>
+        [XmlElement("sn_id")]
+        public string SnId { get; set; }
 
         /// <summary>
         /// 站点名称

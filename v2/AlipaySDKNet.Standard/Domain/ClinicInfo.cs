@@ -11,6 +11,18 @@ namespace Aop.Api.Domain
     public class ClinicInfo : AopObject
     {
         /// <summary>
+        /// 期望就诊结束时间
+        /// </summary>
+        [XmlElement("appointment_end_time")]
+        public string AppointmentEndTime { get; set; }
+
+        /// <summary>
+        /// 期望就诊开始时间
+        /// </summary>
+        [XmlElement("appointment_start_time")]
+        public string AppointmentStartTime { get; set; }
+
+        /// <summary>
         /// 格式：yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("appointment_time")]
@@ -35,6 +47,12 @@ namespace Aop.Api.Domain
         public string ClinicCategory { get; set; }
 
         /// <summary>
+        /// 当前所在城市
+        /// </summary>
+        [XmlElement("current_city")]
+        public string CurrentCity { get; set; }
+
+        /// <summary>
         /// 就诊科室
         /// </summary>
         [XmlElement("department")]
@@ -51,6 +69,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("district_name")]
         public string DistrictName { get; set; }
+
+        /// <summary>
+        /// 期望就诊专家
+        /// </summary>
+        [XmlElement("expert")]
+        public string Expert { get; set; }
 
         /// <summary>
         /// 医院详细地址

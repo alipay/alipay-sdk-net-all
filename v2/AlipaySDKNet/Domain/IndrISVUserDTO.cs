@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public IndrISVAddressDTO Address { get; set; }
 
         /// <summary>
+        /// 生日
+        /// </summary>
+        [XmlElement("birth_date")]
+        public string BirthDate { get; set; }
+
+        /// <summary>
         /// 电子邮箱
         /// </summary>
         [XmlElement("email")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("full_name")]
         public string FullName { get; set; }
+
+        /// <summary>
+        /// 证件地址
+        /// </summary>
+        [XmlElement("identity_address")]
+        public IndrISVAddressDTO IdentityAddress { get; set; }
 
         /// <summary>
         /// 证件号（身份证号， 固定18位或15位）

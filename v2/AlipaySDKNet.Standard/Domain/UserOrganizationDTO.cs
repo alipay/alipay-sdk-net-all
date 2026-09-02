@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class UserOrganizationDTO : AopObject
     {
         /// <summary>
+        /// 申请人id
+        /// </summary>
+        [XmlElement("applicant_passport_id")]
+        public string ApplicantPassportId { get; set; }
+
+        /// <summary>
         /// 实体id
         /// </summary>
         [XmlElement("entity_id")]

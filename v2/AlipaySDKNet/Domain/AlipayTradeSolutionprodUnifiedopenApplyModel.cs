@@ -29,7 +29,7 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 证件类型。 目前只支持传入100（大陆身份证）
+        /// 证件类型。 目前只支持传入100（大陆身份证）、105（港澳居民来往内地通行证）、106（台湾居民来往大陆通行证）
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }

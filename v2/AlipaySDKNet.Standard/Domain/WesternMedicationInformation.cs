@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string MedicalName { get; set; }
 
         /// <summary>
+        /// 开药数量
+        /// </summary>
+        [XmlElement("quantity")]
+        public string Quantity { get; set; }
+
+        /// <summary>
         /// 备注 eg： 饭后服用，连用7天
         /// </summary>
         [XmlElement("remark")]

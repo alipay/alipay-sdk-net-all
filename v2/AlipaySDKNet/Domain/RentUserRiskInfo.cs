@@ -16,6 +16,24 @@ namespace Aop.Api.Domain
         public string ComprehensiveRiskLevel { get; set; }
 
         /// <summary>
+        /// 0、1、2、3、4、5，从0到5履约能力变高，风险变低
+        /// </summary>
+        [XmlElement("credit_ability_level")]
+        public string CreditAbilityLevel { get; set; }
+
+        /// <summary>
+        /// nor-无在租订单, low-低风险, mid-中风险, high-高风险
+        /// </summary>
+        [XmlElement("current_renting_level")]
+        public string CurrentRentingLevel { get; set; }
+
+        /// <summary>
+        /// low-低风险, mid-中风险, high-高风险，sup-极高风险
+        /// </summary>
+        [XmlElement("intermediary_level")]
+        public string IntermediaryLevel { get; set; }
+
+        /// <summary>
         /// 优质用户推荐标识
         /// </summary>
         [XmlElement("premium_user_recommend")]

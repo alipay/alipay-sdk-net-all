@@ -121,6 +121,12 @@ namespace Aop.Api.Domain
         public List<ScanDetail> ScanDetails { get; set; }
 
         /// <summary>
+        /// 制品文件SHA256指纹
+        /// </summary>
+        [XmlElement("sha_256")]
+        public string Sha256 { get; set; }
+
+        /// <summary>
         /// 制品大小
         /// </summary>
         [XmlElement("size")]

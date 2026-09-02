@@ -26,5 +26,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("open_id")]
         public string OpenId { get; set; }
+
+        /// <summary>
+        /// 申请联名卡时获取，如果传入，会查询指定花呗联名卡账户信息，否则，查询最新申请的花呗联名卡账户信息
+        /// </summary>
+        [XmlElement("user_prod_account_no")]
+        public string UserProdAccountNo { get; set; }
     }
 }

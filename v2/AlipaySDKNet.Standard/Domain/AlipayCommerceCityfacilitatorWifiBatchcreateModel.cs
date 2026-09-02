@@ -1,0 +1,20 @@
+using System;
+using System.Xml.Serialization;
+using System.Collections.Generic;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayCommerceCityfacilitatorWifiBatchcreateModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayCommerceCityfacilitatorWifiBatchcreateModel : AopObject
+    {
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("shop_wifi_list")]
+        [XmlArrayItem("sol_shop_wifi_info")]
+        public List<SolShopWifiInfo> ShopWifiList { get; set; }
+    }
+}

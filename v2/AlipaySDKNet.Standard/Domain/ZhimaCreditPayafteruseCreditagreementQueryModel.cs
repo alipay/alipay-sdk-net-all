@@ -16,9 +16,27 @@ namespace Aop.Api.Domain
         public string CreditAgreementId { get; set; }
 
         /// <summary>
+        /// 扩展参数
+        /// </summary>
+        [XmlElement("extra_param")]
+        public string ExtraParam { get; set; }
+
+        /// <summary>
         /// 商户外部协议号
         /// </summary>
         [XmlElement("out_agreement_no")]
         public string OutAgreementNo { get; set; }
+
+        /// <summary>
+        /// 当产品是芝麻守约时必填，需传入CREDIT_AGREEMENT
+        /// </summary>
+        [XmlElement("product_code")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
+        /// 芝麻信用服务id，上线前提前分配给商户
+        /// </summary>
+        [XmlElement("service_id")]
+        public string ServiceId { get; set; }
     }
 }

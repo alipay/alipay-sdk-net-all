@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class SpecifiedDeductRuleParams : AopObject
     {
         /// <summary>
+        /// 用户自定义单月扣款额度，单位元，用于自动充场景下单月最大累计充值金额管控，商户侧传入
+        /// </summary>
+        [XmlElement("specified_month_limit_amount")]
+        public string SpecifiedMonthLimitAmount { get; set; }
+
+        /// <summary>
         /// 签约时指定代扣金额，单位元，传入后后续代扣环节的金额必须等于该金额
         /// </summary>
         [XmlElement("specified_pay_amount")]

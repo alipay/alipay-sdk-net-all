@@ -70,5 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("required")]
         public bool Required { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("unit")]
+        [XmlArrayItem("string")]
+        public List<string> Unit { get; set; }
     }
 }

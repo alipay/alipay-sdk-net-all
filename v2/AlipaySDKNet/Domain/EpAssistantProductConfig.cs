@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public long DurationQuantity { get; set; }
 
         /// <summary>
-        /// 购买会员包的时长单位(目前支持HALF_YEAR和YEAR两个选项)，生效与本结构的购买数量(duration_quantity)结合使用，如购买3个HALF_YEAR表示一年半。
+        /// 购买会员包的时长单位(目前支持QUARTER、HALF_YEAR和YEAR三个选项，其中QUARTER只针对部分渠道开放)，生效与本结构的购买数量(duration_quantity)结合使用，如购买3个HALF_YEAR表示一年半。
         /// </summary>
         [XmlElement("duration_unit")]
         public string DurationUnit { get; set; }

@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string DeductType { get; set; }
 
         /// <summary>
+        /// 订阅生效的类型，枚举值：IMMEDIATE_EFFECTIVE（默认）。传入 SCHEDULED_EFFECTIVE 时表示「订阅预约生效模式」
+        /// </summary>
+        [XmlElement("effective_type")]
+        public string EffectiveType { get; set; }
+
+        /// <summary>
         /// 扩展参数，用于订阅特殊能力的传参，使用方式详见具体场景接入指南
         /// </summary>
         [XmlElement("extend_params")]
@@ -46,6 +52,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pay_amount")]
         public long PayAmount { get; set; }
+
+        /// <summary>
+        /// 若为「单笔升级连续订阅」，必填。周期订阅正式生效的时间，格式 yyyy-MM-dd。 月维度下，订阅到期时间，统一按照23:59:59进行默认处理。
+        /// </summary>
+        [XmlElement("scheduled_effective_time")]
+        public string ScheduledEffectiveTime { get; set; }
 
         /// <summary>
         /// 订单标题，若无特殊需求，无需使用该字段，默认使用商品名称

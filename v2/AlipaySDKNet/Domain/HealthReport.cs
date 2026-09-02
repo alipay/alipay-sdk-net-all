@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public string Age { get; set; }
 
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("basic_physical_examination_report_list")]
+        [XmlArrayItem("basic_examination_report")]
+        public List<BasicExaminationReport> BasicPhysicalExaminationReportList { get; set; }
+
+        /// <summary>
         /// 唯一id
         /// </summary>
         [XmlElement("data_id")]
@@ -89,5 +96,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("report_time")]
         public string ReportTime { get; set; }
+
+        /// <summary>
+        /// 体检类型（如"体检报告"/"入职体检"）
+        /// </summary>
+        [XmlElement("report_type")]
+        public string ReportType { get; set; }
     }
 }

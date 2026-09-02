@@ -29,6 +29,13 @@ namespace Aop.Api.Domain
         public string ExpressNo { get; set; }
 
         /// <summary>
+        /// 物料ID列表
+        /// </summary>
+        [XmlArray("item_ids")]
+        [XmlArrayItem("string")]
+        public List<string> ItemIds { get; set; }
+
+        /// <summary>
         /// 订单状态
         /// </summary>
         [XmlElement("order_status")]

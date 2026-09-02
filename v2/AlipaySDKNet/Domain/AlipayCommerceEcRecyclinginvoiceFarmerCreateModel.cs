@@ -23,6 +23,18 @@ namespace Aop.Api.Domain
         public string AccountType { get; set; }
 
         /// <summary>
+        /// 归属承包主身份证号，须为已存在承包主
+        /// </summary>
+        [XmlElement("belong_contractor_cert_no")]
+        public string BelongContractorCertNo { get; set; }
+
+        /// <summary>
+        /// 归属家庭主身份证号，须为已存在家庭主
+        /// </summary>
+        [XmlElement("belong_family_head_cert_no")]
+        public string BelongFamilyHeadCertNo { get; set; }
+
+        /// <summary>
         /// 农户身份证件号
         /// </summary>
         [XmlElement("cert_no")]
@@ -49,7 +61,13 @@ namespace Aop.Api.Domain
         public List<string> FarmerTypeList { get; set; }
 
         /// <summary>
-        /// 是否为家庭主人/家庭主导者
+        /// 是否承包主（1=是，0=否）
+        /// </summary>
+        [XmlElement("is_contractor")]
+        public string IsContractor { get; set; }
+
+        /// <summary>
+        /// 是否为家庭主/家庭主导者
         /// </summary>
         [XmlElement("is_family_master")]
         public string IsFamilyMaster { get; set; }

@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string ChargedAccountName { get; set; }
 
         /// <summary>
+        /// 用户实付金额
+        /// </summary>
+        [XmlElement("commission_amount_type")]
+        public string CommissionAmountType { get; set; }
+
+        /// <summary>
         /// 抽佣比例，格式为小数如0.1
         /// </summary>
         [XmlElement("commission_ratio")]

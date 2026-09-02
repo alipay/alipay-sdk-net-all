@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -38,6 +39,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("order_id")]
         public string OrderId { get; set; }
+
+        /// <summary>
+        /// 订单协商支付时间
+        /// </summary>
+        [XmlArray("order_negotiated_payment_time")]
+        [XmlArrayItem("order_negotiated_payment_time")]
+        public List<OrderNegotiatedPaymentTime> OrderNegotiatedPaymentTime { get; set; }
 
         /// <summary>
         /// 商户订单号

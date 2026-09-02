@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public long Current { get; set; }
 
         /// <summary>
+        /// 按投放模式筛选：手动模式/自动模式，不传查全部
+        /// </summary>
+        [XmlElement("delivery_mode")]
+        public string DeliveryMode { get; set; }
+
+        /// <summary>
         /// 一级营销目标code（如要查询当前场景下所有数据，入参为‘ALL’字段）
         /// </summary>
         [XmlElement("first_market_target_code")]

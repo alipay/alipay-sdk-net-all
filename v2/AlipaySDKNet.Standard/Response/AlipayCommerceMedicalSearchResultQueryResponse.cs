@@ -23,7 +23,7 @@ namespace Aop.Api.Response
         public ArticleVo ArticleList { get; set; }
 
         /// <summary>
-        /// 医生信息
+        /// 医生列表
         /// </summary>
         [XmlElement("doctor_info_list")]
         public SimpleDoctorInfo DoctorInfoList { get; set; }

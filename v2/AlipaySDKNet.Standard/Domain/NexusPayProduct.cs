@@ -56,5 +56,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 单位名称
+        /// </summary>
+        [XmlElement("unit_label")]
+        public string UnitLabel { get; set; }
     }
 }

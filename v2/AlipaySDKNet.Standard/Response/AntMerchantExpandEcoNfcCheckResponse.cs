@@ -19,5 +19,17 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("forbid_bind_reason")]
         public string ForbidBindReason { get; set; }
+
+        /// <summary>
+        /// 线圈对应的物料ID
+        /// </summary>
+        [XmlElement("item_id")]
+        public string ItemId { get; set; }
+
+        /// <summary>
+        /// 物料类型标识，财神空码: cai_shen_empty_code，不需要传qrcodeTokens
+        /// </summary>
+        [XmlElement("material_type")]
+        public string MaterialType { get; set; }
     }
 }

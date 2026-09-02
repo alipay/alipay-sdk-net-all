@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string CertNo { get; set; }
 
         /// <summary>
-        /// 指定买家证件类型。 枚举值： IDENTITY_CARD：身份证； PASSPORT：护照； OFFICER_CARD：军官证； SOLDIER_CARD：士兵证； HOKOU：户口本； PERMANENT_RESIDENCE_FOREIGNER：外国人永久居留身份证。 如有其它类型需要支持，请与蚂蚁金服工作人员联系。 注： need_check_info=T或fix_buyer=T时该参数才有效，支付宝会比较买家在支付宝留存的证件类型与该参数传入的值是否匹配。
+        /// 指定买家证件类型。 枚举值： IDENTITY_CARD：身份证； PASSPORT：护照； OFFICER_CARD：军官证； SOLDIER_CARD：士兵证； HOKOU：户口本； PERMANENT_RESIDENCE_FOREIGNER：外国人永久居留身份证； BUSINESS_LICENSE：营业执照。 如有其它类型需要支持，请与蚂蚁金服工作人员联系。 注： need_check_info=T或fix_buyer=T时该参数才有效，支付宝会比较买家在支付宝留存的证件类型与该参数传入的值是否匹配。
         /// </summary>
         [XmlElement("cert_type")]
         public string CertType { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string IdentityHash { get; set; }
 
         /// <summary>
-        /// 允许的最小买家年龄。 买家年龄必须大于等于所传数值  注： 1. need_check_info=T时该参数才有效 2. min_age为整数，必须大于等于0
+        /// 允许的最小买家年龄。 买家年龄必须大于等于所传数值  注： 1. need_check_info=T时该参数才有效 2. min_age为整数，必须大于等于0 3. 仅支持cert_type=IDENTITY_CARD(身份证)时传入
         /// </summary>
         [XmlElement("min_age")]
         public string MinAge { get; set; }

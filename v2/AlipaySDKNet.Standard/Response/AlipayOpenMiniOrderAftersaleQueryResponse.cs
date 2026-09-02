@@ -61,6 +61,13 @@ namespace Aop.Api.Response
         public string ApplyRefundAmount { get; set; }
 
         /// <summary>
+        /// 描述当前售后单上每笔凭证对应退款进度。仅当前订单为本地生活类业务场景并且成功发起退款才会存在
+        /// </summary>
+        [XmlArray("certificate_refund_detail_list")]
+        [XmlArrayItem("certificate_refund_detail_v_o")]
+        public List<CertificateRefundDetailVO> CertificateRefundDetailList { get; set; }
+
+        /// <summary>
         /// 创建时间，yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("create_time")]

@@ -163,10 +163,28 @@ namespace Aop.Api.Response
         public List<IndustryInvoiceRealPropertyBusiness> RealPropertyBusinessList { get; set; }
 
         /// <summary>
+        /// 红字确认单号
+        /// </summary>
+        [XmlElement("red_confirmation_no")]
+        public string RedConfirmationNo { get; set; }
+
+        /// <summary>
+        /// 红字确认单UUID
+        /// </summary>
+        [XmlElement("red_confirmation_uuid")]
+        public string RedConfirmationUuid { get; set; }
+
+        /// <summary>
         /// 关联蓝票发票号码
         /// </summary>
         [XmlElement("related_blue_invoice_no")]
         public string RelatedBlueInvoiceNo { get; set; }
+
+        /// <summary>
+        /// 发票备注
+        /// </summary>
+        [XmlElement("remark")]
+        public string Remark { get; set; }
 
         /// <summary>
         /// 销售方名称

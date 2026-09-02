@@ -119,6 +119,12 @@ namespace Aop.Api.Response
         public string CreditBizOrderId { get; set; }
 
         /// <summary>
+        /// 先享免密下单之后，芝麻信用侧的业务单状态。
+        /// </summary>
+        [XmlElement("credit_biz_order_status")]
+        public string CreditBizOrderStatus { get; set; }
+
+        /// <summary>
         /// 信用支付模式。表示订单是采用信用支付方式（支付时买家没有出资，需要后续履约）。"creditAdvanceV2"表示芝麻先用后付模式，用户后续需要履约扣款。 此字段只有信用支付场景才有值，商户需要根据字段值单独处理。此字段以后可能扩展其他值，建议商户使用白名单方式识别，对于未识别的值做失败处理，并联系支付宝技术支持人员。
         /// </summary>
         [XmlElement("credit_pay_mode")]

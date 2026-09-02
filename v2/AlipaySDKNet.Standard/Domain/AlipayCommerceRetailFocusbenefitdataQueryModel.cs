@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Digest { get; set; }
 
         /// <summary>
+        /// 区县名称
+        /// </summary>
+        [XmlElement("district_name")]
+        public string DistrictName { get; set; }
+
+        /// <summary>
         /// 天分区
         /// </summary>
         [XmlElement("dt_list")]

@@ -58,6 +58,18 @@ namespace Aop.Api.Domain
         public string Result { get; set; }
 
         /// <summary>
+        /// 中医诊断结果（type=TCM时有效）
+        /// </summary>
+        [XmlElement("tcm_diagnosis_result")]
+        public string TcmDiagnosisResult { get; set; }
+
+        /// <summary>
+        /// 中医四诊（type=TCM时有效）
+        /// </summary>
+        [XmlElement("tcm_four_diagnosis")]
+        public string TcmFourDiagnosis { get; set; }
+
+        /// <summary>
         /// 处理及意见
         /// </summary>
         [XmlElement("treatment_advice")]

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Mobile { get; set; }
 
         /// <summary>
+        /// 异名结算的证明材料
+        /// </summary>
+        [XmlElement("proof_info")]
+        public ProofInfo ProofInfo { get; set; }
+
+        /// <summary>
         /// 结算信息
         /// </summary>
         [XmlElement("settle_infos")]

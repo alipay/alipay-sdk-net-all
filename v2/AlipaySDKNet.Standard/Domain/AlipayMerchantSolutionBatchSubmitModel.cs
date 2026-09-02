@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<AlipaySolutionFile> FileInfo { get; set; }
 
         /// <summary>
+        /// 商户类型,可选值：NORMAL（普通商家）/ MINI（小微商家）。不传时默认为NORMAL，走普通商家准入链路。
+        /// </summary>
+        [XmlElement("mrch_type")]
+        public string MrchType { get; set; }
+
+        /// <summary>
         /// 外部批次号，在外部系统中唯一标识一个提报批次
         /// </summary>
         [XmlElement("out_batch_no")]

@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_name")]
         public string ItemName { get; set; }
+
+        /// <summary>
+        /// 优惠项目来源，用于区分是 商家优惠 和 支付宝优惠
+        /// </summary>
+        [XmlElement("item_source")]
+        public string ItemSource { get; set; }
     }
 }

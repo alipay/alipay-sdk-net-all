@@ -92,6 +92,12 @@ namespace Aop.Api.Response
         public string ConvertedId { get; set; }
 
         /// <summary>
+        /// 投放模式，手动投放/自动投放
+        /// </summary>
+        [XmlElement("delivery_mode")]
+        public string DeliveryMode { get; set; }
+
+        /// <summary>
         /// 地理位置类型
         /// </summary>
         [XmlElement("district")]

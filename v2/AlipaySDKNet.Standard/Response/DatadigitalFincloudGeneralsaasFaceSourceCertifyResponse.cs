@@ -27,13 +27,13 @@ namespace Aop.Api.Response
         public string Passed { get; set; }
 
         /// <summary>
-        /// double值，人脸图片质量分
+        /// double值，人脸图片质量分，0-100的百分制分数
         /// </summary>
         [XmlElement("quality")]
         public string Quality { get; set; }
 
         /// <summary>
-        /// double值，活体检测结果分数
+        /// double值，活体检测结果分数，0-100的百分制分数
         /// </summary>
         [XmlElement("score")]
         public string Score { get; set; }

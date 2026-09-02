@@ -9,7 +9,7 @@ namespace Aop.Api.Response
     public class ZhimaCreditPayafteruseCreditagreementQueryResponse : AopResponse
     {
         /// <summary>
-        /// 开通/授权状态，VALID: 有效，INVALID: 无效
+        /// 开通/授权状态，VALID: 有效，INVALID: 无效。不可开通CANNOT_OPEN
         /// </summary>
         [XmlElement("agreement_status")]
         public string AgreementStatus { get; set; }

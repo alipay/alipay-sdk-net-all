@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DistrictCode { get; set; }
 
         /// <summary>
+        /// 医生的蚂蚁健康openId
+        /// </summary>
+        [XmlElement("doctor_aq_open_id")]
+        public string DoctorAqOpenId { get; set; }
+
+        /// <summary>
         /// 签约医生的身份证号(签约状态为居民已完成、医生签署中、医生已完成的必填)
         /// </summary>
         [XmlElement("doctor_cert_no")]

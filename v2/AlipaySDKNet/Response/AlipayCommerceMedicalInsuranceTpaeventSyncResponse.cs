@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string CertType { get; set; }
 
         /// <summary>
+        /// 扩展信息
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 被保人证件号
         /// </summary>
         [XmlElement("insured_cert_no")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayOverseasOpenAmountPreconsultModel : AopObject
     {
         /// <summary>
+        /// 学校账户ID，通过alipay.overseas.open.account.consult获取
+        /// </summary>
+        [XmlElement("account_id")]
+        public string AccountId { get; set; }
+
+        /// <summary>
         /// 机构信息
         /// </summary>
         [XmlElement("agent_info")]

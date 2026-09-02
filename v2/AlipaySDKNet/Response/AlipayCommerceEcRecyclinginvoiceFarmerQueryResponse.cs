@@ -23,6 +23,18 @@ namespace Aop.Api.Response
         public string AccountType { get; set; }
 
         /// <summary>
+        /// 归属承包主身份证号
+        /// </summary>
+        [XmlElement("belong_contractor_cert_no")]
+        public string BelongContractorCertNo { get; set; }
+
+        /// <summary>
+        /// 归属家庭主身份证号
+        /// </summary>
+        [XmlElement("belong_family_head_cert_no")]
+        public string BelongFamilyHeadCertNo { get; set; }
+
+        /// <summary>
         /// 农户身份证件号
         /// </summary>
         [XmlElement("cert_no")]
@@ -35,7 +47,7 @@ namespace Aop.Api.Response
         public string ConfirmStatus { get; set; }
 
         /// <summary>
-        /// 农户授权链接
+        /// 农户代卖人授权链接
         /// </summary>
         [XmlElement("farmer_auth_url")]
         public string FarmerAuthUrl { get; set; }
@@ -65,6 +77,12 @@ namespace Aop.Api.Response
         [XmlArray("farmer_type_list")]
         [XmlArrayItem("string")]
         public List<string> FarmerTypeList { get; set; }
+
+        /// <summary>
+        /// 是否承包主（1=是，0=否）
+        /// </summary>
+        [XmlElement("is_contractor")]
+        public string IsContractor { get; set; }
 
         /// <summary>
         /// 是否为家庭主人/家庭主导者

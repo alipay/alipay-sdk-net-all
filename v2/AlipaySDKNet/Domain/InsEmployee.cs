@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string JobLevel { get; set; }
 
         /// <summary>
+        /// 业务幂等单号
+        /// </summary>
+        [XmlElement("out_employee_biz_no")]
+        public string OutEmployeeBizNo { get; set; }
+
+        /// <summary>
         /// 外部员工id
         /// </summary>
         [XmlElement("out_employee_id")]

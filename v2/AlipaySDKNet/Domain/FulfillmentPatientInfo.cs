@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string DiseaseDesc { get; set; }
 
         /// <summary>
+        /// 所患疾病
+        /// </summary>
+        [XmlElement("disease_name")]
+        public string DiseaseName { get; set; }
+
+        /// <summary>
         /// 0-男，1-女
         /// </summary>
         [XmlElement("gender")]

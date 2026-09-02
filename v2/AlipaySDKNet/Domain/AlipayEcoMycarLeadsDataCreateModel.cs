@@ -60,6 +60,12 @@ namespace Aop.Api.Domain
         public string OutLeadsId { get; set; }
 
         /// <summary>
+        /// 备注
+        /// </summary>
+        [XmlElement("remark")]
+        public string Remark { get; set; }
+
+        /// <summary>
         /// 支付宝用户的userId。
         /// </summary>
         [XmlElement("user_id")]

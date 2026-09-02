@@ -40,5 +40,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("risk_biz_scene")]
         public string RiskBizScene { get; set; }
+
+        /// <summary>
+        /// 发货评估方案
+        /// </summary>
+        [XmlElement("ship_assessment_result")]
+        public ShipAssessmentRes ShipAssessmentResult { get; set; }
     }
 }

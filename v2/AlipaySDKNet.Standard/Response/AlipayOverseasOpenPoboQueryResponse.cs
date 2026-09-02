@@ -18,6 +18,18 @@ namespace Aop.Api.Response
         public List<IndrPoboAuthRecordDTO> AuthRecords { get; set; }
 
         /// <summary>
+        /// 最新差错记录
+        /// </summary>
+        [XmlElement("latest_debit_record")]
+        public IndrPoboDebitRecordDTO LatestDebitRecord { get; set; }
+
+        /// <summary>
+        /// 支付方式
+        /// </summary>
+        [XmlElement("payment_type")]
+        public string PaymentType { get; set; }
+
+        /// <summary>
         /// 调用结果
         /// </summary>
         [XmlElement("result")]

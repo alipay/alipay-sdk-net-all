@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string BookingMode { get; set; }
 
         /// <summary>
+        /// 商品关联的品牌ID。取自商户已认证的品牌， <a href="https://b.alipay.com/page/brandManage/home">获取品牌ID</a>
+        /// </summary>
+        [XmlElement("brand_id")]
+        public string BrandId { get; set; }
+
+        /// <summary>
         /// 违约金信息
         /// </summary>
         [XmlElement("break_costs_info")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class ActivityBaseInfo : AopObject
     {
         /// <summary>
+        /// 推广信息实体类
+        /// </summary>
+        [XmlElement("activity_delivery_ext_info")]
+        public ActivityDeliveryExtInfo ActivityDeliveryExtInfo { get; set; }
+
+        /// <summary>
         /// 活动id
         /// </summary>
         [XmlElement("activity_id")]

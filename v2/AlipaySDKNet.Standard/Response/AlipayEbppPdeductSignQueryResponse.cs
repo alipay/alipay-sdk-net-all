@@ -1,5 +1,7 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using Aop.Api.Domain;
 
 namespace Aop.Api.Response
 {
@@ -37,6 +39,19 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("sign_date")]
         public string SignDate { get; set; }
+
+        /// <summary>
+        /// 协议过期时间
+        /// </summary>
+        [XmlElement("sign_expire_date")]
+        public string SignExpireDate { get; set; }
+
+        /// <summary>
+        /// 用户代扣协议设置的优先扣款渠道
+        /// </summary>
+        [XmlArray("specified_sort_channels")]
+        [XmlArrayItem("specified_sort_channel_param")]
+        public List<SpecifiedSortChannelParam> SpecifiedSortChannels { get; set; }
 
         /// <summary>
         /// 用户ID

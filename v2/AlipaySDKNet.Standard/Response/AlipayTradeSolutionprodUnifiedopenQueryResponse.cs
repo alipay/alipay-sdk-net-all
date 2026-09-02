@@ -23,6 +23,13 @@ namespace Aop.Api.Response
         public string FailReason { get; set; }
 
         /// <summary>
+        /// 最近一次用户校验异常信息
+        /// </summary>
+        [XmlArray("latest_verify_error")]
+        [XmlArrayItem("latest_verify_error")]
+        public List<LatestVerifyError> LatestVerifyError { get; set; }
+
+        /// <summary>
         /// 开通项结果列表
         /// </summary>
         [XmlArray("open_item_result_list")]

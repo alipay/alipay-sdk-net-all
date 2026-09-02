@@ -72,6 +72,12 @@ namespace Aop.Api.Domain
         public List<RentPlan> PlanList { get; set; }
 
         /// <summary>
+        /// 租赁单状态
+        /// </summary>
+        [XmlElement("rent_status")]
+        public string RentStatus { get; set; }
+
+        /// <summary>
         /// 分账信息列表，每一期的分账详情
         /// </summary>
         [XmlArray("royalty_list")]

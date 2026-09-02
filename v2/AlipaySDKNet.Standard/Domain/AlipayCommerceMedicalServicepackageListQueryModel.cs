@@ -28,5 +28,11 @@ namespace Aop.Api.Domain
         [XmlArray("package_id_list")]
         [XmlArrayItem("string")]
         public List<string> PackageIdList { get; set; }
+
+        /// <summary>
+        /// 订单号
+        /// </summary>
+        [XmlElement("service_pkg_order_no")]
+        public string ServicePkgOrderNo { get; set; }
     }
 }

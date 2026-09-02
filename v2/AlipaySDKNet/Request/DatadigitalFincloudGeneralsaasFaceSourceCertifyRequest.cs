@@ -11,6 +11,11 @@ namespace Aop.Api.Request
     public class DatadigitalFincloudGeneralsaasFaceSourceCertifyRequest : IAopUploadRequest<DatadigitalFincloudGeneralsaasFaceSourceCertifyResponse>
     {
         /// <summary>
+        /// 业务产品码
+        /// </summary>
+        public string BizCode { get; set; }
+
+        /// <summary>
         /// 用户姓名，与身份证上的姓名相匹配
         /// </summary>
         public string CertName { get; set; }
@@ -145,6 +150,7 @@ namespace Aop.Api.Request
         public IDictionary<string, string> GetParameters()
         {
             AopDictionary parameters = new AopDictionary();
+            parameters.Add("biz_code", this.BizCode);
             parameters.Add("cert_name", this.CertName);
             parameters.Add("cert_no", this.CertNo);
             parameters.Add("cert_type", this.CertType);

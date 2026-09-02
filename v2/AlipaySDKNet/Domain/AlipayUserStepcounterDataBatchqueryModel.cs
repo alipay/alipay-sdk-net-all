@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
-        /// 请求方唯一标识。每一个外部商户都会分配一个业务方标识，请使用钉钉联系支付宝小二骁然获取此标识
+        /// 请求方唯一标识。每一个外部商户都会分配一个业务方标识，接入时联系接口负责人获取
         /// </summary>
         [XmlElement("partner_id")]
         public string PartnerId { get; set; }
@@ -34,7 +34,7 @@ namespace Aop.Api.Domain
         public string StartDate { get; set; }
 
         /// <summary>
-        /// 用户的计步时区。若此参数为空，则返回所有时区的步数信息。
+        /// 用户的计步时区。若不为空，返回指定时区的运动步数，若此参数为空，则返回所有时区的步数信息。
         /// </summary>
         [XmlElement("time_zone")]
         public string TimeZone { get; set; }

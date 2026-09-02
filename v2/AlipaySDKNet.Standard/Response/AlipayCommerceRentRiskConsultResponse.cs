@@ -55,11 +55,24 @@ namespace Aop.Api.Response
         public List<RentRiskInfoVO> RiskInfos { get; set; }
 
         /// <summary>
+        /// 发货评估结果
+        /// </summary>
+        [XmlElement("ship_assessment_results")]
+        public ShipAssessmentResultVO ShipAssessmentResults { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("ship_goods_risk_models")]
         [XmlArrayItem("ship_goods_risk_v_o")]
         public List<ShipGoodsRiskVO> ShipGoodsRiskModels { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("tailored_risk_models")]
+        [XmlArrayItem("tailored_risk_models_v_o")]
+        public List<TailoredRiskModelsVO> TailoredRiskModels { get; set; }
 
         /// <summary>
         /// 联营商户订单分组

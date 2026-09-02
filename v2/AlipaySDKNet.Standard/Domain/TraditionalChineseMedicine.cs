@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<MedicationInformation> MedicationInformationList { get; set; }
 
         /// <summary>
+        /// 用药医嘱
+        /// </summary>
+        [XmlElement("medication_order")]
+        public string MedicationOrder { get; set; }
+
+        /// <summary>
         /// 药品用法  eg：5剂 每日一剂 水煎 400ml
         /// </summary>
         [XmlElement("usage")]

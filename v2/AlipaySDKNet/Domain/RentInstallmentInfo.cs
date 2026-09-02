@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class RentInstallmentInfo : AopObject
     {
         /// <summary>
-        /// 当期购买金额。当期购买金=当期购买价-截止到当期已支付租金
+        /// 残值：指租赁期满后，租赁物的预估剩余价值。平台以这个价格 对买断，赔偿等行为进行巡检。
         /// </summary>
         [XmlElement("buyout_price")]
         public string BuyoutPrice { get; set; }

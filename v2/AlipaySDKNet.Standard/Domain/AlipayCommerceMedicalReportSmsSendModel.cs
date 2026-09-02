@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalReportSmsSendModel : AopObject
     {
         /// <summary>
-        /// 证件号码
+        /// 证件号码,若短信模板签名为支付宝,则此项必填
         /// </summary>
         [XmlElement("cert_no")]
         public string CertNo { get; set; }
@@ -34,13 +34,25 @@ namespace Aop.Api.Domain
         public string HospitalName { get; set; }
 
         /// <summary>
+        /// 消息配置
+        /// </summary>
+        [XmlElement("message_config")]
+        public MessageConfig MessageConfig { get; set; }
+
+        /// <summary>
         /// 用户姓名
         /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
 
         /// <summary>
-        /// 手机号码,仅支持中国手机号
+        /// 分发统一业务号。未传时自动生成。
+        /// </summary>
+        [XmlElement("out_order_no")]
+        public string OutOrderNo { get; set; }
+
+        /// <summary>
+        /// 手机号码,仅支持中国手机号,若短信模板签名非支付宝,则此项必填
         /// </summary>
         [XmlElement("phone_number")]
         public string PhoneNumber { get; set; }

@@ -22,6 +22,24 @@ namespace Aop.Api.Domain
         public TuitionMoneyDTO Amount { get; set; }
 
         /// <summary>
+        /// 银行地址
+        /// </summary>
+        [XmlElement("bank_address")]
+        public string BankAddress { get; set; }
+
+        /// <summary>
+        /// 银行名称
+        /// </summary>
+        [XmlElement("bank_name")]
+        public string BankName { get; set; }
+
+        /// <summary>
+        /// 银行所在地，国家代码
+        /// </summary>
+        [XmlElement("bank_region")]
+        public string BankRegion { get; set; }
+
+        /// <summary>
         /// 卡品牌+留学VCC场景
         /// </summary>
         [XmlElement("card_brand")]
@@ -80,5 +98,17 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("quote_price")]
         public string QuotePrice { get; set; }
+
+        /// <summary>
+        /// 一个由9位数字组成的代码，用于识别特定的金融机构。
+        /// </summary>
+        [XmlElement("routing_number")]
+        public string RoutingNumber { get; set; }
+
+        /// <summary>
+        /// eCheck支付方式下的虚拟银行账号
+        /// </summary>
+        [XmlElement("virtual_account_number")]
+        public string VirtualAccountNumber { get; set; }
     }
 }

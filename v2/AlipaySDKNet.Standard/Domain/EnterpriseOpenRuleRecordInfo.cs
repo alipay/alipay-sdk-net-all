@@ -16,6 +16,24 @@ namespace Aop.Api.Domain
         public long BillMonthDay { get; set; }
 
         /// <summary>
+        /// 开票账单范围
+        /// </summary>
+        [XmlElement("bill_scope")]
+        public string BillScope { get; set; }
+
+        /// <summary>
+        /// 组合支付模式
+        /// </summary>
+        [XmlElement("combined_pay_mode")]
+        public string CombinedPayMode { get; set; }
+
+        /// <summary>
+        /// 默认开票类型
+        /// </summary>
+        [XmlElement("default_invoice_kind")]
+        public string DefaultInvoiceKind { get; set; }
+
+        /// <summary>
         /// 开票规则生效日期
         /// </summary>
         [XmlElement("effective_start")]
@@ -38,6 +56,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("gmt_modified")]
         public string GmtModified { get; set; }
+
+        /// <summary>
+        /// 开票规则的发票备注取值规则。NONE表示不使用额度发放说明；QUOTA_ISSUE_DESC表示将因公付额度发放说明作为发票备注。历史规则未配置时按NONE理解。
+        /// </summary>
+        [XmlElement("invoice_remark_value_rule")]
+        public string InvoiceRemarkValueRule { get; set; }
 
         /// <summary>
         /// 开票规则ID

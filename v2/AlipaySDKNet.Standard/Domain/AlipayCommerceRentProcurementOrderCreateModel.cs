@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceRentProcurementOrderCreateModel : AopObject
     {
         /// <summary>
+        /// 当面激活策略（FORCE_INACTIVE / ACTIVE / NONE），不传以商品配置为准
+        /// </summary>
+        [XmlElement("face_activation_strategy")]
+        public string FaceActivationStrategy { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("item_infos")]

@@ -71,6 +71,13 @@ namespace Aop.Api.Domain
         public string InvestPid { get; set; }
 
         /// <summary>
+        /// 商品详细信息。当前只会有单个商品
+        /// </summary>
+        [XmlArray("item_infos")]
+        [XmlArrayItem("rent_goods_detail_info_v_o")]
+        public List<RentGoodsDetailInfoVO> ItemInfos { get; set; }
+
+        /// <summary>
         /// 商家下单APPID
         /// </summary>
         [XmlElement("merchant_app_id")]

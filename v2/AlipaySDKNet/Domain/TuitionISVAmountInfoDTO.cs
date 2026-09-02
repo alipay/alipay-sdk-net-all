@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class TuitionISVAmountInfoDTO : AopObject
     {
         /// <summary>
+        /// 境外手续费结构体
+        /// </summary>
+        [XmlElement("bank_charge_detail")]
+        public BankChargeDTO BankChargeDetail { get; set; }
+
+        /// <summary>
         /// 费用明细
         /// </summary>
         [XmlArray("charge_details")]

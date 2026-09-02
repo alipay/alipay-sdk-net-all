@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string BizId { get; set; }
 
         /// <summary>
+        /// 订单id
+        /// </summary>
+        [XmlElement("order_sale_id")]
+        public string OrderSaleId { get; set; }
+
+        /// <summary>
         /// 收件人姓名
         /// </summary>
         [XmlElement("receiver_name")]

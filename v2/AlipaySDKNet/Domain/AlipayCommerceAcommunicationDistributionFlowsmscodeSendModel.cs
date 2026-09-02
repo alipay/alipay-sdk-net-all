@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public string FirstChannel { get; set; }
 
         /// <summary>
+        /// 固定点位
+        /// </summary>
+        [XmlElement("fixed_position_code")]
+        public string FixedPositionCode { get; set; }
+
+        /// <summary>
         /// 分销商订单号
         /// </summary>
         [XmlElement("inst_order_id")]
@@ -62,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("proxy_order_url")]
         public string ProxyOrderUrl { get; set; }
+
+        /// <summary>
+        /// 报备素材编号
+        /// </summary>
+        [XmlElement("report_materials_no")]
+        public string ReportMaterialsNo { get; set; }
 
         /// <summary>
         /// 请求id

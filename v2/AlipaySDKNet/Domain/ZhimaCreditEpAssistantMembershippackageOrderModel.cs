@@ -30,6 +30,12 @@ namespace Aop.Api.Domain
         public List<string> ExcludeLicenseList { get; set; }
 
         /// <summary>
+        /// 企信侧默认开启营销活动，如购买权益时长满一年送90天，不参与活动要显式设置为false
+        /// </summary>
+        [XmlElement("has_activity")]
+        public bool HasActivity { get; set; }
+
+        /// <summary>
         /// 需要小于或者等于当前权益包的license数量，例如现在有15个license，有3个不需要续约，则需要传入12，同时在exclude_license_list指定不续约的license
         /// </summary>
         [XmlElement("license_num")]

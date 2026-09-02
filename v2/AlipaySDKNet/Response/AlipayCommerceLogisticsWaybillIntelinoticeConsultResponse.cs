@@ -13,5 +13,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("can_intelinotice")]
         public bool CanIntelinotice { get; set; }
+
+        /// <summary>
+        /// 发送短信手机号后四位
+        /// </summary>
+        [XmlElement("sms_number")]
+        public string SmsNumber { get; set; }
     }
 }

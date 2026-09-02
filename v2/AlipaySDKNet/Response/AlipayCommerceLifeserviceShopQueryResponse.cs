@@ -60,6 +60,12 @@ namespace Aop.Api.Response
         public string ShopType { get; set; }
 
         /// <summary>
+        /// 是否展示到店分配，默认为show，仅当预约资源为手艺人时生效
+        /// </summary>
+        [XmlElement("show_shop_assign")]
+        public string ShowShopAssign { get; set; }
+
+        /// <summary>
         /// 门店可预约状态
         /// </summary>
         [XmlElement("status")]

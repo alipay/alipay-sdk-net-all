@@ -9,6 +9,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceEcRecyclinginvoiceCompanyclerkQueryResponse : AopResponse
     {
         /// <summary>
+        /// 营业员确认链接
+        /// </summary>
+        [XmlElement("clerk_auth_url")]
+        public string ClerkAuthUrl { get; set; }
+
+        /// <summary>
         /// 员工名称
         /// </summary>
         [XmlElement("clerk_name")]

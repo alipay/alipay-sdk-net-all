@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayMerchantSolutionRecordQueryResponse : AopResponse
     {
         /// <summary>
+        /// smid不准入原因描述
+        /// </summary>
+        [XmlElement("fail_reason_desc")]
+        public string FailReasonDesc { get; set; }
+
+        /// <summary>
         /// 入参中的查询数据
         /// </summary>
         [XmlArray("record_data")]

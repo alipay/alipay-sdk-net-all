@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("acquisition_method")]
         public string AcquisitionMethod { get; set; }
+
+        /// <summary>
+        /// 历史是否出现申请借款人
+        /// </summary>
+        [XmlElement("applicant_in_transfer_history")]
+        public bool ApplicantInTransferHistory { get; set; }
 
         /// <summary>
         /// 条形编码
@@ -64,6 +71,13 @@ namespace Aop.Api.Domain
         public string ManufactureDate { get; set; }
 
         /// <summary>
+        /// 登记证抵押登记记录
+        /// </summary>
+        [XmlArray("mortgage_info_list")]
+        [XmlArrayItem("carfin_registration_mortgage_info")]
+        public List<CarfinRegistrationMortgageInfo> MortgageInfoList { get; set; }
+
+        /// <summary>
         /// 解除抵押时间
         /// </summary>
         [XmlElement("mortgage_release_date")]
@@ -76,6 +90,12 @@ namespace Aop.Api.Domain
         public string MortgageStatus { get; set; }
 
         /// <summary>
+        /// 抵押对象是否出现典当或个人
+        /// </summary>
+        [XmlElement("mortgagee_has_pawn_or_individual")]
+        public bool MortgageeHasPawnOrIndividual { get; set; }
+
+        /// <summary>
         /// 机动车所有人
         /// </summary>
         [XmlElement("owner")]
@@ -86,6 +106,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("owner_identification_number")]
         public string OwnerIdentificationNumber { get; set; }
+
+        /// <summary>
+        /// 核定载客
+        /// </summary>
+        [XmlElement("passenger_capacity")]
+        public string PassengerCapacity { get; set; }
+
+        /// <summary>
+        /// 个人名下抵押次数
+        /// </summary>
+        [XmlElement("personal_mortgage_count")]
+        public string PersonalMortgageCount { get; set; }
 
         /// <summary>
         /// 登记机关
@@ -104,6 +136,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("transfer_count")]
         public string TransferCount { get; set; }
+
+        /// <summary>
+        /// 登记证转移登记记录
+        /// </summary>
+        [XmlArray("transfer_info_list")]
+        [XmlArrayItem("carfin_registration_transfer_info")]
+        public List<CarfinRegistrationTransferInfo> TransferInfoList { get; set; }
 
         /// <summary>
         /// 使用性质

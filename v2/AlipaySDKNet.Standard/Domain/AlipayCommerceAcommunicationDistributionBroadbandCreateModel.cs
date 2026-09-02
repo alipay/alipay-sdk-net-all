@@ -74,5 +74,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sms_code")]
         public string SmsCode { get; set; }
+
+        /// <summary>
+        /// 供应商PID
+        /// </summary>
+        [XmlElement("supplier_pid")]
+        public string SupplierPid { get; set; }
     }
 }

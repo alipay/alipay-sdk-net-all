@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -74,6 +75,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ppi_order_id")]
         public string PpiOrderId { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("trade_info_list")]
+        [XmlArrayItem("resale_fund_info_v_o")]
+        public List<ResaleFundInfoVO> TradeInfoList { get; set; }
 
         /// <summary>
         /// 支付宝用户的userId。

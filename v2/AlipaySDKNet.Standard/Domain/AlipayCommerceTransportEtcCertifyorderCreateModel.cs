@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string CityCode { get; set; }
 
         /// <summary>
-        /// false:不需要用户上传行驶证图片 true:需要用户上传行驶证图片
+        /// false:不需要用户上传行驶证和身份证图片 true:需要用户上传行驶证和身份证图片
         /// </summary>
         [XmlElement("license_img_required_flag")]
         public bool LicenseImgRequiredFlag { get; set; }

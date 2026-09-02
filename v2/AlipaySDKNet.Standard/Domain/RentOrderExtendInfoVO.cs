@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ec_sign_user_authorized")]
         public string EcSignUserAuthorized { get; set; }
+
+        /// <summary>
+        /// 已上传电子合同
+        /// </summary>
+        [XmlArray("merchant_upload_contracts")]
+        [XmlArrayItem("rent_merchant_upload_contract_v_o")]
+        public List<RentMerchantUploadContractVO> MerchantUploadContracts { get; set; }
 
         /// <summary>
         /// 承诺发货时间

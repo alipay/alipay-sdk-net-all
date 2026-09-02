@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayOfflineProviderDeviceTradeQueryModel : AopObject
     {
         /// <summary>
-        /// 设备sn
+        /// 设备sn，传多个sn时用逗号进行分隔
         /// </summary>
         [XmlElement("device_sn")]
         public string DeviceSn { get; set; }

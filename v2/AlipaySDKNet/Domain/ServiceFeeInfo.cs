@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         public string RelatedBillNo { get; set; }
 
         /// <summary>
+        /// 抽佣结算成功
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
+
+        /// <summary>
         /// 收款方OpenId
         /// </summary>
         [XmlElement("trans_in_open_id")]

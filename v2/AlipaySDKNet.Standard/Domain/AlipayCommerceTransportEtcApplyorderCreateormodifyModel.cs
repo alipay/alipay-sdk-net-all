@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string CarType { get; set; }
 
         /// <summary>
+        /// 合作渠道方对应订单号
+        /// </summary>
+        [XmlElement("channel_order_id")]
+        public string ChannelOrderId { get; set; }
+
+        /// <summary>
         /// 办理人所在地城市编码
         /// </summary>
         [XmlElement("city_code")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Response
     public class ZhimaCreditPeVisaReportQueryResponse : AopResponse
     {
         /// <summary>
+        /// 签证报告生效时间
+        /// </summary>
+        [XmlElement("effect_time")]
+        public string EffectTime { get; set; }
+
+        /// <summary>
         /// 签证报告中对应的姓名拼音
         /// </summary>
         [XmlElement("name_spell")]

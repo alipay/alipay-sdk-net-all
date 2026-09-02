@@ -54,10 +54,23 @@ namespace Aop.Api.Domain
         public List<ExaminationItemVO> Items { get; set; }
 
         /// <summary>
+        /// 订单金额信息
+        /// </summary>
+        [XmlElement("order_amount_info")]
+        public OrderAmountInfo OrderAmountInfo { get; set; }
+
+        /// <summary>
         /// SAAS的订单号
         /// </summary>
         [XmlElement("order_no")]
         public string OrderNo { get; set; }
+
+        /// <summary>
+        /// 就诊人信息
+        /// </summary>
+        [XmlArray("patient_infos")]
+        [XmlArrayItem("patient_info_for_fulfillment_list")]
+        public List<PatientInfoForFulfillmentList> PatientInfos { get; set; }
 
         /// <summary>
         /// 支付信息

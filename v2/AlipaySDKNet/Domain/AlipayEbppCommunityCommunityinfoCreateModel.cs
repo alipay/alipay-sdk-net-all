@@ -108,13 +108,13 @@ namespace Aop.Api.Domain
         public string StreetAdcodeName { get; set; }
 
         /// <summary>
-        /// 中心账单楼房号模式 REMOTE 中心账单户号模式 REMOTE_NO_ROOM 内部H5模式 H5 内部底座模式 SAAS 自运营账单-楼房号 EXTERNAL_BILL_ROOM 自运营账单-仅户号 EXTERNAL_BILL_BILLKEY 备注：1、中心账单楼房号模式会进行用户隐私校验     2、不确定使用哪种方式时请联系对应BD或开发
+        /// 中心账单楼房号模式 REMOTE 中心账单户号模式 REMOTE_NO_ROOM 内部H5模式 H5 内部底座模式 SAAS 自运营账单-楼房号 EXTERNAL_BILL_ROOM 自运营账单-仅户号 EXTERNAL_BILL_BILLKEY 内部小程序外部账单模式  REMOTE_EXTERNAL_BILL 备注：1、中心账单楼房号模式会进行用户隐私校验     2、不确定使用哪种方式时请联系对应BD或开发            3、内部小程序外部账单模式通过SPI调用外部户号校验、账单查询等
         /// </summary>
         [XmlElement("support_type")]
         public string SupportType { get; set; }
 
         /// <summary>
-        /// 业主姓名验证        NAME_VERIFY 业主手机验证        MOBILE_VERIFY 房间户号验证        ROOM_VERIFY(不传 则默认) 业主姓名+手机      NAME_MOBILE_VERIFY
+        /// 业主姓名验证        NAME_VERIFY 业主手机验证        MOBILE_VERIFY 房间户号验证        ROOM_VERIFY(不传 则默认) 业主姓名+手机      NAME_MOBILE_VERIFY 业主手机号外部验证  REMOTE_MOBILE_VERIFY
         /// </summary>
         [XmlElement("verify_type")]
         public string VerifyType { get; set; }

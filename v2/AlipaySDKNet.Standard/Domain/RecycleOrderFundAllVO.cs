@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class RecycleOrderFundAllVO : AopObject
     {
         /// <summary>
+        /// 信用预付资金信息
+        /// </summary>
+        [XmlElement("credit_withdraw_info")]
+        public RecycleOrderPayInfoVO CreditWithdrawInfo { get; set; }
+
+        /// <summary>
         /// 支付信息
         /// </summary>
         [XmlElement("order_pay_info")]

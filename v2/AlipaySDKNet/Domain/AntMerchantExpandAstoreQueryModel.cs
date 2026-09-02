@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AStoreId { get; set; }
 
         /// <summary>
-        /// 外部业务单号,与店铺对应,本期暂时不支持
+        /// 外部业务单号,与店铺对应,本期暂时不支持 当前字段已废弃(经确认查询时不再使用此字段查询(唯一性))
         /// </summary>
         [XmlElement("out_biz_no")]
         public string OutBizNo { get; set; }

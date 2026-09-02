@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// 投放模式，手动投放/自动投放
+        /// </summary>
+        [XmlElement("delivery_mode")]
+        public string DeliveryMode { get; set; }
+
+        /// <summary>
         /// 计划结束投放日期，格式为yyyy-MM-dd，新增或者编辑时有改动必须大于等于今天；结束日期必须大于等于开始日期
         /// </summary>
         [XmlElement("end_date")]

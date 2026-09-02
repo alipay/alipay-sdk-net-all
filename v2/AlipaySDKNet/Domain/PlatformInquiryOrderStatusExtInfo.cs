@@ -182,5 +182,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_end_time")]
         public string ServiceEndTime { get; set; }
+
+        /// <summary>
+        /// 服务预期结束时间
+        /// </summary>
+        [XmlElement("service_expect_end_time")]
+        public string ServiceExpectEndTime { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class CardTemplateUse : AopObject
     {
         /// <summary>
-        /// 日历价格
+        /// 日历价格 当前字段已废弃(动态定价请使用：alipay.commerce.merchantcard.templateprice.set)
         /// </summary>
         [XmlElement("calendar_price")]
         public LifeserviceItemCalendarPrice CalendarPrice { get; set; }
@@ -35,6 +35,18 @@ namespace Aop.Api.Domain
         public long ExpirePeriod { get; set; }
 
         /// <summary>
+        /// 一口价的新客价，单位分。仅单次商品生效，多次商品使用period_price_list里的新客价字段。新客价需是所有价格中最低的价格。
+        /// </summary>
+        [XmlElement("new_customer_price")]
+        public long NewCustomerPrice { get; set; }
+
+        /// <summary>
+        /// 一口价原价，如果设置动态定价则为兜底原价。仅单次商品生效，多次商品使用period_price_list字段
+        /// </summary>
+        [XmlElement("original_price")]
+        public long OriginalPrice { get; set; }
+
+        /// <summary>
         /// 每期价格
         /// </summary>
         [XmlArray("period_price_list")]
@@ -42,7 +54,7 @@ namespace Aop.Api.Domain
         public List<CardPeriodPrice> PeriodPriceList { get; set; }
 
         /// <summary>
-        /// 价格模式。默认阶梯价格
+        /// 价格模式。默认阶梯价格 当前字段已废弃(不限制单一定价模式，动态定价请使用：alipay.commerce.merchantcard.templateprice.set)
         /// </summary>
         [XmlElement("price_mode")]
         public string PriceMode { get; set; }
@@ -58,6 +70,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reservation_url")]
         public string ReservationUrl { get; set; }
+
+        /// <summary>
+        /// 一口价，如果设置动态定价则为兜底售价。仅单次商品生效，多次商品使用period_price_list字段
+        /// </summary>
+        [XmlElement("sale_price")]
+        public long SalePrice { get; set; }
 
         /// <summary>
         /// 是否全部门店

@@ -38,5 +38,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_id")]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// 报告唯一ID
+        /// </summary>
+        [XmlElement("visa_code")]
+        public string VisaCode { get; set; }
     }
 }

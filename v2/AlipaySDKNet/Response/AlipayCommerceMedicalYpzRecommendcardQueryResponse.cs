@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -14,6 +15,19 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("afu_download_card")]
         public YpzAfuDownloadCardOne AfuDownloadCard { get; set; }
+
+        /// <summary>
+        /// 云陪诊云配药卡
+        /// </summary>
+        [XmlElement("cloud_dispense_medicine_card")]
+        public YpzCloudDispenseMedicineCardOne CloudDispenseMedicineCard { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("cloud_dispense_medicine_home_card")]
+        [XmlArrayItem("ypz_cloud_dispense_medicine_home_card_one")]
+        public List<YpzCloudDispenseMedicineHomeCardOne> CloudDispenseMedicineHomeCard { get; set; }
 
         /// <summary>
         /// 投放类型

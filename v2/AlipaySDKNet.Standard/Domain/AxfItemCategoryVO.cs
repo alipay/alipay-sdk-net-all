@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string CategoryStatus { get; set; }
 
         /// <summary>
+        /// 类目级别。如3代表三级类目
+        /// </summary>
+        [XmlElement("level")]
+        public long Level { get; set; }
+
+        /// <summary>
         /// 父类目编码
         /// </summary>
         [XmlElement("parent_category_code")]

@@ -11,25 +11,25 @@ namespace Aop.Api.Domain
     public class AlipayMarketingOrderBatchQueryModel : AopObject
     {
         /// <summary>
-        /// 创建订单的结束时间，格式：yyyyMMdd
+        /// 创建订单的结束时间，格式：yyyyMMdd或yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("create_time_end")]
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// 创建订单的开始时间，格式：yyyyMMdd
+        /// 创建订单的开始时间，格式：yyyyMMdd或yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("create_time_start")]
         public string CreateTimeStart { get; set; }
 
         /// <summary>
-        /// 订单最近一次更新结束时间，格式：yyyyMMdd 当前字段已废弃(不支持更新时间查询，废弃)
+        /// 订单最近一次更新结束时间，格式：yyyyMMdd或yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("modify_time_end")]
         public string ModifyTimeEnd { get; set; }
 
         /// <summary>
-        /// 订单最近一次更新开始时间，格式：yyyyMMdd 当前字段已废弃(不支持更新时间查询，废弃)
+        /// 订单最近一次更新开始时间，格式：yyyyMMdd或yyyy-MM-dd HH:mm:ss
         /// </summary>
         [XmlElement("modify_time_start")]
         public string ModifyTimeStart { get; set; }

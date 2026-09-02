@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string AlertReason { get; set; }
 
         /// <summary>
+        /// 取消原因
+        /// </summary>
+        [XmlElement("cancel_reason")]
+        public string CancelReason { get; set; }
+
+        /// <summary>
         /// 快递员信息
         /// </summary>
         [XmlElement("courier_info")]
@@ -52,6 +58,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("out_express_no")]
         public string OutExpressNo { get; set; }
+
+        /// <summary>
+        /// 是否超时自动揽收
+        /// </summary>
+        [XmlElement("overdue_auto_pickup")]
+        public bool OverdueAutoPickup { get; set; }
 
         /// <summary>
         /// 快递状态

@@ -28,10 +28,34 @@ namespace Aop.Api.Domain
         public long BillMonthDay { get; set; }
 
         /// <summary>
+        /// 开票账单范围
+        /// </summary>
+        [XmlElement("bill_scope")]
+        public string BillScope { get; set; }
+
+        /// <summary>
+        /// 组合支付模式
+        /// </summary>
+        [XmlElement("combined_pay_mode")]
+        public string CombinedPayMode { get; set; }
+
+        /// <summary>
+        /// 默认开票类型
+        /// </summary>
+        [XmlElement("default_invoice_kind")]
+        public string DefaultInvoiceKind { get; set; }
+
+        /// <summary>
         /// 企业ID
         /// </summary>
         [XmlElement("enterprise_id")]
         public string EnterpriseId { get; set; }
+
+        /// <summary>
+        /// 发票备注取值规则。NONE表示不使用额度发放说明；QUOTA_ISSUE_DESC表示将因公付额度发放说明作为发票备注。不传、传null或空字符串时默认NONE。
+        /// </summary>
+        [XmlElement("invoice_remark_value_rule")]
+        public string InvoiceRemarkValueRule { get; set; }
 
         /// <summary>
         /// 开票规则名称

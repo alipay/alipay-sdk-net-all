@@ -85,6 +85,12 @@ namespace Aop.Api.Domain
         public string Cover { get; set; }
 
         /// <summary>
+        /// 证件过期时间,当是神券团购门店（ext_infos传了biz_source=APLUS_SHOP）并且license_type=3118或者A521时，必填
+        /// </summary>
+        [XmlElement("expire_time")]
+        public string ExpireTime { get; set; }
+
+        /// <summary>
         /// 扩展信息列表。key值需要向对应行业的bd进行申请。传入本项时，按key进行更新或补充。 如果是针对神券团购门店的操作，该值必传，且无需向bd申请。
         /// </summary>
         [XmlArray("ext_infos")]

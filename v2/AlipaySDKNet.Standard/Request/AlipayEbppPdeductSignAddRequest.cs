@@ -1,4 +1,5 @@
 using System;
+using Aop.Api.Domain;
 using System.Collections.Generic;
 using Aop.Api.Response;
 
@@ -93,6 +94,11 @@ namespace Aop.Api.Request
         /// 签约到期时间。空表示无限期，一期固定传空。
         /// </summary>
         public string SignExpireDate { get; set; }
+
+        /// <summary>
+        /// 用户设置的优先扣款渠道
+        /// </summary>
+        public List<SpecifiedSortChannelParam> SpecifiedSortChannels { get; set; }
 
         /// <summary>
         /// 业务子类型。业务子类型是业务类型的下一级概念。枚举支持： *WATER：缴水费。 *ELECTRIC：缴电费。 *GAS：缴燃气费。 *COMMUN：缴固话宽带费。 *CATV：缴有线电视费。 *TRAFFIC：缴交通罚款。 *WUYE：缴物业费。 *RC：定期还车贷代扣。 *RH：定期还房贷代扣。 *RR：定期还房租代扣。 *RN：定期还网贷代扣。 *CZ：手机充值代扣。 *CAR：车险。 *LIFE：寿险。 *HEALTH：健康险。 例如：WATER表示JF下面的水费。
@@ -206,6 +212,7 @@ namespace Aop.Api.Request
             parameters.Add("pay_password_token", this.PayPasswordToken);
             parameters.Add("pid", this.Pid);
             parameters.Add("sign_expire_date", this.SignExpireDate);
+            parameters.Add("specified_sort_channels", this.SpecifiedSortChannels);
             parameters.Add("sub_biz_type", this.SubBizType);
             parameters.Add("user_id", this.UserId);
             if(udfParams != null) 

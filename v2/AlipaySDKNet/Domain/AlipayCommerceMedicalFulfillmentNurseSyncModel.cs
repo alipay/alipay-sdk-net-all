@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalFulfillmentNurseSyncModel : AopObject
     {
         /// <summary>
+        /// 预计出报告结束时间，示例：2026-06-25 12:30
+        /// </summary>
+        [XmlElement("expected_report_end_time")]
+        public string ExpectedReportEndTime { get; set; }
+
+        /// <summary>
+        /// 预计出报告开始时间，示例：2026-06-25 12:00
+        /// </summary>
+        [XmlElement("expected_report_start_time")]
+        public string ExpectedReportStartTime { get; set; }
+
+        /// <summary>
         /// 履约单ID
         /// </summary>
         [XmlElement("fulfillment_id")]
@@ -68,5 +80,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("type")]
         public string Type { get; set; }
+
+        /// <summary>
+        /// 预约码，示例：5566
+        /// </summary>
+        [XmlElement("verify_code")]
+        public string VerifyCode { get; set; }
     }
 }

@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ActivityUserStartTime { get; set; }
 
         /// <summary>
+        /// PENDING-未生效，ACTIVE-生效中，EXPIRED-已过期
+        /// </summary>
+        [XmlElement("effective_status")]
+        public string EffectiveStatus { get; set; }
+
+        /// <summary>
         /// 创建时间
         /// </summary>
         [XmlElement("gmt_create")]

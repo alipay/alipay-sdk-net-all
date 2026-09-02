@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string CurrentC { get; set; }
 
         /// <summary>
-        /// 累计电费
+        /// 累计充电电费，单位：元，两位小数
         /// </summary>
         [XmlElement("elec_money")]
         public string ElecMoney { get; set; }
@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string SampleTime { get; set; }
 
         /// <summary>
-        /// 电池剩余电量
+        /// 车辆电池剩余电量，单位：%
         /// </summary>
         [XmlElement("soc")]
         public string Soc { get; set; }

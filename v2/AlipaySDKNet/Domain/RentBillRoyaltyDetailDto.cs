@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string BizOrderId { get; set; }
 
         /// <summary>
+        /// 代偿触发的场景下，balance_account 余额户代偿、compensation_account 安全发代偿，正常支付分账则不会有这个值
+        /// </summary>
+        [XmlElement("compensation_fund_channel")]
+        public string CompensationFundChannel { get; set; }
+
+        /// <summary>
         /// 分账资方pid
         /// </summary>
         [XmlElement("invest_id")]

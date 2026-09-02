@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ItemTotalAmount { get; set; }
 
         /// <summary>
+        /// 商品单位
+        /// </summary>
+        [XmlElement("item_unit")]
+        public string ItemUnit { get; set; }
+
+        /// <summary>
         /// 单价（元，整数最长七位，小数最长八位）
         /// </summary>
         [XmlElement("item_unit_amount")]

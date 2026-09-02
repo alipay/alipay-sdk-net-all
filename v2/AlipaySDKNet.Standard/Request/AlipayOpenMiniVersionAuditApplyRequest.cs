@@ -62,6 +62,11 @@ namespace Aop.Api.Request
         public string BundleId { get; set; }
 
         /// <summary>
+        /// 第八张特殊资质图片文件，不能超过4MB，最大宽度 2160px，最大高度3840px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写营业执照信息。
+        /// </summary>
+        public FileItem EighthSpecialLicensePic { get; set; }
+
+        /// <summary>
         /// 第五张营业执照照片，不能超过 4MB，最大宽度 2160 px，最大高度 3840 px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写营业执照信息。
         /// </summary>
         public FileItem FifthLicensePic { get; set; }
@@ -70,6 +75,11 @@ namespace Aop.Api.Request
         /// 小程序第五张应用截图。 截图大小不能超过 4MB，最大宽度 2160px，最大高度3840px。图片格式仅支持 png,jpg格式。
         /// </summary>
         public FileItem FifthScreenShot { get; set; }
+
+        /// <summary>
+        /// 第五张特殊资质图片文件，不能超过4MB，最大宽度 2160px，最大高度3840px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写营业执照信息。
+        /// </summary>
+        public FileItem FifthSpecialLicensePic { get; set; }
 
         /// <summary>
         /// 第一张营业执照照片，不能超过 4MB，最大宽度 2160 px，最大高度 3840 px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写营业执照信息。
@@ -97,6 +107,11 @@ namespace Aop.Api.Request
         public FileItem FourthScreenShot { get; set; }
 
         /// <summary>
+        /// 第四张特殊资质图片文件，不能超过4MB，最大宽度 2160px，最大高度3840px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写营业执照信息。
+        /// </summary>
+        public FileItem FourthSpecialLicensePic { get; set; }
+
+        /// <summary>
         /// 营业执照名称，参照<a href="https://opendocs.alipay.com/mini/operation/material">https://opendocs.alipay.com/mini/operation/material</a>,要求填写营业执照信息。
         /// </summary>
         public string LicenseName { get; set; }
@@ -120,6 +135,11 @@ namespace Aop.Api.Request
         /// 新小程序前台类目，格式为 第一个一级类目_第一个二级类目;第二个一级类目_第二个二级类目_第二个三级类目，详细类目可以通过 <a href="https://docs.open.alipay.com/api_49/alipay.open.mini.category.query">https://docs.open.alipay.com/api_49/alipay.open.mini.category.query</a> 接口查询mini_category_list。
         /// </summary>
         public string MiniCategoryIds { get; set; }
+
+        /// <summary>
+        /// 第九张特殊资质图片文件，不能超过4MB，最大宽度 2160px，最大高度3840px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写营业执照信息。
+        /// </summary>
+        public FileItem NinthSpecialLicensePic { get; set; }
 
         /// <summary>
         /// 门头照，不能超过 4MB，最大宽度 2160 px，最大高度 3840 px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写门头照信息。
@@ -162,9 +182,24 @@ namespace Aop.Api.Request
         public List<RegionInfo> ServiceRegionInfo { get; set; }
 
         /// <summary>
+        /// 第七张特殊资质图片文件，不能超过4MB，最大宽度 2160px，最大高度3840px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写营业执照信息。
+        /// </summary>
+        public FileItem SeventhSpecialLicensePic { get; set; }
+
+        /// <summary>
+        /// 第六张特殊资质图片文件，不能超过4MB，最大宽度 2160px，最大高度3840px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写营业执照信息。
+        /// </summary>
+        public FileItem SixthSpecialLicensePic { get; set; }
+
+        /// <summary>
         /// 如果有审核加急权益，是否使用审核加急权益加速审核： 加速（默认）：true 不加速：false
         /// </summary>
         public string SpeedUp { get; set; }
+
+        /// <summary>
+        /// 第十张特殊资质图片文件，不能超过4MB，最大宽度 2160px，最大高度3840px。图片格式仅支持 png,jpg格式。 参照<a href="https://opendocs.alipay.com/mini/operation/material ">https://opendocs.alipay.com/mini/operation/material</a>要求填写营业执照信息。
+        /// </summary>
+        public FileItem TenthSpecialLicensePic { get; set; }
 
         /// <summary>
         /// 测试账号，是否需要填写请参见<a href="https://opendocs.alipay.com/mini/operation/standard/case/akxg6r#3.%20%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9%E6%8F%90%E4%BA%A4%E4%B8%8D%E5%AE%8C%E6%95%B4">https://opendocs.alipay.com/mini/operation/standard/case/akxg6r#3.%20%E6%B5%8B%E8%AF%95%E5%86%85%E5%AE%B9%E6%8F%90%E4%BA%A4%E4%B8%8D%E5%AE%8C%E6%95%B4</a>
@@ -333,17 +368,24 @@ namespace Aop.Api.Request
         {
             IDictionary<string, FileItem> parameters = new Dictionary<string, FileItem>();
             parameters.Add("app_logo", this.AppLogo);
+            parameters.Add("eighth_special_license_pic", this.EighthSpecialLicensePic);
             parameters.Add("fifth_license_pic", this.FifthLicensePic);
             parameters.Add("fifth_screen_shot", this.FifthScreenShot);
+            parameters.Add("fifth_special_license_pic", this.FifthSpecialLicensePic);
             parameters.Add("first_license_pic", this.FirstLicensePic);
             parameters.Add("first_screen_shot", this.FirstScreenShot);
             parameters.Add("first_special_license_pic", this.FirstSpecialLicensePic);
             parameters.Add("fourth_license_pic", this.FourthLicensePic);
             parameters.Add("fourth_screen_shot", this.FourthScreenShot);
+            parameters.Add("fourth_special_license_pic", this.FourthSpecialLicensePic);
+            parameters.Add("ninth_special_license_pic", this.NinthSpecialLicensePic);
             parameters.Add("out_door_pic", this.OutDoorPic);
             parameters.Add("second_license_pic", this.SecondLicensePic);
             parameters.Add("second_screen_shot", this.SecondScreenShot);
             parameters.Add("second_special_license_pic", this.SecondSpecialLicensePic);
+            parameters.Add("seventh_special_license_pic", this.SeventhSpecialLicensePic);
+            parameters.Add("sixth_special_license_pic", this.SixthSpecialLicensePic);
+            parameters.Add("tenth_special_license_pic", this.TenthSpecialLicensePic);
             parameters.Add("test_file_name", this.TestFileName);
             parameters.Add("third_license_pic", this.ThirdLicensePic);
             parameters.Add("third_screen_shot", this.ThirdScreenShot);

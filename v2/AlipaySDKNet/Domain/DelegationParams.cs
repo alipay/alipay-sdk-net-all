@@ -16,10 +16,22 @@ namespace Aop.Api.Domain
         public string DelegationDesc { get; set; }
 
         /// <summary>
+        /// 委托业务场景
+        /// </summary>
+        [XmlElement("delegation_scene")]
+        public string DelegationScene { get; set; }
+
+        /// <summary>
         /// 描述代买委托
         /// </summary>
         [XmlElement("delegation_tag")]
         public string DelegationTag { get; set; }
+
+        /// <summary>
+        /// 代理授权周期任务参数
+        /// </summary>
+        [XmlElement("delegation_task_params")]
+        public DelegationTaskParams DelegationTaskParams { get; set; }
 
         /// <summary>
         /// 外部商户AI付代买委托id，用于委托申请成功后区分不同的委托任务
@@ -28,10 +40,34 @@ namespace Aop.Api.Domain
         public string ExternalDelegationId { get; set; }
 
         /// <summary>
+        /// 外部交易号列表
+        /// </summary>
+        [XmlElement("external_tradeno_list")]
+        public string ExternalTradenoList { get; set; }
+
+        /// <summary>
+        /// 首次扣款时间
+        /// </summary>
+        [XmlElement("first_deduct_time")]
+        public string FirstDeductTime { get; set; }
+
+        /// <summary>
+        /// 商品 SKU 信息
+        /// </summary>
+        [XmlElement("goods_sku_info")]
+        public string GoodsSkuInfo { get; set; }
+
+        /// <summary>
         /// AI付代买委托总限额，币种为人民币，单位为元
         /// </summary>
         [XmlElement("max_total_amount")]
         public string MaxTotalAmount { get; set; }
+
+        /// <summary>
+        /// AI委托授权单次限额，币种为人民币，金额为元
+        /// </summary>
+        [XmlElement("quota_amount")]
+        public string QuotaAmount { get; set; }
 
         /// <summary>
         /// AI付代买委托总次数

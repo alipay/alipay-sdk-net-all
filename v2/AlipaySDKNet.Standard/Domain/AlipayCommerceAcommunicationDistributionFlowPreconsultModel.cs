@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceAcommunicationDistributionFlowPreconsultModel : AopObject
     {
         /// <summary>
+        /// 触达渠道
+        /// </summary>
+        [XmlElement("access_channel")]
+        public string AccessChannel { get; set; }
+
+        /// <summary>
         /// 支付宝的userId
         /// </summary>
         [XmlElement("alipay_user_id")]
@@ -20,6 +26,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("encrypted_mobile")]
         public string EncryptedMobile { get; set; }
+
+        /// <summary>
+        /// 一级投流平台
+        /// </summary>
+        [XmlElement("first_channel")]
+        public string FirstChannel { get; set; }
+
+        /// <summary>
+        /// 固定点位
+        /// </summary>
+        [XmlElement("fixed_position_code")]
+        public string FixedPositionCode { get; set; }
 
         /// <summary>
         /// 商品id
@@ -40,10 +58,28 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 订购页URL
+        /// </summary>
+        [XmlElement("proxy_order_url")]
+        public string ProxyOrderUrl { get; set; }
+
+        /// <summary>
+        /// 报备素材编号
+        /// </summary>
+        [XmlElement("report_materials_no")]
+        public string ReportMaterialsNo { get; set; }
+
+        /// <summary>
         /// 请求号
         /// </summary>
         [XmlElement("request_id")]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// 二级投流平台
+        /// </summary>
+        [XmlElement("second_channel")]
+        public string SecondChannel { get; set; }
 
         /// <summary>
         /// 目标账号

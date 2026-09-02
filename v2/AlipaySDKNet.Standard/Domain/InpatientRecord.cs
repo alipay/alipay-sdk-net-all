@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class InpatientRecord : AopObject
     {
         /// <summary>
+        /// 入院情况信息列表
+        /// </summary>
+        [XmlElement("admission_info")]
+        public AdmissionInfo AdmissionInfo { get; set; }
+
+        /// <summary>
         /// 数据唯一标识，用于去重
         /// </summary>
         [XmlElement("data_id")]
@@ -32,6 +38,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("discharge_date")]
         public string DischargeDate { get; set; }
+
+        /// <summary>
+        /// 出院小结
+        /// </summary>
+        [XmlElement("discharge_info")]
+        public DischargeInfo DischargeInfo { get; set; }
 
         /// <summary>
         /// 就诊医院
@@ -74,6 +86,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("traditional_chinese_medicine_diagnosis")]
         public string TraditionalChineseMedicineDiagnosis { get; set; }
+
+        /// <summary>
+        /// 门诊类型 中医（CM）/西医（WM）
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
 
         /// <summary>
         /// 入院途径、入院诊断名称

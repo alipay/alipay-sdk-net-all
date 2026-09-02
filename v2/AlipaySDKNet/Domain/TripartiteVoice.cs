@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -104,6 +105,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("reason")]
         public string Reason { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("source_url")]
+        [XmlArrayItem("string")]
+        public List<string> SourceUrl { get; set; }
 
         /// <summary>
         /// 客诉标题

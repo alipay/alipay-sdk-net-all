@@ -11,6 +11,12 @@ namespace Aop.Api.Response
     public class AlipayCommerceEcRecyclinginvoiceOrderQueryResponse : AopResponse
     {
         /// <summary>
+        /// []
+        /// </summary>
+        [XmlElement("biz_transfer_list")]
+        public RecyclingInvoiceBizTransfer BizTransferList { get; set; }
+
+        /// <summary>
         /// 收款即开票页面支付宝URL（自然人端） 在支付宝里打开的自然人缴税并收款页面，可从企业（商户）/服务商自有APP/小程序页面打开 供应商ID存在值时返回 未安装支付宝或使用受限目标容器时可能无法打开
         /// </summary>
         [XmlElement("collection_invoice_page_alipay_url")]
@@ -138,6 +144,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("proxy_seller_invoice_page_url")]
         public string ProxySellerInvoicePageUrl { get; set; }
+
+        /// <summary>
+        /// 收款方式
+        /// </summary>
+        [XmlElement("received_method")]
+        public string ReceivedMethod { get; set; }
 
         /// <summary>
         /// 卖家名称

@@ -104,5 +104,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("sign_path")]
         public string SignPath { get; set; }
+
+        /// <summary>
+        /// 签约路径审批通过时间
+        /// </summary>
+        [XmlElement("sign_path_approval_pass_time")]
+        public string SignPathApprovalPassTime { get; set; }
     }
 }

@@ -28,6 +28,18 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 订单信息
+        /// </summary>
+        [XmlElement("order_biz_info")]
+        public OrderBizInfo OrderBizInfo { get; set; }
+
+        /// <summary>
+        /// 服务包订单号
+        /// </summary>
+        [XmlElement("service_package_order_no")]
+        public string ServicePackageOrderNo { get; set; }
+
+        /// <summary>
         /// SAAS订单ID
         /// </summary>
         [XmlElement("trade_order_id")]

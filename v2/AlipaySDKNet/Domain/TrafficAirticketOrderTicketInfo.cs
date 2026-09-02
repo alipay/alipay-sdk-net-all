@@ -114,6 +114,18 @@ namespace Aop.Api.Domain
         public string StatusDesc { get; set; }
 
         /// <summary>
+        /// 机票燃油费用，币种：人民币，单位：元
+        /// </summary>
+        [XmlElement("ticket_fuel_cost")]
+        public string TicketFuelCost { get; set; }
+
+        /// <summary>
+        /// 机票机建费用，币种：人民币，单位：元
+        /// </summary>
+        [XmlElement("ticket_infrastructure_cost")]
+        public string TicketInfrastructureCost { get; set; }
+
+        /// <summary>
         /// 机票号
         /// </summary>
         [XmlElement("ticket_no")]
@@ -124,6 +136,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("ticket_order")]
         public long TicketOrder { get; set; }
+
+        /// <summary>
+        /// 机票的裸票价格，币种：人民币，单位：元
+        /// </summary>
+        [XmlElement("ticket_raw_price")]
+        public string TicketRawPrice { get; set; }
 
         /// <summary>
         /// 机票类型

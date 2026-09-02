@@ -114,6 +114,12 @@ namespace Aop.Api.Domain
         public string StoreCode { get; set; }
 
         /// <summary>
+        /// 门店ID
+        /// </summary>
+        [XmlElement("store_id")]
+        public long StoreId { get; set; }
+
+        /// <summary>
         /// 门店LOGOURL
         /// </summary>
         [XmlElement("store_logo")]

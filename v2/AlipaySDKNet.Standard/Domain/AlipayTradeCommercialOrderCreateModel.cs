@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string InitiatorType { get; set; }
 
         /// <summary>
+        /// 商户可通过此字段进行信息的自定义传参，生效后不可修改，将在全链路通知或查询中返回
+        /// </summary>
+        [XmlElement("metadata")]
+        public string Metadata { get; set; }
+
+        /// <summary>
         /// 订单金额（单位：分），灵活定价模式下必填
         /// </summary>
         [XmlElement("order_amount")]

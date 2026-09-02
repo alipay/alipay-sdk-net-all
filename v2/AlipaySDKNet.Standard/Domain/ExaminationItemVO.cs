@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AmountItem { get; set; }
 
         /// <summary>
+        /// 组合商品标记，0：常规 1：组合
+        /// </summary>
+        [XmlElement("combine_item")]
+        public long CombineItem { get; set; }
+
+        /// <summary>
         /// 耗材价格，单位：元。币种：人民币
         /// </summary>
         [XmlElement("consumable_amount")]
@@ -40,10 +46,22 @@ namespace Aop.Api.Domain
         public string DrugAmount { get; set; }
 
         /// <summary>
+        /// 子订单ID
+        /// </summary>
+        [XmlElement("id")]
+        public long Id { get; set; }
+
+        /// <summary>
         /// 商家的商品店内码，对应商品接口中的sku_code
         /// </summary>
         [XmlElement("item_code")]
         public string ItemCode { get; set; }
+
+        /// <summary>
+        /// 父单ID
+        /// </summary>
+        [XmlElement("parent_id")]
+        public long ParentId { get; set; }
 
         /// <summary>
         /// 商品单价，单位：元。币种：人民币

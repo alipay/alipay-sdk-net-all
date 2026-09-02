@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CourierPhone { get; set; }
 
         /// <summary>
+        /// 快递公司
+        /// </summary>
+        [XmlElement("express_org_name")]
+        public string ExpressOrgName { get; set; }
+
+        /// <summary>
         /// 寄件人信息
         /// </summary>
         [XmlElement("sender_info")]

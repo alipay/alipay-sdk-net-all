@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string IdentityResultSkipUrl { get; set; }
 
         /// <summary>
+        /// 表示在商户下已经发起过验证的用户唯一标志，如果用户已经发起过验证，那么这个标志会相同返回
+        /// </summary>
+        [XmlElement("merchant_identity_id")]
+        public string MerchantIdentityId { get; set; }
+
+        /// <summary>
         /// 蚂蚁统一会员ID
         /// </summary>
         [XmlElement("open_id")]

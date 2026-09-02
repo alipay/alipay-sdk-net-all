@@ -46,7 +46,13 @@ namespace Aop.Api.Domain
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// 制品大小
+        /// 制品文件SHA256指纹
+        /// </summary>
+        [XmlElement("sha_256")]
+        public string Sha256 { get; set; }
+
+        /// <summary>
+        /// 制品大小，默认单位为Byte
         /// </summary>
         [XmlElement("size")]
         public string Size { get; set; }

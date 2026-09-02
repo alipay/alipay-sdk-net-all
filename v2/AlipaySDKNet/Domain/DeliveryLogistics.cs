@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class DeliveryLogistics : AopObject
     {
         /// <summary>
-        /// WAIT_DELIVER:待发货，DELIVERED:已发货
+        /// ALREADY_DELIVER:已发货，RECEIVED:已签收，SIGN_FAILED:签收失败
         /// </summary>
         [XmlElement("delivery_status")]
         public string DeliveryStatus { get; set; }
@@ -32,5 +32,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("express_no")]
         public string ExpressNo { get; set; }
+
+        /// <summary>
+        /// 物流轨迹查看页面的跳转地址
+        /// </summary>
+        [XmlElement("jump_url")]
+        public string JumpUrl { get; set; }
     }
 }

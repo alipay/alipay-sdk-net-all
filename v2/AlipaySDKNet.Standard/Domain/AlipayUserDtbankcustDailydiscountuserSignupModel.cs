@@ -22,6 +22,18 @@ namespace Aop.Api.Domain
         public string ActivityId { get; set; }
 
         /// <summary>
+        /// 定主体appId
+        /// </summary>
+        [XmlElement("daily_discount_app_id_specify")]
+        public string DailyDiscountAppIdSpecify { get; set; }
+
+        /// <summary>
+        /// 用户在指定主体appId对应的openId
+        /// </summary>
+        [XmlElement("daily_discount_open_id_specify")]
+        public string DailyDiscountOpenIdSpecify { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]

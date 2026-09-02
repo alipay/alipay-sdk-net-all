@@ -252,6 +252,12 @@ namespace Aop.Api.Domain
         public bool SignedOrderAgreement { get; set; }
 
         /// <summary>
+        /// 资金卡子户号
+        /// </summary>
+        [XmlElement("sub_account_id")]
+        public string SubAccountId { get; set; }
+
+        /// <summary>
         /// 总期数(次数)
         /// </summary>
         [XmlElement("total_count")]
@@ -304,5 +310,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_phone")]
         public string UserPhone { get; set; }
+
+        /// <summary>
+        /// 金额卡制卡时使用的直付通二级商户号列表
+        /// </summary>
+        [XmlArray("zft_smid_list")]
+        [XmlArrayItem("string")]
+        public List<string> ZftSmidList { get; set; }
     }
 }

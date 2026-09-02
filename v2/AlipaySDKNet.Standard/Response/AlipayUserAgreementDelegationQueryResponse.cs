@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string DelegationId { get; set; }
 
         /// <summary>
+        /// 委托场景
+        /// </summary>
+        [XmlElement("delegation_scene")]
+        public string DelegationScene { get; set; }
+
+        /// <summary>
         /// 代买委托场景，与传入值相同
         /// </summary>
         [XmlElement("delegation_tag")]
@@ -37,6 +43,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("max_total_amount")]
         public string MaxTotalAmount { get; set; }
+
+        /// <summary>
+        /// 单次支付限额，币种人民币，单位为元
+        /// </summary>
+        [XmlElement("quota_amount")]
+        public string QuotaAmount { get; set; }
 
         /// <summary>
         /// 剩余可用金额，单位元，币种人民币

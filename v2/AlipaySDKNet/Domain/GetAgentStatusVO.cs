@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class GetAgentStatusVO : AopObject
     {
         /// <summary>
+        /// 智能体id，开启了ai医生时必填
+        /// </summary>
+        [XmlElement("agent_id")]
+        public string AgentId { get; set; }
+
+        /// <summary>
         /// 该医生开通或者升级了ai医生：true,没有开通或者升级：false
         /// </summary>
         [XmlElement("ai_assistant_opened_status")]

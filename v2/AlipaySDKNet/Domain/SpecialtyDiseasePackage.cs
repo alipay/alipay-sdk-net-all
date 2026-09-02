@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -14,6 +15,19 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("fulfillment_valid_days")]
         public long FulfillmentValidDays { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("items")]
+        [XmlArrayItem("right_info")]
+        public List<RightInfo> Items { get; set; }
+
+        /// <summary>
+        /// 服务包订单状态
+        /// </summary>
+        [XmlElement("order_status")]
+        public long OrderStatus { get; set; }
 
         /// <summary>
         /// 服务包描述

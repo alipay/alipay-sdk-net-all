@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalInsurancePolicyinfoSyncModel : AopObject
     {
         /// <summary>
+        /// 蚂蚁保单号
+        /// </summary>
+        [XmlElement("ant_policy_no")]
+        public string AntPolicyNo { get; set; }
+
+        /// <summary>
         /// 保司类型
         /// </summary>
         [XmlElement("company_type")]
@@ -103,6 +109,12 @@ namespace Aop.Api.Domain
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 机构代码
+        /// </summary>
+        [XmlElement("organization_code")]
+        public string OrganizationCode { get; set; }
+
+        /// <summary>
         /// 支付时间  YYYY-MM-DD HH:MM:SS （新增必填）
         /// </summary>
         [XmlElement("pay_time")]
@@ -162,6 +174,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_scheme_code")]
         public string ProductSchemeCode { get; set; }
+
+        /// <summary>
+        /// 销售方式
+        /// </summary>
+        [XmlElement("sales_method")]
+        public string SalesMethod { get; set; }
 
         /// <summary>
         /// 加油包场景会有主子保单

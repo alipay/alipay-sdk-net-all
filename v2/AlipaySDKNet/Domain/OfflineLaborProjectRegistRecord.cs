@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public bool Certified { get; set; }
 
         /// <summary>
+        /// 准驾车型+初次领证日期+有效期;没有有效的驾驶证信息返回：暂无数据
+        /// </summary>
+        [XmlElement("driving_license")]
+        public string DrivingLicense { get; set; }
+
+        /// <summary>
         /// 人脸核验状态
         /// </summary>
         [XmlElement("face_auth_status")]
@@ -128,5 +134,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("user_name")]
         public string UserName { get; set; }
+
+        /// <summary>
+        /// 行驶证最多显示三条数据；没有有效的行驶证信息返回：暂无数据
+        /// </summary>
+        [XmlElement("vehicle_registration_certificate")]
+        public string VehicleRegistrationCertificate { get; set; }
     }
 }

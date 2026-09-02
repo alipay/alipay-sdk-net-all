@@ -18,6 +18,12 @@ namespace Aop.Api.Domain
         public List<InqueryDoctorStatusData> DoctorStatusList { get; set; }
 
         /// <summary>
+        /// 服务商编码
+        /// </summary>
+        [XmlElement("isv_code")]
+        public string IsvCode { get; set; }
+
+        /// <summary>
         /// 问诊平台编码
         /// </summary>
         [XmlElement("platform_code")]

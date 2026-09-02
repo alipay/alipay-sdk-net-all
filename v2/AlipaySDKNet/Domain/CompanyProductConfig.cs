@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Aop.Api.Domain
 {
@@ -9,6 +10,13 @@ namespace Aop.Api.Domain
     [Serializable]
     public class CompanyProductConfig : AopObject
     {
+        /// <summary>
+        /// 银行卡收款月度额度（最近两个月）
+        /// </summary>
+        [XmlArray("bank_quota_list")]
+        [XmlArrayItem("bank_quota_result")]
+        public List<BankQuotaResult> BankQuotaList { get; set; }
+
         /// <summary>
         /// 字段为Y时，扫码关联的订单在自然人确认后，会邀约自然人成为供应商，前提自然人非当前企业的供应商 字段默认为N
         /// </summary>
@@ -20,6 +28,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("invoice_kind")]
         public string InvoiceKind { get; set; }
+
+        /// <summary>
+        /// 是否允许自然人收款到银行卡
+        /// </summary>
+        [XmlElement("natural_person_bankcard_receive_status")]
+        public string NaturalPersonBankcardReceiveStatus { get; set; }
 
         /// <summary>
         /// 启用订单审核

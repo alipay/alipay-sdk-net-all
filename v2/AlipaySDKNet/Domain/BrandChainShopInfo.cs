@@ -48,6 +48,12 @@ namespace Aop.Api.Domain
         public string DistrictCode { get; set; }
 
         /// <summary>
+        /// 店铺内景照图片，最小5KB，最大5M（暂不限制图片宽高），图片格式必须为：png、bmp、gif、jpg、jpeg。 传入使用 alipay.open.file.upload接口上传图片获取的file_id。
+        /// </summary>
+        [XmlElement("interior_image")]
+        public string InteriorImage { get; set; }
+
+        /// <summary>
         /// 店铺门头照图片，最小5KB，最大5M（暂不限制图片宽高），图片格式必须为：png、bmp、gif、jpg、jpeg。 传入使用 alipay.open.file.upload接口上传图片获取的file_id。
         /// </summary>
         [XmlElement("out_door_images")]

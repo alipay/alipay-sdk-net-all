@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Amount { get; set; }
 
         /// <summary>
-        /// 资产份额
+        /// 资产份额，单位元
         /// </summary>
         [XmlElement("asset_amount")]
         public string AssetAmount { get; set; }

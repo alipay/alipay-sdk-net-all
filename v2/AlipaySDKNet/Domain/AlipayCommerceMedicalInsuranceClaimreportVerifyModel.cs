@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalInsuranceClaimreportVerifyModel : AopObject
     {
         /// <summary>
+        /// 核对场景字段。
+        /// </summary>
+        [XmlElement("check_scene")]
+        public string CheckScene { get; set; }
+
+        /// <summary>
         /// 密钥，加密时使用
         /// </summary>
         [XmlElement("secret_key")]
