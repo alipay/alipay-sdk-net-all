@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public long PageSize { get; set; }
 
         /// <summary>
-        /// 动态价格模式：2为普通日历价，3为区域价，4为门店价。
+        /// 动态价格模式：2为普通日历价，3为区域价，4为门店价，5为场地价。
         /// </summary>
         [XmlElement("price_mode")]
         public string PriceMode { get; set; }
@@ -50,6 +50,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("province_code")]
         public string ProvinceCode { get; set; }
+
+        /// <summary>
+        /// 场地价查询条件，仅price_mode=5时可传。
+        /// </summary>
+        [XmlElement("room_id")]
+        public string RoomId { get; set; }
 
         /// <summary>
         /// 门店价查询条件，仅price_mode=4时可传。

@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string MobilePhone { get; set; }
 
         /// <summary>
+        /// 发奖记录ID
+        /// </summary>
+        [XmlElement("record_id")]
+        public string RecordId { get; set; }
+
+        /// <summary>
         /// 供给ID
         /// </summary>
         [XmlElement("supply_id")]

@@ -17,7 +17,7 @@ namespace Aop.Api.Domain
         public string AmountDiscountItem { get; set; }
 
         /// <summary>
-        /// 商品总价
+        /// 商品总价，单位 元
         /// </summary>
         [XmlElement("amount_item")]
         public string AmountItem { get; set; }

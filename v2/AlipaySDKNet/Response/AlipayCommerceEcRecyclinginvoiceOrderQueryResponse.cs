@@ -41,6 +41,13 @@ namespace Aop.Api.Response
         public string CompanySupplierId { get; set; }
 
         /// <summary>
+        /// 订单关联的入账单列表
+        /// </summary>
+        [XmlArray("deposit_list")]
+        [XmlArrayItem("order_deposit_open_result")]
+        public List<OrderDepositOpenResult> DepositList { get; set; }
+
+        /// <summary>
         /// 交易成功时间
         /// </summary>
         [XmlElement("gmt_success")]

@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayBrandDTO : AopObject
     {
         /// <summary>
+        /// 用于支付宝品牌心智中的支付成功logo
+        /// </summary>
+        [XmlElement("check_icon_url")]
+        public string CheckIconUrl { get; set; }
+
+        /// <summary>
         /// 支付宝品牌心智slogan
         /// </summary>
         [XmlElement("content")]

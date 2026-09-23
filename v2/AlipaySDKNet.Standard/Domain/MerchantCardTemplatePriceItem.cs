@@ -36,7 +36,7 @@ namespace Aop.Api.Domain
         public long OriginalPrice { get; set; }
 
         /// <summary>
-        /// 动态价格模式：2为普通日历价，3为区域价，4为门店价。
+        /// 动态价格模式：2为普通日历价，3为区域价，4为门店价，5为场地价。
         /// </summary>
         [XmlElement("price_mode")]
         public string PriceMode { get; set; }
@@ -52,6 +52,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("region_level")]
         public string RegionLevel { get; set; }
+
+        /// <summary>
+        /// 场地价对应的场地ID。
+        /// </summary>
+        [XmlElement("room_id")]
+        public string RoomId { get; set; }
 
         /// <summary>
         /// 基础售价，单位为分。

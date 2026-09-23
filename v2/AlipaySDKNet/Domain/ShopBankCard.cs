@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string AccountBranchName { get; set; }
 
         /// <summary>
-        /// 卡户名
+        /// 开户名
         /// </summary>
         [XmlElement("account_holder_name")]
         public string AccountHolderName { get; set; }
@@ -28,7 +28,7 @@ namespace Aop.Api.Domain
         public string AccountInstCity { get; set; }
 
         /// <summary>
-        /// 开户行简称缩写
+        /// 开户行简称缩写 当前字段已废弃(业务已经不需要该字段)
         /// </summary>
         [XmlElement("account_inst_id")]
         public string AccountInstId { get; set; }
@@ -52,7 +52,7 @@ namespace Aop.Api.Domain
         public string AccountNo { get; set; }
 
         /// <summary>
-        /// 卡类型（借记卡 DC、信用卡 CC）
+        /// 卡类型（借记卡 DC、信用卡 CC） 当前字段已废弃(业务不再需要该字段信息)
         /// </summary>
         [XmlElement("account_type")]
         public string AccountType { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string BankCode { get; set; }
 
         /// <summary>
-        /// 使用类型（对公 01、对私 02）
+        /// 银行卡账户类型（对公 01、对私 02）
         /// </summary>
         [XmlElement("usage_type")]
         public string UsageType { get; set; }

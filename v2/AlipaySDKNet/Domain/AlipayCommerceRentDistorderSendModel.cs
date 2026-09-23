@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string SenderPhone { get; set; }
 
         /// <summary>
-        /// 快递dan'hao
+        /// 快递单号
         /// </summary>
         [XmlElement("waybill_id")]
         public string WaybillId { get; set; }

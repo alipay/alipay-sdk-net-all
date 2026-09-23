@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public ExtUserInfo ExtUserInfo { get; set; }
 
         /// <summary>
+        /// 业务扩展参数
+        /// </summary>
+        [XmlElement("extend_params")]
+        public ExtendParams ExtendParams { get; set; }
+
+        /// <summary>
         /// 子订单详情
         /// </summary>
         [XmlArray("order_details")]

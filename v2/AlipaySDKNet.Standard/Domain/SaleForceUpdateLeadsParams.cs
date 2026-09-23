@@ -17,6 +17,19 @@ namespace Aop.Api.Domain
         public string ActualLeadParty { get; set; }
 
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("ai_products")]
+        [XmlArrayItem("string")]
+        public List<string> AiProducts { get; set; }
+
+        /// <summary>
+        /// AI产品版本
+        /// </summary>
+        [XmlElement("ai_products_source_version")]
+        public string AiProductsSourceVersion { get; set; }
+
+        /// <summary>
         /// 阿里云结算模式枚举值
         /// </summary>
         [XmlElement("alicloud_settlement_mode")]
@@ -27,6 +40,24 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("bd_work_no")]
         public string BdWorkNo { get; set; }
+
+        /// <summary>
+        /// 本次关闭申请的唯一标识
+        /// </summary>
+        [XmlElement("close_request_id")]
+        public string CloseRequestId { get; set; }
+
+        /// <summary>
+        /// 关闭申请版本号
+        /// </summary>
+        [XmlElement("close_request_version")]
+        public long CloseRequestVersion { get; set; }
+
+        /// <summary>
+        /// 关闭校验状态
+        /// </summary>
+        [XmlElement("close_validation_status")]
+        public string CloseValidationStatus { get; set; }
 
         /// <summary>
         /// 云平台区域 (公共云)
@@ -275,6 +306,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("resource_foundation")]
         public string ResourceFoundation { get; set; }
+
+        /// <summary>
+        /// Salesforce 商机 ID
+        /// </summary>
+        [XmlElement("salesforce_opportunity_id")]
+        public string SalesforceOpportunityId { get; set; }
 
         /// <summary>
         /// salesforce商机阶段

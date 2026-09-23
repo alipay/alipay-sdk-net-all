@@ -27,6 +27,12 @@ namespace Aop.Api.Response
         public string PayAmount { get; set; }
 
         /// <summary>
+        /// 租赁支付准入Token
+        /// </summary>
+        [XmlElement("pay_token")]
+        public string PayToken { get; set; }
+
+        /// <summary>
         /// 支付宝交易号
         /// </summary>
         [XmlElement("trade_no")]

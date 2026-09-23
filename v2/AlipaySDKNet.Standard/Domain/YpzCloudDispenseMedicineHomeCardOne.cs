@@ -17,10 +17,22 @@ namespace Aop.Api.Domain
         public string ButtonText { get; set; }
 
         /// <summary>
+        /// 卡类型
+        /// </summary>
+        [XmlElement("card_type")]
+        public string CardType { get; set; }
+
+        /// <summary>
         /// 描述
         /// </summary>
         [XmlElement("description")]
         public string Description { get; set; }
+
+        /// <summary>
+        /// 主标题
+        /// </summary>
+        [XmlElement("main_title")]
+        public string MainTitle { get; set; }
 
         /// <summary>
         /// null
@@ -40,5 +52,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("title")]
         public string Title { get; set; }
+
+        /// <summary>
+        /// 唯一id
+        /// </summary>
+        [XmlElement("unique_id")]
+        public string UniqueId { get; set; }
     }
 }

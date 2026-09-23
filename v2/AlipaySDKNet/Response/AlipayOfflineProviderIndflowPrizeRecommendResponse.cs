@@ -1,5 +1,6 @@
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 using Aop.Api.Domain;
 
 namespace Aop.Api.Response
@@ -10,10 +11,11 @@ namespace Aop.Api.Response
     public class AlipayOfflineProviderIndflowPrizeRecommendResponse : AopResponse
     {
         /// <summary>
-        /// 推荐奖品详情
+        /// null
         /// </summary>
-        [XmlElement("recommend_prizes")]
-        public AdVoucherPrizeDetail RecommendPrizes { get; set; }
+        [XmlArray("recommend_prizes")]
+        [XmlArrayItem("ad_voucher_prize_detail")]
+        public List<AdVoucherPrizeDetail> RecommendPrizes { get; set; }
 
         /// <summary>
         /// 发奖记录ID

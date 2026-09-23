@@ -11,25 +11,25 @@ namespace Aop.Api.Domain
     public class PaymentVO : AopObject
     {
         /// <summary>
-        /// 订单优惠总金额
+        /// 订单优惠总金额，单位 元
         /// </summary>
         [XmlElement("amount_discount")]
         public string AmountDiscount { get; set; }
 
         /// <summary>
-        /// 商品总金额
+        /// 商品总金额，单位 元
         /// </summary>
         [XmlElement("amount_item")]
         public string AmountItem { get; set; }
 
         /// <summary>
-        /// 订单总金额
+        /// 订单总金额，单位 元
         /// </summary>
         [XmlElement("amount_original")]
         public string AmountOriginal { get; set; }
 
         /// <summary>
-        /// 用户实付金额
+        /// 用户实付金额，单位 元
         /// </summary>
         [XmlElement("amount_user")]
         public string AmountUser { get; set; }
@@ -42,7 +42,7 @@ namespace Aop.Api.Domain
         public List<string> CommissionTradeNos { get; set; }
 
         /// <summary>
-        /// 配送优惠金额
+        /// 配送优惠金额，单位 元
         /// </summary>
         [XmlElement("delivery_discount_fee")]
         public string DeliveryDiscountFee { get; set; }

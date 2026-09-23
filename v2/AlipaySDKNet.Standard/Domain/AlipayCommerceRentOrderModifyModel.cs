@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public RentOrderDeliveryInfoDTO DeliveryInfo { get; set; }
 
         /// <summary>
+        /// 企业信息
+        /// </summary>
+        [XmlElement("enterprise_info")]
+        public OrderModifyEnterpriseInfoOpenApiVO EnterpriseInfo { get; set; }
+
+        /// <summary>
         /// 用于标记支付宝用户在应用下的唯一标识
         /// </summary>
         [XmlElement("open_id")]
@@ -46,6 +52,12 @@ namespace Aop.Api.Domain
         [XmlArray("order_negotiated_payment_time")]
         [XmlArrayItem("order_negotiated_payment_time")]
         public List<OrderNegotiatedPaymentTime> OrderNegotiatedPaymentTime { get; set; }
+
+        /// <summary>
+        /// 订单发货地址
+        /// </summary>
+        [XmlElement("order_shipping_address")]
+        public RentOrderShipperAddressInfoDTO OrderShippingAddress { get; set; }
 
         /// <summary>
         /// 商户订单号

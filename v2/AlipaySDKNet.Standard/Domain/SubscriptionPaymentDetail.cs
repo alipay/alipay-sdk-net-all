@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string OrderNo { get; set; }
 
         /// <summary>
+        /// 外部请求单号
+        /// </summary>
+        [XmlElement("out_req_no")]
+        public string OutReqNo { get; set; }
+
+        /// <summary>
         /// 交易状态
         /// </summary>
         [XmlElement("pay_status")]

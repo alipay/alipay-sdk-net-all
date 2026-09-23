@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string ExtendParams { get; set; }
 
         /// <summary>
+        /// 宽限期天数
+        /// </summary>
+        [XmlElement("grace_period_days")]
+        public long GracePeriodDays { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("items")]
@@ -42,7 +48,7 @@ namespace Aop.Api.Domain
         public List<SubscriptionSubmodeItem> Items { get; set; }
 
         /// <summary>
-        /// UPGRADE-升级，DOWNGRADE-降级，CANCEL-取消，REVERT_CANCEL-取消后恢复；不传视为UPGRADE。Submode不支持INCREASE_QUANTITY/DECREASE_QUANTITY，容量变化请提交完整价格商品对象并使用UPGRADE/DOWNGRADE
+        /// UPGRADE-升级，DOWNGRADE-降级，CANCEL-取消，REVERT_CANCEL-取消后恢复，UPDATE_GRACE_PERIOD-修改宽限期天数；不传视为UPGRADE。Submode不支持INCREASE_QUANTITY/DECREASE_QUANTITY，容量变化请提交完整价格商品对象并使用UPGRADE/DOWNGRADE
         /// </summary>
         [XmlElement("modify_type")]
         public string ModifyType { get; set; }

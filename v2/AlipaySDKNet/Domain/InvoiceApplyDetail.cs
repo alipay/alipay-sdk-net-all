@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string BizFundType { get; set; }
 
         /// <summary>
+        /// 外部商户交易号，来源于申请明细
+        /// </summary>
+        [XmlElement("external_merchant_trade_no")]
+        public string ExternalMerchantTradeNo { get; set; }
+
+        /// <summary>
         /// 开票金额
         /// </summary>
         [XmlElement("invoice_amount")]

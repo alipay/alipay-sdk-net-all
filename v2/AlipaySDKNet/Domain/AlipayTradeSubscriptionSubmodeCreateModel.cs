@@ -23,6 +23,12 @@ namespace Aop.Api.Domain
         public string DeductType { get; set; }
 
         /// <summary>
+        /// 宽限期天数
+        /// </summary>
+        [XmlElement("grace_period_days")]
+        public long GracePeriodDays { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("items")]

@@ -30,6 +30,13 @@ namespace Aop.Api.Domain
         public string BookingId { get; set; }
 
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("booking_resources")]
+        [XmlArrayItem("life_service_booking_resource_sync")]
+        public List<LifeServiceBookingResourceSync> BookingResources { get; set; }
+
+        /// <summary>
         /// 拒绝理由
         /// </summary>
         [XmlElement("reject_reason")]

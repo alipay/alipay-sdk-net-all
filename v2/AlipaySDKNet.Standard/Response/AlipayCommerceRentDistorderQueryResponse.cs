@@ -71,6 +71,12 @@ namespace Aop.Api.Response
         public string CreditDepositStatus { get; set; }
 
         /// <summary>
+        /// 分销免押通过标:Y,如果不通过，则不返回
+        /// </summary>
+        [XmlElement("dist_deposit_free_pass")]
+        public string DistDepositFreePass { get; set; }
+
+        /// <summary>
         /// 分销渠道
         /// </summary>
         [XmlElement("distribution_channel")]
@@ -124,6 +130,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("return_address")]
         public DistributionMerchantAddressDTO ReturnAddress { get; set; }
+
+        /// <summary>
+        /// 归还物流信息
+        /// </summary>
+        [XmlElement("return_logistics_info")]
+        public DistLogisticsInfoDTO ReturnLogisticsInfo { get; set; }
 
         /// <summary>
         /// 发货时间

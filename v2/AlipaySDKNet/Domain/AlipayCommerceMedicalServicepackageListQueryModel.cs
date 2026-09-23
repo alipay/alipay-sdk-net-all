@@ -11,6 +11,12 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalServicepackageListQueryModel : AopObject
     {
         /// <summary>
+        /// 是否过滤标识
+        /// </summary>
+        [XmlElement("hide_filter")]
+        public bool HideFilter { get; set; }
+
+        /// <summary>
         /// 是否是买后
         /// </summary>
         [XmlElement("is_purchased")]
@@ -21,6 +27,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("lead_doctor_id")]
         public string LeadDoctorId { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("lead_doctor_ids")]
+        [XmlArrayItem("string")]
+        public List<string> LeadDoctorIds { get; set; }
 
         /// <summary>
         /// null

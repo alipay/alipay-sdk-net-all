@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class AlipayTradeAgentPayModel : AopObject
     {
         /// <summary>
+        /// 联系对应BD进行KYA申请后下发的智能体id
+        /// </summary>
+        [XmlElement("agent_id")]
+        public string AgentId { get; set; }
+
+        /// <summary>
         /// 支付宝系统中用以唯一标识用户签约记录的编号（用户签约成功后的协议号 ）
         /// </summary>
         [XmlElement("agreement_no")]
@@ -20,6 +26,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("agreement_sign_params")]
         public AgentSignParams AgreementSignParams { get; set; }
+
+        /// <summary>
+        /// 收银台场景，在Agent支付标准版场景下固定填“appPay”
+        /// </summary>
+        [XmlElement("cashier_scene")]
+        public string CashierScene { get; set; }
 
         /// <summary>
         /// 预下单ID，通过请求alipay.trade.order.prepay接口获取预下单ID

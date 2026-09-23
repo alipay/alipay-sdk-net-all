@@ -10,6 +10,18 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalInquiryDoctorUploadModel : AopObject
     {
         /// <summary>
+        /// 认证状态
+        /// </summary>
+        [XmlElement("auth_status")]
+        public string AuthStatus { get; set; }
+
+        /// <summary>
+        /// 变更类型
+        /// </summary>
+        [XmlElement("change_type")]
+        public string ChangeType { get; set; }
+
+        /// <summary>
         /// 城市编码
         /// </summary>
         [XmlElement("city_code")]
@@ -28,7 +40,13 @@ namespace Aop.Api.Domain
         public string DepartmentId { get; set; }
 
         /// <summary>
-        /// 医生问诊类别（图文问诊，电话问诊）
+        /// 外部标准疾病列表
+        /// </summary>
+        [XmlElement("disease_id_list")]
+        public string DiseaseIdList { get; set; }
+
+        /// <summary>
+        /// 医生问诊类别
         /// </summary>
         [XmlElement("doctor_category")]
         public string DoctorCategory { get; set; }
@@ -76,6 +94,12 @@ namespace Aop.Api.Domain
         public string DoctorTitle { get; set; }
 
         /// <summary>
+        /// 教育职称
+        /// </summary>
+        [XmlElement("educate_grade")]
+        public string EducateGrade { get; set; }
+
+        /// <summary>
         /// 医生性别
         /// </summary>
         [XmlElement("gender")]
@@ -112,9 +136,21 @@ namespace Aop.Api.Domain
         public string IsvCode { get; set; }
 
         /// <summary>
+        /// 官方医院名称
+        /// </summary>
+        [XmlElement("official_hos_name")]
+        public string OfficialHosName { get; set; }
+
+        /// <summary>
         /// 来源平台 code
         /// </summary>
         [XmlElement("platform_code")]
         public string PlatformCode { get; set; }
+
+        /// <summary>
+        /// 医生擅长疾病（多个擅长疾病时用英文逗号分隔）
+        /// </summary>
+        [XmlElement("skilled_disease")]
+        public string SkilledDisease { get; set; }
     }
 }

@@ -48,6 +48,13 @@ namespace Aop.Api.Domain
         public string BookingId { get; set; }
 
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("booking_resources")]
+        [XmlArrayItem("life_service_booking_resource")]
+        public List<LifeServiceBookingResource> BookingResources { get; set; }
+
+        /// <summary>
         /// 核销单id
         /// </summary>
         [XmlElement("deduction_order_id")]

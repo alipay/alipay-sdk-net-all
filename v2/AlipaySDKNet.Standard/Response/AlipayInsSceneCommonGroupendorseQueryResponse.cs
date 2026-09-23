@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public long EndorseFee { get; set; }
 
         /// <summary>
+        /// 未返回保司批单回执则表示当前批单处于在途状态
+        /// </summary>
+        [XmlElement("instinfo_serial_no")]
+        public string InstinfoSerialNo { get; set; }
+
+        /// <summary>
         /// 外部业务号
         /// </summary>
         [XmlElement("out_biz_no")]

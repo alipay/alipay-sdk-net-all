@@ -46,6 +46,12 @@ namespace Aop.Api.Domain
         public string FinishTime { get; set; }
 
         /// <summary>
+        /// 是否免费订单 保司服务包内领取的免费实物订单标记为true
+        /// </summary>
+        [XmlElement("free_order")]
+        public bool FreeOrder { get; set; }
+
+        /// <summary>
         /// 1是自费订单，2是医保订单
         /// </summary>
         [XmlElement("mi_type")]
@@ -92,6 +98,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("pick_type")]
         public long PickType { get; set; }
+
+        /// <summary>
+        /// 保单号
+        /// </summary>
+        [XmlElement("policy_no")]
+        public string PolicyNo { get; set; }
 
         /// <summary>
         /// 送达时间类型

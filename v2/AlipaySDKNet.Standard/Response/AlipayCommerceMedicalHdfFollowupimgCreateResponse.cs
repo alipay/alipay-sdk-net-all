@@ -15,6 +15,12 @@ namespace Aop.Api.Response
         public string ImageUrl { get; set; }
 
         /// <summary>
+        /// 智能体开通状态false-未开通、true-已开通
+        /// </summary>
+        [XmlElement("open_agent_flag")]
+        public string OpenAgentFlag { get; set; }
+
+        /// <summary>
         /// 图片链接
         /// </summary>
         [XmlElement("qr_image_url")]
@@ -25,5 +31,11 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("redirect_url")]
         public string RedirectUrl { get; set; }
+
+        /// <summary>
+        /// 来源类型
+        /// </summary>
+        [XmlElement("source_type")]
+        public string SourceType { get; set; }
     }
 }

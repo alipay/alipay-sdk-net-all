@@ -16,7 +16,7 @@ namespace Aop.Api.Domain
         public string Account { get; set; }
 
         /// <summary>
-        /// 结算收款方主体类型，未准入可结算个人户的商户可忽略
+        /// 结算收款方主体类型，未准入可结算个人户的商户可忽略 当前字段已废弃(业务已经不需要该参数)
         /// </summary>
         [XmlElement("account_type")]
         public string AccountType { get; set; }
@@ -28,19 +28,19 @@ namespace Aop.Api.Domain
         public ShopBankCard BankCards { get; set; }
 
         /// <summary>
-        /// 支付宝账号
+        /// 确认签约支付宝账号
         /// </summary>
         [XmlElement("payee_account_no")]
         public string PayeeAccountNo { get; set; }
 
         /// <summary>
-        /// 身份证反面图片id，需传入ant.merchant.expand.indirect.image.upload 接口上传图片后得到的 image_id。
+        /// 身份证反面图片id，需传入ant.merchant.expand.indirect.image.upload 接口上传图片后得到的 image_id。 当前字段已废弃(外层结构已有法人身份证信息)
         /// </summary>
         [XmlElement("payee_identity_back_pic")]
         public string PayeeIdentityBackPic { get; set; }
 
         /// <summary>
-        /// 身份证正面图片id，需传入ant.merchant.expand.indirect.image.upload 接口上传图片后得到的 image_id
+        /// 身份证正面图片id，需传入ant.merchant.expand.indirect.image.upload 接口上传图片后得到的 image_id 当前字段已废弃(外层结构已有法人身份证信息)
         /// </summary>
         [XmlElement("payee_identity_front_pic")]
         public string PayeeIdentityFrontPic { get; set; }

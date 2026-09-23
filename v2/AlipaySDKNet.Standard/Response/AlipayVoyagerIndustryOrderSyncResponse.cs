@@ -21,6 +21,12 @@ namespace Aop.Api.Response
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// 错误信息
+        /// </summary>
+        [XmlElement("error_message")]
+        public string ErrorMessage { get; set; }
+
+        /// <summary>
         /// true: 调用方应重试; false: 调用方不应重试
         /// </summary>
         [XmlElement("need_retry")]

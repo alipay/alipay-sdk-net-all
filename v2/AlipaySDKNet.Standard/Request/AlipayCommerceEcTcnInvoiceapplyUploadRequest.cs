@@ -1,4 +1,5 @@
 using System;
+using Aop.Api.Domain;
 using System.Collections.Generic;
 using Aop.Api.Response;
 using Aop.Api.Util;
@@ -150,6 +151,11 @@ namespace Aop.Api.Request
         /// </summary>
         public string SellerTel { get; set; }
 
+        /// <summary>
+        /// 旅客运输行程列表
+        /// </summary>
+        public List<InvoiceTravelInfo> TravelInfoList { get; set; }
+
         #region IAopRequest Members
 		private bool needEncrypt=false;
 		private string apiVersion = "1.0";
@@ -262,6 +268,7 @@ namespace Aop.Api.Request
             parameters.Add("seller_name", this.SellerName);
             parameters.Add("seller_tax_no", this.SellerTaxNo);
             parameters.Add("seller_tel", this.SellerTel);
+            parameters.Add("travel_info_list", this.TravelInfoList);
             if(udfParams != null) 
             {
                 parameters.AddAll(this.udfParams);

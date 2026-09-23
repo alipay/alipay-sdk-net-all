@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string Email { get; set; }
 
         /// <summary>
+        /// 商户维度全局幂等键
+        /// </summary>
+        [XmlElement("merchant_request_no")]
+        public string MerchantRequestNo { get; set; }
+
+        /// <summary>
         /// 客户名称
         /// </summary>
         [XmlElement("name")]

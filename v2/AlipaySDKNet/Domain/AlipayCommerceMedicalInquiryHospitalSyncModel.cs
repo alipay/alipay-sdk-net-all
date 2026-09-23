@@ -112,13 +112,13 @@ namespace Aop.Api.Domain
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// 医院纬度
+        /// 医院纬度，单位：度
         /// </summary>
         [XmlElement("latitude")]
         public string Latitude { get; set; }
 
         /// <summary>
-        /// 医院经度
+        /// 医院经度，单位：度
         /// </summary>
         [XmlElement("longitude")]
         public string Longitude { get; set; }

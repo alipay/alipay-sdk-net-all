@@ -10,7 +10,7 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalOrderRefundApproveModel : AopObject
     {
         /// <summary>
-        /// 退款单审批操作类型，枚举值： 【 1-同意全单退款申请 、 2-拒绝全单退款申请、  】
+        /// 退款单审批操作类型，枚举值： 【 1-同意全单退款申请 、 2-拒绝全单退款申请、  3-直接退款（仅适用于退货退款场景，无需用户退货） 】
         /// </summary>
         [XmlElement("action_type")]
         public string ActionType { get; set; }

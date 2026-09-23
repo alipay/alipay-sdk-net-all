@@ -47,6 +47,12 @@ namespace Aop.Api.Domain
         public string PaymentPolicy { get; set; }
 
         /// <summary>
+        /// 支付时间模式，用于控制支付时的时间。该字段缺省时采用“支付时间或预计送达时间”，两个时间只要有一个命中即可使用因公付
+        /// </summary>
+        [XmlElement("payment_time_mode")]
+        public string PaymentTimeMode { get; set; }
+
+        /// <summary>
         /// 个人收款码转账是否支持因公付，默认为0。可选值：0（不支持）、1（支持）
         /// </summary>
         [XmlElement("personal_qrcode_mode")]

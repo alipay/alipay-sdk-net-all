@@ -34,6 +34,24 @@ namespace Aop.Api.Domain
         public string OutOrderNo { get; set; }
 
         /// <summary>
+        /// 配合promo_msg_id模板使用的营销语料的金额，单位元
+        /// </summary>
+        [XmlElement("promo_coupon_money")]
+        public string PromoCouponMoney { get; set; }
+
+        /// <summary>
+        /// 用于与promo_msg_id配合来使用的动参优惠券数量，单位笔
+        /// </summary>
+        [XmlElement("promo_coupon_num")]
+        public string PromoCouponNum { get; set; }
+
+        /// <summary>
+        /// 主要作用是在到账播报后播放营销预料，需要服务商提前联系业务运营申请并取得 promo_msg_id
+        /// </summary>
+        [XmlElement("promo_msg_id")]
+        public string PromoMsgId { get; set; }
+
+        /// <summary>
         /// 间连商户id
         /// </summary>
         [XmlElement("smid")]

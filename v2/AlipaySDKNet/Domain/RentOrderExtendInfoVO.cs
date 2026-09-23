@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string EcSignUserAuthorized { get; set; }
 
         /// <summary>
+        /// 附加业务信息，需跟具体的运营活动方约定
+        /// </summary>
+        [XmlElement("extra_biz_info")]
+        public string ExtraBizInfo { get; set; }
+
+        /// <summary>
         /// 已上传电子合同
         /// </summary>
         [XmlArray("merchant_upload_contracts")]

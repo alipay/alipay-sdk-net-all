@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string Body { get; set; }
 
         /// <summary>
+        /// 单日封顶租金，元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("daily_rent_cap_price")]
+        public string DailyRentCapPrice { get; set; }
+
+        /// <summary>
         /// 商品图，线下租赁场景使用
         /// </summary>
         [XmlArray("goods_picture_ids")]
@@ -88,6 +94,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_value")]
         public string ItemValue { get; set; }
+
+        /// <summary>
+        /// 商品租金原价，元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("original_rent_price")]
+        public string OriginalRentPrice { get; set; }
 
         /// <summary>
         /// 商户侧商品id

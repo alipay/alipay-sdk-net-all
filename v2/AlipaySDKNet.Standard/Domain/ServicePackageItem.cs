@@ -28,6 +28,12 @@ namespace Aop.Api.Domain
         public long RightsType { get; set; }
 
         /// <summary>
+        /// 服务项id
+        /// </summary>
+        [XmlElement("service_item_id")]
+        public string ServiceItemId { get; set; }
+
+        /// <summary>
         /// 规格数量，单位：次
         /// </summary>
         [XmlElement("spec_quantity")]

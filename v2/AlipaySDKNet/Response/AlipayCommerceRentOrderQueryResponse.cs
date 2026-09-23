@@ -97,6 +97,12 @@ namespace Aop.Api.Response
         public string OrderId { get; set; }
 
         /// <summary>
+        /// 订单发货地址
+        /// </summary>
+        [XmlElement("order_shipping_address")]
+        public RentOrderShipperAddressInfoVO OrderShippingAddress { get; set; }
+
+        /// <summary>
         /// 订单类型
         /// </summary>
         [XmlElement("order_type")]

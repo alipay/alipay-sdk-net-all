@@ -46,6 +46,30 @@ namespace Aop.Api.Domain
         public string DriverTaxNo { get; set; }
 
         /// <summary>
+        /// 实体车队长所属企业
+        /// </summary>
+        [XmlElement("fleet_captain_company")]
+        public string FleetCaptainCompany { get; set; }
+
+        /// <summary>
+        /// 车队长的身份证号
+        /// </summary>
+        [XmlElement("fleet_captain_id_card")]
+        public string FleetCaptainIdCard { get; set; }
+
+        /// <summary>
+        /// 车队长的姓名
+        /// </summary>
+        [XmlElement("fleet_captain_name")]
+        public string FleetCaptainName { get; set; }
+
+        /// <summary>
+        /// 实体车队长车牌
+        /// </summary>
+        [XmlElement("fleet_captain_plate")]
+        public string FleetCaptainPlate { get; set; }
+
+        /// <summary>
         /// 联系电话号码
         /// </summary>
         [XmlElement("phone_one")]

@@ -40,7 +40,7 @@ namespace Aop.Api.Domain
         public string RuleName { get; set; }
 
         /// <summary>
-        /// 淘汰结果:NOT_PASS-不通过/PENDING-待定/PASS-通过
+        /// 一票否决淘汰结论，非平台侧异常编码
         /// </summary>
         [XmlElement("rule_qualified")]
         public string RuleQualified { get; set; }

@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string CreditExtInfo { get; set; }
 
         /// <summary>
+        /// 定制化通知的notify_url
+        /// </summary>
+        [XmlElement("custom_notify_url")]
+        public string CustomNotifyUrl { get; set; }
+
+        /// <summary>
         /// 使用花呗分期要进行的分期数
         /// </summary>
         [XmlElement("hb_fq_num")]

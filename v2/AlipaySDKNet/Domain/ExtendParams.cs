@@ -22,6 +22,24 @@ namespace Aop.Api.Domain
         public string CreditExtInfo { get; set; }
 
         /// <summary>
+        /// 分期渠道
+        /// </summary>
+        [XmlElement("fq_channels")]
+        public string FqChannels { get; set; }
+
+        /// <summary>
+        /// 使用花呗分期的期数
+        /// </summary>
+        [XmlElement("fq_num")]
+        public string FqNum { get; set; }
+
+        /// <summary>
+        /// 花呗分期卖家承担收费比例
+        /// </summary>
+        [XmlElement("fq_seller_percent")]
+        public string FqSellerPercent { get; set; }
+
+        /// <summary>
         /// 使用花呗分期要进行的分期数
         /// </summary>
         [XmlElement("hb_fq_num")]

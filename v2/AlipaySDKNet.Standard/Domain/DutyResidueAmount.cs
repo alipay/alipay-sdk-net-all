@@ -34,6 +34,12 @@ namespace Aop.Api.Domain
         public string ClaimDutyName { get; set; }
 
         /// <summary>
+        /// 理赔责任类别 门诊权益 outpatient_benefit 住院权益 admission_benefit
+        /// </summary>
+        [XmlElement("claim_duty_type")]
+        public string ClaimDutyType { get; set; }
+
+        /// <summary>
         /// 100%赔付次数
         /// </summary>
         [XmlElement("claim_times_100_percent")]

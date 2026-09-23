@@ -21,6 +21,18 @@ namespace Aop.Api.Response
         public string DoctorId { get; set; }
 
         /// <summary>
+        /// 智能体状态
+        /// </summary>
+        [XmlElement("open_agent_flag")]
+        public string OpenAgentFlag { get; set; }
+
+        /// <summary>
+        /// 来源类型
+        /// </summary>
+        [XmlElement("source_type")]
+        public string SourceType { get; set; }
+
+        /// <summary>
         /// 阿福报道开通状态
         /// </summary>
         [XmlElement("status")]

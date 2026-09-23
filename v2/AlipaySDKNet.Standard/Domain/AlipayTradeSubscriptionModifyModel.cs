@@ -29,6 +29,12 @@ namespace Aop.Api.Domain
         public string ExtendParams { get; set; }
 
         /// <summary>
+        /// 宽限期天数
+        /// </summary>
+        [XmlElement("grace_period_days")]
+        public long GracePeriodDays { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("items")]
@@ -36,10 +42,16 @@ namespace Aop.Api.Domain
         public List<SubscriptionItem> Items { get; set; }
 
         /// <summary>
-        /// UPGRADE：升级，DOWNGRADE：降级， 取消：CANCEL， 取消后恢复：REVERT_CANCEL，INCREASE_QUANTITY-席位商品数量扩容，DECREASE_QUANTITY-席位商品数量缩容，如若不传则视为UPGRADE，具体使用方式详见接入指南。 
+        /// UPGRADE：升级，DOWNGRADE：降级， 取消：CANCEL， 取消后恢复：REVERT_CANCEL，INCREASE_QUANTITY-席位商品数量扩容，DECREASE_QUANTITY-席位商品数量缩容，UPDATE_GRACE_PERIOD-修改宽限期天数，ADJUST_BILLING-修改下一期金额，如若不传则视为UPGRADE，具体使用方式详见接入指南。
         /// </summary>
         [XmlElement("modify_type")]
         public string ModifyType { get; set; }
+
+        /// <summary>
+        /// 自定义下一期扣款金额（单位：分）。必须不高于商品原价，传0表示下期免费。modify_type为ADJUST_BILLING时，与 coupon_id 至少传一项，若同时传，则下期扣款金额以next_billing_amount为准，coupon_id仅影响后续周期（除下一期）的扣款金额
+        /// </summary>
+        [XmlElement("next_billing_amount")]
+        public long NextBillingAmount { get; set; }
 
         /// <summary>
         /// 支付金额，单位分； 仅用于商户自定义金额，若传了该值，用户实际支付金额会以该值为准，目前仅用于普通订阅升级场景，具体使用方式详见接入指南。

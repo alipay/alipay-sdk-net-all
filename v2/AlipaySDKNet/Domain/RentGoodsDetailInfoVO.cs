@@ -10,6 +10,12 @@ namespace Aop.Api.Domain
     public class RentGoodsDetailInfoVO : AopObject
     {
         /// <summary>
+        /// 单日封顶租金，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("daily_rent_cap_price")]
+        public string DailyRentCapPrice { get; set; }
+
+        /// <summary>
         /// 商品图片，用于小程序订单中心展示
         /// </summary>
         [XmlElement("image_material_id")]
@@ -62,6 +68,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("item_value")]
         public string ItemValue { get; set; }
+
+        /// <summary>
+        /// 商品租金原价，单位：元，精确到小数点后两位
+        /// </summary>
+        [XmlElement("original_rent_price")]
+        public string OriginalRentPrice { get; set; }
 
         /// <summary>
         /// 商户侧商品id

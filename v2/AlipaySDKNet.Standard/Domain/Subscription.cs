@@ -59,6 +59,18 @@ namespace Aop.Api.Domain
         public string EffectiveType { get; set; }
 
         /// <summary>
+        /// 宽限期天数
+        /// </summary>
+        [XmlElement("grace_period_days")]
+        public long GracePeriodDays { get; set; }
+
+        /// <summary>
+        /// 宽限期结束时间
+        /// </summary>
+        [XmlElement("grace_period_end")]
+        public string GracePeriodEnd { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("items")]

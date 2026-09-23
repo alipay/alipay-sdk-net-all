@@ -65,6 +65,18 @@ namespace Aop.Api.Domain
         public RentOrderDeliveryInfoDTO DeliveryInfo { get; set; }
 
         /// <summary>
+        /// 租赁企业信息
+        /// </summary>
+        [XmlElement("enterprise_info")]
+        public OrderModifyEnterpriseInfoOpenApiVO EnterpriseInfo { get; set; }
+
+        /// <summary>
+        /// 外部场景商户信息
+        /// </summary>
+        [XmlElement("external_scenarios_merchant")]
+        public ExternalScenariosMerchantDTO ExternalScenariosMerchant { get; set; }
+
+        /// <summary>
         /// 商品详细信息。当前只支持单个商品。
         /// </summary>
         [XmlArray("item_infos")]
@@ -82,6 +94,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("offline_shopping_info")]
         public RentOfflineShoppingDTO OfflineShoppingInfo { get; set; }
+
+        /// <summary>
+        /// 订单发货地址
+        /// </summary>
+        [XmlElement("order_shipping_address")]
+        public RentOrderShipperAddressInfoDTO OrderShippingAddress { get; set; }
 
         /// <summary>
         /// 订单类型

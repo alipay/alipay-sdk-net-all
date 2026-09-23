@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public string ServicePackageOrderNo { get; set; }
 
         /// <summary>
+        /// 履约状态
+        /// </summary>
+        [XmlElement("status")]
+        public string Status { get; set; }
+
+        /// <summary>
         /// SAAS订单ID
         /// </summary>
         [XmlElement("trade_order_id")]

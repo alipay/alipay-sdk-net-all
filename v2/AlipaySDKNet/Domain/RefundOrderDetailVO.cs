@@ -91,6 +91,12 @@ namespace Aop.Api.Domain
         public string MiAmount { get; set; }
 
         /// <summary>
+        /// 退款单据操作类型
+        /// </summary>
+        [XmlElement("operate_type")]
+        public string OperateType { get; set; }
+
+        /// <summary>
         /// 退款发起角色:1 用户,2 商户
         /// </summary>
         [XmlElement("operator_role")]
@@ -162,6 +168,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("refuse_reason_code")]
         public string RefuseReasonCode { get; set; }
+
+        /// <summary>
+        /// 退货物流信息，退货退款场景用户寄回商品后返回，非退货退款场景为 null
+        /// </summary>
+        [XmlElement("return_logistics")]
+        public ReturnLogisticsVO ReturnLogistics { get; set; }
 
         /// <summary>
         /// 退款到账时间

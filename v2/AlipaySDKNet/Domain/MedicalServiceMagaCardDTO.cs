@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string Desc { get; set; }
 
         /// <summary>
+        /// 智能体服务配置信息
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
         /// 图标Url
         /// </summary>
         [XmlElement("icon_url")]

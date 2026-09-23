@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public string ExtendParams { get; set; }
 
         /// <summary>
+        /// 宽限期天数：试用期天数设置为非负整数
+        /// </summary>
+        [XmlElement("grace_period_days")]
+        public long GracePeriodDays { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("items")]

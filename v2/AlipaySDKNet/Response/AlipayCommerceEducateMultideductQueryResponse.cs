@@ -39,6 +39,24 @@ namespace Aop.Api.Response
         public string OpenId { get; set; }
 
         /// <summary>
+        /// 家长支付宝账户的脱敏信息（特例：特殊标识"ALREADY_RELEASED"，须通过技术支持反馈来关闭开通记录）
+        /// </summary>
+        [XmlElement("parent_logon_id")]
+        public string ParentLogonId { get; set; }
+
+        /// <summary>
+        /// 如果是父母为孩子开通，则为父母支付宝openid；如果是用户为本人开通，则为本人支付宝openid。
+        /// </summary>
+        [XmlElement("parent_open_id")]
+        public string ParentOpenId { get; set; }
+
+        /// <summary>
+        /// 如果是父母为孩子开通，则为父母支付宝uid；如果是用户为本人开通，则为本人支付宝uid。
+        /// </summary>
+        [XmlElement("parent_user_id")]
+        public string ParentUserId { get; set; }
+
+        /// <summary>
         /// 学校或教育机构内标
         /// </summary>
         [XmlElement("school_code")]

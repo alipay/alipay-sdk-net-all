@@ -24,6 +24,12 @@ namespace Aop.Api.Domain
         public List<RightInfo> Items { get; set; }
 
         /// <summary>
+        /// 领衔医生Id
+        /// </summary>
+        [XmlElement("lead_doctor_id")]
+        public string LeadDoctorId { get; set; }
+
+        /// <summary>
         /// 服务包订单状态
         /// </summary>
         [XmlElement("order_status")]

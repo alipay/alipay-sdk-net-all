@@ -106,5 +106,11 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("service_package_time")]
         public string ServicePackageTime { get; set; }
+
+        /// <summary>
+        /// 服务包类型
+        /// </summary>
+        [XmlElement("service_package_type")]
+        public string ServicePackageType { get; set; }
     }
 }

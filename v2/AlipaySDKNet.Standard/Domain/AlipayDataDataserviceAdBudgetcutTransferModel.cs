@@ -16,6 +16,12 @@ namespace Aop.Api.Domain
         public string AmountTotal { get; set; }
 
         /// <summary>
+        /// 随机字符串，建议uuid()创建
+        /// </summary>
+        [XmlElement("apply_no")]
+        public string ApplyNo { get; set; }
+
+        /// <summary>
         /// 分配模式： 自动分配-AUTO 自定义分配-CUSTOM 如选择了自定义分配，则必须输入现金金额、授信金额、流量红包金额、普通红包金额
         /// </summary>
         [XmlElement("assign_mod")]

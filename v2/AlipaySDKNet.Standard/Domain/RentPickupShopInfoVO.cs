@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string AlipayShopId { get; set; }
 
         /// <summary>
+        /// 门店免费时长，单位：分钟，整数
+        /// </summary>
+        [XmlElement("free_duration_minutes")]
+        public long FreeDurationMinutes { get; set; }
+
+        /// <summary>
         /// 商家侧门店ID
         /// </summary>
         [XmlElement("merchant_shop_id")]

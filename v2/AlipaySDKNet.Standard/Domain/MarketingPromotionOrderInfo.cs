@@ -53,6 +53,30 @@ namespace Aop.Api.Domain
         public string AssessType { get; set; }
 
         /// <summary>
+        /// 城市code
+        /// </summary>
+        [XmlElement("city_code")]
+        public string CityCode { get; set; }
+
+        /// <summary>
+        /// 城市名称
+        /// </summary>
+        [XmlElement("city_name")]
+        public string CityName { get; set; }
+
+        /// <summary>
+        /// 区code
+        /// </summary>
+        [XmlElement("district_code")]
+        public string DistrictCode { get; set; }
+
+        /// <summary>
+        /// 区名称
+        /// </summary>
+        [XmlElement("district_name")]
+        public string DistrictName { get; set; }
+
+        /// <summary>
         /// 一级推广员工ID
         /// </summary>
         [XmlElement("first_level_emp_id")]
@@ -136,6 +160,18 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("promo_type")]
         public string PromoType { get; set; }
+
+        /// <summary>
+        /// 省份code
+        /// </summary>
+        [XmlElement("province_code")]
+        public string ProvinceCode { get; set; }
+
+        /// <summary>
+        /// 省份名称
+        /// </summary>
+        [XmlElement("province_name")]
+        public string ProvinceName { get; set; }
 
         /// <summary>
         /// 二级推广员工ID

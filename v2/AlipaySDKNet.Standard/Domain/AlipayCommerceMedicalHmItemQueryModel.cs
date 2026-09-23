@@ -22,6 +22,12 @@ namespace Aop.Api.Domain
         public string PackageOrderId { get; set; }
 
         /// <summary>
+        /// 服务项id
+        /// </summary>
+        [XmlElement("package_service_item_id")]
+        public string PackageServiceItemId { get; set; }
+
+        /// <summary>
         /// 页码,默认1
         /// </summary>
         [XmlElement("page")]

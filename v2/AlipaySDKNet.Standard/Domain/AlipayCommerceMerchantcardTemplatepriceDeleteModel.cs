@@ -24,7 +24,7 @@ namespace Aop.Api.Domain
         public List<string> CityCodeList { get; set; }
 
         /// <summary>
-        /// 删除普通日历价时传true，与区域价、门店价删除条件三选一。
+        /// 删除普通日历价时传true
         /// </summary>
         [XmlElement("delete_calendar_price")]
         public bool DeleteCalendarPrice { get; set; }
@@ -42,6 +42,13 @@ namespace Aop.Api.Domain
         [XmlArray("province_code_list")]
         [XmlArrayItem("string")]
         public List<string> ProvinceCodeList { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("room_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> RoomIdList { get; set; }
 
         /// <summary>
         /// null

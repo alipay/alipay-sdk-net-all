@@ -17,6 +17,12 @@ namespace Aop.Api.Response
         public YpzAfuDownloadCardOne AfuDownloadCard { get; set; }
 
         /// <summary>
+        /// 卡使用的页面
+        /// </summary>
+        [XmlElement("card_page")]
+        public string CardPage { get; set; }
+
+        /// <summary>
         /// 云陪诊云配药卡
         /// </summary>
         [XmlElement("cloud_dispense_medicine_card")]
@@ -64,5 +70,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("qa_card")]
         public YpzQaCardOne QaCard { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("service_card_list")]
+        [XmlArrayItem("ypz_service_detail_card")]
+        public List<YpzServiceDetailCard> ServiceCardList { get; set; }
     }
 }

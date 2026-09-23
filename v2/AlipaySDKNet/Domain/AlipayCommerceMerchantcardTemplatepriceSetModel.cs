@@ -32,6 +32,13 @@ namespace Aop.Api.Domain
         /// <summary>
         /// null
         /// </summary>
+        [XmlArray("room_price_list")]
+        [XmlArrayItem("merchant_card_template_room_price")]
+        public List<MerchantCardTemplateRoomPrice> RoomPriceList { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
         [XmlArray("shop_price_list")]
         [XmlArrayItem("merchant_card_template_shop_price")]
         public List<MerchantCardTemplateShopPrice> ShopPriceList { get; set; }

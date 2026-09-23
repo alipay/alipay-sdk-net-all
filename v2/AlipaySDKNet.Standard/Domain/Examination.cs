@@ -35,6 +35,12 @@ namespace Aop.Api.Domain
         public ExaminationCheckInfo CheckInfo { get; set; }
 
         /// <summary>
+        /// 履约单关闭类型：1-用户主动取消订单(未支付)、2-未支付超时自动取消(未支付)、3-结算失败（支付后）、4-用户主动退款（支付后）医嘱状态不动
+        /// </summary>
+        [XmlElement("close_type")]
+        public long CloseType { get; set; }
+
+        /// <summary>
         /// 收货信息
         /// </summary>
         [XmlElement("deliver_info")]

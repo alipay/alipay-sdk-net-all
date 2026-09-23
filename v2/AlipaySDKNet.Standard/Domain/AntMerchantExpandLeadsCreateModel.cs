@@ -70,7 +70,7 @@ namespace Aop.Api.Domain
         public string IsvPid { get; set; }
 
         /// <summary>
-        /// 地理信息维度
+        /// 地理信息维度,单位是十进制度
         /// </summary>
         [XmlElement("latitude")]
         public string Latitude { get; set; }

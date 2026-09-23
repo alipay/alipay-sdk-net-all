@@ -10,6 +10,24 @@ namespace Aop.Api.Domain
     public class AlipayCommerceMedicalHyInquiryorderSyncModel : AopObject
     {
         /// <summary>
+        /// 医生语音总结（音频文件链接）
+        /// </summary>
+        [XmlElement("doctor_audio_summary")]
+        public string DoctorAudioSummary { get; set; }
+
+        /// <summary>
+        /// 医生接诊时间
+        /// </summary>
+        [XmlElement("gmt_adoption")]
+        public string GmtAdoption { get; set; }
+
+        /// <summary>
+        /// 问诊服务结束时间
+        /// </summary>
+        [XmlElement("gmt_finished")]
+        public string GmtFinished { get; set; }
+
+        /// <summary>
         /// 域内问诊订单唯一标识，用户告诉域内操作的是哪一笔订单
         /// </summary>
         [XmlElement("order_id")]
@@ -28,10 +46,22 @@ namespace Aop.Api.Domain
         public string OutDoctorId { get; set; }
 
         /// <summary>
+        /// 极速问诊医生接单后同步过来
+        /// </summary>
+        [XmlElement("out_medical_rel_id")]
+        public string OutMedicalRelId { get; set; }
+
+        /// <summary>
         /// 问诊平台编码，由支付宝侧统一分配
         /// </summary>
         [XmlElement("platform_code")]
         public string PlatformCode { get; set; }
+
+        /// <summary>
+        /// 服务预计结束时间
+        /// </summary>
+        [XmlElement("service_expect_end_time")]
+        public string ServiceExpectEndTime { get; set; }
 
         /// <summary>
         /// 医生端操作订单状态发生变更后，对应状态映射此字段同步到域内

@@ -10,13 +10,37 @@ namespace Aop.Api.Response
     public class AlipayEbppJobinterviewInterviewQueryResponse : AopResponse
     {
         /// <summary>
+        /// 候选人基本信息
+        /// </summary>
+        [XmlElement("basic_info")]
+        public BasicInfo BasicInfo { get; set; }
+
+        /// <summary>
         /// 候选人唯一 ID
         /// </summary>
         [XmlElement("candidate_id")]
         public string CandidateId { get; set; }
 
         /// <summary>
-        /// 淘汰机制明细(评测明细+检测明细合并富化,status=COMPLETED 时返回)
+        /// 胜任力评估详情
+        /// </summary>
+        [XmlElement("competency_details")]
+        public CompetencyDetails CompetencyDetails { get; set; }
+
+        /// <summary>
+        /// 综合评估
+        /// </summary>
+        [XmlElement("comprehensive_evaluation")]
+        public ComprehensiveEvaluation ComprehensiveEvaluation { get; set; }
+
+        /// <summary>
+        /// 检测详情
+        /// </summary>
+        [XmlElement("detection_detail")]
+        public DetectionDetail DetectionDetail { get; set; }
+
+        /// <summary>
+        /// 淘汰机制明细
         /// </summary>
         [XmlElement("elimination_rule_detail")]
         public EliminationRuleDetailItem EliminationRuleDetail { get; set; }
@@ -52,7 +76,7 @@ namespace Aop.Api.Response
         public string InterviewStartTime { get; set; }
 
         /// <summary>
-        /// 面试总评（AI 面试总结，仅 FINISHED 且报告就绪时返回，其余为 null）
+        /// 综合评论
         /// </summary>
         [XmlElement("interview_summary")]
         public string InterviewSummary { get; set; }
@@ -62,6 +86,12 @@ namespace Aop.Api.Response
         /// </summary>
         [XmlElement("interview_url")]
         public string InterviewUrl { get; set; }
+
+        /// <summary>
+        /// 答题环节详情
+        /// </summary>
+        [XmlElement("question_details")]
+        public QuestionDetails QuestionDetails { get; set; }
 
         /// <summary>
         /// 面试报告生成时间（yyyy-MM-dd HH:mm:ss）

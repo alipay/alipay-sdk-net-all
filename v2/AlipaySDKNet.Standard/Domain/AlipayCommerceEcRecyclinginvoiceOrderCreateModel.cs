@@ -23,6 +23,13 @@ namespace Aop.Api.Domain
         public string CompanySupplierId { get; set; }
 
         /// <summary>
+        /// 创建订单时提供的佐证材料列表
+        /// </summary>
+        [XmlArray("corroboration_material_list")]
+        [XmlArrayItem("corroboration_materials")]
+        public List<CorroborationMaterials> CorroborationMaterialList { get; set; }
+
+        /// <summary>
         /// 指定发票开具时的票种
         /// </summary>
         [XmlElement("invoice_kind")]
@@ -64,6 +71,12 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("product_origin_code")]
         public string ProductOriginCode { get; set; }
+
+        /// <summary>
+        /// 代卖人收购单 ID
+        /// </summary>
+        [XmlElement("proxy_order_id")]
+        public string ProxyOrderId { get; set; }
 
         /// <summary>
         /// 代卖人证件号码（身份证号码）

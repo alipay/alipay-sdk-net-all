@@ -40,6 +40,12 @@ namespace Aop.Api.Domain
         public long ItemCnt { get; set; }
 
         /// <summary>
+        /// 原始商品押金，单位元
+        /// </summary>
+        [XmlElement("item_deposit_price")]
+        public string ItemDepositPrice { get; set; }
+
+        /// <summary>
         /// 商品库itemId
         /// </summary>
         [XmlElement("item_id")]

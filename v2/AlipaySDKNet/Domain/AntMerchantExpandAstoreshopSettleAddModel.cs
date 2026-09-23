@@ -61,7 +61,7 @@ namespace Aop.Api.Domain
         public List<ShopSettleInfo> SettleInfos { get; set; }
 
         /// <summary>
-        /// 门店id
+        /// 支付宝门店id
         /// </summary>
         [XmlElement("shop_id")]
         public string ShopId { get; set; }

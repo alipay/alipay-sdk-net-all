@@ -17,6 +17,13 @@ namespace Aop.Api.Domain
         public string ActualLeadParty { get; set; }
 
         /// <summary>
+        /// AI产品
+        /// </summary>
+        [XmlArray("ai_products")]
+        [XmlArrayItem("string")]
+        public List<string> AiProducts { get; set; }
+
+        /// <summary>
         /// 阿里云BPID,多个，以英文逗号隔开
         /// </summary>
         [XmlElement("ali_cloud_bpid_list")]

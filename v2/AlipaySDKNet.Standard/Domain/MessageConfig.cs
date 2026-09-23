@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class MessageConfig : AopObject
     {
         /// <summary>
-        /// null
+        /// 消息分发渠道
         /// </summary>
         [XmlArray("channels")]
         [XmlArrayItem("channels")]
