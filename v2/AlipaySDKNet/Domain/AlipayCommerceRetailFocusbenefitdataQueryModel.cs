@@ -1,0 +1,66 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayCommerceRetailFocusbenefitdataQueryModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayCommerceRetailFocusbenefitdataQueryModel : AopObject
+    {
+        /// <summary>
+        /// 区域
+        /// </summary>
+        [XmlElement("area")]
+        public string Area { get; set; }
+
+        /// <summary>
+        /// 分页查询游标
+        /// </summary>
+        [XmlElement("digest")]
+        public string Digest { get; set; }
+
+        /// <summary>
+        /// 区县名称
+        /// </summary>
+        [XmlElement("district_name")]
+        public string DistrictName { get; set; }
+
+        /// <summary>
+        /// 天分区
+        /// </summary>
+        [XmlElement("dt_list")]
+        public string DtList { get; set; }
+
+        /// <summary>
+        /// 时间分区
+        /// </summary>
+        [XmlElement("hh_list")]
+        public string HhList { get; set; }
+
+        /// <summary>
+        /// 分钟级时间
+        /// </summary>
+        [XmlElement("minute_time")]
+        public string MinuteTime { get; set; }
+
+        /// <summary>
+        /// 页码
+        /// </summary>
+        [XmlElement("page_index")]
+        public string PageIndex { get; set; }
+
+        /// <summary>
+        /// 页码
+        /// </summary>
+        [XmlElement("page_size")]
+        public string PageSize { get; set; }
+
+        /// <summary>
+        /// 场景码
+        /// </summary>
+        [XmlElement("scene_code")]
+        public string SceneCode { get; set; }
+    }
+}

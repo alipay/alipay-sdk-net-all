@@ -1,0 +1,119 @@
+using System;
+using System.Xml.Serialization;
+using System.Collections.Generic;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// CardTemplateUse Data Structure.
+    /// </summary>
+    [Serializable]
+    public class CardTemplateUse : AopObject
+    {
+        /// <summary>
+        /// 日历价格 当前字段已废弃(动态定价请使用：alipay.commerce.merchantcard.templateprice.set)
+        /// </summary>
+        [XmlElement("calendar_price")]
+        public LifeserviceItemCalendarPrice CalendarPrice { get; set; }
+
+        /// <summary>
+        /// 周期付需要配置周期信息
+        /// </summary>
+        [XmlElement("cycle_info")]
+        public CardCycle CycleInfo { get; set; }
+
+        /// <summary>
+        /// 周期付可以配置用户退订购单规则，次卡不需要传该参数
+        /// </summary>
+        [XmlElement("discount_recover_rule_info")]
+        public CardDiscountRecoverRule DiscountRecoverRuleInfo { get; set; }
+
+        /// <summary>
+        /// 有效期，天。周期付可不传
+        /// </summary>
+        [XmlElement("expire_period")]
+        public long ExpirePeriod { get; set; }
+
+        /// <summary>
+        /// 一口价的新客价，单位分。仅单次商品生效，多次商品使用period_price_list里的新客价字段。新客价需是所有价格中最低的价格。
+        /// </summary>
+        [XmlElement("new_customer_price")]
+        public long NewCustomerPrice { get; set; }
+
+        /// <summary>
+        /// 一口价原价，如果设置动态定价则为兜底原价。仅单次商品生效，多次商品使用period_price_list字段
+        /// </summary>
+        [XmlElement("original_price")]
+        public long OriginalPrice { get; set; }
+
+        /// <summary>
+        /// 每期价格
+        /// </summary>
+        [XmlArray("period_price_list")]
+        [XmlArrayItem("card_period_price")]
+        public List<CardPeriodPrice> PeriodPriceList { get; set; }
+
+        /// <summary>
+        /// 价格模式。默认阶梯价格 当前字段已废弃(不限制单一定价模式，动态定价请使用：alipay.commerce.merchantcard.templateprice.set)
+        /// </summary>
+        [XmlElement("price_mode")]
+        public string PriceMode { get; set; }
+
+        /// <summary>
+        /// 购卡须知信息，可以设置适用人群，适用人数，预约规则，用于卡详情展示。
+        /// </summary>
+        [XmlElement("purchase_notice")]
+        public CardPurchaseNotice PurchaseNotice { get; set; }
+
+        /// <summary>
+        /// 周期付场景下预约链接，填写小程序地址。当card_type= PERIOD_PAY时生效。
+        /// </summary>
+        [XmlElement("reservation_url")]
+        public string ReservationUrl { get; set; }
+
+        /// <summary>
+        /// 一口价，如果设置动态定价则为兜底售价。仅单次商品生效，多次商品使用period_price_list字段
+        /// </summary>
+        [XmlElement("sale_price")]
+        public long SalePrice { get; set; }
+
+        /// <summary>
+        /// 是否全部门店
+        /// </summary>
+        [XmlElement("show_shop")]
+        public string ShowShop { get; set; }
+
+        /// <summary>
+        /// 对顾客展示的门店，传入门店id。
+        /// </summary>
+        [XmlArray("show_shop_ids")]
+        [XmlArrayItem("string")]
+        public List<string> ShowShopIds { get; set; }
+
+        /// <summary>
+        /// 可用次数或期数
+        /// </summary>
+        [XmlElement("usable_count")]
+        public long UsableCount { get; set; }
+
+        /// <summary>
+        /// 传入指定卡的可用门店ID
+        /// </summary>
+        [XmlArray("usable_shop_list")]
+        [XmlArrayItem("string")]
+        public List<string> UsableShopList { get; set; }
+
+        /// <summary>
+        /// 使用说明
+        /// </summary>
+        [XmlElement("use_instruction")]
+        public string UseInstruction { get; set; }
+
+        /// <summary>
+        /// 用户可选的使用方式。当card_type= TIMES_CARD时生效。不传默认为到店亮码使用。
+        /// </summary>
+        [XmlArray("use_method")]
+        [XmlArrayItem("card_use_method_info")]
+        public List<CardUseMethodInfo> UseMethod { get; set; }
+    }
+}

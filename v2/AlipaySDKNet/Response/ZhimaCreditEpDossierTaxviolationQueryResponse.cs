@@ -1,0 +1,24 @@
+using System;
+using System.Xml.Serialization;
+using Aop.Api.Domain;
+
+namespace Aop.Api.Response
+{
+    /// <summary>
+    /// ZhimaCreditEpDossierTaxviolationQueryResponse.
+    /// </summary>
+    public class ZhimaCreditEpDossierTaxviolationQueryResponse : AopResponse
+    {
+        /// <summary>
+        /// 数据结果
+        /// </summary>
+        [XmlElement("data")]
+        public ZmepTaxViolationDataInfo Data { get; set; }
+
+        /// <summary>
+        /// 查得标记
+        /// </summary>
+        [XmlElement("data_found")]
+        public bool DataFound { get; set; }
+    }
+}

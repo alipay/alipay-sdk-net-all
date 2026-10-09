@@ -1,0 +1,48 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayCommerceAcommunicationMessageHashSendModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayCommerceAcommunicationMessageHashSendModel : AopObject
+    {
+        /// <summary>
+        /// 动态参数
+        /// </summary>
+        [XmlElement("context")]
+        public string Context { get; set; }
+
+        /// <summary>
+        /// 机构侧消息id
+        /// </summary>
+        [XmlElement("inst_message_id")]
+        public string InstMessageId { get; set; }
+
+        /// <summary>
+        /// 用于标记支付宝用户在应用下的唯一标识
+        /// </summary>
+        [XmlElement("open_id")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 哈希后的手机号，行业侧保存和用户的对应关系
+        /// </summary>
+        [XmlElement("to_mobile_hash")]
+        public string ToMobileHash { get; set; }
+
+        /// <summary>
+        /// 代表了当时的触发条件，例如余额不足、出账等情况，行业侧会根据触发条件映射成消息模版，同个条件不同人群可能有多套AB策略
+        /// </summary>
+        [XmlElement("trigger_condition")]
+        public string TriggerCondition { get; set; }
+
+        /// <summary>
+        /// 支付宝用户的userId。
+        /// </summary>
+        [XmlElement("user_id")]
+        public string UserId { get; set; }
+    }
+}
