@@ -1,0 +1,108 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayCommerceLogisticsFreightflowTransferApplyModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayCommerceLogisticsFreightflowTransferApplyModel : AopObject
+    {
+        /// <summary>
+        /// 转账金额，单位分
+        /// </summary>
+        [XmlElement("amount")]
+        public string Amount { get; set; }
+
+        /// <summary>
+        /// 业务幂等号,格式标准：需要在尾部添加时间戳，格式为yyyyMMdd。
+        /// </summary>
+        [XmlElement("biz_no")]
+        public string BizNo { get; set; }
+
+        /// <summary>
+        /// 币种编码（如CNY）
+        /// </summary>
+        [XmlElement("currency")]
+        public string Currency { get; set; }
+
+        /// <summary>
+        /// 约定的拓展字段. 当mode为网商银行时,无需传入！！！  当mode为浦发银行(SPDB)且收款方为支付宝(钱包/余额)时必传cnl_id的属性值为151,,其余参数需根据银行要求进行具体确认
+        /// </summary>
+        [XmlElement("ext_info")]
+        public string ExtInfo { get; set; }
+
+        /// <summary>
+        /// 物流公司编码
+        /// </summary>
+        [XmlElement("logistics_code")]
+        public string LogisticsCode { get; set; }
+
+        /// <summary>
+        /// 备注（可填写订单描述信息）
+        /// </summary>
+        [XmlElement("memo")]
+        public string Memo { get; set; }
+
+        /// <summary>
+        /// 银行管理模式
+        /// </summary>
+        [XmlElement("mode")]
+        public string Mode { get; set; }
+
+        /// <summary>
+        /// 网商银行应用id,当mode为ANT_MYBANK时由网商提供给商户
+        /// </summary>
+        [XmlElement("mybank_app_id")]
+        public string MybankAppId { get; set; }
+
+        /// <summary>
+        /// 网商银行解决方案CODE,当mode为ANT_MYBANK时由网商提供给商户
+        /// </summary>
+        [XmlElement("mybank_scene_code")]
+        public string MybankSceneCode { get; set; }
+
+        /// <summary>
+        /// 如果mode为网商银行，则为网商银行分配
+        /// </summary>
+        [XmlElement("partner_id")]
+        public string PartnerId { get; set; }
+
+        /// <summary>
+        /// 收款方信息
+        /// </summary>
+        [XmlElement("payee_participant")]
+        public FreightFlowParticipantInfo PayeeParticipant { get; set; }
+
+        /// <summary>
+        /// 付款方信息
+        /// </summary>
+        [XmlElement("payer_participant")]
+        public FreightFlowParticipantInfo PayerParticipant { get; set; }
+
+        /// <summary>
+        /// 交易请求时间 标准格式：yyyyMMddHHmmss
+        /// </summary>
+        [XmlElement("request_time")]
+        public string RequestTime { get; set; }
+
+        /// <summary>
+        /// 浦发银行特定场景参数,当mode=SPDB时必选
+        /// </summary>
+        [XmlElement("spdb_spec_params")]
+        public FreightFlowSpdbSpecParams SpdbSpecParams { get; set; }
+
+        /// <summary>
+        /// 当与运企付约定了需要传递安全字段时,交易用途字段必传
+        /// </summary>
+        [XmlElement("trans_purpose")]
+        public string TransPurpose { get; set; }
+
+        /// <summary>
+        /// 当约定了需要传递安全字段时,运单信息字段必传
+        /// </summary>
+        [XmlElement("waybill_info")]
+        public FreightFlowWaybillInfo WaybillInfo { get; set; }
+    }
+}

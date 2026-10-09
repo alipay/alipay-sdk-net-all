@@ -1,0 +1,24 @@
+using System;
+using System.Xml.Serialization;
+using Aop.Api.Domain;
+
+namespace Aop.Api.Response
+{
+    /// <summary>
+    /// ZhimaCreditEpDossierBondratingQueryResponse.
+    /// </summary>
+    public class ZhimaCreditEpDossierBondratingQueryResponse : AopResponse
+    {
+        /// <summary>
+        /// 数据结果
+        /// </summary>
+        [XmlElement("data")]
+        public ZmEpBondRatingDataInfo Data { get; set; }
+
+        /// <summary>
+        /// 查得标记
+        /// </summary>
+        [XmlElement("data_found")]
+        public bool DataFound { get; set; }
+    }
+}

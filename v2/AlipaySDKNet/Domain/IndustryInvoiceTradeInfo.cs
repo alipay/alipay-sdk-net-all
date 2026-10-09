@@ -1,0 +1,36 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// IndustryInvoiceTradeInfo Data Structure.
+    /// </summary>
+    [Serializable]
+    public class IndustryInvoiceTradeInfo : AopObject
+    {
+        /// <summary>
+        /// 交易渠道
+        /// </summary>
+        [XmlElement("channel_type")]
+        public string ChannelType { get; set; }
+
+        /// <summary>
+        /// 交易流水号
+        /// </summary>
+        [XmlElement("trade_biz_no")]
+        public string TradeBizNo { get; set; }
+
+        /// <summary>
+        /// 订单交易号
+        /// </summary>
+        [XmlElement("trade_no")]
+        public string TradeNo { get; set; }
+
+        /// <summary>
+        /// 交易产品
+        /// </summary>
+        [XmlElement("trade_product")]
+        public string TradeProduct { get; set; }
+    }
+}

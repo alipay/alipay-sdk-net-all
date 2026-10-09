@@ -1,0 +1,74 @@
+using System;
+using System.Xml.Serialization;
+using System.Collections.Generic;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// SendEquityOrderResult Data Structure.
+    /// </summary>
+    [Serializable]
+    public class SendEquityOrderResult : AopObject
+    {
+        /// <summary>
+        /// 权益唯一id标识，摩斯生成的权益id，用于商户端标识权益信息
+        /// </summary>
+        [XmlElement("equity_id")]
+        public string EquityId { get; set; }
+
+        /// <summary>
+        /// 发奖的权益奖品类型
+        /// </summary>
+        [XmlElement("equity_type")]
+        public string EquityType { get; set; }
+
+        /// <summary>
+        /// 权益发放的订单唯一id标识
+        /// </summary>
+        [XmlElement("order_id")]
+        public string OrderId { get; set; }
+
+        /// <summary>
+        /// 发奖订单的结果码
+        /// </summary>
+        [XmlElement("order_result_code")]
+        public string OrderResultCode { get; set; }
+
+        /// <summary>
+        /// 发奖订单结果信息
+        /// </summary>
+        [XmlElement("order_result_msg")]
+        public string OrderResultMsg { get; set; }
+
+        /// <summary>
+        /// 发奖订单的状态信息
+        /// </summary>
+        [XmlElement("order_status")]
+        public string OrderStatus { get; set; }
+
+        /// <summary>
+        /// 发奖订单发生时间
+        /// </summary>
+        [XmlElement("order_time")]
+        public string OrderTime { get; set; }
+
+        /// <summary>
+        /// 子订单详细信息列表信息
+        /// </summary>
+        [XmlArray("send_sub_order_result")]
+        [XmlArrayItem("send_sub_order_result")]
+        public List<SendSubOrderResult> SendSubOrderResult { get; set; }
+
+        /// <summary>
+        /// 支付宝券实例id
+        /// </summary>
+        [XmlElement("voucher_id")]
+        public string VoucherId { get; set; }
+
+        /// <summary>
+        /// 支付宝券详情页url，唤端打开的h5 url
+        /// </summary>
+        [XmlElement("voucher_url")]
+        public string VoucherUrl { get; set; }
+    }
+}

@@ -1,0 +1,114 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// TuitionISVPoboPaymentInfo Data Structure.
+    /// </summary>
+    [Serializable]
+    public class TuitionISVPoboPaymentInfo : AopObject
+    {
+        /// <summary>
+        /// 其他缴费信息，目前包含了academic_year（学年）以及payment_category（缴费类目）两个key，后续会根据业务扩展key
+        /// </summary>
+        [XmlElement("additional_payment_info")]
+        public string AdditionalPaymentInfo { get; set; }
+
+        /// <summary>
+        /// amount+留学VCC场景
+        /// </summary>
+        [XmlElement("amount")]
+        public TuitionMoneyDTO Amount { get; set; }
+
+        /// <summary>
+        /// 银行地址
+        /// </summary>
+        [XmlElement("bank_address")]
+        public string BankAddress { get; set; }
+
+        /// <summary>
+        /// 银行名称
+        /// </summary>
+        [XmlElement("bank_name")]
+        public string BankName { get; set; }
+
+        /// <summary>
+        /// 银行所在地，国家代码
+        /// </summary>
+        [XmlElement("bank_region")]
+        public string BankRegion { get; set; }
+
+        /// <summary>
+        /// 卡品牌+留学VCC场景
+        /// </summary>
+        [XmlElement("card_brand")]
+        public string CardBrand { get; set; }
+
+        /// <summary>
+        /// 卡过期时间+留学缴费VCC场景
+        /// </summary>
+        [XmlElement("card_expiry_date")]
+        public string CardExpiryDate { get; set; }
+
+        /// <summary>
+        /// 持卡人地址+留学缴费VCC
+        /// </summary>
+        [XmlElement("card_holder_address")]
+        public TuitionAddress CardHolderAddress { get; set; }
+
+        /// <summary>
+        /// 持卡人姓名+留学缴费VCC场景
+        /// </summary>
+        [XmlElement("card_holder_name")]
+        public string CardHolderName { get; set; }
+
+        /// <summary>
+        /// VCC卡号+留学缴费VCC
+        /// </summary>
+        [XmlElement("card_no")]
+        public string CardNo { get; set; }
+
+        /// <summary>
+        /// 卡生效时间+留学缴费VCC场景
+        /// </summary>
+        [XmlElement("card_start_date")]
+        public string CardStartDate { get; set; }
+
+        /// <summary>
+        /// cvv+留学缴费VCC场景
+        /// </summary>
+        [XmlElement("cvv")]
+        public string Cvv { get; set; }
+
+        /// <summary>
+        /// cvv加密。使用rsa3072加密算法进行加密。理论长度为512个字符
+        /// </summary>
+        [XmlElement("cvv_encrypted")]
+        public string CvvEncrypted { get; set; }
+
+        /// <summary>
+        /// 机构推单的单号
+        /// </summary>
+        [XmlElement("pre_order_id")]
+        public string PreOrderId { get; set; }
+
+        /// <summary>
+        /// 用户支付时的汇率
+        /// </summary>
+        [XmlElement("quote_price")]
+        public string QuotePrice { get; set; }
+
+        /// <summary>
+        /// 一个由9位数字组成的代码，用于识别特定的金融机构。
+        /// </summary>
+        [XmlElement("routing_number")]
+        public string RoutingNumber { get; set; }
+
+        /// <summary>
+        /// eCheck支付方式下的虚拟银行账号
+        /// </summary>
+        [XmlElement("virtual_account_number")]
+        public string VirtualAccountNumber { get; set; }
+    }
+}

@@ -1,0 +1,136 @@
+using System;
+using System.Xml.Serialization;
+using System.Collections.Generic;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayOpenAppCeitemItemCreateModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayOpenAppCeitemItemCreateModel : AopObject
+    {
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("attrs")]
+        [XmlArrayItem("ce_item_attr_v_o")]
+        public List<CeItemAttrVO> Attrs { get; set; }
+
+        /// <summary>
+        /// 商品提报，如果需要自动推广则传此参数true，如没有这需求传false
+        /// </summary>
+        [XmlElement("auto_marketing_delivery")]
+        public bool AutoMarketingDelivery { get; set; }
+
+        /// <summary>
+        /// 条形码
+        /// </summary>
+        [XmlElement("barcode")]
+        public string Barcode { get; set; }
+
+        /// <summary>
+        /// 商品业务模式，租赁业务模式包含（短租：0；长租：1）
+        /// </summary>
+        [XmlElement("business_model")]
+        public string BusinessModel { get; set; }
+
+        /// <summary>
+        /// 平台类目，填写的类目必须在类目表列出，多级类目只填最后一级。商品类目 ID 及信息可通过<a href="https://opendocs.alipay.com/b/07847b">商品类目表</a>获取。 仅叶子类目支持创建商品。
+        /// </summary>
+        [XmlElement("category_id")]
+        public string CategoryId { get; set; }
+
+        /// <summary>
+        /// 导购描述，用于介绍商品卖点
+        /// </summary>
+        [XmlElement("desc")]
+        public string Desc { get; set; }
+
+        /// <summary>
+        /// 商品描述详情
+        /// </summary>
+        [XmlElement("desc_info")]
+        public CeItemDescInfoVO DescInfo { get; set; }
+
+        /// <summary>
+        /// 商品主图，图片宽高为750px*750px，宽高比1:1，800kb以内。支持jpg、jpeg、png格式的图片。
+        /// </summary>
+        [XmlElement("head_img")]
+        public string HeadImg { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("image_list")]
+        [XmlArrayItem("string")]
+        public List<string> ImageList { get; set; }
+
+        /// <summary>
+        /// 1=官方插件版，商品详情页链接不传入 0=自定义详情页版，商品详情页链接必须传入
+        /// </summary>
+        [XmlElement("item_details_page_model")]
+        public string ItemDetailsPageModel { get; set; }
+
+        /// <summary>
+        /// 商品类型；若类目涉及多个商品类型，则需传此参数，以调用准确的商品模板。
+        /// </summary>
+        [XmlElement("item_type")]
+        public string ItemType { get; set; }
+
+        /// <summary>
+        /// 商品原价，分为单位。
+        /// </summary>
+        [XmlElement("original_price")]
+        public long OriginalPrice { get; set; }
+
+        /// <summary>
+        /// 商家侧商品ID，要求 APPID 下全局唯一。
+        /// </summary>
+        [XmlElement("out_item_id")]
+        public string OutItemId { get; set; }
+
+        /// <summary>
+        /// 商品详情页URL
+        /// </summary>
+        [XmlElement("path")]
+        public string Path { get; set; }
+
+        /// <summary>
+        /// 价格单元
+        /// </summary>
+        [XmlElement("price_unit")]
+        public string PriceUnit { get; set; }
+
+        /// <summary>
+        /// 商品售价，分为单位。
+        /// </summary>
+        [XmlElement("sale_price")]
+        public long SalePrice { get; set; }
+
+        /// <summary>
+        /// 商品的售卖状态
+        /// </summary>
+        [XmlElement("sale_status")]
+        public string SaleStatus { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("skus")]
+        [XmlArrayItem("ce_item_sku_create_v_o")]
+        public List<CeItemSkuCreateVO> Skus { get; set; }
+
+        /// <summary>
+        /// 库存，单位：件，若填写了skus[]数组，此字段不用填写。 若未填写skus[]数组，此字段选填。 目前支持库存区间为0-99999999。
+        /// </summary>
+        [XmlElement("stock_num")]
+        public long StockNum { get; set; }
+
+        /// <summary>
+        /// 商品名称，字符类型，最少不低于3，最长不超过100个字。
+        /// </summary>
+        [XmlElement("title")]
+        public string Title { get; set; }
+    }
+}

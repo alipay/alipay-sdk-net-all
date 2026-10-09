@@ -1,0 +1,106 @@
+using System;
+using System.Xml.Serialization;
+using System.Collections.Generic;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// HealthReport Data Structure.
+    /// </summary>
+    [Serializable]
+    public class HealthReport : AopObject
+    {
+        /// <summary>
+        /// 年龄
+        /// </summary>
+        [XmlElement("age")]
+        public string Age { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("basic_physical_examination_report_list")]
+        [XmlArrayItem("basic_examination_report")]
+        public List<BasicExaminationReport> BasicPhysicalExaminationReportList { get; set; }
+
+        /// <summary>
+        /// 唯一id
+        /// </summary>
+        [XmlElement("data_id")]
+        public string DataId { get; set; }
+
+        /// <summary>
+        /// 数据来源 HNjianxiangjun
+        /// </summary>
+        [XmlElement("data_source")]
+        public string DataSource { get; set; }
+
+        /// <summary>
+        /// 文件类型 PDF/PIC
+        /// </summary>
+        [XmlElement("file_type")]
+        public string FileType { get; set; }
+
+        /// <summary>
+        /// 原始文件地址
+        /// </summary>
+        [XmlElement("file_url")]
+        public string FileUrl { get; set; }
+
+        /// <summary>
+        /// 医院名称
+        /// </summary>
+        [XmlElement("hospital_name")]
+        public string HospitalName { get; set; }
+
+        /// <summary>
+        /// 医院编码
+        /// </summary>
+        [XmlElement("hospital_org_id")]
+        public string HospitalOrgId { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("inspection_report_list")]
+        [XmlArrayItem("health_inspection_report")]
+        public List<HealthInspectionReport> InspectionReportList { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("laboratory_report_list")]
+        [XmlArrayItem("health_laboratory_report")]
+        public List<HealthLaboratoryReport> LaboratoryReportList { get; set; }
+
+        /// <summary>
+        /// 结论
+        /// </summary>
+        [XmlElement("memo")]
+        public string Memo { get; set; }
+
+        /// <summary>
+        /// 体检报告id
+        /// </summary>
+        [XmlElement("report_id")]
+        public string ReportId { get; set; }
+
+        /// <summary>
+        /// 体检单名称
+        /// </summary>
+        [XmlElement("report_name")]
+        public string ReportName { get; set; }
+
+        /// <summary>
+        /// 就诊日期
+        /// </summary>
+        [XmlElement("report_time")]
+        public string ReportTime { get; set; }
+
+        /// <summary>
+        /// 体检类型（如"体检报告"/"入职体检"）
+        /// </summary>
+        [XmlElement("report_type")]
+        public string ReportType { get; set; }
+    }
+}

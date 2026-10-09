@@ -1,0 +1,51 @@
+using System;
+using System.Xml.Serialization;
+using System.Collections.Generic;
+
+namespace Aop.Api.Domain
+{
+    /// <summary>
+    /// AlipayCommerceMedicalServicepackageListQueryModel Data Structure.
+    /// </summary>
+    [Serializable]
+    public class AlipayCommerceMedicalServicepackageListQueryModel : AopObject
+    {
+        /// <summary>
+        /// 是否过滤标识
+        /// </summary>
+        [XmlElement("hide_filter")]
+        public bool HideFilter { get; set; }
+
+        /// <summary>
+        /// 是否是买后
+        /// </summary>
+        [XmlElement("is_purchased")]
+        public bool IsPurchased { get; set; }
+
+        /// <summary>
+        /// 领衔医生ID
+        /// </summary>
+        [XmlElement("lead_doctor_id")]
+        public string LeadDoctorId { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("lead_doctor_ids")]
+        [XmlArrayItem("string")]
+        public List<string> LeadDoctorIds { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("package_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> PackageIdList { get; set; }
+
+        /// <summary>
+        /// 订单号
+        /// </summary>
+        [XmlElement("service_pkg_order_no")]
+        public string ServicePkgOrderNo { get; set; }
+    }
+}
