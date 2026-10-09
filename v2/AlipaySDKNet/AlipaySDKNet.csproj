@@ -25247,7 +25247,6 @@
     <Compile Include="Domain\AlipayCommerceAcommunicationUserBehaviorSyncModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalHomedoctorFollowuptemplatesQueryModel.cs" />
     <Compile Include="Domain\AlipayOfflineMarketingResultpageQueryModel.cs" />
-    <Compile Include="Domain\AlipayCommerceMedicalHyFileBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceEcActivityDiscountCreateModel.cs" />
     <Compile Include="Domain\AlipayEbppIndustryOfflinelaborProjectModifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceLogisticsBillDownloadurlQueryModel.cs" />
@@ -26636,7 +26635,6 @@
     <Compile Include="Domain\AlipayCommerceTransportMetroRealtimeQueryModel.cs" />
     <Compile Include="Domain\IsvVoucherVO.cs" />
     <Compile Include="Domain\AlipayCommerceAcommunicationMobileTagSyncModel.cs" />
-    <Compile Include="Domain\FileItem.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalInquiryHospitalSyncModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalFulfillmentInfoSyncModel.cs" />
     <Compile Include="Domain\AlipayCommerceHotelLockerOrgSyncModel.cs" />
