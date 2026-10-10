@@ -56,5 +56,12 @@ namespace Aop.Api.Domain
         [XmlArray("shop_id_list")]
         [XmlArrayItem("string")]
         public List<string> ShopIdList { get; set; }
+
+        /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("technician_id_list")]
+        [XmlArrayItem("string")]
+        public List<string> TechnicianIdList { get; set; }
     }
 }

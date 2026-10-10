@@ -72,6 +72,12 @@ namespace Aop.Api.Domain
         public string ShopId { get; set; }
 
         /// <summary>
+        /// 手艺人价查询条件，仅price_mode=6时可传。
+        /// </summary>
+        [XmlElement("technician_id")]
+        public string TechnicianId { get; set; }
+
+        /// <summary>
         /// null
         /// </summary>
         [XmlArray("week_price_list")]

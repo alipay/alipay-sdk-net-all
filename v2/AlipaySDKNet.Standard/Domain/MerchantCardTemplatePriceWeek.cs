@@ -11,7 +11,7 @@ namespace Aop.Api.Domain
     public class MerchantCardTemplatePriceWeek : AopObject
     {
         /// <summary>
-        /// null
+        /// 适用的星期列表，1至7分别表示周一至周日。
         /// </summary>
         [XmlArray("days_of_week")]
         [XmlArrayItem("string")]

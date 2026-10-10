@@ -22,7 +22,7 @@ namespace Aop.Api.Domain
         public string CertEncryption { get; set; }
 
         /// <summary>
-        /// 加密类型，参数值大写，如：SHA256或者SM3
+        /// 加密类型，参数值大写，如：SM3
         /// </summary>
         [XmlElement("encryption_type")]
         public string EncryptionType { get; set; }
@@ -64,7 +64,7 @@ namespace Aop.Api.Domain
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// 摩斯营销发奖类型，明确本次调用是预发奖或者发奖，发奖环节可以配置验证预发奖验证，二段式降低发奖风险。参数值大写，【PREGRANT：预发奖；GRANT：发奖】
+        /// 摩斯营销发奖类型，明确本次调用是预发奖或者发奖，发奖环节可以配置验证预发奖验证，二段式降低发奖风险。参数值大写，【PREGRANT：预发奖；GRANT：发奖；SMART_GRANT: 智能发奖； EXCHANGE： 兑换发奖】
         /// </summary>
         [XmlElement("send_type")]
         public string SendType { get; set; }

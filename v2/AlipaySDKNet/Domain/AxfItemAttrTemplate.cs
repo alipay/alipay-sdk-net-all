@@ -17,6 +17,12 @@ namespace Aop.Api.Domain
         public string AttrDesc { get; set; }
 
         /// <summary>
+        /// DESC，表明该商品属性为描述性字段；SPEC，表明该商品属性为规格字段，创建SKU商品时，需要在sku_list中sku_attrs内填写该属性相关的key和value
+        /// </summary>
+        [XmlElement("attr_field_type")]
+        public string AttrFieldType { get; set; }
+
+        /// <summary>
         /// 属性key
         /// </summary>
         [XmlElement("attr_key")]

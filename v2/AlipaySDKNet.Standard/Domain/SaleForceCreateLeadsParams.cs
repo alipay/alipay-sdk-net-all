@@ -17,6 +17,19 @@ namespace Aop.Api.Domain
         public string ActualLeadParty { get; set; }
 
         /// <summary>
+        /// null
+        /// </summary>
+        [XmlArray("ai_products")]
+        [XmlArrayItem("string")]
+        public List<string> AiProducts { get; set; }
+
+        /// <summary>
+        /// AI产品版本
+        /// </summary>
+        [XmlElement("ai_products_source_version")]
+        public string AiProductsSourceVersion { get; set; }
+
+        /// <summary>
         /// 阿里云结算模式枚举值
         /// </summary>
         [XmlElement("alicloud_settlement_mode")]

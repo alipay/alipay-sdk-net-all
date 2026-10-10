@@ -151,6 +151,12 @@ namespace Aop.Api.Domain
         public List<LsItemCustomAttr> ItemCustomAttrs { get; set; }
 
         /// <summary>
+        /// 商品版本
+        /// </summary>
+        [XmlElement("item_version")]
+        public string ItemVersion { get; set; }
+
+        /// <summary>
         /// 金额卡的必要参数。其他卡类型无需传入
         /// </summary>
         [XmlElement("money_card_info")]
@@ -204,6 +210,13 @@ namespace Aop.Api.Domain
         /// </summary>
         [XmlElement("settle_type")]
         public string SettleType { get; set; }
+
+        /// <summary>
+        /// SKU列表
+        /// </summary>
+        [XmlArray("sku_list")]
+        [XmlArrayItem("item_sku")]
+        public List<ItemSku> SkuList { get; set; }
 
         /// <summary>
         /// 是否支持用户主动退卡
