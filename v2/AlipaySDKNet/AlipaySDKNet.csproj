@@ -26716,7 +26716,6 @@
     <Compile Include="Domain\AlipayCommerceTransportMetroRealtimeQueryModel.cs" />
     <Compile Include="Domain\IsvVoucherVO.cs" />
     <Compile Include="Domain\AlipayCommerceAcommunicationMobileTagSyncModel.cs" />
-    <Compile Include="Domain\FileItem.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalInquiryHospitalSyncModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalFulfillmentInfoSyncModel.cs" />
     <Compile Include="Domain\AlipayCommerceHotelLockerOrgSyncModel.cs" />
