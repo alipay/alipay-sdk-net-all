@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **Query**
-> ZhimaCreditPayafteruseCreditagreementQueryResponseModel Query (string outAgreementNo = null, string creditAgreementId = null)
+> ZhimaCreditPayafteruseCreditagreementQueryResponseModel Query (string outAgreementNo = null, string creditAgreementId = null, string productCode = null, string serviceId = null, string extraParam = null)
 
 查询服务开通/授权信息
 
@@ -52,11 +52,14 @@ namespace Example
 
             var outAgreementNo = 2014070700166653;  // string | 商户外部协议号 (optional) 
             var creditAgreementId = ZMOP2020050722001440;  // string | 芝麻开通/授权协议号，out_agreement_no与credit_agreement_id必填一个，推荐使用credit_agreement_id。 (optional) 
+            var productCode = CREDIT_AGREEMENT;  // string | 当产品是芝麻守约时必填，需传入CREDIT_AGREEMENT (optional) 
+            var serviceId = 2026041600000000000116203200;  // string | 芝麻信用服务id，上线前提前分配给商户 (optional) 
+            var extraParam = {"key","value"};  // string | 扩展参数 (optional) 
 
             try
             {
                 // 查询服务开通/授权信息
-                ZhimaCreditPayafteruseCreditagreementQueryResponseModel result = apiInstance.Query(outAgreementNo, creditAgreementId);
+                ZhimaCreditPayafteruseCreditagreementQueryResponseModel result = apiInstance.Query(outAgreementNo, creditAgreementId, productCode, serviceId, extraParam);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -76,6 +79,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **outAgreementNo** | **string**| 商户外部协议号 | [optional] 
  **creditAgreementId** | **string**| 芝麻开通/授权协议号，out_agreement_no与credit_agreement_id必填一个，推荐使用credit_agreement_id。 | [optional] 
+ **productCode** | **string**| 当产品是芝麻守约时必填，需传入CREDIT_AGREEMENT | [optional] 
+ **serviceId** | **string**| 芝麻信用服务id，上线前提前分配给商户 | [optional] 
+ **extraParam** | **string**| 扩展参数 | [optional] 
 
 ### Return type
 

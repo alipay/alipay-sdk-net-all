@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="apply"></a>
 # **Apply**
-> AlipayOpenMiniVersionAuditApplyResponseModel Apply (System.IO.Stream appLogo = null, AlipayOpenMiniVersionAuditApplyModel data = null, System.IO.Stream fifthLicensePic = null, System.IO.Stream fifthScreenShot = null, System.IO.Stream firstLicensePic = null, System.IO.Stream firstScreenShot = null, System.IO.Stream firstSpecialLicensePic = null, System.IO.Stream fourthLicensePic = null, System.IO.Stream fourthScreenShot = null, System.IO.Stream outDoorPic = null, System.IO.Stream secondLicensePic = null, System.IO.Stream secondScreenShot = null, System.IO.Stream secondSpecialLicensePic = null, System.IO.Stream testFileName = null, System.IO.Stream thirdLicensePic = null, System.IO.Stream thirdScreenShot = null, System.IO.Stream thirdSpecialLicensePic = null)
+> AlipayOpenMiniVersionAuditApplyResponseModel Apply (System.IO.Stream appLogo = null, AlipayOpenMiniVersionAuditApplyModel data = null, System.IO.Stream eighthSpecialLicensePic = null, System.IO.Stream fifthLicensePic = null, System.IO.Stream fifthScreenShot = null, System.IO.Stream fifthSpecialLicensePic = null, System.IO.Stream firstLicensePic = null, System.IO.Stream firstScreenShot = null, System.IO.Stream firstSpecialLicensePic = null, System.IO.Stream fourthLicensePic = null, System.IO.Stream fourthScreenShot = null, System.IO.Stream fourthSpecialLicensePic = null, System.IO.Stream ninthSpecialLicensePic = null, System.IO.Stream outDoorPic = null, System.IO.Stream secondLicensePic = null, System.IO.Stream secondScreenShot = null, System.IO.Stream secondSpecialLicensePic = null, System.IO.Stream seventhSpecialLicensePic = null, System.IO.Stream sixthSpecialLicensePic = null, System.IO.Stream tenthSpecialLicensePic = null, System.IO.Stream testFileName = null, System.IO.Stream thirdLicensePic = null, System.IO.Stream thirdScreenShot = null, System.IO.Stream thirdSpecialLicensePic = null)
 
 小程序提交审核
 
@@ -52,17 +52,24 @@ namespace Example
 
             var appLogo = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var data = new AlipayOpenMiniVersionAuditApplyModel(); // AlipayOpenMiniVersionAuditApplyModel |  (optional) 
+            var eighthSpecialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var fifthLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var fifthScreenShot = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
+            var fifthSpecialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var firstLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var firstScreenShot = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var firstSpecialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var fourthLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var fourthScreenShot = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
+            var fourthSpecialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
+            var ninthSpecialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var outDoorPic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var secondLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var secondScreenShot = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var secondSpecialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
+            var seventhSpecialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
+            var sixthSpecialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
+            var tenthSpecialLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var testFileName = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var thirdLicensePic = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
             var thirdScreenShot = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // System.IO.Stream |  (optional) 
@@ -71,7 +78,7 @@ namespace Example
             try
             {
                 // 小程序提交审核
-                AlipayOpenMiniVersionAuditApplyResponseModel result = apiInstance.Apply(appLogo, data, fifthLicensePic, fifthScreenShot, firstLicensePic, firstScreenShot, firstSpecialLicensePic, fourthLicensePic, fourthScreenShot, outDoorPic, secondLicensePic, secondScreenShot, secondSpecialLicensePic, testFileName, thirdLicensePic, thirdScreenShot, thirdSpecialLicensePic);
+                AlipayOpenMiniVersionAuditApplyResponseModel result = apiInstance.Apply(appLogo, data, eighthSpecialLicensePic, fifthLicensePic, fifthScreenShot, fifthSpecialLicensePic, firstLicensePic, firstScreenShot, firstSpecialLicensePic, fourthLicensePic, fourthScreenShot, fourthSpecialLicensePic, ninthSpecialLicensePic, outDoorPic, secondLicensePic, secondScreenShot, secondSpecialLicensePic, seventhSpecialLicensePic, sixthSpecialLicensePic, tenthSpecialLicensePic, testFileName, thirdLicensePic, thirdScreenShot, thirdSpecialLicensePic);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -91,17 +98,24 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appLogo** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **data** | **AlipayOpenMiniVersionAuditApplyModel**|  | [optional] 
+ **eighthSpecialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **fifthLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **fifthScreenShot** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
+ **fifthSpecialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **firstLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **firstScreenShot** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **firstSpecialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **fourthLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **fourthScreenShot** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
+ **fourthSpecialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
+ **ninthSpecialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **outDoorPic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **secondLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **secondScreenShot** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **secondSpecialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
+ **seventhSpecialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
+ **sixthSpecialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
+ **tenthSpecialLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **testFileName** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **thirdLicensePic** | **System.IO.Stream****System.IO.Stream**|  | [optional] 
  **thirdScreenShot** | **System.IO.Stream****System.IO.Stream**|  | [optional] 

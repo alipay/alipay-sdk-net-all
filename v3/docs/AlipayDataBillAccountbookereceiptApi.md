@@ -99,7 +99,7 @@ No authorization required
 
 <a name="query"></a>
 # **Query**
-> AlipayDataBillAccountbookereceiptQueryResponseModel Query (string fileId = null, string agreementNo = null, string agreementType = null)
+> AlipayDataBillAccountbookereceiptQueryResponseModel Query (string fileId = null, string agreementNo = null, string agreementType = null, string secure = null)
 
 查询子账本电子回单状态(incubating)
 
@@ -142,11 +142,12 @@ namespace Example
             var fileId = 12345;  // string | 根据申请id查询状态。申请接口可以参考alipay.data.bill.ereceiptagent.apply (optional) 
             var agreementNo = 20205215001418078112;  // string | 协议号，根据不同业务协议类型，传入对应类型的协议号，用于isv授权检查并获取商户信息。如果业务类型未指定，则使用默认类型对应的协议号。 (optional) 
             var agreementType = FUND_SAFT_SIGN_WITHHOLDING_P;  // string | 根据不同业务协议类型，传入不同参数。传入协议产品码（personal_product_code，通过协议查询接口、协议签约通知响应参数获取），不填的话默认按照示例值传入 (optional) 
+            var secure = true;  // string | true表示使用安全链接，即返回的下载链接为https。 非true值的情况下，统一为false，使用http链接。 (optional) 
 
             try
             {
                 // 查询子账本电子回单状态(incubating)
-                AlipayDataBillAccountbookereceiptQueryResponseModel result = apiInstance.Query(fileId, agreementNo, agreementType);
+                AlipayDataBillAccountbookereceiptQueryResponseModel result = apiInstance.Query(fileId, agreementNo, agreementType, secure);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -167,6 +168,7 @@ Name | Type | Description  | Notes
  **fileId** | **string**| 根据申请id查询状态。申请接口可以参考alipay.data.bill.ereceiptagent.apply | [optional] 
  **agreementNo** | **string**| 协议号，根据不同业务协议类型，传入对应类型的协议号，用于isv授权检查并获取商户信息。如果业务类型未指定，则使用默认类型对应的协议号。 | [optional] 
  **agreementType** | **string**| 根据不同业务协议类型，传入不同参数。传入协议产品码（personal_product_code，通过协议查询接口、协议签约通知响应参数获取），不填的话默认按照示例值传入 | [optional] 
+ **secure** | **string**| true表示使用安全链接，即返回的下载链接为https。 非true值的情况下，统一为false，使用http链接。 | [optional] 
 
 ### Return type
 

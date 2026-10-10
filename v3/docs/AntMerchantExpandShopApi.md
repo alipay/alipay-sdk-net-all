@@ -4,20 +4,20 @@ All URIs are relative to *https://openapi.alipay.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Close**](AntMerchantExpandShopApi.md#close) | **PATCH** /v3/ant/merchant/shop/close | 蚂蚁店铺关闭
+[**Close**](AntMerchantExpandShopApi.md#close) | **PATCH** /v3/ant/merchant/shop/close | 蚂蚁门店关闭
 [**Consult**](AntMerchantExpandShopApi.md#consult) | **POST** /v3/ant/merchant/expand/shop/consult | 蚂蚁店铺创建咨询
-[**Create**](AntMerchantExpandShopApi.md#create) | **POST** /v3/ant/merchant/shop | 蚂蚁店铺创建
-[**Modify**](AntMerchantExpandShopApi.md#modify) | **PATCH** /v3/ant/merchant/shop | 修改蚂蚁店铺
-[**Query**](AntMerchantExpandShopApi.md#query) | **GET** /v3/ant/merchant/shop | 店铺查询接口
+[**Create**](AntMerchantExpandShopApi.md#create) | **POST** /v3/ant/merchant/shop | 蚂蚁门店创建
+[**Modify**](AntMerchantExpandShopApi.md#modify) | **PATCH** /v3/ant/merchant/shop | 修改蚂蚁门店
+[**Query**](AntMerchantExpandShopApi.md#query) | **GET** /v3/ant/merchant/shop | 门店查询接口
 
 
 <a name="close"></a>
 # **Close**
 > Object Close (AntMerchantExpandShopCloseModel antMerchantExpandShopCloseModel = null)
 
-蚂蚁店铺关闭
+蚂蚁门店关闭
 
-通过shop_id，关闭蚂蚁店铺。
+通过shop_id，关闭蚂蚁门店。
 
 ### Example
 ```csharp
@@ -57,7 +57,7 @@ namespace Example
 
             try
             {
-                // 蚂蚁店铺关闭
+                // 蚂蚁门店关闭
                 Object result = apiInstance.Close(antMerchantExpandShopCloseModel);
                 Debug.WriteLine(result);
             }
@@ -193,9 +193,9 @@ No authorization required
 # **Create**
 > AntMerchantExpandShopCreateResponseModel Create (AntMerchantExpandShopCreateModel antMerchantExpandShopCreateModel = null)
 
-蚂蚁店铺创建
+蚂蚁门店创建
 
-创建蚂蚁店铺
+创建蚂蚁门店
 
 ### Example
 ```csharp
@@ -235,7 +235,7 @@ namespace Example
 
             try
             {
-                // 蚂蚁店铺创建
+                // 蚂蚁门店创建
                 AntMerchantExpandShopCreateResponseModel result = apiInstance.Create(antMerchantExpandShopCreateModel);
                 Debug.WriteLine(result);
             }
@@ -282,9 +282,9 @@ No authorization required
 # **Modify**
 > AntMerchantExpandShopModifyResponseModel Modify (AntMerchantExpandShopModifyModel antMerchantExpandShopModifyModel = null)
 
-修改蚂蚁店铺
+修改蚂蚁门店
 
-修改蚂蚁店铺，按信息项修改。若无特殊说明，如果某项存在但是没填写，则不会覆盖掉原来的值
+修改蚂蚁门店，按信息项修改。若无特殊说明，如果某项存在但是没填写，则不会覆盖掉原来的值
 
 ### Example
 ```csharp
@@ -324,7 +324,7 @@ namespace Example
 
             try
             {
-                // 修改蚂蚁店铺
+                // 修改蚂蚁门店
                 AntMerchantExpandShopModifyResponseModel result = apiInstance.Modify(antMerchantExpandShopModifyModel);
                 Debug.WriteLine(result);
             }
@@ -369,11 +369,11 @@ No authorization required
 
 <a name="query"></a>
 # **Query**
-> AntMerchantExpandShopQueryResponseModel Query (string shopId = null, string storeId = null, string ipRoleId = null, string addressVersion = null, string needRecommend = null, string needIndustryInfo = null, string needIndustryLicense = null)
+> AntMerchantExpandShopQueryResponseModel Query (string shopId = null, string storeId = null, string ipRoleId = null, string addressVersion = null, string needRecommend = null, string needIndustryInfo = null, string needIndustryLicense = null, string shopType = null, string bizSource = null)
 
-店铺查询接口
+门店查询接口
 
-用于服务商或商户查询其自己的店铺信息
+用于服务商或商户查询其自己的门店信息
 
 ### Example
 ```csharp
@@ -409,18 +409,20 @@ namespace Example
             AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
             apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
 
-            var shopId = 2018011900502000000005124744;  // string | 蚂蚁店铺id (optional) 
+            var shopId = 2018011900502000000005124744;  // string | 蚂蚁门店id (optional) 
             var storeId = NO0001;  // string | 门店编号，表示该门店在该商户角色id(直连pid，间连smid)下，由商户自己定义的外部门店编号 (optional) 
             var ipRoleId = 2088301155943087;  // string | 商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid (optional) 
             var addressVersion = 2022Q2;  // string | 行政区划版本，当前可传空值(取默认版本)、2022Q2、UPTODATE(取最新版本)，其中空值默认为：2020Q1版本（ address_version=''或null），想要查看版本是2022年2季度版本则传入:(address_version='2022Q2')，想要获取最新版本则传入:(address_version ='UPTODATE') (optional) 
             var needRecommend = 0;  // string | 门店不置信时，是否需要返回shop_recommend_info (optional) 
             var needIndustryInfo = 1;  // string | need_industry_info=0时不返回行业信息；need_industry_info=1时返回不需要审核的行业信息、审核通过的行业信息 (optional) 
             var needIndustryLicense = 1;  // string | need_industry_license=0时不返回行业资质；need_industry_license=1时返回审核通过的行业资质 (optional) 
+            var shopType = 01;  // string | 门店经营类型，01表示直营，02表示加盟 (optional) 
+            var bizSource = APLUS_SHOP;  // string | 团购门店业务类型来源 (optional) 
 
             try
             {
-                // 店铺查询接口
-                AntMerchantExpandShopQueryResponseModel result = apiInstance.Query(shopId, storeId, ipRoleId, addressVersion, needRecommend, needIndustryInfo, needIndustryLicense);
+                // 门店查询接口
+                AntMerchantExpandShopQueryResponseModel result = apiInstance.Query(shopId, storeId, ipRoleId, addressVersion, needRecommend, needIndustryInfo, needIndustryLicense, shopType, bizSource);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -438,13 +440,15 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **shopId** | **string**| 蚂蚁店铺id | [optional] 
+ **shopId** | **string**| 蚂蚁门店id | [optional] 
  **storeId** | **string**| 门店编号，表示该门店在该商户角色id(直连pid，间连smid)下，由商户自己定义的外部门店编号 | [optional] 
  **ipRoleId** | **string**| 商户角色id，表示将要开的店属于哪个商户角色。对于直连开店场景，填写商户pid；对于间连开店场景（线上、线下、直付通），填写商户smid | [optional] 
  **addressVersion** | **string**| 行政区划版本，当前可传空值(取默认版本)、2022Q2、UPTODATE(取最新版本)，其中空值默认为：2020Q1版本（ address_version&#x3D;&#39;&#39;或null），想要查看版本是2022年2季度版本则传入:(address_version&#x3D;&#39;2022Q2&#39;)，想要获取最新版本则传入:(address_version &#x3D;&#39;UPTODATE&#39;) | [optional] 
  **needRecommend** | **string**| 门店不置信时，是否需要返回shop_recommend_info | [optional] 
  **needIndustryInfo** | **string**| need_industry_info&#x3D;0时不返回行业信息；need_industry_info&#x3D;1时返回不需要审核的行业信息、审核通过的行业信息 | [optional] 
  **needIndustryLicense** | **string**| need_industry_license&#x3D;0时不返回行业资质；need_industry_license&#x3D;1时返回审核通过的行业资质 | [optional] 
+ **shopType** | **string**| 门店经营类型，01表示直营，02表示加盟 | [optional] 
+ **bizSource** | **string**| 团购门店业务类型来源 | [optional] 
 
 ### Return type
 

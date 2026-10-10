@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**Create**](AlipayOpenPublicAccountApi.md#create) | **POST** /v3/alipay/open/public/account/create | 添加绑定商户会员号
 [**Delete**](AlipayOpenPublicAccountApi.md#delete) | **DELETE** /v3/alipay/open/public/account/delete | 解除绑定商户会员号
 [**Query**](AlipayOpenPublicAccountApi.md#query) | **GET** /v3/alipay/open/public/account/query | 查询绑定商户会员号
-[**Reset**](AlipayOpenPublicAccountApi.md#reset) | **POST** /v3/alipay/open/public/account/reset | 重新设置绑定商家会员号
 
 
 <a name="create"></a>
@@ -274,95 +273,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | common response |  -  |
-| **0** | 请求失败 |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-<a name="reset"></a>
-# **Reset**
-> AlipayOpenPublicAccountResetResponseModel Reset (AlipayOpenPublicAccountResetModel alipayOpenPublicAccountResetModel = null)
-
-重新设置绑定商家会员号
-
-如果商户想要重置已经添加的外部账户，可以通过该接口完成。重置后，原有的外部户将删除，新的外部户添加进去。
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using AlipaySDKNet.OpenAPI.Api;
-using AlipaySDKNet.OpenAPI.Client;
-using AlipaySDKNet.OpenAPI.Model;
-using AlipaySDKNet.OpenAPI.Util;
-using AlipaySDKNet.OpenAPI.Util.Model;
-
-namespace Example
-{
-    public class ResetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://openapi.alipay.com";
-            var apiInstance = new AlipayOpenPublicAccountApi(config);
-
-            // 设置alipayConfig参数
-            AlipayConfig alipayConfig = new AlipayConfig();
-            alipayConfig.AppId = "app_id";
-            alipayConfig.PrivateKey = "private_key";
-            // 密钥模式
-            alipayConfig.AlipayPublicKey = "alipay_public_key";
-            // 证书模式
-            // alipayConfig.AppCertPath = "../appCertPublicKey.crt";
-            // alipayConfig.AlipayPublicCertPath = "../alipayCertPublicKey_RSA2.crt";
-            // alipayConfig.RootCertPath = "../alipayRootCert.crt";
-            alipayConfig.EncryptKey = "encrypt_key";
-            AlipayConfigUtil alipayConfigUtil = new AlipayConfigUtil(alipayConfig);
-            apiInstance.Client.SetAlipayConfigUtil(alipayConfigUtil);
-
-            var alipayOpenPublicAccountResetModel = new AlipayOpenPublicAccountResetModel(); // AlipayOpenPublicAccountResetModel |  (optional) 
-
-            try
-            {
-                // 重新设置绑定商家会员号
-                AlipayOpenPublicAccountResetResponseModel result = apiInstance.Reset(alipayOpenPublicAccountResetModel);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling AlipayOpenPublicAccountApi.Reset: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **alipayOpenPublicAccountResetModel** | **AlipayOpenPublicAccountResetModel**|  | [optional] 
-
-### Return type
-
-**AlipayOpenPublicAccountResetResponseModel**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 

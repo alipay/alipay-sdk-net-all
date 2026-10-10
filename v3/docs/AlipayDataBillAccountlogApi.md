@@ -51,8 +51,8 @@ namespace Example
 
             var startTime = 2019-01-01 00:00:00;  // string | 账务流水创建时间的起始范围。只能查询一年内的记录。精确查询不需要指定 (optional) 
             var endTime = 2019-01-02 00:00:00;  // string | 账务流水创建时间的结束范围。与起始时间间隔不超过31天。查询结果为起始时间至结束时间的左闭右开区间。精确查询不需要指定 (optional) 
-            var alipayOrderNo = 20190101***;  // string | 支付宝订单号，通过支付宝订单号精确查询相关的流水明细，商户订单号与支付宝订单号互斥 (optional) 
-            var merchantOrderNo = TX***;  // string | 商户订单号，通过商户订单号精确查询相关的流水明细，商户订单号与支付宝订单号互斥 (optional) 
+            var alipayOrderNo = 20190101***;  // string | 支付宝订单号，通过支付宝订单号精确查询相关的流水明细。支付宝订单号和商户订单号互斥。选择支付宝订单号时，不可选商户订单号。 (optional) 
+            var merchantOrderNo = TX***;  // string | 商户订单号，通过商户订单号精确查询相关的流水明细。支付宝订单号和商户订单号互斥。选择商户订单号时，不可选支付宝订单号。 (optional) 
             var pageNo = 1;  // string | 分页号，从1开始 (optional) 
             var pageSize = 2000;  // string | 分页大小1000-2000，默认2000 (optional) 
             var transCode = 101101,301101;  // string | 账务的类型代码，特殊场景下使用 (optional) 
@@ -84,8 +84,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startTime** | **string**| 账务流水创建时间的起始范围。只能查询一年内的记录。精确查询不需要指定 | [optional] 
  **endTime** | **string**| 账务流水创建时间的结束范围。与起始时间间隔不超过31天。查询结果为起始时间至结束时间的左闭右开区间。精确查询不需要指定 | [optional] 
- **alipayOrderNo** | **string**| 支付宝订单号，通过支付宝订单号精确查询相关的流水明细，商户订单号与支付宝订单号互斥 | [optional] 
- **merchantOrderNo** | **string**| 商户订单号，通过商户订单号精确查询相关的流水明细，商户订单号与支付宝订单号互斥 | [optional] 
+ **alipayOrderNo** | **string**| 支付宝订单号，通过支付宝订单号精确查询相关的流水明细。支付宝订单号和商户订单号互斥。选择支付宝订单号时，不可选商户订单号。 | [optional] 
+ **merchantOrderNo** | **string**| 商户订单号，通过商户订单号精确查询相关的流水明细。支付宝订单号和商户订单号互斥。选择商户订单号时，不可选支付宝订单号。 | [optional] 
  **pageNo** | **string**| 分页号，从1开始 | [optional] 
  **pageSize** | **string**| 分页大小1000-2000，默认2000 | [optional] 
  **transCode** | **string**| 账务的类型代码，特殊场景下使用 | [optional] 

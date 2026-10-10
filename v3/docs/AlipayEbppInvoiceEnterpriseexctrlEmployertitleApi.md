@@ -279,7 +279,7 @@ No authorization required
 
 <a name="query"></a>
 # **Query**
-> AlipayEbppInvoiceEnterpriseexctrlEmployertitleQueryResponseModel Query (string accountId = null, string enterpriseId = null, string agreementNo = null, string titleId = null)
+> AlipayEbppInvoiceEnterpriseexctrlEmployertitleQueryResponseModel Query (string accountId = null, string enterpriseId = null, string agreementNo = null, string titleId = null, string taxRegisterNo = null)
 
 企业抬头：查询企业抬头
 
@@ -323,11 +323,12 @@ namespace Example
             var enterpriseId = 2088123412341234;  // string | 企业id (optional) 
             var agreementNo = 20215425001181407500;  // string | 授权签约协议号 (optional) 
             var titleId = 2022110200152710030000000003;  // string | 抬头ID (optional) 
+            var taxRegisterNo = 9133*********5852F;  // string | 税号 (optional) 
 
             try
             {
                 // 企业抬头：查询企业抬头
-                AlipayEbppInvoiceEnterpriseexctrlEmployertitleQueryResponseModel result = apiInstance.Query(accountId, enterpriseId, agreementNo, titleId);
+                AlipayEbppInvoiceEnterpriseexctrlEmployertitleQueryResponseModel result = apiInstance.Query(accountId, enterpriseId, agreementNo, titleId, taxRegisterNo);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -349,6 +350,7 @@ Name | Type | Description  | Notes
  **enterpriseId** | **string**| 企业id | [optional] 
  **agreementNo** | **string**| 授权签约协议号 | [optional] 
  **titleId** | **string**| 抬头ID | [optional] 
+ **taxRegisterNo** | **string**| 税号 | [optional] 
 
 ### Return type
 
