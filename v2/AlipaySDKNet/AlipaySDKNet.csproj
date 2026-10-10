@@ -25328,7 +25328,6 @@
     <Compile Include="Domain\AlipayCommerceAcommunicationUserBehaviorSyncModel.cs" />
     <Compile Include="Domain\AlipayCommerceMedicalHomedoctorFollowuptemplatesQueryModel.cs" />
     <Compile Include="Domain\AlipayOfflineMarketingResultpageQueryModel.cs" />
-    <Compile Include="Domain\AlipayCommerceMedicalHyFileBatchqueryModel.cs" />
     <Compile Include="Domain\AlipayCommerceEcActivityDiscountCreateModel.cs" />
     <Compile Include="Domain\AlipayEbppIndustryOfflinelaborProjectModifyModel.cs" />
     <Compile Include="Domain\AlipayCommerceLogisticsBillDownloadurlQueryModel.cs" />
